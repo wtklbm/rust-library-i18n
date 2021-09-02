@@ -2761,7 +2761,7 @@
     },
     {
         "source": "Tests `Flatten::fold` with items already picked off the front and back, to make sure all parts of the `Flatten` are folded correctly.",
-        "suggest": "测试 `Flatten::fold` 的正面和背面是否已折断项目，以确保 `Flatten` 的所有部件均正确折叠。",
+        "suggest": "测试 `Flatten::fold` 的正面和背面是否已折叠项目，以确保 `Flatten` 的所有部件均正确折叠。",
         "translate": ""
     },
     {
@@ -2771,7 +2771,7 @@
     },
     {
         "source": "Tests `FlatMap::fold` with items already picked off the front and back, to make sure all parts of the `FlatMap` are folded correctly.",
-        "suggest": "测试 `FlatMap::fold` 的正面和背面是否已折断项目，以确保 `FlatMap` 的所有部件均正确折叠。",
+        "suggest": "测试 `FlatMap::fold` 的正面和背面是否已折叠项目，以确保 `FlatMap` 的所有部件均正确折叠。",
         "translate": ""
     },
     {

@@ -1571,17 +1571,17 @@
     },
     {
         "source": "This is the reverse version of [`Iterator::try_fold()`]: it takes elements starting from the back of the iterator.",
-        "suggest": "这是 [`Iterator::try_fold()`] 的反向版本: 它从迭代器的背面开始接收元素。",
+        "suggest": "这是 [`Iterator::try_fold()`] 的反向版本: 它从迭代器的后面开始接收元素。",
         "translate": ""
     },
     {
         "source": "An iterator method that reduces the iterator's elements to a single, final value, starting from the back.",
-        "suggest": "一种迭代器方法，从背面开始，将迭代器的元素减少为单个最终值。",
+        "suggest": "一种迭代器方法，从后面开始，将迭代器的元素减少为单个最终值。",
         "translate": ""
     },
     {
         "source": "This is the reverse version of [`Iterator::fold()`]: it takes elements starting from the back of the iterator.",
-        "suggest": "这是 [`Iterator::fold()`] 的反向版本: 它从迭代器的背面开始接收元素。",
+        "suggest": "这是 [`Iterator::fold()`] 的反向版本: 它从迭代器的后面开始接收元素。",
         "translate": ""
     },
     {
@@ -1621,7 +1621,7 @@
     },
     {
         "source": "Searches for an element of an iterator from the back that satisfies a predicate.",
-        "suggest": "从背面搜索满足谓词的迭代器的元素。",
+        "suggest": "从后面搜索满足谓词的迭代器的元素。",
         "translate": ""
     },
     {

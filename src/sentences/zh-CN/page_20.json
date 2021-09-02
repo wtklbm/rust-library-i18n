@@ -1386,7 +1386,7 @@
     },
     {
         "source": "Pushes an entry onto the back of the list.",
-        "suggest": "将条目推到列表的背面。",
+        "suggest": "将条目推到列表的后面。",
         "translate": ""
     },
     {

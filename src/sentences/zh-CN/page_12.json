@@ -2551,7 +2551,7 @@
     },
     {
         "source": "Broken parts of string as hex escape.",
-        "suggest": "十六进制转义时，字符串的折断部分。",
+        "suggest": "字符串的损坏部分作为十六进制转义。",
         "translate": ""
     },
     {
@@ -3671,17 +3671,17 @@
     },
     {
         "source": "Checks whether the pattern matches at the back of the haystack",
-        "suggest": "检查模式是否与 haystack 的背面匹配",
+        "suggest": "检查模式是否与 haystack 的后面匹配",
         "translate": ""
     },
     {
         "source": "Removes the pattern from the front of haystack, if it matches.",
-        "suggest": "如果匹配，则从 haystack 的正面删除图案。",
+        "suggest": "如果匹配，则从 haystack 的正面删除模式。",
         "translate": ""
     },
     {
         "source": "Removes the pattern from the back of haystack, if it matches.",
-        "suggest": "如果匹配，则从 haystack 的背面删除图案。",
+        "suggest": "如果匹配，则从 haystack 的后面删除模式。",
         "translate": ""
     },
     {
@@ -3831,7 +3831,7 @@
     },
     {
         "source": "It will be implemented by associated [`Searcher`] types of the [`Pattern`] trait if the pattern supports searching for it from the back.",
-        "suggest": "如果该模式支持从背面搜索它，则将通过 [`Pattern`] trait 的关联 [`Searcher`] 类型实现。",
+        "suggest": "如果该模式支持从后面搜索它，则将通过 [`Pattern`] trait 的关联 [`Searcher`] 类型实现。",
         "translate": ""
     },
     {
@@ -3846,7 +3846,7 @@
     },
     {
         "source": "Performs the next search step starting from the back.",
-        "suggest": "从背面开始执行下一个搜索步骤。",
+        "suggest": "从后面开始执行下一个搜索步骤。",
         "translate": ""
     },
     {
@@ -4196,7 +4196,7 @@
     },
     {
         "source": "Checks whether the pattern matches at the back of the haystack.",
-        "suggest": "检查模式是否与 haystack 的背面匹配。",
+        "suggest": "检查模式是否与 haystack 的后面匹配。",
         "translate": ""
     },
     {

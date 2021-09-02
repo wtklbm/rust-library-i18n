@@ -4346,7 +4346,7 @@
     },
     {
         "source": "This is because `map()` is still being called lazily on each item, but we are popping items off the back of the vector now, instead of shifting them from the front.",
-        "suggest": "这是因为 `map()` 仍在每个项上被延迟调用，但是现在我们将项从 vector 的背面弹出，而不是从正面移出它们。",
+        "suggest": "这是因为 `map()` 仍在每个项上被延迟调用，但是现在我们将项从 vector 的后面弹出，而不是从正面移出它们。",
         "translate": ""
     },
     {
