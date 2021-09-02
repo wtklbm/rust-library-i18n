@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "and rsend.o are the so called \"compiler runtime startup objects\".",
+        "suggest": "和 rsend.o 是所谓的编译器运行时启动对象。",
+        "translate": ""
+    },
+    {
+        "source": "They contain code needed to correctly initialize the compiler runtime.",
+        "suggest": "它们包含正确初始化编译器运行时所需的代码。",
+        "translate": ""
+    },
+    {
+        "source": "When an executable or dylib image is linked, all user code and libraries are \"sandwiched\" between these two object files, so code or data from rsbegin.o become first in the respective sections of the image, whereas code and data from rsend.o become the last ones.",
+        "suggest": "链接可执行文件或 dylib 映像时，这两个目标文件之间的所有用户代码和库都是 \"sandwiched\"，因此，来自 rsbegin.o 的代码或数据在映像的各个部分中排在第一位，而来自 rsend.o 的代码和数据则成为最后一个。",
+        "translate": ""
+    },
+    {
+        "source": "This effect can be used to place symbols at the beginning or at the end of a section, as well as to insert any required headers or footers.",
+        "suggest": "此效果可用于将符号放置在节的开头或结尾，以及插入任何所需的页眉或页脚。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the actual module entry point is located in the C runtime startup object (usually called `crtX.o`), which then invokes initialization callbacks of other runtime components (registered via yet another special image section).",
+        "suggest": "请注意，实际的模块入口点位于 C 运行时启动对象 (通常称为 `crtX.o`) 中，然后该对象调用其他运行时组件的初始化回调 (通过另一个特殊的映像部分注册)。",
+        "translate": ""
+    },
+    {
+        "source": "Marks beginning of the stack frame unwind info section",
+        "suggest": "标记栈帧展开信息部分的开头",
+        "translate": ""
+    },
+    {
+        "source": "Scratch space for unwinder's internal book-keeping.",
+        "suggest": "为 unwinder 的内部的 book-keeping 留出空间。",
+        "translate": ""
+    },
+    {
+        "source": "This is defined as `struct object` in $GCC/libgcc/unwind-dw2-fde.h.",
+        "suggest": "在 $GCC/unwind-dw2-fde.h 中被定义为 `struct object`。",
+        "translate": ""
+    },
+    {
+        "source": "Unwind info registration/deregistration routines.",
+        "suggest": "展开信息注册/注销例程。",
+        "translate": ""
+    },
+    {
+        "source": "See the docs of libpanic_unwind.",
+        "suggest": "请参见 libpanic_unwind 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "register unwind info on module startup",
+        "suggest": "在模块启动时注册展开信息",
+        "translate": ""
+    },
+    {
+        "source": "unregister on shutdown",
+        "suggest": "关闭时注销",
+        "translate": ""
+    },
+    {
+        "source": "MinGW-specific init/uninit routine registration",
+        "suggest": "MinGW 特定的 init/uninit 例行注册",
+        "translate": ""
+    },
+    {
+        "source": "MinGW's startup objects (crt0.o / dllcrt0.o) will invoke global constructors in the .ctors and .dtors sections on startup and exit.",
+        "suggest": "MinGW 的启动对象 (crt0.o/dllcrt0.o) 将在启动和退出时在 .ctors 和 .dtors 部分中调用构造函数。",
+        "translate": ""
+    },
+    {
+        "source": "In the case of DLLs, this is done when the DLL is loaded and unloaded.",
+        "suggest": "对于 DLL，这是在加载和卸载 DLL 时完成的。",
+        "translate": ""
+    },
+    {
+        "source": "The linker will sort the sections, which ensures that our callbacks are located at the end of the list.",
+        "suggest": "链接器将对这些部分进行排序，以确保我们的回调位于列表的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Since constructors are run in reverse order, this ensures that our callbacks are the first and last ones executed.",
+        "suggest": "由于构造函数以相反的顺序运行，因此可以确保我们的回调是执行的第一个和最后一个。",
+        "translate": ""
+    },
+    {
+        "source": ".ctors.* : C initialization callbacks",
+        "suggest": ".ctors.* : C 初始化回调",
+        "translate": ""
+    },
+    {
+        "source": ".dtors.* : C termination callbacks",
+        "suggest": ".dtors.* : C 终止回调",
+        "translate": ""
+    },
+    {
+        "source": "See rsbegin.rs for details.",
+        "suggest": "有关详细信息，请参见 rsbegin.rs。",
+        "translate": ""
+    },
+    {
+        "source": "Terminate the frame unwind info section with a 0 as a sentinel;",
+        "suggest": "以 0 作为守卫终止帧展开信息部分;",
+        "translate": ""
+    },
+    {
+        "source": "this would be the 'length' field in a real FDE.",
+        "suggest": "这将是实际 FDE 中的 'length' 字段。",
+        "translate": ""
+    },
+    {
+        "source": "This comparison should be true only 1% of the time.",
+        "suggest": "这种比较应该只有 1% 的时间是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Unnecessary `sift_down`s will degrade performance",
+        "suggest": "不必要的 `sift_down` 会降低性能",
+        "translate": ""
+    },
+    {
+        "source": "The compiler shouldn't be able to optimize away the `sift_down` assignment in `PeekMut`'s `DerefMut` implementation since the loop may not run.",
+        "suggest": "编译器可能无法优化 `PeekMut` 的 `DerefMut` 实现中的 `sift_down` 分配，因为循环可能无法运行。",
+        "translate": ""
+    },
+    {
+        "source": "Remove the already minimal overhead of the sift_down",
+        "suggest": "消除 sift_down 的本已很小的开销",
+        "translate": ""
+    },
+    {
+        "source": "Contrast range_unbounded_unbounded with `iter()`.",
+        "suggest": "将 range_unbounded_unbounded 与 `iter()` 进行对比。",
+        "translate": ""
+    },
+    {
+        "source": "The returned map has small keys and values.",
+        "suggest": "返回的 map 具有较小的键和值。",
+        "translate": ""
+    },
+    {
+        "source": "Benchmarks on it have a counterpart in set.rs with the same keys and no values at all.",
+        "suggest": "它的基准在 set.rs 中有一个对应的键，具有相同的键，并且完全没有值。",
+        "translate": ""
+    },
+    {
+        "source": "The returned map has small keys and large values.",
+        "suggest": "返回的 map 具有较小的键和较大的值。",
+        "translate": ""
+    },
+    {
+        "source": "Disabling on android for the time being",
+        "suggest": "暂时禁用 android",
+        "translate": ""
+    },
+    {
+        "source": "peculiar numbers to stop LLVM from optimising the summation out.",
+        "suggest": "阻止 LLVM 优化总和的奇异数字。",
+        "translate": ""
+    },
+    {
+        "source": "sum == 11806, to stop dead code elimination.",
+        "suggest": "sum == 11806，以停止消除无效代码。",
+        "translate": ""
+    },
+    {
+        "source": "odd length and offset by 1 to be as unaligned as possible",
+        "suggest": "奇数长度和偏移量为 1 以尽可能不对齐",
+        "translate": ""
+    },
+    {
+        "source": "Intended to use more RAM than the machine has cache",
+        "suggest": "打算使用比机器拥有的缓存更多的 RAM",
+        "translate": ""
+    },
+    {
+        "source": "Short strings: 65 bytes each",
+        "suggest": "短字符串: 每个 65 字节",
+        "translate": ""
+    },
+    {
+        "source": "ensure our operation produces an exact-size string before we benchmark it",
+        "suggest": "在基准测试之前，请确保我们的操作产生的字符串大小正确",
+        "translate": ""
+    },
+    {
+        "source": "isolated Miri does not support benchmarks",
+        "suggest": "隔离的 Miri 不支持基准测试",
+        "translate": ""
+    },
+    {
+        "source": "Memory allocation APIs",
+        "suggest": "内存分配 API",
+        "translate": ""
+    },
+    {
+        "source": "These are the magic symbols to call the global allocator.",
+        "suggest": "这些是调用分配器的魔术符号。",
+        "translate": ""
+    },
+    {
+        "source": "rustc generates them to call `__rg_alloc` etc.",
+        "suggest": "rustc 生成它们以调用 `__rg_alloc` 等。",
+        "translate": ""
+    },
+    {
+        "source": "if there is a `#[global_allocator]` attribute (the code expanding that attribute macro generates those functions), or to call the default implementations in libstd (`__rdl_alloc` etc.",
+        "suggest": "如果存在 `#[global_allocator]` 属性 (扩展该属性的代码宏将生成这些函数)，或调用 libstd 中的默认实现 (`__rdl_alloc` 等)。",
+        "translate": ""
+    },
+    {
+        "source": "in `library/std/src/alloc.rs`) otherwise.",
+        "suggest": "在 `library/std/src/alloc.rs` 中)。",
+        "translate": ""
+    },
+    {
+        "source": "The rustc fork of LLVM also special-cases these function names to be able to optimize them like `malloc`, `realloc`, and `free`, respectively.",
+        "suggest": "LLVM 的 rustc fork 还对这些函数名称进行特殊处理，以便分别优化它们，例如 `malloc`，`realloc` 和 `free`。",
+        "translate": ""
+    },
+    {
+        "source": "The global memory allocator.",
+        "suggest": "内存分配器。",
+        "translate": ""
+    },
+    {
+        "source": "This type implements the [`Allocator`] trait by forwarding calls to the allocator registered with the `#[global_allocator]` attribute if there is one, or the `std` crate’s default.",
+        "suggest": "此类型通过将调用转发到用 `#[global_allocator]` 属性注册的分配器 (如果有的话) 或 `std` crate 的默认值来实现 [`Allocator`] trait。",
+        "translate": ""
+    },
+    {
+        "source": "while this type is unstable, the functionality it provides can be accessed through the [free functions in `alloc`](self#functions).",
+        "suggest": "尽管此类型不稳定，但是可以通过 [free functions in `alloc`](self#functions) 访问其提供的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Allocate memory with the global allocator.",
+        "suggest": "用分配器分配内存。",
+        "translate": ""
+    },
+    {
+        "source": "This function forwards calls to the [`GlobalAlloc::alloc`] method of the allocator registered with the `#[global_allocator]` attribute if there is one, or the `std` crate’s default.",
+        "suggest": "如果存在，则此函数将调用转发到用 `#[global_allocator]` 属性注册的分配器的 [`GlobalAlloc::alloc`] 方法，或者将其默认为 `std` crate。",
+        "translate": ""
+    },
+    {
+        "source": "This function is expected to be deprecated in favor of the `alloc` method of the [`Global`] type when it and the [`Allocator`] trait become stable.",
+        "suggest": "当 [`Global`] 类型的 `alloc` 方法和 [`Allocator`] trait 变得稳定时，应优先使用此函数，而不是 [`Global`] 类型的 `alloc` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "See [`GlobalAlloc::alloc`].",
+        "suggest": "请参见 [`GlobalAlloc::alloc`]。",
+        "translate": ""
+    },
+    {
+        "source": "Deallocate memory with the global allocator.",
+        "suggest": "使用分配器释放内存。",
+        "translate": ""
+    },
+    {
+        "source": "This function forwards calls to the [`GlobalAlloc::dealloc`] method of the allocator registered with the `#[global_allocator]` attribute if there is one, or the `std` crate’s default.",
+        "suggest": "如果存在，则此函数将调用转发到用 `#[global_allocator]` 属性注册的分配器的 [`GlobalAlloc::dealloc`] 方法，或者将其默认为 `std` crate。",
+        "translate": ""
+    },
+    {
+        "source": "This function is expected to be deprecated in favor of the `dealloc` method of the [`Global`] type when it and the [`Allocator`] trait become stable.",
+        "suggest": "当 [`Global`] 类型的 `dealloc` 方法和 [`Allocator`] trait 变得稳定时，应优先使用此函数，而不是 [`Global`] 类型的 `dealloc` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "See [`GlobalAlloc::dealloc`].",
+        "suggest": "请参见 [`GlobalAlloc::dealloc`]。",
+        "translate": ""
+    },
+    {
+        "source": "Reallocate memory with the global allocator.",
+        "suggest": "使用分配器重新分配内存。",
+        "translate": ""
+    },
+    {
+        "source": "This function forwards calls to the [`GlobalAlloc::realloc`] method of the allocator registered with the `#[global_allocator]` attribute if there is one, or the `std` crate’s default.",
+        "suggest": "如果存在，则此函数将调用转发到用 `#[global_allocator]` 属性注册的分配器的 [`GlobalAlloc::realloc`] 方法，或者将其默认为 `std` crate。",
+        "translate": ""
+    },
+    {
+        "source": "This function is expected to be deprecated in favor of the `realloc` method of the [`Global`] type when it and the [`Allocator`] trait become stable.",
+        "suggest": "当 [`Global`] 类型的 `realloc` 方法和 [`Allocator`] trait 变得稳定时，应优先使用此函数，而不是 [`Global`] 类型的 `realloc` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "See [`GlobalAlloc::realloc`].",
+        "suggest": "请参见 [`GlobalAlloc::realloc`]。",
+        "translate": ""
+    },
+    {
+        "source": "Allocate zero-initialized memory with the global allocator.",
+        "suggest": "用分配器分配零初始化的内存。",
+        "translate": ""
+    },
+    {
+        "source": "This function forwards calls to the [`GlobalAlloc::alloc_zeroed`] method of the allocator registered with the `#[global_allocator]` attribute if there is one, or the `std` crate’s default.",
+        "suggest": "如果存在，则此函数将调用转发到用 `#[global_allocator]` 属性注册的分配器的 [`GlobalAlloc::alloc_zeroed`] 方法，或者将其默认为 `std` crate。",
+        "translate": ""
+    },
+    {
+        "source": "This function is expected to be deprecated in favor of the `alloc_zeroed` method of the [`Global`] type when it and the [`Allocator`] trait become stable.",
+        "suggest": "当 [`Global`] 类型的 `alloc_zeroed` 方法和 [`Allocator`] trait 变得稳定时，应优先使用此函数，而不是 [`Global`] 类型的 `alloc_zeroed` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "See [`GlobalAlloc::alloc_zeroed`].",
+        "suggest": "请参见 [`GlobalAlloc::alloc_zeroed`]。",
+        "translate": ""
+    },
+    {
+        "source": "`layout` is non-zero in size,",
+        "suggest": "`layout` 的大小非零，",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Allocator::grow`",
+        "suggest": "与 `Allocator::grow` 相同",
+        "translate": ""
+    },
+    {
+        "source": "`new_size` is non-zero as `old_size` is greater than or equal to `new_size` as required by safety conditions.",
+        "suggest": "`new_size` 为非零值，因为根据安全条件的要求，`old_size` 大于或等于 `new_size`。",
+        "translate": ""
+    },
+    {
+        "source": "Other conditions must be upheld by the caller",
+        "suggest": "调用者必须坚持其他条件",
+        "translate": ""
+    },
+    {
+        "source": "probably checks for `new_size >= old_layout.size()` or something similar.",
+        "suggest": "大概检查 `new_size >= old_layout.size()` 或类似的东西。",
+        "translate": ""
+    },
+    {
+        "source": "because `new_layout.size()` must be greater than or equal to `old_size`, both the old and new memory allocation are valid for reads and writes for `old_size` bytes.",
+        "suggest": "因为 `new_layout.size()` 必须大于或等于 `old_size`，所以旧的和新的内存分配对于 `old_size` 字节的读取和写入均有效。",
+        "translate": ""
+    },
+    {
+        "source": "Also, because the old allocation wasn't yet deallocated, it cannot overlap `new_ptr`.",
+        "suggest": "另外，由于尚未分配旧分配，因此它不能与 `new_ptr` 重叠。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, the call to `copy_nonoverlapping` is safe.",
+        "suggest": "因此，调用 `copy_nonoverlapping` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "The safety contract for `dealloc` must be upheld by the caller.",
+        "suggest": "调用者必须遵守 `dealloc` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "`layout` is non-zero in size, other conditions must be upheld by the caller",
+        "suggest": "`layout` 的大小非零，调用者必须保持其他条件",
+        "translate": ""
+    },
+    {
+        "source": "all conditions must be upheld by the caller",
+        "suggest": "调用者必须遵守所有条件",
+        "translate": ""
+    },
+    {
+        "source": "conditions must be upheld by the caller",
+        "suggest": "调用者必须保持条件",
+        "translate": ""
+    },
+    {
+        "source": "`new_size` is non-zero.",
+        "suggest": "`new_size` 不为零。",
+        "translate": ""
+    },
+    {
+        "source": "probably checks for `new_size <= old_layout.size()` or something similar.",
+        "suggest": "大概检查 `new_size <= old_layout.size()` 或类似的东西。",
+        "translate": ""
+    },
+    {
+        "source": "because `new_size` must be smaller than or equal to `old_layout.size()`, both the old and new memory allocation are valid for reads and writes for `new_size` bytes.",
+        "suggest": "因为 `new_size` 必须小于或等于 `old_layout.size()`，所以旧的和新的内存分配对于 `new_size` 字节的读取和写入均有效。",
+        "translate": ""
+    },
+    {
+        "source": "The allocator for unique pointers.",
+        "suggest": "唯一指针的分配器。",
+        "translate": ""
+    },
+    {
+        "source": "This function must not unwind.",
+        "suggest": "这个函数不能展开。",
+        "translate": ""
+    },
+    {
+        "source": "If it does, MIR codegen will fail.",
+        "suggest": "如果是这样，MIR 代码生成将失败。",
+        "translate": ""
+    },
+    {
+        "source": "This signature has to be the same as `Box`, otherwise an ICE will happen.",
+        "suggest": "该签名必须与 `Box` 相同，否则将发生 ICE。",
+        "translate": ""
+    },
+    {
+        "source": "When an additional parameter to `Box` is added (like `A: Allocator`), this has to be added here as well.",
+        "suggest": "当添加了 `Box` 的附加参数 (如 `A: Allocator`) 时，也必须在此处添加该参数。",
+        "translate": ""
+    },
+    {
+        "source": "For example if `Box` is changed to  `struct Box<T: ?Sized, A: Allocator>(Unique<T>, A)`, this function has to be changed to `fn box_free<T: ?Sized, A: Allocator>(Unique<T>, A)` as well.",
+        "suggest": "例如，如果 `Box` 更改为 `struct Box<T: ?Sized, A: Allocator>(Unique<T>, A)`，则该函数也必须更改为 `fn box_free<T: ?Sized, A: Allocator>(Unique<T>, A)`。",
+        "translate": ""
+    },
+    {
+        "source": "Allocation error handler",
+        "suggest": "分配错误处理程序",
+        "translate": ""
+    },
+    {
+        "source": "This is the magic symbol to call the global alloc error handler.",
+        "suggest": "这是调用 alloc 错误处理程序的神奇符号。",
+        "translate": ""
+    },
+    {
+        "source": "rustc generates it to call `__rg_oom` if there is a `#[alloc_error_handler]`, or to call the default implementations below (`__rdl_oom`) otherwise.",
+        "suggest": "rustc 生成它以调用 `__rg_oom` (如果存在 `#[alloc_error_handler]`)，否则调用 (`__rdl_oom`) 以下的默认实现。",
+        "translate": ""
+    },
+    {
+        "source": "Abort on memory allocation error or failure.",
+        "suggest": "由于内存分配错误或失败而终止。",
+        "translate": ""
+    },
+    {
+        "source": "Callers of memory allocation APIs wishing to abort computation in response to an allocation error are encouraged to call this function, rather than directly invoking `panic!` or similar.",
+        "suggest": "鼓励希望响应分配错误而终止计算的内存分配 API 调用程序调用此函数，而不是直接调用 `panic!` 或类似方法。",
+        "translate": ""
+    },
+    {
+        "source": "The default behavior of this function is to print a message to standard error and abort the process.",
+        "suggest": "该函数的默认行为是将一条消息打印到标准错误并终止该进程。",
+        "translate": ""
+    },
+    {
+        "source": "It can be replaced with [`set_alloc_error_hook`] and [`take_alloc_error_hook`].",
+        "suggest": "可以将其替换为 [`set_alloc_error_hook`] 和 [`take_alloc_error_hook`]。",
+        "translate": ""
+    },
+    {
+        "source": "For alloc test `std::alloc::handle_alloc_error` can be used directly.",
+        "suggest": "对于分配测试，可以直接使用 `std::alloc::handle_alloc_error`。",
+        "translate": ""
+    },
+    {
+        "source": "called via generated `__rust_alloc_error_handler`",
+        "suggest": "通过生成的 `__rust_alloc_error_handler` 调用",
+        "translate": ""
+    },
+    {
+        "source": "if there is no `#[alloc_error_handler]`",
+        "suggest": "如果没有 `#[alloc_error_handler]`",
+        "translate": ""
+    },
+    {
+        "source": "if there is a `#[alloc_error_handler]`",
+        "suggest": "如果有 `#[alloc_error_handler]`",
+        "translate": ""
+    },
+    {
+        "source": "Specialize clones into pre-allocated, uninitialized memory.",
+        "suggest": "将克隆专用于预分配的未初始化内存。",
+        "translate": ""
+    },
+    {
+        "source": "Used by `Box::clone` and `Rc`/`Arc::make_mut`.",
+        "suggest": "由 `Box::clone` 和 `Rc`/`Arc::make_mut` 使用。",
+        "translate": ""
+    },
+    {
+        "source": "Having allocated *first* may allow the optimizer to create the cloned value in-place, skipping the local and move.",
+        "suggest": "分配 *first* 后，优化器可以就地创建克隆的值，而跳过本地并移动。",
+        "translate": ""
+    },
+    {
+        "source": "We can always copy in-place, without ever involving a local value.",
+        "suggest": "我们始终可以就地复制，而无需涉及本地值。",
+        "translate": ""
+    },
+    {
+        "source": "Clones into a vector if not already owned.",
+        "suggest": "如果尚未拥有，则克隆到 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "No clone occurs because `input` doesn't need to be mutated.",
+        "suggest": "因为 `input` 不需要可变的，所以不会发生克隆。",
+        "translate": ""
+    },
+    {
+        "source": "Clone occurs because `input` needs to be mutated.",
+        "suggest": "发生克隆是因为需要对 `input` 进行可变的。",
+        "translate": ""
+    },
+    {
+        "source": "No clone occurs because `input` is already owned.",
+        "suggest": "因为 `input` 已被拥有，所以不会发生克隆。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a container from borrowed values of a slice",
+        "suggest": "根据切片的借用值创建容器",
+        "translate": ""
+    },
+    {
+        "source": "Mutates the data from slice into owned vec and pushes a new value on top",
+        "suggest": "将切片中的数据可变的为拥有的 vec，并在顶部推入新值",
+        "translate": ""
+    },
+    {
+        "source": "The data was mutated.",
+        "suggest": "数据被可变的。",
+        "translate": ""
+    },
+    {
+        "source": "Let check it out.",
+        "suggest": "让我们看看。",
+        "translate": ""
+    },
+    {
+        "source": "A module for working with borrowed data.",
+        "suggest": "用于处理借用数据的模块。",
+        "translate": ""
+    },
+    {
+        "source": "A generalization of `Clone` to borrowed data.",
+        "suggest": "`Clone` 到借用数据的一般化。",
+        "translate": ""
+    },
+    {
+        "source": "Some types make it possible to go from borrowed to owned, usually by implementing the `Clone` trait.",
+        "suggest": "某些类型通常可以通过实现 `Clone` trait 从借用变为拥有。",
+        "translate": ""
+    },
+    {
+        "source": "But `Clone` works only for going from `&T` to `T`.",
+        "suggest": "但是 `Clone` 仅适用于从 `&T` 到 `T` 的情况。",
+        "translate": ""
+    },
+    {
+        "source": "The `ToOwned` trait generalizes `Clone` to construct owned data from any borrow of a given type.",
+        "suggest": "`ToOwned` trait 泛化 `Clone` 来构造给定类型的任何借用数据。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after obtaining ownership.",
+        "suggest": "获得所有权后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Creates owned data from borrowed data, usually by cloning.",
+        "suggest": "通常通过克隆从借用数据中创建拥有的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage:",
+        "suggest": "基本用法:",
+        "translate": ""
+    },
+    {
+        "source": "Uses borrowed data to replace owned data, usually by cloning.",
+        "suggest": "使用借来的数据来替换拥有的数据，通常是通过克隆。",
+        "translate": ""
+    },
+    {
+        "source": "This is borrow-generalized version of `Clone::clone_from`.",
+        "suggest": "这是 `Clone::clone_from` 的借用通用版本。",
+        "translate": ""
+    },
+    {
+        "source": "A clone-on-write smart pointer.",
+        "suggest": "写入时克隆智能指针。",
+        "translate": ""
+    },
+    {
+        "source": "The type `Cow` is a smart pointer providing clone-on-write functionality: it can enclose and provide immutable access to borrowed data, and clone the data lazily when mutation or ownership is required.",
+        "suggest": "`Cow` 类型是一种智能指针，提供了写时克隆功能: 它可以封装并提供对借用数据的不可变访问，并在需要可变的或所有权时懒惰地克隆数据。",
+        "translate": ""
+    },
+    {
+        "source": "The type is designed to work with general borrowed data via the `Borrow` trait.",
+        "suggest": "该类型旨在通过 `Borrow` trait 处理常规借用数据。",
+        "translate": ""
+    },
+    {
+        "source": "implements `Deref`, which means that you can call non-mutating methods directly on the data it encloses.",
+        "suggest": "实现 `Deref`，这意味着您可以直接在其所包含的数据上调用非可变方法。",
+        "translate": ""
+    },
+    {
+        "source": "If mutation is desired, `to_mut` will obtain a mutable reference to an owned value, cloning if necessary.",
+        "suggest": "如果需要进行可变的，则 `to_mut` 将获得一个拥有值的变量引用，必要时进行克隆。",
+        "translate": ""
+    },
+    {
+        "source": "If you need reference-counting pointers, note that [`Rc::make_mut`][crate::rc::Rc::make_mut] and [`Arc::make_mut`][crate::sync::Arc::make_mut] can provide clone-on-write functionality as well.",
+        "suggest": "如果需要引用计数指针，请注意 [`Rc::make_mut`][crate::rc::Rc::make_mut] 和 [`Arc::make_mut`][crate::sync::Arc::make_mut] 也可以提供写时克隆功能。",
+        "translate": ""
+    },
+    {
+        "source": "Another example showing how to keep `Cow` in a struct:",
+        "suggest": "另一个示例显示如何将 `Cow` 保留在结构体中:",
+        "translate": ""
+    },
+    {
+        "source": "Borrowed data.",
+        "suggest": "借用的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Owned data.",
+        "suggest": "拥有的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if the data is borrowed, i.e. if `to_mut` would require additional work.",
+        "suggest": "如果借用了数据 (即 `to_mut` 需要其他工作)，则返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if the data is owned, i.e. if `to_mut` would be a no-op.",
+        "suggest": "如果数据已拥有，即 `to_mut` 为无操作，则返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Acquires a mutable reference to the owned form of the data.",
+        "suggest": "获取数据拥有形式的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Clones the data if it is not already owned.",
+        "suggest": "如果尚未拥有该数据，则将其克隆。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the owned data.",
+        "suggest": "提取拥有的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `into_owned` on a `Cow::Borrowed` clones the underlying data and becomes a `Cow::Owned`:",
+        "suggest": "在 `Cow::Borrowed` 上调用 `into_owned` 会克隆基础数据并成为 `Cow::Owned`:",
+        "translate": ""
+    },
+    {
+        "source": "Calling `into_owned` on a `Cow::Owned` is a no-op:",
+        "suggest": "禁止在 `Cow::Owned` 上调用 `into_owned`:",
+        "translate": ""
+    },
+    {
+        "source": "Creates an owned Cow<'a, B> with the default value for the contained owned value.",
+        "suggest": "创建一个拥有的 Cow<'a, B>，其默认值为包含的拥有值。",
+        "translate": ""
+    },
+    {
+        "source": "C header",
+        "suggest": "C 头文件",
+        "translate": ""
+    },
+    {
+        "source": "Returns ownership to the caller",
+        "suggest": "将所有权归还给调用者",
+        "translate": ""
+    },
+    {
+        "source": "Takes ownership from the caller;",
+        "suggest": "取得调用者的所有权;",
+        "translate": ""
+    },
+    {
+        "source": "no-op when invoked with NULL",
+        "suggest": "使用 NULL 调用时不进行操作",
+        "translate": ""
+    },
+    {
+        "source": "Deferred initialization:",
+        "suggest": "延迟初始化:",
+        "translate": ""
+    },
+    {
+        "source": "In general .write is required to avoid attempting to destruct the (uninitialized) previous contents of `ptr`, though for this simple example `*ptr = 5` would have worked as well.",
+        "suggest": "通常，需要 .write 以避免尝试销毁 `ptr` 以前的内容，尽管对于这个简单的示例 `*ptr = 5` 也可以工作。",
+        "translate": ""
+    },
+    {
+        "source": "The value is the same",
+        "suggest": "值是一样的",
+        "translate": ""
+    },
+    {
+        "source": "But they are unique objects",
+        "suggest": "但是它们是独特的对象",
+        "translate": ""
+    },
+    {
+        "source": "And no allocation occurred",
+        "suggest": "没有分配发生",
+        "translate": ""
+    },
+    {
+        "source": "create a &[u8] which will be used to create a Box<[u8]>",
+        "suggest": "创建 &[u8] which 将用于创建 Box<[u8]>",
+        "translate": ""
+    },
+    {
+        "source": "create a Box<str> which will be used to create a Box<[u8]>",
+        "suggest": "创建一个 Box<str>，该 Box<str> 将用于创建 Box<[u8]>",
+        "translate": ""
+    },
+    {
+        "source": "A pointer type for heap allocation.",
+        "suggest": "堆分配的指针类型。",
+        "translate": ""
+    },
+    {
+        "source": "casually referred to as a 'box', provides the simplest form of heap allocation in Rust.",
+        "suggest": "随意称为 'box'，它在 Rust 中提供了最简单的堆分配形式。",
+        "translate": ""
+    },
+    {
+        "source": "Boxes provide ownership for this allocation, and drop their contents when they go out of scope.",
+        "suggest": "Boxes 为这个分配提供所有权，并在离开作用域时丢弃它们的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Boxes also ensure that they never allocate more than `isize::MAX` bytes.",
+        "suggest": "Boxes 还确保它们分配的字节数永远不会超过 `isize::MAX` 字节。",
+        "translate": ""
+    },
+    {
+        "source": "Move a value from the stack to the heap by creating a [`Box`]:",
+        "suggest": "通过创建 [`Box`]，将值从栈移动到堆:",
+        "translate": ""
+    },
+    {
+        "source": "Move a value from a [`Box`] back to the stack by [dereferencing]:",
+        "suggest": "通过 [dereferencing] 将值从 [`Box`] 移回栈:",
+        "translate": ""
+    },
+    {
+        "source": "Creating a recursive data structure:",
+        "suggest": "创建递归数据结构体:",
+        "translate": ""
+    },
+    {
+        "source": "This will print `Cons(1, Cons(2, Nil))`.",
+        "suggest": "这将打印 `Cons(1, Cons(2, Nil))`。",
+        "translate": ""
+    },
+    {
+        "source": "Recursive structures must be boxed, because if the definition of `Cons` looked like this:",
+        "suggest": "递归结构必须为 boxed，因为如果 `Cons` 的定义如下所示:",
+        "translate": ""
+    },
+    {
+        "source": "It wouldn't work.",
+        "suggest": "这行不通。",
+        "translate": ""
+    },
+    {
+        "source": "This is because the size of a `List` depends on how many elements are in the list, and so we don't know how much memory to allocate for a `Cons`.",
+        "suggest": "这是因为 `List` 的大小取决于列表中有多少个元素，因此我们不知道为 `Cons` 分配多少内存。",
+        "translate": ""
+    },
+    {
+        "source": "By introducing a [`Box<T>`], which has a defined size, we know how big `Cons` needs to be.",
+        "suggest": "通过引入具有定义大小的 [`Box<T>`]，我们知道 `Cons` 的大小。",
+        "translate": ""
+    },
+    {
+        "source": "Memory layout",
+        "suggest": "内存布局",
+        "translate": ""
+    },
+    {
+        "source": "For non-zero-sized values, a [`Box`] will use the [`Global`] allocator for its allocation.",
+        "suggest": "对于非零大小的值，[`Box`] 将使用 [`Global`] 分配器进行分配。",
+        "translate": ""
+    },
+    {
+        "source": "It is valid to convert both ways between a [`Box`] and a raw pointer allocated with the [`Global`] allocator, given that the [`Layout`] used with the allocator is correct for the type.",
+        "suggest": "假定与分配器一起使用的 [`Layout`] 对于该类型是正确的，则在 [`Box`] 和使用 [`Global`] 分配器分配的裸指针之间进行双向转换是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "More precisely, a `value: *mut T` that has been allocated with the [`Global`] allocator with `Layout::for_value(&*value)` may be converted into a box using [`Box::<T>::from_raw(value)`].",
+        "suggest": "更准确地说，已使用 `Layout::for_value(&*value)` 与 [`Global`] 分配器一起分配的 `value:* mut T` 可以使用 [`Box::<T>::from_raw(value)`] 转换为 box。",
+        "translate": ""
+    },
+    {
+        "source": "Conversely, the memory backing a `value: *mut T` obtained from [`Box::<T>::into_raw`] may be deallocated using the [`Global`] allocator with [`Layout::for_value(&*value)`].",
+        "suggest": "相反，可以使用带有 [`Layout::for_value(&*value)`] 的 [`Global`] 分配器重新分配支持从 [`Box::<T>::into_raw`] 获得的 `value:* mut T` 的内存。",
+        "translate": ""
+    },
+    {
+        "source": "For zero-sized values, the `Box` pointer still has to be [valid] for reads and writes and sufficiently aligned.",
+        "suggest": "对于零大小的值，`Box` 指针对于读取和写入仍必须为 [valid]，并且必须充分对齐。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, casting any aligned non-zero integer literal to a raw pointer produces a valid pointer, but a pointer pointing into previously allocated memory that since got freed is not valid.",
+        "suggest": "特别是，将任何对齐的非零整数字面量强制转换为裸指针都会产生有效的指针，但是指向先前分配的内存 (由于释放后的指针) 的指针无效。",
+        "translate": ""
+    },
+    {
+        "source": "The recommended way to build a Box to a ZST if `Box::new` cannot be used is to use [`ptr::NonNull::dangling`].",
+        "suggest": "如果不能使用 `Box::new`，建议将 Box 生成到 ZST 的推荐方法是使用 [`ptr::NonNull::dangling`]。",
+        "translate": ""
+    },
+    {
+        "source": "So long as `T: Sized`, a `Box<T>` is guaranteed to be represented as a single pointer and is also ABI-compatible with C pointers (i.e. the C type `T*`).",
+        "suggest": "只要 `T: Sized`，就可以保证将 `Box<T>` 表示为单个指针，并且还与 C 指针 ABI 兼容 (即 C 类型 `T*`)。",
+        "translate": ""
+    },
+    {
+        "source": "This means that if you have extern \"C\" Rust functions that will be called from C, you can define those Rust functions using `Box<T>` types, and use `T*` as corresponding type on the C side.",
+        "suggest": "这意味着，如果您有从 C 调用的外部 \"C\" Rust 函数，则可以使用 `Box<T>` 类型定义那些 Rust 函数，并在 C 侧使用 `T*` 作为对应类型。",
+        "translate": ""
+    },
+    {
+        "source": "As an example, consider this C header which declares functions that create and destroy some kind of `Foo` value:",
+        "suggest": "例如，考虑下面的 C 头文件，该标头声明创建和销毁某种 `Foo` 值的函数:",
+        "translate": ""
+    },
+    {
+        "source": "These two functions might be implemented in Rust as follows.",
+        "suggest": "这两个函数可以在 Rust 中实现，如下所示。",
+        "translate": ""
+    },
+    {
+        "source": "Here, the `struct Foo*` type from C is translated to `Box<Foo>`, which captures the ownership constraints.",
+        "suggest": "在这里，来自 C 的 `struct Foo*` 类型被转换为 `Box<Foo>`，它捕获了所有权约束。",
+        "translate": ""
+    },
+    {
+        "source": "Note also that the nullable argument to `foo_delete` is represented in Rust as `Option<Box<Foo>>`, since `Box<Foo>` cannot be null.",
+        "suggest": "还要注意，由于 `Box<Foo>` 不能为 null，因此 `foo_delete` 的 nullable 参数在 Rust 中表示为 `Option<Box<Foo>>`。",
+        "translate": ""
+    },
+    {
+        "source": "Even though `Box<T>` has the same representation and C ABI as a C pointer, this does not mean that you can convert an arbitrary `T*` into a `Box<T>` and expect things to work.",
+        "suggest": "即使 `Box<T>` 具有与 C 指针相同的表示形式和 C ABI，但这并不意味着您可以将任意 `T*` 转换为 `Box<T>` 并期望一切正常。",
+        "translate": ""
+    },
+    {
+        "source": "values will always be fully aligned, non-null pointers.",
+        "suggest": "值将始终是完全对齐的非空指针。",
+        "translate": ""
+    },
+    {
+        "source": "Moreover, the destructor for `Box<T>` will attempt to free the value with the global allocator.",
+        "suggest": "此外，`Box<T>` 的析构函数将尝试使用分配器释放该值。",
+        "translate": ""
+    },
+    {
+        "source": "In general, the best practice is to only use `Box<T>` for pointers that originated from the global allocator.",
+        "suggest": "通常，最佳实践是仅对来自分配器的指针使用 `Box<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "**Important.** At least at present, you should avoid using `Box<T>` types for functions that are defined in C but invoked from Rust.",
+        "suggest": "**重要** 至少目前，您应该避免对在 C 中定义但从 Rust 调用的函数使用 `Box<T>` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "In those cases, you should directly mirror the C types as closely as possible.",
+        "suggest": "在这些情况下，您应该尽可能直接地镜像 C 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Using types like `Box<T>` where the C definition is just using `T*` can lead to undefined behavior, as described in [rust-lang/unsafe-code-guidelines#198][ucg#198].",
+        "suggest": "如 [rust-lang/unsafe-code-guidelines#198][ucg#198] 中所述，使用 C 定义仅使用 `T*` 的 `Box<T>` 这样的类型可能导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "See the [module-level documentation](../../std/boxed/index.html) for more.",
+        "suggest": "有关更多信息，请参见 [模块级文档](../../std/boxed/index.html)。",
+        "translate": ""
+    },
+    {
+        "source": "Allocates memory on the heap and then places `x` into it.",
+        "suggest": "在堆上分配内存，然后将 `x` 放入其中。",
+        "translate": ""
+    },
+    {
+        "source": "This doesn't actually allocate if `T` is zero-sized.",
+        "suggest": "如果 `T` 的大小为零，则实际上不会分配。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new box with uninitialized contents.",
+        "suggest": "创建一个具有未初始化内容的新 box。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes.",
+        "suggest": "创建一个具有未初始化内容的新 `Box`，并用 `0` 字节填充内存。",
+        "translate": ""
+    },
+    {
+        "source": "See [`MaybeUninit::zeroed`][zeroed] for examples of correct and incorrect usage of this method.",
+        "suggest": "有关正确和不正确使用此方法的示例，请参见 [`MaybeUninit::zeroed`][zeroed]。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Pin<Box<T>>`.",
+        "suggest": "创建一个新的 `Pin<Box<T>>`。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` does not implement `Unpin`, then `x` will be pinned in memory and unable to be moved.",
+        "suggest": "如果 `T` 未实现 `Unpin`，则 `x` 将被固定在内存中并且无法移动。",
+        "translate": ""
+    },
+    {
+        "source": "Allocates memory on the heap then places `x` into it, returning an error if the allocation fails",
+        "suggest": "在堆上分配内存，然后将 `x` 放入其中，如果分配失败，则返回错误",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new box with uninitialized contents on the heap, returning an error if the allocation fails",
+        "suggest": "在堆上创建一个具有未初始化内容的新 box，如果分配失败，则返回错误",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes on the heap",
+        "suggest": "创建一个具有未初始化内容的新 `Box`，堆中的内存由 `0` 字节填充",
+        "translate": ""
+    },
+    {
+        "source": "Allocates memory in the given allocator then places `x` into it.",
+        "suggest": "在给定的分配器中分配内存，然后将 `x` 放入其中。",
+        "translate": ""
+    },
+    {
+        "source": "Allocates memory in the given allocator then places `x` into it, returning an error if the allocation fails",
+        "suggest": "在给定的分配器中分配内存，然后将 `x` 放入其中，如果分配失败，则返回错误",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new box with uninitialized contents in the provided allocator.",
+        "suggest": "在提供的分配器中创建一个具有未初始化内容的新 box。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer match over unwrap_or_else since closure sometimes not inlineable.",
+        "suggest": "优先选择不匹配 unwrap_or_else 的匹配项，因为有时闭包不是内联的。",
+        "translate": ""
+    },
+    {
+        "source": "That would make code size bigger.",
+        "suggest": "那将使代码更大。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new box with uninitialized contents in the provided allocator, returning an error if the allocation fails",
+        "suggest": "在提供的分配器中创建一个具有未初始化内容的新 box，如果分配失败，则返回错误",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes in the provided allocator.",
+        "suggest": "创建一个具有未初始化内容的新 `Box`，使用提供的分配器中的 `0` 字节填充内存。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Box` with uninitialized contents, with the memory being filled with `0` bytes in the provided allocator, returning an error if the allocation fails,",
+        "suggest": "创建一个具有未初始化内容的新 `Box`，使用提供的分配器中的 `0` 字节填充内存，如果分配失败，则返回错误，",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Pin<Box<T, A>>`.",
+        "suggest": "创建一个新的 `Pin<Box<T, A>>`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `Box<T>` into a `Box<[T]>`",
+        "suggest": "将 `Box<T>` 转换为 `Box<[T]>`",
+        "translate": ""
+    },
+    {
+        "source": "This conversion does not allocate on the heap and happens in place.",
+        "suggest": "这种转换不会在堆上分配，而是就地进行。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `Box`, returning the wrapped value.",
+        "suggest": "消耗 `Box`，返回包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new boxed slice with uninitialized contents.",
+        "suggest": "创建一个具有未初始化内容的新 boxed 切片。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new boxed slice with uninitialized contents, with the memory being filled with `0` bytes.",
+        "suggest": "创建一个具有未初始化内容的新 boxed 切片，并用 `0` 字节填充内存。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new boxed slice with uninitialized contents in the provided allocator.",
+        "suggest": "使用提供的分配器中未初始化的内容创建一个新的 boxed 切片。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new boxed slice with uninitialized contents in the provided allocator, with the memory being filled with `0` bytes.",
+        "suggest": "使用提供的分配器中未初始化的内容创建一个新的 boxed 切片，并用 `0` 字节填充内存。",
+        "translate": ""
+    },
+    {
+        "source": "Converts to `Box<T, A>`.",
+        "suggest": "转换为 `Box<T, A>`。",
+        "translate": ""
+    },
+    {
+        "source": "As with [`MaybeUninit::assume_init`], it is up to the caller to guarantee that the value really is in an initialized state.",
+        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用方负责确保该值确实处于初始化状态。",
+        "translate": ""
+    },
+    {
+        "source": "Calling this when the content is not yet fully initialized causes immediate undefined behavior.",
+        "suggest": "在内容尚未完全初始化时调用此方法会立即导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "Converts to `Box<[T], A>`.",
+        "suggest": "转换为 `Box<[T], A>`。",
+        "translate": ""
+    },
+    {
+        "source": "As with [`MaybeUninit::assume_init`], it is up to the caller to guarantee that the values really are in an initialized state.",
+        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用方负责确保值确实处于初始化状态。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a box from a raw pointer.",
+        "suggest": "从裸指针构造 box。",
+        "translate": ""
+    },
+    {
+        "source": "After calling this function, the raw pointer is owned by the resulting `Box`.",
+        "suggest": "调用此函数后，结果 `Box` 拥有裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically, the `Box` destructor will call the destructor of `T` and free the allocated memory.",
+        "suggest": "具体来说，`Box` 析构函数将调用 `T` 的析构函数并释放分配的内存。",
+        "translate": ""
+    },
+    {
+        "source": "For this to be safe, the memory must have been allocated in accordance with the [memory layout] used by `Box` .",
+        "suggest": "为了安全起见，必须根据 `Box` 所使用的 [memory layout] 分配内存。",
+        "translate": ""
+    },
+    {
+        "source": "This function is unsafe because improper use may lead to memory problems.",
+        "suggest": "此函数不安全，因为使用不当可能会导致内存问题。",
+        "translate": ""
+    },
+    {
+        "source": "For example, a double-free may occur if the function is called twice on the same raw pointer.",
+        "suggest": "例如，如果在同一裸指针上两次调用该函数，则可能会出现 double-free。",
+        "translate": ""
+    },
+    {
+        "source": "The safety conditions are described in the [memory layout] section.",
+        "suggest": "安全条件在 [memory layout] 部分中进行了描述。",
+        "translate": ""
+    },
+    {
+        "source": "Recreate a `Box` which was previously converted to a raw pointer using [`Box::into_raw`]:",
+        "suggest": "重新创建以前使用 [`Box::into_raw`] 转换为裸指针的 `Box`:",
+        "translate": ""
+    },
+    {
+        "source": "Manually create a `Box` from scratch by using the global allocator:",
+        "suggest": "使用二进制分配器从头开始手动创建 `Box`:",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a box from a raw pointer in the given allocator.",
+        "suggest": "从给定分配器中的裸指针构造 box。",
+        "translate": ""
+    },
+    {
+        "source": "Recreate a `Box` which was previously converted to a raw pointer using [`Box::into_raw_with_allocator`]:",
+        "suggest": "重新创建以前使用 [`Box::into_raw_with_allocator`] 转换为裸指针的 `Box`:",
+        "translate": ""
+    },
+    {
+        "source": "Manually create a `Box` from scratch by using the system allocator:",
+        "suggest": "使用系统分配器从头开始手动创建 `Box`:",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `Box`, returning a wrapped raw pointer.",
+        "suggest": "消耗 `Box`，并返回一个包装的裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer will be properly aligned and non-null.",
+        "suggest": "指针将正确对齐且不为空。",
+        "translate": ""
+    },
+    {
+        "source": "After calling this function, the caller is responsible for the memory previously managed by the `Box`.",
+        "suggest": "调用此函数后，调用者将负责先前由 `Box` 管理的内存。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, the caller should properly destroy `T` and release the memory, taking into account the [memory layout] used by `Box`.",
+        "suggest": "特别地，考虑到 `Box` 使用的 [memory layout]，调用者应正确销毁 `T` 并释放内存。",
+        "translate": ""
+    },
+    {
+        "source": "The easiest way to do this is to convert the raw pointer back into a `Box` with the [`Box::from_raw`] function, allowing the `Box` destructor to perform the cleanup.",
+        "suggest": "最简单的方法是使用 [`Box::from_raw`] 函数将裸指针转换回 `Box`，从而允许 `Box` 析构函数执行清理。",
+        "translate": ""
+    },
+    {
+        "source": "this is an associated function, which means that you have to call it as `Box::into_raw(b)` instead of `b.into_raw()`.",
+        "suggest": "这是一个关联函数，这意味着您必须将其称为 `Box::into_raw(b)` 而不是 `b.into_raw()`。",
+        "translate": ""
+    },
+    {
+        "source": "This is so that there is no conflict with a method on the inner type.",
+        "suggest": "这样就不会与内部类型的方法发生冲突。",
+        "translate": ""
+    },
+    {
+        "source": "Converting the raw pointer back into a `Box` with [`Box::from_raw`] for automatic cleanup:",
+        "suggest": "使用 [`Box::from_raw`] 将裸指针转换回 `Box` 以进行自动清理:",
+        "translate": ""
+    },
+    {
+        "source": "Manual cleanup by explicitly running the destructor and deallocating the memory:",
+        "suggest": "通过显式运行析构函数并释放内存来进行手动清理:",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `Box`, returning a wrapped raw pointer and the allocator.",
+        "suggest": "消耗 `Box`，返回包装的裸指针和分配器。",
+        "translate": ""
+    },
+    {
+        "source": "The easiest way to do this is to convert the raw pointer back into a `Box` with the [`Box::from_raw_in`] function, allowing the `Box` destructor to perform the cleanup.",
+        "suggest": "最简单的方法是使用 [`Box::from_raw_in`] 函数将裸指针转换回 `Box`，从而允许 `Box` 析构函数执行清理。",
+        "translate": ""
+    },
+    {
+        "source": "this is an associated function, which means that you have to call it as `Box::into_raw_with_allocator(b)` instead of `b.into_raw_with_allocator()`.",
+        "suggest": "这是一个关联函数，这意味着您必须将其称为 `Box::into_raw_with_allocator(b)` 而不是 `b.into_raw_with_allocator()`。",
+        "translate": ""
+    },
+    {
+        "source": "Converting the raw pointer back into a `Box` with [`Box::from_raw_in`] for automatic cleanup:",
+        "suggest": "使用 [`Box::from_raw_in`] 将裸指针转换回 `Box` 以进行自动清理:",
+        "translate": ""
+    },
+    {
+        "source": "Box is recognized as a \"unique pointer\" by Stacked Borrows, but internally it is a raw pointer for the type system.",
+        "suggest": "Box 被 Stacked 借用识别为 \"unique pointer\"，但在内部它是类型系统的裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "Turning it directly into a raw pointer would not be recognized as \"releasing\" the unique pointer to permit aliased raw accesses, so all raw pointer methods have to go through `Box::leak`.",
+        "suggest": "将其直接转换为裸指针将不会被视为 \"releasing\" 允许别名原始访问的唯一指针，因此所有裸指针方法都必须通过 `Box::leak`。",
+        "translate": ""
+    },
+    {
+        "source": "Turning *that* to a raw pointer behaves correctly.",
+        "suggest": "将其转换为裸指针的行为是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the underlying allocator.",
+        "suggest": "返回基础分配器的引用。",
+        "translate": ""
+    },
+    {
+        "source": "this is an associated function, which means that you have to call it as `Box::allocator(&b)` instead of `b.allocator()`.",
+        "suggest": "这是一个关联函数，这意味着您必须将其称为 `Box::allocator(&b)` 而不是 `b.allocator()`。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes and leaks the `Box`, returning a mutable reference,",
+        "suggest": "消耗并泄漏 `Box`，返回变量引用，",
+        "translate": ""
+    },
+    {
+        "source": "Note that the type `T` must outlive the chosen lifetime `'a`.",
+        "suggest": "请注意，类型 `T` 必须超过所选的生命周期 `'a`。",
+        "translate": ""
+    },
+    {
+        "source": "If the type has only static references, or none at all, then this may be chosen to be `'static`.",
+        "suggest": "如果类型仅具有静态引用，或者根本没有静态引用，则可以将其选择为 `'static`。",
+        "translate": ""
+    },
+    {
+        "source": "This function is mainly useful for data that lives for the remainder of the program's life.",
+        "suggest": "该函数主要用于在程序的剩余生命期内保留的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Dropping the returned reference will cause a memory leak.",
+        "suggest": "丢弃返回的引用将导致内存泄漏。",
+        "translate": ""
+    },
+    {
+        "source": "If this is not acceptable, the reference should first be wrapped with the [`Box::from_raw`] function producing a `Box`.",
+        "suggest": "如果这是不可接受的，则应首先将引用与 [`Box::from_raw`] 函数包装在一起，生成 `Box`。",
+        "translate": ""
+    },
+    {
+        "source": "This `Box` can then be dropped which will properly destroy `T` and release the allocated memory.",
+        "suggest": "这个 `Box` 可以被丢弃，这将正确销毁 `T` 并释放分配的内存。",
+        "translate": ""
+    },
+    {
+        "source": "this is an associated function, which means that you have to call it as `Box::leak(b)` instead of `b.leak()`.",
+        "suggest": "这是一个关联函数，这意味着您必须将其称为 `Box::leak(b)` 而不是 `b.leak()`。",
+        "translate": ""
+    },
+    {
+        "source": "Simple usage:",
+        "suggest": "简单用法:",
+        "translate": ""
+    },
+    {
+        "source": "Unsized data:",
+        "suggest": "未定义大小的数据:",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `Box<T>` into a `Pin<Box<T>>`",
+        "suggest": "将 `Box<T>` 转换为 `Pin<Box<T>>`",
+        "translate": ""
+    },
+    {
+        "source": "This is also available via [`From`].",
+        "suggest": "也可以通过 [`From`] 获得。",
+        "translate": ""
+    },
+    {
+        "source": "It's not possible to move or replace the insides of a `Pin<Box<T>>` when `T: !Unpin`,  so it's safe to pin it directly without any additional requirements.",
+        "suggest": "`T: !Unpin` 时，不能移动或更换 `Pin<Box<T>>` 的内部，因此可以安全地直接固定 `Pin<Box<T>>`，而无需任何其他要求。",
+        "translate": ""
+    },
+    {
+        "source": "Do nothing, drop is currently performed by compiler.",
+        "suggest": "不执行任何操作，当前由编译器执行丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `Box<T>`, with the `Default` value for T.",
+        "suggest": "创建一个 `Box<T>`，其 T 值为 `Default`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new box with a `clone()` of this box's contents.",
+        "suggest": "返回带有此 box 的 内容的 `clone()` 的新 box。",
+        "translate": ""
+    },
+    {
+        "source": "Pre-allocate memory to allow writing the cloned value directly.",
+        "suggest": "预分配内存以允许直接写入克隆的值。",
+        "translate": ""
+    },
+    {
+        "source": "Copies `source`'s contents into `self` without creating a new allocation.",
+        "suggest": "将 `source` 的内容复制到 `self`，而不创建新的分配。",
+        "translate": ""
+    },
+    {
+        "source": "this makes a copy of the data",
+        "suggest": "这将复制数据",
+        "translate": ""
+    },
+    {
+        "source": "Converts a generic type `T` into a `Box<T>`",
+        "suggest": "将泛型 `T` 转换为 `Box<T>`",
+        "translate": ""
+    },
+    {
+        "source": "The conversion allocates on the heap and moves `t` from the stack into it.",
+        "suggest": "转换在堆上分配，并将 `t` 从栈移到堆中。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `&[T]` into a `Box<[T]>`",
+        "suggest": "将 `&[T]` 转换为 `Box<[T]>`",
+        "translate": ""
+    },
+    {
+        "source": "This conversion allocates on the heap and performs a copy of `slice`.",
+        "suggest": "此转换在堆上分配并执行 `slice` 的副本。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `&str` into a `Box<str>`",
+        "suggest": "将 `&str` 转换为 `Box<str>`",
+        "translate": ""
+    },
+    {
+        "source": "This conversion allocates on the heap and performs a copy of `s`.",
+        "suggest": "此转换在堆上分配并执行 `s` 的副本。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `Box<str>` into a `Box<[u8]>`",
+        "suggest": "将 `Box<str>` 转换为 `Box<[u8]>`",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `[T; N]` into a `Box<[T]>`",
+        "suggest": "将 `[T; N]` 转换为 `Box<[T]>`",
+        "translate": ""
+    },
+    {
+        "source": "This conversion moves the array to newly heap-allocated memory.",
+        "suggest": "此转换将数组移动到新的堆分配的内存中。",
+        "translate": ""
+    },
+    {
+        "source": "Attempt to downcast the box to a concrete type.",
+        "suggest": "尝试将 box 转换为具体类型。",
+        "translate": ""
+    },
+    {
+        "source": "It's not possible to extract the inner Uniq directly from the Box, instead we cast it to a *const which aliases the Unique",
+        "suggest": "无法直接从 Box 提取内部 Uniq，而是将其强制转换为 *const which 别名 (唯一)",
+        "translate": ""
+    },
+    {
+        "source": "Specialization for sized `I`s that uses `I`s implementation of `last()` instead of the default.",
+        "suggest": "使用 `last()` 的 I 实现而不是默认值的大小 I 的专业化。",
+        "translate": ""
+    },
+    {
+        "source": "The priority queue depends on `Ord`.",
+        "suggest": "优先级队列取决于 `Ord`。",
+        "translate": ""
+    },
+    {
+        "source": "Explicitly implement the trait so the queue becomes a min-heap instead of a max-heap.",
+        "suggest": "显式实现 trait，以便队列成为最小堆而不是最大堆。",
+        "translate": ""
+    },
+    {
+        "source": "Notice that the we flip the ordering on costs.",
+        "suggest": "请注意，我们翻转了费用排序。",
+        "translate": ""
+    },
+    {
+        "source": "In case of a tie we compare positions - this step is necessary to make implementations of `PartialEq` and `Ord` consistent.",
+        "suggest": "在平局的情况下，我们比较位置 - 必须执行此步骤才能使 `PartialEq` 和 `Ord` 的实现保持一致。",
+        "translate": ""
+    },
+    {
+        "source": "needs to be implemented as well.",
+        "suggest": "也需要实现。",
+        "translate": ""
+    },
+    {
+        "source": "Each node is represented as an `usize`, for a shorter implementation.",
+        "suggest": "对于较短的实现，每个节点都表示为 `usize`。",
+        "translate": ""
+    },
+    {
+        "source": "Dijkstra's shortest path algorithm.",
+        "suggest": "Dijkstra 的最短路径算法。",
+        "translate": ""
+    },
+    {
+        "source": "Start at `start` and use `dist` to track the current shortest distance to each node.",
+        "suggest": "从 `start` 开始，并使用 `dist` 跟踪到每个节点的当前最短距离。",
+        "translate": ""
+    },
+    {
+        "source": "This implementation isn't memory-efficient as it may leave duplicate nodes in the queue.",
+        "suggest": "此实现的内存效率不高，因为它可能会将重复的节点留在队列中。",
+        "translate": ""
+    },
+    {
+        "source": "It also uses `usize::MAX` as a sentinel value, for a simpler implementation.",
+        "suggest": "它还将 `usize::MAX` 用作标记值，以实现更简单的实现。",
+        "translate": ""
+    },
+    {
+        "source": "dist[node] = current shortest distance from `start` to `node`",
+        "suggest": "dist[node] = 当前从 `start` 到 `node` 的最短距离",
+        "translate": ""
+    },
+    {
+        "source": "We're at `start`, with a zero cost",
+        "suggest": "我们正处于 `start` 阶段，成本为零",
+        "translate": ""
+    },
+    {
+        "source": "Examine the frontier with lower cost nodes first (min-heap)",
+        "suggest": "首先检查成本较低的节点的边界 (min-heap)",
+        "translate": ""
+    },
+    {
+        "source": "Alternatively we could have continued to find all shortest paths",
+        "suggest": "或者，我们可以继续找到所有最短的路径",
+        "translate": ""
+    },
+    {
+        "source": "Important as we may have already found a better way",
+        "suggest": "重要，因为我们可能已经找到了更好的方法",
+        "translate": ""
+    },
+    {
+        "source": "For each node we can reach, see if we can find a way with a lower cost going through this node",
+        "suggest": "对于我们可以到达的每个节点，看看是否可以找到一种成本更低的方法通过该节点",
+        "translate": ""
+    },
+    {
+        "source": "If so, add it to the frontier and continue",
+        "suggest": "如果是这样，请将其添加到边界并继续",
+        "translate": ""
+    },
+    {
+        "source": "Relaxation, we have now found a better way",
+        "suggest": "放松，我们现在找到了更好的方法",
+        "translate": ""
+    },
+    {
+        "source": "Goal not reachable",
+        "suggest": "无法达成目标",
+        "translate": ""
+    },
+    {
+        "source": "This is the directed graph we're going to use.",
+        "suggest": "这是我们将要使用的有向图。",
+        "translate": ""
+    },
+    {
+        "source": "The node numbers correspond to the different states, and the edge weights symbolize the cost of moving from one node to another.",
+        "suggest": "节点编号对应于不同的状态，并且 edge 权重表示从一个节点移动到另一个节点的成本。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the edges are one-way.",
+        "suggest": "请注意，edges 是单向的。",
+        "translate": ""
+    },
+    {
+        "source": "The graph is represented as an adjacency list where each index, corresponding to a node value, has a list of outgoing edges.",
+        "suggest": "该图表示为邻接表，其中每个索引 (对应于节点值) 具有传出 edges 的列表。",
+        "translate": ""
+    },
+    {
+        "source": "Chosen for its efficiency.",
+        "suggest": "选择它的效率。",
+        "translate": ""
+    },
+    {
+        "source": "Node 0",
+        "suggest": "节点 0",
+        "translate": ""
+    },
+    {
+        "source": "Node 1",
+        "suggest": "节点 1",
+        "translate": ""
+    },
+    {
+        "source": "Node 2",
+        "suggest": "节点 2",
+        "translate": ""
+    },
+    {
+        "source": "Node 3",
+        "suggest": "节点 3",
+        "translate": ""
+    },
+    {
+        "source": "Node 4",
+        "suggest": "节点 4",
+        "translate": ""
+    },
+    {
+        "source": "Type inference lets us omit an explicit type signature (which would be `BinaryHeap<i32>` in this example).",
+        "suggest": "通过类型推断，我们可以省略显式类型签名 (在本示例中为 `BinaryHeap<i32>`)。",
+        "translate": ""
+    },
+    {
+        "source": "We can use peek to look at the next item in the heap.",
+        "suggest": "我们可以使用 peek 来查看堆中的下一个项。",
+        "translate": ""
+    },
+    {
+        "source": "In this case, there's no items in there yet so we get None.",
+        "suggest": "在这种情况下，那里还没有项目，所以我们得到 None。",
+        "translate": ""
+    },
+    {
+        "source": "Let's add some scores...",
+        "suggest": "让我们添加一些分数...",
+        "translate": ""
+    },
+    {
+        "source": "Now peek shows the most important item in the heap.",
+        "suggest": "现在，窥视显示了堆中最重要的项。",
+        "translate": ""
+    },
+    {
+        "source": "We can check the length of a heap.",
+        "suggest": "我们可以检查堆的长度。",
+        "translate": ""
+    },
+    {
+        "source": "We can iterate over the items in the heap, although they are returned in a random order.",
+        "suggest": "我们可以遍历堆中的项，尽管它们是按随机顺序返回的。",
+        "translate": ""
+    },
+    {
+        "source": "If we instead pop these scores, they should come back in order.",
+        "suggest": "如果我们改为弹出这些乐谱，则应按顺序返回。",
+        "translate": ""
+    },
+    {
+        "source": "We can clear the heap of any remaining items.",
+        "suggest": "我们可以清除任何剩余项的堆。",
+        "translate": ""
+    },
+    {
+        "source": "The heap should now be empty.",
+        "suggest": "堆现在应该为空。",
+        "translate": ""
+    },
+    {
+        "source": "Wrap values in `Reverse`",
+        "suggest": "在 `Reverse` 中包装值",
+        "translate": ""
+    },
+    {
+        "source": "If we pop these scores now, they should come back in the reverse order.",
+        "suggest": "如果我们现在弹出这些乐谱，它们应该以相反的顺序返回。",
+        "translate": ""
+    },
+    {
+        "source": "removes all elements in heap order",
+        "suggest": "删除堆顺序中的所有元素",
+        "translate": ""
+    },
+    {
+        "source": "only keep even numbers",
+        "suggest": "只保留偶数",
+        "translate": ""
+    },
+    {
+        "source": "Print 1, 2, 3, 4 in arbitrary order",
+        "suggest": "以任意顺序打印 1，2，3，4",
+        "translate": ""
+    },
+    {
+        "source": "Will print in some order",
+        "suggest": "将以一定顺序打印",
+        "translate": ""
+    },
+    {
+        "source": "x has type i32, not &i32",
+        "suggest": "x 的类型为 i32，不是 &i32",
+        "translate": ""
+    },
+    {
+        "source": "A priority queue implemented with a binary heap.",
+        "suggest": "用二进制堆实现的优先级队列。",
+        "translate": ""
+    },
+    {
+        "source": "Insertion and popping the largest element have *O*(log(*n*)) time complexity.",
+        "suggest": "插入和弹出最大元素具有 *O*(log(*n*)) 时间复杂度。",
+        "translate": ""
+    },
+    {
+        "source": "Checking the largest element is *O*(1).",
+        "suggest": "检查最大的元素是 *O*(1)。",
+        "translate": ""
+    },
+    {
+        "source": "Converting a vector to a binary heap can be done in-place, and has *O*(*n*) complexity.",
+        "suggest": "可以就地将 vector 转换为二进制堆，并且复杂度为 *O*(*n*)。",
+        "translate": ""
+    },
+    {
+        "source": "A binary heap can also be converted to a sorted vector in-place, allowing it to be used for an *O*(*n* \\* log(*n*)) in-place heapsort.",
+        "suggest": "二进制堆也可以就地转换为排序的 vector，从而可用于 *O*(*n*\\*log(* n*)) 就地堆排序。",
+        "translate": ""
+    },
+    {
+        "source": "This is a larger example that implements [Dijkstra's algorithm][dijkstra] to solve the [shortest path problem][sssp] on a [directed graph][dir_graph].",
+        "suggest": "这是一个较大的示例，实现了 [Dijkstra's algorithm][dijkstra] 来解决 [directed graph][dir_graph] 上的 [shortest path problem][sssp]。",
+        "translate": ""
+    },
+    {
+        "source": "It shows how to use [`BinaryHeap`] with custom types.",
+        "suggest": "它显示了如何将 [`BinaryHeap`] 与自定义类型一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "This will be a max-heap.",
+        "suggest": "这将是一个最大的堆。",
+        "translate": ""
+    },
+    {
+        "source": "It is a logic error for an item to be modified in such a way that the item's ordering relative to any other item, as determined by the `Ord` trait, changes while it is in the heap.",
+        "suggest": "以某种方式修改项目是一种逻辑错误，即该项目相对于任何其他项目的排序 (由 `Ord` trait 确定) 在堆中时会发生变化。",
+        "translate": ""
+    },
+    {
+        "source": "This is normally only possible through `Cell`, `RefCell`, global state, I/O, or unsafe code.",
+        "suggest": "通常只有通过 `Cell`，`RefCell`，二进制状态，I/O 或不安全代码才能实现此操作。",
+        "translate": ""
+    },
+    {
+        "source": "The behavior resulting from such a logic error is not specified, but will not result in undefined behavior.",
+        "suggest": "未指定由此类逻辑错误导致的行为，但不会导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "This could include panics, incorrect results, aborts, memory leaks, and non-termination.",
+        "suggest": "这可能包括 panics，不正确的结果，异常终止，内存泄漏和未终止。",
+        "translate": ""
+    },
+    {
+        "source": "Either `std::cmp::Reverse` or a custom `Ord` implementation can be used to make `BinaryHeap` a min-heap.",
+        "suggest": "`std::cmp::Reverse` 或自定义 `Ord` 实现均可用于使 `BinaryHeap` 成为最小堆。",
+        "translate": ""
+    },
+    {
+        "source": "This makes `heap.pop()` return the smallest value instead of the greatest one.",
+        "suggest": "这使 `heap.pop()` 返回最小值而不是最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Time complexity",
+        "suggest": "时间复杂度",
+        "translate": ""
+    },
+    {
+        "source": "The value for `push` is an expected cost;",
+        "suggest": "`push` 的值是预期成本;",
+        "translate": ""
+    },
+    {
+        "source": "the method documentation gives a more detailed analysis.",
+        "suggest": "方法文档提供了更详细的分析。",
+        "translate": ""
+    },
+    {
+        "source": "Structure wrapping a mutable reference to the greatest item on a `BinaryHeap`.",
+        "suggest": "将可变引用引至 `BinaryHeap` 上最大部分的结构体。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`peek_mut`] method on [`BinaryHeap`].",
+        "suggest": "该 `struct` 是通过 [`BinaryHeap`] 上的 [`peek_mut`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "See its documentation for more.",
+        "suggest": "有关更多信息，请参见其文档。",
+        "translate": ""
+    },
+    {
+        "source": "PeekMut is only instantiated for non-empty heaps.",
+        "suggest": "PeekMut 仅针对非空堆实例化。",
+        "translate": ""
+    },
+    {
+        "source": "PeekMut is only instantiated for non-empty heaps",
+        "suggest": "仅针对非空堆实例化 PeekMut",
+        "translate": ""
+    },
+    {
+        "source": "Removes the peeked value from the heap and returns it.",
+        "suggest": "从堆中删除偷看的值并返回它。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty `BinaryHeap<T>`.",
+        "suggest": "创建一个空的 `BinaryHeap<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty `BinaryHeap` as a max-heap.",
+        "suggest": "创建一个空的 `BinaryHeap` 作为最大堆。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty `BinaryHeap` with a specific capacity.",
+        "suggest": "创建具有特定容量的空 `BinaryHeap`。",
+        "translate": ""
+    },
+    {
+        "source": "This preallocates enough memory for `capacity` elements, so that the `BinaryHeap` does not have to be reallocated until it contains at least that many values.",
+        "suggest": "这为 `capacity` 元素预分配了足够的内存，因此 `BinaryHeap` 至少包含这么多的值之前不必重新分配。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the greatest item in the binary heap, or `None` if it is empty.",
+        "suggest": "返回二进制堆中最大项的变量引用; 如果为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "If the `PeekMut` value is leaked, the heap may be in an inconsistent state.",
+        "suggest": "如果 `PeekMut` 值泄漏，则堆可能处于不一致状态。",
+        "translate": ""
+    },
+    {
+        "source": "If the item is modified then the worst case time complexity is *O*(log(*n*)), otherwise it's *O*(1).",
+        "suggest": "如果该项被修改，则最坏情况下的时间复杂度为 *O*(log (*n*) )，否则为 *O*(1)。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the greatest item from the binary heap and returns it, or `None` if it is empty.",
+        "suggest": "从二进制堆中删除最大的项并返回它; 如果为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "The worst case cost of `pop` on a heap containing *n* elements is *O*(log(*n*)).",
+        "suggest": "`pop` 在包含 *n* 个元素的堆上的最坏情况代价是 *O*(log (*n*) )。",
+        "translate": ""
+    },
+    {
+        "source": "!self.is_empty() means that self.len() > 0",
+        "suggest": "! self.is_empty () 表示 self.len()> 0",
+        "translate": ""
+    },
+    {
+        "source": "Pushes an item onto the binary heap.",
+        "suggest": "将项目推入二进制堆。",
+        "translate": ""
+    },
+    {
+        "source": "The expected cost of `push`, averaged over every possible ordering of the elements being pushed, and over a sufficiently large number of pushes, is *O*(1).",
+        "suggest": "`push` 的预期成本是 *O*(1)，该成本是在被推元素的每个可能排序以及足够大量的推数上平均的。",
+        "translate": ""
+    },
+    {
+        "source": "This is the most meaningful cost metric when pushing elements that are *not* already in any sorted pattern.",
+        "suggest": "当推送尚未 *以任何排序模式* 的元素时，这是最有意义的成本指标。",
+        "translate": ""
+    },
+    {
+        "source": "The time complexity degrades if elements are pushed in predominantly ascending order.",
+        "suggest": "如果元素主要以升序推入，则时间复杂度会降低。",
+        "translate": ""
+    },
+    {
+        "source": "In the worst case, elements are pushed in ascending sorted order and the amortized cost per push is *O*(log(*n*)) against a heap containing *n* elements.",
+        "suggest": "在最坏的情况下，元素以升序排序，并且每次推送的摊销成本为 *O*(log(*n*)) 对包含 *n* 个元素的堆。",
+        "translate": ""
+    },
+    {
+        "source": "The worst case cost of a *single* call to `push` is *O*(*n*).",
+        "suggest": "对 `push` 进行 `*` 调用的最坏情况是* O *(* n *)。",
+        "translate": ""
+    },
+    {
+        "source": "The worst case occurs when capacity is exhausted and needs a resize.",
+        "suggest": "最坏的情况发生在容量用尽并需要调整大小时。",
+        "translate": ""
+    },
+    {
+        "source": "The resize cost has been amortized in the previous figures.",
+        "suggest": "调整大小成本已在之前的数字中摊销。",
+        "translate": ""
+    },
+    {
+        "source": "Since we pushed a new item it means that old_len = self.len() - 1 < self.len()",
+        "suggest": "由于我们推送了一个新项，这意味着 old_len= self.len()-1 <self.len()",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `BinaryHeap` and returns a vector in sorted (ascending) order.",
+        "suggest": "消耗 `BinaryHeap` 并按已排序的 (ascending) 顺序返回 vector。",
+        "translate": ""
+    },
+    {
+        "source": "`end` goes from `self.len() - 1` to 1 (both included), so it's always a valid index to access.",
+        "suggest": "`end` 从 `self.len() - 1` 变为 1 (均包括在内)，因此它始终是可访问的有效索引。",
+        "translate": ""
+    },
+    {
+        "source": "It is safe to access index 0 (i.e. `ptr`), because",
+        "suggest": "访问索引 0 (即 `ptr`) 是安全的，因为",
+        "translate": ""
+    },
+    {
+        "source": "1 <= end < self.len(), which means self.len() >= 2.",
+        "suggest": "1 <= end < self.len()，表示 self.len() >= 2。",
+        "translate": ""
+    },
+    {
+        "source": "`end` goes from `self.len() - 1` to 1 (both included) so:",
+        "suggest": "`end` 从 `self.len() - 1` 变为 1 (均包括在内)，因此:",
+        "translate": ""
+    },
+    {
+        "source": "0 < 1 <= end <= self.len() - 1 < self.len() Which means 0 < end and end < self.len().",
+        "suggest": "`0 < 1 <= end <= self.len() - 1 < self.len()`，这意味着 `0 < end` 并且 `end < self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "The implementations of sift_up and sift_down use unsafe blocks in order to move an element out of the vector (leaving behind a hole), shift along the others and move the removed element back into the vector at the final location of the hole.",
+        "suggest": "sift_up 和 sift_down 的实现使用不安全的块，以将元素从 vector 中移出 (留在 hole 后面)，沿其他元素移动，然后将移除的元素在 hole 的最终位置移回 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "The `Hole` type is used to represent this, and make sure the hole is filled back at the end of its scope, even on panic.",
+        "suggest": "`Hole` 类型用于表示这一点，并确保 hole 在其作用域的末尾 (即使在 panic 上) 也被填充回去。",
+        "translate": ""
+    },
+    {
+        "source": "Using a hole reduces the constant factor compared to using swaps, which involves twice as many moves.",
+        "suggest": "与使用掉期相比，使用 hole 减少了常量因子，掉期涉及两倍的移动次数。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must guarantee that `pos < self.len()`.",
+        "suggest": "调用者必须保证 `pos < self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "Take out the value at `pos` and create a hole.",
+        "suggest": "取出 `pos` 处的值，并创建一个 hole。",
+        "translate": ""
+    },
+    {
+        "source": "The caller guarantees that pos < self.len()",
+        "suggest": "调用者保证 pos <self.len()",
+        "translate": ""
+    },
+    {
+        "source": "hole.pos() > start >= 0, which means hole.pos() > 0 and so hole.pos() - 1 can't underflow.",
+        "suggest": "hole.pos() > start >= 0，这意味着 hole.pos() > 0，因此  hole.pos() - 1 不能下溢。",
+        "translate": ""
+    },
+    {
+        "source": "This guarantees that parent < hole.pos() so it's a valid index and also != hole.pos().",
+        "suggest": "这样可以保证 `parent < hole.pos()`，因此它是一个有效的索引，而且 `!= hole.pos()`。",
+        "translate": ""
+    },
+    {
+        "source": "Same as above",
+        "suggest": "同上",
+        "translate": ""
+    },
+    {
+        "source": "Take an element at `pos` and move it down the heap, while its children are larger.",
+        "suggest": "在 `pos` 处取一个元素，然后将其向下移动到堆中，而其子元素较大。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must guarantee that `pos < end <= self.len()`.",
+        "suggest": "调用者必须保证 `pos < end <= self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller guarantees that pos < end <= self.len().",
+        "suggest": "调用方保证 pos <end <= self.len()。",
+        "translate": ""
+    },
+    {
+        "source": "Loop invariant: child == 2 * hole.pos() + 1.",
+        "suggest": "循环不变式: child == 2 * hole.pos() + 1。",
+        "translate": ""
+    },
+    {
+        "source": "compare with the greater of the two children",
+        "suggest": "比较两个子节点中较大的一个",
+        "translate": ""
+    },
+    {
+        "source": "child < end - 1 < self.len() and child + 1 < end <= self.len(), so they're valid indexes.",
+        "suggest": "child <end-1 <self.len() 和 child + 1 <end <= self.len()，因此它们是有效索引。",
+        "translate": ""
+    },
+    {
+        "source": "child == 2 * hole.pos() + 1 != hole.pos() and child + 1 == 2 * hole.pos() + 2 != hole.pos().",
+        "suggest": "child == 2 *hole.pos() +1! = hole.pos() 和 child +1 == 2* hole.pos() + 2! = hole.pos()。",
+        "translate": ""
+    },
+    {
+        "source": "2 * hole.pos() + 1 or 2 * hole.pos() + 2 could overflow if T is a ZST",
+        "suggest": "如果 T 是 ZST，则 `2 * hole.pos() + 1` 或 `2 * hole.pos() + 2` 可能溢出",
+        "translate": ""
+    },
+    {
+        "source": "if we are already in order, stop.",
+        "suggest": "如果我们已经整齐了，那就停下来。",
+        "translate": ""
+    },
+    {
+        "source": "child is now either the old child or the old child+1 We already proven that both are < self.len() and != hole.pos()",
+        "suggest": "child 现在是大子节点还是大子节点 + 1 我们已经证明它们都是 < self.len() 和! = hole.pos()",
+        "translate": ""
+    },
+    {
+        "source": "same as above.",
+        "suggest": "与上述相同。",
+        "translate": ""
+    },
+    {
+        "source": "short circuit, which means that in the second condition it's already true that child == end - 1 < self.len().",
+        "suggest": "短路，这意味着在第二种情况下 `child == end - 1 < self.len()` 已经是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "child is already proven to be a valid index and child == 2 * hole.pos() + 1 != hole.pos().",
+        "suggest": "child 已被证明是有效的索引，`child == 2 * hole.pos() + 1 != hole.pos()`。",
+        "translate": ""
+    },
+    {
+        "source": "pos < len is guaranteed by the caller and obviously len = self.len() <= self.len().",
+        "suggest": "`pos < len` 是由调用方保证的，并且显然 `len = self.len() <= self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "Take an element at `pos` and move it all the way down the heap, then sift it up to its position.",
+        "suggest": "在 `pos` 处获取一个元素，并将其一直向下移动到堆中，然后将其筛选到其位置。",
+        "translate": ""
+    },
+    {
+        "source": "This is faster when the element is known to be large / should be closer to the bottom.",
+        "suggest": "当已知元素很大 / 应该更靠近底部时，这就更快了。",
+        "translate": ""
+    },
+    {
+        "source": "The caller guarantees that pos < self.len().",
+        "suggest": "调用方保证 `pos < self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "child == end - 1 < self.len(), so it's a valid index and child == 2 * hole.pos() + 1 != hole.pos().",
+        "suggest": "child == end - 1 < self.len()，所以它是一个有效的索引，child == 2 * hole.pos() + 1 != hole.pos()。",
+        "translate": ""
+    },
+    {
+        "source": "pos is the position in the hole and was already proven to be a valid index.",
+        "suggest": "pos 是 hole 中的位置，并且已经被证明是有效的索引。",
+        "translate": ""
+    },
+    {
+        "source": "n starts from self.len() / 2 and goes down to 0.",
+        "suggest": "n 从 self.len() / 2 开始，下降到 0。",
+        "translate": ""
+    },
+    {
+        "source": "The only case when !(n < self.len()) is if self.len() == 0, but it's ruled out by the loop condition.",
+        "suggest": "!(n < self.len()) 是 self.len() == 0 的唯一情况，但是循环条件将其排除在外。",
+        "translate": ""
+    },
+    {
+        "source": "Moves all the elements of `other` into `self`, leaving `other` empty.",
+        "suggest": "将 `other` 的所有元素移到 `self`，将 `other` 留空。",
+        "translate": ""
+    },
+    {
+        "source": "takes O(len1 + len2) operations and about 2 * (len1 + len2) comparisons in the worst case while `extend` takes O(len2 * log(len1)) operations and about 1 * len2 * log_2(len1) comparisons in the worst case, assuming len1 >= len2.",
+        "suggest": "假设 len1 >= len2，则在最坏的情况下进行 O(len1 + len2) 操作并进行约 2 * (len1 + len2) 比较，而在最坏的情况下，`extend` 进行 O(len2* log(len1)) 操作并进行约 1 * len2 * log_2(len1) 比较 (假设 len1 >= len2)。",
+        "translate": ""
+    },
+    {
+        "source": "For larger heaps, the crossover point no longer follows this reasoning and was determined empirically.",
+        "suggest": "对于较大的堆，交叉点不再遵循此推理，而是根据经验确定的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator which retrieves elements in heap order.",
+        "suggest": "返回一个迭代器，该迭代器以堆顺序检索元素。",
+        "translate": ""
+    },
+    {
+        "source": "The retrieved elements are removed from the original heap.",
+        "suggest": "检索到的元素将从原始堆中删除。",
+        "translate": ""
+    },
+    {
+        "source": "The remaining elements will be removed on drop in heap order.",
+        "suggest": "其余元素将按堆顺序丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "is *O*(*n* \\* log(*n*));",
+        "suggest": "是 *O*(*n*\\*log(* n*));",
+        "translate": ""
+    },
+    {
+        "source": "much slower than `.drain()`.",
+        "suggest": "比 `.drain()` 慢得多。",
+        "translate": ""
+    },
+    {
+        "source": "You should use the latter for most cases.",
+        "suggest": "在大多数情况下，应使用后者。",
+        "translate": ""
+    },
+    {
+        "source": "Retains only the elements specified by the predicate.",
+        "suggest": "仅保留谓词指定的元素。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, remove all elements `e` such that `f(&e)` returns `false`.",
+        "suggest": "换句话说，删除所有元素 `e`，以使 `f(&e)` 返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "The elements are visited in unsorted (and unspecified) order.",
+        "suggest": "元素以未排序 (和未指定) 的顺序访问。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator visiting all values in the underlying vector, in arbitrary order.",
+        "suggest": "返回以任意顺序访问基础 vector 中的所有值的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This method consumes the original heap.",
+        "suggest": "此方法消耗原始堆。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the greatest item in the binary heap, or `None` if it is empty.",
+        "suggest": "返回二进制堆中最大的项，如果为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Cost is *O*(1) in the worst case.",
+        "suggest": "在最坏的情况下，成本为 *O*(1)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements the binary heap can hold without reallocating.",
+        "suggest": "返回二进制堆在不重新分配的情况下可以容纳的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Reserves the minimum capacity for exactly `additional` more elements to be inserted in the given `BinaryHeap`.",
+        "suggest": "保留最小容量，以便在给定的 `BinaryHeap` 中精确插入 `additional` 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Does nothing if the capacity is already sufficient.",
+        "suggest": "如果容量已经足够，则不执行任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the allocator may give the collection more space than it requests.",
+        "suggest": "请注意，分配器可能会给集合提供比其请求更多的空间。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore capacity can not be relied upon to be precisely minimal.",
+        "suggest": "因此，不能依靠容量来精确地将其最小化。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer [`reserve`] if future insertions are expected.",
+        "suggest": "如果预计将来会插入，则最好使用 [`reserve`]。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the new capacity overflows `usize`.",
+        "suggest": "如果新容量溢出 `usize`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Reserves capacity for at least `additional` more elements to be inserted in the `BinaryHeap`.",
+        "suggest": "保留至少 `additional` 个要插入 `BinaryHeap` 中的更多元素的容量。",
+        "translate": ""
+    },
+    {
+        "source": "The collection may reserve more space to avoid frequent reallocations.",
+        "suggest": "该集合可以保留更多空间，以避免频繁的重新分配。",
+        "translate": ""
+    },
+    {
+        "source": "Discards as much additional capacity as possible.",
+        "suggest": "丢弃尽可能多的附加容量。",
+        "translate": ""
+    },
+    {
+        "source": "Discards capacity with a lower bound.",
+        "suggest": "丢弃容量下限。",
+        "translate": ""
+    },
+    {
+        "source": "The capacity will remain at least as large as both the length and the supplied value.",
+        "suggest": "容量将至少保持与长度和提供的值一样大。",
+        "translate": ""
+    },
+    {
+        "source": "If the current capacity is less than the lower limit, this is a no-op.",
+        "suggest": "如果当前容量小于下限，则为无操作。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `BinaryHeap` and returns the underlying vector in arbitrary order.",
+        "suggest": "消耗 `BinaryHeap` 并以任意顺序返回基础 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the length of the binary heap.",
+        "suggest": "返回二进制堆的长度。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the binary heap is empty.",
+        "suggest": "检查二进制堆是否为空。",
+        "translate": ""
+    },
+    {
+        "source": "Clears the binary heap, returning an iterator over the removed elements.",
+        "suggest": "清除二进制堆，并在删除的元素上返回一个迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The elements are removed in arbitrary order.",
+        "suggest": "元素以任意顺序删除。",
+        "translate": ""
+    },
+    {
+        "source": "Drops all items from the binary heap.",
+        "suggest": "从二进制堆中丢弃所有项。",
+        "translate": ""
+    },
+    {
+        "source": "Hole represents a hole in a slice i.e., an index without valid value (because it was moved from or duplicated).",
+        "suggest": "Hole 表示切片中的 hole，即没有有效值的索引 (因为它是从中移出或复制的)。",
+        "translate": ""
+    },
+    {
+        "source": "In drop, `Hole` will restore the slice by filling the hole position with the value that was originally removed.",
+        "suggest": "在丢弃时，`Hole` 将通过使用最初删除的值填充 hole 位置来恢复切片。",
+        "translate": ""
+    },
+    {
+        "source": "Create a new `Hole` at index `pos`.",
+        "suggest": "在索引 `pos` 处创建一个新的 `Hole`。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafe because pos must be within the data slice.",
+        "suggest": "不安全，因为 pos 必须在数据切片内。",
+        "translate": ""
+    },
+    {
+        "source": "pos should be inside the slice",
+        "suggest": "pos 应该在切片内",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the element removed.",
+        "suggest": "返回对已删除元素的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the element at `index`.",
+        "suggest": "返回 `index` 处元素的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafe because index must be within the data slice and not equal to pos.",
+        "suggest": "不安全，因为索引必须在数据切片内且不等于 pos。",
+        "translate": ""
+    },
+    {
+        "source": "Move hole to new location",
+        "suggest": "将 hole 移到新位置",
+        "translate": ""
+    },
+    {
+        "source": "fill the hole again",
+        "suggest": "再次填充 hole",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the elements of a `BinaryHeap`.",
+        "suggest": "`BinaryHeap` 元素上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by [`BinaryHeap::iter()`].",
+        "suggest": "该 `struct` 由 [`BinaryHeap::iter()`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Remove in favor of `#[derive(Clone)]`",
+        "suggest": "删除以支持 `#[derive(Clone)]`",
+        "translate": ""
+    },
+    {
+        "source": "An owning iterator over the elements of a `BinaryHeap`.",
+        "suggest": "`BinaryHeap` 元素上的拥有的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by [`BinaryHeap::into_iter()`] (provided by the `IntoIterator` trait).",
+        "suggest": "该 `struct` 由 [`BinaryHeap::into_iter()`] 创建 (由 `IntoIterator` trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "A draining iterator over the elements of a `BinaryHeap`.",
+        "suggest": "`BinaryHeap` 的元素上的 draining 迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by [`BinaryHeap::drain()`].",
+        "suggest": "该 `struct` 由 [`BinaryHeap::drain()`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by [`BinaryHeap::drain_sorted()`].",
+        "suggest": "该 `struct` 由 [`BinaryHeap::drain_sorted()`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Removes heap elements in heap order.",
+        "suggest": "按堆顺序删除堆元素。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `Vec<T>` into a `BinaryHeap<T>`.",
+        "suggest": "将 `Vec<T>` 转换为 `BinaryHeap<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "This conversion happens in-place, and has *O*(*n*) time complexity.",
+        "suggest": "此转换发生在原地，并且具有 *O*(*n*) 时间复杂度。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `BinaryHeap<T>` into a `Vec<T>`.",
+        "suggest": "将 `BinaryHeap<T>` 转换为 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "This conversion requires no data movement or allocation, and has constant time complexity.",
+        "suggest": "这种转换不需要数据移动或分配，并且具有恒定的时间复杂度。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a consuming iterator, that is, one that moves each value out of the binary heap in arbitrary order.",
+        "suggest": "创建一个消耗迭代器，即一个将任意值以任意顺序移出二进制堆的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The binary heap cannot be used after calling this.",
+        "suggest": "调用此后不能使用二进制堆。",
+        "translate": ""
+    },
+    {
+        "source": "Appends all key-value pairs from the union of two ascending iterators, incrementing a `length` variable along the way.",
+        "suggest": "从两个升序的迭代器的并集追加所有键值对，并在此过程中递增 `length` 变量。",
+        "translate": ""
+    },
+    {
+        "source": "The latter makes it easier for the caller to avoid a leak when a drop handler panicks.",
+        "suggest": "后者使调用者在丢弃处理程序 panic 时更容易避免泄漏。",
+        "translate": ""
+    },
+    {
+        "source": "If both iterators produce the same key, this method drops the pair from the left iterator and appends the pair from the right iterator.",
+        "suggest": "如果两个迭代器都产生相同的键，则此方法将从左迭代器中丢弃 pair，并从右迭代器中追加 pair。",
+        "translate": ""
+    },
+    {
+        "source": "If you want the tree to end up in a strictly ascending order, like for a `BTreeMap`, both iterators should produce keys in strictly ascending order, each greater than all keys in the tree, including any keys already in the tree upon entry.",
+        "suggest": "如果要使树以严格的升序结束 (例如 `BTreeMap`)，则两个迭代器都应以严格的升序生成键，每个键都大于树中的所有键，包括输入时树中已存在的任何键。",
+        "translate": ""
+    },
+    {
+        "source": "We prepare to merge `left` and `right` into a sorted sequence in linear time.",
+        "suggest": "我们准备在线性时间内将 `left` 和 `right` 合并为一个排序的序列。",
+        "translate": ""
+    },
+    {
+        "source": "Meanwhile, we build a tree from the sorted sequence in linear time.",
+        "suggest": "同时，我们根据线性时间中的排序序列构建一棵树。",
+        "translate": ""
+    },
+    {
+        "source": "Pushes all key-value pairs to the end of the tree, incrementing a `length` variable along the way.",
+        "suggest": "将所有键值对推入树的末尾，并在此过程中递增 `length` 变量。",
+        "translate": ""
+    },
+    {
+        "source": "The latter makes it easier for the caller to avoid a leak when the iterator panicks.",
+        "suggest": "后者使调用者在迭代器出现 panic 时更容易避免泄漏。",
+        "translate": ""
+    },
+    {
+        "source": "Iterate through all key-value pairs, pushing them into nodes at the right level.",
+        "suggest": "遍历所有键值对，将它们推入正确级别的节点。",
+        "translate": ""
+    },
+    {
+        "source": "Try to push key-value pair into the current leaf node.",
+        "suggest": "尝试将键值对推入当前的叶节点。",
+        "translate": ""
+    },
+    {
+        "source": "No space left, go up and push there.",
+        "suggest": "没有剩余空间了，上去推一下。",
+        "translate": ""
+    },
+    {
+        "source": "Found a node with space left, push here.",
+        "suggest": "找到一个剩余空间的节点，将其推入此处。",
+        "translate": ""
+    },
+    {
+        "source": "Go up again.",
+        "suggest": "再上去",
+        "translate": ""
+    },
+    {
+        "source": "We are at the top, create a new root node and push there.",
+        "suggest": "我们在顶部，创建一个新的根节点并推送到那里。",
+        "translate": ""
+    },
+    {
+        "source": "Push key-value pair and new right subtree.",
+        "suggest": "push 键值对和新的右子树。",
+        "translate": ""
+    },
+    {
+        "source": "Go down to the right-most leaf again.",
+        "suggest": "再次下降到最右边的叶子。",
+        "translate": ""
+    },
+    {
+        "source": "Increment length every iteration, to make sure the map drops the appended elements even if advancing the iterator panicks.",
+        "suggest": "每次迭代都增加长度，以确保即使推进迭代器崩溃，映射也会丢弃附加的元素。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator for merging two sorted sequences into one",
+        "suggest": "用于将两个排序的序列合并为一个的迭代器",
+        "translate": ""
+    },
+    {
+        "source": "If two keys are equal, returns the key-value pair from the right source.",
+        "suggest": "如果两个键相等，则从正确的源返回键值对。",
+        "translate": ""
+    },
+    {
+        "source": "Models a reborrow of some unique reference, when you know that the reborrow and all its descendants (i.e., all pointers and references derived from it) will not be used any more at some point, after which you want to use the original unique reference again.",
+        "suggest": "当您知道重借项及其所有后代 (即从中衍生的所有指针和引用) 在某个时候将不再使用时，对某个重借项的重借进行建模。",
+        "translate": ""
+    },
+    {
+        "source": "The borrow checker usually handles this stacking of borrows for you, but some control flows that accomplish this stacking are too complicated for the compiler to follow.",
+        "suggest": "借用检查器通常为您处理借用的这种堆叠，但是完成该堆叠的某些控制流对于编译器而言太复杂了。",
+        "translate": ""
+    },
+    {
+        "source": "A `DormantMutRef` allows you to check borrowing yourself, while still expressing its stacked nature, and encapsulating the raw pointer code needed to do this without undefined behavior.",
+        "suggest": "`DormantMutRef` 允许您自己检查借用，同时仍然表示其堆叠性质，并且封装执行此操作所需的裸指针代码而没有未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "Capture a unique borrow, and immediately reborrow it.",
+        "suggest": "捕获一个独特的借用，然后立即重新借用。",
+        "translate": ""
+    },
+    {
+        "source": "For the compiler, the lifetime of the new reference is the same as the lifetime of the original reference, but you promise to use it for a shorter period.",
+        "suggest": "对于编译器，新引用的生命周期与原始引用的生命周期相同，但您 promise 可以将其使用更短的时间。",
+        "translate": ""
+    },
+    {
+        "source": "we hold the borrow throughout 'a via `_marker`, and we expose only this reference, so it is unique.",
+        "suggest": "我们通过 `_marker` 在整个 'a 中持有借用，并且仅公开此引用，因此它是唯一的。",
+        "translate": ""
+    },
+    {
+        "source": "Revert to the unique borrow initially captured.",
+        "suggest": "恢复为最初捕获的唯一借用。",
+        "translate": ""
+    },
+    {
+        "source": "The reborrow must have ended, i.e., the reference returned by `new` and all pointers and references derived from it, must not be used anymore.",
+        "suggest": "重新借用必须已经结束，即不再使用 `new` 返回的引用以及从该指针派生的所有指针和引用。",
+        "translate": ""
+    },
+    {
+        "source": "our own safety conditions imply this reference is again unique.",
+        "suggest": "我们自身的安全条件意味着该引用仍然是独一无二的。",
+        "translate": ""
+    },
+    {
+        "source": "Stocks up a possibly underfull node by merging with or stealing from a sibling.",
+        "suggest": "通过与同级合并或从同级中窃取来存储可能不足的节点。",
+        "translate": ""
+    },
+    {
+        "source": "If succesful but at the cost of shrinking the parent node, returns that shrunk parent node.",
+        "suggest": "如果成功，但以缩小父节点为代价，则返回缩小后的父节点。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an `Err` if the node is an empty root.",
+        "suggest": "如果节点为空 root，则返回 `Err`。",
+        "translate": ""
+    },
+    {
+        "source": "Stocks up a possibly underfull node, and if that causes its parent node to shrink, stocks up the parent, recursively.",
+        "suggest": "存储可能不足的节点，如果这导致其父节点缩小，则递归地存储父节点。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if it fixed the tree, `false` if it couldn't because the root node became empty.",
+        "suggest": "如果固定了树，则返回 `true`; 如果由于根节点为空而不能返回 `false`，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "This method does not expect ancestors to already be underfull upon entry and panics if it encounters an empty ancestor.",
+        "suggest": "此方法不希望祖先在输入时就已经不足，如果 panics 遇到空祖先，则该方法不会。",
+        "translate": ""
+    },
+    {
+        "source": "Removes empty levels on the top, but keeps an empty leaf if the entire tree is empty.",
+        "suggest": "删除顶部的空白层，但是如果整棵树都是空白的，则保留一片空白的叶子。",
+        "translate": ""
+    },
+    {
+        "source": "Stocks up or merge away any underfull nodes on the right border of the tree.",
+        "suggest": "在树的右边界上存储或合并掉所有不足的节点。",
+        "translate": ""
+    },
+    {
+        "source": "The other nodes, those that are not the root nor a rightmost edge, must already have at least MIN_LEN elements.",
+        "suggest": "其他节点 (既不是根节点也不是最右边的 edge) 必须已经至少具有 MIN_LEN 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The symmetric clone of `fix_right_border`.",
+        "suggest": "`fix_right_border` 的对称克隆。",
+        "translate": ""
+    },
+    {
+        "source": "Stock up any underfull nodes on the right border of the tree.",
+        "suggest": "在树的右边界上存储所有未满节点。",
+        "translate": ""
+    },
+    {
+        "source": "The other nodes, those that are not the root nor a rightmost edge, must be prepared to have up to MIN_LEN elements stolen.",
+        "suggest": "其他节点 (既不是根节点也不是最右边的 edge) 必须准备好窃取最多 MIN_LEN 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Check if right-most child is underfull.",
+        "suggest": "检查最右边的子节点是否未满。",
+        "translate": ""
+    },
+    {
+        "source": "We need to steal.",
+        "suggest": "我们需要 steal。",
+        "translate": ""
+    },
+    {
+        "source": "Go further down.",
+        "suggest": "再往下走。",
+        "translate": ""
+    },
+    {
+        "source": "Stocks up the left child, assuming the right child isn't underfull, and provisions an extra element to allow merging its children in turn without becoming underfull.",
+        "suggest": "假设左边的子节点还不满，则储存左边的子节点，并提供一个额外的元素以允许依次合并其子节点而不会变得不足。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the left child.",
+        "suggest": "返回左子节点。",
+        "translate": ""
+    },
+    {
+        "source": "to avoid readjust if merge happens on the next level.",
+        "suggest": "以避免在合并发生在下一级时重新调整。",
+        "translate": ""
+    },
+    {
+        "source": "Stocks up the right child, assuming the left child isn't underfull, and provisions an extra element to allow merging its children in turn without becoming underfull.",
+        "suggest": "假设左边的子节点还不完整，则存储右边的子节点，并提供一个额外的元素以允许依次合并其子对象而不会变得不够完整。",
+        "translate": ""
+    },
+    {
+        "source": "Returns wherever the right child ended up.",
+        "suggest": "返回正确的子节点结束的任何地方。",
+        "translate": ""
+    },
+    {
+        "source": "We delete the entry from the map.",
+        "suggest": "我们从 map 中删除该条目。",
+        "translate": ""
+    },
+    {
+        "source": "If now try to get the value, it will panic:",
+        "suggest": "如果现在尝试获取该值，它将为 panic:",
+        "translate": ""
+    },
+    {
+        "source": "We can use the same Entry multiple times.",
+        "suggest": "我们可以多次使用同一个 Entry。",
+        "translate": ""
+    },
+    {
+        "source": "If we try to get \"poneyland\"'s value, it'll panic:",
+        "suggest": "如果我们尝试获得 `poneyland` 的值，则它将为 panic:",
+        "translate": ""
+    },
+    {
+        "source": "A view into a single entry in a map, which may either be vacant or occupied.",
+        "suggest": "map 中单个条目的视图，该条目可能是空的或被已占用。",
+        "translate": ""
+    },
+    {
+        "source": "This `enum` is constructed from the [`entry`] method on [`BTreeMap`].",
+        "suggest": "`enum` 是根据 [`BTreeMap`] 上的 [`entry`] 方法构造的。",
+        "translate": ""
+    },
+    {
+        "source": "A vacant entry.",
+        "suggest": "一个空的条目。",
+        "translate": ""
+    },
+    {
+        "source": "An occupied entry.",
+        "suggest": "一个被占用的条目。",
+        "translate": ""
+    },
+    {
+        "source": "A view into a vacant entry in a `BTreeMap`.",
+        "suggest": "`BTreeMap` 中空条目的视图。",
+        "translate": ""
+    },
+    {
+        "source": "It is part of the [`Entry`] enum.",
+        "suggest": "它是 [`Entry`] 枚举的一部分。",
+        "translate": ""
+    },
+    {
+        "source": "Be invariant in `K` and `V`",
+        "suggest": "在 `K` 和 `V` 中保持不变",
+        "translate": ""
+    },
+    {
+        "source": "A view into an occupied entry in a `BTreeMap`.",
+        "suggest": "`BTreeMap` 中已占用条目的视图。",
+        "translate": ""
+    },
+    {
+        "source": "The error returned by [`try_insert`](BTreeMap::try_insert) when the key already exists.",
+        "suggest": "当键已经存在时，由 [`try_insert`](BTreeMap::try_insert) 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Contains the occupied entry, and the value that was not inserted.",
+        "suggest": "包含占用的条目和未插入的值。",
+        "translate": ""
+    },
+    {
+        "source": "The entry in the map that was already occupied.",
+        "suggest": "map 中已被占用的条目。",
+        "translate": ""
+    },
+    {
+        "source": "The value which was not inserted, because the entry was already occupied.",
+        "suggest": "未插入的值，因为该条目已被占用。",
+        "translate": ""
+    },
+    {
+        "source": "Ensures a value is in the entry by inserting the default if empty, and returns a mutable reference to the value in the entry.",
+        "suggest": "如果为空，则通过插入默认值来确保该值在条目中，并返回对条目中值的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Ensures a value is in the entry by inserting the result of the default function if empty, and returns a mutable reference to the value in the entry.",
+        "suggest": "如果为空，则通过插入默认函数的结果来确保该值在条目中，并返回对条目中值的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Ensures a value is in the entry by inserting, if empty, the result of the default function.",
+        "suggest": "如果为空，则通过插入默认函数的结果，确保值在条目中。",
+        "translate": ""
+    },
+    {
+        "source": "This method allows for generating key-derived values for insertion by providing the default function a reference to the key that was moved during the `.entry(key)` method call.",
+        "suggest": "通过为 `.entry(key)` 方法调用期间移动的键提供默认函数引用，此方法可以生成用于插入的键派生值。",
+        "translate": ""
+    },
+    {
+        "source": "The reference to the moved key is provided so that cloning or copying the key is unnecessary, unlike with `.or_insert_with(|| ... )`.",
+        "suggest": "提供了对已移动键的引用，因此不需要克隆或复制键，这与 `.or_insert_with(|| ... )` 不同。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to this entry's key.",
+        "suggest": "返回此条目的键的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Provides in-place mutable access to an occupied entry before any potential inserts into the map.",
+        "suggest": "在任何潜在的插入 map 之前，提供对占用条目的就地可变访问。",
+        "translate": ""
+    },
+    {
+        "source": "Ensures a value is in the entry by inserting the default value if empty, and returns a mutable reference to the value in the entry.",
+        "suggest": "如果为空，则通过插入默认值来确保值在条目中，并向条目中的值返回变量引用。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a reference to the key that would be used when inserting a value through the VacantEntry.",
+        "suggest": "获取对通过 VacantEntry 插入值时将使用的键的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Take ownership of the key.",
+        "suggest": "取得键的所有权。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the entry with the `VacantEntry`'s key, and returns a mutable reference to it.",
+        "suggest": "用 `VacantEntry` 的键设置条目的值，并返回对它的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "We have consumed self.handle and the handle returned.",
+        "suggest": "我们已经消耗掉 self.handle 并返回了句柄。",
+        "translate": ""
+    },
+    {
+        "source": "We have consumed self.handle and the reference returned.",
+        "suggest": "我们已经消耗掉 self.handle 并返回了引用。",
+        "translate": ""
+    },
+    {
+        "source": "Now that we have finished growing the tree using borrowed references, dereference the pointer to a part of it, that we picked up along the way.",
+        "suggest": "现在我们已经完成了使用借来的引用完成了树的生长，解除对它的一部分的指针的引用，这是我们在开发过程中得到的。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a reference to the key in the entry.",
+        "suggest": "获取条目中键的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Take ownership of the key and value from the map.",
+        "suggest": "从 map 获取键和值的所有权。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a reference to the value in the entry.",
+        "suggest": "获取条目中值的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a mutable reference to the value in the entry.",
+        "suggest": "获取条目中的值的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "If you need a reference to the `OccupiedEntry` that may outlive the destruction of the `Entry` value, see [`into_mut`].",
+        "suggest": "如果您需要引用可能比销毁 `Entry` 值还长的 `OccupiedEntry`，请参阅 [`into_mut`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the entry into a mutable reference to its value.",
+        "suggest": "将条目转换为其值的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "If you need multiple references to the `OccupiedEntry`, see [`get_mut`].",
+        "suggest": "如果需要多次引用 `OccupiedEntry`，请参见 [`get_mut`]。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the entry with the `OccupiedEntry`'s key, and returns the entry's old value.",
+        "suggest": "使用 `OccupiedEntry` 键设置条目的值，并返回条目的旧值。",
+        "translate": ""
+    },
+    {
+        "source": "Takes the value of the entry out of the map, and returns it.",
+        "suggest": "从 map 中获取条目的值，并将其返回。",
+        "translate": ""
+    },
+    {
+        "source": "Body of `remove_entry`, probably separate because the name reflects the returned pair.",
+        "suggest": "`remove_entry` 的主体，可能是分开的，因为名称反映了返回的对。",
+        "translate": ""
+    },
+    {
+        "source": "we consumed the intermediate root borrow,",
+        "suggest": "我们消耗了中间根借用，",
+        "translate": ""
+    },
+    {
+        "source": "Capacity of a tree with a single level, i.e., a tree who's root is a leaf node at height 0.",
+        "suggest": "具有单层的树的容量，即，树的根是高度为 0 的叶节点。",
+        "translate": ""
+    },
+    {
+        "source": "Minimum number of elements to insert, to guarantee a tree with 2 levels, i.e., a tree who's root is an internal node at height 1, with edges to leaf nodes.",
+        "suggest": "插入的最小元素数量，以保证具有 2 个级别的树，即，树的根是高度为 1 的内部节点，edges 到叶节点。",
+        "translate": ""
+    },
+    {
+        "source": "It's not the minimum size: removing an element from such a tree does not always reduce height.",
+        "suggest": "这不是最小大小: 从这样的树中删除元素并不总是会降低高度。",
+        "translate": ""
+    },
+    {
+        "source": "Minimum number of elements to insert in ascending order, to guarantee a tree with 3 levels, i.e., a tree who's root is an internal node at height 2, with edges to more internal nodes.",
+        "suggest": "要保证具有 3 个级别的树 (即，树的根是位于高度 2 的内部节点) 的最小数目，请按升序插入，其中 edges 可以指向更多的内部节点。",
+        "translate": ""
+    },
+    {
+        "source": "Gathers all references from a mutable iterator and makes sure Miri notices if using them is dangerous.",
+        "suggest": "从可变迭代器收集所有引用，并确保 Miri 注意到使用它们是否危险。",
+        "translate": ""
+    },
+    {
+        "source": "Gather all those references.",
+        "suggest": "收集所有引用的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Use them all.",
+        "suggest": "全部使用它们。",
+        "translate": ""
+    },
+    {
+        "source": "Twice, to be sure we got all interleavings.",
+        "suggest": "两次，以确保我们能进行所有交错。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the map (or the code navigating it) is corrupted.",
+        "suggest": "如果 map (或导航它的代码) 已损坏，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Check the back pointers top-down, before we attempt to rely on more serious navigation code.",
+        "suggest": "在尝试依赖更严格的导航代码之前，请自上而下检查后退指针。",
+        "translate": ""
+    },
+    {
+        "source": "Check consistency of `length` with what navigation code encounters.",
+        "suggest": "检查 `length` 与所遇到的导航代码的一致性。",
+        "translate": ""
+    },
+    {
+        "source": "Lastly, check the invariant causing the least harm.",
+        "suggest": "最后，检查造成最小伤害的不变式。",
+        "translate": ""
+    },
+    {
+        "source": "Check that `assert_strictly_ascending` will encounter all keys.",
+        "suggest": "检查 `assert_strictly_ascending` 是否会遇到所有键。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the map is corrupted or if the keys are not in strictly ascending order, in the current opinion of the `Ord` implementation.",
+        "suggest": "根据 `Ord` 实现的当前观点，如果 map 损坏或键不是严格按升序排列，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "If the `Ord` implementation violates transitivity, this method does not guarantee that all keys are unique, just that adjacent keys are unique.",
+        "suggest": "如果 `Ord` 实现违反传递性，则此方法不能保证所有键都是唯一的，而不能保证相邻键都是唯一的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the height of the root, if any.",
+        "suggest": "返回根的高度 (如果有)。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the keys are not in strictly ascending order.",
+        "suggest": "如果键不是严格按升序排列，则会出现 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Transform the tree to minimize wasted space, obtaining fewer nodes that are mostly filled up to their capacity.",
+        "suggest": "对树进行转换以最大程度地减少浪费的空间，从而获得较少的节点，这些节点大部分已被填满。",
+        "translate": ""
+    },
+    {
+        "source": "The same compact tree could have been obtained by inserting keys in a shrewd order.",
+        "suggest": "可以通过以精明的顺序插入键来获得相同的紧凑的树。",
+        "translate": ""
+    },
+    {
+        "source": "Tests our value of MIN_INSERTS_HEIGHT_2.",
+        "suggest": "测试我们的 MIN_INSERTS_HEIGHT_2 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Failure may mean you just need to adapt that value to match a change in node::CAPACITY or the choices made during insertion, otherwise other test cases may fail or be less useful.",
+        "suggest": "失败可能意味着您只需要修改该值以匹配 node::CAPACITY 的更改或在插入过程中所做的选择，否则其他测试用例可能会失败或使用性降低。",
+        "translate": ""
+    },
+    {
+        "source": "1 element in internal root node with 2 children",
+        "suggest": "内部根节点中有 1 个元素，带有 2 个子元素",
+        "translate": ""
+    },
+    {
+        "source": "6 elements in left leaf child",
+        "suggest": "左叶子中的 6 个元素",
+        "translate": ""
+    },
+    {
+        "source": "5 elements in right leaf child",
+        "suggest": "右叶子中的 5 个元素",
+        "translate": ""
+    },
+    {
+        "source": "6 elements in left internal child with 7 grandchildren",
+        "suggest": "内部左子孙中有 7 个孙子中的 6 个元素",
+        "translate": ""
+    },
+    {
+        "source": "42 elements in left child's 7 grandchildren with 6 elements each",
+        "suggest": "左子节点的 7 个孙子中的 42 个元素，每个元素 6 个元素",
+        "translate": ""
+    },
+    {
+        "source": "5 elements in right internal child with 6 grandchildren",
+        "suggest": "正确的内部子节点与 6 个孙子中的 5 个元素",
+        "translate": ""
+    },
+    {
+        "source": "30 elements in right child's 5 first grandchildren with 6 elements each",
+        "suggest": "直子的五个直孙中的 30 个元素，每个元素有 6 个元素",
+        "translate": ""
+    },
+    {
+        "source": "5 elements in right child's last grandchild",
+        "suggest": "直子的最后一个孙子中的 5 个元素",
+        "translate": ""
+    },
+    {
+        "source": "Ensures the testing infrastructure usually notices order violations.",
+        "suggest": "确保测试基础结构通常会注意到违反命令的情况。",
+        "translate": ""
+    },
+    {
+        "source": "Ensures the testing infrastructure doesn't always mind order violations.",
+        "suggest": "确保测试基础设施并不总是介意违反秩序。",
+        "translate": ""
+    },
+    {
+        "source": "Miri is too slow",
+        "suggest": "Miri 太慢",
+        "translate": ""
+    },
+    {
+        "source": "round up to even number",
+        "suggest": "四舍五入为偶数",
+        "translate": ""
+    },
+    {
+        "source": "Empty, root is absent (None):",
+        "suggest": "空，root 不存在 (None):",
+        "translate": ""
+    },
+    {
+        "source": "1 key-value pair:",
+        "suggest": "1 个键值对:",
+        "translate": ""
+    },
+    {
+        "source": "2 key-value pairs:",
+        "suggest": "2 个键值对:",
+        "translate": ""
+    },
+    {
+        "source": "Empty but root is owned (Some(...)):",
+        "suggest": "空，但拥有 root (Some(...)):",
+        "translate": ""
+    },
+    {
+        "source": "Specifically tests iter_mut's ability to mutate the value of pairs in-line.",
+        "suggest": "专门测试 iter_mut 内联可变对值的能力。",
+        "translate": ""
+    },
+    {
+        "source": "Forward and backward iteration sees enough pairs (also tested elsewhere)",
+        "suggest": "向前和向后迭代会看到足够的对 (也在其他地方测试)",
+        "translate": ""
+    },
+    {
+        "source": "Iterate forwards, trying to mutate to unique values",
+        "suggest": "循环转发，尝试可变为唯一值",
+        "translate": ""
+    },
+    {
+        "source": "Iterate backwards, checking that mutations succeeded and trying to mutate again",
+        "suggest": "向后迭代，检查可变的是否成功，然后再次尝试可变的",
+        "translate": ""
+    },
+    {
+        "source": "Check that backward mutations succeeded",
+        "suggest": "检查向后可变的是否成功",
+        "translate": ""
+    },
+    {
+        "source": "Check many alignments and trees with roots at various heights.",
+        "suggest": "检查许多具有不同高度的根的路线和树木。",
+        "translate": ""
+    },
+    {
+        "source": "Descend into first child.",
+        "suggest": "下降为第一个子节点。",
+        "translate": ""
+    },
+    {
+        "source": "Descend into first child again, after running through second child.",
+        "suggest": "经过第二个子节点后，再次下降到第一个子节点中。",
+        "translate": ""
+    },
+    {
+        "source": "Check immutable access.",
+        "suggest": "选中不可变访问权限。",
+        "translate": ""
+    },
+    {
+        "source": "Perform mutable access.",
+        "suggest": "执行可变访问。",
+        "translate": ""
+    },
+    {
+        "source": "Tests tree with a root and 2 leaves.",
+        "suggest": "测试带有根和 2 个叶子的树。",
+        "translate": ""
+    },
+    {
+        "source": "The single key in the root node is close to the middle among the keys.",
+        "suggest": "根节点中的单个键靠近键中的中间位置。",
+        "translate": ""
+    },
+    {
+        "source": "Lacking static_assert, call `range` conditionally, to emphasise that we cause a different panic than `test_range_backwards_1` does.",
+        "suggest": "缺少 static_assert，有条件地调用 `range`，以强调我们导致的 panic 与 `test_range_backwards_1` 不同。",
+        "translate": ""
+    },
+    {
+        "source": "A more refined `should_panic` would be welcome.",
+        "suggest": "欢迎使用更精致的 `should_panic`。",
+        "translate": ""
+    },
+    {
+        "source": "Has proper order the first time asked, then flips around.",
+        "suggest": "第一次有适当的命令要求，然后翻转。",
+        "translate": ""
+    },
+    {
+        "source": "would like to use simply \"b\"..\"d\" here...",
+        "suggest": "只想在这里使用 \"b\"..\"d\" ...",
+        "translate": ""
+    },
+    {
+        "source": "Explicitly consumes the iterator, where most test cases drop it instantly.",
+        "suggest": "显式地使用迭代器，大多数测试用例会立即丢弃它。",
+        "translate": ""
+    },
+    {
+        "source": "Explicitly consumes the iterator and modifies values through it.",
+        "suggest": "显式使用迭代器并通过它修改值。",
+        "translate": ""
+    },
+    {
+        "source": "Same as above, but attempt to use the iterator again after the panic in the predicate",
+        "suggest": "与上述相同，但在谓词中的 panic 之后尝试再次使用迭代器",
+        "translate": ""
+    },
+    {
+        "source": "Iterator behaviour after a panic is explicitly unspecified, so this is just the current implementation:",
+        "suggest": "panic 之后的迭代器行为是明确未指定的，因此这只是当前的实现:",
+        "translate": ""
+    },
+    {
+        "source": "make sure these compile -- using the Borrow trait",
+        "suggest": "确保这些已编译 - 使用借用 trait",
+        "translate": ""
+    },
+    {
+        "source": "Existing key (insert)",
+        "suggest": "现有键 (insert)",
+        "translate": ""
+    },
+    {
+        "source": "Existing key (update)",
+        "suggest": "现有键 (update)",
+        "translate": ""
+    },
+    {
+        "source": "Existing key (take)",
+        "suggest": "现有键 (take)",
+        "translate": ""
+    },
+    {
+        "source": "Inexistent key (insert)",
+        "suggest": "不存在的键 (insert)",
+        "translate": ""
+    },
+    {
+        "source": "This test's only purpose is to ensure that zero-sized keys with nonsensical orderings do not cause segfaults when used with zero-sized values.",
+        "suggest": "此测试的唯一目的是确保与零大小的值一起使用时，具有无意义顺序的零大小的键不会引起段错误。",
+        "translate": ""
+    },
+    {
+        "source": "All other map behavior is undefined.",
+        "suggest": "所有其他 map 行为均未定义。",
+        "translate": ""
+    },
+    {
+        "source": "Test a tree with 2 semi-full levels and a tree with 3 levels.",
+        "suggest": "测试具有 2 个半满级别的树和具有 3 个级别的树。",
+        "translate": ""
+    },
+    {
+        "source": "Range to max_size inclusive, because i is the size of map1 being tested.",
+        "suggest": "范围为 max_size (含)，因为 i 是要测试的 map1 的大小。",
+        "translate": ""
+    },
+    {
+        "source": "small cloned from large",
+        "suggest": "从大克隆的小",
+        "translate": ""
+    },
+    {
+        "source": "large cloned from small",
+        "suggest": "从小的克隆大的",
+        "translate": ""
+    },
+    {
+        "source": "same length",
+        "suggest": "相同的长度",
+        "translate": ""
+    },
+    {
+        "source": "These are mostly for testing the algorithm that \"fixes\" the right edge after insertion.",
+        "suggest": "这些主要用于测试 \"fixes\" 插入后正确的 edge 的算法。",
+        "translate": ""
+    },
+    {
+        "source": "Single node.",
+        "suggest": "单节点。",
+        "translate": ""
+    },
+    {
+        "source": "Two leafs that don't need fixing.",
+        "suggest": "不需要固定的两片叶子。",
+        "translate": ""
+    },
+    {
+        "source": "Two leafs where the second one ends up underfull and needs stealing at the end.",
+        "suggest": "两片叶子，第二片叶子未满，需要在末尾拿。",
+        "translate": ""
+    },
+    {
+        "source": "Two leafs where the second one ends up empty because the insertion finished at the root.",
+        "suggest": "由于第二个叶子在根部插入完毕，因此第二个叶子最后变成空的两片叶子。",
+        "translate": ""
+    },
+    {
+        "source": "Three levels;",
+        "suggest": "三个级别;",
+        "translate": ""
+    },
+    {
+        "source": "insertion finished at the root.",
+        "suggest": "插入已在根目录完成。",
+        "translate": ""
+    },
+    {
+        "source": "Tests for several randomly chosen sizes.",
+        "suggest": "测试几种随机选择的大小。",
+        "translate": ""
+    },
+    {
+        "source": "first duplicate key, dropped during append",
+        "suggest": "第一个重复键，在追加过程中被丢弃",
+        "translate": ""
+    },
+    {
+        "source": "should be 2 were it not for Rust issue #47949",
+        "suggest": "如果不是 Rust issue #47949，则应为 2",
+        "translate": ""
+    },
+    {
+        "source": "lands first, before A",
+        "suggest": "lands first，在 A 之前",
+        "translate": ""
+    },
+    {
+        "source": "lands first, before C",
+        "suggest": "lands first，在 C 之前",
+        "translate": ""
+    },
+    {
+        "source": "keys are not unique but still strictly ascending",
+        "suggest": "键不是唯一的，但仍严格升序",
+        "translate": ""
+    },
+    {
+        "source": "In a tree with 3 levels, if all but a part of the first leaf node is split off, make sure fix_top eliminates both top levels.",
+        "suggest": "在具有 3 个级别的树中，如果除第一叶子节点的一部分以外的所有内容都被分割开，请确保 fix_top 消除了两个顶层。",
+        "translate": ""
+    },
+    {
+        "source": "In a tree with 3 levels, if only part of the last leaf node is split off, make sure fix_top eliminates both top levels.",
+        "suggest": "在具有 3 个级别的树中，如果仅拆分了最后一个叶节点的一部分，请确保 fix_top 消除了两个顶级。",
+        "translate": ""
+    },
+    {
+        "source": "Insertion in non-ascending order creates some variation in node length.",
+        "suggest": "以非升序插入会在节点长度上造成一些变化。",
+        "translate": ""
+    },
+    {
+        "source": "special case with maximum height.",
+        "suggest": "最大高度的特殊情况。",
+        "translate": ""
+    },
+    {
+        "source": "somewhat arbitrarily chosen to cover some code paths",
+        "suggest": "任意选择以覆盖一些代码路径",
+        "translate": ""
+    },
+    {
+        "source": "more arbitrarily copied from above",
+        "suggest": "从上面更随意地复制",
+        "translate": ""
+    },
+    {
+        "source": "type inference lets us omit an explicit type signature (which would be `BTreeMap<&str, &str>` in this example).",
+        "suggest": "通过类型推断，我们可以省略显式类型签名 (在本示例中为 `BTreeMap<&str, &str>`)。",
+        "translate": ""
+    },
+    {
+        "source": "review some movies.",
+        "suggest": "回顾一些电影。",
+        "translate": ""
+    },
+    {
+        "source": "check for a specific one.",
+        "suggest": "检查一个特定的。",
+        "translate": ""
+    },
+    {
+        "source": "oops, this review has a lot of spelling mistakes, let's delete it.",
+        "suggest": "糟糕，此评论有很多拼写错误，让我们删除它。",
+        "translate": ""
+    },
+    {
+        "source": "look up the values associated with some keys.",
+        "suggest": "查找与某些键关联的值。",
+        "translate": ""
+    },
+    {
+        "source": "Look up the value for a key (will panic if the key is not found).",
+        "suggest": "查找某个键的值 (如果找不到该键，则为 panic)。",
+        "translate": ""
+    },
+    {
+        "source": "iterate over everything.",
+        "suggest": "遍历一切。",
+        "translate": ""
+    },
+    {
+        "source": "type inference lets us omit an explicit type signature (which would be `BTreeMap<&str, u8>` in this example).",
+        "suggest": "通过类型推断，我们可以省略显式类型签名 (在本示例中为 `BTreeMap<&str, u8>`)。",
+        "translate": ""
+    },
+    {
+        "source": "could actually return some random value here - let's just return some fixed value for now",
+        "suggest": "实际上可以在这里返回一些随机值 - 现在让我们返回一些固定值",
+        "translate": ""
+    },
+    {
+        "source": "insert a key only if it doesn't already exist",
+        "suggest": "仅在键不存在时才插入",
+        "translate": ""
+    },
+    {
+        "source": "insert a key using a function that provides a new value only if it doesn't already exist",
+        "suggest": "仅当一个键不存在时，才使用提供新值的函数插入该键",
+        "translate": ""
+    },
+    {
+        "source": "update a key, guarding against the key possibly not being set",
+        "suggest": "更新键，以防止键可能未被设置",
+        "translate": ""
+    },
+    {
+        "source": "entries can now be inserted into the empty map",
+        "suggest": "条目现在可以插入到空的 map 中",
+        "translate": ""
+    },
+    {
+        "source": "Keep only the elements with even-numbered keys.",
+        "suggest": "仅保留带有偶数键的元素。",
+        "translate": ""
+    },
+    {
+        "source": "count the number of occurrences of letters in the vec",
+        "suggest": "计算 vec 中字母出现的次数",
+        "translate": ""
+    },
+    {
+        "source": "add 10 to the value if the key isn't \"a\"",
+        "suggest": "如果键不是 \"a\"，则将值加 10",
+        "translate": ""
+    },
+    {
+        "source": "Minimum number of elements in nodes that are not a root.",
+        "suggest": "节点中不是根的元素的最小数量。",
+        "translate": ""
+    },
+    {
+        "source": "We might temporarily have fewer elements during methods.",
+        "suggest": "在方法期间，我们可能会暂时减少元素数量。",
+        "translate": ""
+    },
+    {
+        "source": "A tree in a `BTreeMap` is a tree in the `node` module with additional invariants:",
+        "suggest": "`BTreeMap` 中的树是 `node` 模块中的树，具有其他不可变变量:",
+        "translate": ""
+    },
+    {
+        "source": "Keys must appear in ascending order (according to the key's type).",
+        "suggest": "键必须按升序显示 (根据键的类型)。",
+        "translate": ""
+    },
+    {
+        "source": "If the root node is internal, it must contain at least 1 element.",
+        "suggest": "如果根节点是内部节点，则它必须至少包含 1 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Every non-root node contains at least MIN_LEN elements.",
+        "suggest": "每个非根节点至少包含 MIN_LEN 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "An empty map may be represented both by the absence of a root node or by a root node that is an empty leaf.",
+        "suggest": "空的 map 既可以通过不存在根节点来表示，也可以通过作为空叶的根节点来表示。",
+        "translate": ""
+    },
+    {
+        "source": "A map based on a [B-Tree].",
+        "suggest": "基于 [B-Tree] 的 map。",
+        "translate": ""
+    },
+    {
+        "source": "B-Trees represent a fundamental compromise between cache-efficiency and actually minimizing the amount of work performed in a search.",
+        "suggest": "B 树表示缓存效率与实际最小化搜索中执行的工作量之间的根本折衷。",
+        "translate": ""
+    },
+    {
+        "source": "In theory, a binary search tree (BST) is the optimal choice for a sorted map, as a perfectly balanced BST performs the theoretical minimum amount of comparisons necessary to find an element (log<sub>2</sub>n).",
+        "suggest": "从理论上讲，二元搜索树 (BST) 是排序的 map 的最佳选择，因为完全平衡的 BST 执行查找元素 (log<sub>2</sub>n) 所需的理论上最小的比较量。",
+        "translate": ""
+    },
+    {
+        "source": "However, in practice the way this is done is *very* inefficient for modern computer architectures.",
+        "suggest": "但是，实际上，完成此操作的方式对于现代计算机体系结构而言效率非常低。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, every element is stored in its own individually heap-allocated node.",
+        "suggest": "特别是，每个元素都存储在其自己的单独堆分配节点中。",
+        "translate": ""
+    },
+    {
+        "source": "This means that every single insertion triggers a heap-allocation, and every single comparison should be a cache-miss.",
+        "suggest": "这意味着每个插入都会触发堆分配，并且每个比较都应该是缓存未命中。",
+        "translate": ""
+    },
+    {
+        "source": "Since these are both notably expensive things to do in practice, we are forced to at very least reconsider the BST strategy.",
+        "suggest": "由于在实践中这些都是非常昂贵的事情，因此我们至少不得不重新考虑 BST 战略。",
+        "translate": ""
+    },
+    {
+        "source": "A B-Tree instead makes each node contain B-1 to 2B-1 elements in a contiguous array.",
+        "suggest": "相反，B 树使每个节点在连续数组中包含 B-1 到 2B-1 元素。",
+        "translate": ""
+    },
+    {
+        "source": "By doing this, we reduce the number of allocations by a factor of B, and improve cache efficiency in searches.",
+        "suggest": "通过这样做，我们将分配数量减少了 B 倍，并提高了搜索中的缓存效率。",
+        "translate": ""
+    },
+    {
+        "source": "However, this does mean that searches will have to do *more* comparisons on average.",
+        "suggest": "但是，这确实意味着搜索平均需要进行 *更多* 比较。",
+        "translate": ""
+    },
+    {
+        "source": "The precise number of comparisons depends on the node search strategy used.",
+        "suggest": "比较的精确数量取决于所使用的节点搜索策略。",
+        "translate": ""
+    },
+    {
+        "source": "For optimal cache efficiency, one could search the nodes linearly.",
+        "suggest": "为了获得最佳的缓存效率，可以线性搜索节点。",
+        "translate": ""
+    },
+    {
+        "source": "For optimal comparisons, one could search the node using binary search.",
+        "suggest": "为了进行最佳比较，可以使用二进制搜索来搜索节点。",
+        "translate": ""
+    },
+    {
+        "source": "As a compromise, one could also perform a linear search that initially only checks every i<sup>th</sup> element for some choice of i.",
+        "suggest": "作为一种折衷，也可以执行线性搜索，该搜索最初仅检查每个 <sup>第</sup>i<sup>个</sup> 元素以选择 i。",
+        "translate": ""
+    },
+    {
+        "source": "Currently, our implementation simply performs naive linear search.",
+        "suggest": "当前，我们的实现仅执行简单的线性搜索。",
+        "translate": ""
+    },
+    {
+        "source": "This provides excellent performance on *small* nodes of elements which are cheap to compare.",
+        "suggest": "这在小的元素节点上提供了很好的性能，而这些节点的比较是很便宜的。",
+        "translate": ""
+    },
+    {
+        "source": "However in the future we would like to further explore choosing the optimal search strategy based on the choice of B, and possibly other factors.",
+        "suggest": "但是，未来我们将进一步探索基于 B 的选择以及可能的其他因素来选择最佳搜索策略。",
+        "translate": ""
+    },
+    {
+        "source": "Using linear search, searching for a random element is expected to take O(B * log(n)) comparisons, which is generally worse than a BST.",
+        "suggest": "使用线性搜索，搜索随机元素预期会进行 O(B * log(n)) 比较，通常比 BST 差。",
+        "translate": ""
+    },
+    {
+        "source": "In practice, however, performance is excellent.",
+        "suggest": "但是，实际上，性能非常好。",
+        "translate": ""
+    },
+    {
+        "source": "It is a logic error for a key to be modified in such a way that the key's ordering relative to any other key, as determined by the [`Ord`] trait, changes while it is in the map.",
+        "suggest": "以某种方式修改键是一种逻辑错误，即，当键在 map 中时，由 [`Ord`] trait 决定的键相对于任何其他键的顺序都会改变。",
+        "translate": ""
+    },
+    {
+        "source": "This is normally only possible through [`Cell`], [`RefCell`], global state, I/O, or unsafe code.",
+        "suggest": "通常只有通过 [`Cell`]，[`RefCell`]，二进制状态，I/O 或不安全代码才能实现此操作。",
+        "translate": ""
+    },
+    {
+        "source": "also implements an [`Entry API`], which allows for more complex methods of getting, setting, updating and removing keys and their values:",
+        "suggest": "还实现了 [`Entry API`]，它允许使用更复杂的方法来获取，设置，更新和删除键及其值:",
+        "translate": ""
+    },
+    {
+        "source": "unwrap succeeds because we just wrapped",
+        "suggest": "拆包成功，因为我们刚刚包装了",
+        "translate": ""
+    },
+    {
+        "source": "We can't destructure subtree directly because BTreeMap implements Drop",
+        "suggest": "我们无法直接解构子树，因为 BTreeMap 实现了 Drop",
+        "translate": ""
+    },
+    {
+        "source": "Ideally we'd call `BTreeMap::new` here, but that has the `K:",
+        "suggest": "理想情况下，我们在这里调用 `BTreeMap::new`，但是它带有 `K:",
+        "translate": ""
+    },
+    {
+        "source": "Ord` constraint, which this method lacks.",
+        "suggest": "Ord` 约束，此方法缺少此约束。",
+        "translate": ""
+    },
+    {
+        "source": "unwrap succeeds because not empty",
+        "suggest": "拆包成功，因为不为空",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the entries of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 条目上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`iter`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`iter`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "A mutable iterator over the entries of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 条目上的可变迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`iter_mut`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`iter_mut`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An owning iterator over the entries of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 条目上的所有者迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`BTreeMap`] (provided by the `IntoIterator` trait).",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] (由 `IntoIterator` trait 提供) 上的 [`into_iter`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator of references over the remaining items.",
+        "suggest": "返回其余项上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "A simplified version of `IntoIter` that is not double-ended and has only one purpose: to drop the remainder of an `IntoIter`.",
+        "suggest": "`IntoIter` 的简化版本，不是双端的，只有一个目的: 丢弃 `IntoIter` 的其余部分。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore it also serves to drop an entire tree without the need to first look up a `back` leaf edge.",
+        "suggest": "因此，它还可以丢弃整个树，而无需先查找 `back` 叶子边缘。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the keys of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 上的键的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`keys`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`keys`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the values of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 值的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`values`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`values`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "A mutable iterator over the values of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 的值上的可变迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`values_mut`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`values_mut`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An owning iterator over the keys of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 的键上的拥有的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_keys`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`into_keys`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An owning iterator over the values of a `BTreeMap`.",
+        "suggest": "`BTreeMap` 的值上的拥有的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_values`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`into_values`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over a sub-range of entries in a `BTreeMap`.",
+        "suggest": "`BTreeMap` 中条目子范围的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`range`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`range`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "A mutable iterator over a sub-range of entries in a `BTreeMap`.",
+        "suggest": "`BTreeMap` 中条目子范围上的可变迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`range_mut`] method on [`BTreeMap`].",
+        "suggest": "该 `struct` 是通过 [`BTreeMap`] 上的 [`range_mut`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a new, empty `BTreeMap`.",
+        "suggest": "创建一个新的空 `BTreeMap`。",
+        "translate": ""
+    },
+    {
+        "source": "Does not allocate anything on its own.",
+        "suggest": "不自行分配任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "Clears the map, removing all elements.",
+        "suggest": "清除 map，删除所有元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the value corresponding to the key.",
+        "suggest": "返回与键对应的值的引用。",
+        "translate": ""
+    },
+    {
+        "source": "The key may be any borrowed form of the map's key type, but the ordering on the borrowed form *must* match the ordering on the key type.",
+        "suggest": "键可以是 map 的键类型的任何借用形式，但是借用形式上的顺序必须与键类型上的顺序匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the key-value pair corresponding to the supplied key.",
+        "suggest": "返回与提供的键相对应的键值对。",
+        "translate": ""
+    },
+    {
+        "source": "The supplied key may be any borrowed form of the map's key type, but the ordering on the borrowed form *must* match the ordering on the key type.",
+        "suggest": "提供的键可以是 map 的键类型的任何借用形式，但是借用形式上的顺序必须与键类型上的顺序匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the first key-value pair in the map.",
+        "suggest": "返回 map 中的第一个键值对。",
+        "translate": ""
+    },
+    {
+        "source": "The key in this pair is the minimum key in the map.",
+        "suggest": "该对中的键是 map 中的最小键。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the first entry in the map for in-place manipulation.",
+        "suggest": "返回 map 中的第一个条目以进行就地操纵。",
+        "translate": ""
+    },
+    {
+        "source": "The key of this entry is the minimum key in the map.",
+        "suggest": "此项的键是 map 中的最小键。",
+        "translate": ""
+    },
+    {
+        "source": "Removes and returns the first element in the map.",
+        "suggest": "删除并返回 map 中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The key of this element is the minimum key that was in the map.",
+        "suggest": "该元素的键是 map 中的最小键。",
+        "translate": ""
+    },
+    {
+        "source": "Draining elements in ascending order, while keeping a usable map each iteration.",
+        "suggest": "Draining 元素以升序排列，同时每次迭代均保持可用的 map。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last key-value pair in the map.",
+        "suggest": "返回 map 中的最后一个键值对。",
+        "translate": ""
+    },
+    {
+        "source": "The key in this pair is the maximum key in the map.",
+        "suggest": "该对中的键是 map 中的最大键。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last entry in the map for in-place manipulation.",
+        "suggest": "返回 map 中的最后一项以进行就地操作。",
+        "translate": ""
+    },
+    {
+        "source": "The key of this entry is the maximum key in the map.",
+        "suggest": "此项的键是 map 中的最大键。",
+        "translate": ""
+    },
+    {
+        "source": "Removes and returns the last element in the map.",
+        "suggest": "删除并返回 map 中的最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The key of this element is the maximum key that was in the map.",
+        "suggest": "该元素的键是 map 中的最大键。",
+        "translate": ""
+    },
+    {
+        "source": "Draining elements in descending order, while keeping a usable map each iteration.",
+        "suggest": "Draining 元素以降序排列，同时每次迭代均保留一个可用的 map。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the map contains a value for the specified key.",
+        "suggest": "如果 map 包含指定键的值，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the value corresponding to the key.",
+        "suggest": "返回与键对应的值的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "See `get` for implementation notes, this is basically a copy-paste with mut's added",
+        "suggest": "有关实现说明，请参见 `get`，这基本上是复制粘贴，并添加了 mut",
+        "translate": ""
+    },
+    {
+        "source": "Inserts a key-value pair into the map.",
+        "suggest": "将键值对插入 map。",
+        "translate": ""
+    },
+    {
+        "source": "If the map did not have this key present, `None` is returned.",
+        "suggest": "如果 map 不存在此键，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "If the map did have this key present, the value is updated, and the old value is returned.",
+        "suggest": "如果 map 确实存在此键，则更新值，并返回旧值。",
+        "translate": ""
+    },
+    {
+        "source": "The key is not updated, though;",
+        "suggest": "但是，键不会更新。",
+        "translate": ""
+    },
+    {
+        "source": "this matters for types that can be `==` without being identical.",
+        "suggest": "对于不能相同的 `==` 类型来说，这一点很重要。",
+        "translate": ""
+    },
+    {
+        "source": "See the [module-level documentation] for more.",
+        "suggest": "有关更多信息，请参见 [module-level documentation]。",
+        "translate": ""
+    },
+    {
+        "source": "Tries to insert a key-value pair into the map, and returns a mutable reference to the value in the entry.",
+        "suggest": "尝试将键值对插入到 map 中，并向条目中的值返回变量引用。",
+        "translate": ""
+    },
+    {
+        "source": "If the map already had this key present, nothing is updated, and an error containing the occupied entry and the value is returned.",
+        "suggest": "如果 map 已经存在此键，则不进行任何更新，并返回包含占用项和值的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Removes a key from the map, returning the value at the key if the key was previously in the map.",
+        "suggest": "从 map 中删除一个键，如果该键以前在 map 中，则返回该键的值。",
+        "translate": ""
+    },
+    {
+        "source": "Removes a key from the map, returning the stored key and value if the key was previously in the map.",
+        "suggest": "从 map 中删除一个键，如果该键以前在 map 中，则返回存储的键和值。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, remove all pairs `(k, v)` such that `f(&k, &mut v)` returns `false`.",
+        "suggest": "换句话说，删除所有对 `(k, v)`，以使 `f(&k, &mut v)` 返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Moves all elements from `other` into `Self`, leaving `other` empty.",
+        "suggest": "将所有元素从 `other` 移到 `Self`，将 `other` 留空。",
+        "translate": ""
+    },
+    {
+        "source": "Do we have to append anything at all?",
+        "suggest": "我们是否必须附加任何内容?",
+        "translate": ""
+    },
+    {
+        "source": "We can just swap `self` and `other` if `self` is empty.",
+        "suggest": "如果 `self` 为空，我们可以交换 `self` 和 `other`。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a double-ended iterator over a sub-range of elements in the map.",
+        "suggest": "在 map 中的子元素范围上创建一个双端迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The simplest way is to use the range syntax `min..max`, thus `range(min..max)` will yield elements from min (inclusive) to max (exclusive).",
+        "suggest": "最简单的方法是使用范围语法 `min..max`，因此 `range(min..max)` 将产生从最小 (inclusive) 到最大 (exclusive) 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "The range may also be entered as `(Bound<T>, Bound<T>)`, so for example `range((Excluded(4), Included(10)))` will yield a left-exclusive, right-inclusive range from 4 to 10.",
+        "suggest": "也可以将范围输入为 `(Bound<T>, Bound<T>)`，例如 `range((Excluded(4), Included(10)))` 将产生一个左排他的，范围从 4 到 10。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if range `start > end`.",
+        "suggest": "如果范围 `start > end`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if range `start == end` and both bounds are `Excluded`.",
+        "suggest": "如果范围 `start == end` 和两个边界均为 `Excluded`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a mutable double-ended iterator over a sub-range of elements in the map.",
+        "suggest": "在 map 中的子元素范围上创建一个可变的双端迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the given key's corresponding entry in the map for in-place manipulation.",
+        "suggest": "在 map 中获取给定键的对应项，以进行就地操作。",
+        "translate": ""
+    },
+    {
+        "source": "Avoid allocating if we don't insert",
+        "suggest": "如果不插入，请避免分配",
+        "translate": ""
+    },
+    {
+        "source": "Splits the collection into two at the given key.",
+        "suggest": "在给定的键处将集合拆分为两个。",
+        "translate": ""
+    },
+    {
+        "source": "Returns everything after the given key, including the key.",
+        "suggest": "返回给定键之后的所有内容，包括键。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that visits all elements (key-value pairs) in ascending key order and uses a closure to determine if an element should be removed.",
+        "suggest": "创建一个迭代器，该迭代器以升序顺序访问所有元素 (键值对)，并使用闭包确定是否应删除元素。",
+        "translate": ""
+    },
+    {
+        "source": "If the closure returns `true`, the element is removed from the map and yielded.",
+        "suggest": "如果闭包返回 `true`，则将元素从 map 中移除并产生。",
+        "translate": ""
+    },
+    {
+        "source": "If the closure returns `false`, or panics, the element remains in the map and will not be yielded.",
+        "suggest": "如果闭包返回 `false` 或 panics，则该元素保留在 map 中，并且不会产生。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator also lets you mutate the value of each element in the closure, regardless of whether you choose to keep or remove it.",
+        "suggest": "迭代器还允许您更改闭包中每个元素的值，而不管您是选择保留还是删除它。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator is only partially consumed or not consumed at all, each of the remaining elements is still subjected to the closure, which may change its value and, by returning `true`, have the element removed and dropped.",
+        "suggest": "如果迭代器仅被部分消耗或根本没有消耗，则其余每个元素仍将受到闭包的影响，闭包可能会更改其值，并通过返回 `true` 来丢弃该元素。",
+        "translate": ""
+    },
+    {
+        "source": "It is unspecified how many more elements will be subjected to the closure if a panic occurs in the closure, or a panic occurs while dropping an element, or if the `DrainFilter` value is leaked.",
+        "suggest": "如果在闭包中出现 panic，或者在丢弃元素时发生 panic，或者 `DrainFilter` 值泄漏，将有多少个元素受到该闭包的影响，这是不确定的。",
+        "translate": ""
+    },
+    {
+        "source": "Splitting a map into even and odd keys, reusing the original map:",
+        "suggest": "将 map 分为偶数和奇数键，重新使用原始的 map:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a consuming iterator visiting all the keys, in sorted order.",
+        "suggest": "创建一个消费的迭代器，按顺序访问所有键。",
+        "translate": ""
+    },
+    {
+        "source": "The map cannot be used after calling this.",
+        "suggest": "调用后不能使用 map。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator element type is `K`.",
+        "suggest": "迭代器元素类型为 `K`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a consuming iterator visiting all the values, in order by key.",
+        "suggest": "创建一个消费迭代器，按键顺序访问所有值。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator element type is `V`.",
+        "suggest": "迭代器元素类型为 `V`。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to advancing a non-fusing iterator.",
+        "suggest": "类似于推进非融合迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Continue the same loop we perform below.",
+        "suggest": "继续我们下面执行的相同循环。",
+        "translate": ""
+    },
+    {
+        "source": "This only runs when unwinding, so we don't have to care about panics this time (they'll abort).",
+        "suggest": "这仅在展开时运行，因此我们这次不必担心 panic (它们会中止)。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator produced by calling `drain_filter` on BTreeMap.",
+        "suggest": "通过在 BTreeMap 上调用 `drain_filter` 生成的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Most of the implementation of DrainFilter are generic over the type of the predicate, thus also serving for BTreeSet::DrainFilter.",
+        "suggest": "DrainFilter 的大多数实现在谓词类型上都是泛型的，因此也可用于 BTreeSet::DrainFilter。",
+        "translate": ""
+    },
+    {
+        "source": "Reference to the length field in the borrowed map, updated live.",
+        "suggest": "引用借用的 map 中的 length 字段，实时更新。",
+        "translate": ""
+    },
+    {
+        "source": "Buried reference to the root field in the borrowed map.",
+        "suggest": "被引用到被借用 map 的根字段中。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapped in `Option` to allow drop handler to `take` it.",
+        "suggest": "包装在 `Option` 中，以允许 drop 处理器对其进行 `take` 处理。",
+        "translate": ""
+    },
+    {
+        "source": "Contains a leaf edge preceding the next element to be returned, or the last leaf edge.",
+        "suggest": "在要返回的下一个元素或最后一个叶 edge 之前包含一个叶 edge。",
+        "translate": ""
+    },
+    {
+        "source": "Empty if the map has no root, if iteration went beyond the last leaf edge, or if a panic occurred in the predicate.",
+        "suggest": "如果 map 没有根，迭代超出了最后一片叶子 edge 或谓词中出现了 panic，则为空。",
+        "translate": ""
+    },
+    {
+        "source": "Allow Debug implementations to predict the next element.",
+        "suggest": "允许 Debug 实现预测下一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of a typical `DrainFilter::next` method, given the predicate.",
+        "suggest": "给定谓词，典型 `DrainFilter::next` 方法的实现。",
+        "translate": ""
+    },
+    {
+        "source": "we will touch the root in a way that will not invalidate the position returned.",
+        "suggest": "我们将以不会使返回的位置无效的方式接触根部。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of a typical `DrainFilter::size_hint` method.",
+        "suggest": "典型的 `DrainFilter::size_hint` 方法的实现。",
+        "translate": ""
+    },
+    {
+        "source": "In most of the btree iterators, `self.length` is the number of elements yet to be visited.",
+        "suggest": "在大多数 btree 迭代器中，`self.length` 是要访问的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Here, it includes elements that were visited and that the predicate decided not to drain.",
+        "suggest": "在这里，它包含已访问的元素以及谓词决定不访问 drain 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Making this upper bound more accurate requires maintaining an extra field and is not worth while.",
+        "suggest": "要使此上限更加准确，就需要保留一个额外的字段，这是不值得的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty `BTreeMap`.",
+        "suggest": "创建一个空的 `BTreeMap`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the value corresponding to the supplied key.",
+        "suggest": "返回与提供的键对应的值的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the key is not present in the `BTreeMap`.",
+        "suggest": "如果键不存在于 `BTreeMap` 中，则会出现 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Gets an iterator over the entries of the map, sorted by key.",
+        "suggest": "获取对 map 的条目进行迭代的迭代器，按键排序。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a mutable iterator over the entries of the map, sorted by key.",
+        "suggest": "在 map 的条目上获取一个可变迭代器，按键排序。",
+        "translate": ""
+    },
+    {
+        "source": "Gets an iterator over the keys of the map, in sorted order.",
+        "suggest": "以排序顺序在 map 的键上获取一个迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Gets an iterator over the values of the map, in order by key.",
+        "suggest": "按键顺序获取 map 值的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a mutable iterator over the values of the map, in order by key.",
+        "suggest": "按键顺序获取 map 值的可变迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements in the map.",
+        "suggest": "返回 map 中的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the map contains no elements.",
+        "suggest": "如果 map 不包含任何元素，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "If the root node is the empty (non-allocated) root node, allocate our own node.",
+        "suggest": "如果根节点是空的 (non-allocated) 根节点，请分配我们自己的节点。",
+        "translate": ""
+    },
+    {
+        "source": "Is an associated function to avoid borrowing the entire BTreeMap.",
+        "suggest": "是一个关联函数，以避免借用整个 BTreeMap。",
+        "translate": ""
+    },
+    {
+        "source": "This replaces the value behind the `v` unique reference by calling the relevant function.",
+        "suggest": "这将通过调用相关函数来替换 `v` 唯一引用后面的值。",
+        "translate": ""
+    },
+    {
+        "source": "If a panic occurs in the `change` closure, the entire process will be aborted.",
+        "suggest": "如果 `change` 闭包中出现 panic，则整个进程将被中止。",
+        "translate": ""
+    },
+    {
+        "source": "keep as illustration and for future use",
+        "suggest": "作为插图保存，以备将来使用",
+        "translate": ""
+    },
+    {
+        "source": "This replaces the value behind the `v` unique reference by calling the relevant function, and returns a result obtained along the way.",
+        "suggest": "这将通过调用相关函数来替换 `v` 唯一引用后面的值，并返回沿途获得的结果。",
+        "translate": ""
+    },
+    {
+        "source": "of an iterator that merges the output of two strictly ascending iterators, for instance a union or a symmetric difference.",
+        "suggest": "合并两个严格递增的迭代器 (例如，并集或对称差) 的输出的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Benchmarks faster than wrapping both iterators in a Peekable, probably because we can afford to impose a FusedIterator bound.",
+        "suggest": "与将两个迭代器包装在 Peekable 中相比，基准测试速度更快，这可能是因为我们有能力施加 FusedIterator 绑定。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new core for an iterator merging a pair of sources.",
+        "suggest": "为合并一对源的迭代器创建新的 core。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the next pair of items stemming from the pair of sources being merged.",
+        "suggest": "返回源于正在合并的源对的下一对项。",
+        "translate": ""
+    },
+    {
+        "source": "If both returned options contain a value, that value is equal and occurs in both sources.",
+        "suggest": "如果两个返回的选项都包含一个值，则该值相等，并且在两个源中均出现。",
+        "translate": ""
+    },
+    {
+        "source": "If one of the returned options contains a value, that value doesn't occur in the other source (or the sources are not strictly ascending).",
+        "suggest": "如果返回的选项之一包含一个值，则该值不会在另一个源中出现 (或这些源未严格递增)。",
+        "translate": ""
+    },
+    {
+        "source": "If neither returned option contains a value, iteration has finished and subsequent calls will return the same empty pair.",
+        "suggest": "如果两个返回的选项都不包含值，则迭代已完成，后续调用将返回相同的空对。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a pair of upper bounds for the `size_hint` of the final iterator.",
+        "suggest": "返回最终迭代器的 `size_hint` 的一对上限。",
+        "translate": ""
+    },
+    {
+        "source": "Temporarily takes out another, immutable equivalent of the same range.",
+        "suggest": "暂时取出另一个相同范围的不可变值。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the distinct leaf edges delimiting a specified range in a tree.",
+        "suggest": "查找限定树中指定范围的不同叶 edges。",
+        "translate": ""
+    },
+    {
+        "source": "Returns either a pair of different handles into the same tree or a pair of empty options.",
+        "suggest": "将一对不同的句柄返回到同一棵树或一对空选项。",
+        "translate": ""
+    },
+    {
+        "source": "Unless `BorrowType` is `Immut`, do not use the duplicate handles to visit the same KV twice.",
+        "suggest": "除非 `BorrowType` 是 `Immut`，否则请勿使用重复的句柄访问同一 KV 两次。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `(root1.first_leaf_edge(), root2.last_leaf_edge())` but more efficient.",
+        "suggest": "等效于 `(root1.first_leaf_edge(), root2.last_leaf_edge())`，但效率更高。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the pair of leaf edges delimiting a specific range in a tree.",
+        "suggest": "查找在树中划定特定范围的一对叶子 edges。",
+        "translate": ""
+    },
+    {
+        "source": "The result is meaningful only if the tree is ordered by key, like the tree in a `BTreeMap` is.",
+        "suggest": "仅当按键对树进行排序 (如 `BTreeMap` 中的树) 时，结果才有意义。",
+        "translate": ""
+    },
+    {
+        "source": "our borrow type is immutable.",
+        "suggest": "我们的借用类型是不可变。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the pair of leaf edges delimiting an entire tree.",
+        "suggest": "查找界定整个树的一对叶子 edges。",
+        "translate": ""
+    },
+    {
+        "source": "Splits a unique reference into a pair of leaf edges delimiting a specified range.",
+        "suggest": "将一个唯一的 quot 拆分为一对指定范围的叶子 edges。",
+        "translate": ""
+    },
+    {
+        "source": "The result are non-unique references allowing (some) mutation, which must be used carefully.",
+        "suggest": "结果是非唯一引用，允许 (some) 可变的，必须谨慎使用。",
+        "translate": ""
+    },
+    {
+        "source": "Do not use the duplicate handles to visit the same KV twice.",
+        "suggest": "请勿使用重复的句柄访问同一 KV 两次。",
+        "translate": ""
+    },
+    {
+        "source": "Splits a unique reference into a pair of leaf edges delimiting the full range of the tree.",
+        "suggest": "将唯一的 quot 拆分为一对叶子 edges，它们界定了树的整个范围。",
+        "translate": ""
+    },
+    {
+        "source": "The results are non-unique references allowing mutation (of values only), so must be used with care.",
+        "suggest": "结果是非唯一引用，允许可变的 (仅值)，因此必须小心使用。",
+        "translate": ""
+    },
+    {
+        "source": "We duplicate the root NodeRef here -- we will never visit the same KV twice, and never end up with overlapping value references.",
+        "suggest": "我们在这里复制根 NodeRef - 我们将永远不会访问同一 KV 两次，也永远不会出现重叠的引用值。",
+        "translate": ""
+    },
+    {
+        "source": "The results are non-unique references allowing massively destructive mutation, so must be used with the utmost care.",
+        "suggest": "结果是非唯一引用，允许大规模破坏性可变的，因此必须格外小心使用。",
+        "translate": ""
+    },
+    {
+        "source": "We duplicate the root NodeRef here -- we will never access it in a way that overlaps references obtained from the root.",
+        "suggest": "我们在这里复制根 NodeRef - 我们将永远不会以与从根获得的引用重叠的方式访问它。",
+        "translate": ""
+    },
+    {
+        "source": "Given a leaf edge handle, returns [`Result::Ok`] with a handle to the neighboring KV on the right side, which is either in the same leaf node or in an ancestor node.",
+        "suggest": "给定叶子 edge 句柄，将 [`Result::Ok`] 及其句柄返回到右侧的相邻 KV，该相邻 KV 在同一叶子节点中或在祖先节点中。",
+        "translate": ""
+    },
+    {
+        "source": "If the leaf edge is the last one in the tree, returns [`Result::Err`] with the root node.",
+        "suggest": "如果叶子 edge 是树中的最后一个叶子，则返回带有根节点的 [`Result::Err`]。",
+        "translate": ""
+    },
+    {
+        "source": "Given a leaf edge handle, returns [`Result::Ok`] with a handle to the neighboring KV on the left side, which is either in the same leaf node or in an ancestor node.",
+        "suggest": "给定叶子 edge 句柄，将 [`Result::Ok`] 及其句柄返回到左侧的相邻 KV，该相邻 KV 在同一叶子节点中或在祖先节点中。",
+        "translate": ""
+    },
+    {
+        "source": "If the leaf edge is the first one in the tree, returns [`Result::Err`] with the root node.",
+        "suggest": "如果叶子 edge 是树中的第一个叶子，则返回带有根节点的 [`Result::Err`]。",
+        "translate": ""
+    },
+    {
+        "source": "Given an internal edge handle, returns [`Result::Ok`] with a handle to the neighboring KV on the right side, which is either in the same internal node or in an ancestor node.",
+        "suggest": "给定内部 edge 句柄，将 [`Result::Ok`] 及其句柄返回到右侧的相邻 KV，该相邻 KV 在同一内部节点中或在祖先节点中。",
+        "translate": ""
+    },
+    {
+        "source": "If the internal edge is the last one in the tree, returns [`Result::Err`] with the root node.",
+        "suggest": "如果内部 edge 是树中的最后一个，则返回带有根节点的 [`Result::Err`]。",
+        "translate": ""
+    },
+    {
+        "source": "Given a leaf edge handle into a dying tree, returns the next leaf edge on the right side, and the key-value pair in between, which is either in the same leaf node, in an ancestor node, or non-existent.",
+        "suggest": "给定一个即将死去的树的叶子 edge 句柄，则返回右侧的下一个叶子 edge，以及位于两者之间的键值对，它们在同一叶节点中，在祖先节点中或不存在。",
+        "translate": ""
+    },
+    {
+        "source": "This method also deallocates any node(s) it reaches the end of.",
+        "suggest": "此方法还将释放它到达末尾的所有 node(s)。",
+        "translate": ""
+    },
+    {
+        "source": "This implies that if no more key-value pair exists, the entire remainder of the tree will have been deallocated and there is nothing left to return.",
+        "suggest": "这意味着如果不存在更多的键 / 值对，则树的整个其余部分将被释放，并且没有剩余可返回。",
+        "translate": ""
+    },
+    {
+        "source": "The given edge must not have been previously returned by counterpart `deallocating_next_back`.",
+        "suggest": "给定的 edge 一定不是先前由对方 `deallocating_next_back` 返回的。",
+        "translate": ""
+    },
+    {
+        "source": "Given a leaf edge handle into a dying tree, returns the next leaf edge on the left side, and the key-value pair in between, which is either in the same leaf node, in an ancestor node, or non-existent.",
+        "suggest": "给定一个即将死去的树的叶子 edge 句柄，则返回左侧的下一个叶子 edge，并返回位于两者之间的键 / 值对，它们在同一叶节点中，在祖先节点中或不存在。",
+        "translate": ""
+    },
+    {
+        "source": "The given edge must not have been previously returned by counterpart `deallocating_next`.",
+        "suggest": "给定的 edge 一定不是先前由对方 `deallocating_next` 返回的。",
+        "translate": ""
+    },
+    {
+        "source": "Deallocates a pile of nodes from the leaf up to the root.",
+        "suggest": "释放从叶子到根的一堆节点。",
+        "translate": ""
+    },
+    {
+        "source": "This is the only way to deallocate the remainder of a tree after `deallocating_next` and `deallocating_next_back` have been nibbling at both sides of the tree, and have hit the same edge.",
+        "suggest": "这是在 `deallocating_next` 和 `deallocating_next_back` 一直在树的两边蚕食并且击中了相同的 edge 之后，重新分配树的其余部分的唯一方法。",
+        "translate": ""
+    },
+    {
+        "source": "As it is intended only to be called when all keys and values have been returned, no cleanup is done on any of the keys or values.",
+        "suggest": "由于仅在返回所有键和值后才调用它，因此不会对任何键或值进行清理。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the leaf edge handle to the next leaf edge and returns references to the key and value in between.",
+        "suggest": "将叶子 edge 句柄移动到下一个叶子 edge，并在其中的键和值之间返回引用。",
+        "translate": ""
+    },
+    {
+        "source": "There must be another KV in the direction travelled.",
+        "suggest": "行驶方向上必须有另一个 KV。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the leaf edge handle to the previous leaf edge and returns references to the key and value in between.",
+        "suggest": "将叶子 edge 句柄移动到上一个叶子 edge，并在其中的键和值返回 quot。",
+        "translate": ""
+    },
+    {
+        "source": "Doing this last is faster, according to benchmarks.",
+        "suggest": "根据基准测试，这样做的最后速度更快。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the leaf edge handle to the previous leaf and returns references to the key and value in between.",
+        "suggest": "将叶子 edge 句柄移动到上一个叶子，并在其中的键和值之间返回 quot。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the leaf edge handle to the next leaf edge and returns the key and value in between, deallocating any node left behind while leaving the corresponding edge in its parent node dangling.",
+        "suggest": "将叶子 edge 句柄移动到下一个叶子 edge，并返回它们之间的键和值，重新分配留下的任何节点，同时将对应的 edge 保留在其父子节点中。",
+        "translate": ""
+    },
+    {
+        "source": "That KV was not previously returned by counterpart `next_back_unchecked` on any copy of the handles being used to traverse the tree.",
+        "suggest": "对方 `next_back_unchecked` 先前未在用于遍历树的任何句柄副本上返回该 KV。",
+        "translate": ""
+    },
+    {
+        "source": "The only safe way to proceed with the updated handle is to compare it, drop it, call this method again subject to its safety conditions, or call counterpart `next_back_unchecked` subject to its safety conditions.",
+        "suggest": "处理更新后的句柄的唯一安全方法是比较它，丢弃它，根据安全条件再次调用这个方法，或者根据安全条件调用对应的 `next_back_unchecked`。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the leaf edge handle to the previous leaf edge and returns the key and value in between, deallocating any node left behind while leaving the corresponding edge in its parent node dangling.",
+        "suggest": "将叶子 edge 句柄移动到上一个叶子 edge，并返回它们之间的键和值，重新分配留下的任何节点，同时将对应的 edge 保留在其父子节点中。",
+        "translate": ""
+    },
+    {
+        "source": "That leaf edge was not previously returned by counterpart `next_unchecked` on any copy of the handles being used to traverse the tree.",
+        "suggest": "对应的 `next_unchecked` 先前未在用于遍历树的句柄的任何副本上返回该叶 edge。",
+        "translate": ""
+    },
+    {
+        "source": "The only safe way to proceed with the updated handle is to compare it, drop it, call this method again subject to its safety conditions, or call counterpart `next_unchecked` subject to its safety conditions.",
+        "suggest": " 处理更新后的句柄的唯一安全方法是比较它，丢弃它，根据安全条件再次调用这个方法，或者根据安全条件调用对应的 `next_unchecked`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the leftmost leaf edge in or underneath a node - in other words, the edge you need first when navigating forward (or last when navigating backward).",
+        "suggest": "返回节点内或节点下最左边的叶子 edge - 换句话说，向前导航时需要首先使用的 edge (向后导航时则需要最后的 edge)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the rightmost leaf edge in or underneath a node - in other words, the edge you need last when navigating forward (or first when navigating backward).",
+        "suggest": "返回节点内或节点下最右边的叶子 edge - 换句话说，向前导航时需要最后一个 edge (向后导航时需要第一个 edge)。",
+        "translate": ""
+    },
+    {
+        "source": "Visits leaf nodes and internal KVs in order of ascending keys, and also visits internal nodes as a whole in a depth first order, meaning that internal nodes precede their individual KVs and their child nodes.",
+        "suggest": "按键升序访问叶节点和内部 KV，还按深度优先顺序访问整个内部节点，这意味着内部节点先于其各个 KV 和其子节点。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the number of elements in a (sub)tree.",
+        "suggest": "计算 (子) 树中的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the leaf edge closest to a KV for forward navigation.",
+        "suggest": "返回最接近 KV 的叶子 edge，以进行前向导航。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the leaf edge closest to a KV for backward navigation.",
+        "suggest": "返回最接近 KV 的叶子 edge，以进行向后导航。",
+        "translate": ""
+    },
+    {
+        "source": "Asserts that the back pointer in each reachable node points to its parent.",
+        "suggest": "断言每个可到达节点中的后向指针均指向其父节点。",
+        "translate": ""
+    },
+    {
+        "source": "Renders a multi-line display of the keys in order and in tree hierarchy, picturing the tree growing sideways from its root on the left to its leaves on the right.",
+        "suggest": "按顺序并在树的层次结构中显示关键点的多行显示，以描绘从左边的根到右边的叶子侧向生长的树。",
+        "translate": ""
+    },
+    {
+        "source": "Simulate performing the split:",
+        "suggest": "模拟执行拆分:",
+        "translate": ""
+    },
+    {
+        "source": "This is an attempt at an implementation following the ideal",
+        "suggest": "这是遵循理想的实现的尝试",
+        "translate": ""
+    },
+    {
+        "source": "Since Rust doesn't actually have dependent types and polymorphic recursion, we make do with lots of unsafety.",
+        "suggest": "由于 Rust 实际上没有依赖类型和多态递归，因此我们可以避免很多不安全因素。",
+        "translate": ""
+    },
+    {
+        "source": "A major goal of this module is to avoid complexity by treating the tree as a generic (if weirdly shaped) container and avoiding dealing with most of the B-Tree invariants.",
+        "suggest": "该模块的主要目标是通过将树视为泛型 (如果形状怪异) 容器来避免复杂性，并避免处理大多数 B-Tree 不变式。",
+        "translate": ""
+    },
+    {
+        "source": "As such, this module doesn't care whether the entries are sorted, which nodes can be underfull, or even what underfull means.",
+        "suggest": "这样，该模块不在乎条目是否已排序，哪些节点可能不足，甚至是不足意味着什么。",
+        "translate": ""
+    },
+    {
+        "source": "However, we do rely on a few invariants:",
+        "suggest": "但是，我们确实依赖一些不可变变量:",
+        "translate": ""
+    },
+    {
+        "source": "Trees must have uniform depth/height.",
+        "suggest": "树木必须具有统一的 depth/height。",
+        "translate": ""
+    },
+    {
+        "source": "This means that every path down to a leaf from a given node has exactly the same length.",
+        "suggest": "这意味着从给定节点到叶子的每条路径都具有完全相同的长度。",
+        "translate": ""
+    },
+    {
+        "source": "A node of length `n` has `n` keys, `n` values, and `n + 1` edges.",
+        "suggest": "长度为 `n` 的节点具有 `n` 键，`n` 值和 `n + 1` edges。",
+        "translate": ""
+    },
+    {
+        "source": "This implies that even an empty node has at least one edge.",
+        "suggest": "这意味着即使一个空节点也至少具有一个 edge。",
+        "translate": ""
+    },
+    {
+        "source": "For a leaf node, \"having an edge\" only means we can identify a position in the node, since leaf edges are empty and need no data representation.",
+        "suggest": "对于叶节点，\"having an edge\" 仅意味着我们可以标识节点中的位置，因为叶 edges 为空并且不需要数据表示。",
+        "translate": ""
+    },
+    {
+        "source": "In an internal node, an edge both identifies a position and contains a pointer to a child node.",
+        "suggest": "在内部节点中，edge 既标识位置又包含指向子例程的指针。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying representation of leaf nodes and part of the representation of internal nodes.",
+        "suggest": "叶节点的基础表示和内部节点的部分表示。",
+        "translate": ""
+    },
+    {
+        "source": "We want to be covariant in `K` and `V`.",
+        "suggest": "我们希望在 `K` 和 `V` 中是协变的。",
+        "translate": ""
+    },
+    {
+        "source": "This node's index into the parent node's `edges` array.",
+        "suggest": "该节点到父节点的 `edges` 数组的索引。",
+        "translate": ""
+    },
+    {
+        "source": "should be the same thing as `node`.",
+        "suggest": "应该与 `node` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "This is only guaranteed to be initialized when `parent` is non-null.",
+        "suggest": "仅当 `parent` 不为 null 时，才保证将其初始化。",
+        "translate": ""
+    },
+    {
+        "source": "The number of keys and values this node stores.",
+        "suggest": "此节点存储的键和值的数量。",
+        "translate": ""
+    },
+    {
+        "source": "The arrays storing the actual data of the node.",
+        "suggest": "存储节点实际数据的数组。",
+        "translate": ""
+    },
+    {
+        "source": "Only the first `len` elements of each array are initialized and valid.",
+        "suggest": "每个数组中只有前 `len` 个元素被初始化并有效。",
+        "translate": ""
+    },
+    {
+        "source": "Initializes a new `LeafNode` in-place.",
+        "suggest": "就地初始化一个新的 `LeafNode`。",
+        "translate": ""
+    },
+    {
+        "source": "As a general policy, we leave fields uninitialized if they can be, as this should be both slightly faster and easier to track in Valgrind.",
+        "suggest": "根据一般政策，如果可以的话，我们会保留未初始化的字段，因为这应该在 Valgrind 中更快，更轻松地进行跟踪。",
+        "translate": ""
+    },
+    {
+        "source": "parent_idx, keys, and vals are all MaybeUninit",
+        "suggest": "parent_idx，键和 val 都是 MaybeUninit",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new boxed `LeafNode`.",
+        "suggest": "创建一个新的 boxed `LeafNode`。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying representation of internal nodes.",
+        "suggest": "内部节点的基础表示。",
+        "translate": ""
+    },
+    {
+        "source": "As with `LeafNode`s, these should be hidden behind `BoxedNode`s to prevent dropping uninitialized keys and values.",
+        "suggest": "与 `LeafNode`s 一样，它们应该隐藏在 `BoxedNode`s 的后面，以防止丢弃未初始化的键和值。",
+        "translate": ""
+    },
+    {
+        "source": "Any pointer to an `InternalNode` can be directly casted to a pointer to the underlying `LeafNode` portion of the node, allowing code to act on leaf and internal nodes generically without having to even check which of the two a pointer is pointing at.",
+        "suggest": "任何指向 `InternalNode` 的指针都可以直接转换为指向节点的基础 `LeafNode` 部分的指针，从而使代码可以一般地作用于叶节点和内部节点，而不必检查指针指向的是哪两个。",
+        "translate": ""
+    },
+    {
+        "source": "This property is enabled by the use of `repr(C)`.",
+        "suggest": "通过使用 `repr(C)` 启用此属性。",
+        "translate": ""
+    },
+    {
+        "source": "uses this type name for introspection.",
+        "suggest": "使用此类型名称进行自省。",
+        "translate": ""
+    },
+    {
+        "source": "The pointers to the children of this node.",
+        "suggest": "指向此节点的子代的指针。",
+        "translate": ""
+    },
+    {
+        "source": "of these are considered initialized and valid, except that near the end, while the tree is held through borrow type `Dying`, some of these pointers are dangling.",
+        "suggest": "这些树中的所有树被认为是初始化的和有效的，除了在末尾附近，虽然树是通过借用类型 `Dying` 保留的，但是其中一些指针悬空了。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new boxed `InternalNode`.",
+        "suggest": "创建一个新的 boxed `InternalNode`。",
+        "translate": ""
+    },
+    {
+        "source": "An invariant of internal nodes is that they have at least one initialized and valid edge.",
+        "suggest": "内部节点的不变性是它们至少具有一个初始化且有效的 edge。",
+        "translate": ""
+    },
+    {
+        "source": "This function does not set up such an edge.",
+        "suggest": "此函数未设置这样的 edge。",
+        "translate": ""
+    },
+    {
+        "source": "We only need to initialize the data;",
+        "suggest": "我们只需要初始化数据即可。",
+        "translate": ""
+    },
+    {
+        "source": "the edges are MaybeUninit.",
+        "suggest": "edges 是 MaybeUninit。",
+        "translate": ""
+    },
+    {
+        "source": "A managed, non-null pointer to a node.",
+        "suggest": "指向节点的托管非空指针。",
+        "translate": ""
+    },
+    {
+        "source": "This is either an owned pointer to `LeafNode<K, V>` or an owned pointer to `InternalNode<K, V>`.",
+        "suggest": "这可以是指向 `LeafNode<K, V>` 的拥有的指针，也可以是指向 `InternalNode<K, V>` 的拥有的指针。",
+        "translate": ""
+    },
+    {
+        "source": "However, `BoxedNode` contains no information as to which of the two types of nodes it actually contains, and, partially due to this lack of information, is not a separate type and has no destructor.",
+        "suggest": "但是，`BoxedNode` 不包含有关它实际包含的两种类型的节点中的哪一种的信息，并且部分由于缺少此信息，它不是单独的类型，也没有析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "The root node of an owned tree.",
+        "suggest": "拥有所有权的树的根节点。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this does not have a destructor, and must be cleaned up manually.",
+        "suggest": "请注意，它没有析构函数，必须手动清理。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new owned tree, with its own root node that is initially empty.",
+        "suggest": "返回一个新的拥有的树，其树的根节点最初为空。",
+        "translate": ""
+    },
+    {
+        "source": "must not be zero.",
+        "suggest": "不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "Mutably borrows the owned root node.",
+        "suggest": "相互借用拥有的根节点。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `reborrow_mut`, this is safe because the return value cannot be used to destroy the root, and there cannot be other references to the tree.",
+        "suggest": "与 `reborrow_mut` 不同，这是安全的，因为返回值不能用于销毁 root，并且树上不能有其他引用。",
+        "translate": ""
+    },
+    {
+        "source": "Slightly mutably borrows the owned root node.",
+        "suggest": "稍微可变地借用拥有的根节点。",
+        "translate": ""
+    },
+    {
+        "source": "Irreversibly transitions to a reference that permits traversal and offers destructive methods and little else.",
+        "suggest": "不可逆地转换为允许遍历并提供破坏性方法的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Adds a new internal node with a single edge pointing to the previous root node, make that new node the root node, and return it.",
+        "suggest": "添加一个新的内部节点，该节点的单个 edge 指向先前的根节点，使该新节点成为根节点，然后将其返回。",
+        "translate": ""
+    },
+    {
+        "source": "This increases the height by 1 and is the opposite of `pop_internal_level`.",
+        "suggest": "这会使高度增加 1，与 `pop_internal_level` 相反。",
+        "translate": ""
+    },
+    {
+        "source": "except that we just forgot we're internal now:",
+        "suggest": "除了我们只是忘记了我们现在是内部人员:",
+        "translate": ""
+    },
+    {
+        "source": "Removes the internal root node, using its first child as the new root node.",
+        "suggest": "使用第一个子节点作为新的根节点，删除内部根节点。",
+        "translate": ""
+    },
+    {
+        "source": "As it is intended only to be called when the root node has only one child, no cleanup is done on any of the keys, values and other children.",
+        "suggest": "由于仅在根节点只有一个子节点时才调用它，因此不会对任何键，值和其他子节点进行清理。",
+        "translate": ""
+    },
+    {
+        "source": "This decreases the height by 1 and is the opposite of `push_internal_level`.",
+        "suggest": "这会将高度减小 1，与 `push_internal_level` 相反。",
+        "translate": ""
+    },
+    {
+        "source": "Requires exclusive access to the `Root` object but not to the root node;",
+        "suggest": "需要对 `Root` 对象的独占访问权，而不是对根节点的独占访问权;",
+        "translate": ""
+    },
+    {
+        "source": "it will not invalidate other handles or references to the root node.",
+        "suggest": "它不会使其他句柄或对根节点的引用无效。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if there is no internal level, i.e., if the root node is a leaf.",
+        "suggest": "Panics，如果没有内部级别，即根节点是叶。",
+        "translate": ""
+    },
+    {
+        "source": "we asserted to be internal.",
+        "suggest": "我们断言是内部的。",
+        "translate": ""
+    },
+    {
+        "source": "we borrowed `self` exclusively and its borrow type is exclusive.",
+        "suggest": "我们是专门借用 `self` 的，而借用类型是专有的。",
+        "translate": ""
+    },
+    {
+        "source": "the first edge is always initialized.",
+        "suggest": "第一个 edge 总是被初始化。",
+        "translate": ""
+    },
+    {
+        "source": "`NodeRef` is always covariant in `K` and `V`, even when the `BorrowType` is `Mut`.",
+        "suggest": "即使 `BorrowType` 是 `Mut`，`NodeRef` 在 `K` 和 `V` 中也总是协变的。",
+        "translate": ""
+    },
+    {
+        "source": "This is technically wrong, but cannot result in any unsafety due to internal use of `NodeRef` because we stay completely generic over `K` and `V`.",
+        "suggest": "这在技术上是错误的，但是由于内部使用 `NodeRef` 不会导致任何安全隐患，因为我们在 `K` 和 `V` 上完全保持泛型。",
+        "translate": ""
+    },
+    {
+        "source": "However, whenever a public type wraps `NodeRef`, make sure that it has the correct variance.",
+        "suggest": "但是，每当公共类型包装 `NodeRef` 时，请确保其具有正确的方差。",
+        "translate": ""
+    },
+    {
+        "source": "A reference to a node.",
+        "suggest": "对节点的引用。",
+        "translate": ""
+    },
+    {
+        "source": "This type has a number of parameters that controls how it acts:",
+        "suggest": "此类型具有许多控制其行为的参数:",
+        "translate": ""
+    },
+    {
+        "source": "A dummy type that describes the kind of borrow and carries a lifetime.",
+        "suggest": "一种虚拟类型，描述借用的类型并带有生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "When this is `Immut<'a>`, the `NodeRef` acts roughly like `&'a Node`.",
+        "suggest": "当它是 `Immut<'a>` 时，`NodeRef` 的行为大致类似于 `&'a Node`。",
+        "translate": ""
+    },
+    {
+        "source": "When this is `ValMut<'a>`, the `NodeRef` acts roughly like `&'a Node` with respect to keys and tree structure, but also allows many mutable references to values throughout the tree to coexist.",
+        "suggest": "当这是 `ValMut<'a>` 时，就键和树结构体而言，`NodeRef` 的行为大致类似于 `&'a Node`，但是还允许对整个树的值进行许多引用来共存。",
+        "translate": ""
+    },
+    {
+        "source": "When this is `Mut<'a>`, the `NodeRef` acts roughly like `&'a mut Node`, although insert methods allow a mutable pointer to a value to coexist.",
+        "suggest": "当这是 `Mut<'a>` 时，尽管插入方法允许指向值的可变指针共存，但 `NodeRef` 的行为大致类似于 `&'a mut Node`。",
+        "translate": ""
+    },
+    {
+        "source": "When this is `Owned`, the `NodeRef` acts roughly like `Box<Node>`, but does not have a destructor, and must be cleaned up manually.",
+        "suggest": "当它是 `Owned` 时，`NodeRef` 的行为大致类似于 `Box<Node>`，但没有析构函数，必须手动清理。",
+        "translate": ""
+    },
+    {
+        "source": "When this is `Dying`, the `NodeRef` still acts roughly like `Box<Node>`, but has methods to destroy the tree bit by bit, and ordinary methods, while not marked as unsafe to call, can invoke UB if called incorrectly.",
+        "suggest": "当这是 `Dying` 时，`NodeRef` 的行为仍大致类似于 `Box<Node>`，但具有逐点销毁树的方法，并且普通方法 (虽然未标记为对调用不安全)，但如果调用不正确，则可以调用 UB。",
+        "translate": ""
+    },
+    {
+        "source": "Since any `NodeRef` allows navigating through the tree, `BorrowType` effectively applies to the entire tree, not just to the node itself.",
+        "suggest": "由于任何 `NodeRef` 都允许在树中导航，因此 `BorrowType` 有效地应用于整个树，而不仅仅是节点本身。",
+        "translate": ""
+    },
+    {
+        "source": "and `V`: These are the types of keys and values stored in the nodes.",
+        "suggest": "和 `V`: 这是存储在节点中的键和值的类型。",
+        "translate": ""
+    },
+    {
+        "source": "This can be `Leaf`, `Internal`, or `LeafOrInternal`.",
+        "suggest": "可以是 `Leaf`，`Internal` 或 `LeafOrInternal`。",
+        "translate": ""
+    },
+    {
+        "source": "When this is `Leaf`, the `NodeRef` points to a leaf node, when this is `Internal` the `NodeRef` points to an internal node, and when this is `LeafOrInternal` the `NodeRef` could be pointing to either type of node.",
+        "suggest": "当这是 `Leaf` 时，`NodeRef` 指向叶节点; 当这是 `Internal` 时，`NodeRef` 指向内部节点; 当这是 `LeafOrInternal` 时，`NodeRef` 可能指向任一类型的节点。",
+        "translate": ""
+    },
+    {
+        "source": "is named `NodeType` when used outside `NodeRef`.",
+        "suggest": "在 `NodeRef` 以外使用时，其名称为 `NodeType`。",
+        "translate": ""
+    },
+    {
+        "source": "Both `BorrowType` and `NodeType` restrict what methods we implement, to exploit static type safety.",
+        "suggest": "`BorrowType` 和 `NodeType` 都限制了我们实现哪种方法以利用静态类型安全性。",
+        "translate": ""
+    },
+    {
+        "source": "There are limitations in the way we can apply such restrictions:",
+        "suggest": "我们应用此类限制的方式存在一些限制:",
+        "translate": ""
+    },
+    {
+        "source": "For each type parameter, we can only define a method either generically or for one particular type.",
+        "suggest": "对于每个类型参数，我们只能通用地或针对一种特定类型定义一种方法。",
+        "translate": ""
+    },
+    {
+        "source": "For example, we cannot define a method like `into_kv` generically for all `BorrowType`, or once for all types that carry a lifetime, because we want it to return `&'a` references.",
+        "suggest": "例如，我们不能为所有 `BorrowType` 定义一个类似 `into_kv` 的方法，也不能为所有带有生命周期的类型定义一个方法，因为我们希望它返回 `&'a` 引用。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, we define it only for the least powerful type `Immut<'a>`.",
+        "suggest": "因此，我们仅针对功能最弱的 `Immut<'a>` 定义它。",
+        "translate": ""
+    },
+    {
+        "source": "We cannot get implicit coercion from say `Mut<'a>` to `Immut<'a>`.",
+        "suggest": "从 `Mut<'a>` 到 `Immut<'a>`，我们无法获得隐式强制。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, we have to explicitly call `reborrow` on a more powerfull `NodeRef` in order to reach a method like `into_kv`.",
+        "suggest": "因此，我们必须在功能更强大的 `NodeRef` 上显式调用 `reborrow`，以实现类似于 `into_kv` 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "All methods on `NodeRef` that return some kind of reference, either:",
+        "suggest": "`NodeRef` 上所有返回某种引用的方法，或者:",
+        "translate": ""
+    },
+    {
+        "source": "Take `self` by value, and return the lifetime carried by `BorrowType`.",
+        "suggest": "按值取 `self`，然后返回 `BorrowType` 携带的生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "Sometimes, to invoke such a method, we need to call `reborrow_mut`.",
+        "suggest": "有时，要调用这种方法，我们需要调用 `reborrow_mut`。",
+        "translate": ""
+    },
+    {
+        "source": "Take `self` by reference, and (implicitly) return that reference's lifetime, instead of the lifetime carried by `BorrowType`.",
+        "suggest": "将 `self` 乘以引用，然后 (implicitly) 返回该引用的生命周期，而不是 `BorrowType` 携带的生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "That way, the borrow checker guarantees that the `NodeRef` remains borrowed as long as the returned reference is used.",
+        "suggest": "这样，借用检查器保证 `NodeRef` 保持借用状态，只要使用返回的引用即可。",
+        "translate": ""
+    },
+    {
+        "source": "The methods supporting insert bend this rule by returning a raw pointer, i.e., a reference without any lifetime.",
+        "suggest": "支持插入的方法通过返回裸指针 (即没有任何生命周期的引用) 来弯曲该规则。",
+        "translate": ""
+    },
+    {
+        "source": "The number of levels that the node and the level of leaves are apart, a constant of the node that cannot be entirely described by `Type`, and that the node itself does not store.",
+        "suggest": "节点的级别数和叶子的级别分开，`Type` 无法完全描述该节点的常量，并且该节点本身不存储。",
+        "translate": ""
+    },
+    {
+        "source": "We only need to store the height of the root node, and derive every other node's height from it.",
+        "suggest": "我们只需要存储根节点的高度，并从中导出所有其他节点的高度。",
+        "translate": ""
+    },
+    {
+        "source": "Must be zero if `Type` is `Leaf` and non-zero if `Type` is `Internal`.",
+        "suggest": "如果 `Type` 为 `Leaf`，则必须为零; 如果 `Type` 为 `Internal`，则必须为非零。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer to the leaf or internal node.",
+        "suggest": "指向叶或内部节点的指针。",
+        "translate": ""
+    },
+    {
+        "source": "The definition of `InternalNode` ensures that the pointer is valid either way.",
+        "suggest": "`InternalNode` 的定义可确保该指针有效。",
+        "translate": ""
+    },
+    {
+        "source": "Unpack a node reference that was packed as `NodeRef::parent`.",
+        "suggest": "取消一个被包装为 `NodeRef::parent` 的节点引用。",
+        "translate": ""
+    },
+    {
+        "source": "Exposes the data of an internal node.",
+        "suggest": "公开内部节点的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a raw ptr to avoid invalidating other references to this node.",
+        "suggest": "返回原始 ptr，以避免使对该节点的其他引用无效。",
+        "translate": ""
+    },
+    {
+        "source": "the static node type is `Internal`.",
+        "suggest": "静态节点类型为 `Internal`。",
+        "translate": ""
+    },
+    {
+        "source": "Borrows exclusive access to the data of an internal node.",
+        "suggest": "借用独占访问内部节点的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the length of the node.",
+        "suggest": "查找节点的长度。",
+        "translate": ""
+    },
+    {
+        "source": "This is the number of keys or values.",
+        "suggest": "这是键或值的数量。",
+        "translate": ""
+    },
+    {
+        "source": "The number of edges is `len() + 1`.",
+        "suggest": "edges 的数量为 `len() + 1`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that, despite being safe, calling this function can have the side effect of invalidating mutable references that unsafe code has created.",
+        "suggest": "请注意，尽管安全，但调用此函数可能会产生使不安全代码已创建的变量引用无效的副作用。",
+        "translate": ""
+    },
+    {
+        "source": "Crucially, we only access the `len` field here.",
+        "suggest": "重要的是，我们仅在此处访问 `len` 字段。",
+        "translate": ""
+    },
+    {
+        "source": "If BorrowType is marker::ValMut, there might be outstanding mutable references to values that we must not invalidate.",
+        "suggest": "如果 BorrowType 为 marker::ValMut，则对于我们不能使之无效的值，可能会有突出的变量引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of levels that the node and leaves are apart.",
+        "suggest": "返回节点和叶子分开的级别数。",
+        "translate": ""
+    },
+    {
+        "source": "Zero height means the node is a leaf itself.",
+        "suggest": "零高度表示节点本身就是叶。",
+        "translate": ""
+    },
+    {
+        "source": "If you picture trees with the root on top, the number says at which elevation the node appears.",
+        "suggest": "如果您将树的根放在顶部，则数字表示该节点出现在哪个海拔高度。",
+        "translate": ""
+    },
+    {
+        "source": "If you picture trees with leaves on top, the number says how high the tree extends above the node.",
+        "suggest": "如果您在树上画上有叶子的树，则数字表示树在节点上方延伸的高度。",
+        "translate": ""
+    },
+    {
+        "source": "Temporarily takes out another, immutable reference to the same node.",
+        "suggest": "临时取出另一个到同一节点。",
+        "translate": ""
+    },
+    {
+        "source": "Exposes the leaf portion of any leaf or internal node.",
+        "suggest": "暴露任何叶子节点或内部节点的叶子部分。",
+        "translate": ""
+    },
+    {
+        "source": "The node must be valid for at least the LeafNode portion.",
+        "suggest": "该节点必须至少对 LeafNode 部分有效。",
+        "translate": ""
+    },
+    {
+        "source": "This is not a reference in the NodeRef type because we don't know if it should be unique or shared.",
+        "suggest": "这不是 NodeRef 类型的引用，因为我们不知道它应该是唯一的还是共享的。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the parent of the current node.",
+        "suggest": "查找当前节点的父节点。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Ok(handle)` if the current node actually has a parent, where `handle` points to the edge of the parent that points to the current node.",
+        "suggest": "如果当前节点实际上有一个父节点，则返回 `Ok(handle)`，其中 `handle` 指向指向当前节点的父节点的 edge。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Err(self)` if the current node has no parent, giving back the original `NodeRef`.",
+        "suggest": "如果当前节点没有父节点，则返回 `Err(self)`，并返回原始 `NodeRef`。",
+        "translate": ""
+    },
+    {
+        "source": "The method name assumes you picture trees with the root node on top.",
+        "suggest": "方法名称假定您在树的根节点位于顶部。",
+        "translate": ""
+    },
+    {
+        "source": "and `node.ascend().unwrap().descend()` should both, upon success, do nothing.",
+        "suggest": "`node.ascend().unwrap().descend()` 和 `node.ascend().unwrap().descend()` 在成功时都不应执行任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "We need to use raw pointers to nodes because, if BorrowType is marker::ValMut, there might be outstanding mutable references to values that we must not invalidate.",
+        "suggest": "我们需要对节点使用裸指针，因为如果 BorrowType 为 marker::ValMut，则对于我们不能使之无效的值，可能会有显着的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `self` must be nonempty.",
+        "suggest": "请注意，`self` 必须为非空。",
+        "translate": ""
+    },
+    {
+        "source": "Exposes the leaf portion of any leaf or internal node in an immutable tree.",
+        "suggest": "暴露不可变树中任何叶子或内部节点的叶子部分。",
+        "translate": ""
+    },
+    {
+        "source": "there can be no mutable references into this tree borrowed as `Immut`.",
+        "suggest": "借给 `Immut` 的树不能有任何可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Borrows a view into the keys stored in the node.",
+        "suggest": "借用查看存储在节点中的键。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to `ascend`, gets a reference to a node's parent node, but also deallocates the current node in the process.",
+        "suggest": "与 `ascend` 相似，获取对节点父节点的引用，但也会在此进程中释放当前节点。",
+        "translate": ""
+    },
+    {
+        "source": "This is unsafe because the current node will still be accessible despite being deallocated.",
+        "suggest": "这是不安全的，因为尽管当前节点已被释放，但仍将可访问。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafely asserts to the compiler the static information that this node is a `Leaf`.",
+        "suggest": "不安全地向编译器断言该节点是 `Leaf` 的静态信息。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafely asserts to the compiler the static information that this node is an `Internal`.",
+        "suggest": "不安全地向编译器断言该节点是 `Internal` 的静态信息。",
+        "translate": ""
+    },
+    {
+        "source": "Temporarily takes out another, mutable reference to the same node.",
+        "suggest": "临时取出另一个到同一节点。",
+        "translate": ""
+    },
+    {
+        "source": "Beware, as this method is very dangerous, doubly so since it may not immediately appear dangerous.",
+        "suggest": "请注意，由于此方法非常危险，因此请加倍注意，因为它可能不会立即看起来很危险。",
+        "translate": ""
+    },
+    {
+        "source": "Because mutable pointers can roam anywhere around the tree, the returned pointer can easily be used to make the original pointer dangling, out of bounds, or invalid under stacked borrow rules.",
+        "suggest": "因为可变指针可以在树的任何位置漫游，所以返回的指针可以很容易地用于使原始指针悬空，越界或在堆叠借用规则下无效。",
+        "translate": ""
+    },
+    {
+        "source": "consider adding yet another type parameter to `NodeRef` that restricts the use of navigation methods on reborrowed pointers, preventing this unsafety.",
+        "suggest": "考虑向 `NodeRef` 添加另一个类型参数，该参数限制在重新借用的指针上使用导航方法，从而防止这种不安全性。",
+        "translate": ""
+    },
+    {
+        "source": "Borrows exclusive access to the leaf portion of any leaf or internal node.",
+        "suggest": "借用独占访问任何叶节点或内部节点的叶部分。",
+        "translate": ""
+    },
+    {
+        "source": "we have exclusive access to the entire node.",
+        "suggest": "我们拥有对整个节点的独占访问权。",
+        "translate": ""
+    },
+    {
+        "source": "Offers exclusive access to the leaf portion of any leaf or internal node.",
+        "suggest": "提供对任何叶节点或内部节点的叶部分的独占访问权。",
+        "translate": ""
+    },
+    {
+        "source": "Borrows exclusive access to an element of the key storage area.",
+        "suggest": "借用独占访问密钥存储区中的某个元素。",
+        "translate": ""
+    },
+    {
+        "source": "is in bounds of 0..CAPACITY",
+        "suggest": "处于 0..CAPACITY 的范围内",
+        "translate": ""
+    },
+    {
+        "source": "the caller will not be able to call further methods on self until the key slice reference is dropped, as we have unique access for the lifetime of the borrow.",
+        "suggest": "在丢弃切片引用之前，调用者将不能调用 self 上的其他方法，因为我们对借用的生命周期具有唯一的访问权。",
+        "translate": ""
+    },
+    {
+        "source": "Borrows exclusive access to an element or slice of the node's value storage area.",
+        "suggest": "借用对节点的值存储区的元素或切片的唯一的访问权。",
+        "translate": ""
+    },
+    {
+        "source": "the caller will not be able to call further methods on self until the value slice reference is dropped, as we have unique access for the lifetime of the borrow.",
+        "suggest": "在值切片引用被丢弃之前，调用者将无法在 self 上调用更多方法，因为我们在借用的生命周期内拥有唯一的访问权限。",
+        "translate": ""
+    },
+    {
+        "source": "Borrows exclusive access to an element or slice of the node's storage area for edge contents.",
+        "suggest": "借用对 edge 内容的节点存储区域的元素或切片的独占访问权。",
+        "translate": ""
+    },
+    {
+        "source": "is in bounds of 0..CAPACITY + 1",
+        "suggest": "处于 `0..CAPACITY + 1` 的范围内",
+        "translate": ""
+    },
+    {
+        "source": "the caller will not be able to call further methods on self until the edge slice reference is dropped, as we have unique access for the lifetime of the borrow.",
+        "suggest": "在丢弃 edge 切片引用之前，调用者将无法自行调用其他方法，因为我们对借用的生命周期具有唯一的访问权。",
+        "translate": ""
+    },
+    {
+        "source": "The node has more than `idx` initialized elements.",
+        "suggest": "该节点具有多个 `idx` 初始化的元素。",
+        "translate": ""
+    },
+    {
+        "source": "We only create a reference to the one element we are interested in, to avoid aliasing with outstanding references to other elements, in particular, those returned to the caller in earlier iterations.",
+        "suggest": "我们仅对我们感兴趣的一个元素创建一个引用，以避免对其他元素 (特别是在较早的迭代中返回给调用者的那些元素) 使用突出的引用而造成别名。",
+        "translate": ""
+    }
+]

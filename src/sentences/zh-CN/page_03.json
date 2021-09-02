@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "Note that we hold both a strong reference and a weak reference.",
+        "suggest": "请注意，我们同时拥有强引用和弱引用。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, releasing our strong reference only will not, by itself, cause the memory to be deallocated.",
+        "suggest": "因此，仅释放我们强大的引用本身不会导致内存被释放。",
+        "translate": ""
+    },
+    {
+        "source": "Use Acquire to ensure that we see any writes to `weak` that happen before release writes (i.e., decrements) to `strong`.",
+        "suggest": "使用 Acquire 来确保我们看到在发行版对 `strong` 进行写入 (即递减) 之前发生的对 `weak` 的写入。",
+        "translate": ""
+    },
+    {
+        "source": "Since we hold a weak count, there's no chance the ArcInner itself could be deallocated.",
+        "suggest": "由于数量不多，因此 ArcInner 本身不可能被释放。",
+        "translate": ""
+    },
+    {
+        "source": "Another strong pointer exists, so we must clone.",
+        "suggest": "存在另一个强大的指针，因此我们必须进行克隆。",
+        "translate": ""
+    },
+    {
+        "source": "Relaxed suffices in the above because this is fundamentally an optimization: we are always racing with weak pointers being dropped.",
+        "suggest": "上面的内容足以满足需要，因为这从根本上来说是一种优化: 我们一直在争夺被丢弃的弱指针。",
+        "translate": ""
+    },
+    {
+        "source": "Worst case, we end up allocated a new Arc unnecessarily.",
+        "suggest": "最坏的情况是，我们最终不必要地分配了新的 Arc。",
+        "translate": ""
+    },
+    {
+        "source": "We removed the last strong ref, but there are additional weak refs remaining.",
+        "suggest": "我们删除了最后一个强引用，但还剩下其他弱引用。",
+        "translate": ""
+    },
+    {
+        "source": "We'll move the contents to a new Arc, and invalidate the other weak refs.",
+        "suggest": "我们将内容移动到新的 Arc，并使其他弱引用无效。",
+        "translate": ""
+    },
+    {
+        "source": "Note that it is not possible for the read of `weak` to yield usize::MAX (i.e., locked), since the weak count can only be locked by a thread with a strong reference.",
+        "suggest": "请注意，读取 `weak` 不可能产生 usize::MAX (即已锁定)，因为弱引用计数只能由带有强引用的线程锁定。",
+        "translate": ""
+    },
+    {
+        "source": "Materialize our own implicit weak pointer, so that it can clean up the ArcInner as needed.",
+        "suggest": "实现我们自己的隐式弱指针，以便可以根据需要清理 ArcInner。",
+        "translate": ""
+    },
+    {
+        "source": "We were the sole reference of either kind;",
+        "suggest": "我们是任何一种形式的唯一引用。",
+        "translate": ""
+    },
+    {
+        "source": "bump back up the strong ref count.",
+        "suggest": "增加强劲的裁判人数。",
+        "translate": ""
+    },
+    {
+        "source": "As with `get_mut()`, the unsafety is ok because our reference was either unique to begin with, or became one upon cloning the contents.",
+        "suggest": "与 `get_mut()` 一样，这种不安全性也是可以的，因为我们的引用一开始是唯一的，或者在克隆内容时成为一体。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference into the given `Arc`, if there are no other `Arc` or [`Weak`] pointers to the same allocation.",
+        "suggest": "如果没有其他 `Arc` 或 [`Weak`] 指向相同分配的指针，则返回给定 `Arc` 的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Our reference count is guaranteed to be 1 at this point, and we required the Arc itself to be `mut`, so we're returning the only possible reference to the inner data.",
+        "suggest": "此时，我们的引数保证为 1，并且我们要求 Arc 本身为 `mut`，因此我们将唯一可能的引数返回给内部数据。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference into the given `Arc`, without any check.",
+        "suggest": "将变量引用返回给定的 `Arc`，而不进行任何检查。",
+        "translate": ""
+    },
+    {
+        "source": "Any other `Arc` or [`Weak`] pointers to the same allocation must not be dereferenced for the duration of the returned borrow.",
+        "suggest": "在返回的借用期间，不得解引用其他指向相同分配的 `Arc` 或 [`Weak`] 指针。",
+        "translate": ""
+    },
+    {
+        "source": "This is trivially the case if no such pointers exist, for example immediately after `Arc::new`.",
+        "suggest": "如果不存在这样的指针 (例如紧接在 `Arc::new` 之后)，则情况很简单。",
+        "translate": ""
+    },
+    {
+        "source": "We are careful to *not* create a reference covering the \"count\" fields, as this would alias with concurrent access to the reference counts (e.g.",
+        "suggest": "我们非常小心 *不要* 创建一个覆盖 \"count\" 字段的引用，因为这会导致对引用计数的并发访问 (例如",
+        "translate": ""
+    },
+    {
+        "source": "Determine whether this is the unique reference (including weak refs) to the underlying data.",
+        "suggest": "确定这是否是基础数据的唯一引用 (包括弱引用)。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this requires locking the weak ref count.",
+        "suggest": "请注意，这需要锁定弱引用计数。",
+        "translate": ""
+    },
+    {
+        "source": "lock the weak pointer count if we appear to be the sole weak pointer holder.",
+        "suggest": "如果我们似乎是唯一的弱指针持有者，则锁定弱指针计数。",
+        "translate": ""
+    },
+    {
+        "source": "The acquire label here ensures a happens-before relationship with any writes to `strong` (in particular in `Weak::upgrade`) prior to decrements of the `weak` count (via `Weak::drop`, which uses release).",
+        "suggest": "在这里，获取标签可确保在 `weak` 计数递减之前 (通过使用释放的 `Weak::drop`) 与对 `strong` (特别是 `Weak::upgrade`) 的任何写操作发生事前关联。",
+        "translate": ""
+    },
+    {
+        "source": "If the upgraded weak ref was never dropped, the CAS here will fail so we do not care to synchronize.",
+        "suggest": "如果升级后的弱引用从未被丢弃，这里的 CAS 将失败，所以我们不关心同步。",
+        "translate": ""
+    },
+    {
+        "source": "This needs to be an `Acquire` to synchronize with the decrement of the `strong` counter in `drop` -- the only access that happens when any but the last reference is being dropped.",
+        "suggest": "它必须是 `Acquire`，才能与 `drop` 中 `strong` 计数器的减量同步 - 唯一的访问是在丢弃最后一个引用以外的任何内容时发生的。",
+        "translate": ""
+    },
+    {
+        "source": "The release write here synchronizes with a read in `downgrade`, effectively preventing the above read of `strong` from happening after the write.",
+        "suggest": "此处的释放写入与 `downgrade` 中的读取同步，从而有效防止了 `strong` 的上述读取在写入后发生。",
+        "translate": ""
+    },
+    {
+        "source": "release the lock",
+        "suggest": "释放锁",
+        "translate": ""
+    },
+    {
+        "source": "Drops the `Arc`.",
+        "suggest": "丢弃 `Arc`。",
+        "translate": ""
+    },
+    {
+        "source": "Because `fetch_sub` is already atomic, we do not need to synchronize with other threads unless we are going to delete the object.",
+        "suggest": "因为 `fetch_sub` 已经是原子的，所以除非要删除对象，否则不需要与其他线程同步。",
+        "translate": ""
+    },
+    {
+        "source": "This same logic applies to the below `fetch_sub` to the `weak` count.",
+        "suggest": "此逻辑适用于以下 `fetch_sub` 至 `weak` 计数。",
+        "translate": ""
+    },
+    {
+        "source": "This fence is needed to prevent reordering of use of the data and deletion of the data.",
+        "suggest": "需要使用该隔离栅来防止对数据使用进行重新排序和删除数据。",
+        "translate": ""
+    },
+    {
+        "source": "Because it is marked `Release`, the decreasing of the reference count synchronizes with this `Acquire` fence.",
+        "suggest": "因为标记为 `Release`，所以减少引用计数与此 `Acquire` 防护同步。",
+        "translate": ""
+    },
+    {
+        "source": "This means that use of the data happens before decreasing the reference count, which happens before this fence, which happens before the deletion of the data.",
+        "suggest": "这意味着数据的使用发生在减少引用计数之前，这在此篱笆之前发生，在篱笆之前发生，数据删除之前发生。",
+        "translate": ""
+    },
+    {
+        "source": "As explained in the [Boost documentation][1],",
+        "suggest": "如 [Boost 文档][1] 中所述，",
+        "translate": ""
+    },
+    {
+        "source": "It is important to enforce any possible access to the object in one",
+        "suggest": "在一个对象中强制执行对对象的任何可能的访问很重要",
+        "translate": ""
+    },
+    {
+        "source": "thread (through an existing reference) to *happen before* deleting",
+        "suggest": "*删除之前将线程 (通过现有引用) 连接到* happen",
+        "translate": ""
+    },
+    {
+        "source": "the object in a different thread.",
+        "suggest": "该对象位于另一个线程中。",
+        "translate": ""
+    },
+    {
+        "source": "This is achieved by a \"release\"",
+        "suggest": "这是通过 \"release\" 实现的",
+        "translate": ""
+    },
+    {
+        "source": "operation after dropping a reference (any access to the object",
+        "suggest": "丢弃引用 (对对象的任何访问权限) 后的操作",
+        "translate": ""
+    },
+    {
+        "source": "through this reference must obviously happened before), and an",
+        "suggest": "通过此引用显然必须发生在之前)，并且",
+        "translate": ""
+    },
+    {
+        "source": "operation before deleting the object.",
+        "suggest": "删除对象之前的操作。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, while the contents of an Arc are usually immutable, it's possible to have interior writes to something like a Mutex<T>.",
+        "suggest": "特别是，虽然 Arc 的内容通常是不可变的，但可以对 Mutex<T> 之类的内容进行内部写入。",
+        "translate": ""
+    },
+    {
+        "source": "Since a Mutex is not acquired when it is deleted, we can't rely on its synchronization logic to make writes in thread A visible to a destructor running in thread B.",
+        "suggest": "由于在删除互斥锁时未获得互斥锁，因此我们不能依靠其同步逻辑使线程 A 中的析构函数看到线程 A 中的写入。",
+        "translate": ""
+    },
+    {
+        "source": "Also note that the Acquire fence here could probably be replaced with an Acquire load, which could improve performance in highly-contended situations.",
+        "suggest": "还要注意，这里的 Acquire 栅栏可能会被 Acquire 负载代替，这可以提高在激烈竞争的情况下的性能。",
+        "translate": ""
+    },
+    {
+        "source": "See [2].",
+        "suggest": "请参见 [2]。",
+        "translate": ""
+    },
+    {
+        "source": "Attempt to downcast the `Arc<dyn Any + Send + Sync>` to a concrete type.",
+        "suggest": "尝试将 `Arc<dyn Any + Send + Sync>` 转换为具体类型。",
+        "translate": ""
+    },
+    {
+        "source": "This cannot be a valid payload address, as the payload is at least as aligned as ArcInner (usize).",
+        "suggest": "这不能是有效的有效负载地址，因为有效负载至少与 ArcInner (usize) 对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Attempts to upgrade the `Weak` pointer to an [`Arc`], delaying dropping of the inner value if successful.",
+        "suggest": "尝试将 `Weak` 指针升级到 [`Arc`]，如果成功，则延迟内部值的丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "We use a CAS loop to increment the strong count instead of a fetch_add as this function should never take the reference count from zero to one.",
+        "suggest": "我们使用 CAS 循环而不是 fetch_add 来增加强引用计数，因为此函数绝不应该将引用计数从零变为一。",
+        "translate": ""
+    },
+    {
+        "source": "Relaxed load because any write of 0 that we can observe leaves the field in a permanently zero state (so a \"stale\" read of 0 is fine), and any other value is confirmed via the CAS below.",
+        "suggest": "放宽负载，因为我们可以观察到的任何写入 0 都使该字段处于永久零状态 (因此 \"stale\" 读取为 0 很好)，并且可以通过下面的 CAS 确认其他任何值。",
+        "translate": ""
+    },
+    {
+        "source": "See comments in `Arc::clone` for why we do this (for `mem::forget`).",
+        "suggest": "请参见 `Arc::clone` 中的注释以了解执行此操作的原因 (对于 `mem::forget`)。",
+        "translate": ""
+    },
+    {
+        "source": "Relaxed is fine for the failure case because we don't have any expectations about the new state.",
+        "suggest": "对于失败案例，放宽是可以的，因为我们对新状态没有任何期望。",
+        "translate": ""
+    },
+    {
+        "source": "Acquire is necessary for the success case to synchronise with `Arc::new_cyclic`, when the inner value can be initialized after `Weak` references have already been created.",
+        "suggest": "如果可以在创建 `Weak` 引用后初始化内部值，则成功案例需要与 `Arc::new_cyclic` 同步进行获取。",
+        "translate": ""
+    },
+    {
+        "source": "In that case, we expect to observe the fully initialized value.",
+        "suggest": "在这种情况下，我们希望观察到完全初始化的值。",
+        "translate": ""
+    },
+    {
+        "source": "null checked above",
+        "suggest": "在上面检查为空",
+        "translate": ""
+    },
+    {
+        "source": "Gets the number of strong (`Arc`) pointers pointing to this allocation.",
+        "suggest": "获取指向该分配的强 (`Arc`) 指针的数量。",
+        "translate": ""
+    },
+    {
+        "source": "Gets an approximation of the number of `Weak` pointers pointing to this allocation.",
+        "suggest": "获取指向该分配的 `Weak` 指针的数量的近似值。",
+        "translate": ""
+    },
+    {
+        "source": "If `self` was created using [`Weak::new`], or if there are no remaining strong pointers, this will return 0.",
+        "suggest": "如果 `self` 是使用 [`Weak::new`] 创建的，或者没有剩余的强指针，则它将返回 0。",
+        "translate": ""
+    },
+    {
+        "source": "Due to implementation details, the returned value can be off by 1 in either direction when other threads are manipulating any `Arc`s or `Weak`s pointing to the same allocation.",
+        "suggest": "由于实现细节，当其他线程操纵指向同一分配的任何 `Arc` 或 `Weak` 时，返回的值可以在任一方向上都减 1。",
+        "translate": ""
+    },
+    {
+        "source": "Since we observed that there was at least one strong pointer after reading the weak count, we know that the implicit weak reference (present whenever any strong references are alive) was still around when we observed the weak count, and can therefore safely subtract it.",
+        "suggest": "由于我们在读取弱引用计数后观察到至少有一个强指针，因此我们知道在观察弱引用计数时隐含的弱引用 (在任何强引用活着时都存在) 仍然存在，因此可以安全地减去它。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` when the pointer is dangling and there is no allocated `ArcInner`, (i.e., when this `Weak` was created by `Weak::new`).",
+        "suggest": "当指针悬空并且没有分配的 `ArcInner` 时 (即，当 `Weak` 由 `Weak::new` 创建时)，返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "We are careful to *not* create a reference covering the \"data\" field, as the field may be mutated concurrently (for example, if the last `Arc` is dropped, the data field will be dropped in-place).",
+        "suggest": "我们小心 *不要* 创建引用 \"data\" 字段的引用，因为该字段可能会同时发生可变的 (例如，如果最后一个 `Arc` 被丢弃，则数据字段将被原地丢弃)。",
+        "translate": ""
+    },
+    {
+        "source": "See comments in Arc::clone() for why this is relaxed.",
+        "suggest": "请参阅 Arc::clone() 中的注释，以了解放宽此限制的原因。",
+        "translate": ""
+    },
+    {
+        "source": "This can use a fetch_add (ignoring the lock) because the weak count is only locked where are *no other* weak pointers in existence.",
+        "suggest": "这可以使用 fetch_add (忽略锁定)，因为弱引用计数仅在存在 *no 其他* 弱指针的地方被锁定。",
+        "translate": ""
+    },
+    {
+        "source": "(So we can't be running this code in that case).",
+        "suggest": "(因此，在这种情况下，我们无法运行此代码)。",
+        "translate": ""
+    },
+    {
+        "source": "See comments in Arc::clone() for why we do this (for mem::forget).",
+        "suggest": "有关为何执行此操作 (对于 mem::forget)，请参见 Arc::clone () 中的注释。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Weak<T>`, without allocating memory.",
+        "suggest": "创建一个新的 `Weak<T>`，而不分配内存。",
+        "translate": ""
+    },
+    {
+        "source": "If we find out that we were the last weak pointer, then its time to deallocate the data entirely.",
+        "suggest": "如果我们发现自己是最后一个弱指针，那么它就该完全释放数据了。",
+        "translate": ""
+    },
+    {
+        "source": "See the discussion in Arc::drop() about the memory orderings",
+        "suggest": "参见 Arc::drop () 中有关内存顺序的讨论。",
+        "translate": ""
+    },
+    {
+        "source": "It's not necessary to check for the locked state here, because the weak count can only be locked if there was precisely one weak ref, meaning that drop could only subsequently run ON that remaining weak ref, which can only happen after the lock is released.",
+        "suggest": "这里没有必要检查锁定状态，因为弱引用计数只能在恰好有一个弱引用的情况下才被锁定，这意味着丢弃只能随后在剩余的弱引用上运行，这只能在释放锁定之后发生。",
+        "translate": ""
+    },
+    {
+        "source": "We assume that `Arc`s are used to store large values, that are slow to clone, but also heavy to check for equality, causing this cost to pay off more easily.",
+        "suggest": "我们假设使用 Arc 来存储较大的值，克隆的速度较慢，但用于检查相等性的值较大，从而使此成本更容易得到回报。",
+        "translate": ""
+    },
+    {
+        "source": "It's also more likely to have two `Arc` clones, that point to the same value, than two `&T`s.",
+        "suggest": "与两个 `&T` 相比，它更有可能具有两个指向相同值的 `Arc` 克隆。",
+        "translate": ""
+    },
+    {
+        "source": "Equality for two `Arc`s.",
+        "suggest": "两个 `Arc` 的相等性。",
+        "translate": ""
+    },
+    {
+        "source": "Two `Arc`s are equal if their inner values are equal, even if they are stored in different allocation.",
+        "suggest": "即使两个 `Arc` 的内部值相等，即使它们存储在不同的分配中，它们也相等。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` also implements `Eq` (implying reflexivity of equality), two `Arc`s that point to the same allocation are always equal.",
+        "suggest": "如果 `T` 还实现了 `Eq` (暗示相等的自反性)，则指向同一分配的两个 Arc 始终相等。",
+        "translate": ""
+    },
+    {
+        "source": "Inequality for two `Arc`s.",
+        "suggest": "两个 `Arc` 的不等式。",
+        "translate": ""
+    },
+    {
+        "source": "Two `Arc`s are unequal if their inner values are unequal.",
+        "suggest": "如果两个 `Arc` 的内部值不相等，则它们是不相等的。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` also implements `Eq` (implying reflexivity of equality), two `Arc`s that point to the same value are never unequal.",
+        "suggest": "如果 `T` 还实现了 `Eq` (暗示相等性的反射性)，则指向相同值的两个 `Arc' 永远不会相等。",
+        "translate": ""
+    },
+    {
+        "source": "Partial comparison for two `Arc`s.",
+        "suggest": "两个 `Arc` 的部分比较。",
+        "translate": ""
+    },
+    {
+        "source": "Less-than comparison for two `Arc`s.",
+        "suggest": "小于两个 Arc 的比较。",
+        "translate": ""
+    },
+    {
+        "source": "'Less than or equal to' comparison for two `Arc`s.",
+        "suggest": "两个 `Arc` 的小于或等于比较。",
+        "translate": ""
+    },
+    {
+        "source": "Greater-than comparison for two `Arc`s.",
+        "suggest": "大于两个 `Arc` 的比较。",
+        "translate": ""
+    },
+    {
+        "source": "'Greater than or equal to' comparison for two `Arc`s.",
+        "suggest": "两个 `Arc` 的大于或等于比较。",
+        "translate": ""
+    },
+    {
+        "source": "Comparison for two `Arc`s.",
+        "suggest": "两个 `Arc` 的比较。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Arc<T>`, with the `Default` value for `T`.",
+        "suggest": "用 `T` 的 `Default` 值创建一个新的 `Arc<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "Allocate a reference-counted `str` and copy `v` into it.",
+        "suggest": "分配一个引用计数的 `str` 并将 `v` 复制到其中。",
+        "translate": ""
+    },
+    {
+        "source": "Move a boxed object to a new, reference-counted allocation.",
+        "suggest": "将 boxed 对象移动到新的引用计数分配。",
+        "translate": ""
+    },
+    {
+        "source": "Takes each element in the `Iterator` and collects it into an `Arc<[T]>`.",
+        "suggest": "获取 `Iterator` 中的每个元素，并将其收集到 `Arc<[T]>` 中。",
+        "translate": ""
+    },
+    {
+        "source": "In the general case, collecting into `Arc<[T]>` is done by first collecting into a `Vec<T>`.",
+        "suggest": "在一般情况下，首先要收集到 `Vec<T>` 中来收集到 `Arc<[T]>` 中。",
+        "translate": ""
+    },
+    {
+        "source": "This will allocate as many times as needed for constructing the `Vec<T>` and then it will allocate once for turning the `Vec<T>` into the `Arc<[T]>`.",
+        "suggest": "这将分配构造 `Vec<T>` 所需的次数，然后分配一次，以将 `Vec<T>` 转换为 `Arc<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "When your `Iterator` implements `TrustedLen` and is of an exact size, a single allocation will be made for the `Arc<[T]>`.",
+        "suggest": "当您的 `Iterator` 实现 `TrustedLen` 且大小正确时，将为 `Arc<[T]>` 进行一次分配。",
+        "translate": ""
+    },
+    {
+        "source": "Specialization trait used for collecting into `Arc<[T]>`.",
+        "suggest": "专门的 trait 用于收集到 `Arc<[T]>` 中。",
+        "translate": ""
+    },
+    {
+        "source": "Get the offset within an `ArcInner` for the payload behind a pointer.",
+        "suggest": "获取 `ArcInner` 内指针后面的有效载荷的偏移量。",
+        "translate": ""
+    },
+    {
+        "source": "Align the unsized value to the end of the ArcInner.",
+        "suggest": "将未定义大小的值与 ArcInner 的末端对齐。",
+        "translate": ""
+    },
+    {
+        "source": "A waker that wakes up the current thread when called.",
+        "suggest": "一个在调用时唤醒当前线程的唤醒器。",
+        "translate": ""
+    },
+    {
+        "source": "Run a future to completion on the current thread.",
+        "suggest": "在当前线程上运行 future 以完成操作。",
+        "translate": ""
+    },
+    {
+        "source": "Pin the future so it can be polled.",
+        "suggest": "固定 future，以便可以对其进行轮询。",
+        "translate": ""
+    },
+    {
+        "source": "Create a new context to be passed to the future.",
+        "suggest": "创建一个要传递给 future 的新上下文。",
+        "translate": ""
+    },
+    {
+        "source": "Run the future to completion.",
+        "suggest": "运行 future 以完成操作。",
+        "translate": ""
+    },
+    {
+        "source": "Types and Traits for working with asynchronous tasks.",
+        "suggest": "类型和 Traits 用于处理异步任务。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation of waking a task on an executor.",
+        "suggest": "在执行程序上唤醒任务的实现。",
+        "translate": ""
+    },
+    {
+        "source": "This trait can be used to create a [`Waker`].",
+        "suggest": "trait 可用于创建 [`Waker`]。",
+        "translate": ""
+    },
+    {
+        "source": "An executor can define an implementation of this trait, and use that to construct a Waker to pass to the tasks that are executed on that executor.",
+        "suggest": "执行者可以定义此 trait 的实现，并使用它来构造一个 Waker 以传递给在该执行者上执行的任务。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is a memory-safe and ergonomic alternative to constructing a [`RawWaker`].",
+        "suggest": "trait 是构建 [`RawWaker`] 的内存安全且符合人体工程学的替代方案。",
+        "translate": ""
+    },
+    {
+        "source": "It supports the common executor design in which the data used to wake up a task is stored in an [`Arc`].",
+        "suggest": "它支持通用执行程序设计，其中用于唤醒任务的数据存储在 [`Arc`] 中。",
+        "translate": ""
+    },
+    {
+        "source": "Some executors (especially those for embedded systems) cannot use this API, which is why [`RawWaker`] exists as an alternative for those systems.",
+        "suggest": "某些执行程序 (尤其是嵌入式系统的执行程序) 无法使用此 API，这就是为什么存在 [`RawWaker`] 来替代这些系统的原因。",
+        "translate": ""
+    },
+    {
+        "source": "A basic `block_on` function that takes a future and runs it to completion on the current thread.",
+        "suggest": "一个基本的 `block_on` 函数，它采用 future 并在当前线程上运行该函数以使其完成。",
+        "translate": ""
+    },
+    {
+        "source": "This example trades correctness for simplicity.",
+        "suggest": "本示例以正确性为代价。",
+        "translate": ""
+    },
+    {
+        "source": "In order to prevent deadlocks, production-grade implementations will also need to handle intermediate calls to `thread::unpark` as well as nested invocations.",
+        "suggest": "为了防止死锁，生产级实现也将需要处理对 `thread::unpark` 的中间调用以及嵌套调用。",
+        "translate": ""
+    },
+    {
+        "source": "Wake this task.",
+        "suggest": "唤醒此任务。",
+        "translate": ""
+    },
+    {
+        "source": "Wake this task without consuming the waker.",
+        "suggest": "在不消耗唤醒程序的情况下唤醒此任务。",
+        "translate": ""
+    },
+    {
+        "source": "If an executor supports a cheaper way to wake without consuming the waker, it should override this method.",
+        "suggest": "如果执行程序支持一种更便宜的唤醒方式而不消耗唤醒程序，则它应该重写此方法。",
+        "translate": ""
+    },
+    {
+        "source": "By default, it clones the [`Arc`] and calls [`wake`] on the clone.",
+        "suggest": "默认情况下，它将克隆 [`Arc`] 并在克隆上调用 [`wake`]。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because raw_waker safely constructs a RawWaker from Arc<W>.",
+        "suggest": "这是安全的，因为 raw_waker 从 Arc<W> 安全地构造了 RawWaker。",
+        "translate": ""
+    },
+    {
+        "source": "This private function for constructing a RawWaker is used, rather than inlining this into the `From<Arc<W>> for RawWaker` impl, to ensure that the safety of `From<Arc<W>> for Waker` does not depend on the correct trait dispatch - instead both impls call this function directly and explicitly.",
+        "suggest": "使用此私有函数来构造 RawWaker，而不是将其内联到 `From<Arc<W>> for RawWaker` impl 中，以确保 `From<Arc<W>> for Waker` 的安全性不依赖于正确的 trait 调度 - 而是都直接或显式地调用此函数。",
+        "translate": ""
+    },
+    {
+        "source": "Increment the reference count of the arc to clone it.",
+        "suggest": "增加弧的引用计数以克隆它。",
+        "translate": ""
+    },
+    {
+        "source": "Wake by value, moving the Arc into the Wake::wake function",
+        "suggest": "通过值唤醒，将弧移到 Wake::wake 函数中",
+        "translate": ""
+    },
+    {
+        "source": "Wake by reference, wrap the waker in ManuallyDrop to avoid dropping it",
+        "suggest": "通过引用唤醒，将唤醒器包裹在 ManuallyDrop 中，以避免被丢弃",
+        "translate": ""
+    },
+    {
+        "source": "Decrement the reference count of the Arc on drop",
+        "suggest": "丢弃时减少 Arc 的引用计数",
+        "translate": ""
+    },
+    {
+        "source": "Test for `boxed` mod.",
+        "suggest": "测试 `boxed` mod。",
+        "translate": ""
+    },
+    {
+        "source": "A draining iterator for `Vec<T>`.",
+        "suggest": "`Vec<T>` 的 draining 迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by [`Vec::drain`].",
+        "suggest": "该 `struct` 由 [`Vec::drain`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Index of tail to preserve",
+        "suggest": "要保存的尾巴索引",
+        "translate": ""
+    },
+    {
+        "source": "Length of tail",
+        "suggest": "尾巴长度",
+        "translate": ""
+    },
+    {
+        "source": "Returns the remaining items of this iterator as a slice.",
+        "suggest": "返回此迭代器的其余项作为切片。",
+        "translate": ""
+    },
+    {
+        "source": "Continues dropping the remaining elements in the `Drain`, then moves back the un-`Drain`ed elements to restore the original `Vec`.",
+        "suggest": "继续将其余元素放到 `Drain` 中，然后移回非 Drain 元素以恢复原始 `Vec`。",
+        "translate": ""
+    },
+    {
+        "source": "Continue the same loop we have below.",
+        "suggest": "继续下面的相同循环。",
+        "translate": ""
+    },
+    {
+        "source": "If the loop already finished, this does nothing.",
+        "suggest": "如果循环已经完成，则不执行任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "memmove back untouched tail, update to new length",
+        "suggest": "记住原封不动的尾巴，更新到新的长度",
+        "translate": ""
+    },
+    {
+        "source": "exhaust self first",
+        "suggest": "先排除自己",
+        "translate": ""
+    },
+    {
+        "source": "Drop a `DropGuard` to move back the non-drained tail of `self`.",
+        "suggest": "丢弃 `DropGuard`，以移回 `self` 的不 draining 的尾巴。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator which uses a closure to determine if an element should be removed.",
+        "suggest": "使用闭包确定是否应删除元素的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by [`Vec::drain_filter`].",
+        "suggest": "该结构体由 [`Vec::drain_filter`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "The index of the item that will be inspected by the next call to `next`.",
+        "suggest": "`next` 的下一次调用将检查的项的索引。",
+        "translate": ""
+    },
+    {
+        "source": "The number of items that have been drained (removed) thus far.",
+        "suggest": "到目前为止已耗尽 (removed) 的项数。",
+        "translate": ""
+    },
+    {
+        "source": "The original length of `vec` prior to draining.",
+        "suggest": "draining 之前 `vec` 的原始长度。",
+        "translate": ""
+    },
+    {
+        "source": "The filter test predicate.",
+        "suggest": "过滤器测试谓词。",
+        "translate": ""
+    },
+    {
+        "source": "A flag that indicates a panic has occurred in the filter test predicate.",
+        "suggest": "指示 panic 的标志已出现在过滤器测试谓词中。",
+        "translate": ""
+    },
+    {
+        "source": "This is used as a hint in the drop implementation to prevent consumption of the remainder of the `DrainFilter`.",
+        "suggest": "这在丢弃实现中用作一个提示，以防止消耗 `DrainFilter` 的其余部分。",
+        "translate": ""
+    },
+    {
+        "source": "Any unprocessed items will be backshifted in the `vec`, but no further items will be dropped or tested by the filter predicate.",
+        "suggest": "任何未处理的项目将在 `vec` 中后移，但过滤谓词不会丢弃或测试其他任何项目。",
+        "translate": ""
+    },
+    {
+        "source": "Update the index *after* the predicate is called.",
+        "suggest": "在谓词被调用之后更新索引。",
+        "translate": ""
+    },
+    {
+        "source": "If the index is updated prior and the predicate panics, the element at this index would be leaked.",
+        "suggest": "如果索引先于谓词 panics 进行更新，则该索引处的元素将被泄漏。",
+        "translate": ""
+    },
+    {
+        "source": "This is a pretty messed up state, and there isn't really an obviously right thing to do.",
+        "suggest": "这是一个非常混乱的状态，实际上并没有一件明显正确的事情要做。",
+        "translate": ""
+    },
+    {
+        "source": "We don't want to keep trying to execute `pred`, so we just backshift all the unprocessed elements and tell the vec that they still exist.",
+        "suggest": "我们不想继续尝试执行 `pred`，因此我们只回移了所有未处理的元素，并告诉 vec 它们仍然存在。",
+        "translate": ""
+    },
+    {
+        "source": "The backshift is required to prevent a double-drop of the last successfully drained item prior to a panic in the predicate.",
+        "suggest": "需要回退以防止在谓词发生 panic 之前对最后一个成功排出的项进行双重丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Attempt to consume any remaining elements if the filter predicate has not yet panicked.",
+        "suggest": "如果过滤谓词尚未恐慌，请尝试消耗所有剩余的元素。",
+        "translate": ""
+    },
+    {
+        "source": "We'll backshift any remaining elements whether we've already panicked or if the consumption here panics.",
+        "suggest": "无论是否已经 panic 或这里的消耗量 panics，我们都会回退所有剩余的元素。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that moves out of a vector.",
+        "suggest": "从 vector 移出的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the `into_iter` method on [`Vec`](super::Vec) (provided by the [`IntoIterator`] trait).",
+        "suggest": "该 `struct` 是通过 [`Vec`](super::Vec) (由 [`IntoIterator`] trait 提供) 上的 `into_iter` 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the remaining items of this iterator as a mutable slice.",
+        "suggest": "以可变切片的形式返回此迭代器的其余项。",
+        "translate": ""
+    },
+    {
+        "source": "Drops remaining elements and relinquishes the backing allocation.",
+        "suggest": "丢弃剩余的元素并放弃支持分配。",
+        "translate": ""
+    },
+    {
+        "source": "This is roughly equivalent to the following, but more efficient",
+        "suggest": "这大致等效于以下内容，但效率更高",
+        "translate": ""
+    },
+    {
+        "source": "overwrite the individual fields instead of creating a new struct and then overwriting &mut self.",
+        "suggest": "覆盖各个字段，而不是创建一个新的结构体，然后覆盖 &mut self。",
+        "translate": ""
+    },
+    {
+        "source": "this creates less assembly",
+        "suggest": "这减少了组装",
+        "translate": ""
+    },
+    {
+        "source": "purposefully don't use 'ptr.offset' because for vectors with 0-size elements this would return the same pointer.",
+        "suggest": "有目的地不使用 'ptr.offset'，因为对于 vectors，其元素的大小为 0，这将返回相同的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Make up a value of this ZST.",
+        "suggest": "组成此 ZST 的值。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must guarantee that `i` is in bounds of the `Vec<T>`, so `i` cannot overflow an `isize`, and the `self.ptr.add(i)` is guaranteed to pointer to an element of the `Vec<T>` and thus guaranteed to be valid to dereference.",
+        "suggest": "调用者必须保证 `i` 在 `Vec<T>` 的范围内，因此 `i` 不会溢出 `isize`，并且保证 `self.ptr.add(i)` 指向 `Vec<T>` 的元素，从而保证对解引用有效。",
+        "translate": ""
+    },
+    {
+        "source": "Also note the implementation of `Self: TrustedRandomAccess` requires that `T: Copy` so reading elements from the buffer doesn't invalidate them for `Drop`.",
+        "suggest": "还要注意，`Self: TrustedRandomAccess` 的实现要求 `T: Copy`，因此从缓冲区读取元素不会使它们对于 `Drop` 无效。",
+        "translate": ""
+    },
+    {
+        "source": "See above for why 'ptr.offset' isn't used",
+        "suggest": "有关为何不使用 'ptr.offset' 的信息，请参见上文",
+        "translate": ""
+    },
+    {
+        "source": "Copy as approximation for !Drop since get_unchecked does not advance self.ptr and thus we can't implement drop-handling",
+        "suggest": "复制为 !Drop 的近似值，因为 get_unchecked 不会推进 self.ptr，因此我们无法实现丢弃处理",
+        "translate": ""
+    },
+    {
+        "source": "is not used anymore after this",
+        "suggest": "此后不再使用",
+        "translate": ""
+    },
+    {
+        "source": "destroy the remaining elements",
+        "suggest": "销毁剩余的元素",
+        "translate": ""
+    },
+    {
+        "source": "now `guard` will be dropped and do the rest",
+        "suggest": "现在，`guard` 将被丢弃并执行其余的操作",
+        "translate": ""
+    },
+    {
+        "source": "internal helper trait for in-place iteration specialization.",
+        "suggest": "内部帮助程序 trait，用于就地迭代专业化。",
+        "translate": ""
+    },
+    {
+        "source": "A helper struct for in-place iteration that drops the destination slice of iteration, i.e. the head.",
+        "suggest": "用于就地迭代的辅助结构体，该结构体将迭代的目标切片 (即头部) 丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "The source slice (the tail) is dropped by IntoIter.",
+        "suggest": "源切片 (尾部) 由 IntoIter 丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Whether this value is zero",
+        "suggest": "此值是否为零",
+        "translate": ""
+    },
+    {
+        "source": "and `Option<Box<T>>` are guaranteed to represent `None` as null.",
+        "suggest": "和 `Option<Box<T>>` 保证将 `None` 表示为空。",
+        "translate": ""
+    },
+    {
+        "source": "For fat pointers, the bytes that would be the pointer metadata in the `Some` variant are padding in the `None` variant, so ignoring them and zero-initializing instead is ok.",
+        "suggest": "对于胖指针，将在 `Some` 成员中用作指针元数据的字节填充在 `None` 成员中，因此可以忽略它们，而可以将其初始化为零。",
+        "translate": ""
+    },
+    {
+        "source": "never implements `Clone`, so there's no need for an impl of `SpecFromElem`.",
+        "suggest": "永远不会实现 `Clone`，因此不需要 `SpecFromElem` 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "ten zeroes",
+        "suggest": "十个零",
+        "translate": ""
+    },
+    {
+        "source": "The following is equivalent, but potentially slower:",
+        "suggest": "以下是等效的，但可能会更慢:",
+        "translate": ""
+    },
+    {
+        "source": "Prints 3, 2, 1",
+        "suggest": "打印 3、2、1",
+        "translate": ""
+    },
+    {
+        "source": "it will display '2'",
+        "suggest": "它将显示 '2'",
+        "translate": ""
+    },
+    {
+        "source": "it will panic!",
+        "suggest": "它会 panic!",
+        "translate": ""
+    },
+    {
+        "source": "and that's all!",
+        "suggest": "就这样!",
+        "translate": ""
+    },
+    {
+        "source": "you can also do it like this:",
+        "suggest": "您也可以这样:",
+        "translate": ""
+    },
+    {
+        "source": "or like this:",
+        "suggest": "或像这样:",
+        "translate": ""
+    },
+    {
+        "source": "The vector contains no items, even though it has capacity for more",
+        "suggest": "vector 不包含任何项，即使它具有更多功能",
+        "translate": ""
+    },
+    {
+        "source": "...but this may make the vector reallocate",
+        "suggest": "... 但是这可能会使 vector 重新分配",
+        "translate": ""
+    },
+    {
+        "source": "Prevent running `v`'s destructor so we are in complete control of the allocation.",
+        "suggest": "防止运行 `v` 的析构函数，因此我们可以完全控制分配。",
+        "translate": ""
+    },
+    {
+        "source": "Pull out the various important pieces of information about `v`",
+        "suggest": "Pull 有关 `v` 的各种重要信息",
+        "translate": ""
+    },
+    {
+        "source": "Overwrite memory with 4, 5, 6",
+        "suggest": "用 4、5、6 覆盖内存",
+        "translate": ""
+    },
+    {
+        "source": "Put everything back together into a Vec",
+        "suggest": "将所有内容放回 Vec",
+        "translate": ""
+    },
+    {
+        "source": "We can now make changes to the components, such as transmuting the raw pointer to a compatible type.",
+        "suggest": "现在，我们可以对组件进行更改，例如将裸指针转换为兼容类型。",
+        "translate": ""
+    },
+    {
+        "source": "Allocate vector big enough for 4 elements.",
+        "suggest": "分配足够大的 vector 以容纳 4 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Initialize elements via raw pointer writes, then set length.",
+        "suggest": "通过裸指针写入初始化元素，然后设置长度。",
+        "translate": ""
+    },
+    {
+        "source": "This is just a minimal skeleton for the doc example;",
+        "suggest": "这只是 doc 示例的基本框架;",
+        "translate": ""
+    },
+    {
+        "source": "don't use this as a starting point for a real library.",
+        "suggest": "不要将其用作真实库的起点。",
+        "translate": ""
+    },
+    {
+        "source": "Per the FFI method's docs,",
+        "suggest": "根据 FFI 方法的文档，",
+        "translate": ""
+    },
+    {
+        "source": "When `deflateGetDictionary` returns `Z_OK`, it holds that:",
+        "suggest": "当 `deflateGetDictionary` 返回 `Z_OK` 时，它认为:",
+        "translate": ""
+    },
+    {
+        "source": "elements were initialized.",
+        "suggest": "元素已初始化。",
+        "translate": ""
+    },
+    {
+        "source": "the capacity (32_768) which makes `set_len` safe to call.",
+        "suggest": "(32_768) 的容量使 `set_len` 可以安全调用。",
+        "translate": ""
+    },
+    {
+        "source": "Make the FFI call...",
+        "suggest": "使 FFI 调用...",
+        "translate": ""
+    },
+    {
+        "source": "...and update the length to what was initialized.",
+        "suggest": "... 并将长度更新为已初始化的长度。",
+        "translate": ""
+    },
+    {
+        "source": "is empty so no elements need to be initialized.",
+        "suggest": "为空，因此不需要初始化任何元素。",
+        "translate": ""
+    },
+    {
+        "source": "always holds whatever `capacity` is.",
+        "suggest": "始终保留 `capacity` 是什么。",
+        "translate": ""
+    },
+    {
+        "source": "A full range clears the vector",
+        "suggest": "全范围清除 vector",
+        "translate": ""
+    },
+    {
+        "source": "Allocate vector big enough for 10 elements.",
+        "suggest": "分配足够大的 vector 以容纳 10 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Fill in the first 3 elements.",
+        "suggest": "填写前 3 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Mark the first 3 elements of the vector as being initialized.",
+        "suggest": "将 vector 的前 3 个元素标记为已初始化。",
+        "translate": ""
+    },
+    {
+        "source": "Reserve additional space big enough for 10 elements.",
+        "suggest": "保留足够大的空间来容纳 10 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Fill in the next 4 elements.",
+        "suggest": "填写接下来的 4 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Mark the 4 elements of the vector as being initialized.",
+        "suggest": "将 vector 的 4 个元素标记为已初始化。",
+        "translate": ""
+    },
+    {
+        "source": "s has type String, not &String",
+        "suggest": "s 具有字符串类型，而不是 &String",
+        "translate": ""
+    },
+    {
+        "source": "your code here",
+        "suggest": "您的代码在这里",
+        "translate": ""
+    },
+    {
+        "source": "A contiguous growable array type with heap-allocated contents, written `Vec<T>`.",
+        "suggest": "具有堆已分配内容的连续可增长数组类型，写为 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "Vectors have `O(1)` indexing, amortized `O(1)` push (to the end) and `O(1)` pop (from the end).",
+        "suggest": "Vectors 具有 `O(1)` 索引，摊销的 `O(1)` 推送 (到末尾) 和 `O(1)` 弹出 (从末尾)。",
+        "translate": ""
+    },
+    {
+        "source": "Vectors ensure they never allocate more than `isize::MAX` bytes.",
+        "suggest": "Vectors 确保它们分配的字节数永远不会超过 `isize::MAX` 字节。",
+        "translate": ""
+    },
+    {
+        "source": "You can explicitly create a [`Vec`] with [`Vec::new`]:",
+        "suggest": "您可以使用 [`Vec::new`] 显式创建 [`Vec`]:",
+        "translate": ""
+    },
+    {
+        "source": "...or by using the [`vec!`] macro:",
+        "suggest": "... 或使用 [`vec!`] 宏:",
+        "translate": ""
+    },
+    {
+        "source": "You can [`push`] values onto the end of a vector (which will grow the vector as needed):",
+        "suggest": "您可以将 [`push`] 值添加到 vector 的末尾 (这将根据需要增大 vector) :",
+        "translate": ""
+    },
+    {
+        "source": "Popping values works in much the same way:",
+        "suggest": "弹出值的工作方式大致相同:",
+        "translate": ""
+    },
+    {
+        "source": "Vectors also support indexing (through the [`Index`] and [`IndexMut`] traits):",
+        "suggest": "Vectors 还支持索引 (通过 [`Index`] 和 [`IndexMut`] traits) :",
+        "translate": ""
+    },
+    {
+        "source": "A contiguous growable array type, written as `Vec<T>` and pronounced 'vector'.",
+        "suggest": "连续的可增长数组类型，写为 `Vec<T>`，发音为 'vector'。",
+        "translate": ""
+    },
+    {
+        "source": "The [`vec!`] macro is provided to make initialization more convenient:",
+        "suggest": "提供 [`vec!`] 宏可以使初始化更加方便:",
+        "translate": ""
+    },
+    {
+        "source": "It can also initialize each element of a `Vec<T>` with a given value.",
+        "suggest": "它还可以使用给定值初始化 `Vec<T>` 的每个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This may be more efficient than performing allocation and initialization in separate steps, especially when initializing a vector of zeros:",
+        "suggest": "这可能比在单独的步骤中执行分配和初始化更为有效，尤其是在初始化零的 vector 时:",
+        "translate": ""
+    },
+    {
+        "source": "For more information, see [Capacity and Reallocation](#capacity-and-reallocation).",
+        "suggest": "有关更多信息，请参见 [容量和重新分配](#capacity-and-reallocation)。",
+        "translate": ""
+    },
+    {
+        "source": "Use a `Vec<T>` as an efficient stack:",
+        "suggest": "使用 `Vec<T>` 作为有效的栈:",
+        "translate": ""
+    },
+    {
+        "source": "The `Vec` type allows to access values by index, because it implements the [`Index`] trait.",
+        "suggest": "`Vec` 类型实现了 [`Index`] trait，因此允许按索引访问值。",
+        "translate": ""
+    },
+    {
+        "source": "An example will be more explicit:",
+        "suggest": "一个例子将更加明确:",
+        "translate": ""
+    },
+    {
+        "source": "However be careful: if you try to access an index which isn't in the `Vec`, your software will panic!",
+        "suggest": "但是要小心: 如果您尝试访问 `Vec` 中没有的索引，则您的软件将为 panic!",
+        "translate": ""
+    },
+    {
+        "source": "You cannot do this:",
+        "suggest": "您不可以做这个:",
+        "translate": ""
+    },
+    {
+        "source": "Use [`get`] and [`get_mut`] if you want to check whether the index is in the `Vec`.",
+        "suggest": "如果要检查索引是否在 `Vec` 中，请使用 [`get`] 和 [`get_mut`]。",
+        "translate": ""
+    },
+    {
+        "source": "A `Vec` can be mutable.",
+        "suggest": "`Vec` 可以是可变的。",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand, slices are read-only objects.",
+        "suggest": "另一方面，切片是只读对象。",
+        "translate": ""
+    },
+    {
+        "source": "To get a [slice][prim@slice], use [`&`].",
+        "suggest": "要获得 [slice][prim@slice]，请使用 [`&`]。",
+        "translate": ""
+    },
+    {
+        "source": "Example:",
+        "suggest": "例子:",
+        "translate": ""
+    },
+    {
+        "source": "In Rust, it's more common to pass slices as arguments rather than vectors when you just want to provide read access.",
+        "suggest": "在 Rust 中，当您只想提供读取访问权限时，将切片作为参数而不是 vectors 传递是更常见的。",
+        "translate": ""
+    },
+    {
+        "source": "The same goes for [`String`] and [`&str`].",
+        "suggest": "[`String`] 和 [`&str`] 也是如此。",
+        "translate": ""
+    },
+    {
+        "source": "Capacity and reallocation",
+        "suggest": "容量和重新分配",
+        "translate": ""
+    },
+    {
+        "source": "The capacity of a vector is the amount of space allocated for any future elements that will be added onto the vector.",
+        "suggest": "vector 的容量是为将添加到 vector 上的任何 future 元素分配的空间量。",
+        "translate": ""
+    },
+    {
+        "source": "This is not to be confused with the *length* of a vector, which specifies the number of actual elements within the vector.",
+        "suggest": "请勿将其与 vector 的长度混淆，后者指定 vector 中的实际元素数量。",
+        "translate": ""
+    },
+    {
+        "source": "If a vector's length exceeds its capacity, its capacity will automatically be increased, but its elements will have to be reallocated.",
+        "suggest": "如果 vector 的长度超过其容量，则其容量将自动增加，但必须重新分配其元素。",
+        "translate": ""
+    },
+    {
+        "source": "For example, a vector with capacity 10 and length 0 would be an empty vector with space for 10 more elements.",
+        "suggest": "例如，容量为 10 且长度为 0 的 vector 将是一个空的 vector，具有 10 个以上元素的空间。",
+        "translate": ""
+    },
+    {
+        "source": "Pushing 10 or fewer elements onto the vector will not change its capacity or cause reallocation to occur.",
+        "suggest": "将 10 个或更少的元素压入 vector 不会改变其容量或引起重新分配。",
+        "translate": ""
+    },
+    {
+        "source": "However, if the vector's length is increased to 11, it will have to reallocate, which can be slow.",
+        "suggest": "但是，如果 vector 的长度增加到 11，则必须重新分配，这可能会很慢。",
+        "translate": ""
+    },
+    {
+        "source": "For this reason, it is recommended to use [`Vec::with_capacity`] whenever possible to specify how big the vector is expected to get.",
+        "suggest": "因此，建议尽可能使用 [`Vec::with_capacity`] 来指定 vector 希望达到的大小。",
+        "translate": ""
+    },
+    {
+        "source": "Due to its incredibly fundamental nature, `Vec` makes a lot of guarantees about its design.",
+        "suggest": "由于其不可思议的基本特性，`Vec` 为其设计提供了很多保证。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures that it's as low-overhead as possible in the general case, and can be correctly manipulated in primitive ways by unsafe code.",
+        "suggest": "这样可以确保它在一般情况下的开销尽可能小，并且可以通过不安全的代码以原始方式正确地进行操作。",
+        "translate": ""
+    },
+    {
+        "source": "Note that these guarantees refer to an unqualified `Vec<T>`.",
+        "suggest": "请注意，这些保证是针对不合格的 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "If additional type parameters are added (e.g., to support custom allocators), overriding their defaults may change the behavior.",
+        "suggest": "如果添加了其他类型参数 (例如，以支持自定义分配器)，则覆盖其默认值可能会更改行为。",
+        "translate": ""
+    },
+    {
+        "source": "Most fundamentally, `Vec` is and always will be a (pointer, capacity, length) triplet.",
+        "suggest": "从根本上讲，`Vec` 始终是 (指针，容量，长度) 三元组。",
+        "translate": ""
+    },
+    {
+        "source": "No more, no less.",
+        "suggest": "不多不少。",
+        "translate": ""
+    },
+    {
+        "source": "The order of these fields is completely unspecified, and you should use the appropriate methods to modify these.",
+        "suggest": "这些字段的顺序是完全不确定的，您应该使用适当的方法来修改它们。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer will never be null, so this type is null-pointer-optimized.",
+        "suggest": "指针永远不会为空，因此此类型是经过空指针优化的。",
+        "translate": ""
+    },
+    {
+        "source": "However, the pointer may not actually point to allocated memory.",
+        "suggest": "但是，指针可能实际上没有指向已分配的内存。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, if you construct a `Vec` with capacity 0 via [`Vec::new`], [`vec![]`][`vec!`], [`Vec::with_capacity(0)`][`Vec::with_capacity`], or by calling [`shrink_to_fit`] on an empty Vec, it will not allocate memory.",
+        "suggest": "特别是，如果您通过 [`Vec::new`]，[`vec![]`][`vec!`]，[`Vec::with_capacity(0)`][`Vec::with_capacity`] 或通过在空 Vec 上调用 [`shrink_to_fit`] 来构造容量为 0 的 `Vec`，则它将不会分配内存。",
+        "translate": ""
+    },
+    {
+        "source": "Similarly, if you store zero-sized types inside a `Vec`, it will not allocate space for them.",
+        "suggest": "同样，如果将零大小的类型存储在 `Vec` 内，则不会为它们分配空间。",
+        "translate": ""
+    },
+    {
+        "source": "in this case the `Vec` may not report a [`capacity`] of 0*.",
+        "suggest": "在这种情况下，`Vec` 可能不会报告 [`capacity`] 为 0 *。",
+        "translate": ""
+    },
+    {
+        "source": "will allocate if and only if [`mem::size_of::<T>`]`() * capacity() > 0`.",
+        "suggest": "将仅在 [`mem::size_of::<T>`]`() * capacity() > 0` 时分配。",
+        "translate": ""
+    },
+    {
+        "source": "In general, `Vec`'s allocation details are very subtle — if you intend to allocate memory using a `Vec` and use it for something else (either to pass to unsafe code, or to build your own memory-backed collection), be sure to deallocate this memory by using `from_raw_parts` to recover the `Vec` and then dropping it.",
+        "suggest": "通常，`Vec` 的分配细节非常微妙 - 如果您打算使用 `Vec` 分配内存并将其用于其他用途 (传递给不安全的代码或构建自己的内存支持的集合)，请确保通过使用 `from_raw_parts` 恢复 `Vec` 然后丢弃它来释放该内存。",
+        "translate": ""
+    },
+    {
+        "source": "If a `Vec` *has* allocated memory, then the memory it points to is on the heap (as defined by the allocator Rust is configured to use by default), and its pointer points to [`len`] initialized, contiguous elements in order (what you would see if you coerced it to a slice), followed by [`capacity`]` - `[`len`] logically uninitialized, contiguous elements.",
+        "suggest": "如果 `Vec` 具有已分配的内存，则它指向的内存在堆上 (由分配器 Rust 定义为默认使用)，并且其指针按顺序指向 [`len`] 初始化的连续元素 (您将执行的操作) 看看是否将其强制为切片)，然后是 [`capacity`]`-`[`len`] 逻辑上未初始化的连续元素。",
+        "translate": ""
+    },
+    {
+        "source": "A vector containing the elements `'a'` and `'b'` with capacity 4 can be visualized as below.",
+        "suggest": "包含元素 `'a'` 和 `'b'` 且容量为 4 的 vector 可以如下所示。",
+        "translate": ""
+    },
+    {
+        "source": "The top part is the `Vec` struct, it contains a pointer to the head of the allocation in the heap, length and capacity.",
+        "suggest": "顶部是 `Vec` 结构体，它包含一个指向堆中分配头，长度和容量的指针。",
+        "translate": ""
+    },
+    {
+        "source": "The bottom part is the allocation on the heap, a contiguous memory block.",
+        "suggest": "底部是堆上的分配，即连续的内存块。",
+        "translate": ""
+    },
+    {
+        "source": "**uninit** represents memory that is not initialized, see [`MaybeUninit`].",
+        "suggest": "**uninit** 代表未初始化的内存，请参见 [`MaybeUninit`]。",
+        "translate": ""
+    },
+    {
+        "source": "the ABI is not stable and `Vec` makes no guarantees about its memory layout (including the order of fields).",
+        "suggest": "ABI 不稳定，并且 `Vec` 不保证其内存布局 (包括字段顺序)。",
+        "translate": ""
+    },
+    {
+        "source": "will never perform a \"small optimization\" where elements are actually stored on the stack for two reasons:",
+        "suggest": "永远不会执行小优化，因为实际上有两个原因会在其中将元素实际存储在栈中:",
+        "translate": ""
+    },
+    {
+        "source": "It would make it more difficult for unsafe code to correctly manipulate a `Vec`.",
+        "suggest": "对于不安全的代码，正确地操纵 `Vec` 会更加困难。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of a `Vec` wouldn't have a stable address if it were only moved, and it would be more difficult to determine if a `Vec` had actually allocated memory.",
+        "suggest": "如果仅移动 `Vec` 的内容，它的地址就不会稳定，因此，确定 `Vec` 是否实际分配了内存将更加困难。",
+        "translate": ""
+    },
+    {
+        "source": "It would penalize the general case, incurring an additional branch on every access.",
+        "suggest": "这将惩罚一般情况，每次访问都会产生一个额外的分支。",
+        "translate": ""
+    },
+    {
+        "source": "will never automatically shrink itself, even if completely empty.",
+        "suggest": "即使完全为空，也永远不会自动收缩。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures no unnecessary allocations or deallocations occur.",
+        "suggest": "这样可以确保不会发生不必要的分配或释放。",
+        "translate": ""
+    },
+    {
+        "source": "Emptying a `Vec` and then filling it back up to the same [`len`] should incur no calls to the allocator.",
+        "suggest": "清空 `Vec`，然后将其填充回相同的 [`len`]，将不会引起对分配器的调用。",
+        "translate": ""
+    },
+    {
+        "source": "If you wish to free up unused memory, use [`shrink_to_fit`] or [`shrink_to`].",
+        "suggest": "如果您希望释放未使用的内存，请使用 [`shrink_to_fit`] 或 [`shrink_to`]。",
+        "translate": ""
+    },
+    {
+        "source": "and [`insert`] will never (re)allocate if the reported capacity is sufficient.",
+        "suggest": "如果报告的容量足够，则 [`insert`] 将永远不会 (重新) 分配。",
+        "translate": ""
+    },
+    {
+        "source": "[`push`] and [`insert`] *will* (re)allocate if [`len`]` == `[`capacity`].",
+        "suggest": "如果 [`len`]`==`[`capacity`]，[`push`] 和 [`insert`] 将 * (重新) 分配。",
+        "translate": ""
+    },
+    {
+        "source": "That is, the reported capacity is completely accurate, and can be relied on.",
+        "suggest": "也就是说，报告的容量是完全准确的，并且可以依赖。",
+        "translate": ""
+    },
+    {
+        "source": "It can even be used to manually free the memory allocated by a `Vec` if desired.",
+        "suggest": "如果需要，它甚至可以用来手动释放 `Vec` 分配的内存。",
+        "translate": ""
+    },
+    {
+        "source": "Bulk insertion methods *may* reallocate, even when not necessary.",
+        "suggest": "批量插入方法 *可能* 重新分配，即使在没有必要时也是如此。",
+        "translate": ""
+    },
+    {
+        "source": "does not guarantee any particular growth strategy when reallocating when full, nor when [`reserve`] is called.",
+        "suggest": "在完全分配或调用 [`reserve`] 时重新分配时，不能保证任何特定的增长策略。",
+        "translate": ""
+    },
+    {
+        "source": "The current strategy is basic and it may prove desirable to use a non-constant growth factor.",
+        "suggest": "当前的策略是基本的，使用非恒定增长因子可能是合乎需要的。",
+        "translate": ""
+    },
+    {
+        "source": "Whatever strategy is used will of course guarantee *O*(1) amortized [`push`].",
+        "suggest": "无论使用哪种策略，当然都可以保证 *O*(1) 摊销 [`push`]。",
+        "translate": ""
+    },
+    {
+        "source": "`vec![a, b, c, d]`, and [`Vec::with_capacity(n)`][`Vec::with_capacity`], will all produce a `Vec` with exactly the requested capacity.",
+        "suggest": "`vec![a, b, c, d]` 和 [`Vec::with_capacity(n)`][`Vec::with_capacity`] 都将产生具有所需容量的 `Vec`。",
+        "translate": ""
+    },
+    {
+        "source": "If [`len`]` == `[`capacity`], (as is the case for the [`vec!`] macro), then a `Vec<T>` can be converted to and from a [`Box<[T]>`][owned slice] without reallocating or moving the elements.",
+        "suggest": "如果 [`len`]`==`[`capacity`] (如 [`vec!`] 宏的情况)，那么 `Vec<T>` 可以与 [`Box<[T]>`][owned slice] 相互转换，而无需重新分配或移动元素。",
+        "translate": ""
+    },
+    {
+        "source": "will not specifically overwrite any data that is removed from it, but also won't specifically preserve it.",
+        "suggest": "不会专门覆盖从其中删除的任何数据，但也不会专门保留它。",
+        "translate": ""
+    },
+    {
+        "source": "Its uninitialized memory is scratch space that it may use however it wants.",
+        "suggest": "它的未初始化内存是它可以使用的临时空间。",
+        "translate": ""
+    },
+    {
+        "source": "It will generally just do whatever is most efficient or otherwise easy to implement.",
+        "suggest": "通常，它只会执行最有效或最容易实现的任何事情。",
+        "translate": ""
+    },
+    {
+        "source": "Do not rely on removed data to be erased for security purposes.",
+        "suggest": "为了安全起见，请勿依赖删除的数据进行擦除。",
+        "translate": ""
+    },
+    {
+        "source": "Even if you drop a `Vec`, its buffer may simply be reused by another `Vec`.",
+        "suggest": "即使您丢弃了 `Vec`，它的缓冲区也可能被另一个 `Vec` 简单地重用。",
+        "translate": ""
+    },
+    {
+        "source": "Even if you zero a `Vec`'s memory first, that may not actually happen because the optimizer does not consider this a side-effect that must be preserved.",
+        "suggest": "即使您先将 `Vec` 的内存清零，由于优化器并不认为这是必须保留的副作用，因此实际上可能不会发生。",
+        "translate": ""
+    },
+    {
+        "source": "There is one case which we will not break, however: using `unsafe` code to write to the excess capacity, and then increasing the length to match, is always valid.",
+        "suggest": "但是，有一种情况我们不会中断: 使用 `unsafe` 代码写入多余的容量，然后增加长度以匹配，始终是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "Currently, `Vec` does not guarantee the order in which elements are dropped.",
+        "suggest": "当前，`Vec` 不保证删除元素的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "The order has changed in the past and may change again.",
+        "suggest": "顺序过去已更改，并且可能会再次更改。",
+        "translate": ""
+    },
+    {
+        "source": "Inherent methods",
+        "suggest": "固有方法",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new, empty `Vec<T>`.",
+        "suggest": "创建一个新的空 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "The vector will not allocate until elements are pushed onto it.",
+        "suggest": "直到将元素压入 vector 为止，vector 才会分配。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new, empty `Vec<T>` with the specified capacity.",
+        "suggest": "创建一个具有指定容量的新的空 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "The vector will be able to hold exactly `capacity` elements without reallocating.",
+        "suggest": "vector 将能够准确地容纳 `capacity` 元素而无需重新分配。",
+        "translate": ""
+    },
+    {
+        "source": "If `capacity` is 0, the vector will not allocate.",
+        "suggest": "如果 `capacity` 为 0，则不会分配 vector。",
+        "translate": ""
+    },
+    {
+        "source": "It is important to note that although the returned vector has the *capacity* specified, the vector will have a zero *length*.",
+        "suggest": "重要的是要注意，尽管返回的 vector 具有指定的 *capacity*，但 vector 的长度为零。",
+        "translate": ""
+    },
+    {
+        "source": "For an explanation of the difference between length and capacity, see *[Capacity and reallocation]*.",
+        "suggest": "有关长度和容量之间差异的说明，请参见 *[Capacity and 重新分配]*。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `Vec<T>` directly from the raw components of another vector.",
+        "suggest": "直接从另一个 vector 的原始组件创建 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "needs to have been previously allocated via [`String`]/`Vec<T>` (at least, it's highly likely to be incorrect if it wasn't).",
+        "suggest": "需要事先通过 [`String`]/`Vec 分配 <T>` (至少，如果不是这样，很可能是不正确的)。",
+        "translate": ""
+    },
+    {
+        "source": "needs to have the same size and alignment as what `ptr` was allocated with.",
+        "suggest": "需要具有与分配给 `ptr` 相同的大小和对齐方式。",
+        "translate": ""
+    },
+    {
+        "source": "(`T` having a less strict alignment is not sufficient, the alignment really needs to be equal to satisfy the [`dealloc`] requirement that memory must be allocated and deallocated with the same layout.)",
+        "suggest": "(具有不太严格的对齐方式的 `T` 是不够的，对齐方式实际上必须等于 [`dealloc`] 的要求，即必须以相同的布局分配和释放内存。)",
+        "translate": ""
+    },
+    {
+        "source": "needs to be the capacity that the pointer was allocated with.",
+        "suggest": "必须是分配指针的容量。",
+        "translate": ""
+    },
+    {
+        "source": "It's also not safe to build one from a `Vec<u16>` and its length, because the allocator cares about the alignment, and these two types have different alignments.",
+        "suggest": "从 `Vec<u16>` 及其长度构建一个也不安全，因为分配器关心对齐方式，并且这两种类型具有不同的对齐方式。",
+        "translate": ""
+    },
+    {
+        "source": "The buffer was allocated with alignment 2 (for `u16`), but after turning it into a `Vec<u8>` it'll be deallocated with alignment 1.",
+        "suggest": "缓冲区的分配是对齐 2 (对于 `u16`)，但是将其转换为 `Vec<u8>` 后，它将以对齐 1 释放。",
+        "translate": ""
+    },
+    {
+        "source": "The ownership of `ptr` is effectively transferred to the `Vec<T>` which may then deallocate, reallocate or change the contents of memory pointed to by the pointer at will.",
+        "suggest": "`ptr` 的所有权有效地转移到 `Vec<T>`，然后 `Vec<T>` 可以随意释放，重新分配或更改指针所指向的内存的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new, empty `Vec<T, A>`.",
+        "suggest": "创建一个新的空 `Vec<T, A>`。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new, empty `Vec<T, A>` with the specified capacity with the provided allocator.",
+        "suggest": "使用提供的分配器构造具有指定容量的新的空 `Vec<T, A>`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `Vec<T, A>` directly from the raw components of another vector.",
+        "suggest": "直接从另一个 vector 的原始组件创建 `Vec<T, A>`。",
+        "translate": ""
+    },
+    {
+        "source": "Decomposes a `Vec<T>` into its raw components.",
+        "suggest": "将 `Vec<T>` 分解为其原始组件。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the raw pointer to the underlying data, the length of the vector (in elements), and the allocated capacity of the data (in elements).",
+        "suggest": "返回基础数据的裸指针，vector 的长度 (以元素为单位) 和数据的已分配容量 (以元素为单位)。",
+        "translate": ""
+    },
+    {
+        "source": "After calling this function, the caller is responsible for the memory previously managed by the `Vec`.",
+        "suggest": "调用此函数后，调用者负责 `Vec` 先前管理的内存。",
+        "translate": ""
+    },
+    {
+        "source": "The only way to do this is to convert the raw pointer, length, and capacity back into a `Vec` with the [`from_raw_parts`] function, allowing the destructor to perform the cleanup.",
+        "suggest": "唯一的方法是使用 [`from_raw_parts`] 函数将裸指针，长度和容量转换回 `Vec`，从而允许析构函数执行清除操作。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the raw pointer to the underlying data, the length of the vector (in elements), the allocated capacity of the data (in elements), and the allocator.",
+        "suggest": "返回基础数据的裸指针，vector 的长度 (以元素为单位)，数据的已分配容量 (以元素为单位) 以及分配器。",
+        "translate": ""
+    },
+    {
+        "source": "These are the same arguments in the same order as the arguments to [`from_raw_parts_in`].",
+        "suggest": "这些参数与 [`from_raw_parts_in`] 的参数顺序相同。",
+        "translate": ""
+    },
+    {
+        "source": "The only way to do this is to convert the raw pointer, length, and capacity back into a `Vec` with the [`from_raw_parts_in`] function, allowing the destructor to perform the cleanup.",
+        "suggest": "唯一的方法是使用 [`from_raw_parts_in`] 函数将裸指针，长度和容量转换回 `Vec`，从而允许析构函数执行清除操作。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements the vector can hold without reallocating.",
+        "suggest": "返回 vector 可以保留而无需重新分配的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Reserves capacity for at least `additional` more elements to be inserted in the given `Vec<T>`.",
+        "suggest": "为给定的 `Vec<T>` 至少保留 `additional` 个要插入的元素保留容量。",
+        "translate": ""
+    },
+    {
+        "source": "Reserves the minimum capacity for exactly `additional` more elements to be inserted in the given `Vec<T>`.",
+        "suggest": "保留最小容量，以便在给定的 `Vec<T>` 中精确插入 `additional` 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Tries to reserve capacity for at least `additional` more elements to be inserted in the given `Vec<T>`.",
+        "suggest": "尝试为给 `Vec<T>` 至少插入 `additional` 个元素保留容量。",
+        "translate": ""
+    },
+    {
+        "source": "Tries to reserve the minimum capacity for exactly `additional` elements to be inserted in the given `Vec<T>`.",
+        "suggest": "尝试保留将最小 `additional` 元素插入给定 `Vec<T>` 的最小容量。",
+        "translate": ""
+    },
+    {
+        "source": "After calling `try_reserve_exact`, capacity will be greater than or equal to `self.len() + additional` if it returns `Ok(())`.",
+        "suggest": "调用 `try_reserve_exact` 后，如果返回 `Ok(())`，则容量将大于或等于 `self.len() + additional`。",
+        "translate": ""
+    },
+    {
+        "source": "Shrinks the capacity of the vector as much as possible.",
+        "suggest": "尽可能缩小 vector 的容量。",
+        "translate": ""
+    },
+    {
+        "source": "It will drop down as close as possible to the length but the allocator may still inform the vector that there is space for a few more elements.",
+        "suggest": "它将降低到尽可能接近的长度，但是分配器仍可以通知 vector，还有空间可以容纳更多元素。",
+        "translate": ""
+    },
+    {
+        "source": "The capacity is never less than the length, and there's nothing to do when they are equal, so we can avoid the panic case in `RawVec::shrink_to_fit` by only calling it with a greater capacity.",
+        "suggest": "容量永远不会小于长度，并且当它们相等时没有任何事可做，因此我们可以通过仅以更大的容量进行调用来避免 `RawVec::shrink_to_fit` 中的 panic 情况。",
+        "translate": ""
+    },
+    {
+        "source": "Shrinks the capacity of the vector with a lower bound.",
+        "suggest": "将 vector 的容量减小一个下限。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the vector into [`Box<[T]>`][owned slice].",
+        "suggest": "将 vector 转换为 [`Box<[T]>`][owned slice]。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this will drop any excess capacity.",
+        "suggest": "请注意，这将减少任何多余的容量。",
+        "translate": ""
+    },
+    {
+        "source": "Any excess capacity is removed:",
+        "suggest": "任何多余的容量都将被删除:",
+        "translate": ""
+    },
+    {
+        "source": "Shortens the vector, keeping the first `len` elements and dropping the rest.",
+        "suggest": "缩短 vector，保留前 `len` 个元素，并丢弃其他元素。",
+        "translate": ""
+    },
+    {
+        "source": "If `len` is greater than the vector's current length, this has no effect.",
+        "suggest": "如果 `len` 大于 vector 的当前长度，则无效。",
+        "translate": ""
+    },
+    {
+        "source": "The [`drain`] method can emulate `truncate`, but causes the excess elements to be returned instead of dropped.",
+        "suggest": "[`drain`] 方法可以模拟 `truncate`，但是会导致多余的元素被返回而不是丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this method has no effect on the allocated capacity of the vector.",
+        "suggest": "请注意，此方法对 vector 的已分配容量没有影响。",
+        "translate": ""
+    },
+    {
+        "source": "Truncating a five element vector to two elements:",
+        "suggest": "将五个元素 vector 截断为两个元素:",
+        "translate": ""
+    },
+    {
+        "source": "No truncation occurs when `len` is greater than the vector's current length:",
+        "suggest": "当 `len` 大于 vector 的当前长度时，不会发生截断:",
+        "translate": ""
+    },
+    {
+        "source": "Truncating when `len == 0` is equivalent to calling the [`clear`] method.",
+        "suggest": "在 `len == 0` 等效于调用 [`clear`] 方法时截断。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because:",
+        "suggest": "这是安全的，因为:",
+        "translate": ""
+    },
+    {
+        "source": "the slice passed to `drop_in_place` is valid;",
+        "suggest": "传递给 `drop_in_place` 的切片有效;",
+        "translate": ""
+    },
+    {
+        "source": "the `len > self.len` case avoids creating an invalid slice, and",
+        "suggest": "`len > self.len` 的情况避免了创建无效的切片，并且",
+        "translate": ""
+    },
+    {
+        "source": "the `len` of the vector is shrunk before calling `drop_in_place`, such that no value will be dropped twice in case `drop_in_place` were to panic once (if it panics twice, the program aborts).",
+        "suggest": "vector 的 `len` 会在调用 `drop_in_place` 之前缩小，这样，如果 `drop_in_place` 一次到达 panic，则两次值都不会丢失 (如果两次 panics，则程序将中止)。",
+        "translate": ""
+    },
+    {
+        "source": "It's intentional that this is `>` and not `>=`.",
+        "suggest": "故意是 `>`，而不是 `>=`。",
+        "translate": ""
+    },
+    {
+        "source": "Changing it to `>=` has negative performance implications in some cases.",
+        "suggest": "在某些情况下，将其更改为 `>=` 会对性能产生负面影响。",
+        "translate": ""
+    },
+    {
+        "source": "See #78884 for more.",
+        "suggest": "有关更多信息，请参见 #78884。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a slice containing the entire vector.",
+        "suggest": "提取包含整个 vector 的切片。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&s[..]`.",
+        "suggest": "等效于 `&s[..]`。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a mutable slice of the entire vector.",
+        "suggest": "提取整个 vector 的可变切片。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&mut s[..]`.",
+        "suggest": "等效于 `&mut s[..]`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a raw pointer to the vector's buffer.",
+        "suggest": "返回 vector 的缓冲区的裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure that the vector outlives the pointer this function returns, or else it will end up pointing to garbage.",
+        "suggest": "调用者必须确保 vector 超过此函数返回的指针，否则它将最终指向垃圾。",
+        "translate": ""
+    },
+    {
+        "source": "Modifying the vector may cause its buffer to be reallocated, which would also make any pointers to it invalid.",
+        "suggest": "修改 vector 可能会导致重新分配其缓冲区，这还会使指向该缓冲区的任何指针无效。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must also ensure that the memory the pointer (non-transitively) points to is never written to (except inside an `UnsafeCell`) using this pointer or any pointer derived from it.",
+        "suggest": "调用者还必须确保指针 (non-transitively) 所指向的内存 (从 `UnsafeCell` 内部除外) 永远不会使用此指针或从其派生的任何指针写入。",
+        "translate": ""
+    },
+    {
+        "source": "If you need to mutate the contents of the slice, use [`as_mut_ptr`].",
+        "suggest": "如果需要更改切片的内容，请使用 [`as_mut_ptr`]。",
+        "translate": ""
+    },
+    {
+        "source": "We shadow the slice method of the same name to avoid going through `deref`, which creates an intermediate reference.",
+        "suggest": "我们对同名的切片方法进行阴影处理，以避免通过 `deref`，它会产生中间引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an unsafe mutable pointer to the vector's buffer.",
+        "suggest": "返回指向 vector 缓冲区的不安全可变指针。",
+        "translate": ""
+    },
+    {
+        "source": "We shadow the slice method of the same name to avoid going through `deref_mut`, which creates an intermediate reference.",
+        "suggest": "我们对同名的切片方法进行阴影处理，以避免通过 `deref_mut`，它会产生中间引用。",
+        "translate": ""
+    },
+    {
+        "source": "Forces the length of the vector to `new_len`.",
+        "suggest": "将 vector 的长度强制为 `new_len`。",
+        "translate": ""
+    },
+    {
+        "source": "This is a low-level operation that maintains none of the normal invariants of the type.",
+        "suggest": "这是一个维操作，不保留该类型的任何普通不变式。",
+        "translate": ""
+    },
+    {
+        "source": "Normally changing the length of a vector is done using one of the safe operations instead, such as [`truncate`], [`resize`], [`extend`], or [`clear`].",
+        "suggest": "通常，使用安全操作之一 (例如 [`truncate`]，[`resize`]，[`extend`] 或 [`clear`]) 来更改 vector 的长度。",
+        "translate": ""
+    },
+    {
+        "source": "must be less than or equal to [`capacity()`].",
+        "suggest": "必须小于或等于 [`capacity()`]。",
+        "translate": ""
+    },
+    {
+        "source": "The elements at `old_len..new_len` must be initialized.",
+        "suggest": "`old_len..new_len` 上的元素必须初始化。",
+        "translate": ""
+    },
+    {
+        "source": "This method can be useful for situations in which the vector is serving as a buffer for other code, particularly over FFI:",
+        "suggest": "当 vector 用作其他代码的缓冲区时，尤其是在 FFI 上，此方法很有用:",
+        "translate": ""
+    },
+    {
+        "source": "While the following example is sound, there is a memory leak since the inner vectors were not freed prior to the `set_len` call:",
+        "suggest": "尽管下面的示例是正确的，但由于 `set_len` 调用之前未释放内部 vectors，所以存在内存泄漏:",
+        "translate": ""
+    },
+    {
+        "source": "Normally, here, one would use [`clear`] instead to correctly drop the contents and thus not leak memory.",
+        "suggest": "通常，在这里，人们将使用 [`clear`] 来正确丢弃内容，因此不会泄漏内存。",
+        "translate": ""
+    },
+    {
+        "source": "Removes an element from the vector and returns it.",
+        "suggest": "从 vector 中删除一个元素并返回它。",
+        "translate": ""
+    },
+    {
+        "source": "The removed element is replaced by the last element of the vector.",
+        "suggest": "删除的元素被 vector 的最后一个元素替换。",
+        "translate": ""
+    },
+    {
+        "source": "This does not preserve ordering, but is O(1).",
+        "suggest": "这不会保留排序，但是是 O(1)。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `index` is out of bounds.",
+        "suggest": "如果 `index` 越界，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "We replace self[index] with the last element.",
+        "suggest": "我们用最后一个元素替换 self [index]。",
+        "translate": ""
+    },
+    {
+        "source": "Note that if the bounds check above succeeds there must be a last element (which can be self[index] itself).",
+        "suggest": "请注意，如果上面的边界检查成功，则必须有最后一个元素 (可以是 self [index] 本身)。",
+        "translate": ""
+    },
+    {
+        "source": "Inserts an element at position `index` within the vector, shifting all elements after it to the right.",
+        "suggest": "在 vector 内的位置 `index` 处插入一个元素，并将其后的所有元素向右移动。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `index > len`.",
+        "suggest": "如果为 `index > len`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "space for the new element",
+        "suggest": "新元素的空间",
+        "translate": ""
+    },
+    {
+        "source": "infallible The spot to put the new value",
+        "suggest": "绝对可靠的地方，可以带来新的值",
+        "translate": ""
+    },
+    {
+        "source": "Shift everything over to make space.",
+        "suggest": "转移一切以腾出空间。",
+        "translate": ""
+    },
+    {
+        "source": "(Duplicating the `index`th element into two consecutive places.)",
+        "suggest": "(将第 index 个元素复制到两个连续的位置。)",
+        "translate": ""
+    },
+    {
+        "source": "Write it in, overwriting the first copy of the `index`th element.",
+        "suggest": "将其写入，覆盖第 index 个元素的第一个副本。",
+        "translate": ""
+    },
+    {
+        "source": "Removes and returns the element at position `index` within the vector, shifting all elements after it to the left.",
+        "suggest": "删除并返回 vector 中位置 `index` 的元素，将其后的所有元素向左移动。",
+        "translate": ""
+    },
+    {
+        "source": "the place we are taking from.",
+        "suggest": "我们要去的地方。",
+        "translate": ""
+    },
+    {
+        "source": "copy it out, unsafely having a copy of the value on the stack and in the vector at the same time.",
+        "suggest": "将其复制出来，不安全地在栈上和 vector 中同时拥有该值的副本。",
+        "translate": ""
+    },
+    {
+        "source": "Shift everything down to fill in that spot.",
+        "suggest": "向下移动所有内容以填充该位置。",
+        "translate": ""
+    },
+    {
+        "source": "Because the elements are visited exactly once in the original order, external state may be used to decide which elements to keep.",
+        "suggest": "由于按原始顺序仅对元素进行过一次访问，因此可以使用外部状态来确定要保留哪些元素。",
+        "translate": ""
+    },
+    {
+        "source": "Avoid double drop if the drop guard is not executed, since we may make some holes during the process.",
+        "suggest": "如果不执行丢弃守卫，请避免双重丢弃，因为在此过程中我们可能会产生一些漏洞。",
+        "translate": ""
+    },
+    {
+        "source": "Hole: Moved or dropped element slot.",
+        "suggest": "Hole: 移动或丢弃的元素插槽。",
+        "translate": ""
+    },
+    {
+        "source": "Unchecked: Unchecked valid elements.",
+        "suggest": "未检查: 未检查的有效元素。",
+        "translate": ""
+    },
+    {
+        "source": "This drop guard will be invoked when predicate or `drop` of element panicked.",
+        "suggest": "当谓词或元素的 `drop` 发生恐慌时，将调用此丢弃守卫。",
+        "translate": ""
+    },
+    {
+        "source": "It shifts unchecked elements to cover holes and `set_len` to the correct length.",
+        "suggest": "它将未经检查的元素移动到覆盖 holes 和 `set_len` 的正确长度。",
+        "translate": ""
+    },
+    {
+        "source": "In cases when predicate and `drop` never panick, it will be optimized out.",
+        "suggest": "在谓词和 `drop` 永远不会恐慌的情况下，它将被优化。",
+        "translate": ""
+    },
+    {
+        "source": "Trailing unchecked items must be valid since we never touch them.",
+        "suggest": "尾随的未检查项必须有效，因为我们从不碰它们。",
+        "translate": ""
+    },
+    {
+        "source": "After filling holes, all items are in contiguous memory.",
+        "suggest": "填充完 holes 后，所有项都存储在连续的内存中。",
+        "translate": ""
+    },
+    {
+        "source": "Unchecked element must be valid.",
+        "suggest": "未经检查的元素必须有效。",
+        "translate": ""
+    },
+    {
+        "source": "Advance early to avoid double drop if `drop_in_place` panicked.",
+        "suggest": "如果 `drop_in_place` 发生 panic，请提前提早避免双重丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "We never touch this element again after dropped.",
+        "suggest": "丢弃后，我们再也不会触碰此元素。",
+        "translate": ""
+    },
+    {
+        "source": "We already advanced the counter.",
+        "suggest": "我们已经提前了 counter。",
+        "translate": ""
+    },
+    {
+        "source": "`deleted_cnt` > 0, so the hole slot must not overlap with current element.",
+        "suggest": "`deleted_cnt`> 0，因此 hole 插槽不得与当前元素重叠。",
+        "translate": ""
+    },
+    {
+        "source": "We use copy for move, and never touch this element again.",
+        "suggest": "我们使用 copy 进行移动，从此再也不会触碰此元素。",
+        "translate": ""
+    },
+    {
+        "source": "All item are processed.",
+        "suggest": "所有项均已处理。",
+        "translate": ""
+    },
+    {
+        "source": "This can be optimized to `set_len` by LLVM.",
+        "suggest": "LLVM 可以将其优化为 `set_len`。",
+        "translate": ""
+    },
+    {
+        "source": "Removes all but the first of consecutive elements in the vector that resolve to the same key.",
+        "suggest": "删除 vector 中除第一个连续元素之外的所有元素，这些元素解析为同一键。",
+        "translate": ""
+    },
+    {
+        "source": "If the vector is sorted, this removes all duplicates.",
+        "suggest": "如果对 vector 进行了排序，则将删除所有重复项。",
+        "translate": ""
+    },
+    {
+        "source": "Removes all but the first of consecutive elements in the vector satisfying a given equality relation.",
+        "suggest": "移除 vector 中满足给定相等关系的所有连续元素，但第一个除外。",
+        "translate": ""
+    },
+    {
+        "source": "The `same_bucket` function is passed references to two elements from the vector and must determine if the elements compare equal.",
+        "suggest": "`same_bucket` 函数被传递给 vector 中的两个元素，并且必须确定这些元素比较是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "The elements are passed in opposite order from their order in the slice, so if `same_bucket(a, b)` returns `true`, `a` is removed.",
+        "suggest": "元素以与它们在切片中的顺序相反的顺序传递，因此，如果 `same_bucket(a, b)` 返回 `true`，则删除 `a`。",
+        "translate": ""
+    },
+    {
+        "source": "Appends an element to the back of a collection.",
+        "suggest": "将元素追加到集合的后面。",
+        "translate": ""
+    },
+    {
+        "source": "This will panic or abort if we would allocate > isize::MAX bytes or if the length increment would overflow for zero-sized types.",
+        "suggest": "如果我们要分配 > isize::MAX 字节，或者对于零大小的类型，长度增量将溢出，则将为 panic 或终止。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the last element from a vector and returns it, or [`None`] if it is empty.",
+        "suggest": "从 vector 中删除最后一个元素并返回它; 如果它为空，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Moves all the elements of `other` into `Self`, leaving `other` empty.",
+        "suggest": "将 `other` 的所有元素移到 `Self`，将 `other` 留空。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the number of elements in the vector overflows a `usize`.",
+        "suggest": "如果 vector 中的元素数量溢出 `usize`，则 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Appends elements to `Self` from other buffer.",
+        "suggest": "将元素从其他缓冲区追加到 `Self`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a draining iterator that removes the specified range in the vector and yields the removed items.",
+        "suggest": "创建一个 draining 迭代器，该迭代器删除 vector 中的指定范围并产生删除的项。",
+        "translate": ""
+    },
+    {
+        "source": "When the iterator **is** dropped, all elements in the range are removed from the vector, even if the iterator was not fully consumed.",
+        "suggest": "当迭代器被丢弃时，该范围内的所有元素都将从 vector 中删除，即使迭代器未被完全消耗。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator **is not** dropped (with [`mem::forget`] for example), it is unspecified how many elements are removed.",
+        "suggest": "如果迭代器没有被丢弃 (例如，使用 [`mem::forget`])，则不确定删除了多少个元素。",
+        "translate": ""
+    },
+    {
+        "source": "When the Drain is first created, it shortens the length of the source vector to make sure no uninitialized or moved-from elements are accessible at all if the Drain's destructor never gets to run.",
+        "suggest": "首次创建 Drain 时，它会缩短源 vector 的长度，以确保如果 Drain 的析构函数从不运行，则根本无法访问未初始化或移出的元素。",
+        "translate": ""
+    },
+    {
+        "source": "When finished, remaining tail of the vec is copied back to cover the hole, and the vector length is restored to the new length.",
+        "suggest": "完成后，将 vec 的剩余尾部复制回以覆盖 hole，并将 vector 的长度恢复为新的长度。",
+        "translate": ""
+    },
+    {
+        "source": "set self.vec length's to start, to be safe in case Drain is leaked",
+        "suggest": "设置 self.vec 长度开始，以防万一 Drain 泄漏",
+        "translate": ""
+    },
+    {
+        "source": "Use the borrow in the IterMut to indicate borrowing behavior of the whole Drain iterator (like &mut T).",
+        "suggest": "在 IterMut 中使用借用来指示整个 Drain 迭代器 (例如 &mut T)) 的借用行为。",
+        "translate": ""
+    },
+    {
+        "source": "Clears the vector, removing all values.",
+        "suggest": "清除 vector，删除所有值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements in the vector, also referred to as its 'length'.",
+        "suggest": "返回 vector 中的元素数，也称为 'length'。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the vector contains no elements.",
+        "suggest": "如果 vector 不包含任何元素，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Splits the collection into two at the given index.",
+        "suggest": "在给定的索引处将集合拆分为两个。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a newly allocated vector containing the elements in the range `[at, len)`.",
+        "suggest": "返回一个新分配的 vector，其中包含 `[at, len)` 范围内的元素。",
+        "translate": ""
+    },
+    {
+        "source": "After the call, the original vector will be left containing the elements `[0, at)` with its previous capacity unchanged.",
+        "suggest": "调用之后，将保留原始 vector，其中包含元素 `[0, at)`，而先前的容量不变。",
+        "translate": ""
+    },
+    {
+        "source": "the new vector can take over the original buffer and avoid the copy",
+        "suggest": "新的 vector 可以接管原始缓冲区并避免复制",
+        "translate": ""
+    },
+    {
+        "source": "Unsafely `set_len` and copy items to `other`.",
+        "suggest": "不安全地 `set_len` 并将项复制到 `other`。",
+        "translate": ""
+    },
+    {
+        "source": "Resizes the `Vec` in-place so that `len` is equal to `new_len`.",
+        "suggest": "在适当位置调整 `Vec` 的大小，以使 `len` 等于 `new_len`。",
+        "translate": ""
+    },
+    {
+        "source": "If `new_len` is greater than `len`, the `Vec` is extended by the difference, with each additional slot filled with the result of calling the closure `f`.",
+        "suggest": "如果 `new_len` 大于 `len`，则将 `Vec` 扩展该差值，并在每个额外的插槽中填充调用闭包 `f` 的结果。",
+        "translate": ""
+    },
+    {
+        "source": "The return values from `f` will end up in the `Vec` in the order they have been generated.",
+        "suggest": "`f` 的返回值将按照生成顺序返回到 `Vec`。",
+        "translate": ""
+    },
+    {
+        "source": "If `new_len` is less than `len`, the `Vec` is simply truncated.",
+        "suggest": "如果 `new_len` 小于 `len`，则将 `Vec` 截断。",
+        "translate": ""
+    },
+    {
+        "source": "This method uses a closure to create new values on every push.",
+        "suggest": "此方法使用闭包在每次推送时创建新值。",
+        "translate": ""
+    },
+    {
+        "source": "If you'd rather [`Clone`] a given value, use [`Vec::resize`].",
+        "suggest": "如果您希望给定值 [`Clone`]，请使用 [`Vec::resize`]。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to use the [`Default`] trait to generate values, you can pass [`Default::default`] as the second argument.",
+        "suggest": "如果要使用 [`Default`] trait 生成值，则可以传递 [`Default::default`] 作为第二个参数。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes and leaks the `Vec`, returning a mutable reference to the contents,",
+        "suggest": "消耗并泄漏 `Vec`，并向其中的内容返回变量引用，",
+        "translate": ""
+    },
+    {
+        "source": "This function is similar to the [`leak`][Box::leak] function on [`Box`] except that there is no way to recover the leaked memory.",
+        "suggest": "该函数类似于 [`Box`] 上的 [`leak`][Box::leak] 函数，除了无法恢复泄漏的内存。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the remaining spare capacity of the vector as a slice of `MaybeUninit<T>`.",
+        "suggest": "以 `MaybeUninit<T>` 的切片形式返回 vector 的剩余备用容量。",
+        "translate": ""
+    },
+    {
+        "source": "The returned slice can be used to fill the vector with data (e.g.",
+        "suggest": "返回的切片可用于用数据填充 vector (例如",
+        "translate": ""
+    },
+    {
+        "source": "by reading from a file) before marking the data as initialized using the [`set_len`] method.",
+        "suggest": "(通过从文件读取) 来标记数据，然后再使用 [`set_len`] 方法将其标记为已初始化。",
+        "translate": ""
+    },
+    {
+        "source": "This method is not implemented in terms of `split_at_spare_mut`, to prevent invalidation of pointers to the buffer.",
+        "suggest": "不能使用 `split_at_spare_mut` 来实现此方法，以防止指向缓冲区的指针无效。",
+        "translate": ""
+    },
+    {
+        "source": "Returns vector content as a slice of `T`, along with the remaining spare capacity of the vector as a slice of `MaybeUninit<T>`.",
+        "suggest": "返回 vector 内容作为 `T` 的切片，以及 vector 的剩余备用容量作为 `MaybeUninit<T>` 的切片。",
+        "translate": ""
+    },
+    {
+        "source": "The returned spare capacity slice can be used to fill the vector with data (e.g. by reading from a file) before marking the data as initialized using the [`set_len`] method.",
+        "suggest": "返回的备用容量切片可用于在将数据标记为使用 [`set_len`] 方法初始化的数据之前 (例如，通过从文件读取) 将数据填充到 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is a low-level API, which should be used with care for optimization purposes.",
+        "suggest": "请注意，这是一个剧烈的 API，出于优化目的，应谨慎使用。",
+        "translate": ""
+    },
+    {
+        "source": "If you need to append data to a `Vec` you can use [`push`], [`extend`], [`extend_from_slice`], [`extend_from_within`], [`insert`], [`append`], [`resize`] or [`resize_with`], depending on your exact needs.",
+        "suggest": "如果需要将数据附加到 `Vec`，则可以根据实际需要使用 [`push`]，[`extend`]，[`extend_from_slice`]，[`extend_from_within`]，[`insert`]，[`append`]，[`resize`] 或 [`resize_with`]。",
+        "translate": ""
+    },
+    {
+        "source": "len is ignored and so never changed",
+        "suggest": "len 被忽略，因此永远不变",
+        "translate": ""
+    },
+    {
+        "source": "Safety: changing returned .2 (&mut usize) is considered the same as calling `.set_len(_)`.",
+        "suggest": "安全性: 更改返回的.2 (&mut usize) 与调用 `.set_len(_)` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "This method is used to have unique access to all vec parts at once in `extend_from_within`.",
+        "suggest": "此方法用于一次唯一地访问 `extend_from_within` 中的所有 vec 零件。",
+        "translate": ""
+    },
+    {
+        "source": "is guaranteed to be valid for `len` elements",
+        "suggest": "保证对 `len` 元素有效",
+        "translate": ""
+    },
+    {
+        "source": "is pointing one element past the buffer, so it doesn't overlap with `initialized`",
+        "suggest": "指向缓冲区后的一个元素，因此它与 `initialized` 不重叠",
+        "translate": ""
+    },
+    {
+        "source": "If `new_len` is greater than `len`, the `Vec` is extended by the difference, with each additional slot filled with `value`.",
+        "suggest": "如果 `new_len` 大于 `len`，则 `Vec` 会扩展此差值，每个额外的插槽都将用 `value` 填充。",
+        "translate": ""
+    },
+    {
+        "source": "This method requires `T` to implement [`Clone`], in order to be able to clone the passed value.",
+        "suggest": "为了能够克隆传递的值，此方法需要 `T` 实现 [`Clone`]。",
+        "translate": ""
+    },
+    {
+        "source": "If you need more flexibility (or want to rely on [`Default`] instead of [`Clone`]), use [`Vec::resize_with`].",
+        "suggest": "如果需要更大的灵活性 (或希望依靠 [`Default`] 而不是 [`Clone`])，请使用 [`Vec::resize_with`]。",
+        "translate": ""
+    },
+    {
+        "source": "Clones and appends all elements in a slice to the `Vec`.",
+        "suggest": "克隆并将切片中的所有元素附加到 `Vec`。",
+        "translate": ""
+    },
+    {
+        "source": "Iterates over the slice `other`, clones each element, and then appends it to this `Vec`.",
+        "suggest": "遍历切片 `other`，克隆每个元素，然后将其附加到此 `Vec`。",
+        "translate": ""
+    },
+    {
+        "source": "The `other` vector is traversed in-order.",
+        "suggest": "`other` vector 按顺序遍历。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this function is same as [`extend`] except that it is specialized to work with slices instead.",
+        "suggest": "请注意，此函数与 [`extend`] 相同，只不过它专门用于切片。",
+        "translate": ""
+    },
+    {
+        "source": "If and when Rust gets specialization this function will likely be deprecated (but still available).",
+        "suggest": "如果并且当 Rust 得到专门化时，此函数可能会被弃用 (但仍然可用)。",
+        "translate": ""
+    },
+    {
+        "source": "Copies elements from `src` range to the end of the vector.",
+        "suggest": "将元素从 `src` 复制到 vector 的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "guarantees  that the given range is valid for indexing self",
+        "suggest": "保证给定范围对索引自身有效",
+        "translate": ""
+    },
+    {
+        "source": "This code generalizes `extend_with_{element,default}`.",
+        "suggest": "这段代码概括了 `extend_with_{element,default}`。",
+        "translate": ""
+    },
+    {
+        "source": "Extend the vector by `n` values, using the given generator.",
+        "suggest": "使用给定的生成器将 vector 扩展 `n` 值。",
+        "translate": ""
+    },
+    {
+        "source": "Use SetLenOnDrop to work around bug where compiler may not realize the store through `ptr` through self.set_len() don't alias.",
+        "suggest": "使用 SetLenOnDrop 可以解决编译器可能无法通过 `ptr` 到 self.set_len() 不别名存储的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Write all elements except the last one",
+        "suggest": "写下除最后一个元素外的所有元素",
+        "translate": ""
+    },
+    {
+        "source": "Increment the length in every step in case next() panics",
+        "suggest": "在 next() panics 的情况下，增加每一步的长度",
+        "translate": ""
+    },
+    {
+        "source": "We can write the last element directly without cloning needlessly",
+        "suggest": "我们可以直接编写最后一个元素，而无需不必要地克隆",
+        "translate": ""
+    },
+    {
+        "source": "len set by scope guard",
+        "suggest": "len 由作用域守卫设置",
+        "translate": ""
+    },
+    {
+        "source": "Removes consecutive repeated elements in the vector according to the [`PartialEq`] trait implementation.",
+        "suggest": "根据 [`PartialEq`] trait 的实现，删除 vector 中连续的重复元素。",
+        "translate": ""
+    },
+    {
+        "source": "Internal methods and functions",
+        "suggest": "内部方法和函数",
+        "translate": ""
+    },
+    {
+        "source": "needs to be valid index",
+        "suggest": "需要有效的索引",
+        "translate": ""
+    },
+    {
+        "source": "must be `>= src.len()`",
+        "suggest": "必须为 `>= src.len()`",
+        "translate": ""
+    },
+    {
+        "source": "len is increased only after initializing elements",
+        "suggest": "len 仅在初始化元素后才增加",
+        "translate": ""
+    },
+    {
+        "source": "caller guaratees that src is a valid index",
+        "suggest": "调用者保证 src 是有效索引",
+        "translate": ""
+    },
+    {
+        "source": "Element was just initialized with `MaybeUninit::write`, so it's ok to increace len",
+        "suggest": "元素刚刚使用 `MaybeUninit::write` 初始化，因此可以增加 len",
+        "translate": ""
+    },
+    {
+        "source": "len is increased after each element to prevent leaks (see issue #82533)",
+        "suggest": "在每个元素之后增加 len 以防止泄漏 (请参见 issue #82533)",
+        "translate": ""
+    },
+    {
+        "source": "caller guaratees that `src` is a valid index",
+        "suggest": "调用者保证 `src` 是有效索引",
+        "translate": ""
+    },
+    {
+        "source": "Both pointers are created from unique slice references (`&mut [_]`) so they are valid and do not overlap.",
+        "suggest": "这两个指针都是从唯一的 (`&mut [_]`) 创建的，因此它们是有效的并且不会重叠。",
+        "translate": ""
+    },
+    {
+        "source": "Elements are :Copy so it's OK to to copy them, without doing anything with the original values",
+        "suggest": "元素是: Copy，所以可以复制它们，而不用原始值做任何事情",
+        "translate": ""
+    },
+    {
+        "source": "is equal to the len of `source`, so source is valid for `count` reads",
+        "suggest": "等于 `source` 的 len，因此源对 `count` 读取有效",
+        "translate": ""
+    },
+    {
+        "source": "guarantees that `spare.len() >= count` so spare is valid for `count` writes",
+        "suggest": "保证 `spare.len() >= count` 如此备用对 `count` 写入有效",
+        "translate": ""
+    },
+    {
+        "source": "The elements were just initialized by `copy_nonoverlapping`",
+        "suggest": "元素刚刚由 `copy_nonoverlapping` 初始化",
+        "translate": ""
+    },
+    {
+        "source": "Common trait implementations for Vec",
+        "suggest": "Vec 的常见 trait 实现",
+        "translate": ""
+    },
+    {
+        "source": "Instead use the `slice::to_vec`  function which is only available with cfg(test) NB see the slice::hack module in slice.rs for more information",
+        "suggest": "而是使用仅与 cfg(test) NB 一起提供的 `slice::to_vec` 函数，有关更多信息，请参见 slice.rs 中的 slice::hack 模块。",
+        "translate": ""
+    },
+    {
+        "source": "drop anything that will not be overwritten",
+        "suggest": "丢弃任何不会被覆盖的内容",
+        "translate": ""
+    },
+    {
+        "source": "other.len due to the truncate above, so the slices here are always in-bounds.",
+        "suggest": "other.len 由于上面的截断，因此这里的切片始终是入站的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a consuming iterator, that is, one that moves each value out of the vector (from start to end).",
+        "suggest": "创建一个消耗迭代器，即一个将每个值移出 vector (从开始到结束) 的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The vector cannot be used after calling this.",
+        "suggest": "调用此后不能使用 vector。",
+        "translate": ""
+    },
+    {
+        "source": "leaf method to which various SpecFrom/SpecExtend implementations delegate when they have no further optimizations to apply",
+        "suggest": "各种 SpecFrom/SpecExtend 实现在没有进一步优化要应用时将委派给它们的叶子方法",
+        "translate": ""
+    },
+    {
+        "source": "This is the case for a general iterator.",
+        "suggest": "通用迭代器就是这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "for item in iterator {",
+        "suggest": "对于迭代器中的项 {",
+        "translate": ""
+    },
+    {
+        "source": "NB can't overflow since we would have had to alloc the address space",
+        "suggest": "NB 不会溢出，因为我们不得不分配地址空间",
+        "translate": ""
+    },
+    {
+        "source": "Creates a splicing iterator that replaces the specified range in the vector with the given `replace_with` iterator and yields the removed items.",
+        "suggest": "创建一个拼接迭代器，用给定的 `replace_with` 迭代器替换 vector 中的指定范围，并生成已删除的项。",
+        "translate": ""
+    },
+    {
+        "source": "does not need to be the same length as `range`.",
+        "suggest": "长度不必与 `range` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "is removed even if the iterator is not consumed until the end.",
+        "suggest": "即使直到最后都没有使用迭代器，也将删除该变量。",
+        "translate": ""
+    },
+    {
+        "source": "It is unspecified how many elements are removed from the vector if the `Splice` value is leaked.",
+        "suggest": "如果 `Splice` 值泄漏，则未指定从 vector 中删除了多少个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The input iterator `replace_with` is only consumed when the `Splice` value is dropped.",
+        "suggest": "仅当 `Splice` 值丢弃时才使用输入迭代器 `replace_with`。",
+        "translate": ""
+    },
+    {
+        "source": "This is optimal if:",
+        "suggest": "如果满足以下条件，则为最佳选择:",
+        "translate": ""
+    },
+    {
+        "source": "The tail (elements in the vector after `range`) is empty,",
+        "suggest": "尾部 (`range` 之后的 vector 中的元素) 为空，",
+        "translate": ""
+    },
+    {
+        "source": "or `replace_with` yields fewer or equal elements than `range`’s length",
+        "suggest": "或 `replace_with` 产生的元素少于或等于 'range' 的长度",
+        "translate": ""
+    },
+    {
+        "source": "or the lower bound of its `size_hint()` is exact.",
+        "suggest": "或其 `size_hint()` 的下界是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, a temporary vector is allocated and the tail is moved twice.",
+        "suggest": "否则，将分配一个临时的 vector 并将尾部移动两次。",
+        "translate": ""
+    },
+    {
+        "source": "If the closure returns false, the element will remain in the vector and will not be yielded by the iterator.",
+        "suggest": "如果闭包返回 false，则该元素将保留在 vector 中，并且不会由迭代器产生。",
+        "translate": ""
+    },
+    {
+        "source": "Using this method is equivalent to the following code:",
+        "suggest": "使用此方法等效于以下代码:",
+        "translate": ""
+    },
+    {
+        "source": "But `drain_filter` is easier to use.",
+        "suggest": "但是 `drain_filter` 更易于使用。",
+        "translate": ""
+    },
+    {
+        "source": "is also more efficient, because it can backshift the elements of the array in bulk.",
+        "suggest": "这样做还可以提高效率，因为它可以使数组的元素大量回移。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `drain_filter` also lets you mutate every element in the filter closure, regardless of whether you choose to keep or remove it.",
+        "suggest": "请注意，无论选择保留还是删除 `drain_filter`，您都可以对过滤器闭包中的每个元素进行可变的。",
+        "translate": ""
+    },
+    {
+        "source": "Splitting an array into evens and odds, reusing the original allocation:",
+        "suggest": "将数组拆分为偶数和几率，重新使用原始分配:",
+        "translate": ""
+    },
+    {
+        "source": "Guard against us getting leaked (leak amplification)",
+        "suggest": "防止我们泄漏 (泄漏放大)",
+        "translate": ""
+    },
+    {
+        "source": "Extend implementation that copies elements out of references before pushing them onto the Vec.",
+        "suggest": "扩展将引用中的元素复制到 Vec 之前的实现。",
+        "translate": ""
+    },
+    {
+        "source": "This implementation is specialized for slice iterators, where it uses [`copy_from_slice`] to append the entire slice at once.",
+        "suggest": "此实现专用于切片迭代器，它使用 [`copy_from_slice`] 一次附加整个切片。",
+        "translate": ""
+    },
+    {
+        "source": "Implements comparison of vectors,",
+        "suggest": "实现 vectors 的比较，",
+        "translate": ""
+    },
+    {
+        "source": "Implements ordering of vectors,",
+        "suggest": "实现 vectors 的排序，",
+        "translate": ""
+    },
+    {
+        "source": "use drop for [T] use a raw slice to refer to the elements of the vector as weakest necessary type;",
+        "suggest": "对 [T] 使用 drop，使用原始切片将 vector 的元素称为最弱必要类型;",
+        "translate": ""
+    },
+    {
+        "source": "could avoid questions of validity in certain cases",
+        "suggest": "在某些情况下可以避免有效性问题",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty `Vec<T>`.",
+        "suggest": "创建一个空的 `Vec<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the entire contents of the `Vec<T>` as an array, if its size exactly matches that of the requested array.",
+        "suggest": "如果 `Vec<T>` 的大小与请求的数组的大小完全匹配，则以数组的形式获取 `Vec<T>` 的全部内容。",
+        "translate": ""
+    },
+    {
+        "source": "If the length doesn't match, the input comes back in `Err`:",
+        "suggest": "如果长度不匹配，则输入以 `Err` 返回:",
+        "translate": ""
+    },
+    {
+        "source": "If you're fine with just getting a prefix of the `Vec<T>`, you can call [`.truncate(N)`](Vec::truncate) first.",
+        "suggest": "如果只需要获得 `Vec<T>` 的前缀就可以了，您可以先调用 [`.truncate(N)`](Vec::truncate)。",
+        "translate": ""
+    },
+    {
+        "source": "`.set_len(0)` is always sound.",
+        "suggest": "`.set_len(0)` 始终是声音。",
+        "translate": ""
+    },
+    {
+        "source": "A `Vec`'s pointer is always aligned properly, and the alignment the array needs is the same as the items.",
+        "suggest": "`Vec` 的指针始终正确对齐，并且数组所需的对齐与项相同。",
+        "translate": ""
+    },
+    {
+        "source": "We checked earlier that we have sufficient items.",
+        "suggest": "我们之前检查过我们有足够的物品。",
+        "translate": ""
+    },
+    {
+        "source": "The items will not double-drop as the `set_len` tells the `Vec` not to also drop them.",
+        "suggest": "由于 `set_len` 告诉 `Vec` 也不要丢弃它们，因此该项不会被双重丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "some less important impls are omitted to reduce code bloat FIXME(Centril): Reconsider this?",
+        "suggest": "省略一些不太重要的提示，以减少代码膨胀 FIXME(Centril): 重新考虑这一点吗?",
+        "translate": ""
+    },
+    {
+        "source": "Set the length of the vec when the `SetLenOnDrop` value goes out of scope.",
+        "suggest": "当 `SetLenOnDrop` 值离开作用域时，设置 vec 的长度。",
+        "translate": ""
+    },
+    {
+        "source": "The idea is: The length field in SetLenOnDrop is a local variable that the optimizer will see does not alias with any stores through the Vec's data pointer.",
+        "suggest": "这个想法是: SetLenOnDrop 中的 length 字段是一个局部变量，优化器将看到该变量不会通过 Vec 的数据指针与任何存储区混叠。",
+        "translate": ""
+    },
+    {
+        "source": "This is a workaround for alias analysis issue #32155",
+        "suggest": "这是别名分析 issue #32155 的解决方法",
+        "translate": ""
+    },
+    {
+        "source": "Specialization marker for collecting an iterator pipeline into a Vec while reusing the source allocation, i.e.",
+        "suggest": "专业化标记，用于在重复使用源分配的同时将迭代器管道收集到 Vec 中，即",
+        "translate": ""
+    },
+    {
+        "source": "executing the pipeline in place.",
+        "suggest": "在适当的位置执行管道。",
+        "translate": ""
+    },
+    {
+        "source": "The SourceIter parent trait is necessary for the specializing function to access the allocation which is to be reused.",
+        "suggest": "SourceIter 父级 trait 是专用函数访问要重用的分配所必需的。",
+        "translate": ""
+    },
+    {
+        "source": "But it is not sufficient for the specialization to be valid.",
+        "suggest": "但是，使专业化有效是不够的。",
+        "translate": ""
+    },
+    {
+        "source": "See additional bounds on the impl.",
+        "suggest": "请参见 impl 上的其他范围。",
+        "translate": ""
+    },
+    {
+        "source": "The std-internal SourceIter/InPlaceIterable traits are only implemented by chains of Adapter<Adapter<Adapter<IntoIter>>> (all owned by core/std).",
+        "suggest": "std 内部 SourceIter/InPlaceIterable traits 仅由 Adapter<Adapter<Adapter<IntoIter>>> 链实现 (均由 core/std 拥有)。",
+        "translate": ""
+    },
+    {
+        "source": "Additional bounds on the adapter implementations (beyond `impl<I: Trait> Trait for Adapter<I>`) only depend on other traits already marked as specialization traits (Copy, TrustedRandomAccess, FusedIterator).",
+        "suggest": "适配器实现上的其他限制 (`impl<I: Trait> Trait for Adapter<I>` 以外) 仅取决于已标记为特殊化 traits 的其他 traits (Copy，TrustedRandomAccess，FusedIterator)。",
+        "translate": ""
+    },
+    {
+        "source": "the marker does not depend on lifetimes of user-supplied types.",
+        "suggest": "该标记不取决于用户提供的类型的生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "Modulo the Copy hole, which several other specializations already depend on.",
+        "suggest": "复制 hole 的模数，其他几个专业都已经依赖它了。",
+        "translate": ""
+    },
+    {
+        "source": "Additional requirements which cannot expressed via trait bounds.",
+        "suggest": "无法通过 trait bounds 表示的其他要求。",
+        "translate": ""
+    },
+    {
+        "source": "We rely on const eval instead:",
+        "suggest": "我们改用 const eval:",
+        "translate": ""
+    },
+    {
+        "source": "a) no ZSTs as there would be no allocation to reuse and pointer arithmetic would panic b) size match as required by Alloc contract c) alignments match as required by Alloc contract",
+        "suggest": "a) 没有 ZST，因为没有分配给重用，并且指针算术将为 panic b) 大小符合 Alloc 契约的要求 c) 对齐方式符合 Alloc 契约的要求",
+        "translate": ""
+    },
+    {
+        "source": "fallback to more generic implementations",
+        "suggest": "回退到更多泛型实现",
+        "translate": ""
+    },
+    {
+        "source": "use try-fold since",
+        "suggest": "使用 try-fold 自",
+        "translate": ""
+    },
+    {
+        "source": "it vectorizes better for some iterator adapters",
+        "suggest": "它对某些迭代器适配器的矢量化效果更好",
+        "translate": ""
+    },
+    {
+        "source": "unlike most internal iteration methods, it only takes a &mut self",
+        "suggest": "与大多数内部迭代方法不同，它只需要 &mut self",
+        "translate": ""
+    },
+    {
+        "source": "it lets us thread the write pointer through its innards and get it back in the end",
+        "suggest": "它使我们可以将写入指针穿过其内部，最后返回",
+        "translate": ""
+    },
+    {
+        "source": "iteration succeeded, don't drop head",
+        "suggest": "迭代成功，不要丢弃 head",
+        "translate": ""
+    },
+    {
+        "source": "check if SourceIter contract was upheld caveat: if they weren't we may not even make it to this point",
+        "suggest": "检查 SourceIter 契约是否被维护: 如果不是，我们甚至可能无法做到这一点",
+        "translate": ""
+    },
+    {
+        "source": "check InPlaceIterable contract.",
+        "suggest": "检查 InPlaceIterable 契约。",
+        "translate": ""
+    },
+    {
+        "source": "This is only possible if the iterator advanced the source pointer at all.",
+        "suggest": "仅在迭代器完全提高了源指针的情况下才有可能。",
+        "translate": ""
+    },
+    {
+        "source": "If it uses unchecked access via TrustedRandomAccess then the source pointer will stay in its initial position and we can't use it as reference",
+        "suggest": "如果它通过 TrustedRandomAccess 使用未经检查的访问，则源指针将停留在其初始位置，我们不能将其用作引用",
+        "translate": ""
+    },
+    {
+        "source": "drop any remaining values at the tail of the source but prevent drop of the allocation itself once IntoIter goes out of scope if the drop panics then we also leak any elements collected into dst_buf",
+        "suggest": "在源的末尾丢弃所有剩余值，但一旦分配 panics，则防止分配本身下降到 IntoIter 离开的作用域中，然后我们还将收集到的所有元素泄漏到 dst_buf 中",
+        "translate": ""
+    },
+    {
+        "source": "the InPlaceIterable contract cannot be verified precisely here since try_fold has an exclusive reference to the source pointer all we can do is check if it's still in range",
+        "suggest": "这里的 InPlaceIterable 契约无法精确验证，因为 try_fold 对源指针有一个唯一的引用，我们所能做的就是检查它是否仍在范围内",
+        "translate": ""
+    },
+    {
+        "source": "Specialization trait used for Vec::extend",
+        "suggest": "Vec::extend 使用的专业化 trait",
+        "translate": ""
+    },
+    {
+        "source": "This is the case for a TrustedLen iterator.",
+        "suggest": "TrustedLen 迭代器就是这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Specialization trait used for Vec::from_elem",
+        "suggest": "Vec::from_elem 使用的专业化 trait",
+        "translate": ""
+    },
+    {
+        "source": "Specialization trait used for Vec::from_iter",
+        "suggest": "Vec::from_iter 使用的专业化 trait",
+        "translate": ""
+    },
+    {
+        "source": "The delegation graph:",
+        "suggest": "委托图:",
+        "translate": ""
+    },
+    {
+        "source": "A common case is passing a vector into a function which immediately re-collects into a vector.",
+        "suggest": "常见的情况是将 vector 传递到函数中，该函数立即重新收集到 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "We can short circuit this if the IntoIter has not been advanced at all.",
+        "suggest": "如果 IntoIter 根本没有改进，我们可以将其短路。",
+        "translate": ""
+    },
+    {
+        "source": "When it has been advanced We can also reuse the memory and move the data to the front.",
+        "suggest": "升级后，我们还可以重用内存并将数据移到最前面。",
+        "translate": ""
+    },
+    {
+        "source": "But we only do so when the resulting Vec wouldn't have more unused capacity than creating it through the generic FromIterator implementation would.",
+        "suggest": "但是，只有在生成的 Vec 没有比通过泛型 FromIterator 实现创建它的未使用容量多的情况下，我们才这样做。",
+        "translate": ""
+    },
+    {
+        "source": "That limitation is not strictly necessary as Vec's allocation behavior is intentionally unspecified.",
+        "suggest": "由于故意未指定 Vec 的分配行为，因此此限制并非严格必要。",
+        "translate": ""
+    },
+    {
+        "source": "But it is a conservative choice.",
+        "suggest": "但这是一个保守的选择。",
+        "translate": ""
+    },
+    {
+        "source": "must delegate to spec_extend() since extend() itself delegates to spec_from for empty Vecs",
+        "suggest": "必须委托给 spec_extend()，因为 extend() 本身委托给空空的 Vecs 的 spec_from",
+        "translate": ""
+    },
+    {
+        "source": "This utilizes `iterator.as_slice().to_vec()` since spec_extend must take more steps to reason about the final capacity + length and thus do more work.",
+        "suggest": "这利用了 `iterator.as_slice().to_vec()`，因为 spec_extend 必须采取更多的步骤来推断最终的容量 + 长度，从而进行更多的工作。",
+        "translate": ""
+    },
+    {
+        "source": "directly allocates the correct amount and fills it exactly.",
+        "suggest": "直接分配正确的金额并准确填写。",
+        "translate": ""
+    },
+    {
+        "source": "Another specialization trait for Vec::from_iter necessary to manually prioritize overlapping specializations see [`SpecFromIter`](super::SpecFromIter) for details.",
+        "suggest": "手动确定重叠专业的优先级所必需的 Vec::from_iter 的另一个专业 trait，请参见 [`SpecFromIter`](super::SpecFromIter) 了解详细信息。",
+        "translate": ""
+    },
+    {
+        "source": "Unroll the first iteration, as the vector is going to be expanded on this iteration in every case when the iterable is not empty, but the loop in extend_desugared() is not going to see the vector being full in the few subsequent loop iterations.",
+        "suggest": "展开第一个迭代，因为在每种情况下，当 iterable 不为空时，vector 都会在此迭代中进行扩展，但是 extend_desugared() 中的循环不会在随后的几次循环迭代中看到 vector 已满。",
+        "translate": ""
+    },
+    {
+        "source": "So we get better branch prediction.",
+        "suggest": "这样我们可以获得更好的分支预测。",
+        "translate": ""
+    },
+    {
+        "source": "A splicing iterator for `Vec`.",
+        "suggest": "`Vec` 的拼接迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by [`Vec::splice()`].",
+        "suggest": "该结构体由 [`Vec::splice()`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "First fill the range left by drain().",
+        "suggest": "首先填充 drain() 剩余的范围。",
+        "translate": ""
+    },
+    {
+        "source": "There may be more elements.",
+        "suggest": "可能还有更多元素。",
+        "translate": ""
+    },
+    {
+        "source": "Use the lower bound as an estimate.",
+        "suggest": "使用下限作为估计值。",
+        "translate": ""
+    },
+    {
+        "source": "Is the upper bound a better guess?",
+        "suggest": "上限是更好的猜测吗?",
+        "translate": ""
+    },
+    {
+        "source": "Or something else?",
+        "suggest": "或者是其他东西?",
+        "translate": ""
+    },
+    {
+        "source": "Collect any remaining elements.",
+        "suggest": "收集所有剩余的元素。",
+        "translate": ""
+    },
+    {
+        "source": "This is a zero-length vector which does not allocate if `lower_bound` was exact.",
+        "suggest": "这是一个零长度的 vector，如果 `lower_bound` 是精确的，则不分配。",
+        "translate": ""
+    },
+    {
+        "source": "Now we have an exact count.",
+        "suggest": "现在我们有一个准确的计数。",
+        "translate": ""
+    },
+    {
+        "source": "Let `Drain::drop` move the tail back if necessary and restore `vec.len`.",
+        "suggest": "如有必要，让 `Drain::drop` 将尾巴向后移，并恢复 `vec.len`。",
+        "translate": ""
+    },
+    {
+        "source": "Private helper methods for `Splice::drop`",
+        "suggest": "`Splice::drop` 的 private 帮助器方法",
+        "translate": ""
+    },
+    {
+        "source": "The range from `self.vec.len` to `self.tail_start` contains elements that have been moved out.",
+        "suggest": "从 `self.vec.len` 到 `self.tail_start` 的范围包含已移出的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Fill that range as much as possible with new elements from the `replace_with` iterator.",
+        "suggest": "尽可能用 `replace_with` 迭代器中的新元素填充该范围。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if we filled the entire range.",
+        "suggest": "如果我们填满整个范围，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "(`replace_with.next()` didn’t return `None`.)",
+        "suggest": "(`replace_with.next()` 没有返回 `None`。)",
+        "translate": ""
+    },
+    {
+        "source": "Makes room for inserting more elements before the tail.",
+        "suggest": "为在尾部之前插入更多元素留出空间。",
+        "translate": ""
+    },
+    {
+        "source": "Exercise is_dangling() with a DST",
+        "suggest": "使用 DST 练习 is_dangling()",
+        "translate": ""
+    },
+    {
+        "source": "The test code below is identical to that in `rc.rs`.",
+        "suggest": "下面的测试代码与 `rc.rs` 中的相同。",
+        "translate": ""
+    },
+    {
+        "source": "For better maintainability we therefore define this type alias.",
+        "suggest": "为了获得更好的可维护性，因此我们定义此类型别名。",
+        "translate": ""
+    },
+    {
+        "source": "Exercise the base implementation for non-`TrustedLen` iterators.",
+        "suggest": "练习非 `TrustedLen` 迭代器的基本实现。",
+        "translate": ""
+    },
+    {
+        "source": "is never `TrustedLen` since we don't know statically how many elements will be kept:",
+        "suggest": "永远不会是 `TrustedLen`，因为我们不知道将要保留多少个元素:",
+        "translate": ""
+    },
+    {
+        "source": "Collecting into a `Vec<T>` or `Rc<[T]>` should make no difference:",
+        "suggest": "收集到 `Vec<T>` 或 `Rc<[T]>` 中应该没有什么区别:",
+        "translate": ""
+    },
+    {
+        "source": "Clone a bit and let these get dropped.",
+        "suggest": "克隆一个位，让这些被丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Drop what hasn't been here.",
+        "suggest": "丢弃这里没有的东西。",
+        "translate": ""
+    },
+    {
+        "source": "Exercise the `TrustedLen` implementation under normal circumstances where `size_hint()` matches `(_, Some(exact_len))`.",
+        "suggest": "在 `size_hint()` 与 `(_, Some(exact_len))` 匹配的正常情况下，请练习 `TrustedLen` 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Try a ZST to make sure it is handled well.",
+        "suggest": "尝试使用 ZST 来确保操作正确。",
+        "translate": ""
+    },
+    {
+        "source": "Exercise the `TrustedLen` implementation when `size_hint()` matches `(_, Some(exact_len))` but where `.next()` drops before the last iteration.",
+        "suggest": "当 `size_hint()` 与 `(_, Some(exact_len))` 匹配但 `.next()` 在最后一次迭代之前丢弃时，请执行 `TrustedLen` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "Exercise the `TrustedLen` implementation when `size_hint()` matches `(_, Some(exact_len))` but where the iterator does not behave in a fused manner.",
+        "suggest": "当 `size_hint()` 与 `(_, Some(exact_len))` 匹配但迭代器不以融合方式运行时，请执行 `TrustedLen` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "old binaryheap failed this test",
+        "suggest": "老的 binaryheap 未能通过此测试",
+        "translate": ""
+    },
+    {
+        "source": "Integrity means that all elements are present after a comparison panics, even if the order may not be correct.",
+        "suggest": "完整性是指所有元素在比较 panics 之后都存在，即使顺序可能不正确。",
+        "translate": ""
+    },
+    {
+        "source": "Destructors must be called exactly once per element.",
+        "suggest": "每个元素必须精确地调用一次析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "re-enable emscripten once it can unwind again",
+        "suggest": "当它可以再次展开时，请重新启用 emscripten",
+        "translate": ""
+    },
+    {
+        "source": "update global drop count",
+        "suggest": "更新全局 drop 计数",
+        "translate": ""
+    },
+    {
+        "source": "don't use 0 in the data -- we want to catch the zeroed-out case.",
+        "suggest": "请勿在数据中使用 0，我们想捕捉归零的情况。",
+        "translate": ""
+    },
+    {
+        "source": "since it's a fuzzy test, run several tries.",
+        "suggest": "由于这是一个模糊测试，因此请尝试几次。",
+        "translate": ""
+    },
+    {
+        "source": "heapify the sane items",
+        "suggest": "堆放理智的物品",
+        "translate": ""
+    },
+    {
+        "source": "push the panicking item to the heap and catch the panic",
+        "suggest": "将 panic 项 push 到堆上并捕获 panic",
+        "translate": ""
+    },
+    {
+        "source": "Assert no elements were dropped",
+        "suggest": "断言没有任何元素被丢弃",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Cow` are usable in a const context",
+        "suggest": "测试 `Cow` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "This test might give a false positive in case the box realocates, but the alocator keeps the original pointer.",
+        "suggest": "如果 box 重新分配，此测试可能会给出错误的肯定结果，但是定位器保留原始指针。",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand it won't give a false negative, if it fails than the memory was definitely not reused",
+        "suggest": "另一方面，它不会给出错误的否定，如果它失败了，那肯定是内存没有被重用",
+        "translate": ""
+    },
+    {
+        "source": "check that Cow<'a, str> implements addition",
+        "suggest": "检查 Cow<'a, str> 是否实现了附加功能",
+        "translate": ""
+    },
+    {
+        "source": "Various edge cases without formats",
+        "suggest": "各种无格式的 edge 外壳",
+        "translate": ""
+    },
+    {
+        "source": "default formatters should work",
+        "suggest": "默认格式化程序应该工作",
+        "translate": ""
+    },
+    {
+        "source": "At least exercise all the formats",
+        "suggest": "至少练习所有格式",
+        "translate": ""
+    },
+    {
+        "source": "Formatting strings and their arguments",
+        "suggest": "格式化字符串及其参数",
+        "translate": ""
+    },
+    {
+        "source": "Some float stuff",
+        "suggest": "一些浮动的东西",
+        "translate": ""
+    },
+    {
+        "source": "Float edge cases",
+        "suggest": "浮动 edge 例",
+        "translate": ""
+    },
+    {
+        "source": "sign aware zero padding",
+        "suggest": "标志知道零填充",
+        "translate": ""
+    },
+    {
+        "source": "Ergonomic format_args!",
+        "suggest": "符合人体工程学的 format_args!",
+        "translate": ""
+    },
+    {
+        "source": "And its edge cases",
+        "suggest": "及其 edge 案例",
+        "translate": ""
+    },
+    {
+        "source": "Test that pointers don't get truncated.",
+        "suggest": "测试指针不会被截断。",
+        "translate": ""
+    },
+    {
+        "source": "make sure that format!",
+        "suggest": "确保该格式!",
+        "translate": ""
+    },
+    {
+        "source": "doesn't move out of local variables",
+        "suggest": "不会移出局部变量",
+        "translate": ""
+    },
+    {
+        "source": "test that trailing commas are acceptable",
+        "suggest": "测试尾随逗号是否可以接受",
+        "translate": ""
+    },
+    {
+        "source": "Basic test to make sure that we can invoke the `write!` macro with an fmt::Write instance.",
+        "suggest": "基本测试，以确保我们可以使用 fmt::Write 实例调用 `write!` 宏。",
+        "translate": ""
+    },
+    {
+        "source": "Just make sure that the macros are defined, there's not really a lot that we can do with them just yet (to test the output)",
+        "suggest": "只需确保已定义了宏，我们还不能对它们做很多事情 (以测试输出)",
+        "translate": ""
+    },
+    {
+        "source": "Make sure format!() arguments are always evaluated in a left-to-right ordering",
+        "suggest": "确保 format! () 参数始终按从左到右的顺序求值",
+        "translate": ""
+    },
+    {
+        "source": "Make sure each argument are evaluated only once even though it may be formatted multiple times",
+        "suggest": "确保每个参数仅被评估一次，即使它可能被格式化多次",
+        "translate": ""
+    },
+    {
+        "source": "and #62251.",
+        "suggest": "和 #62251。",
+        "translate": ""
+    },
+    {
+        "source": "less than and bigger than `MIN_ALIGN`",
+        "suggest": "小于和大于 `MIN_ALIGN`",
+        "translate": ""
+    },
+    {
+        "source": "size less than alignment",
+        "suggest": "尺寸小于对齐",
+        "translate": ""
+    },
+    {
+        "source": "Clean up",
+        "suggest": "清理",
+        "translate": ""
+    },
+    {
+        "source": "Instantiated functions with i128 in the signature is not supported in Emscripten.",
+        "suggest": "Emscripten 不支持签名中带有 i128 的实例化函数。",
+        "translate": ""
+    },
+    {
+        "source": "not singleton, forwards",
+        "suggest": "不是 singleton，前进",
+        "translate": ""
+    },
+    {
+        "source": "not singleton, backwards",
+        "suggest": "不是 singleton，后退",
+        "translate": ""
+    },
+    {
+        "source": "no-op on the last index",
+        "suggest": "最后一个索引不操作",
+        "translate": ""
+    },
+    {
+        "source": "uses iterator",
+        "suggest": "使用迭代器",
+        "translate": ""
+    },
+    {
+        "source": "specializes to `append`",
+        "suggest": "专门用于 `append`",
+        "translate": ""
+    },
+    {
+        "source": "0 and 1",
+        "suggest": "0 和 1",
+        "translate": ""
+    },
+    {
+        "source": "Test on-stack from_fn.",
+        "suggest": "在栈上测试 from_fn。",
+        "translate": ""
+    },
+    {
+        "source": "Test on-heap from_fn.",
+        "suggest": "测试堆 from_fn。",
+        "translate": ""
+    },
+    {
+        "source": "Test on-stack from_elem.",
+        "suggest": "在栈上测试 from_elem。",
+        "translate": ""
+    },
+    {
+        "source": "Test on-heap from_elem.",
+        "suggest": "测试堆 from_elem。",
+        "translate": ""
+    },
+    {
+        "source": "Test fixed length vector.",
+        "suggest": "测试固定长度 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Test on stack.",
+        "suggest": "在栈上测试。",
+        "translate": ""
+    },
+    {
+        "source": "Test `Box<[T]>`",
+        "suggest": "测试 `Box<[T]>`",
+        "translate": ""
+    },
+    {
+        "source": "Tests that we don't accidentally run destructors twice.",
+        "suggest": "测试我们不会意外地运行析构函数两次。",
+        "translate": ""
+    },
+    {
+        "source": "Test on-stack push().",
+        "suggest": "测试栈 push()。",
+        "translate": ""
+    },
+    {
+        "source": "Test on-heap push().",
+        "suggest": "测试堆 push()。",
+        "translate": ""
+    },
+    {
+        "source": "If the unsafe block didn't drop things properly, we blow up here.",
+        "suggest": "如果 unsafe 块没有正确地丢弃东西，我们就在这里销毁。",
+        "translate": ""
+    },
+    {
+        "source": "check the 1-byte-types path",
+        "suggest": "检查 1 字节类型的路径",
+        "translate": ""
+    },
+    {
+        "source": "check the 2-byte-types path",
+        "suggest": "检查 2 字节类型的路径",
+        "translate": ""
+    },
+    {
+        "source": "Sort in default order.",
+        "suggest": "按默认顺序排序。",
+        "translate": ""
+    },
+    {
+        "source": "Sort in ascending order.",
+        "suggest": "升序排列。",
+        "translate": ""
+    },
+    {
+        "source": "Sort in descending order.",
+        "suggest": "降序排列。",
+        "translate": ""
+    },
+    {
+        "source": "Sort in lexicographic order.",
+        "suggest": "按字典顺序排序。",
+        "translate": ""
+    },
+    {
+        "source": "Sort with many pre-sorted runs.",
+        "suggest": "使用许多预排序的运行进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Sort using a completely random comparison function.",
+        "suggest": "使用完全随机的比较函数进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "This will reorder the elements *somehow*, but won't panic.",
+        "suggest": "这将以某种方式对元素进行重新排序，但不会 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Should not panic.",
+        "suggest": "不应为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "create a vector like [(6, 1), (5, 1), (6, 2), ...], where the first item of each tuple is random, but the second item represents which occurrence of that number this element is, i.e., the second elements will occur in sorted order.",
+        "suggest": "创建一个类似于 [(6, 1), (5, 1), (6, 2), ...] 的 vector，其中每个元组的第一个项是随机的，但是第二个项表示此元素是该数字的哪个出现，即，第二个元素将按排序顺序出现。",
+        "translate": ""
+    },
+    {
+        "source": "Only sort on the first element, so an unstable sort may mix up the counts.",
+        "suggest": "仅对第一个元素进行排序，因此不稳定的排序可能会混淆计数。",
+        "translate": ""
+    },
+    {
+        "source": "This comparison includes the count (the second item of the tuple), so elements with equal first items will need to be ordered with increasing counts...",
+        "suggest": "此比较包括计数 (元组的第二个项)，因此第一个项相等的元素将需要按递增的顺序进行排序...",
+        "translate": ""
+    },
+    {
+        "source": "i.e., exactly asserting that this sort is stable.",
+        "suggest": "即确切地断言这种类型是稳定的。",
+        "translate": ""
+    },
+    {
+        "source": "happy path",
+        "suggest": "happy 路径",
+        "translate": ""
+    },
+    {
+        "source": "small rotations in large slice, uses ptr::copy",
+        "suggest": "大切片中的小旋转，使用 ptr::copy",
+        "translate": ""
+    },
+    {
+        "source": "non-small prime rotation, has a few rounds of swapping",
+        "suggest": "非小素数旋转，具有几轮交换",
+        "translate": ""
+    },
+    {
+        "source": "here, we care about the side effects of `.clone()`",
+        "suggest": "在这里，我们关心 `.clone()` 的副作用",
+        "translate": ""
+    },
+    {
+        "source": "When xs is dropped, +5.",
+        "suggest": "当 xs 被丢弃后，+ 5。",
+        "translate": ""
+    },
+    {
+        "source": "When panic is cloned, +3.",
+        "suggest": "当 panic 被克隆时，+ 3。",
+        "translate": ""
+    },
+    {
+        "source": "AtomicUsize is not Copy.",
+        "suggest": "AtomicUsize 不是 Copy。",
+        "translate": ""
+    },
+    {
+        "source": "Work out the total number of comparisons required to sort this array...",
+        "suggest": "算出对这个数组进行排序所需的比较总数...",
+        "translate": ""
+    },
+    {
+        "source": "and then panic on each and every single one.",
+        "suggest": "然后每个 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Refresh the counters.",
+        "suggest": "刷新计数器。",
+        "translate": ""
+    },
+    {
+        "source": "Check that the number of things dropped is exactly what we expect (i.e., the contents of `v`).",
+        "suggest": "检查丢弃的事物的数量是否恰好是我们期望的 (即 `v` 的内容)。",
+        "translate": ""
+    },
+    {
+        "source": "Check that the most recent versions of values were dropped.",
+        "suggest": "检查是否丢弃了最新版本的值。",
+        "translate": ""
+    },
+    {
+        "source": "no threads",
+        "suggest": "没有线程",
+        "translate": ""
+    },
+    {
+        "source": "Miri is too slow (but still need to `chain` to make the types match)",
+        "suggest": "Miri 太慢 (但仍需要 `chain` 来使类型匹配)",
+        "translate": ""
+    },
+    {
+        "source": "Set default panic hook again.",
+        "suggest": "再次设置默认的 panic hook。",
+        "translate": ""
+    },
+    {
+        "source": "This test comprehensively checks the passing static and dynamic semantics of subslice patterns `..`, `x @ ..`, `ref x @ ..`, and `ref mut @ ..` in slice patterns `[$($pat), $(,)?]` .",
+        "suggest": "此测试全面检查切片模式 `[$($pat), $(,)?]` 中子模式 `..`，`x @ ..`，`ref x @ ..` 和 `ref mut @ ..` 传递的静态和动态语义。",
+        "translate": ""
+    },
+    {
+        "source": "Matching slices using `ref` patterns:",
+        "suggest": "使用 `ref` 模式匹配切片:",
+        "translate": ""
+    },
+    {
+        "source": "Always matches.",
+        "suggest": "始终匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Matching slices using `ref mut` patterns:",
+        "suggest": "使用 `ref mut` 模式匹配切片:",
+        "translate": ""
+    },
+    {
+        "source": "Matching slices using default binding modes (&):",
+        "suggest": "使用默认绑定模式 (&) 匹配切片:",
+        "translate": ""
+    },
+    {
+        "source": "Matching slices using default binding modes (&mut):",
+        "suggest": "使用默认绑定模式 (&mut) 匹配切片:",
+        "translate": ""
+    },
+    {
+        "source": "Matching arrays by value:",
+        "suggest": "按值匹配数组:",
+        "translate": ""
+    },
+    {
+        "source": "Matching arrays by ref patterns:",
+        "suggest": "通过引用模式匹配数组:",
+        "translate": ""
+    },
+    {
+        "source": "Matching arrays by ref mut patterns:",
+        "suggest": "通过 ref mut 模式匹配数组:",
+        "translate": ""
+    },
+    {
+        "source": "Matching arrays by default binding modes (&):",
+        "suggest": "默认情况下，匹配数组 (&) 绑定模式:",
+        "translate": ""
+    },
+    {
+        "source": "Matching arrays by default binding modes (&mut):",
+        "suggest": "默认情况下，匹配数组 (&mut) 绑定模式:",
+        "translate": ""
+    },
+    {
+        "source": "byte positions",
+        "suggest": "字节位置",
+        "translate": ""
+    },
+    {
+        "source": "find every substring -- assert that it finds it, or an earlier occurrence.",
+        "suggest": "查找每个子字符串 - 断言它找到了它，或更早出现了。",
+        "translate": ""
+    },
+    {
+        "source": "join has fast paths for small separators up to 4 bytes this tests the slow paths.",
+        "suggest": "join 具有用于最多 4 个字节的小分隔符的快速路径，这将测试慢速路径。",
+        "translate": ""
+    },
+    {
+        "source": "The current implementation of SliceIndex fails to handle methods orthogonally from range types;",
+        "suggest": "SliceIndex 的当前实现无法垂直处理范围类型中的方法。",
+        "translate": ""
+    },
+    {
+        "source": "therefore, it is worth testing all of the indexing operations on each input.",
+        "suggest": "因此，值得对每个输入进行所有索引操作。",
+        "translate": ""
+    },
+    {
+        "source": "Test a slicing operation **that should succeed,** testing it on all of the indexing methods.",
+        "suggest": "测试切片操作 **应该成功，** 在所有索引方法上进行测试。",
+        "translate": ""
+    },
+    {
+        "source": "This is not suitable for testing failure on invalid inputs.",
+        "suggest": "这不适用于无效输入上的测试失败。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure the macro can actually detect bugs, because if it can't, then what are we even doing here?",
+        "suggest": "确保宏可以实际检测到错误，因为如果无法检测到错误，那么我们在这里还要做什么?",
+        "translate": ""
+    },
+    {
+        "source": "(Be aware this only demonstrates the ability to detect bugs in the FIRST method that panics, as the macro is not designed to be used in `should_panic`)",
+        "suggest": "(请注意，这仅演示了在 panics 的 FIRST 方法中检测错误的功能，因为该宏不适用于 `should_panic`)",
+        "translate": ""
+    },
+    {
+        "source": "(Be aware this only demonstrates the ability to detect bugs in the FIRST method it calls, as the macro is not designed to be used in `should_panic`)",
+        "suggest": "(请注意，这仅演示了在其调用的 FIRST 方法中检测错误的能力，因为该宏不适用于 `should_panic`)",
+        "translate": ""
+    },
+    {
+        "source": "Generates test cases for bad index operations.",
+        "suggest": "生成不良索引操作的测试用例。",
+        "translate": ""
+    },
+    {
+        "source": "This generates `should_panic` test cases for Index/IndexMut and `None` test cases for get/get_mut.",
+        "suggest": "这将为 Index/IndexMut 生成 `should_panic` 测试用例，为 get/get_mut 生成 `None` 测试用例。",
+        "translate": ""
+    },
+    {
+        "source": "a similar input for which DATA[input] succeeds, and the corresponding output str.",
+        "suggest": "DATA [input] 成功的类似输入，以及对应的输出 str。",
+        "translate": ""
+    },
+    {
+        "source": "This helps validate \"critical points\" where an input range straddles the boundary between valid and invalid.",
+        "suggest": "这有助于验证 \"critical points\" 的输入范围是否跨越有效和无效之间的边界。",
+        "translate": ""
+    },
+    {
+        "source": "(such as the input `len..len`, which is just barely valid)",
+        "suggest": "(例如输入 `len..len`，这几乎是无效的)",
+        "translate": ""
+    },
+    {
+        "source": "must be a literal",
+        "suggest": "必须是字面量",
+        "translate": ""
+    },
+    {
+        "source": "hits an OOM",
+        "suggest": "遇到 OOM",
+        "translate": ""
+    },
+    {
+        "source": "exhaust it",
+        "suggest": "用尽它",
+        "translate": ""
+    },
+    {
+        "source": "is out of bounds before exhaustion, so it stands to reason that it still would be after.",
+        "suggest": "在精疲力尽之前已经超出了界限，因此可以推断它仍然会在精疲力尽之后出现。",
+        "translate": ""
+    },
+    {
+        "source": "using 0 specifically ensures that the result of overflowing is 0..0, so that `get` doesn't simply return None for the wrong reason.",
+        "suggest": "特别使用 0 可以确保溢出的结果是 0..0，因此 `get` 不会因为错误的原因而简单地返回 None。",
+        "translate": ""
+    },
+    {
+        "source": "it is especially important to test all of the different range types here because some of the logic may be duplicated as part of micro-optimizations to dodge unicode boundary checks on half-ranges.",
+        "suggest": "在这里测试所有不同的范围类型尤为重要，因为某些逻辑可能会作为微优化的一部分重复进行，从而避免对半范围进行 unicode 边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "check the panic includes the prefix of the sliced string",
+        "suggest": "检查 panic 是否包含切片字符串的前缀",
+        "translate": ""
+    },
+    {
+        "source": "check the truncation in the panic message",
+        "suggest": "检查 panic 消息中的截断",
+        "translate": ""
+    },
+    {
+        "source": "ensure character locations are boundaries and continuation bytes are not",
+        "suggest": "确保字符位置是边界，而连续字节不是",
+        "translate": ""
+    },
+    {
+        "source": "Thin space",
+        "suggest": "Thin space",
+        "translate": ""
+    },
+    {
+        "source": "deny overlong encodings",
+        "suggest": "拒绝超长编码",
+        "translate": ""
+    },
+    {
+        "source": "deny surrogates",
+        "suggest": "拒绝代理",
+        "translate": ""
+    },
+    {
+        "source": "deny invalid bytes embedded in long stretches of ascii",
+        "suggest": "拒绝嵌入在长 ASCII 码中的无效字节",
+        "translate": ""
+    },
+    {
+        "source": "no null",
+        "suggest": "没有空",
+        "translate": ""
+    },
+    {
+        "source": "Don't double free.",
+        "suggest": "不要双重释放。",
+        "translate": ""
+    },
+    {
+        "source": "(I'm not sure if this exercises the original problem code path anymore.)",
+        "suggest": "(我不确定这是否还会行使原始的问题代码路径。)",
+        "translate": ""
+    },
+    {
+        "source": "Note that there are subtleties with the number of backslashes on the left- and right-hand sides.",
+        "suggest": "请注意，左侧和右侧的反斜杠数量有些微妙。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, Unicode code points are usually escaped with two backslashes on the right-hand side, as they are escaped.",
+        "suggest": "特别是，Unicode 代码点在转义时通常会在其右侧带有两个反斜杠的情况下转义。",
+        "translate": ""
+    },
+    {
+        "source": "However, when the character is unescaped (e.g., for printable characters), only a single backslash appears (as the character itself appears in the debug string).",
+        "suggest": "但是，当字符未转义时 (例如，对于可打印字符)，仅出现一个反斜杠 (因为字符本身出现在调试字符串中)。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the predicate is stateful and thus dependent on the iteration order.",
+        "suggest": "请注意，谓词是有状态的，因此取决于迭代顺序。",
+        "translate": ""
+    },
+    {
+        "source": "(A different predicate is needed for reverse iterator vs normal iterator.) Not sure if anything can be done though.",
+        "suggest": "(反向迭代器与普通迭代器需要不同的谓词。) 不确定是否可以执行任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "no trailing \\n",
+        "suggest": "没有尾随 \\n",
+        "translate": ""
+    },
+    {
+        "source": "prior to the fix for #16589, x.contains(\"abcdabcd\") returned false test all substrings for good measure",
+        "suggest": "在修复 #16589 之前，x.contains(\"abcdabcd\") 返回 false 测试所有子字符串，以取得良好的效果",
+        "translate": ""
+    },
+    {
+        "source": "The only way to acquire a Box<str> in the first place is through a String, so just test that we can round-trip between Box<str> and String.",
+        "suggest": "首先，获取 Box<str> 的唯一方法是通过 String，因此只需测试一下我们就可以在 Box<str> 和 String 之间往返。",
+        "translate": ""
+    },
+    {
+        "source": "Miri does not deduplicate consts (https://github.com/rust-lang/miri/issues/131)",
+        "suggest": "Miri 不重复删除 const (https://github.com/rust-lang/miri/issues/131)",
+        "translate": ""
+    },
+    {
+        "source": "Chars of 1, 2, 3, and 4 bytes",
+        "suggest": "1、2、3 和 4 个字节的字符",
+        "translate": ""
+    },
+    {
+        "source": "invalid prefix",
+        "suggest": "无效的前缀",
+        "translate": ""
+    },
+    {
+        "source": "invalid 2 byte prefix",
+        "suggest": "无效的 2 个字节的前缀",
+        "translate": ""
+    },
+    {
+        "source": "invalid 3 byte prefix",
+        "suggest": "无效的 3 字节前缀",
+        "translate": ""
+    },
+    {
+        "source": "invalid 4 byte prefix",
+        "suggest": "无效的 4 字节前缀",
+        "translate": ""
+    },
+    {
+        "source": "even-numbered non-BMP planes",
+        "suggest": "偶数非 BMP 平面",
+        "translate": ""
+    },
+    {
+        "source": "completely positive cases tested above.",
+        "suggest": "以上测试的完全阳性病例。",
+        "translate": ""
+    },
+    {
+        "source": "isolated trail",
+        "suggest": "孤立的 trail",
+        "translate": ""
+    },
+    {
+        "source": "1 byte",
+        "suggest": "1 字节",
+        "translate": ""
+    },
+    {
+        "source": "2 byte",
+        "suggest": "2 字节",
+        "translate": ""
+    },
+    {
+        "source": "3 byte",
+        "suggest": "3 字节",
+        "translate": ""
+    },
+    {
+        "source": "4 byte",
+        "suggest": "4 字节",
+        "translate": ""
+    },
+    {
+        "source": "4 bytes",
+        "suggest": "4 字节",
+        "translate": ""
+    },
+    {
+        "source": "3 bytes",
+        "suggest": "3 字节",
+        "translate": ""
+    },
+    {
+        "source": "2 bytes",
+        "suggest": "2 字节",
+        "translate": ""
+    },
+    {
+        "source": "1 bytes",
+        "suggest": "1 字节",
+        "translate": ""
+    },
+    {
+        "source": "This is all the same as test_reserve",
+        "suggest": "这和 test_reserve 一样",
+        "translate": ""
+    },
+    {
+        "source": "Miri does not support signalling OOM",
+        "suggest": "Miri 不支持信令 OOM",
+        "translate": ""
+    },
+    {
+        "source": "used in CI has a broken dlmalloc",
+        "suggest": "CI 中使用的 dlmalloc 损坏",
+        "translate": ""
+    },
+    {
+        "source": "These are the interesting cases:",
+        "suggest": "这些是有趣的情况:",
+        "translate": ""
+    },
+    {
+        "source": "exactly isize::MAX should never trigger a CapacityOverflow (can be OOM)",
+        "suggest": "isize::MAX 绝对不应触发 CapacityOverflow (可以是 OOM)",
+        "translate": ""
+    },
+    {
+        "source": "isize::MAX should always fail",
+        "suggest": "isize::MAX 应该总是失败",
+        "translate": ""
+    },
+    {
+        "source": "On 16/32-bit should CapacityOverflow",
+        "suggest": "在 16/32-bit 上，应为 CapacityOverflow",
+        "translate": ""
+    },
+    {
+        "source": "On 64-bit should OOM",
+        "suggest": "在 64 位上应该 OOM",
+        "translate": ""
+    },
+    {
+        "source": "overflow may trigger when adding `len` to `cap` (in number of elements)",
+        "suggest": "将 `len` 添加到 `cap` 时可能触发溢出 (以元素数为单位)",
+        "translate": ""
+    },
+    {
+        "source": "overflow may trigger when multiplying `new_cap` by size_of::<T> (to get bytes)",
+        "suggest": "`new_cap` 乘以 size_of: 可能会触发溢出: <T> (获取字节)",
+        "translate": ""
+    },
+    {
+        "source": "On 16/32-bit, we check that allocations don't exceed isize::MAX, on 64-bit, we assume the OS will give an OOM for such a ridiculous size.",
+        "suggest": "在 16/32-bit 上，我们检查分配是否不超过 isize::MAX，在 64 位上，我们假设操作系统将为如此可笑的大小提供 OOM。",
+        "translate": ""
+    },
+    {
+        "source": "Any platform that succeeds for these requests is technically broken with ptr::offset because LLVM is the worst.",
+        "suggest": "从技术上讲，成功完成这些请求的任何平台都将被 ptr::offset 破坏，因为 LLVM 最差。",
+        "translate": ""
+    },
+    {
+        "source": "basic stuff is checked by test_reserve",
+        "suggest": "基本的东西由 test_reserve 检查",
+        "translate": ""
+    },
+    {
+        "source": "Check isize::MAX doesn't count as an overflow",
+        "suggest": "检查 isize::MAX 不算作溢出",
+        "translate": ""
+    },
+    {
+        "source": "Play it again, frank!",
+        "suggest": "再来一次，frank!",
+        "translate": ""
+    },
+    {
+        "source": "(just to be sure)",
+        "suggest": "(只是要确定)",
+        "translate": ""
+    },
+    {
+        "source": "Check isize::MAX + 1 does count as overflow",
+        "suggest": "检查 isize::MAX +1 是否算作溢出",
+        "translate": ""
+    },
+    {
+        "source": "Check usize::MAX does count as overflow",
+        "suggest": "检查 usize::MAX 是否算作溢出",
+        "translate": ""
+    },
+    {
+        "source": "Check isize::MAX + 1 is an OOM",
+        "suggest": "检查 isize::MAX +1 是 OOM",
+        "translate": ""
+    },
+    {
+        "source": "Check usize::MAX is an OOM",
+        "suggest": "检查 usize::MAX 是一个 OOM",
+        "translate": ""
+    },
+    {
+        "source": "Same basic idea, but with non-zero len",
+        "suggest": "基本思想相同，但 len 不为零",
+        "translate": ""
+    },
+    {
+        "source": "Should always overflow in the add-to-len",
+        "suggest": "应该总是在 add-to-len 溢出",
+        "translate": ""
+    },
+    {
+        "source": "This is exactly the same as test_try_reserve with the method changed.",
+        "suggest": "这与更改方法后的 test_try_reserve 完全相同。",
+        "translate": ""
+    },
+    {
+        "source": "See that test for comments.",
+        "suggest": "请参见该测试以获取文档。",
+        "translate": ""
+    },
+    {
+        "source": "If Vec had a drop flag, here is where it would be zeroed.",
+        "suggest": "如果 Vec 有一个 drop 标志，那么这里将被归零。",
+        "translate": ""
+    },
+    {
+        "source": "Instead, it should rely on its internal state to prevent doing anything significant when dropped multiple times.",
+        "suggest": "相反，它应该依靠其内部状态来防止在多次丢弃时做任何有意义的事情。",
+        "translate": ""
+    },
+    {
+        "source": "Here tv goes out of scope, tv.y should be dropped, but not tv.x.",
+        "suggest": "tv 离开作用域时，应该丢弃 tv.y，但不要丢弃 tv.x。",
+        "translate": ""
+    },
+    {
+        "source": "Zero sized types",
+        "suggest": "零大小类型",
+        "translate": ""
+    },
+    {
+        "source": "Double drop",
+        "suggest": "双重丢弃",
+        "translate": ""
+    },
+    {
+        "source": "they should be disjoint in memory.",
+        "suggest": "它们在内存中应该是不相交的。",
+        "translate": ""
+    },
+    {
+        "source": "zero, long",
+        "suggest": "零，长",
+        "translate": ""
+    },
+    {
+        "source": "long, short",
+        "suggest": "长，短",
+        "translate": ""
+    },
+    {
+        "source": "short, long",
+        "suggest": "短，长",
+        "translate": ""
+    },
+    {
+        "source": "Everything is dropped when predicate panicked.",
+        "suggest": "谓词恐慌时，所有内容都将丢失。",
+        "translate": ""
+    },
+    {
+        "source": "Drop panic.",
+        "suggest": "Drop panic。",
+        "translate": ""
+    },
+    {
+        "source": "Other elements are dropped when `drop` of one element panicked.",
+        "suggest": "当一个元素的 `drop` 发生 panic 时，其他元素将被丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "The panicked wrapper also has its Rc dropped.",
+        "suggest": "panic 的包装器的 Rc 也丢弃了。",
+        "translate": ""
+    },
+    {
+        "source": "If the boxed pointers were leaked or otherwise misused, valgrind and/or rt should raise errors.",
+        "suggest": "如果 boxed 指针泄漏或以其他方式被滥用，则 valgrind 或者 rt 应该引发错误。",
+        "translate": ""
+    },
+    {
+        "source": "Verify that if the filter could panic again on another element that it would not cause a double panic and all elements of the vec would still be dropped exactly once.",
+        "suggest": "验证过滤器是否可以在另一个元素上再次执行 panic 不会导致双重 panic，并且 vec 的所有元素仍将被丢弃一次。",
+        "translate": ""
+    },
+    {
+        "source": "The DrainFilter is explicitly consumed",
+        "suggest": "DrainFilter 被显式使用",
+        "translate": ""
+    },
+    {
+        "source": "Re-enable emscripten once it can catch panics",
+        "suggest": "一旦可以捕获 panics，则重新启用 emscripten",
+        "translate": ""
+    },
+    {
+        "source": "The DrainFilter is dropped without being consumed",
+        "suggest": "DrainFilter 被丢弃而不被消耗",
+        "translate": ""
+    },
+    {
+        "source": "Same basic idea, but with interesting type size",
+        "suggest": "基本思想相同，但字体大小有趣",
+        "translate": ""
+    },
+    {
+        "source": "Should fail in the mul-by-size",
+        "suggest": "应该失败的大小",
+        "translate": ""
+    },
+    {
+        "source": "Pull an element from the iterator, then drop it.",
+        "suggest": "从迭代器中取出一个元素，然后丢弃它。",
+        "translate": ""
+    },
+    {
+        "source": "Useful to cover both the `next` and `drop` paths of an iterator.",
+        "suggest": "覆盖迭代器的 `next` 和 `drop` 路径很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Test that, if we reserved enough space, adding and removing elements does not invalidate references into the vector (such as `v0`).",
+        "suggest": "测试一下，如果我们保留了足够的空间，则添加和删除元素不会使对 vector (例如 `v0`) 的引用无效。",
+        "translate": ""
+    },
+    {
+        "source": "This test also runs in Miri, which would detect such problems.",
+        "suggest": "该测试也在 Miri 中运行，它将检测到此类问题。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this test does *not* constitute a stable guarantee that all these functions do not reallocate!",
+        "suggest": "请注意，此测试不构成所有这些函数不会重新分配的稳定保证！!",
+        "translate": ""
+    },
+    {
+        "source": "Only what is explicitly documented at <https://doc.rust-lang.org/nightly/std/vec/struct.Vec.html#guarantees> is stably guaranteed.",
+        "suggest": "只有在 <https://doc.rust-lang.org/nightly/std/vec/struct.Vec.html#guarantees> 上明确记录的内容才能得到稳定保证。",
+        "translate": ""
+    },
+    {
+        "source": "Laundering the lifetime -- we take care that `v` does not reallocate, so that's okay.",
+        "suggest": "清洗生命周期 - 我们注意 `v` 不会重新分配，所以可以。",
+        "translate": ""
+    },
+    {
+        "source": "Now do a bunch of things and occasionally use `v0` again to assert it is still valid.",
+        "suggest": "现在做一堆事情，并偶尔使用 `v0` 断言它仍然有效。",
+        "translate": ""
+    },
+    {
+        "source": "and popping/removing",
+        "suggest": "和 popping/removing",
+        "translate": ""
+    },
+    {
+        "source": "swap_remove the last element",
+        "suggest": "swap_remove 最后一个元素",
+        "translate": ""
+    },
+    {
+        "source": "(with `T: Copy`) specialization",
+        "suggest": "(带有 `T: Copy`) 专业化",
+        "translate": ""
+    },
+    {
+        "source": "specialization with empty iterator",
+        "suggest": "空迭代器的专业化",
+        "translate": ""
+    },
+    {
+        "source": "No-op reservation",
+        "suggest": "无效的保留",
+        "translate": ""
+    },
+    {
+        "source": "Partial draining",
+        "suggest": "部分 draining",
+        "translate": ""
+    },
+    {
+        "source": "empty tail after range",
+        "suggest": "范围后的空 tail",
+        "translate": ""
+    },
+    {
+        "source": "replacement is smaller than original range",
+        "suggest": "替代品小于原始范围",
+        "translate": ""
+    },
+    {
+        "source": "lower bound not exact",
+        "suggest": "下限不精确",
+        "translate": ""
+    },
+    {
+        "source": "Smoke test that would fire even outside Miri if an actual relocation happened.",
+        "suggest": "如果发生实际搬迁，烟雾测试甚至会在 Miri 外部触发。",
+        "translate": ""
+    },
+    {
+        "source": "to call `RawVec::with_capacity_zeroed` for creating `Vec<*mut T>`, which is incorrect for fat pointers since `<*mut T>::is_null` only looks at the data component.",
+        "suggest": "调用 `RawVec::with_capacity_zeroed` 来创建 `Vec<*mut T>`，这对于胖指针是不正确的，因为 `<* mut T>::is_null` 仅查看数据组件。",
+        "translate": ""
+    },
+    {
+        "source": "That is, a fat pointer can be “null” without being made entirely of zero bits.",
+        "suggest": "也就是说，胖指针可以为 `null`，而不必完全由零位组成。",
+        "translate": ""
+    },
+    {
+        "source": "This test will likely fail if you change the capacities used in `RawVec::grow_amortized`.",
+        "suggest": "如果更改 `RawVec::grow_amortized` 中使用的容量，则该测试可能会失败。",
+        "translate": ""
+    },
+    {
+        "source": "If the element size is 1, we jump from 0 to 8, then double.",
+        "suggest": "如果元素大小为 1，则从 0 跳到 8，然后加倍。",
+        "translate": ""
+    },
+    {
+        "source": "If the element size is 2..=1024, we jump from 0 to 4, then double.",
+        "suggest": "如果元素大小为 2..=1024，则从 0 跳到 4，然后加倍。",
+        "translate": ""
+    },
+    {
+        "source": "If the element size is > 1024, we jump from 0 to 1, then double.",
+        "suggest": "如果元素大小 > 1024，则从 0 跳到 1，然后加倍。",
+        "translate": ""
+    },
+    {
+        "source": "from_elem syntax (see RFC 832)",
+        "suggest": "from_elem 语法 (请参见 RFC 832)",
+        "translate": ""
+    },
+    {
+        "source": "these elements get deduplicated",
+        "suggest": "这些元素已删除重复数据",
+        "translate": ""
+    },
+    {
+        "source": "here it panics",
+        "suggest": "在这里 panics",
+        "translate": ""
+    },
+    {
+        "source": "Regression test for issue #82533",
+        "suggest": "issue #82533 的回归测试",
+        "translate": ""
+    },
+    {
+        "source": "This should clone&append one Panic{..} at the end, and then panic while cloning second Panic{..}.",
+        "suggest": "这应该在末尾克隆并附加一个 Panic {..}，然后在克隆第二个 Panic {..} 的同时克隆 panic。",
+        "translate": ""
+    },
+    {
+        "source": "This means that `Panic::drop` should be called",
+        "suggest": "这意味着应该调用 `Panic::drop`",
+        "translate": ""
+    },
+    {
+        "source": "4 times (3 for items already in vector, 1 for just appended).",
+        "suggest": "4 次 (对于 vector 中已存在的项，为 3 次，刚刚附加的为 1 次)。",
+        "translate": ""
+    },
+    {
+        "source": "Previously just appended item was leaked, making drop_count = 3, instead of 4.",
+        "suggest": "以前刚刚追加的项被泄漏，让 drop_count = 3 而不是 4。",
+        "translate": ""
+    },
+    {
+        "source": "Pushing the lo past half way point to trigger the 'B' scenario for growth",
+        "suggest": "将 lo 推到中间点以触发 'B' 增长方案",
+        "translate": ""
+    },
+    {
+        "source": "There used to be a bug here about how the VecDeque made growth assumptions about the underlying Vec which didn't hold and lead to corruption.",
+        "suggest": "关于 VecDeque 如何对未持有并导致腐败的基础 Vec 进行增长假设，这里曾经存在一个错误。",
+        "translate": ""
+    },
+    {
+        "source": "(Vec grows to next power of two) good- [9, 12, 15, X, X, X, X, |6] bug-  [15, 12, X, X, X, |6, X, X]",
+        "suggest": "(Vec 成长为下一个 2 的幂) 好 - [9, 12, 15, X, X, X, X, |6] 错误 - [15, 12, X, X, X, |6, X, X]",
+        "translate": ""
+    },
+    {
+        "source": "Which leads us to the following state which would be a failure case.",
+        "suggest": "这导致我们进入以下状态，这将是一个失败案例。",
+        "translate": ""
+    },
+    {
+        "source": "bug-  [15, 12, X, X, X, X, |X, X]",
+        "suggest": "错误 - [15, 12, X, X, X, X, |X, X]",
+        "translate": ""
+    },
+    {
+        "source": "Empty iter",
+        "suggest": "空迭代",
+        "translate": ""
+    },
+    {
+        "source": "simple iter",
+        "suggest": "简单的迭代",
+        "translate": ""
+    },
+    {
+        "source": "wrapped iter",
+        "suggest": "包装的 iter",
+        "translate": ""
+    },
+    {
+        "source": "partially used",
+        "suggest": "部分使用",
+        "translate": ""
+    },
+    {
+        "source": "test that two deques hash equal even if elements are laid out differently",
+        "suggest": "测试两个双端队列散列是否相等，即使元素的布局不同",
+        "translate": ""
+    },
+    {
+        "source": "shift values 1 step to the right by pop, sub one, push",
+        "suggest": "通过弹出，小一，推向右移动值 1 步",
+        "translate": ""
+    },
+    {
+        "source": "test that two deques are equal even if elements are laid out differently",
+        "suggest": "测试两个双端队列是否相等，即使元素的布局不同",
+        "translate": ""
+    },
+    {
+        "source": "try every shift",
+        "suggest": "尝试每一班",
+        "translate": ""
+    },
+    {
+        "source": "test growth path A [T o o H] -> [T o o H . . . .",
+        "suggest": "测试 growth 路径 A [T o o H] -> [T o o H . . . .",
+        "translate": ""
+    },
+    {
+        "source": "test growth path B [H T o o] -> [. T o o H . . .",
+        "suggest": "测试 growth 路径 B [H T o o] -> [. T o o H . . .",
+        "translate": ""
+    },
+    {
+        "source": "test growth path C [o o H T] -> [o o H . . . .",
+        "suggest": "测试 growth 路径 C [o o H T] -> [o o H . . . .",
+        "translate": ""
+    },
+    {
+        "source": "normal append",
+        "suggest": "正常追加",
+        "translate": ""
+    },
+    {
+        "source": "append nothing to something",
+        "suggest": "不追加任何东西",
+        "translate": ""
+    },
+    {
+        "source": "append something to nothing",
+        "suggest": "一无所有",
+        "translate": ""
+    },
+    {
+        "source": "Many different permutations of both the `VecDeque` getting appended to and the one getting appended are generated to check `append`.",
+        "suggest": "`VecDeque` 被附加到 `VecDeque` 的许多不同排列都被生成以检查 `append`。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures all 6 code paths of `append` are tested.",
+        "suggest": "这样可以确保 `append` 的所有 6 条代码路径都经过测试。",
+        "translate": ""
+    },
+    {
+        "source": "doesn't pop more values than are pushed",
+        "suggest": "弹出的值不超过推送的值",
+        "translate": ""
+    },
+    {
+        "source": "Assert that appending `src` to `dst` gives the same order of values as iterating over both in sequence.",
+        "suggest": "断言将 `src` 附加到 `dst` 会得到与顺序迭代两个值相同的值顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Check isize::MAX is an OOM VecDeque starts with capacity 7, always adds 1 to the capacity and also rounds the number to next power of 2 so this is the furthest we can go without triggering CapacityOverflow",
+        "suggest": "检查 isize::MAX 是一个 OOM VecDeque，从容量 7 开始，始终将容量加 1，并将数字四舍五入到下一个 2 的幂，因此这是我们在不触发 CapacityOverflow 的情况下可以做的最大",
+        "translate": ""
+    },
+    {
+        "source": "Contiguous (front only) search:",
+        "suggest": "连续 (仅限正面) 搜索:",
+        "translate": ""
+    },
+    {
+        "source": "Split search (both front & back non-empty):",
+        "suggest": "分割搜索 (前后均非空) :",
+        "translate": ""
+    },
+    {
+        "source": "Zero sized type",
+        "suggest": "零大小类型",
+        "translate": ""
+    },
+    {
+        "source": "Test that for all possible sequences of push_front / push_back, we end up with a deque of the correct size",
+        "suggest": "测试对于 push_front/push_back 的所有可能序列，我们最终得到正确大小的双端队列",
+        "translate": ""
+    },
+    {
+        "source": "Note that these are on nightly due to rust-lang/rust#63700 not being on stable yet",
+        "suggest": "请注意，由于 rust-lang/rust#63700 尚未稳定，因此它们是每晚运行的",
+        "translate": ""
+    },
+    {
+        "source": "full fidelity of backtraces on 32-bit msvc requires frame pointers, so enable that for our tests",
+        "suggest": "在 32 位 msvc 上完全回溯的保真度需要帧指针，因此请为我们的测试启用",
+        "translate": ""
+    },
+    {
+        "source": "Optionally enable the ability to serialize a `Backtrace`, controlled through the `serialize-*` features below.",
+        "suggest": "(可选) 启用通过以下 `serialize-*` 功能控制的 `Backtrace` 序列化功能。",
+        "translate": ""
+    },
+    {
+        "source": "Optionally demangle C++ frames' symbols in backtraces.",
+        "suggest": "(可选) 在回溯中对 C++ 框架的符号进行解贴。",
+        "translate": ""
+    },
+    {
+        "source": "Optional dependencies enabled through the `gimli-symbolize` feature, do not use these features directly.",
+        "suggest": "通过 `gimli-symbolize` 功能启用的可选依赖项，请勿直接使用这些功能。",
+        "translate": ""
+    },
+    {
+        "source": "By default libstd support and gimli-symbolize is used to symbolize addresses.",
+        "suggest": "默认情况下，libstd 支持和 gimli-symbolize 用于符号化地址。",
+        "translate": ""
+    },
+    {
+        "source": "Include std support.",
+        "suggest": "包括 std 支持。",
+        "translate": ""
+    },
+    {
+        "source": "This enables types like `Backtrace`.",
+        "suggest": "这将启用 `Backtrace` 之类的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Methods of resolving symbols",
+        "suggest": "解析符号的方法",
+        "translate": ""
+    },
+    {
+        "source": "gimli-symbolize: use the `gimli-rs/addr2line` crate to symbolicate addresses into file, line, and name using DWARF debug information.",
+        "suggest": "gimli-symbolize: 使用 `gimli-rs/addr2line` crate 通过 DWARF 调试信息将地址符号化为文件，行和名称。",
+        "translate": ""
+    },
+    {
+        "source": "libbacktrace: this feature activates the `backtrace-sys` dependency, building the libbacktrace library found in gcc repos.",
+        "suggest": "libbacktrace: 此功能激活 `backtrace-sys` 依赖关系，构建在 gcc repos 中找到的 libbacktrace 库。",
+        "translate": ""
+    },
+    {
+        "source": "Note that MSVC unconditionally uses the dbghelp library to symbolize and won't be affected by feature selection here.",
+        "suggest": "请注意，MSVC 无条件使用 dbghelp 库进行符号化，并且不受此处功能选择的影响。",
+        "translate": ""
+    },
+    {
+        "source": "Also note that it's highly unlikely you want to configure this.",
+        "suggest": "还要注意，您极不可能要配置它。",
+        "translate": ""
+    },
+    {
+        "source": "If you're having trouble getting backtraces it's likely best to open an issue.",
+        "suggest": "如果您在回溯时遇到问题，最好打开一个问题。",
+        "translate": ""
+    },
+    {
+        "source": "Methods of serialization",
+        "suggest": "序列化方法",
+        "translate": ""
+    },
+    {
+        "source": "Various features used for enabling rustc-serialize or syntex codegen.",
+        "suggest": "用于启用 rustc-serialize 或 syntex 码源的各种功能。",
+        "translate": ""
+    },
+    {
+        "source": "Only here for backwards compatibility purposes or for internal testing purposes.",
+        "suggest": "仅在此处用于向后兼容目的或用于内部测试目的。",
+        "translate": ""
+    },
+    {
+        "source": "New code should use none of these features.",
+        "suggest": "新代码不应使用这些功能。",
+        "translate": ""
+    },
+    {
+        "source": "Prep the SDK and emulator",
+        "suggest": "准备 SDK 和模拟器",
+        "translate": ""
+    },
+    {
+        "source": "Note that the update process requires that we accept a bunch of licenses, and we can't just pipe `yes` into it for some reason, so we take the same strategy located in https://github.com/appunite/dockerbyjustwrappingitinascriptwhichapparentlymagicallyacceptsthelicenses.",
+        "suggest": "请注意，更新过程要求我们接受大量许可证，并且由于某种原因我们不能仅将 `yes` 通过管道传递给它，因此我们采用 https://github.com/appunite/dockerbyjustwrappingitinascriptwhichapparentlymagicallyacceptsthelicenses 中的相同策略。",
+        "translate": ""
+    },
+    {
+        "source": "Try to fix warning about missing file.",
+        "suggest": "尝试修复有关丢失文件的警告。",
+        "translate": ""
+    },
+    {
+        "source": "Print all available packages yes | ./sdk/tools/bin/sdkmanager --list --verbose",
+        "suggest": "打印所有可用软件包 ./sdk/tools/bin/sdkmanager - 列表 - 详细",
+        "translate": ""
+    },
+    {
+        "source": "Small script to run tests for a target (or all targets) inside all the respective docker images.",
+        "suggest": "小型脚本，用于在所有各自的 Docker 映像内针对一个目标 (或所有目标) 运行测试。",
+        "translate": ""
+    },
+    {
+        "source": "keep going",
+        "suggest": "继续前进",
+        "translate": ""
+    },
+    {
+        "source": "Resolve this instruction pointer to a symbol name",
+        "suggest": "将此指令指针解析为符号名称",
+        "translate": ""
+    },
+    {
+        "source": "keep going to the next frame",
+        "suggest": "继续前进到下一帧",
+        "translate": ""
+    },
+    {
+        "source": "A library for acquiring backtraces at runtime for Rust.",
+        "suggest": "一个用于在运行时获取 Rust 的回溯的库。",
+        "translate": ""
+    },
+    {
+        "source": "This library aims to enhance the support of the standard library by providing a programmatic interface to work with, but it also supports simply easily printing the current backtrace like libstd's panics.",
+        "suggest": "该库旨在通过提供程序接口来增强对标准库的支持，但它也支持轻松轻松地打印当前回溯，如 libstd 的 panics。",
+        "translate": ""
+    },
+    {
+        "source": "To simply capture a backtrace and defer dealing with it until a later time, you can use the top-level `Backtrace` type.",
+        "suggest": "要简单地捕获回溯跟踪并将其推迟到以后再处理，可以使用顶级 `Backtrace` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "If, however, you'd like more raw access to the actual tracing functionality, you can use the `trace` and `resolve` functions directly.",
+        "suggest": "但是，如果您希望对原始的跟踪功能有更多的原始访问权限，则可以直接使用 `trace` 和 `resolve` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "This project is licensed under either of",
+        "suggest": "该项目获得以下任一许可",
+        "translate": ""
+    },
+    {
+        "source": "Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)",
+        "suggest": "Apache 许可证，版本 2.0，([LICENSE-APACHE](LICENSE-APACHE) 或 http://www.apache.org/licenses/LICENSE-2.0)",
+        "translate": ""
+    },
+    {
+        "source": "MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)",
+        "suggest": "MIT 许可证 ([LICENSE-MIT](LICENSE-MIT) 或 http://opensource.org/licenses/MIT)",
+        "translate": ""
+    },
+    {
+        "source": "at your option.",
+        "suggest": "由您选择。",
+        "translate": ""
+    },
+    {
+        "source": "Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in backtrace-rs by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.",
+        "suggest": "除非您明确声明，否则 Apache-2.0 许可证中定义的由您有意提交以供包含在 backtrace-rs 中的任何贡献均应如上所述获得双重许可，且无任何其他条款或条件。",
+        "translate": ""
+    },
+    {
+        "source": "Backtrace strategy for MSVC platforms.",
+        "suggest": "MSVC 平台的回溯策略。",
+        "translate": ""
+    },
+    {
+        "source": "This module contains the ability to generate a backtrace on MSVC using one of two possible methods.",
+        "suggest": "该模块包含使用两种可能的方法之一在 MSVC 上生成回溯的功能。",
+        "translate": ""
+    },
+    {
+        "source": "The `StackWalkEx` function is primarily used if possible, but not all systems have that.",
+        "suggest": "如果可能，主要使用 `StackWalkEx` 函数，但并非所有系统都具有。",
+        "translate": ""
+    },
+    {
+        "source": "Failing that the `StackWalk64` function is used instead.",
+        "suggest": "未能使用 `StackWalk64` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `StackWalkEx` is favored because it handles debuginfo internally and returns inline frame information.",
+        "suggest": "请注意，`StackWalkEx` 是受青睐的，因为它在内部处理 debuginfo 并返回嵌入式帧信息。",
+        "translate": ""
+    },
+    {
+        "source": "Note that all dbghelp support is loaded dynamically, see `src/dbghelp.rs` for more information about that.",
+        "suggest": "请注意，所有 dbghelp 支持都是动态加载的，有关此信息，请参见 `src/dbghelp.rs`。",
+        "translate": ""
+    },
+    {
+        "source": "we're just sending around raw pointers and reading them, never interpreting them so this should be safe to both send and share across threads.",
+        "suggest": "我们只是在发送裸指针并读取它们，从不解释它们，因此跨线程发送和共享应该是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "required by `CONTEXT`, is a FIXME in winapi right now",
+        "suggest": "`CONTEXT` 要求的，现在是 winapi 中的 FIXME",
+        "translate": ""
+    },
+    {
+        "source": "Allocate necessary structures for doing the stack walk",
+        "suggest": "分配进行栈遍历的必要结构",
+        "translate": ""
+    },
+    {
+        "source": "Ensure this process's symbols are initialized",
+        "suggest": "确保此进程的符号已初始化",
+        "translate": ""
+    },
+    {
+        "source": "oh well...",
+        "suggest": "那好吧...",
+        "translate": ""
+    },
+    {
+        "source": "On x86_64 and ARM64 we opt to not use the default `Sym*` functions from dbghelp for getting the function table and module base.",
+        "suggest": "在 x86_64 和 ARM64 上，我们选择不使用 dbghelp 的默认 `Sym*` 函数来获取函数表和模块库。",
+        "translate": ""
+    },
+    {
+        "source": "Instead we use the `RtlLookupFunctionEntry` function in kernel32 which will account for JIT compiler frames as well.",
+        "suggest": "取而代之的是，我们在 kernel32 中使用 `RtlLookupFunctionEntry` 函数，这也将说明 JIT 编译器框架。",
+        "translate": ""
+    },
+    {
+        "source": "These should be equivalent, but using `Rtl*` allows us to backtrace through JIT frames.",
+        "suggest": "这些应该是等效的，但是使用 `Rtl*` 可以使我们回溯 JIT 帧。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `RtlLookupFunctionEntry` only works for in-process backtraces, but that's all we support anyway, so it all lines up well.",
+        "suggest": "请注意，`RtlLookupFunctionEntry` 仅适用于进程内回溯，但无论如何我们都支持这一切，因此它们都排列良好。",
+        "translate": ""
+    },
+    {
+        "source": "Attempt to use `StackWalkEx` if we can, but fall back to `StackWalk64` since it's in theory supported on more systems.",
+        "suggest": "如果可以的话，请尝试使用 `StackWalkEx`，但请回退到 `StackWalk64`，因为从理论上讲，它在更多系统上得到支持。",
+        "translate": ""
+    },
+    {
+        "source": "Backtrace support using libunwind/gcc_s/etc APIs.",
+        "suggest": "使用 libunwind/gcc_s/etc API 的 Backtrace 支持。",
+        "translate": ""
+    },
+    {
+        "source": "This module contains the ability to unwind the stack using libunwind-style APIs.",
+        "suggest": "该模块包含了使用 libunwind 样式的 API 展开栈的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Note that there's a whole bunch of implementations of the libunwind-like API, and this is just trying to be compatible with most of them all at once instead of being picky.",
+        "suggest": "请注意，有很多类似 libunwind 的 API 的实现，这只是想一次与大多数兼容，而不是挑剔。",
+        "translate": ""
+    },
+    {
+        "source": "The libunwind API is powered by `_Unwind_Backtrace` and is in practice very reliable at generating a backtrace.",
+        "suggest": "libunwind API 由 `_Unwind_Backtrace` 提供支持，实际上在生成回溯方面非常可靠。",
+        "translate": ""
+    },
+    {
+        "source": "It's not entirely clear how it does it (frame pointers? eh_frame info? both?) but it seems to work!",
+        "suggest": "尚不清楚它是如何工作的 (帧指针? eh_frame 信息? 两者? )，但似乎可行!",
+        "translate": ""
+    },
+    {
+        "source": "Most of the complexity of this module is handling the various platform differences across libunwind implementations.",
+        "suggest": "该模块的大部分复杂性是处理 libunwind 实现中的各种平台差异。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise this is a pretty straightforward Rust binding to the libunwind APIs.",
+        "suggest": "否则，这是对 libunwind API 的非常简单的 Rust 绑定。",
+        "translate": ""
+    },
+    {
+        "source": "This is the default unwinding API for all non-Windows platforms currently.",
+        "suggest": "这是当前所有非 Windows 平台的默认展开 API。",
+        "translate": ""
+    },
+    {
+        "source": "With a raw libunwind pointer it should only ever be access in a readonly threadsafe fashion, so it's `Sync`.",
+        "suggest": "使用原始的 libunwind 指针，它只能以只读线程安全的方式进行访问，因此它是 `Sync`。",
+        "translate": ""
+    },
+    {
+        "source": "When sending to other threads via `Clone` we always switch to a version which doesn't retain interior pointers, so we should be `Send` as well.",
+        "suggest": "通过 `Clone` 发送到其他线程时，我们总是切换到不保留内部指针的版本，因此我们也应该是 `Send`。",
+        "translate": ""
+    },
+    {
+        "source": "It seems that on OSX `_Unwind_FindEnclosingFunction` returns a pointer to...",
+        "suggest": "似乎在 OSX 上 `_Unwind_FindEnclosingFunction` 返回了指向... 的指针",
+        "translate": ""
+    },
+    {
+        "source": "something that's unclear.",
+        "suggest": "不清楚的东西。",
+        "translate": ""
+    },
+    {
+        "source": "It's definitely not always the enclosing function for whatever reason.",
+        "suggest": "无论出于何种原因，它肯定都不总是封闭的函数。",
+        "translate": ""
+    },
+    {
+        "source": "It's not entirely clear to me what's going on here, so pessimize this for now and just always return the ip.",
+        "suggest": "对我来说，这还不是很清楚，所以请暂时对此进行简化，并始终返回 ip。",
+        "translate": ""
+    },
+    {
+        "source": "Note the `skip_inner_frames.rs` test is skipped on OSX due to this clause, and if this is fixed that test in theory can be run on OSX!",
+        "suggest": "请注意，由于有此条款，OSX 上的 `skip_inner_frames.rs` 测试已被跳过，如果此问题已解决，则理论上该测试可以在 OSX 上运行!",
+        "translate": ""
+    },
+    {
+        "source": "Unwind library interface used for backtraces",
+        "suggest": "展开用于回溯的库接口",
+        "translate": ""
+    },
+    {
+        "source": "Note that dead code is allowed as here are just bindings iOS doesn't use all of them it but adding more platform-specific configs pollutes the code too much",
+        "suggest": "请注意，死代码是允许的，因为这里只是绑定 iOS 并没有使用所有绑定，但是添加更多特定于平台的配置会严重污染代码",
+        "translate": ""
+    },
+    {
+        "source": "used only by ARM EABI",
+        "suggest": "仅由 ARM EABI 使用",
+        "translate": ""
+    },
+    {
+        "source": "No native _Unwind_Backtrace on iOS",
+        "suggest": "iOS 上没有原生 _Unwind_Backtrace",
+        "translate": ""
+    },
+    {
+        "source": "available since GCC 4.2.0, should be fine for our purpose",
+        "suggest": "自 GCC 4.2.0 以来可用，应该可以满足我们的目的",
+        "translate": ""
+    },
+    {
+        "source": "This function is a misnomer: rather than getting this frame's Canonical Frame Address (aka the caller frame's SP) it returns this frame's SP.",
+        "suggest": "此函数用词不当: 它没有获得此框架的规范框架地址 (即调用方框架的 SP)，而是返回了该框架的 SP。",
+        "translate": ""
+    },
+    {
+        "source": "uses a biased CFA value, therefore we need to use _Unwind_GetGR to get the stack pointer register (%r15) instead of relying on _Unwind_GetCFA.",
+        "suggest": "使用有偏差的 CFA 值，因此我们需要使用 _Unwind_GetGR 来获取栈指针寄存器 (%r15)，而不是依赖于 _Unwind_GetCFA。",
+        "translate": ""
+    },
+    {
+        "source": "On android and arm, the function `_Unwind_GetIP` and a bunch of others are macros, so we define functions containing the expansion of the macros.",
+        "suggest": "在 android 和 arm 上，函数 `_Unwind_GetIP` 和其他许多函数都是宏，因此我们定义了包含宏扩展的函数。",
+        "translate": ""
+    },
+    {
+        "source": "link to the header file that defines these macros, if you can find it.",
+        "suggest": "链接到定义这些宏的头文件 (如果可以找到的话)。",
+        "translate": ""
+    },
+    {
+        "source": "(I, fitzgen, cannot find the header file that some of these macro expansions were originally borrowed from.)",
+        "suggest": "(我，fitzgen，找不到这些宏扩展中的某些最初从中借用的头文件。)",
+        "translate": ""
+    },
+    {
+        "source": "is the stack pointer on arm.",
+        "suggest": "是 arm 上的栈指针。",
+        "translate": ""
+    },
+    {
+        "source": "This function also doesn't exist on Android or ARM/Linux, so make it a no-op.",
+        "suggest": "Android 或 ARM/Linux 上也不存在此函数，因此请使其成为 no-op。",
+        "translate": ""
+    },
+    {
+        "source": "Miri guarantees that the returned pointer can be used from any thread.",
+        "suggest": "Miri 保证可以从任何线程使用返回的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Miri guarnatees that the backtrace API functions can be called from any thread.",
+        "suggest": "Miri 保证可以从任何线程调用 backtrace API 函数。",
+        "translate": ""
+    },
+    {
+        "source": "Miri will stop execution with an error if this pointer is invalid.",
+        "suggest": "如果该指针无效，则 Miri 将因错误而停止执行。",
+        "translate": ""
+    },
+    {
+        "source": "continue the backtrace",
+        "suggest": "继续回溯",
+        "translate": ""
+    },
+    {
+        "source": "Inspects the current call-stack, passing all active frames into the closure provided to calculate a stack trace.",
+        "suggest": "检查当前调用栈，将所有活动帧传递到提供的闭包中以计算栈跟踪。",
+        "translate": ""
+    },
+    {
+        "source": "This function is the workhorse of this library in calculating the stack traces for a program.",
+        "suggest": "该函数是该库在计算程序的栈跟踪时的主力。",
+        "translate": ""
+    },
+    {
+        "source": "The given closure `cb` is yielded instances of a `Frame` which represent information about that call frame on the stack.",
+        "suggest": "给定的闭包 `cb` 是 `Frame` 的实例，这些实例表示有关栈上该调用帧的信息。",
+        "translate": ""
+    },
+    {
+        "source": "The closure is yielded frames in a top-down fashion (most recently called functions first).",
+        "suggest": "闭包以自上而下的方式生成框架 (最近称为函数优先)。",
+        "translate": ""
+    },
+    {
+        "source": "The closure's return value is an indication of whether the backtrace should continue.",
+        "suggest": "闭包的返回值指示回溯是否应继续。",
+        "translate": ""
+    },
+    {
+        "source": "A return value of `false` will terminate the backtrace and return immediately.",
+        "suggest": "`false` 的返回值将终止回溯并立即返回。",
+        "translate": ""
+    },
+    {
+        "source": "Once a `Frame` is acquired you will likely want to call `backtrace::resolve` to convert the `ip` (instruction pointer) or symbol address to a `Symbol` through which the name and/or filename/line number can be learned.",
+        "suggest": "一旦获取了 `Frame`，您可能希望调用 `backtrace::resolve` 将 `ip` (指令指针) 或符号地址转换为 `Symbol`，通过该 `Symbol` 可以了解名称或者文件名 / 行号。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is a relatively low-level function and if you'd like to, for example, capture a backtrace to be inspected later, then the `Backtrace` type may be more appropriate.",
+        "suggest": "请注意，这是一个相对较为灵活的函数，例如，如果您想捕获回溯以供以后检查，则 `Backtrace` 类型可能更合适。",
+        "translate": ""
+    },
+    {
+        "source": "Required features",
+        "suggest": "必备功能",
+        "translate": ""
+    },
+    {
+        "source": "This function requires the `std` feature of the `backtrace` crate to be enabled, and the `std` feature is enabled by default.",
+        "suggest": "此函数需要启用 `backtrace` crate 的 `std` 功能，并且默认情况下启用 `std` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "This function strives to never panic, but if the `cb` provided panics then some platforms will force a double panic to abort the process.",
+        "suggest": "这个函数尽量避免 panic，但是如果 `cb` 提供了 panics，则某些平台将强制使用双 panic 来终止进程。",
+        "translate": ""
+    },
+    {
+        "source": "Some platforms use a C library which internally uses callbacks which cannot be unwound through, so panicking from `cb` may trigger a process abort.",
+        "suggest": "某些平台使用 C 库，该库在内部使用无法解开的回调，因此从 `cb` 恐慌可能会触发进程终止。",
+        "translate": ""
+    },
+    {
+        "source": "Same as `trace`, only unsafe as it's unsynchronized.",
+        "suggest": "与 `trace` 相同，只是不安全，因为它未同步。",
+        "translate": ""
+    },
+    {
+        "source": "This function does not have synchronization guarentees but is available when the `std` feature of this crate isn't compiled in.",
+        "suggest": "该函数没有同步保证人，但是当未编译此 crate 的 `std` 功能时可用。",
+        "translate": ""
+    },
+    {
+        "source": "See the `trace` function for more documentation and examples.",
+        "suggest": "有关更多文档和示例，请参见 `trace` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "See information on `trace` for caveats on `cb` panicking.",
+        "suggest": "有关 `cb` 恐慌的注意事项，请参见 `trace` 上的信息。",
+        "translate": ""
+    },
+    {
+        "source": "A trait representing one frame of a backtrace, yielded to the `trace` function of this crate.",
+        "suggest": "代表回溯的一帧的 trait 产生给此 crate 的 `trace` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "The tracing function's closure will be yielded frames, and the frame is virtually dispatched as the underlying implementation is not always known until runtime.",
+        "suggest": "跟踪函数的闭包将是产生的帧，并且实际上将分派该帧，因为直到运行时才知道底层实现。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the current instruction pointer of this frame.",
+        "suggest": "返回此帧的当前指令指针。",
+        "translate": ""
+    },
+    {
+        "source": "This is normally the next instruction to execute in the frame, but not all implementations list this with 100% accuracy (but it's generally pretty close).",
+        "suggest": "通常，这是在框架中执行的下一条指令，但并非所有实现都以 100% 的精度列出该指令 (但通常非常接近)。",
+        "translate": ""
+    },
+    {
+        "source": "It is recommended to pass this value to `backtrace::resolve` to turn it into a symbol name.",
+        "suggest": "建议将此值传递给 `backtrace::resolve`，以将其转换为符号名称。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the current stack pointer of this frame.",
+        "suggest": "返回此帧的当前栈指针。",
+        "translate": ""
+    },
+    {
+        "source": "In the case that a backend cannot recover the stack pointer for this frame, a null pointer is returned.",
+        "suggest": "如果后端无法恢复该帧的栈指针，则返回空指针。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the starting symbol address of the frame of this function.",
+        "suggest": "返回此函数框架的起始符号地址。",
+        "translate": ""
+    },
+    {
+        "source": "This will attempt to rewind the instruction pointer returned by `ip` to the start of the function, returning that value.",
+        "suggest": "这将尝试将 `ip` 返回的指令指针回退到函数的开头，并返回该值。",
+        "translate": ""
+    },
+    {
+        "source": "In some cases, however, backends will just return `ip` from this function.",
+        "suggest": "但是，在某些情况下，后端只会从此函数返回 `ip`。",
+        "translate": ""
+    },
+    {
+        "source": "The returned value can sometimes be used if `backtrace::resolve` failed on the `ip` given above.",
+        "suggest": "如果 `backtrace::resolve` 在上面给定的 `ip` 上失败，则有时可以使用返回值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the base address of the module to which the frame belongs.",
+        "suggest": "返回框架所属模块的基地址。",
+        "translate": ""
+    },
+    {
+        "source": "This needs to come first, to ensure that Miri takes priority over the host platform",
+        "suggest": "首先需要确保 Miri 优先于主机平台",
+        "translate": ""
+    },
+    {
+        "source": "only used in dbghelp symbolize",
+        "suggest": "仅在 dbghelp 中使用象征",
+        "translate": ""
+    },
+    {
+        "source": "Empty implementation of unwinding used when no other implementation is appropriate.",
+        "suggest": "如果没有其他合适的实现，则使用展开的空实现。",
+        "translate": ""
+    },
+    {
+        "source": "no symbol names",
+        "suggest": "没有符号名称",
+        "translate": ""
+    },
+    {
+        "source": "symbol names now present",
+        "suggest": "现在显示符号名称",
+        "translate": ""
+    },
+    {
+        "source": "Representation of an owned and self-contained backtrace.",
+        "suggest": "拥有和自包含的回溯的表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "This structure can be used to capture a backtrace at various points in a program and later used to inspect what the backtrace was at that time.",
+        "suggest": "此结构体可用于捕获程序中各个点的回溯，然后用于检查当时的回溯。",
+        "translate": ""
+    },
+    {
+        "source": "supports pretty-printing of backtraces through its `Debug` implementation.",
+        "suggest": "通过 `Debug` 实现支持回溯的漂亮打印。",
+        "translate": ""
+    },
+    {
+        "source": "Frames here are listed from top-to-bottom of the stack",
+        "suggest": "此处的帧从栈的顶部到底部列出",
+        "translate": ""
+    },
+    {
+        "source": "The index we believe is the actual start of the backtrace, omitting frames like `Backtrace::new` and `backtrace::trace`.",
+        "suggest": "我们认为索引是回溯的实际开始，省略了 `Backtrace::new` 和 `backtrace::trace` 之类的框架。",
+        "translate": ""
+    },
+    {
+        "source": "Captured version of a frame in a backtrace.",
+        "suggest": "回溯中帧的捕获版本。",
+        "translate": ""
+    },
+    {
+        "source": "This type is returned as a list from `Backtrace::frames` and represents one stack frame in a captured backtrace.",
+        "suggest": "从 `Backtrace::frames` 作为列表返回此类型，它表示捕获的回溯中的一个栈帧。",
+        "translate": ""
+    },
+    {
+        "source": "Captured version of a symbol in a backtrace.",
+        "suggest": "回溯中捕获的符号版本。",
+        "translate": ""
+    },
+    {
+        "source": "This type is returned as a list from `BacktraceFrame::symbols` and represents the metadata for a symbol in a backtrace.",
+        "suggest": "此类型从 `BacktraceFrame::symbols` 作为列表返回，并表示回溯中符号的元数据。",
+        "translate": ""
+    },
+    {
+        "source": "Captures a backtrace at the callsite of this function, returning an owned representation.",
+        "suggest": "在此函数的调用位置捕获回溯，并返回一个拥有的表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "This function is useful for representing a backtrace as an object in Rust.",
+        "suggest": "此函数对于将回溯表示为 Rust 中的 object 很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This returned value can be sent across threads and printed elsewhere, and the purpose of this value is to be entirely self contained.",
+        "suggest": "此返回值可以跨线程发送并在其他位置打印，并且该值的目的是完全独立的。",
+        "translate": ""
+    },
+    {
+        "source": "Note that on some platforms acquiring a full backtrace and resolving it can be extremely expensive.",
+        "suggest": "请注意，在某些平台上，获取完整的回溯并加以解决可能非常昂贵。",
+        "translate": ""
+    },
+    {
+        "source": "If the cost is too much for your application it's recommended to instead use `Backtrace::new_unresolved()` which avoids the symbol resolution step (which typically takes the longest) and allows deferring that to a later date.",
+        "suggest": "如果对您的应用程序来说成本太高，建议改用 `Backtrace::new_unresolved()`，它避免了符号解析步骤 (通常花费最长的时间)，并允许将其推迟到以后的日期。",
+        "translate": ""
+    },
+    {
+        "source": "want to make sure there's a frame here to remove",
+        "suggest": "要确保这里有一个框架要删除",
+        "translate": ""
+    },
+    {
+        "source": "Similar to `new` except that this does not resolve any symbols, this simply captures the backtrace as a list of addresses.",
+        "suggest": "与 `new` 相似，除了它不解析任何符号外，它仅将回溯捕获为地址列表。",
+        "translate": ""
+    },
+    {
+        "source": "At a later time the `resolve` function can be called to resolve this backtrace's symbols into readable names.",
+        "suggest": "在以后的时间，可以调用 `resolve` 函数来将回溯的符号解析为可读的名称。",
+        "translate": ""
+    },
+    {
+        "source": "This function exists because the resolution process can sometimes take a significant amount of time whereas any one backtrace may only be rarely printed.",
+        "suggest": "此函数之所以存在，是因为解析过程有时会花费大量时间，而任何一个回溯都可能很少打印。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the frames from when this backtrace was captured.",
+        "suggest": "返回捕获此回溯时的帧。",
+        "translate": ""
+    },
+    {
+        "source": "The first entry of this slice is likely the function `Backtrace::new`, and the last frame is likely something about how this thread or the main function started.",
+        "suggest": "该切片的第一个条目可能是函数 `Backtrace::new`，而最后一帧则可能与此线程或主函数的启动方式有关。",
+        "translate": ""
+    },
+    {
+        "source": "If this backtrace was created from `new_unresolved` then this function will resolve all addresses in the backtrace to their symbolic names.",
+        "suggest": "如果此回溯是从 `new_unresolved` 创建的，则此函数会将回溯中的所有地址解析为其符号名称。",
+        "translate": ""
+    },
+    {
+        "source": "If this backtrace has been previously resolved or was created through `new`, this function does nothing.",
+        "suggest": "如果此回溯先前已解决或通过 `new` 创建，则此函数不执行任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Frame::ip`",
+        "suggest": "与 `Frame::ip` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Frame::symbol_address`",
+        "suggest": "与 `Frame::symbol_address` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Frame::module_base_address`",
+        "suggest": "与 `Frame::module_base_address` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Returns the list of symbols that this frame corresponds to.",
+        "suggest": "返回此框架对应的符号列表。",
+        "translate": ""
+    },
+    {
+        "source": "Normally there is only one symbol per frame, but sometimes if a number of functions are inlined into one frame then multiple symbols will be returned.",
+        "suggest": "通常，每帧只有一个符号，但是有时如果将多个函数内联到一个帧中，则会返回多个符号。",
+        "translate": ""
+    },
+    {
+        "source": "The first symbol listed is the \"innermost function\", whereas the last symbol is the outermost (last caller).",
+        "suggest": "列出的第一个符号是最内层的函数，而最后一个符号是最外面的 (最后一个调用者)。",
+        "translate": ""
+    },
+    {
+        "source": "Note that if this frame came from an unresolved backtrace then this will return an empty list.",
+        "suggest": "请注意，如果此框架来自未解决的回溯，则将返回一个空列表。",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Symbol::name`",
+        "suggest": "与 `Symbol::name` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Symbol::addr`",
+        "suggest": "与 `Symbol::addr` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Symbol::filename`",
+        "suggest": "与 `Symbol::filename` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Symbol::lineno`",
+        "suggest": "与 `Symbol::lineno` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Same as `Symbol::colno`",
+        "suggest": "与 `Symbol::colno` 相同",
+        "translate": ""
+    },
+    {
+        "source": "When printing paths we try to strip the cwd if it exists, otherwise we just print the path as-is.",
+        "suggest": "在打印路径时，我们尝试剥离 cwd (如果存在)，否则我们仅按原样打印路径。",
+        "translate": ""
+    },
+    {
+        "source": "Note that we also only do this for the short format, because if it's full we presumably want to print everything.",
+        "suggest": "请注意，我们也只对短格式执行此操作，因为如果已写满，则可能要打印所有内容。",
+        "translate": ""
+    },
+    {
+        "source": "A module to assist in managing dbghelp bindings on Windows",
+        "suggest": "一个有助于在 Windows 上管理 dbghelp 绑定的模块",
+        "translate": ""
+    },
+    {
+        "source": "Backtraces on Windows (at least for MSVC) are largely powered through `dbghelp.dll` and the various functions that it contains.",
+        "suggest": "Windows 上的回溯跟踪 (至少对于 MSVC 而言) 主要通过 `dbghelp.dll` 及其包含的各种函数提供支持。",
+        "translate": ""
+    },
+    {
+        "source": "These functions are currently loaded *dynamically* rather than linking to `dbghelp.dll` statically.",
+        "suggest": "这些函数当前是动态加载的，而不是静态链接到 `dbghelp.dll`。",
+        "translate": ""
+    },
+    {
+        "source": "This is currently done by the standard library (and is in theory required there), but is an effort to help reduce the static dll dependencies of a library since backtraces are typically pretty optional.",
+        "suggest": "目前，这是由标准库完成的 (理论上是由标准库完成的)，但是由于回溯通常是非常可选的，因此它旨在帮助减少库的静态 dll 依赖性。",
+        "translate": ""
+    },
+    {
+        "source": "That being said, `dbghelp.dll` almost always successfully loads on Windows.",
+        "suggest": "话虽如此，`dbghelp.dll` 几乎总是成功地加载到 Windows 上。",
+        "translate": ""
+    },
+    {
+        "source": "Note though that since we're loading all this support dynamically we can't actually use the raw definitions in `winapi`, but rather we need to define the function pointer types ourselves and use that.",
+        "suggest": "请注意，尽管由于我们是动态加载所有这些支持，所以我们实际上不能在 `winapi` 中使用原始定义，而是需要自己定义函数指针类型并使用它。",
+        "translate": ""
+    },
+    {
+        "source": "We don't really want to be in the business of duplicating winapi, so we have a Cargo feature `verify-winapi` which asserts that all bindings match those in winapi and this feature is enabled on CI.",
+        "suggest": "我们真的不希望复制 winapi，因此我们拥有 Cargo 功能 `verify-winapi`，该功能断言所有绑定均与 winapi 中的绑定匹配，并且此功能已在 CI 上启用。",
+        "translate": ""
+    },
+    {
+        "source": "Finally, you'll note here that the dll for `dbghelp.dll` is never unloaded, and that's currently intentional.",
+        "suggest": "最后，您会在这里注意到 `dbghelp.dll` 的 dll 从未卸载，这是当前故意的。",
+        "translate": ""
+    }
+]

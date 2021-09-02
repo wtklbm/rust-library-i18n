@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "They are not mutually exclusive, as can be seen in `unsafe fn`.",
+        "suggest": "它们并不互斥，如 `unsafe fn` 所示。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafe abilities",
+        "suggest": "不安全能力",
+        "translate": ""
+    },
+    {
+        "source": "**No matter what, Safe Rust can't cause Undefined Behavior**.",
+        "suggest": "**无论如何，安全 Rust 都不会导致未定义行为**。",
+        "translate": ""
+    },
+    {
+        "source": "This is referred to as [soundness]: a well-typed program actually has the desired properties.",
+        "suggest": "这称为 [soundness]: 类型正确的程序实际上具有所需的属性。",
+        "translate": ""
+    },
+    {
+        "source": "The [Nomicon][nomicon-soundness] has a more detailed explanation on the subject.",
+        "suggest": "[Nomicon][nomicon-soundness] 对此主题有更详细的说明。",
+        "translate": ""
+    },
+    {
+        "source": "To ensure soundness, Safe Rust is restricted enough that it can be automatically checked.",
+        "suggest": "为了确保安全，Safe Rust 受到足够的限制，可以自动检查。",
+        "translate": ""
+    },
+    {
+        "source": "Sometimes, however, it is necessary to write code that is correct for reasons which are too clever for the compiler to understand.",
+        "suggest": "但是，有时出于某些原因，需要编写正确的代码，而这些原因对于编译器来说太聪明了。",
+        "translate": ""
+    },
+    {
+        "source": "In those cases, you need to use Unsafe Rust.",
+        "suggest": "在这种情况下，您需要使用不安全的 Rust。",
+        "translate": ""
+    },
+    {
+        "source": "Here are the abilities Unsafe Rust has in addition to Safe Rust:",
+        "suggest": "除安全 Rust 之外，以下还有不安全 Rust 所具有的功能:",
+        "translate": ""
+    },
+    {
+        "source": "Dereference [raw pointers]",
+        "suggest": "解引用 [raw pointers]",
+        "translate": ""
+    },
+    {
+        "source": "Implement `unsafe` [`trait`]s",
+        "suggest": "实现 `unsafe` [`trait`] s",
+        "translate": ""
+    },
+    {
+        "source": "Call `unsafe` functions",
+        "suggest": "调用 `unsafe` 函数",
+        "translate": ""
+    },
+    {
+        "source": "Mutate [`static`]s (including [`extern`]al ones)",
+        "suggest": "可变的 [`static`] (包括 [`extern`] al 个)",
+        "translate": ""
+    },
+    {
+        "source": "Access fields of [`union`]s",
+        "suggest": "[`union`] 的访问字段",
+        "translate": ""
+    },
+    {
+        "source": "However, this extra power comes with extra responsibilities: it is now up to you to ensure soundness.",
+        "suggest": "但是，这种额外的权力还伴随着额外的责任: 现在要确保声音的完整性。",
+        "translate": ""
+    },
+    {
+        "source": "The `unsafe` keyword helps by clearly marking the pieces of code that need to worry about this.",
+        "suggest": "`unsafe` 关键字有助于明确标记需要担心的代码段。",
+        "translate": ""
+    },
+    {
+        "source": "The different meanings of `unsafe`",
+        "suggest": "`unsafe` 的不同含义",
+        "translate": ""
+    },
+    {
+        "source": "Not all uses of `unsafe` are equivalent: some are here to mark the existence of a contract the programmer must check, others are to say \"I have checked the contract, go ahead and do this\".",
+        "suggest": "并非 `unsafe` 的所有用法都是等效的: 这里有些标记是程序员必须检查的契约的存在，而另一些是 \"I have checked the contract, go ahead and do this\"。",
+        "translate": ""
+    },
+    {
+        "source": "The following [discussion on Rust Internals] has more in-depth explanations about this but here is a summary of the main points:",
+        "suggest": "以下 [discussion on Rust Internals] 对此有更深入的说明，但这是要点的总结:",
+        "translate": ""
+    },
+    {
+        "source": "calling this function means abiding by a contract the compiler cannot enforce.",
+        "suggest": "调用此函数意味着遵守编译器无法强制执行的契约。",
+        "translate": ""
+    },
+    {
+        "source": "implementing the [`trait`] means abiding by a contract the compiler cannot enforce.",
+        "suggest": "实现 [`trait`] 意味着遵守编译器无法执行的契约。",
+        "translate": ""
+    },
+    {
+        "source": "the contract necessary to call the operations inside the block has been checked by the programmer and is guaranteed to be respected.",
+        "suggest": "程序员已检查了在块中进行操作所必需的契约，并保证该契约得到遵守。",
+        "translate": ""
+    },
+    {
+        "source": "the contract necessary to implement the trait has been checked by the programmer and is guaranteed to be respected.",
+        "suggest": "程序员已经检查了实现 trait 所需的契约，并保证该契约得到遵守。",
+        "translate": ""
+    },
+    {
+        "source": "also acts like an `unsafe {}` block around the code inside the function.",
+        "suggest": "在函数内的代码周围，它也像一个 `unsafe {}` 块。",
+        "translate": ""
+    },
+    {
+        "source": "This means it is not just a signal to the caller, but also promises that the preconditions for the operations inside the function are upheld.",
+        "suggest": "这意味着不仅要向调用者发出信号，而且还应 promises 维护函数内部操作的前提条件。",
+        "translate": ""
+    },
+    {
+        "source": "Mixing these two meanings can be confusing and [proposal]s exist to use `unsafe {}` blocks inside such functions when making `unsafe` operations.",
+        "suggest": "混合使用这两种含义可能会造成混淆，并且存在在进行 `unsafe` 操作时在此类函数中使用 `unsafe {}` 块的建议。",
+        "translate": ""
+    },
+    {
+        "source": "See the [Rustnomicon] and the [Reference] for more informations.",
+        "suggest": "有关更多信息，请参见 [Rustnomicon] 和 [Reference]。",
+        "translate": ""
+    },
+    {
+        "source": "Marking elements as `unsafe`",
+        "suggest": "标记元素为 `unsafe`",
+        "translate": ""
+    },
+    {
+        "source": "can be used on functions.",
+        "suggest": "可以在函数上使用。",
+        "translate": ""
+    },
+    {
+        "source": "Note that functions and statics declared in [`extern`] blocks are implicitly marked as `unsafe` (but not functions declared as `extern \"something\" fn ...`).",
+        "suggest": "请注意，在 [`extern`] 块中声明的函数和静态变量被隐式标记为 `unsafe` (但未被声明为 `extern \"something\" fn ...` 的函数)。",
+        "translate": ""
+    },
+    {
+        "source": "Mutable statics are always unsafe, wherever they are declared.",
+        "suggest": "无论在何处声明，可变静态变量始终是不安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Methods can also be declared as `unsafe`:",
+        "suggest": "方法也可以声明为 `unsafe`:",
+        "translate": ""
+    },
+    {
+        "source": "Traits can also be declared as `unsafe`:",
+        "suggest": "Traits 也可以声明为 `unsafe`:",
+        "translate": ""
+    },
+    {
+        "source": "Since `unsafe fn` and `unsafe trait` indicate that there is a safety contract that the compiler cannot enforce, documenting it is important.",
+        "suggest": "由于 `unsafe fn` 和 `unsafe trait` 表示存在编译器无法强制执行的安全保证，因此对其进行记录很重要。",
+        "translate": ""
+    },
+    {
+        "source": "The standard library has many examples of this, like the following which is an extract from [`Vec::set_len`].",
+        "suggest": "标准库提供了许多示例，例如以下示例，它是 [`Vec::set_len`] 的摘录。",
+        "translate": ""
+    },
+    {
+        "source": "The `# Safety` section explains the contract that must be fulfilled to safely call the function.",
+        "suggest": "`# Safety` 部分说明了安全调用函数必须履行的契约。",
+        "translate": ""
+    },
+    {
+        "source": "Using `unsafe {}` blocks and `impl`s",
+        "suggest": "使用 `unsafe {}` 块和 `impl`s",
+        "translate": ""
+    },
+    {
+        "source": "Performing `unsafe` operations requires an `unsafe {}` block:",
+        "suggest": "执行 `unsafe` 操作需要一个 `unsafe {}` 块:",
+        "translate": ""
+    },
+    {
+        "source": "Traits marked as `unsafe` must be [`impl`]emented using `unsafe impl`.",
+        "suggest": "标记为 `unsafe` 的 Traits 必须使用 `unsafe impl` 进行复制。",
+        "translate": ""
+    },
+    {
+        "source": "This makes a guarantee to other `unsafe` code that the implementation satisfies the trait's safety contract.",
+        "suggest": "这为实现满足 trait 的安全保证的其他 `unsafe` 代码提供了保证。",
+        "translate": ""
+    },
+    {
+        "source": "The [Send] and [Sync] traits are examples of this behaviour in the standard library.",
+        "suggest": "[Send] 和 [Sync] traits 是标准库中此行为的示例。",
+        "translate": ""
+    },
+    {
+        "source": "Import or rename items from other crates or modules.",
+        "suggest": "从其他 crates 或模块导入或重命名项。",
+        "translate": ""
+    },
+    {
+        "source": "Usually a `use` keyword is used to shorten the path required to refer to a module item.",
+        "suggest": "通常，使用 `use` 关键字来缩短引用模块项所需的路径。",
+        "translate": ""
+    },
+    {
+        "source": "The keyword may appear in modules, blocks and even functions, usually at the top.",
+        "suggest": "关键字可能出现在模块，块甚至函数中，通常在顶部。",
+        "translate": ""
+    },
+    {
+        "source": "The most basic usage of the keyword is `use path::to::item;`, though a number of convenient shortcuts are supported:",
+        "suggest": "关键字最基本的用法是 `use path::to::item;`，尽管支持许多便捷的快捷方式:",
+        "translate": ""
+    },
+    {
+        "source": "Simultaneously binding a list of paths with a common prefix, using the glob-like brace syntax `use a::b::{c, d, e::f, g::h::i};`",
+        "suggest": "使用类似 glob 的大括号语法 `use a::b::{c, d, e::f, g::h::i};` 同时绑定具有公共前缀的路径列表",
+        "translate": ""
+    },
+    {
+        "source": "Simultaneously binding a list of paths with a common prefix and their common parent module, using the [`self`] keyword, such as `use a::b::{self, c, d::e};`",
+        "suggest": "使用 [`self`] 关键字 (例如 `use a::b::{self, c, d::e};`) 同时绑定具有公共前缀的路径列表及其公共父模块",
+        "translate": ""
+    },
+    {
+        "source": "Rebinding the target name as a new local name, using the syntax `use p::q::r as x;`.",
+        "suggest": "使用语法 `use p::q::r as x;` 将目标名称重新绑定为新的本地名称。",
+        "translate": ""
+    },
+    {
+        "source": "This can also be used with the last two features:",
+        "suggest": "这也可以与最后两个功能一起使用:",
+        "translate": ""
+    },
+    {
+        "source": "Binding all paths matching a given prefix, using the asterisk wildcard syntax `use a::b::*;`.",
+        "suggest": "使用星号通配符语法 `use a::b::*;` 绑定与给定前缀匹配的所有路径。",
+        "translate": ""
+    },
+    {
+        "source": "Nesting groups of the previous features multiple times, such as `use a::b::{self as ab, c, d::{*, e::f}};`",
+        "suggest": "多次嵌套先前功能的组，例如 `use a::b::{self as ab, c, d::{*, e::f}};`",
+        "translate": ""
+    },
+    {
+        "source": "Reexporting with visibility modifiers such as `pub use a::b;`",
+        "suggest": "使用可见性修改器 (例如 `pub use a::b;`) 进行重导出",
+        "translate": ""
+    },
+    {
+        "source": "Importing with `_` to only import the methods of a trait without binding it to a name (to avoid conflict for example):",
+        "suggest": "使用 `_` 导入仅导入 trait 的方法而不将其绑定到名称 (例如，避免冲突) :",
+        "translate": ""
+    },
+    {
+        "source": "Using path qualifiers like [`crate`], [`super`] or [`self`] is supported:",
+        "suggest": "支持使用 [`crate`]，[`super`] 或 [`self`] 之类的路径限定符:",
+        "translate": ""
+    },
+    {
+        "source": "Note that when the wildcard `*` is used on a type, it does not import its methods (though for `enum`s it imports the variants, as shown in the example below).",
+        "suggest": "注意，当在类型上使用通配符 `*` 时，它不会导入其方法 (尽管对于 `enum` 而言，它会导入成员，如下例所示)。",
+        "translate": ""
+    },
+    {
+        "source": "For more information on `use` and paths in general, see the [Reference].",
+        "suggest": "有关 `use` 和常规路径的更多信息，请参见 [Reference]。",
+        "translate": ""
+    },
+    {
+        "source": "The differences about paths and the `use` keyword between the 2015 and 2018 editions can also be found in the [Reference].",
+        "suggest": "也可以在 [Reference] 中找到有关 2015 年版本和 2018 年版本之间的路径和 `use` 关键字的差异。",
+        "translate": ""
+    },
+    {
+        "source": "Add constraints that must be upheld to use an item.",
+        "suggest": "添加使用项必须坚持的约束。",
+        "translate": ""
+    },
+    {
+        "source": "allows specifying constraints on lifetime and generic parameters.",
+        "suggest": "允许指定生命周期和泛型参数的约束。",
+        "translate": ""
+    },
+    {
+        "source": "The [RFC] introducing `where` contains detailed informations about the keyword.",
+        "suggest": "引入 `where` 的 [RFC] 包含有关关键字的详细信息。",
+        "translate": ""
+    },
+    {
+        "source": "can be used for constraints with traits:",
+        "suggest": "可以用于 traits 的约束:",
+        "translate": ""
+    },
+    {
+        "source": "can also be used for lifetimes.",
+        "suggest": "也可以用于生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "This compiles because `longer` outlives `shorter`, thus the constraint is respected:",
+        "suggest": "这是因为 `longer` 超过 `shorter` 而进行编译，因此要遵守约束:",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand, this will not compile because the `where 'b: 'a` clause is missing: the `'b` lifetime is not known to live at least as long as `'a` which means this function cannot ensure it always returns a valid reference:",
+        "suggest": "另一方面，由于缺少 `where 'b: 'a` 子句，因此无法编译: 未知 `'b` 生命周期的生存时间至少与 `'a` 一样长，这意味着该函数无法确保其始终返回有效的引用:",
+        "translate": ""
+    },
+    {
+        "source": "can also be used to express more complicated constraints that cannot be written with the `<T: Trait>` syntax:",
+        "suggest": "也可以用于表示无法使用 `<T: Trait>` 语法编写的更复杂的约束:",
+        "translate": ""
+    },
+    {
+        "source": "is available anywhere generic and lifetime parameters are available, as can be seen with the [`Cow`](crate::borrow::Cow) type from the standard library:",
+        "suggest": "在泛型和生命周期参数可用的任何地方都可用，如标准库中的 [`Cow`](crate::borrow::Cow) 类型所示:",
+        "translate": ""
+    },
+    {
+        "source": "2018 Edition keywords",
+        "suggest": "2018 版关键字",
+        "translate": ""
+    },
+    {
+        "source": "Return a [`Future`] instead of blocking the current thread.",
+        "suggest": "返回 [`Future`]，而不是阻塞当前线程。",
+        "translate": ""
+    },
+    {
+        "source": "Use `async` in front of `fn`, `closure`, or a `block` to turn the marked code into a `Future`.",
+        "suggest": "使用 `fn`，`closure` 或 `block` 前面的 `async` 将标记的代码转换为 `Future`。",
+        "translate": ""
+    },
+    {
+        "source": "As such the code will not be run immediately, but will only be evaluated when the returned future is `.await`ed.",
+        "suggest": "因此，该代码将不会立即运行，而只会在返回的 future 为.await 时进行评估。",
+        "translate": ""
+    },
+    {
+        "source": "We have written an [async book] detailing async/await and trade-offs compared to using threads.",
+        "suggest": "我们已经编写了 [async book]，其中详细介绍了 async/await 和与使用线程相比的取舍。",
+        "translate": ""
+    },
+    {
+        "source": "is a keyword from the 2018 edition onwards.",
+        "suggest": "是从 2018 年版开始的关键字。",
+        "translate": ""
+    },
+    {
+        "source": "It is available for use in stable rust from version 1.39 onwards.",
+        "suggest": "从 1.39 版本开始，它可以在稳定的 rust 中使用。",
+        "translate": ""
+    },
+    {
+        "source": "Suspend execution until the result of a [`Future`] is ready.",
+        "suggest": "暂停执行，直到 [`Future`] 的结果准备就绪为止。",
+        "translate": ""
+    },
+    {
+        "source": "`.await`ing a future will suspend the current function's execution until the `executor` has run the future to completion.",
+        "suggest": ".await`future 将暂停当前函数的执行，直到 `executor` 运行 future 为止。",
+        "translate": ""
+    },
+    {
+        "source": "Read the [async book] for details on how async/await and executors work.",
+        "suggest": "阅读 [async book]，以获得有关 async/await 和执行程序如何工作的详细信息。",
+        "translate": ""
+    },
+    {
+        "source": "is a prefix of a [trait object]'s type.",
+        "suggest": "是 [trait 对象] 类型的前缀。",
+        "translate": ""
+    },
+    {
+        "source": "The `dyn` keyword is used to highlight that calls to methods on the associated `Trait` are dynamically dispatched.",
+        "suggest": "`dyn` 关键字用于突出显示在关联的 `Trait` 上对方法的调用是动态调度的。",
+        "translate": ""
+    },
+    {
+        "source": "To use the trait this way, it must be 'object safe'.",
+        "suggest": "要以这种方式使用 trait，它必须是对象安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike generic parameters or `impl Trait`, the compiler does not know the concrete type that is being passed.",
+        "suggest": "与泛型参数或 `impl Trait` 不同，编译器不知道要传递的具体类型。",
+        "translate": ""
+    },
+    {
+        "source": "That is, the type has been [erased].",
+        "suggest": "即，类型为 [erased]。",
+        "translate": ""
+    },
+    {
+        "source": "As such, a `dyn Trait` reference contains _two_ pointers.",
+        "suggest": "因此，`dyn Trait` 引用包含 _two_ 指针。",
+        "translate": ""
+    },
+    {
+        "source": "One pointer goes to the data (e.g., an instance of a struct).",
+        "suggest": "一个指针指向该数据 (例如，结构体的实例)。",
+        "translate": ""
+    },
+    {
+        "source": "Another pointer goes to a map of method call names to function pointers (known as a virtual method table or vtable).",
+        "suggest": "另一个指针指向方法名称为函数指针的 map (称为虚拟方法表或 vtable)。",
+        "translate": ""
+    },
+    {
+        "source": "At run-time, when a method needs to be called on the `dyn Trait`, the vtable is consulted to get the function pointer and then that function pointer is called.",
+        "suggest": "在运行时，当需要在 `dyn Trait` 上调用方法时，将查询 vtable 以获取函数指针，然后调用该函数指针。",
+        "translate": ""
+    },
+    {
+        "source": "The above indirection is the additional runtime cost of calling a function on a `dyn Trait`.",
+        "suggest": "上面的间接调用是在 `dyn Trait` 上调用函数的额外运行时成本。",
+        "translate": ""
+    },
+    {
+        "source": "Methods called by dynamic dispatch generally cannot be inlined by the compiler.",
+        "suggest": "动态分配调用的方法通常不能由编译器内联。",
+        "translate": ""
+    },
+    {
+        "source": "However, `dyn Trait` is likely to produce smaller code than `impl Trait` / generic parameters as the method won't be duplicated for each concrete type.",
+        "suggest": "但是，`dyn Trait` 可能会产生比 `impl Trait` / 泛型参数小的代码，因为该方法不会针对每种具体类型重复。",
+        "translate": ""
+    },
+    {
+        "source": "Read more about `object safety` and [trait object]s.",
+        "suggest": "阅读有关 `object safety` 和 [trait object] 的更多信息。",
+        "translate": ""
+    },
+    {
+        "source": "The [Rust equivalent of a C-style union][union].",
+        "suggest": "[Rust 等价于 c 风格的 union][union]。",
+        "translate": ""
+    },
+    {
+        "source": "A `union` looks like a [`struct`] in terms of declaration, but all of its fields exist in the same memory, superimposed over one another.",
+        "suggest": "`union` 在声明方面看起来像 [`struct`]，但是它的所有字段都存在于同一内存中，彼此叠加在一起。",
+        "translate": ""
+    },
+    {
+        "source": "For instance, if we wanted some bits in memory that we sometimes interpret as a `u32` and sometimes as an `f32`, we could write:",
+        "suggest": "例如，如果我们希望内存中的某些位有时被解释为 `u32`，有时又被解释为 `f32`，则可以这样写:",
+        "translate": ""
+    },
+    {
+        "source": "Matching on unions",
+        "suggest": "union 上的匹配",
+        "translate": ""
+    },
+    {
+        "source": "It is possible to use pattern matching on `union`s.",
+        "suggest": "可以在 `union` 上使用模式匹配。",
+        "translate": ""
+    },
+    {
+        "source": "A single field name must be used and it must match the name of one of the `union`'s field.",
+        "suggest": "必须使用单个字段名称，并且该名称必须与 `union` 字段之一的名称匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Like reading from a `union`, pattern matching on a `union` requires `unsafe`.",
+        "suggest": "就像从 `union` 读取一样，在 `union` 上进行模式匹配时也需要 `unsafe`。",
+        "translate": ""
+    },
+    {
+        "source": "References to union fields",
+        "suggest": "union 字段的引用",
+        "translate": ""
+    },
+    {
+        "source": "All fields in a `union` are all at the same place in memory which means borrowing one borrows the entire `union`, for the same lifetime:",
+        "suggest": "`union` 中的所有字段都在内存中的同一位置，这意味着对于同一生命周期，整个 `union` 都用一个借用。",
+        "translate": ""
+    },
+    {
+        "source": "See the [Reference][union] for more informations on `union`s.",
+        "suggest": "有关 `union` 的更多信息，请参见 [引用][union]。",
+        "translate": ""
+    },
+    {
+        "source": "A synchronization primitive which can be written to only once.",
+        "suggest": "只能写入一次的同步原语。",
+        "translate": ""
+    },
+    {
+        "source": "This type is a thread-safe `OnceCell`.",
+        "suggest": "此类型是线程安全的 `OnceCell`。",
+        "translate": ""
+    },
+    {
+        "source": "Whether or not the value is initialized is tracked by `state_and_queue`.",
+        "suggest": "`state_and_queue` 跟踪该值是否已初始化。",
+        "translate": ""
+    },
+    {
+        "source": "to make sure dropck understands we're dropping T in our Drop impl.",
+        "suggest": "以确保 dropck 理解我们在 Drop impl 中丢弃了 T。",
+        "translate": ""
+    },
+    {
+        "source": "Why do we need `T: Send`?",
+        "suggest": "为什么我们需要 `T: Send`?",
+        "translate": ""
+    },
+    {
+        "source": "Thread A creates a `SyncOnceCell` and shares it with scoped thread B, which fills the cell, which is then destroyed by A.",
+        "suggest": "线程 A 创建一个 `SyncOnceCell` 并将其与作用域内的线程 B 共享，该线程 B 填充了 cell，然后被 A 销毁。",
+        "translate": ""
+    },
+    {
+        "source": "That is, destructor observes a sent value.",
+        "suggest": "也就是说，析构函数观察发送的值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the cell is empty, or being initialized.",
+        "suggest": "如果 cell 为空或正在初始化，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "This method never blocks.",
+        "suggest": "此方法永远不会阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "Safe b/c checked is_initialized",
+        "suggest": "安全 b/c 已检查 is_initialized",
+        "translate": ""
+    },
+    {
+        "source": "Safe b/c checked is_initialized and we have a unique access",
+        "suggest": "安全 b/c 已检查 is_initialized，我们拥有唯一的访问权",
+        "translate": ""
+    },
+    {
+        "source": "Sets the contents of this cell to `value`.",
+        "suggest": "将此 cell 的内容设置为 `value`。",
+        "translate": ""
+    },
+    {
+        "source": "May block if another thread is currently attempting to initialize the cell.",
+        "suggest": "如果另一个线程当前正在尝试初始化该单元，则可能会阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "The cell is guaranteed to contain a value when set returns, though not necessarily the one provided.",
+        "suggest": "尽管 set 不一定返回，但保证该 cell 包含一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Ok(())` if the cell's value was set by this call.",
+        "suggest": "如果此调用设置了 cell 的值，则返回 `Ok(())`。",
+        "translate": ""
+    },
+    {
+        "source": "Many threads may call `get_or_init` concurrently with different initializing functions, but it is guaranteed that only one function will be executed.",
+        "suggest": "许多线程可以使用不同的初始化函数并发调用 `get_or_init`，但是可以保证仅执行一个函数。",
+        "translate": ""
+    },
+    {
+        "source": "Current implementation deadlocks, but this may be changed to a panic in the future.",
+        "suggest": "当前的实现死锁，但是可以在 future 中将其更改为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "The exact outcome is unspecified.",
+        "suggest": "确切的结果是不确定的。",
+        "translate": ""
+    },
+    {
+        "source": "Fast path check",
+        "suggest": "快速路径检查",
+        "translate": ""
+    },
+    {
+        "source": "We need to perform an acquire on the state in this method in order to correctly synchronize `SyncLazy::force`.",
+        "suggest": "为了正确同步 `SyncLazy::force`，我们需要使用此方法对状态执行获取。",
+        "translate": ""
+    },
+    {
+        "source": "This is currently done by calling `self.get()`, which in turn calls `self.is_initialized()`, which in turn performs the acquire.",
+        "suggest": "当前，这是通过调用 `self.get()` (依次调用 `self.is_initialized()`) 来完成的，而 `self.is_initialized()` 依次执行获取。",
+        "translate": ""
+    },
+    {
+        "source": "The inner value has been initialized",
+        "suggest": "内部值已初始化",
+        "translate": ""
+    },
+    {
+        "source": "Internal-only API that gets the contents of the cell, initializing it in two steps with `f` and `g` if the cell was empty.",
+        "suggest": "仅限内部的 API，用于获取 cell 的内容，如果 cell 为空，则使用 `f` 和 `g` 分两步对其进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "is called to construct the value, which is then moved into the cell and given as a (pinned) mutable reference to `g` to finish initialization.",
+        "suggest": "调用构造该值，然后将其移到 cell 中并作为 (pinned) 的变量引用给 `g` 以完成初始化。",
+        "translate": ""
+    },
+    {
+        "source": "This allows `g` to inspect an manipulate the value after it has been moved into its final place in the cell, but before the cell is considered initialized.",
+        "suggest": "这使 `g` 在将值移到 cell 中的最终位置之后但在将其视为初始化之前，可以检查该值。",
+        "translate": ""
+    },
+    {
+        "source": "If `f` or `g` panics, the panic is propagated to the caller, and the cell remains uninitialized.",
+        "suggest": "如果为 `f` 或 `g` panics，则 panic 会传播到调用方，并且单元仍保持未初始化状态。",
+        "translate": ""
+    },
+    {
+        "source": "With the current implementation, if `g` panics, the value from `f` will not be dropped.",
+        "suggest": "在当前实现中，如果 `g` panics，则不会丢弃 `f` 中的值。",
+        "translate": ""
+    },
+    {
+        "source": "This should probably be fixed if this is ever used for a type where this matters.",
+        "suggest": "如果此类型曾用于此类型，则可能应该修复此问题。",
+        "translate": ""
+    },
+    {
+        "source": "The inner value was already initialized, and will not be moved anymore.",
+        "suggest": "内部值已被初始化，将不再移动。",
+        "translate": ""
+    },
+    {
+        "source": "Ignore poisoning from other threads If another thread panics, then we'll be able to run our closure",
+        "suggest": "忽略其他线程的中毒如果另一个线程 panics，那么我们将能够运行我们的闭包",
+        "translate": ""
+    },
+    {
+        "source": "We use the Once (self.once) to guarantee unique access to the UnsafeCell (slot).",
+        "suggest": "我们使用一次 (self.once) 来保证对 UnsafeCell (slot) 的唯一访问。",
+        "translate": ""
+    },
+    {
+        "source": "The value has been written to its final place in self.value.",
+        "suggest": "该值已被写入 self.value 的最终位置。",
+        "translate": ""
+    },
+    {
+        "source": "We do not to move it anymore, which we promise here with a Pin<&mut T>.",
+        "suggest": "我们不再移动它，我们在这里用 Pin<&mut T> 将其 promise 移动。",
+        "translate": ""
+    },
+    {
+        "source": "The inner value has been initialized, and will not be moved anymore.",
+        "suggest": "内部值已初始化，将不再移动。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `SyncOnceCell`, returning the wrapped value.",
+        "suggest": "消耗 `SyncOnceCell`，返回包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "Takes the value out of this `SyncOnceCell`, moving it back to an uninitialized state.",
+        "suggest": "从 `SyncOnceCell` 中取出值，将其移回未初始化状态。",
+        "translate": ""
+    },
+    {
+        "source": "Has no effect and returns `None` if the `SyncOnceCell` hasn't been initialized.",
+        "suggest": "无效，如果尚未初始化 `SyncOnceCell`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "`self.value` is initialized and contains a valid `T`.",
+        "suggest": "`self.value` 已初始化，并包含有效的 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "is reset, so `is_initialized()` will be false again which prevents the value from being read twice.",
+        "suggest": "复位后，`is_initialized()` 将再次为假，这将阻止该值被读取两次。",
+        "translate": ""
+    },
+    {
+        "source": "Treat the underlying `Once` as poisoned since we failed to initialize our value.",
+        "suggest": "由于无法初始化值，因此将基础 `Once` 视为中毒。",
+        "translate": ""
+    },
+    {
+        "source": "The value must be initialized",
+        "suggest": "该值必须初始化",
+        "translate": ""
+    },
+    {
+        "source": "The cell is initialized and being dropped, so it can't be accessed again.",
+        "suggest": "cell 已初始化并已丢弃，因此无法再次访问。",
+        "translate": ""
+    },
+    {
+        "source": "We also don't touch the `T` other than dropping it, which validates our usage of #[may_dangle].",
+        "suggest": "除了 drop 它之外，我们也不会触及 `T`，它可以验证我们对 #[may_dangle] 的用法。",
+        "translate": ""
+    },
+    {
+        "source": "This type is a thread-safe `Lazy`, and can be used in statics.",
+        "suggest": "此类型是线程安全的 `Lazy`，可以在静态中使用。",
+        "translate": ""
+    },
+    {
+        "source": "We never create a `&F` from a `&SyncLazy<T, F>` so it is fine to not impl `Sync` for `F` we do create a `&mut Option<F>` in `force`, but this is properly synchronized, so it only happens once so it also does not contribute to this impl.",
+        "suggest": "我们从不从 `&SyncLazy<T, F>` 创建 `&F`，所以最好不要为 `F` 暗示 `Sync`，我们确实在 `force` 中创建了 `&mut Option<F>`，但这已正确同步，因此它只发生一次，因此也没有助长这一暗示。",
+        "translate": ""
+    },
+    {
+        "source": "auto-derived `Send` impl is OK.",
+        "suggest": "自动派生的 `Send` impl 是可以的。",
+        "translate": ""
+    },
+    {
+        "source": "Forces the evaluation of this lazy value and returns a reference to result.",
+        "suggest": "强制评估此惰性值，并返回引数以得出结果。",
+        "translate": ""
+    },
+    {
+        "source": "The Rust Standard Library",
+        "suggest": "Rust 标准库",
+        "translate": ""
+    },
+    {
+        "source": "The Rust Standard Library is the foundation of portable Rust software, a set of minimal and battle-tested shared abstractions for the [broader Rust ecosystem][crates.io].",
+        "suggest": "Rust 标准库是可移植 Rust 软件的基础，这是一组针对 [更广泛的 Rust 生态系统][crates.io] 的最小且经过实战测试的共享抽象。",
+        "translate": ""
+    },
+    {
+        "source": "It offers core types, like [`Vec<T>`] and [`Option<T>`], library-defined [operations on language primitives](#primitives), [standard macros](#macros), [I/O] and [multithreading], among [many other things][other].",
+        "suggest": "它提供了核心类型，例如 [`Vec<T>`] 和 [`Option<T>`]，库定义的对 [语言原语](#primitives) 的操作，[标准库宏](#macros)，[I/O] 和 [multithreading]，以及许多 [其他][other] 东西。",
+        "translate": ""
+    },
+    {
+        "source": "is available to all Rust crates by default.",
+        "suggest": "默认情况下可用于所有的 Rust crates。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, the standard library can be accessed in [`use`] statements through the path `std`, as in [`use std::env`].",
+        "suggest": "因此，可以通过 [`use`] 语句使用路径 `std` 来访问标准库，就像在 [`use std::env`] 中一样。",
+        "translate": ""
+    },
+    {
+        "source": "How to read this documentation",
+        "suggest": "如何阅读本文档",
+        "translate": ""
+    },
+    {
+        "source": "If you already know the name of what you are looking for, the fastest way to find it is to use the <a href=\"#\" onclick=\"focusSearchBar();\">search bar</a> at the top of the page.",
+        "suggest": "如果您已经知道要查找的内容的名称，最快的查找方法是使用页面顶部的 <a href=\"#\" onclick=\"focusSearchBar();\">搜索栏</a>。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, you may want to jump to one of these useful sections:",
+        "suggest": "否则，您可能想跳转到以下有用的部分之一:",
+        "translate": ""
+    },
+    {
+        "source": "If this is your first time, the documentation for the standard library is written to be casually perused.",
+        "suggest": "如果这是您第一次来，那么标准库的文档可以被随意的阅读。",
+        "translate": ""
+    },
+    {
+        "source": "Clicking on interesting things should generally lead you to interesting places.",
+        "suggest": "点击有趣的东西通常会把您带到有趣的地方。",
+        "translate": ""
+    },
+    {
+        "source": "Still, there are important bits you don't want to miss, so read on for a tour of the standard library and its documentation!",
+        "suggest": "尽管如此，您还是不想错过一些重要的内容，因此请继续阅读标准库及其文档!",
+        "translate": ""
+    },
+    {
+        "source": "Once you are familiar with the contents of the standard library you may begin to find the verbosity of the prose distracting.",
+        "suggest": "一旦您熟悉了标准库的内容，您可能会发现冗长的描述会使人分心。",
+        "translate": ""
+    },
+    {
+        "source": "At this stage in your development you may want to press the `[-]` button near the top of the page to collapse it into a more skimmable view.",
+        "suggest": "在开发阶段，您可能需要按页面顶部附近的 `[-]` 按钮，将其折叠为更易于阅读的视图。",
+        "translate": ""
+    },
+    {
+        "source": "While you are looking at that `[-]` button also notice the `[src]` button.",
+        "suggest": "当您看到 `[-]` 按钮的时候，也请注意 `[src]` 按钮。",
+        "translate": ""
+    },
+    {
+        "source": "Rust's API documentation comes with the source code and you are encouraged to read it.",
+        "suggest": "Rust 的 API 文档附带了源代码，我们鼓励您阅读它。",
+        "translate": ""
+    },
+    {
+        "source": "The standard library source is generally high quality and a peek behind the curtains is often enlightening.",
+        "suggest": "标准库的资源通常是高质量的，通常可以启发人们对幕后的了解。",
+        "translate": ""
+    },
+    {
+        "source": "What is in the standard library documentation?",
+        "suggest": "标准库文档中有什么?",
+        "translate": ""
+    },
+    {
+        "source": "First of all, The Rust Standard Library is divided into a number of focused modules, [all listed further down this page](#modules).",
+        "suggest": "首先，Rust 标准库分为多个重点 [模块](#modules)，所有的这些模块都会在本页下方列出。",
+        "translate": ""
+    },
+    {
+        "source": "These modules are the bedrock upon which all of Rust is forged, and they have mighty names like [`std::slice`] and [`std::cmp`].",
+        "suggest": "这些模块是所有 Rust 锻造的基础，它们具有强大的名称，如 [`std::slice`] 和 [`std::cmp`]。",
+        "translate": ""
+    },
+    {
+        "source": "Modules' documentation typically includes an overview of the module along with examples, and are a smart place to start familiarizing yourself with the library.",
+        "suggest": "模块的文档通常包括模块的概述和示例，是开始熟悉库的好地方。",
+        "translate": ""
+    },
+    {
+        "source": "Second, implicit methods on [primitive types] are documented here.",
+        "suggest": "其次，此处记录了 [primitive types] 上的隐式方法。",
+        "translate": ""
+    },
+    {
+        "source": "This can be a source of confusion for two reasons:",
+        "suggest": "造成混淆的原因有两个:",
+        "translate": ""
+    },
+    {
+        "source": "While primitives are implemented by the compiler, the standard library implements methods directly on the primitive types (and it is the only library that does so), which are [documented in the section on primitives](#primitives).",
+        "suggest": "虽然原语是由编译器实现的，但标准库是直接在原语类型上实现方法 (而且它是唯一一个这样做的库)。在 [原语](#primitives) 部分中对此进行了说明。",
+        "translate": ""
+    },
+    {
+        "source": "The standard library exports many modules *with the same name as primitive types*.",
+        "suggest": "标准库导出了许多模块，这些模块的名称和原始类型的名称相同。",
+        "translate": ""
+    },
+    {
+        "source": "These define additional items related to the primitive type, but not the all-important methods.",
+        "suggest": "它们定义了与原始类型有关的其他项，但没有定义所有重要的方法。",
+        "translate": ""
+    },
+    {
+        "source": "So for example there is a [page for the primitive type `i32`](primitive::i32) that lists all the methods that can be called on",
+        "suggest": "例如，有一个 [基本类型为 `i32`](primitive::i32) 的页面列出了可以调用的所有方法",
+        "translate": ""
+    },
+    {
+        "source": "32-bit integers (very useful), and there is a [page for the module `std::i32`] that documents the constant values [`MIN`] and [`MAX`] (rarely useful).",
+        "suggest": "32 位整数 (非常有用)，并且有一个 [page for the module `std::i32`] 记录了常量值 [`MIN`] 和 [`MAX`] (很少有用)。",
+        "translate": ""
+    },
+    {
+        "source": "Note the documentation for the primitives [`str`] and [`[T]`][prim@slice] (also called 'slice').",
+        "suggest": "请注意原始 [`str`] 和 [`[T]`][prim@slice] (也称为 'slice') 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Many method calls on [`String`] and [`Vec<T>`] are actually calls to methods on [`str`] and [`[T]`][prim@slice] respectively, via [deref coercions][deref-coercions].",
+        "suggest": "[`String`] 和 [`Vec<T>`] 上许多方法的调用实际上都是通过 [解引用强制多态][deref-coercions] 分别对 [`str`] 和 [`[T]`][prim@slice] 上的方法的调用。",
+        "translate": ""
+    },
+    {
+        "source": "Third, the standard library defines [The Rust Prelude], a small collection of items - mostly traits - that are imported into every module of every crate.",
+        "suggest": "第三，标准库还定义了 [The Rust Prelude]，这是一小部分项目 - 主要是 traits - 导入到每个 crate 的每个模块中。",
+        "translate": ""
+    },
+    {
+        "source": "The traits in the prelude are pervasive, making the prelude documentation a good entry point to learning about the library.",
+        "suggest": "prelude 中的 traits 无处不在，这使 prelude 文档成为了解该库的一个很好的切入点。",
+        "translate": ""
+    },
+    {
+        "source": "And finally, the standard library exports a number of standard macros, and [lists them on this page](#macros) (technically, not all of the standard macros are defined by the standard library - some are defined by the compiler - but they are documented here the same).",
+        "suggest": "最后，标准库导出了许多标准宏，并且在 [此页面](#macros) 上列出了它们 (从技术上讲，并不是所有的标准宏都由标准库定义的 - 有些是由编译器定义的 - 但它们在这里的文档是相同的)。",
+        "translate": ""
+    },
+    {
+        "source": "Like the prelude, the standard macros are imported by default into all crates.",
+        "suggest": "与 prelude 一样，默认情况下会将标准宏导入到所有 crates 中。",
+        "translate": ""
+    },
+    {
+        "source": "Contributing changes to the documentation",
+        "suggest": "对文档的更改做出贡献",
+        "translate": ""
+    },
+    {
+        "source": "Check out the rust contribution guidelines [here](https://rustc-dev-guide.rust-lang.org/contributing.html#writing-documentation).",
+        "suggest": "在 [这里](https://rustc-dev-guide.rust-lang.org/contributing.html#writing-documentation) 查看 Rust 贡献指南。",
+        "translate": ""
+    },
+    {
+        "source": "The source for this documentation can be found on [GitHub](https://github.com/rust-lang/rust).",
+        "suggest": "该文档的源代码可以在 [GitHub](https://github.com/rust-lang/rust) 上找到。",
+        "translate": ""
+    },
+    {
+        "source": "To contribute changes, make sure you read the guidelines first, then submit pull-requests for your suggested changes.",
+        "suggest": "要贡献更改，请确保您先阅读指南，然后为您建议的更改提交拉取请求。",
+        "translate": ""
+    },
+    {
+        "source": "Contributions are appreciated!",
+        "suggest": "感谢您的贡献!",
+        "translate": ""
+    },
+    {
+        "source": "If you see a part of the docs that can be improved, submit a PR, or chat with us first on [Discord][rust-discord] #docs.",
+        "suggest": "如果您看到可以改进的部分文档，请提交 PR，或者先在 [Discord][rust-discord] #docs 上与我们聊天。",
+        "translate": ""
+    },
+    {
+        "source": "A Tour of The Rust Standard Library",
+        "suggest": "Rust 标准库之旅",
+        "translate": ""
+    },
+    {
+        "source": "The rest of this crate documentation is dedicated to pointing out notable features of The Rust Standard Library.",
+        "suggest": "crate 文档的其余部分致力于指出 Rust 标准库的显著特性。",
+        "translate": ""
+    },
+    {
+        "source": "Containers and collections",
+        "suggest": "容器和集合",
+        "translate": ""
+    },
+    {
+        "source": "The [`option`] and [`result`] modules define optional and error-handling types, [`Option<T>`] and [`Result<T, E>`].",
+        "suggest": "[`option`] 和 [`result`] 模块定义了可选和错误处理类型 [`Option<T>`] 和 [`Result<T, E>`]。",
+        "translate": ""
+    },
+    {
+        "source": "The [`iter`] module defines Rust's iterator trait, [`Iterator`], which works with the [`for`] loop to access collections.",
+        "suggest": "[`iter`] 模块定义了 Rust 的迭代器 trait [`Iterator`]，它与 [`for`] 循环一起工作来访问集合。",
+        "translate": ""
+    },
+    {
+        "source": "The standard library exposes three common ways to deal with contiguous regions of memory:",
+        "suggest": "标准库公开了三种处理连续内存区域的常用方法:",
+        "translate": ""
+    },
+    {
+        "source": "A heap-allocated *vector* that is resizable at runtime.",
+        "suggest": "在运行时可调整大小的堆分配的 *vector*。",
+        "translate": ""
+    },
+    {
+        "source": "An inline *array* with a fixed size at compile time.",
+        "suggest": "在编译时具有固定大小的内联 *数组*。",
+        "translate": ""
+    },
+    {
+        "source": "A dynamically sized *slice* into any other kind of contiguous storage, whether heap-allocated or not.",
+        "suggest": "动态调整大小的 *切片* 到任何其他类型的连续存储中，无论是否进行了堆分配。",
+        "translate": ""
+    },
+    {
+        "source": "Slices can only be handled through some kind of *pointer*, and as such come in many flavors such as:",
+        "suggest": "切片只能通过某种 *指针* 来处理，因此具有多种形式，例如:",
+        "translate": ""
+    },
+    {
+        "source": "*shared slice*",
+        "suggest": "*共享切片*",
+        "translate": ""
+    },
+    {
+        "source": "*mutable slice*",
+        "suggest": "*可变切片*",
+        "translate": ""
+    },
+    {
+        "source": "*owned slice*",
+        "suggest": "*拥有 (所有权) 的切片*",
+        "translate": ""
+    },
+    {
+        "source": "a UTF-8 string slice, is a primitive type, and the standard library defines many methods for it.",
+        "suggest": "UTF-8 字符串片段是一种原始类型，标准库为它定义了许多方法。",
+        "translate": ""
+    },
+    {
+        "source": "Rust [`str`]s are typically accessed as immutable references: `&str`.",
+        "suggest": "Rust [`str`] 通常作为不可变引用来访问: `&str`。",
+        "translate": ""
+    },
+    {
+        "source": "Use the owned [`String`] for building and mutating strings.",
+        "suggest": "使用拥有所有权的 [`String`] 来创建和修改字符串。",
+        "translate": ""
+    },
+    {
+        "source": "For converting to strings use the [`format!`] macro, and for converting from strings use the [`FromStr`] trait.",
+        "suggest": "要转换为字符串，请使用 [`format!`] 宏; 要从字符串转换，请使用 [`FromStr`] trait。",
+        "translate": ""
+    },
+    {
+        "source": "Data may be shared by placing it in a reference-counted box or the [`Rc`] type, and if further contained in a [`Cell`] or [`RefCell`], may be mutated as well as shared.",
+        "suggest": "可以通过将数据放在引用计数的 Box 或 [`Rc`] 类型中来共享数据，并且，如果进一步包含在 [`Cell`] 或 [`RefCell`] 中，则可以对其进行可变的和共享。",
+        "translate": ""
+    },
+    {
+        "source": "Likewise, in a concurrent setting it is common to pair an atomically-reference-counted box, [`Arc`], with a [`Mutex`] to get the same effect.",
+        "suggest": "同样，在并发设置中，通常将原子引用计数的 Box [`Arc`] 与 [`Mutex`] 配合以获得相同的效果。",
+        "translate": ""
+    },
+    {
+        "source": "The [`collections`] module defines maps, sets, linked lists and other typical collection types, including the common [`HashMap<K, V>`].",
+        "suggest": "[`collections`] 模块定义了 Map，Set，链表和其他典型的集合类型，包括常见的 [`HashMap<K, V>`]。",
+        "translate": ""
+    },
+    {
+        "source": "Platform abstractions and I/O",
+        "suggest": "平台抽象和 I/O",
+        "translate": ""
+    },
+    {
+        "source": "Besides basic data types, the standard library is largely concerned with abstracting over differences in common platforms, most notably Windows and Unix derivatives.",
+        "suggest": "除了基本的数据类型外，标准库还主要关注对通用平台差异的抽象 (尤其是 Windows 和 Unix 派生平台)。",
+        "translate": ""
+    },
+    {
+        "source": "Common types of I/O, including [files], [TCP], [UDP], are defined in the [`io`], [`fs`], and [`net`] modules.",
+        "suggest": "常见的 I/O 类型包括 [files]，[TCP] 和 [UDP]。它们被定义在 [`io`]，[`fs`] 和 [`net`] 模块中。",
+        "translate": ""
+    },
+    {
+        "source": "The [`thread`] module contains Rust's threading abstractions.",
+        "suggest": "[`thread`] 模块包含了 Rust 的线程抽象。",
+        "translate": ""
+    },
+    {
+        "source": "[`sync`] contains further primitive shared memory types, including [`atomic`] and [`mpsc`], which contains the channel types for message passing.",
+        "suggest": "[`sync`] 包含更多的原始共享内存类型，包括 [`atomic`] 和 [`mpsc`]，其中包含用于消息传递的通道类型。",
+        "translate": ""
+    },
+    {
+        "source": "Don't link to std.",
+        "suggest": "不要链接到 std。",
+        "translate": ""
+    },
+    {
+        "source": "We are std.",
+        "suggest": "我们是 std。",
+        "translate": ""
+    },
+    {
+        "source": "Tell the compiler to link to either panic_abort or panic_unwind",
+        "suggest": "告诉编译器链接到 panic_abort 或 panic_unwind",
+        "translate": ""
+    },
+    {
+        "source": "std may use features in a platform-specific way",
+        "suggest": "std 可能以特定于平台的方式使用特性",
+        "translate": ""
+    },
+    {
+        "source": "std is implemented with unstable features, many of which are internal compiler details that will never be stable",
+        "suggest": "std 实现了不稳定的特性，其中许多是永远不会稳定的内部编译器细节",
+        "translate": ""
+    },
+    {
+        "source": "the following list is sorted to minimize merge conflicts.",
+        "suggest": "对下面的列表排序是为了最大限度地减少合并冲突。",
+        "translate": ""
+    },
+    {
+        "source": "the above list is sorted to minimize merge conflicts.",
+        "suggest": "对上面的列表排序是为了最大限度地减少合并冲突。",
+        "translate": ""
+    },
+    {
+        "source": "Explicitly import the prelude.",
+        "suggest": "显式导入 prelude。",
+        "translate": ""
+    },
+    {
+        "source": "The compiler uses this same unstable attribute to import the prelude implicitly when building crates that depend on std.",
+        "suggest": "在构建依赖于 std 的 crates 时，编译器使用此不稳定属性来隐式导入 prelude。",
+        "translate": ""
+    },
+    {
+        "source": "Access to Bencher, etc.",
+        "suggest": "访问 Bencher 等",
+        "translate": ""
+    },
+    {
+        "source": "macros from `alloc` are not used on all platforms",
+        "suggest": "并非所有平台都使用来自 `alloc` 的宏",
+        "translate": ""
+    },
+    {
+        "source": "We always need an unwinder currently for backtraces",
+        "suggest": "当前，我们总是需要一个 unwinder 来回溯",
+        "translate": ""
+    },
+    {
+        "source": "During testing, this crate is not actually the \"real\" std library, but rather it links to the real std library, which was compiled from this same source code.",
+        "suggest": "在测试期间，此 crate 实际上不是 \"真正的\" std 库，而是链接到实际的 std 库，该库是从相同的源代码编译而成的。",
+        "translate": ""
+    },
+    {
+        "source": "So any lang items std defines are conditionally excluded (or else they would generate duplicate lang item errors), and any globals it defines are _not_ the globals used by \"real\" std.",
+        "suggest": "因此，std 定义的任何 lang 项都被有条件地排除 (否则它们将生成重复的 lang 项错误)，并且它定义的任何全局变量都不是真实 std 中使用的全局变量。",
+        "translate": ""
+    },
+    {
+        "source": "So this import, defined only during testing gives test-std access to real-std lang items and globals.",
+        "suggest": "所以这个仅在测试期间定义的导入使 test-std 可以访问 real-std lang 项和全局变量。",
+        "translate": ""
+    },
+    {
+        "source": "See #2912",
+        "suggest": "请参见 #2912",
+        "translate": ""
+    },
+    {
+        "source": "The standard macros that are not built-in to the compiler.",
+        "suggest": "编译器未内置的标准宏。",
+        "translate": ""
+    },
+    {
+        "source": "The Rust prelude",
+        "suggest": "Rust prelude",
+        "translate": ""
+    },
+    {
+        "source": "Public module declarations and re-exports",
+        "suggest": "公共模块声明和重导出",
+        "translate": ""
+    },
+    {
+        "source": "The `no_inline`-attribute is required to make the documentation of all targets available.",
+        "suggest": "必须提供 `no_inline` 属性，以提供所有目标的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Note (#82861): required for correct documentation",
+        "suggest": "Note (#82861): 正确的文档要求",
+        "translate": ""
+    },
+    {
+        "source": "Platform-abstraction modules",
+        "suggest": "平台抽象模块",
+        "translate": ""
+    },
+    {
+        "source": "Private support modules",
+        "suggest": "private 支持模块",
+        "translate": ""
+    },
+    {
+        "source": "The runtime entry point and a few unstable public functions used by the compiler",
+        "suggest": "运行时入口点和编译器使用的一些不稳定的公共函数",
+        "translate": ""
+    },
+    {
+        "source": "Pull in the `std_detect` crate directly into libstd.",
+        "suggest": "将 `std_detect` crate 直接拉入 libstd。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of `std_detect` are in a different repository:",
+        "suggest": "`std_detect` 的内容在另一个仓库中:",
+        "translate": ""
+    },
+    {
+        "source": "depends on libstd, but the contents of this module are set up in such a way that directly pulling it here works such that the crate uses the this crate as its libstd.",
+        "suggest": "取决于 libstd，但是此模块的内容设置为可以在此处直接拉出模块，这样 crate 将此 crate 用作其 libstd。",
+        "translate": ""
+    },
+    {
+        "source": "Re-export macros defined in libcore.",
+        "suggest": "重导出 libcore 中定义的宏。",
+        "translate": ""
+    },
+    {
+        "source": "Re-export built-in macros defined through libcore.",
+        "suggest": "重导出通过 libcore 定义的内置宏。",
+        "translate": ""
+    },
+    {
+        "source": "Include a number of private modules that exist solely to provide the rustdoc documentation for primitive types.",
+        "suggest": "包括许多私有模块，这些模块仅用于提供原始类型的 rustdoc 文档。",
+        "translate": ""
+    },
+    {
+        "source": "Using `include!` because rustdoc only looks for these modules at the crate level.",
+        "suggest": "使用 `include!` 是因为 rustdoc 只在 crate 级别上查找这些模块。",
+        "translate": ""
+    },
+    {
+        "source": "Include a number of private modules that exist solely to provide the rustdoc documentation for the existing keywords.",
+        "suggest": "包括许多私有模块，这些模块仅用于为现有关键字提供 rustdoc 文档。",
+        "translate": ""
+    },
+    {
+        "source": "This is required to avoid an unstable error when `restricted-std` is not enabled.",
+        "suggest": "这是必需的，以避免在未启用 `restricted-std` 时产生不稳定的错误。",
+        "translate": ""
+    },
+    {
+        "source": "The use of #![feature(restricted_std)] in rustc-std-workspace-std is unconditional, so the unstable feature needs to be defined somewhere.",
+        "suggest": "#![feature(restricted_std)] 在 rustc-std-workspace-std 中的使用是无条件的，所以不稳定的特性需要在某处定义。",
+        "translate": ""
+    },
+    {
+        "source": "This trait being unreachable from outside the crate prevents outside implementations of our extension traits.",
+        "suggest": "这个 trait 从 crate 外部无法访问，这阻止了我们扩展 trait 的外部实现。",
+        "translate": ""
+    },
+    {
+        "source": "This allows adding more trait methods in the future.",
+        "suggest": "这允许在未来添加更多 trait 方法。",
+        "translate": ""
+    },
+    {
+        "source": "prints just a newline",
+        "suggest": "只打印换行符",
+        "translate": ""
+    },
+    {
+        "source": "prints: [src/main.rs:2] a * 2 = 4",
+        "suggest": "打印: [src/main.rs:2] a * 2 = 4",
+        "translate": ""
+    },
+    {
+        "source": "A wrapper around `usize` which importantly is not Copyable.",
+        "suggest": "`usize` 的包装器，重要的是它不可复制。",
+        "translate": ""
+    },
+    {
+        "source": "is moved here.",
+        "suggest": "移到这里了",
+        "translate": ""
+    },
+    {
+        "source": "is moved again;",
+        "suggest": "再次移动;",
+        "translate": ""
+    },
+    {
+        "source": "error!",
+        "suggest": "错误!",
+        "translate": ""
+    },
+    {
+        "source": "trailing comma ignored",
+        "suggest": "尾部逗号被忽略",
+        "translate": ""
+    },
+    {
+        "source": "Standard library macros",
+        "suggest": "标准库宏",
+        "translate": ""
+    },
+    {
+        "source": "This module contains a set of macros which are exported from the standard library.",
+        "suggest": "该模块包含一组从标准库导出的宏。",
+        "translate": ""
+    },
+    {
+        "source": "Each macro is available for use when linking against the standard library.",
+        "suggest": "当链接到标准库时，每个宏都可以使用。",
+        "translate": ""
+    },
+    {
+        "source": "Prints to the standard output.",
+        "suggest": "打印到标准输出。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to the [`println!`] macro except that a newline is not printed at the end of the message.",
+        "suggest": "等效于 [`println!`] 宏，只是在消息末尾不打印换行符。",
+        "translate": ""
+    },
+    {
+        "source": "Note that stdout is frequently line-buffered by default so it may be necessary to use [`io::stdout().flush()`][flush] to ensure the output is emitted immediately.",
+        "suggest": "注意，默认情况下，stdout 通常是行缓冲的，因此可能有必要使用 [`io::stdout().flush()`][flush] 以确保立即发出输出。",
+        "translate": ""
+    },
+    {
+        "source": "Use `print!` only for the primary output of your program.",
+        "suggest": "`print!` 仅用于程序的主要输出。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`eprint!`] instead to print error and progress messages.",
+        "suggest": "请改用 [`eprint!`] 打印错误和进度消息。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if writing to `io::stdout()` fails.",
+        "suggest": "如果写入 `io::stdout()` 失败，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Prints to the standard output, with a newline.",
+        "suggest": "用换行符打印到标准输出。",
+        "translate": ""
+    },
+    {
+        "source": "On all platforms, the newline is the LINE FEED character (`\\n`/`U+000A`) alone (no additional CARRIAGE RETURN (`\\r`/`U+000D`)).",
+        "suggest": "在所有平台上，换行符仅是 LINE FEED 字符 (`\\n`/`U+000A`) (没有其他的 CARRIAGE RETURN (`\\r`/`U+000D`))。",
+        "translate": ""
+    },
+    {
+        "source": "Use the [`format!`] syntax to write data to the standard output.",
+        "suggest": "使用 [`format!`] 语法将数据写入标准输出。",
+        "translate": ""
+    },
+    {
+        "source": "See [`std::fmt`] for more information.",
+        "suggest": "有关更多信息，请参见 [`std::fmt`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use `println!` only for the primary output of your program.",
+        "suggest": "`println!` 仅用于程序的主要输出。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`eprintln!`] instead to print error and progress messages.",
+        "suggest": "请改用 [`eprintln!`] 打印错误和进度消息。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if writing to [`io::stdout`] fails.",
+        "suggest": "如果写入 [`io::stdout`] 失败，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Prints to the standard error.",
+        "suggest": "打印到标准错误。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to the [`print!`] macro, except that output goes to [`io::stderr`] instead of [`io::stdout`].",
+        "suggest": "等效于 [`print!`] 宏，除了输出转到 [`io::stderr`] 而不是 [`io::stdout`]。",
+        "translate": ""
+    },
+    {
+        "source": "See [`print!`] for example usage.",
+        "suggest": "有关用法示例，请参见 [`print!`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use `eprint!` only for error and progress messages.",
+        "suggest": "仅将 `eprint!` 用于错误和进度消息。",
+        "translate": ""
+    },
+    {
+        "source": "Use `print!` instead for the primary output of your program.",
+        "suggest": "改用 `print!` 作为程序的主要输出。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if writing to `io::stderr` fails.",
+        "suggest": "如果写入 `io::stderr` 失败，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Prints to the standard error, with a newline.",
+        "suggest": "用换行符打印到标准错误。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to the [`println!`] macro, except that output goes to [`io::stderr`] instead of [`io::stdout`].",
+        "suggest": "等效于 [`println!`] 宏，除了输出转到 [`io::stderr`] 而不是 [`io::stdout`]。",
+        "translate": ""
+    },
+    {
+        "source": "See [`println!`] for example usage.",
+        "suggest": "有关用法示例，请参见 [`println!`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use `eprintln!` only for error and progress messages.",
+        "suggest": "仅将 `eprintln!` 用于错误和进度消息。",
+        "translate": ""
+    },
+    {
+        "source": "Use `println!` instead for the primary output of your program.",
+        "suggest": "改用 `println!` 作为程序的主要输出。",
+        "translate": ""
+    },
+    {
+        "source": "Prints and returns the value of a given expression for quick and dirty debugging.",
+        "suggest": "打印并返回给定表达式的值，以进行快速而肮脏的调试。",
+        "translate": ""
+    },
+    {
+        "source": "An example:",
+        "suggest": "一个例子:",
+        "translate": ""
+    },
+    {
+        "source": "The macro works by using the `Debug` implementation of the type of the given expression to print the value to [stderr] along with the source location of the macro invocation as well as the source code of the expression.",
+        "suggest": "宏通过使用给定表达式的类型的 `Debug` 实现将值与宏调用的源位置以及表达式的源代码一起打印到 [stderr] 来工作。",
+        "translate": ""
+    },
+    {
+        "source": "Invoking the macro on an expression moves and takes ownership of it before returning the evaluated expression unchanged.",
+        "suggest": "调用表达式上的宏会移动并获取它的所有权，然后再返回不变的求值表达式。",
+        "translate": ""
+    },
+    {
+        "source": "If the type of the expression does not implement `Copy` and you don't want to give up ownership, you can instead borrow with `dbg!(&expr)` for some expression `expr`.",
+        "suggest": "如果表达式的类型未实现 `Copy`，并且您不想放弃所有权，则可以改用 `dbg!(&expr)` 借用某些表达式 `expr`。",
+        "translate": ""
+    },
+    {
+        "source": "The `dbg!` macro works exactly the same in release builds.",
+        "suggest": "`dbg!` 宏在发行版中的工作原理完全相同。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when debugging issues that only occur in release builds or when debugging in release mode is significantly faster.",
+        "suggest": "当仅在发行版本中发生的调试问题或在发行模式下进行的调试明显更快时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the macro is intended as a debugging tool and therefore you should avoid having uses of it in version control for long periods.",
+        "suggest": "请注意，宏旨在用作调试工具，因此，应避免长时间在版本控制中使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Use cases involving debug output that should be added to version control are better served by macros such as [`debug!`] from the [`log`] crate.",
+        "suggest": "[`log`] crate 中的宏 (例如 [`debug!`]) 可以更好地满足涉及应将调试输出添加到版本控制中的用例。",
+        "translate": ""
+    },
+    {
+        "source": "The exact output printed by this macro should not be relied upon and is subject to future changes.",
+        "suggest": "不应依赖此宏打印的确切输出，并且可能会受到 future 的更改。",
+        "translate": ""
+    },
+    {
+        "source": "Further examples",
+        "suggest": "进一步的例子",
+        "translate": ""
+    },
+    {
+        "source": "With a method call:",
+        "suggest": "用一种方法:",
+        "translate": ""
+    },
+    {
+        "source": "This prints to [stderr]:",
+        "suggest": "打印到 [stderr]:",
+        "translate": ""
+    },
+    {
+        "source": "Naive factorial implementation:",
+        "suggest": "单纯的析因实现:",
+        "translate": ""
+    },
+    {
+        "source": "The `dbg!(..)` macro moves the input:",
+        "suggest": "`dbg!(..)` 宏移动输入:",
+        "translate": ""
+    },
+    {
+        "source": "You can also use `dbg!()` without a value to just print the file and line whenever it's reached.",
+        "suggest": "您也可以使用不带任何值的 `dbg!()` 来仅在到达文件和行时打印它。",
+        "translate": ""
+    },
+    {
+        "source": "Finally, if you want to `dbg!(..)` multiple values, it will treat them as a tuple (and return it, too):",
+        "suggest": "最后，如果要 `dbg!(..)` 多个值，它将把它们视为一个元组 (并返回它) :",
+        "translate": ""
+    },
+    {
+        "source": "However, a single argument with a trailing comma will still not be treated as a tuple, following the convention of ignoring trailing commas in macro invocations.",
+        "suggest": "但是，遵循在宏调用中忽略尾部逗号的约定，带有尾部逗号的单个参数仍不会被视为元组。",
+        "translate": ""
+    },
+    {
+        "source": "You can use a 1-tuple directly if you need one:",
+        "suggest": "如果需要一个，可以直接使用一个 1 元组:",
+        "translate": ""
+    },
+    {
+        "source": "We cannot use `concat!` to make a static string as a format argument of `eprintln!` because `file!` could contain a `{` or `$val` expression could be a block (`{ ..",
+        "suggest": "我们不能使用 `concat!` 作为 `eprintln!` 的格式参数来生成静态字符串，因为 `file!` 可能包含 `{` 或 `$val` 表达式可能是一个块 (`{。",
+        "translate": ""
+    },
+    {
+        "source": "}`), in which case the `eprintln!` will be malformed.",
+        "suggest": "}`)，在这种情况下 `eprintln!` 的格式将不正确。",
+        "translate": ""
+    },
+    {
+        "source": "Use of `match` here is intentional because it affects the lifetimes of temporaries - https://stackoverflow.com/a/48732525/1063961",
+        "suggest": "在此使用 `match` 是有意的，因为它会影响临时人员的生命周期 - https://stackoverflow.com/a/48732525/1063961",
+        "translate": ""
+    },
+    {
+        "source": "test the implementations for the current platform",
+        "suggest": "测试当前平台的实现",
+        "translate": ""
+    },
+    {
+        "source": "A safe interface to `memchr`.",
+        "suggest": "`memchr` 的安全接口。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the index corresponding to the first occurrence of `needle` in `haystack`, or `None` if one is not found.",
+        "suggest": "返回与 `haystack` 中首次出现的 `needle` 对应的索引，如果找不到 `None`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "memchr reduces to super-optimized machine code at around an order of magnitude faster than `haystack.iter().position(|&b| b == needle)`.",
+        "suggest": "memchr 可以以比 `haystack.iter().position(|&b| b == needle)` 快大约一个数量级的速度还原为超级优化的机器代码。",
+        "translate": ""
+    },
+    {
+        "source": "(See benchmarks.)",
+        "suggest": "(请参见基准测试。)",
+        "translate": ""
+    },
+    {
+        "source": "This shows how to find the first position of a byte in a byte string.",
+        "suggest": "这显示了如何在字节字符串中找到字节的第一个位置。",
+        "translate": ""
+    },
+    {
+        "source": "A safe interface to `memrchr`.",
+        "suggest": "`memrchr` 的安全接口。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the index corresponding to the last occurrence of `needle` in `haystack`, or `None` if one is not found.",
+        "suggest": "返回与 `haystack` 中最后一次出现的 `needle` 对应的索引，如果未找到，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "This shows how to find the last position of a byte in a byte string.",
+        "suggest": "这显示了如何在字节字符串中找到字节的最后位置。",
+        "translate": ""
+    },
+    {
+        "source": "s has been moved into the tsa call",
+        "suggest": "s 已移入 tsa 调用",
+        "translate": ""
+    },
+    {
+        "source": "This is a regression test for a parsing problem discovered as part of issue rust-lang/rust#23076, where we were incorrectly parsing invalid input and then that would result in a successful `UdpSocket` binding when we would expect failure.",
+        "suggest": "这是对作为问题 rust-lang/rust#23076 的一部分而发现的解析问题的回归测试，其中我们错误地解析了无效的输入，然后当我们预期失败时，将导致成功的 `UdpSocket` 绑定。",
+        "translate": ""
+    },
+    {
+        "source": "At one time, this test was written as a call to `tsa` with INPUT_23076.",
+        "suggest": "有一次，这个测试被写成对带有 INPUT_23076 的 `tsa` 的调用。",
+        "translate": ""
+    },
+    {
+        "source": "However, that structure yields an unreliable test, because it ends up passing junk input to the DNS server, and some DNS servers will respond with `Ok` to such input, with the ip address of the DNS server itself.",
+        "suggest": "但是，该结构体产生了不可靠的测试，因为它最终将垃圾输入传递给 DNS 服务器，并且某些 DNS 服务器将使用 DNS 服务器本身的 IP 地址以 `Ok` 响应此类输入。",
+        "translate": ""
+    },
+    {
+        "source": "This form of the test is more robust: even when the DNS server returns its own address, it is still an error to bind a UDP socket to a non-local address, and so we still get an error here in that case.",
+        "suggest": "这种测试形式更加可靠: 即使 DNS 服务器返回自己的地址，将 UDP 套接字绑定到非本地地址仍然是错误的，因此在这种情况下，我们仍然会收到错误消息。",
+        "translate": ""
+    },
+    {
+        "source": "compare different addresses",
+        "suggest": "比较不同的地址",
+        "translate": ""
+    },
+    {
+        "source": "compare the same address with different ports",
+        "suggest": "比较相同地址和不同端口",
+        "translate": ""
+    },
+    {
+        "source": "compare different addresses with the same port",
+        "suggest": "比较具有相同端口的不同地址",
+        "translate": ""
+    },
+    {
+        "source": "compare with an inferred right-hand side",
+        "suggest": "与推断的右侧比较",
+        "translate": ""
+    },
+    {
+        "source": "assuming 'localhost' resolves to 127.0.0.1",
+        "suggest": "假设 'localhost' 解析为 127.0.0.1",
+        "translate": ""
+    },
+    {
+        "source": "assuming 'foo' does not resolve",
+        "suggest": "假设 'foo' 无法解析",
+        "translate": ""
+    },
+    {
+        "source": "An internet socket address, either IPv4 or IPv6.",
+        "suggest": "Internet 套接字地址，IPv4 或 IPv6。",
+        "translate": ""
+    },
+    {
+        "source": "Internet socket addresses consist of an [IP address], a 16-bit port number, as well as possibly some version-dependent additional information.",
+        "suggest": "Internet 套接字地址包含一个 [IP address]，一个 16 位端口号以及一些可能与版本有关的附加信息。",
+        "translate": ""
+    },
+    {
+        "source": "See [`SocketAddrV4`]'s and [`SocketAddrV6`]'s respective documentation for more details.",
+        "suggest": "有关更多详细信息，请参见 [`SocketAddrV4`] 和 [`SocketAddrV6`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "The size of a `SocketAddr` instance may vary depending on the target operating system.",
+        "suggest": "`SocketAddr` 实例的大小可能会因目标操作系统而异。",
+        "translate": ""
+    },
+    {
+        "source": "An IPv4 socket address.",
+        "suggest": "IPv4 套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "An IPv6 socket address.",
+        "suggest": "IPv6 套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "socket addresses consist of an [`IPv4` address] and a 16-bit port number, as stated in [IETF RFC 793].",
+        "suggest": "如 [IETF RFC 793] 中所述，套接字地址由 [`IPv4` address] 和 16 位端口号组成。",
+        "translate": ""
+    },
+    {
+        "source": "See [`SocketAddr`] for a type encompassing both IPv4 and IPv6 socket addresses.",
+        "suggest": "有关同时包含 IPv4 和 IPv6 套接字地址的类型，请参见 [`SocketAddr`]。",
+        "translate": ""
+    },
+    {
+        "source": "The size of a `SocketAddrV4` struct may vary depending on the target operating system.",
+        "suggest": "`SocketAddrV4` 结构体的大小可能会因目标操作系统而异。",
+        "translate": ""
+    },
+    {
+        "source": "socket addresses consist of an [`IPv6` address], a 16-bit port number, as well as fields containing the traffic class, the flow label, and a scope identifier (see [IETF RFC 2553, Section 3.3] for more details).",
+        "suggest": "套接字地址由 [`IPv6` address]，16 位端口号以及包含流量类别，流标签和作用域标识符的字段组成 (有关更多详细信息，请参见 [IETF RFC 2553, Section 3.3])。",
+        "translate": ""
+    },
+    {
+        "source": "The size of a `SocketAddrV6` struct may vary depending on the target operating system.",
+        "suggest": "`SocketAddrV6` 结构体的大小可能会因目标操作系统而异。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new socket address from an [IP address] and a port number.",
+        "suggest": "从 [IP address] 和端口号创建一个新的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the IP address associated with this socket address.",
+        "suggest": "返回与此套接字地址关联的 IP 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Changes the IP address associated with this socket address.",
+        "suggest": "更改与此套接字地址关联的 IP 地址。",
+        "translate": ""
+    },
+    {
+        "source": "would have us mutate a copy of self only to throw it away.",
+        "suggest": "让我们可变一个自我的副本而只是丢掉它。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the port number associated with this socket address.",
+        "suggest": "返回与此套接字地址关联的端口号。",
+        "translate": ""
+    },
+    {
+        "source": "Changes the port number associated with this socket address.",
+        "suggest": "更改与此套接字地址关联的端口号。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the [IP address] in this `SocketAddr` is an [`IPv4` address], and [`false`] otherwise.",
+        "suggest": "如果此 `SocketAddr` 中的 [IP address] 是 [`IPv4` address]，则返回 [`true`]，否则返回 [`false`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the [IP address] in this `SocketAddr` is an [`IPv6` address], and [`false`] otherwise.",
+        "suggest": "如果此 `SocketAddr` 中的 [IP address] 是 [`IPv6` address]，则返回 [`true`]，否则返回 [`false`]。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new socket address from an [`IPv4` address] and a port number.",
+        "suggest": "从 [`IPv4` address] 和端口号创建一个新的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "`Ipv4Addr` is `#[repr(C)] struct { _: in_addr; }`.",
+        "suggest": "`Ipv4Addr` 是 `#[repr(C)] struct { _: in_addr; }`。",
+        "translate": ""
+    },
+    {
+        "source": "It is safe to cast from `&in_addr` to `&Ipv4Addr`.",
+        "suggest": "从 `&in_addr` 转换为 `&Ipv4Addr` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new socket address from an [`IPv6` address], a 16-bit port number, and the `flowinfo` and `scope_id` fields.",
+        "suggest": "从 [`IPv6` address]，16 位端口号以及 `flowinfo` 和 `scope_id` 字段创建新的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "For more information on the meaning and layout of the `flowinfo` and `scope_id` parameters, see [IETF RFC 2553, Section 3.3].",
+        "suggest": "有关 `flowinfo` 和 `scope_id` 参数的含义和布局的更多信息，请参见 [IETF RFC 2553, Section 3.3]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the flow information associated with this address.",
+        "suggest": "返回与此地址关联的流信息。",
+        "translate": ""
+    },
+    {
+        "source": "This information corresponds to the `sin6_flowinfo` field in C's `netinet/in.h`, as specified in [IETF RFC 2553, Section 3.3].",
+        "suggest": "该信息对应于 [IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_flowinfo` 字段。",
+        "translate": ""
+    },
+    {
+        "source": "It combines information about the flow label and the traffic class as specified in [IETF RFC 2460], respectively [Section 6] and [Section 7].",
+        "suggest": "它结合了关于流标签和流量类别的信息，分别在 [IETF RFC 2460]，[Section 6] 和 [Section 7] 中指定。",
+        "translate": ""
+    },
+    {
+        "source": "Changes the flow information associated with this socket address.",
+        "suggest": "更改与此套接字地址关联的流信息。",
+        "translate": ""
+    },
+    {
+        "source": "See [`SocketAddrV6::flowinfo`]'s documentation for more details.",
+        "suggest": "有关更多详细信息，请参见 [`SocketAddrV6::flowinfo`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the scope ID associated with this address.",
+        "suggest": "返回与此地址关联的作用域 ID。",
+        "translate": ""
+    },
+    {
+        "source": "This information corresponds to the `sin6_scope_id` field in C's `netinet/in.h`, as specified in [IETF RFC 2553, Section 3.3].",
+        "suggest": "该信息对应于 [IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_scope_id` 字段。",
+        "translate": ""
+    },
+    {
+        "source": "Changes the scope ID associated with this socket address.",
+        "suggest": "更改与此套接字地址关联的作用域 ID。",
+        "translate": ""
+    },
+    {
+        "source": "See [`SocketAddrV6::scope_id`]'s documentation for more details.",
+        "suggest": "有关更多详细信息，请参见 [`SocketAddrV6::scope_id`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`SocketAddrV4`] into a [`SocketAddr::V4`].",
+        "suggest": "将 [`SocketAddrV4`] 转换为 [`SocketAddr::V4`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`SocketAddrV6`] into a [`SocketAddr::V6`].",
+        "suggest": "将 [`SocketAddrV6`] 转换为 [`SocketAddr::V6`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a tuple struct (Into<[`IpAddr`]>, `u16`) into a [`SocketAddr`].",
+        "suggest": "将元组结构体 (Into <[`IpAddr`]>，`u16`) 转换为 [`SocketAddr`]。",
+        "translate": ""
+    },
+    {
+        "source": "This conversion creates a [`SocketAddr::V4`] for a [`IpAddr::V4`] and creates a [`SocketAddr::V6`] for a [`IpAddr::V6`].",
+        "suggest": "此转换为 [`IpAddr::V4`] 创建 [`SocketAddr::V4`]，为 [`IpAddr::V6`] 创建 [`SocketAddr::V6`]。",
+        "translate": ""
+    },
+    {
+        "source": "is treated as port of the newly created [`SocketAddr`].",
+        "suggest": "被视为新创建的 [`SocketAddr`] 的端口。",
+        "translate": ""
+    },
+    {
+        "source": "Fast path: if there's no alignment stuff, write to the output buffer directly",
+        "suggest": "快速路径: 如果没有对齐内容，则直接写入输出缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "the segments",
+        "suggest": "段",
+        "translate": ""
+    },
+    {
+        "source": "the separators",
+        "suggest": "分隔符",
+        "translate": ""
+    },
+    {
+        "source": "the port",
+        "suggest": "端口",
+        "translate": ""
+    },
+    {
+        "source": "Unwrap is fine because writing to a sufficiently-sized buffer is infallible",
+        "suggest": "Unwrap 很好，因为写入足够大小的缓冲区是绝对可靠的",
+        "translate": ""
+    },
+    {
+        "source": "This unsafe is OK because we know what is being written to the buffer",
+        "suggest": "这种不安全的行为是可以的，因为我们知道正在将什么内容写入缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "The address",
+        "suggest": "地址",
+        "translate": ""
+    },
+    {
+        "source": "The colon separators",
+        "suggest": "冒号分隔符",
+        "translate": ""
+    },
+    {
+        "source": "The brackets",
+        "suggest": "括号",
+        "translate": ""
+    },
+    {
+        "source": "The scope id",
+        "suggest": "作用域 ID",
+        "translate": ""
+    },
+    {
+        "source": "The port",
+        "suggest": "端口",
+        "translate": ""
+    },
+    {
+        "source": "A trait for objects which can be converted or resolved to one or more [`SocketAddr`] values.",
+        "suggest": "trait，用于可以转换或解析为一个或多个 [`SocketAddr`] 值的对象。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is used for generic address resolution when constructing network objects.",
+        "suggest": "trait 在构造网络对象时用于泛型地址解析。",
+        "translate": ""
+    },
+    {
+        "source": "By default it is implemented for the following types:",
+        "suggest": "默认情况下，它针对以下类型实现:",
+        "translate": ""
+    },
+    {
+        "source": "[`to_socket_addrs`] is the identity function.",
+        "suggest": "[`to_socket_addrs`] 是标识函数。",
+        "translate": ""
+    },
+    {
+        "source": "constructs a [`SocketAddr`] trivially.",
+        "suggest": "简单地创建一个 [`SocketAddr`]。",
+        "translate": ""
+    },
+    {
+        "source": "`[`u16`]`)`: [`&str`] should be either a string representation of an [`IpAddr`] address as expected by [`FromStr`] implementation or a host name. [`u16`] is the port number.",
+        "suggest": "`[`u16`]`)`: [`&str`] 应该是 [`FromStr`] 实现所期望的 [`IpAddr`] 地址的字符串表示形式，或者是主机名。[`u16`] 是端口号。",
+        "translate": ""
+    },
+    {
+        "source": "the string should be either a string representation of a [`SocketAddr`] as expected by its [`FromStr`] implementation or a string like `<host_name>:<port>` pair where `<port>` is a [`u16`] value.",
+        "suggest": "该字符串应该是 [`SocketAddr`] 实现所期望的 [`SocketAddr`] 的字符串表示形式，或者是 `<host_name>:<port>` 对之类的字符串，其中 `<port>` 是 [`u16`] 值。",
+        "translate": ""
+    },
+    {
+        "source": "This trait allows constructing network objects like [`TcpStream`] or [`UdpSocket`] easily with values of various types for the bind/connection address.",
+        "suggest": "trait 允许使用 bind/connection 地址的各种类型的值轻松构造 [`TcpStream`] 或 [`UdpSocket`] 之类的网络对象。",
+        "translate": ""
+    },
+    {
+        "source": "It is needed because sometimes one type is more appropriate than the other: for simple uses a string like `\"localhost:12345\"` is much nicer than manual construction of the corresponding [`SocketAddr`], but sometimes [`SocketAddr`] value is *the* main source of the address, and converting it to some other type (e.g., a string) just for it to be converted back to [`SocketAddr`] in constructor methods is pointless.",
+        "suggest": "之所以需要它，是因为有时一种类型比另一种类型更合适: 对于简单的用法，像 `\"localhost:12345\"` 这样的字符串比相应的 [`SocketAddr`] 的手工构造好得多，但是有时 [`SocketAddr`] 值是地址的 * 主要来源，并将其转换为其他一些类型 (例如，字符串) 仅用于在构造函数方法中将其转换回 [`SocketAddr`] 是没有意义的。",
+        "translate": ""
+    },
+    {
+        "source": "Addresses returned by the operating system that are not IP addresses are silently ignored.",
+        "suggest": "操作系统返回的不是 IP 地址的地址将被静默忽略。",
+        "translate": ""
+    },
+    {
+        "source": "Creating a [`SocketAddr`] iterator that yields one item:",
+        "suggest": "创建一个产生一个项的 [`SocketAddr`] 迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "Creating a [`SocketAddr`] iterator from a hostname:",
+        "suggest": "从主机名创建 [`SocketAddr`] 迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "Creating a [`SocketAddr`] iterator that yields multiple items:",
+        "suggest": "创建一个产生多个项的 [`SocketAddr`] 迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "Attempting to create a [`SocketAddr`] iterator from an improperly formatted socket address `&str` (missing the port):",
+        "suggest": "尝试从格式不正确的套接字地址 `&str` (缺少端口) 创建 [`SocketAddr`] 迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "is an example of an function that utilizes `ToSocketAddrs` as a trait bound on its parameter in order to accept different types:",
+        "suggest": "是一个函数的示例，该函数在其参数上利用 `ToSocketAddrs` 作为 trait bound 来接受不同的类型:",
+        "translate": ""
+    },
+    {
+        "source": "Returned iterator over socket addresses which this type may correspond to.",
+        "suggest": "在此类型可能对应的套接字地址上返回的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this object to an iterator of resolved `SocketAddr`s.",
+        "suggest": "将此 object 转换为解析的 `SocketAddr` 的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator may not actually yield any values depending on the outcome of any resolution performed.",
+        "suggest": "根据执行的任何解析的结果，返回的迭代器实际上可能不会产生任何值。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this function may block the current thread while resolution is performed.",
+        "suggest": "请注意，执行解析时，此函数可能会阻塞当前线程。",
+        "translate": ""
+    },
+    {
+        "source": "try to parse the host as a regular IP address first",
+        "suggest": "尝试首先将主机解析为常规 IP 地址",
+        "translate": ""
+    },
+    {
+        "source": "accepts strings like 'localhost:12345'",
+        "suggest": "接受 'localhost:12345' 之类的字符串",
+        "translate": ""
+    },
+    {
+        "source": "try to parse as a regular SocketAddr first",
+        "suggest": "尝试首先解析为常规的 SocketAddr",
+        "translate": ""
+    },
+    {
+        "source": "out of range",
+        "suggest": "越界",
+        "translate": ""
+    },
+    {
+        "source": "too short",
+        "suggest": "太短",
+        "translate": ""
+    },
+    {
+        "source": "too long",
+        "suggest": "太长",
+        "translate": ""
+    },
+    {
+        "source": "no number between dots",
+        "suggest": "点之间没有数字",
+        "translate": ""
+    },
+    {
+        "source": "too long group",
+        "suggest": "小组时间太长",
+        "translate": ""
+    },
+    {
+        "source": "triple colon",
+        "suggest": "三重冒号",
+        "translate": ""
+    },
+    {
+        "source": "two double colons",
+        "suggest": "两个双冒号",
+        "translate": ""
+    },
+    {
+        "source": "indicating zero groups of zeros",
+        "suggest": "指示零的零组",
+        "translate": ""
+    },
+    {
+        "source": "colon after v4",
+        "suggest": "v4 之后的冒号",
+        "translate": ""
+    },
+    {
+        "source": "not enough groups",
+        "suggest": "没有足够的组",
+        "translate": ""
+    },
+    {
+        "source": "too many groups",
+        "suggest": "组太多",
+        "translate": ""
+    },
+    {
+        "source": "without port",
+        "suggest": "没有端口",
+        "translate": ""
+    },
+    {
+        "source": "wrong brackets around v4",
+        "suggest": "v4 周围的括号错误",
+        "translate": ""
+    },
+    {
+        "source": "port out of range",
+        "suggest": "端口越界",
+        "translate": ""
+    },
+    {
+        "source": "Short address",
+        "suggest": "短地址",
+        "translate": ""
+    },
+    {
+        "source": "Long address",
+        "suggest": "长地址",
+        "translate": ""
+    },
+    {
+        "source": "Test padding",
+        "suggest": "测试填充",
+        "translate": ""
+    },
+    {
+        "source": "ipv4-mapped address",
+        "suggest": "ipv4 映射的地址",
+        "translate": ""
+    },
+    {
+        "source": "ipv4-compatible address",
+        "suggest": "ipv4 兼容地址",
+        "translate": ""
+    },
+    {
+        "source": "address with no zero segments",
+        "suggest": "没有零段的地址",
+        "translate": ""
+    },
+    {
+        "source": "longest possible IPv6 length",
+        "suggest": "最长的 IPv6 长度",
+        "translate": ""
+    },
+    {
+        "source": "reduce a single run of zeros",
+        "suggest": "减少零的单次运行",
+        "translate": ""
+    },
+    {
+        "source": "don't reduce just a single zero segment",
+        "suggest": "不要只减少一个零段",
+        "translate": ""
+    },
+    {
+        "source": "ends in zeros",
+        "suggest": "以零结尾",
+        "translate": ""
+    },
+    {
+        "source": "two runs of zeros, second one is longer",
+        "suggest": "两个零的运行，第二个更长",
+        "translate": ""
+    },
+    {
+        "source": "two runs of zeros, equal length",
+        "suggest": "两个零的长度相等的游程",
+        "translate": ""
+    },
+    {
+        "source": "don't prefix `0x` to each segment in `dbg!`.",
+        "suggest": "不要在 `dbg!` 的每个段前面加上 `0x` 前缀。",
+        "translate": ""
+    },
+    {
+        "source": "make sure benchmarking addresses are not global",
+        "suggest": "确保基准测试地址不是",
+        "translate": ""
+    },
+    {
+        "source": "make sure addresses reserved for protocol assignment are not global",
+        "suggest": "确保为协议分配保留的地址不是",
+        "translate": ""
+    },
+    {
+        "source": "make sure reserved addresses are not global",
+        "suggest": "确保保留的地址不是",
+        "translate": ""
+    },
+    {
+        "source": "make sure shared addresses are not global",
+        "suggest": "确保共享地址不是",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Ipv4Addr` are usable in a const context",
+        "suggest": "测试 `Ipv4Addr` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Ipv6Addr` are usable in a const context",
+        "suggest": "测试 `Ipv6Addr` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `IpAddr` are usable in a const context",
+        "suggest": "测试 `IpAddr` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "private addresses are not global",
+        "suggest": "private 地址不是",
+        "translate": ""
+    },
+    {
+        "source": "the 0.0.0.0/8 block is not global",
+        "suggest": "0.0.0.0/8 块不是",
+        "translate": ""
+    },
+    {
+        "source": "in particular, the unspecified address is not global",
+        "suggest": "特别是，未指定的地址不是",
+        "translate": ""
+    },
+    {
+        "source": "the loopback address is not global",
+        "suggest": "回环地址不是整体",
+        "translate": ""
+    },
+    {
+        "source": "link local addresses are not global",
+        "suggest": "链接本地地址不是",
+        "translate": ""
+    },
+    {
+        "source": "the broadcast address is not global",
+        "suggest": "广播地址不是",
+        "translate": ""
+    },
+    {
+        "source": "the address space designated for documentation is not global",
+        "suggest": "指定用于文档的地址空间不是",
+        "translate": ""
+    },
+    {
+        "source": "shared addresses are not global",
+        "suggest": "共享地址不是",
+        "translate": ""
+    },
+    {
+        "source": "addresses reserved for protocol assignment are not global",
+        "suggest": "保留用于协议分配的地址不是",
+        "translate": ""
+    },
+    {
+        "source": "addresses reserved for future use are not global",
+        "suggest": "保留供 future 使用的地址不是整数",
+        "translate": ""
+    },
+    {
+        "source": "addresses reserved for network devices benchmarking are not global",
+        "suggest": "为网络设备基准测试保留的地址不是",
+        "translate": ""
+    },
+    {
+        "source": "All the other addresses are global",
+        "suggest": "所有其他地址均为",
+        "translate": ""
+    },
+    {
+        "source": "The broadcast address is not considered as reserved for future use by this implementation",
+        "suggest": "此实现不将广播地址视为保留给 future 使用",
+        "translate": ""
+    },
+    {
+        "source": "Tests for this module",
+        "suggest": "测试此模块",
+        "translate": ""
+    },
+    {
+        "source": "An IP address, either IPv4 or IPv6.",
+        "suggest": "IP 地址，IPv4 或 IPv6。",
+        "translate": ""
+    },
+    {
+        "source": "This enum can contain either an [`Ipv4Addr`] or an [`Ipv6Addr`], see their respective documentation for more details.",
+        "suggest": "该枚举可以包含 [`Ipv4Addr`] 或 [`Ipv6Addr`]，有关更多详细信息，请参见其各自的文档。",
+        "translate": ""
+    },
+    {
+        "source": "The size of an `IpAddr` instance may vary depending on the target operating system.",
+        "suggest": "`IpAddr` 实例的大小可能会因目标操作系统而异。",
+        "translate": ""
+    },
+    {
+        "source": "An IPv4 address.",
+        "suggest": "IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "An IPv6 address.",
+        "suggest": "IPv6 地址。",
+        "translate": ""
+    },
+    {
+        "source": "addresses are defined as 32-bit integers in [IETF RFC 791].",
+        "suggest": "地址在 [IETF RFC 791] 中定义为 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "They are usually represented as four octets.",
+        "suggest": "它们通常表示为四个八位位组。",
+        "translate": ""
+    },
+    {
+        "source": "See [`IpAddr`] for a type encompassing both IPv4 and IPv6 addresses.",
+        "suggest": "有关同时包含 IPv4 和 IPv6 地址的类型，请参见 [`IpAddr`]。",
+        "translate": ""
+    },
+    {
+        "source": "The size of an `Ipv4Addr` struct may vary depending on the target operating system.",
+        "suggest": "`Ipv4Addr` 结构体的大小可能会因目标操作系统而异。",
+        "translate": ""
+    },
+    {
+        "source": "Textual representation",
+        "suggest": "文字表达",
+        "translate": ""
+    },
+    {
+        "source": "provides a [`FromStr`] implementation.",
+        "suggest": "提供了 [`FromStr`] 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "The four octets are in decimal notation, divided by `.` (this is called \"dot-decimal notation\").",
+        "suggest": "四个八位位组用十进制表示法除以 `.` (称为 \"dot-decimal notation\")。",
+        "translate": ""
+    },
+    {
+        "source": "addresses are defined as 128-bit integers in [IETF RFC 4291].",
+        "suggest": "[IETF RFC 4291] 中将地址定义为 128 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "They are usually represented as eight 16-bit segments.",
+        "suggest": "它们通常表示为八个 16 位段。",
+        "translate": ""
+    },
+    {
+        "source": "The size of an `Ipv6Addr` struct may vary depending on the target operating system.",
+        "suggest": "`Ipv6Addr` 结构体的大小可能会因目标操作系统而异。",
+        "translate": ""
+    },
+    {
+        "source": "There are many ways to represent an IPv6 address in text, but in general, each segments is written in hexadecimal notation, and segments are separated by `:`.",
+        "suggest": "有多种方法可以用文本表示 IPv6 地址，但通常，每个段都以十六进制表示法，并且段之间用 `:` 分隔。",
+        "translate": ""
+    },
+    {
+        "source": "For more information, see [IETF RFC 5952].",
+        "suggest": "有关更多信息，请参见 [IETF RFC 5952]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] for the special 'unspecified' address.",
+        "suggest": "返回 [`true`] 作为特殊的 'unspecified' 地址。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`Ipv4Addr::is_unspecified()`] and [`Ipv6Addr::is_unspecified()`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Ipv4Addr::is_unspecified()`] 和 [`Ipv6Addr::is_unspecified()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a loopback address.",
+        "suggest": "如果这是一个回环地址，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`Ipv4Addr::is_loopback()`] and [`Ipv6Addr::is_loopback()`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Ipv4Addr::is_loopback()`] 和 [`Ipv6Addr::is_loopback()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the address appears to be globally routable.",
+        "suggest": "如果该地址似乎是可全局路由的，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`Ipv4Addr::is_global()`] and [`Ipv6Addr::is_global()`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Ipv4Addr::is_global()`] 和 [`Ipv6Addr::is_global()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a multicast address.",
+        "suggest": "如果这是一个多播地址，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`Ipv4Addr::is_multicast()`] and [`Ipv6Addr::is_multicast()`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Ipv4Addr::is_multicast()`] 和 [`Ipv6Addr::is_multicast()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is in a range designated for documentation.",
+        "suggest": "如果此地址在文档指定的范围内，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`Ipv4Addr::is_documentation()`] and [`Ipv6Addr::is_documentation()`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Ipv4Addr::is_documentation()`] 和 [`Ipv6Addr::is_documentation()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is an [`IPv4` address], and [`false`] otherwise.",
+        "suggest": "如果此地址是 [`IPv4` address]，则返回 [`true`]，否则返回 [`false`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is an [`IPv6` address], and [`false`] otherwise.",
+        "suggest": "如果此地址是 [`IPv6` address]，则返回 [`true`]，否则返回 [`false`]。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new IPv4 address from four eight-bit octets.",
+        "suggest": "从四个八位八位字节创建一个新的 IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "The result will represent the IP address `a`.`b`.`c`.`d`.",
+        "suggest": "结果将代表 IP 地址 `a`.`b`.`c`.`d`。",
+        "translate": ""
+    },
+    {
+        "source": "is stored as BE on all machine and the array is in BE order.",
+        "suggest": "在所有计算机上都存储为 BE，并且阵列按 BE 顺序排列。",
+        "translate": ""
+    },
+    {
+        "source": "So the native endian conversion method is used so that it's never swapped.",
+        "suggest": "因此，使用了本地字节序转换方法，因此它永远不会被交换。",
+        "translate": ""
+    },
+    {
+        "source": "An IPv4 address with the address pointing to localhost:",
+        "suggest": "一个 IPv4 地址，该地址指向 localhost:",
+        "translate": ""
+    },
+    {
+        "source": "An IPv4 address representing an unspecified address:",
+        "suggest": "代表未指定地址的 IPv4 地址:",
+        "translate": ""
+    },
+    {
+        "source": "An IPv4 address representing the broadcast address:",
+        "suggest": "表示广播地址的 IPv4 地址:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the four eight-bit integers that make up this address.",
+        "suggest": "返回组成该地址的四个八位整数。",
+        "translate": ""
+    },
+    {
+        "source": "This returns the order we want because s_addr is stored in big-endian.",
+        "suggest": "这将返回我们想要的顺序，因为 s_addr 存储在 big-endian 中。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] for the special 'unspecified' address (0.0.0.0).",
+        "suggest": "为特殊的 'unspecified' 地址 (0.0.0.0) 返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined in _UNIX Network Programming, Second Edition_, W.",
+        "suggest": "此属性在 _UNIX Network Programming, Second Edition_，W 中定义。",
+        "translate": ""
+    },
+    {
+        "source": "Richard Stevens, p.",
+        "suggest": "理查德・史蒂文斯 (Richard Stevens)，第",
+        "translate": ""
+    },
+    {
+        "source": "891; see also [ip7].",
+        "suggest": "891; 另请参见 [ip7]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a loopback address (127.0.0.0/8).",
+        "suggest": "如果这是一个回环地址 (127.0.0.0/8)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined by [IETF RFC 1122].",
+        "suggest": "此属性由 [IETF RFC 1122] 定义。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a private address.",
+        "suggest": "如果这是一个专用地址，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "The private address ranges are defined in [IETF RFC 1918] and include:",
+        "suggest": "专用地址范围在 [IETF RFC 1918] 中定义，包括:",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the address is link-local (169.254.0.0/16).",
+        "suggest": "如果地址是本地链接 (169.254.0.0/16)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined by [IETF RFC 3927].",
+        "suggest": "此属性由 [IETF RFC 3927] 定义。",
+        "translate": ""
+    },
+    {
+        "source": "See [iana-ipv4-special-registry][ipv4-sr].",
+        "suggest": "请参见 [iana-ipv4-special-registry][ipv4-sr]。",
+        "translate": ""
+    },
+    {
+        "source": "The following return [`false`]:",
+        "suggest": "以下返回 [`false`]:",
+        "translate": ""
+    },
+    {
+        "source": "private addresses (see [`Ipv4Addr::is_private()`])",
+        "suggest": "专用地址 (请参见 [`Ipv4Addr::is_private()`])",
+        "translate": ""
+    },
+    {
+        "source": "the loopback address (see [`Ipv4Addr::is_loopback()`])",
+        "suggest": "回环地址 (请参见 [`Ipv4Addr::is_loopback()`])",
+        "translate": ""
+    },
+    {
+        "source": "the link-local address (see [`Ipv4Addr::is_link_local()`])",
+        "suggest": "链接本地地址 (请参见 [`Ipv4Addr::is_link_local()`])",
+        "translate": ""
+    },
+    {
+        "source": "the broadcast address (see [`Ipv4Addr::is_broadcast()`])",
+        "suggest": "广播地址 (请参见 [`Ipv4Addr::is_broadcast()`])",
+        "translate": ""
+    },
+    {
+        "source": "addresses used for documentation (see [`Ipv4Addr::is_documentation()`])",
+        "suggest": "用于文档的地址 (请参见 [`Ipv4Addr::is_documentation()`])",
+        "translate": ""
+    },
+    {
+        "source": "the unspecified address (see [`Ipv4Addr::is_unspecified()`]), and the whole",
+        "suggest": "未指定的地址 (请参见 [`Ipv4Addr::is_unspecified()`])，以及整个地址",
+        "translate": ""
+    },
+    {
+        "source": "addresses reserved for future protocols (see [`Ipv4Addr::is_ietf_protocol_assignment()`], except `192.0.0.9/32` and `192.0.0.10/32` which are globally routable",
+        "suggest": "为 future 协议保留的地址 (请参见 [`Ipv4Addr::is_ietf_protocol_assignment()`]，但 `192.0.0.9/32` 和 `192.0.0.10/32` 除外，它们可以全局路由",
+        "translate": ""
+    },
+    {
+        "source": "addresses reserved for future use (see [`Ipv4Addr::is_reserved()`]",
+        "suggest": "保留供 future 使用的地址 (请参见 [`Ipv4Addr::is_reserved()`]",
+        "translate": ""
+    },
+    {
+        "source": "addresses reserved for networking devices benchmarking (see [`Ipv4Addr::is_benchmarking()`])",
+        "suggest": "为网络设备基准测试保留的地址 (请参见 [`Ipv4Addr::is_benchmarking()`])",
+        "translate": ""
+    },
+    {
+        "source": "check if this address is 192.0.0.9 or 192.0.0.10.",
+        "suggest": "检查此地址是 192.0.0.9 还是 192.0.0.10。",
+        "translate": ""
+    },
+    {
+        "source": "These addresses are the only two globally routable addresses in the 192.0.0.0/24 range.",
+        "suggest": "这些地址是 192.0.0.0/24 范围内仅有的两个全局可路由地址。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure the address is not in 0.0.0.0/8",
+        "suggest": "确保地址不在 0.0.0.0/8 中",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is part of the Shared Address Space defined in [IETF RFC 6598] (`100.64.0.0/10`).",
+        "suggest": "如果此地址是 [IETF RFC 6598] (`100.64.0.0/10`) 中定义的共享地址空间的一部分，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is part of `192.0.0.0/24`, which is reserved to IANA for IETF protocol assignments, as documented in [IETF RFC 6890].",
+        "suggest": "如果此地址是 `192.0.0.0/24` 的一部分，则返回 [`true`]，如 [IETF RFC 6890] 中所述，该地址保留给 IANA 用于 IETF 协议分配。",
+        "translate": ""
+    },
+    {
+        "source": "Note that parts of this block are in use:",
+        "suggest": "请注意，此块的某些部分正在使用中:",
+        "translate": ""
+    },
+    {
+        "source": "is the \"IPv4 dummy address\" (see [IETF RFC 7600])",
+        "suggest": "是 \"IPv4 dummy address\" (请参见 [IETF RFC 7600])",
+        "translate": ""
+    },
+    {
+        "source": "is the \"Port Control Protocol Anycast\" (see [IETF RFC 7723])",
+        "suggest": "是 \"Port Control Protocol Anycast\" (请参见 [IETF RFC 7723])",
+        "translate": ""
+    },
+    {
+        "source": "is used for NAT traversal (see [IETF RFC 8155])",
+        "suggest": "用于 NAT 遍历 (请参见 [IETF RFC 8155])",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address part of the `198.18.0.0/15` range, which is reserved for network devices benchmarking.",
+        "suggest": "如果此地址属于 `198.18.0.0/15` 范围 (为网络设备基准测试保留)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This range is defined in [IETF RFC 2544] as `192.18.0.0` through `198.19.255.255` but [errata 423] corrects it to `198.18.0.0/15`.",
+        "suggest": "[IETF RFC 2544] 将该范围定义为 `192.18.0.0` 至 `198.19.255.255`，但 [errata 423] 将其更正为 `198.18.0.0/15`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is reserved by IANA for future use.",
+        "suggest": "如果此地址由 IANA 保留供 future 使用，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "[IETF RFC 1112] defines the block of reserved addresses as `240.0.0.0/4`.",
+        "suggest": "[IETF RFC 1112] 将保留地址块定义为 `240.0.0.0/4`。",
+        "translate": ""
+    },
+    {
+        "source": "This range normally includes the broadcast address `255.255.255.255`, but this implementation explicitly excludes it, since it is obviously not reserved for future use.",
+        "suggest": "此范围通常包括广播地址 `255.255.255.255`，但是此实现方案明确将其排除在外，因为它显然不保留供 future 使用。",
+        "translate": ""
+    },
+    {
+        "source": "As IANA assigns new addresses, this method will be updated.",
+        "suggest": "随着 IANA 分配新地址，此方法将被更新。",
+        "translate": ""
+    },
+    {
+        "source": "This may result in non-reserved addresses being treated as reserved in code that relies on an outdated version of this method.",
+        "suggest": "这可能会导致未保留的地址被视为依赖于此方法的过时版本的代码中的保留地址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a multicast address (224.0.0.0/4).",
+        "suggest": "如果这是多播地址 (224.0.0.0/4)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "Multicast addresses have a most significant octet between 224 and 239, and is defined by [IETF RFC 5771].",
+        "suggest": "组播地址的最高有效字节在 224 和 239 之间，由 [IETF RFC 5771] 定义。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a broadcast address (255.255.255.255).",
+        "suggest": "如果这是广播地址 (255.255.255.255)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "A broadcast address has all octets set to 255 as defined in [IETF RFC 919].",
+        "suggest": "广播地址的所有八位位组均设置为 [IETF RFC 919] 中定义的 255。",
+        "translate": ""
+    },
+    {
+        "source": "This is defined in [IETF RFC 5737]:",
+        "suggest": "这在 [IETF RFC 5737] 中定义:",
+        "translate": ""
+    },
+    {
+        "source": "Converts this address to an IPv4-compatible [`IPv6` address].",
+        "suggest": "将该地址转换为兼容 IPv4 的 [`IPv6` address]。",
+        "translate": ""
+    },
+    {
+        "source": "a.b.c.d becomes ::a.b.c.d",
+        "suggest": "abcd 变成::abcd",
+        "translate": ""
+    },
+    {
+        "source": "This isn't typically the method you want;",
+        "suggest": "这通常不是您想要的方法。",
+        "translate": ""
+    },
+    {
+        "source": "these addresses don't typically function on modern systems.",
+        "suggest": "这些地址通常在现代系统上不起作用。",
+        "translate": ""
+    },
+    {
+        "source": "Use `to_ipv6_mapped` instead.",
+        "suggest": "请改用 `to_ipv6_mapped`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this address to an IPv4-mapped [`IPv6` address].",
+        "suggest": "将此地址转换为 IPv4 映射的 [`IPv6` address]。",
+        "translate": ""
+    },
+    {
+        "source": "a.b.c.d becomes ::ffff:a.b.c.d",
+        "suggest": "abcd 变成 ::ffff:a.b.c.d",
+        "translate": ""
+    },
+    {
+        "source": "Copies this address to a new `IpAddr::V4`.",
+        "suggest": "将此地址复制到新的 `IpAddr::V4`。",
+        "translate": ""
+    },
+    {
+        "source": "Copies this address to a new `IpAddr::V6`.",
+        "suggest": "将此地址复制到新的 `IpAddr::V6`。",
+        "translate": ""
+    },
+    {
+        "source": "Fast Path: if there's no alignment stuff, write directly to the buffer",
+        "suggest": "快速路径: 如果没有对齐内容，则直接写入缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "Long enough for the longest possible IPv4 address",
+        "suggest": "足够长以可能的最长 IPv4 地址",
+        "translate": ""
+    },
+    {
+        "source": "The call to write should never fail, hence the unwrap",
+        "suggest": "调用应该永远不会失败，因此解开包装",
+        "translate": ""
+    },
+    {
+        "source": "hash in big endian order",
+        "suggest": "按大端顺序的哈希",
+        "translate": ""
+    },
+    {
+        "source": "in netbsd, `in_addr` has `repr(packed)`, we need to copy `s_addr` to avoid unsafe borrowing",
+        "suggest": "在 netbsd 中，`in_addr` 具有 `repr(packed)`，我们需要复制 `s_addr` 以避免不安全的借用",
+        "translate": ""
+    },
+    {
+        "source": "Compare as native endian",
+        "suggest": "比较为本地字节序",
+        "translate": ""
+    },
+    {
+        "source": "Converts an `Ipv4Addr` into a host byte order `u32`.",
+        "suggest": "将 `Ipv4Addr` 转换为主机字节顺序 `u32`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a host byte order `u32` into an `Ipv4Addr`.",
+        "suggest": "将主机字节顺序 `u32` 转换为 `Ipv4Addr`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `Ipv4Addr` from a four element byte array.",
+        "suggest": "从一个四元素字节数组创建一个 `Ipv4Addr`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `IpAddr::V4` from a four element byte array.",
+        "suggest": "从一个四元素字节数组创建一个 `IpAddr::V4`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new IPv6 address from eight 16-bit segments.",
+        "suggest": "从八个 16 位段创建一个新的 IPv6 地址。",
+        "translate": ""
+    },
+    {
+        "source": "The result will represent the IP address `a:b:c:d:e:f:g:h`.",
+        "suggest": "结果将代表 IP 地址 `a:b:c:d:e:f:g:h`。",
+        "translate": ""
+    },
+    {
+        "source": "All elements in `addr16` are big endian.",
+        "suggest": "`addr16` 中的所有元素均为大端。",
+        "translate": ""
+    },
+    {
+        "source": "`[u16; 8]` is always safe to transmute to `[u8; 16]`.",
+        "suggest": "`[u16; 8]` 始终可以安全地转换为 `[u8; 16]`。",
+        "translate": ""
+    },
+    {
+        "source": "rustc_allow_const_fn_unstable: the transmute could be written as stable const code, but that leads to worse code generation (#75085)",
+        "suggest": "rustc_allow_const_fn_unstable: 该 transmute 可以编写为稳定的 const 代码，但这会导致更糟糕的代码生成 (#75085)",
+        "translate": ""
+    },
+    {
+        "source": "An IPv6 address representing localhost:",
+        "suggest": "表示本地主机的 IPv6 地址:",
+        "translate": ""
+    },
+    {
+        "source": "An IPv6 address representing the unspecified address:",
+        "suggest": "表示未指定地址的 IPv6 地址:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the eight 16-bit segments that make up this address.",
+        "suggest": "返回组成该地址的八个 16 位段。",
+        "translate": ""
+    },
+    {
+        "source": "All elements in `s6_addr` must be big endian.",
+        "suggest": "`s6_addr` 中的所有元素必须为大端。",
+        "translate": ""
+    },
+    {
+        "source": "`[u8; 16]` is always safe to transmute to `[u16; 8]`.",
+        "suggest": "`[u8; 16]` 始终可以安全地转换为 `[u16; 8]`。",
+        "translate": ""
+    },
+    {
+        "source": "We want native endian u16",
+        "suggest": "我们想要本地字节序 u16",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] for the special 'unspecified' address (::).",
+        "suggest": "为特殊的 'unspecified' 地址 (::) 返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined in [IETF RFC 4291].",
+        "suggest": "此属性在 [IETF RFC 4291] 中定义。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a loopback address (::1).",
+        "suggest": "如果这是一个回环地址 (::1)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "the loopback address",
+        "suggest": "回环地址",
+        "translate": ""
+    },
+    {
+        "source": "link-local and unique local unicast addresses",
+        "suggest": "本地链接和唯一本地单播地址",
+        "translate": ""
+    },
+    {
+        "source": "interface-, link-, realm-, admin- and site-local multicast addresses",
+        "suggest": "接口，链接，领域，管理和站点本地多播地址",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a unique local address (`fc00::/7`).",
+        "suggest": "如果这是唯一的本地地址 (`fc00::/7`)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined in [IETF RFC 4193].",
+        "suggest": "此属性在 [IETF RFC 4193] 中定义。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the address is a unicast link-local address (`fe80::/64`).",
+        "suggest": "如果该地址是单播链接本地地址 (`fe80::/64`)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "A common misconception is to think that \"unicast link-local addresses start with `fe80::`\", but [IETF RFC 4291] actually defines a stricter format for these addresses:",
+        "suggest": "一个普遍的误解是认为 \"unicast link-local addresses start with `fe80::`\"，但是 [IETF RFC 4291] 实际上为这些地址定义了一种更严格的格式:",
+        "translate": ""
+    },
+    {
+        "source": "This method validates the format defined in the RFC and won't recognize addresses like `fe80:0:0:1::` or `fe81::` as unicast link-local addresses.",
+        "suggest": "此方法验证 RFC 中定义的格式，并且不会将 `fe80:0:0:1::` 或 `fe81::` 之类的地址识别为单播链接本地地址。",
+        "translate": ""
+    },
+    {
+        "source": "If you need a less strict validation, use [`Ipv6Addr::is_unicast_link_local()`] instead.",
+        "suggest": "如果需要不太严格的验证，请改用 [`Ipv6Addr::is_unicast_link_local()`]。",
+        "translate": ""
+    },
+    {
+        "source": "See also",
+        "suggest": "也可以看看",
+        "translate": ""
+    },
+    {
+        "source": "(which has been rejected but provides useful insight)",
+        "suggest": "(已被拒绝，但提供了有用的见解)",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the address is a unicast link-local address (`fe80::/10`).",
+        "suggest": "如果该地址是单播链接本地地址 (`fe80::/10`)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This method returns [`true`] for addresses in the range reserved by [RFC 4291 section 2.4], i.e. addresses with the following format:",
+        "suggest": "对于 [RFC 4291 section 2.4] 保留的范围内的地址，此方法返回 [`true`]，即具有以下格式的地址:",
+        "translate": ""
+    },
+    {
+        "source": "As a result, this method considers addresses such as `fe80:0:0:1::` or `fe81::` to be unicast link-local addresses, whereas [`Ipv6Addr::is_unicast_link_local_strict()`] does not.",
+        "suggest": "结果，此方法将诸如 `fe80:0:0:1::` 或 `fe81::` 之类的地址视为单播链接本地地址，而 [`Ipv6Addr::is_unicast_link_local_strict()`] 则不是。",
+        "translate": ""
+    },
+    {
+        "source": "If you need a strict validation fully compliant with the RFC, use [`Ipv6Addr::is_unicast_link_local_strict()`] instead.",
+        "suggest": "如果需要完全符合 RFC 的严格验证，请改用 [`Ipv6Addr::is_unicast_link_local_strict()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a deprecated unicast site-local address (fec0::/10).",
+        "suggest": "如果这是已弃用的单播站点本地地址 (fec0::/10)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "The unicast site-local address format is defined in [RFC 4291 section 2.5.7] as:",
+        "suggest": "[RFC 4291 section 2.5.7] 中将单播站点本地地址格式定义为:",
+        "translate": ""
+    },
+    {
+        "source": "As per [RFC 3879], the whole `FEC0::/10` prefix is deprecated.",
+        "suggest": "根据 [RFC 3879]，不赞成使用整个 `FEC0::/10` 前缀。",
+        "translate": ""
+    },
+    {
+        "source": "New software must not support site-local addresses.",
+        "suggest": "新软件不得支持站点本地地址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is an address reserved for documentation (`2001:db8::/32`).",
+        "suggest": "如果这是为文档 (`2001:db8::/32`) 保留的地址，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined in [IETF RFC 3849].",
+        "suggest": "此属性在 [IETF RFC 3849] 中定义。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if the address is a globally routable unicast address.",
+        "suggest": "如果该地址是全局可路由的单播地址，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "The following return false:",
+        "suggest": "以下返回 false:",
+        "translate": ""
+    },
+    {
+        "source": "the link-local addresses",
+        "suggest": "链接本地地址",
+        "translate": ""
+    },
+    {
+        "source": "unique local addresses",
+        "suggest": "唯一的本地地址",
+        "translate": ""
+    },
+    {
+        "source": "the unspecified address",
+        "suggest": "未指定地址",
+        "translate": ""
+    },
+    {
+        "source": "the address range reserved for documentation",
+        "suggest": "保留用于文档的地址范围",
+        "translate": ""
+    },
+    {
+        "source": "This method returns [`true`] for site-local addresses as per [RFC 4291 section 2.5.7]",
+        "suggest": "此方法根据 [RFC 4291 section 2.5.7] 返回 [`true`] 作为站点本地地址",
+        "translate": ""
+    },
+    {
+        "source": "Returns the address's multicast scope if the address is multicast.",
+        "suggest": "如果该地址是多播的，则返回该地址的多播作用域。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is a multicast address (ff00::/8).",
+        "suggest": "如果这是多播地址 (ff00::/8)，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined by [IETF RFC 4291].",
+        "suggest": "此属性由 [IETF RFC 4291] 定义。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this address to an [`IPv4` address] if it's an \"IPv4-mapped IPv6 address\" defined in [IETF RFC 4291 section 2.5.5.2], otherwise returns [`None`].",
+        "suggest": "如果它是 [IETF RFC 4291 section 2.5.5.2] 中定义的 \"IPv4-mapped IPv6 address\"，则将该地址转换为 [`IPv4` address]，否则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "becomes `a.b.c.d`.",
+        "suggest": "变为 `a.b.c.d`。",
+        "translate": ""
+    },
+    {
+        "source": "All addresses *not* starting with `::ffff` will return `None`.",
+        "suggest": "所有非以 `::ffff` 开头的地址都将返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this address to an [`IPv4` address].",
+        "suggest": "将此地址转换为 [`IPv4` address]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`None`] if this address is neither IPv4-compatible or IPv4-mapped.",
+        "suggest": "如果此地址既不是 IPv4 兼容的也不是 IPv4 映射的，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "::a.b.c.d and ::ffff:a.b.c.d become a.b.c.d",
+        "suggest": "::abcd 和::ffff: abcd 成为 abcd",
+        "translate": ""
+    },
+    {
+        "source": "Returns the sixteen eight-bit integers the IPv6 address consists of.",
+        "suggest": "返回 IPv6 地址组成的 16 个八位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Write an Ipv6Addr, conforming to the canonical style described by [RFC 5952](https://tools.ietf.org/html/rfc5952).",
+        "suggest": "编写一个符合 [RFC 5952](https://tools.ietf.org/html/rfc5952) 描述的规范样式的 Ivv6Addr。",
+        "translate": ""
+    },
+    {
+        "source": "If there are no alignment requirements, write out the IP address to f.",
+        "suggest": "如果没有对齐要求，则将 IP 地址写出到 f。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, write it to a local buffer, then use f.pad.",
+        "suggest": "否则，将其写入本地缓冲区，然后使用 f.pad。",
+        "translate": ""
+    },
+    {
+        "source": "Special case for :: and ::1;",
+        "suggest": ":: 和 ::1 的特殊情况;",
+        "translate": ""
+    },
+    {
+        "source": "otherwise they get written with the IPv4 formatter",
+        "suggest": "否则，它们将使用 IPv4 格式化程序编写",
+        "translate": ""
+    },
+    {
+        "source": "Compatible address",
+        "suggest": "兼容地址",
+        "translate": ""
+    },
+    {
+        "source": "Mapped address",
+        "suggest": "对应的地址",
+        "translate": ""
+    },
+    {
+        "source": "Find the inner 0 span",
+        "suggest": "找出内部 0 跨度",
+        "translate": ""
+    },
+    {
+        "source": "Write a colon-separated part of the address",
+        "suggest": "写一个用冒号分隔的地址部分",
+        "translate": ""
+    },
+    {
+        "source": "Slow path: write the address to a local buffer, the use f.pad.",
+        "suggest": "慢路径: 将地址写入本地缓冲区，使用 f.pad。",
+        "translate": ""
+    },
+    {
+        "source": "Defined recursively by using the fast path to write to the buffer.",
+        "suggest": "通过使用快速路径来递归定义来写入缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "This is the largest possible size of an IPv6 address",
+        "suggest": "这是 IPv6 地址的最大可能大小",
+        "translate": ""
+    },
+    {
+        "source": "This call to write should never fail, so unwrap is okay.",
+        "suggest": "这种调用应该永远不会失败，所以可以拆包。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because we know exactly what can be in this buffer",
+        "suggest": "这是安全的，因为我们确切知道此缓冲区中可以包含的内容",
+        "translate": ""
+    },
+    {
+        "source": "Convert an `Ipv6Addr` into a host byte order `u128`.",
+        "suggest": "将 `Ipv6Addr` 转换为主机字节顺序 `u128`。",
+        "translate": ""
+    },
+    {
+        "source": "Convert a host byte order `u128` into an `Ipv6Addr`.",
+        "suggest": "将主机字节顺序 `u128` 转换为 `Ipv6Addr`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `Ipv6Addr` from a sixteen element byte array.",
+        "suggest": "从 16 个元素的字节数组创建 `Ipv6Addr`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `Ipv6Addr` from an eight element 16-bit array.",
+        "suggest": "从 8 个元素的 16 位数组创建 `Ipv6Addr`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `IpAddr::V6` from a sixteen element byte array.",
+        "suggest": "从 16 个元素的字节数组创建 `IpAddr::V6`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `IpAddr::V6` from an eight element 16-bit array.",
+        "suggest": "从 8 个元素的 16 位数组创建 `IpAddr::V6`。",
+        "translate": ""
+    },
+    {
+        "source": "Networking primitives for TCP/UDP communication.",
+        "suggest": "TCP/UDP 通信的网络原语。",
+        "translate": ""
+    },
+    {
+        "source": "This module provides networking functionality for the Transmission Control and User Datagram Protocols, as well as types for IP and socket addresses.",
+        "suggest": "该模块提供了传输控制和用户数据报协议的网络功能，以及 IP 和套接字地址的类型。",
+        "translate": ""
+    },
+    {
+        "source": "and [`TcpStream`] provide functionality for communication over TCP",
+        "suggest": "和 [`TcpStream`] 提供通过 TCP 进行通信的功能",
+        "translate": ""
+    },
+    {
+        "source": "provides functionality for communication over UDP",
+        "suggest": "提供用于通过 UDP 进行通信的功能",
+        "translate": ""
+    },
+    {
+        "source": "represents IP addresses of either IPv4 or IPv6;",
+        "suggest": "代表 IPv4 或 IPv6 的 IP 地址;",
+        "translate": ""
+    },
+    {
+        "source": "[`Ipv4Addr`] and [`Ipv6Addr`] are respectively IPv4 and IPv6 addresses",
+        "suggest": "[`Ipv4Addr`] 和 [`Ipv6Addr`] 分别是 IPv4 和 IPv6 地址",
+        "translate": ""
+    },
+    {
+        "source": "represents socket addresses of either IPv4 or IPv6;",
+        "suggest": "表示 IPv4 或 IPv6 的套接字地址;",
+        "translate": ""
+    },
+    {
+        "source": "[`SocketAddrV4`] and [`SocketAddrV6`] are respectively IPv4 and IPv6 socket addresses",
+        "suggest": "[`SocketAddrV4`] 和 [`SocketAddrV6`] 分别是 IPv4 和 IPv6 套接字地址",
+        "translate": ""
+    },
+    {
+        "source": "is a trait that used for generic address resolution when interacting with networking objects like [`TcpListener`], [`TcpStream`] or [`UdpSocket`]",
+        "suggest": "是 trait，用于与 [`TcpListener`]，[`TcpStream`] 或 [`UdpSocket`] 等网络对象进行交互时的泛型地址解析",
+        "translate": ""
+    },
+    {
+        "source": "Other types are return or parameter types for various methods in this module",
+        "suggest": "其他类型是此模块中各种方法的返回值或参数类型",
+        "translate": ""
+    },
+    {
+        "source": "Possible values which can be passed to the [`TcpStream::shutdown`] method.",
+        "suggest": "可以传递给 [`TcpStream::shutdown`] 方法的可能值。",
+        "translate": ""
+    },
+    {
+        "source": "The reading portion of the [`TcpStream`] should be shut down.",
+        "suggest": "[`TcpStream`] 的读取部分应关闭。",
+        "translate": ""
+    },
+    {
+        "source": "All currently blocked and future [reads] will return [`Ok`]`(0)`.",
+        "suggest": "当前所有已阻止的 future [reads] 将返回 [`Ok`]`(0)`。",
+        "translate": ""
+    },
+    {
+        "source": "The writing portion of the [`TcpStream`] should be shut down.",
+        "suggest": "[`TcpStream`] 的写入部分应关闭。",
+        "translate": ""
+    },
+    {
+        "source": "All currently blocked and future [writes] will return an error.",
+        "suggest": "当前所有被阻止的 future [writes] 将返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Both the reading and the writing portions of the [`TcpStream`] should be shut down.",
+        "suggest": "[`TcpStream`] 的读取和写入部分均应关闭。",
+        "translate": ""
+    },
+    {
+        "source": "See [`Shutdown::Read`] and [`Shutdown::Write`] for more information.",
+        "suggest": "有关更多信息，请参见 [`Shutdown::Read`] 和 [`Shutdown::Write`]。",
+        "translate": ""
+    },
+    {
+        "source": "These tests are all excellent candidates for AFL fuzz testing",
+        "suggest": "这些测试都是 AFL 模糊测试的绝佳候选者",
+        "translate": ""
+    },
+    {
+        "source": "Things that might not seem like failures but are",
+        "suggest": "看起来似乎不是失败，但却是失败的事物",
+        "translate": ""
+    },
+    {
+        "source": "No IP address before the ::",
+        "suggest": ":: 之前没有 IP 地址",
+        "translate": ""
+    },
+    {
+        "source": ":: must have at least 1 set of zeroes",
+        "suggest": ":: 必须至少有一组零",
+        "translate": ""
+    },
+    {
+        "source": "Need brackets for a port",
+        "suggest": "端口需要括号",
+        "translate": ""
+    },
+    {
+        "source": "No problem, the `panic!` message has disappeared.",
+        "suggest": "没问题，`panic!` 消息已消失。",
+        "translate": ""
+    },
+    {
+        "source": "A private parser implementation of IPv4, IPv6, and socket addresses.",
+        "suggest": "IPv4，IPv6 和套接字地址的专用解析器实现。",
+        "translate": ""
+    },
+    {
+        "source": "This module is \"publicly exported\" through the `FromStr` implementations below.",
+        "suggest": "此模块是 \"publicly exported\" 至以下 `FromStr` 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Parsing as ASCII, so can use byte array.",
+        "suggest": "解析为 ASCII，因此可以使用字节数组。",
+        "translate": ""
+    },
+    {
+        "source": "Run a parser, and restore the pre-parse state if it fails.",
+        "suggest": "运行解析器，如果解析失败，则还原其解析状态。",
+        "translate": ""
+    },
+    {
+        "source": "Run a parser, but fail if the entire input wasn't consumed.",
+        "suggest": "运行解析器，但如果未消耗全部输入，则会失败。",
+        "translate": ""
+    },
+    {
+        "source": "Doesn't run atomically.",
+        "suggest": "不会自动运行。",
+        "translate": ""
+    },
+    {
+        "source": "Read the next character from the input",
+        "suggest": "从输入中读取下一个字符",
+        "translate": ""
+    },
+    {
+        "source": "Read the next character from the input if it matches the target.",
+        "suggest": "如果输入匹配目标，则从输入中读取下一个字符。",
+        "translate": ""
+    },
+    {
+        "source": "Helper for reading separators in an indexed loop.",
+        "suggest": "在索引循环中读取分隔符的助手。",
+        "translate": ""
+    },
+    {
+        "source": "Reads the separator character iff index > 0, then runs the parser.",
+        "suggest": "读取分隔符 iff index> 0，然后运行解析器。",
+        "translate": ""
+    },
+    {
+        "source": "When used in a loop, the separator character will only be read on index > 0 (see read_ipv4_addr for an example)",
+        "suggest": "在循环中使用分隔符时，只会在索引 > 0 时读取 (请参见 read_ipv4_addr 的示例)",
+        "translate": ""
+    },
+    {
+        "source": "Read a number off the front of the input in the given radix, stopping at the first non-digit character or eof.",
+        "suggest": "在给定的基数中从输入的开头读取一个数字，停在第一个非数字字符或 eof 处。",
+        "translate": ""
+    },
+    {
+        "source": "Fails if the number has more digits than max_digits or if there is no number.",
+        "suggest": "如果该数字的位数大于 max_digits 或没有数字，则失败。",
+        "translate": ""
+    },
+    {
+        "source": "Read an IPv4 address.",
+        "suggest": "读取一个 IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Read an IPv6 Address.",
+        "suggest": "读取 IPv6 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Read a chunk of an IPv6 address into `groups`.",
+        "suggest": "将 IPv6 地址的一部分读入 `groups`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of groups read, along with a bool indicating if an embedded trailing IPv4 address was read.",
+        "suggest": "返回读取的组数，以及一个 bool，指示是否读取了嵌入式尾随 IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically, read a series of colon-separated IPv6 groups (0x0000 - 0xFFFF), with an optional trailing embedded IPv4 address.",
+        "suggest": "具体来说，请读取一系列用冒号分隔的 IPv6 组 (0x0000-0xFFFF)，并带有一个可选的尾随嵌入式 IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Try to read a trailing embedded IPv4 address.",
+        "suggest": "尝试读取尾随的嵌入式 IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "There must be at least two groups left.",
+        "suggest": "至少还剩下两组。",
+        "translate": ""
+    },
+    {
+        "source": "Read the front part of the address;",
+        "suggest": "读取地址的开头;",
+        "translate": ""
+    },
+    {
+        "source": "either the whole thing, or up to the first ::",
+        "suggest": "要么整件事，或者直到第一个 ::",
+        "translate": ""
+    },
+    {
+        "source": "part is not allowed before `::`",
+        "suggest": "`::` 之前不允许部分",
+        "translate": ""
+    },
+    {
+        "source": "Read `::` if previous code parsed less than 8 groups.",
+        "suggest": "如果先前的代码解析少于 8 组，则读取 `::`。",
+        "translate": ""
+    },
+    {
+        "source": "indicates one or more groups of 16 bits of zeros.",
+        "suggest": "表示一个或多个 16 位零的组。",
+        "translate": ""
+    },
+    {
+        "source": "Read the back part of the address.",
+        "suggest": "读地址的后面部分。",
+        "translate": ""
+    },
+    {
+        "source": "The :: must contain at least one set of zeroes, so our max length is 7.",
+        "suggest": ":: 必须至少包含一组零，因此我们的最大长度为 7。",
+        "translate": ""
+    },
+    {
+        "source": "Concat the head and tail of the IP address",
+        "suggest": "连接 IP 地址的开头和结尾",
+        "translate": ""
+    },
+    {
+        "source": "Read an IP Address, either IPv4 or IPv6.",
+        "suggest": "读取一个 IP 地址，IPv4 或 IPv6。",
+        "translate": ""
+    },
+    {
+        "source": "Read a `:` followed by a port in base 10.",
+        "suggest": "读取 `:`，然后读取基数为 10 的端口。",
+        "translate": ""
+    },
+    {
+        "source": "Read a `%` followed by a scope ID in base 10.",
+        "suggest": "读 `%`，后跟以 10 为底的作用域 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Read an IPv4 address with a port.",
+        "suggest": "读取带有端口的 IPv4 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Read an IPv6 address with a port.",
+        "suggest": "读取带有端口的 IPv6 地址。",
+        "translate": ""
+    },
+    {
+        "source": "Read an IP address with a port",
+        "suggest": "使用端口读取 IP 地址",
+        "translate": ""
+    },
+    {
+        "source": "An error which can be returned when parsing an IP address or a socket address.",
+        "suggest": "解析 IP 地址或套接字地址时可以返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "This error is used as the error type for the [`FromStr`] implementation for [`IpAddr`], [`Ipv4Addr`], [`Ipv6Addr`], [`SocketAddr`], [`SocketAddrV4`], and [`SocketAddrV6`].",
+        "suggest": "该错误用作 [`IpAddr`]，[`Ipv4Addr`]，[`Ipv6Addr`]，[`SocketAddr`]，[`SocketAddrV4`] 和 [`SocketAddrV6`] 的 [`FromStr`] 实现的错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "may be thrown because the provided string does not parse as the given type, often because it includes information only handled by a different address type.",
+        "suggest": "可能因为提供的字符串未解析为给定的类型而抛出，通常是因为它包含仅由不同地址类型处理的信息。",
+        "translate": ""
+    },
+    {
+        "source": "doesn't handle the port.",
+        "suggest": "不处理端口。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`SocketAddr`] instead.",
+        "suggest": "请改用 [`SocketAddr`]。",
+        "translate": ""
+    },
+    {
+        "source": "Start another thread to handle the connection",
+        "suggest": "启动另一个线程来处理连接",
+        "translate": ""
+    },
+    {
+        "source": "Connect again before writing",
+        "suggest": "写入前再次连接",
+        "translate": ""
+    },
+    {
+        "source": "some implementations don't support readv, so we may only fill the first buffer",
+        "suggest": "有些实现不支持 readv，因此我们只能填充第一个缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "some implementations don't support writev, so we may only write the first buffer",
+        "suggest": "有些实现不支持 writev，所以我们可能只写第一个缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "closing should prevent reads/writes",
+        "suggest": "关闭应防止 reads/writes",
+        "translate": ""
+    },
+    {
+        "source": "closing should affect previous handles",
+        "suggest": "关闭应该影响以前的句柄",
+        "translate": ""
+    },
+    {
+        "source": "closing should affect new handles",
+        "suggest": "关闭应该会影响新的句柄",
+        "translate": ""
+    },
+    {
+        "source": "make sure these don't die",
+        "suggest": "确保这些不会死",
+        "translate": ""
+    },
+    {
+        "source": "test doesn't work on Windows, see #31657",
+        "suggest": "测试在 Windows 上不起作用，请参见 #31657",
+        "translate": ""
+    },
+    {
+        "source": "this should wake up the child thread",
+        "suggest": "这应该唤醒子线程",
+        "translate": ""
+    },
+    {
+        "source": "this test will never finish if the child doesn't wake up",
+        "suggest": "如果子节点不醒来，这项测试将永远不会完成",
+        "translate": ""
+    },
+    {
+        "source": "Enqueue a thread to write to a socket",
+        "suggest": "使线程排队以写入套接字",
+        "translate": ""
+    },
+    {
+        "source": "Spawn off a reading clone",
+        "suggest": "Spawn 关闭一个 reading 克隆",
+        "translate": ""
+    },
+    {
+        "source": "Try to ensure that the reading clone is indeed reading",
+        "suggest": "尝试确保 reading 克隆确实在 reading",
+        "translate": ""
+    },
+    {
+        "source": "clone the handle again while it's reading, then let it finish the read.",
+        "suggest": "在读取时再次克隆该句柄，然后让它完成读取。",
+        "translate": ""
+    },
+    {
+        "source": "re-enabled openbsd tests once their socket timeout code no longer has rounding errors.",
+        "suggest": "一旦套接字超时代码不再具有舍入错误，则重新启用 openbsd 测试。",
+        "translate": ""
+    },
+    {
+        "source": "VxWorks ignores SO_SNDTIMEO.",
+        "suggest": "VxWorks 忽略 SO_SNDTIMEO。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure the `set_read_timeout` and `set_write_timeout` calls return errors when passed zero Durations",
+        "suggest": "确保 `set_read_timeout` 和 `set_write_timeout` 调用在传递零时返回错误",
+        "translate": ""
+    },
+    {
+        "source": "the stream is closed here",
+        "suggest": "流在这里关闭",
+        "translate": ""
+    },
+    {
+        "source": "accept connections and process them serially",
+        "suggest": "接受连接并顺序处理它们",
+        "translate": ""
+    },
+    {
+        "source": "wait until network socket is ready, typically implemented via platform-specific APIs such as epoll or IOCP",
+        "suggest": "等待网络套接字就绪，通常通过平台特定的 API (例如 epoll 或 IOCP) 实现",
+        "translate": ""
+    },
+    {
+        "source": "do something with the TcpStream",
+        "suggest": "用 TcpStream 做某事",
+        "translate": ""
+    },
+    {
+        "source": "A TCP stream between a local and a remote socket.",
+        "suggest": "本地套接字和远程套接字之间的 TCP 流。",
+        "translate": ""
+    },
+    {
+        "source": "After creating a `TcpStream` by either [`connect`]ing to a remote host or [`accept`]ing a connection on a [`TcpListener`], data can be transmitted by [reading] and [writing] to it.",
+        "suggest": "通过 [`连接] 到远程主机或 [` 接受] [`TcpListener`] 上的连接创建 `TcpStream` 之后，数据可以由 [reading] 和 [writing] 传输到该 `TcpStream`。",
+        "translate": ""
+    },
+    {
+        "source": "The connection will be closed when the value is dropped.",
+        "suggest": "丢弃该值时，连接将关闭。",
+        "translate": ""
+    },
+    {
+        "source": "The reading and writing portions of the connection can also be shut down individually with the [`shutdown`] method.",
+        "suggest": "也可以使用 [`shutdown`] 方法单独关闭连接的读取和写入部分。",
+        "translate": ""
+    },
+    {
+        "source": "The Transmission Control Protocol is specified in [IETF RFC 793].",
+        "suggest": "传输控制协议在 [IETF RFC 793] 中指定。",
+        "translate": ""
+    },
+    {
+        "source": "A TCP socket server, listening for connections.",
+        "suggest": "TCP 套接字服务器，侦听连接。",
+        "translate": ""
+    },
+    {
+        "source": "After creating a `TcpListener` by [`bind`]ing it to a socket address, it listens for incoming TCP connections.",
+        "suggest": "通过将 `TcpListener` 绑定到套接字地址来创建 `TcpListener` 之后，它会侦听传入的 TCP 连接。",
+        "translate": ""
+    },
+    {
+        "source": "These can be accepted by calling [`accept`] or by iterating over the [`Incoming`] iterator returned by [`incoming`][`TcpListener::incoming`].",
+        "suggest": "可以通过调用 [`accept`] 或在 [`incoming`][`TcpListener::incoming`] 返回的 [`Incoming`] 迭代器上进行迭代来接受它们。",
+        "translate": ""
+    },
+    {
+        "source": "The socket will be closed when the value is dropped.",
+        "suggest": "丢弃该值时，套接字将关闭。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that infinitely [`accept`]s connections on a [`TcpListener`].",
+        "suggest": "一个 [`TcpListener`] 上无限 [[接受]] 连接的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`TcpListener::incoming`] method.",
+        "suggest": "该 `struct` 是通过 [`TcpListener::incoming`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Opens a TCP connection to a remote host.",
+        "suggest": "打开到远程主机的 TCP 连接。",
+        "translate": ""
+    },
+    {
+        "source": "is an address of the remote host.",
+        "suggest": "是远程主机的地址。",
+        "translate": ""
+    },
+    {
+        "source": "Anything which implements [`ToSocketAddrs`] trait can be supplied for the address;",
+        "suggest": "可以提供任何实现 [`ToSocketAddrs`] trait 的地址。",
+        "translate": ""
+    },
+    {
+        "source": "see this trait documentation for concrete examples.",
+        "suggest": "有关具体示例，请参见此 trait 文档。",
+        "translate": ""
+    },
+    {
+        "source": "If `addr` yields multiple addresses, `connect` will be attempted with each of the addresses until a connection is successful.",
+        "suggest": "如果 `addr` 产生多个地址，则将使用每个地址尝试 `connect`，直到连接成功。",
+        "translate": ""
+    },
+    {
+        "source": "If none of the addresses result in a successful connection, the error returned from the last connection attempt (the last address) is returned.",
+        "suggest": "如果没有一个地址导致连接成功，则返回从上一次连接尝试 (最后一个地址) 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Open a TCP connection to `127.0.0.1:8080`:",
+        "suggest": "打开到 `127.0.0.1:8080` 的 TCP 连接:",
+        "translate": ""
+    },
+    {
+        "source": "Open a TCP connection to `127.0.0.1:8080`.",
+        "suggest": "打开到 `127.0.0.1:8080` 的 TCP 连接。",
+        "translate": ""
+    },
+    {
+        "source": "If the connection fails, open a TCP connection to `127.0.0.1:8081`:",
+        "suggest": "如果连接失败，请打开与 `127.0.0.1:8081` 的 TCP 连接:",
+        "translate": ""
+    },
+    {
+        "source": "Opens a TCP connection to a remote host with a timeout.",
+        "suggest": "超时打开与远程主机的 TCP 连接。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `connect`, `connect_timeout` takes a single [`SocketAddr`] since timeout must be applied to individual addresses.",
+        "suggest": "与 `connect` 不同，由于必须将超时应用于单个地址，因此 `connect_timeout` 仅占用一个 [`SocketAddr`]。",
+        "translate": ""
+    },
+    {
+        "source": "It is an error to pass a zero `Duration` to this function.",
+        "suggest": "向此函数传递零 `Duration` 是错误的。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike other methods on `TcpStream`, this does not correspond to a single system call.",
+        "suggest": "与 `TcpStream` 上的其他方法不同，这并不对应于单个系统调用。",
+        "translate": ""
+    },
+    {
+        "source": "It instead calls `connect` in nonblocking mode and then uses an OS-specific mechanism to await the completion of the connection request.",
+        "suggest": "相反，它以非阻塞模式调用 `connect`，然后使用特定于 OS 的机制来等待连接请求的完成。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the socket address of the remote peer of this TCP connection.",
+        "suggest": "返回此 TCP 连接的远程对等方的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the socket address of the local half of this TCP connection.",
+        "suggest": "返回此 TCP 连接本地一半的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "Shuts down the read, write, or both halves of this connection.",
+        "suggest": "关闭此连接的读取，写入或两半。",
+        "translate": ""
+    },
+    {
+        "source": "This function will cause all pending and future I/O on the specified portions to return immediately with an appropriate value (see the documentation of [`Shutdown`]).",
+        "suggest": "此函数将导致指定部分上的所有未决和 future I/O 立即以适当的值返回 (请参见 [`Shutdown`] 的文档)。",
+        "translate": ""
+    },
+    {
+        "source": "Calling this function multiple times may result in different behavior, depending on the operating system.",
+        "suggest": "取决于操作系统，多次调用此函数可能会导致不同的行为。",
+        "translate": ""
+    },
+    {
+        "source": "On Linux, the second call will return `Ok(())`, but on macOS, it will return `ErrorKind::NotConnected`.",
+        "suggest": "在 Linux 上，第二个调用将返回 `Ok(())`，但在 macOS 上，它将返回 `ErrorKind::NotConnected`。",
+        "translate": ""
+    },
+    {
+        "source": "This may change in the future.",
+        "suggest": "future 可能会改变。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new independently owned handle to the underlying socket.",
+        "suggest": "为基础套接字创建一个新的独立拥有的句柄。",
+        "translate": ""
+    },
+    {
+        "source": "The returned `TcpStream` is a reference to the same stream that this object references.",
+        "suggest": "返回的 `TcpStream` 是与此 object 引用相同的流的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Both handles will read and write the same stream of data, and options set on one stream will be propagated to the other stream.",
+        "suggest": "两个句柄将读取和写入相同的数据流，并且在一个流上设置的选项将传播到另一流。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the read timeout to the timeout specified.",
+        "suggest": "将读取超时设置为指定的超时。",
+        "translate": ""
+    },
+    {
+        "source": "If the value specified is [`None`], then [`read`] calls will block indefinitely.",
+        "suggest": "如果指定的值为 [`None`]，则 [`read`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "An [`Err`] is returned if the zero [`Duration`] is passed to this method.",
+        "suggest": "如果将零 [`Duration`] 传递给此方法，则返回 [`Err`]。",
+        "translate": ""
+    },
+    {
+        "source": "Platforms may return a different error code whenever a read times out as a result of setting this option.",
+        "suggest": "由于设置此选项而导致读取超时时，平台可能会返回不同的错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "For example Unix typically returns an error of the kind [`WouldBlock`], but Windows may return [`TimedOut`].",
+        "suggest": "例如，Unix 通常返回类型为 [`WouldBlock`] 的错误，但是 Windows 可能返回 [`TimedOut`]。",
+        "translate": ""
+    },
+    {
+        "source": "An [`Err`] is returned if the zero [`Duration`] is passed to this method:",
+        "suggest": "如果将零 [`Duration`] 传递给此方法，则返回 [`Err`]:",
+        "translate": ""
+    },
+    {
+        "source": "Sets the write timeout to the timeout specified.",
+        "suggest": "将写超时设置为指定的超时。",
+        "translate": ""
+    },
+    {
+        "source": "If the value specified is [`None`], then [`write`] calls will block indefinitely.",
+        "suggest": "如果指定的值为 [`None`]，则 [`write`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "Platforms may return a different error code whenever a write times out as a result of setting this option.",
+        "suggest": "由于设置此选项而导致写超时时，平台可能会返回不同的错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the read timeout of this socket.",
+        "suggest": "返回此套接字的读取超时。",
+        "translate": ""
+    },
+    {
+        "source": "If the timeout is [`None`], then [`read`] calls will block indefinitely.",
+        "suggest": "如果超时为 [`None`]，则 [`read`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "Some platforms do not provide access to the current timeout.",
+        "suggest": "某些平台不提供对当前超时的访问。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the write timeout of this socket.",
+        "suggest": "返回此套接字的写入超时。",
+        "translate": ""
+    },
+    {
+        "source": "If the timeout is [`None`], then [`write`] calls will block indefinitely.",
+        "suggest": "如果超时为 [`None`]，则 [`write`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "Receives data on the socket from the remote address to which it is connected, without removing that data from the queue.",
+        "suggest": "从套接字所连接的远程地址接收套接字上的数据，而无需从队列中删除该数据。",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes peeked.",
+        "suggest": "成功时，返回偷看的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Successive calls return the same data.",
+        "suggest": "连续调用返回相同的数据。",
+        "translate": ""
+    },
+    {
+        "source": "This is accomplished by passing `MSG_PEEK` as a flag to the underlying `recv` system call.",
+        "suggest": "这是通过将 `MSG_PEEK` 作为标志传递到基础 `recv` 系统调用来完成的。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the `TCP_NODELAY` option on this socket.",
+        "suggest": "设置此套接字上 `TCP_NODELAY` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "If set, this option disables the Nagle algorithm.",
+        "suggest": "如果设置，则此选项禁用 Nagle 算法。",
+        "translate": ""
+    },
+    {
+        "source": "This means that segments are always sent as soon as possible, even if there is only a small amount of data.",
+        "suggest": "这意味着即使只有少量数据，也总是尽快发送段。",
+        "translate": ""
+    },
+    {
+        "source": "When not set, data is buffered until there is a sufficient amount to send out, thereby avoiding the frequent sending of small packets.",
+        "suggest": "如果未设置，则对数据进行缓冲，直到有足够的数据量可以发送出去，从而避免了频繁发送小数据包。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `TCP_NODELAY` option on this socket.",
+        "suggest": "获取此套接字上 `TCP_NODELAY` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`TcpStream::set_nodelay`].",
+        "suggest": "有关此选项的更多信息，请参见 [`TcpStream::set_nodelay`]。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value for the `IP_TTL` option on this socket.",
+        "suggest": "设置此套接字上 `IP_TTL` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "This value sets the time-to-live field that is used in every packet sent from this socket.",
+        "suggest": "此值设置从该套接字发送的每个数据包中使用的生存时间字段。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `IP_TTL` option for this socket.",
+        "suggest": "获取此套接字的 `IP_TTL` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`TcpStream::set_ttl`].",
+        "suggest": "有关此选项的更多信息，请参见 [`TcpStream::set_ttl`]。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `SO_ERROR` option on this socket.",
+        "suggest": "获取此套接字上 `SO_ERROR` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "This will retrieve the stored error in the underlying socket, clearing the field in the process.",
+        "suggest": "这将检索存储在基础套接字中的错误，从而清除进程中的字段。",
+        "translate": ""
+    },
+    {
+        "source": "This can be useful for checking errors between calls.",
+        "suggest": "这对于检查两次调用之间的错误很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Moves this TCP stream into or out of nonblocking mode.",
+        "suggest": "将此 TCP 流移入或移出非阻塞模式。",
+        "translate": ""
+    },
+    {
+        "source": "This will result in `read`, `write`, `recv` and `send` operations becoming nonblocking, i.e., immediately returning from their calls.",
+        "suggest": "这将导致 `read`，`write`，`recv` 和 `send` 操作变为非阻塞，即立即从其调用中返回。",
+        "translate": ""
+    },
+    {
+        "source": "If the IO operation is successful, `Ok` is returned and no further action is required.",
+        "suggest": "如果 IO 操作成功，则返回 `Ok`，并且不需要进一步的操作。",
+        "translate": ""
+    },
+    {
+        "source": "If the IO operation could not be completed and needs to be retried, an error with kind [`io::ErrorKind::WouldBlock`] is returned.",
+        "suggest": "如果 IO 操作无法完成，需要重试，则返回类型为 [`io::ErrorKind::WouldBlock`] 的错误。",
+        "translate": ""
+    },
+    {
+        "source": "On Unix platforms, calling this method corresponds to calling `fcntl` `FIONBIO`.",
+        "suggest": "在 Unix 平台上，调用此方法相当于调用 `fcntl` `FIONBIO`。",
+        "translate": ""
+    },
+    {
+        "source": "On Windows calling this method corresponds to calling `ioctlsocket` `FIONBIO`.",
+        "suggest": "在 Windows 上，调用此方法对应于调用 `ioctlsocket` `FIONBIO`。",
+        "translate": ""
+    },
+    {
+        "source": "Reading bytes from a TCP stream in non-blocking mode:",
+        "suggest": "在非阻塞模式下从 TCP 流读取字节:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `TcpListener` which will be bound to the specified address.",
+        "suggest": "创建一个新的 `TcpListener`，它将绑定到指定的地址。",
+        "translate": ""
+    },
+    {
+        "source": "The returned listener is ready for accepting connections.",
+        "suggest": "返回的侦听器已准备好接受连接。",
+        "translate": ""
+    },
+    {
+        "source": "Binding with a port number of 0 will request that the OS assigns a port to this listener.",
+        "suggest": "端口号为 0 的绑定将要求 OS 为该侦听器分配端口。",
+        "translate": ""
+    },
+    {
+        "source": "The port allocated can be queried via the [`TcpListener::local_addr`] method.",
+        "suggest": "可以通过 [`TcpListener::local_addr`] 方法查询分配的端口。",
+        "translate": ""
+    },
+    {
+        "source": "The address type can be any implementor of [`ToSocketAddrs`] trait.",
+        "suggest": "地址类型可以是 [`ToSocketAddrs`] trait 的任何实现者。",
+        "translate": ""
+    },
+    {
+        "source": "See its documentation for concrete examples.",
+        "suggest": "有关具体示例，请参见其文档。",
+        "translate": ""
+    },
+    {
+        "source": "If `addr` yields multiple addresses, `bind` will be attempted with each of the addresses until one succeeds and returns the listener.",
+        "suggest": "如果 `addr` 产生多个地址，则将对每个地址尝试 `bind`，直到一个成功并返回侦听器为止。",
+        "translate": ""
+    },
+    {
+        "source": "If none of the addresses succeed in creating a listener, the error returned from the last attempt (the last address) is returned.",
+        "suggest": "如果没有一个地址成功创建侦听器，则返回从上次尝试 (最后一个地址) 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a TCP listener bound to `127.0.0.1:80`:",
+        "suggest": "创建绑定到 `127.0.0.1:80` 的 TCP 侦听器:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a TCP listener bound to `127.0.0.1:80`.",
+        "suggest": "创建绑定到 `127.0.0.1:80` 的 TCP 侦听器。",
+        "translate": ""
+    },
+    {
+        "source": "If that fails, create a TCP listener bound to `127.0.0.1:443`:",
+        "suggest": "如果失败，请创建绑定到 `127.0.0.1:443` 的 TCP 侦听器:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the local socket address of this listener.",
+        "suggest": "返回此侦听器的本地套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "The returned [`TcpListener`] is a reference to the same socket that this object references.",
+        "suggest": "返回的 [`TcpListener`] 是与此 object 引用相同的套接字的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Both handles can be used to accept incoming connections and options set on one listener will affect the other.",
+        "suggest": "这两个句柄均可用于接受传入连接，并且在一个侦听器上设置的选项将影响另一个。",
+        "translate": ""
+    },
+    {
+        "source": "Accept a new incoming connection from this listener.",
+        "suggest": "接受来自此侦听器的新传入连接。",
+        "translate": ""
+    },
+    {
+        "source": "This function will block the calling thread until a new TCP connection is established.",
+        "suggest": "该函数将阻塞调用线程，直到建立新的 TCP 连接为止。",
+        "translate": ""
+    },
+    {
+        "source": "When established, the corresponding [`TcpStream`] and the remote peer's address will be returned.",
+        "suggest": "建立后，将返回相应的 [`TcpStream`] 和远程对等方的地址。",
+        "translate": ""
+    },
+    {
+        "source": "On WASM, `TcpStream` is uninhabited (as it's unsupported) and so the `a` variable here is technically unused.",
+        "suggest": "在 WASM 上，`TcpStream` 是无人居住的 (因为它不受支持)，因此这里的 `a` 变量在技术上是未使用的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator over the connections being received on this listener.",
+        "suggest": "返回在此侦听器上接收到的连接上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator will never return [`None`] and will also not yield the peer's [`SocketAddr`] structure.",
+        "suggest": "返回的迭代器将永远不会返回 [`None`]，也不会产生对等方的 [`SocketAddr`] 结构体。",
+        "translate": ""
+    },
+    {
+        "source": "Iterating over it is equivalent to calling [`TcpListener::accept`] in a loop.",
+        "suggest": "对其进行迭代等效于在循环中调用 [`TcpListener::accept`]。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`TcpListener::set_ttl`].",
+        "suggest": "有关此选项的更多信息，请参见 [`TcpListener::set_ttl`]。",
+        "translate": ""
+    },
+    {
+        "source": "This will result in the `accept` operation becoming nonblocking, i.e., immediately returning from their calls.",
+        "suggest": "这将导致 `accept` 操作变为非阻塞，即立即从其调用中返回。",
+        "translate": ""
+    },
+    {
+        "source": "Bind a TCP listener to an address, listen for connections, and read bytes in nonblocking mode:",
+        "suggest": "将 TCP 侦听器绑定到地址，侦听连接，并以非阻塞模式读取字节:",
+        "translate": ""
+    },
+    {
+        "source": "not used on emscripten",
+        "suggest": "不在脚本上使用",
+        "translate": ""
+    },
+    {
+        "source": "The bots run multiple builds at the same time, and these builds all want to use ports.",
+        "suggest": "这些漫游器同时运行多个构建，这些构建都希望使用端口。",
+        "translate": ""
+    },
+    {
+        "source": "This function figures out which workspace it is running in and assigns a port range based on it.",
+        "suggest": "该函数确定它在哪个工作空间中运行，并根据该工作空间分配端口范围。",
+        "translate": ""
+    },
+    {
+        "source": "re-enabled openbsd/netbsd tests once their socket timeout code no longer has rounding errors.",
+        "suggest": "一旦套接字超时代码不再具有舍入错误，则重新启用 openbsd/netbsd 测试。",
+        "translate": ""
+    },
+    {
+        "source": "Receives a single datagram message on the socket.",
+        "suggest": "在套接字上接收单个数据报消息。",
+        "translate": ""
+    },
+    {
+        "source": "If `buf` is too small to hold the message, it will be cut off.",
+        "suggest": "如果 `buf` 太小而无法容纳该消息，它将被切断。",
+        "translate": ""
+    },
+    {
+        "source": "Redeclare `buf` as slice of the received data and send reverse data back to origin.",
+        "suggest": "将 `buf` 声明为接收数据的切片，并将反向数据发送回原点。",
+        "translate": ""
+    },
+    {
+        "source": "the socket is closed here",
+        "suggest": "插座在这里关闭",
+        "translate": ""
+    },
+    {
+        "source": "A UDP socket.",
+        "suggest": "UDP 套接字。",
+        "translate": ""
+    },
+    {
+        "source": "After creating a `UdpSocket` by [`bind`]ing it to a socket address, data can be [sent to] and [received from] any other socket address.",
+        "suggest": "通过将 `UdpSocket` 绑定到一个套接字地址来创建 `UdpSocket` 之后，数据可以是 [sent to] 和 [received from] 任何其他套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "Although UDP is a connectionless protocol, this implementation provides an interface to set an address where data should be sent and received from.",
+        "suggest": "尽管 UDP 是无连接协议，但是此实现提供了一个接口，用于设置一个地址，在该地址处应发送和接收数据。",
+        "translate": ""
+    },
+    {
+        "source": "After setting a remote address with [`connect`], data can be sent to and received from that address with [`send`] and [`recv`].",
+        "suggest": "使用 [`connect`] 设置远程地址后，可以使用 [`send`] 和 [`recv`] 向该地址发送数据和从该地址接收数据。",
+        "translate": ""
+    },
+    {
+        "source": "As stated in the User Datagram Protocol's specification in [IETF RFC 768], UDP is an unordered, unreliable protocol;",
+        "suggest": "如 [IETF RFC 768] 中的用户数据报协议规范中所述，UDP 是无序，不可靠的协议。",
+        "translate": ""
+    },
+    {
+        "source": "refer to [`TcpListener`] and [`TcpStream`] for TCP primitives.",
+        "suggest": "有关 TCP 原语，请参考 [`TcpListener`] 和 [`TcpStream`]。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a UDP socket from the given address.",
+        "suggest": "从给定的地址创建一个 UDP 套接字。",
+        "translate": ""
+    },
+    {
+        "source": "If `addr` yields multiple addresses, `bind` will be attempted with each of the addresses until one succeeds and returns the socket.",
+        "suggest": "如果 `addr` 产生多个地址，则将使用每个地址尝试 `bind`，直到一个成功并返回套接字为止。",
+        "translate": ""
+    },
+    {
+        "source": "If none of the addresses succeed in creating a socket, the error returned from the last attempt (the last address) is returned.",
+        "suggest": "如果没有一个地址成功创建套接字，则返回上一次尝试返回的错误 (最后一个地址)。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a UDP socket bound to `127.0.0.1:3400`:",
+        "suggest": "创建绑定到 `127.0.0.1:3400` 的 UDP 套接字:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a UDP socket bound to `127.0.0.1:3400`.",
+        "suggest": "创建绑定到 `127.0.0.1:3400` 的 UDP 套接字。",
+        "translate": ""
+    },
+    {
+        "source": "If the socket cannot be bound to that address, create a UDP socket bound to `127.0.0.1:3401`:",
+        "suggest": "如果套接字无法绑定到该地址，请创建绑定到 `127.0.0.1:3401` 的 UDP 套接字:",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes read and the origin.",
+        "suggest": "成功时，返回读取的字节数和源。",
+        "translate": ""
+    },
+    {
+        "source": "The function must be called with valid byte array `buf` of sufficient size to hold the message bytes.",
+        "suggest": "必须使用足够大的有效字节数组 `buf` 来调用函数，以容纳消息字节。",
+        "translate": ""
+    },
+    {
+        "source": "If a message is too long to fit in the supplied buffer, excess bytes may be discarded.",
+        "suggest": "如果消息太长而无法容纳在提供的缓冲区中，则多余的字节可能会被丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Receives a single datagram message on the socket, without removing it from the queue.",
+        "suggest": "在套接字上接收单个数据报消息，而无需将其从队列中删除。",
+        "translate": ""
+    },
+    {
+        "source": "This is accomplished by passing `MSG_PEEK` as a flag to the underlying `recvfrom` system call.",
+        "suggest": "这是通过将 `MSG_PEEK` 作为标志传递到基础 `recvfrom` 系统调用来完成的。",
+        "translate": ""
+    },
+    {
+        "source": "Do not use this function to implement busy waiting, instead use `libc::poll` to synchronize IO events on one or more sockets.",
+        "suggest": "不要使用此函数来实现繁忙等待，而应使用 `libc::poll` 来同步一个或多个套接字上的 IO 事件。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data on the socket to the given address.",
+        "suggest": "将套接字上的数据发送到给定的地址。",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes written.",
+        "suggest": "成功时，返回写入的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Address type can be any implementor of [`ToSocketAddrs`] trait.",
+        "suggest": "地址类型可以是 [`ToSocketAddrs`] trait 的任何实现者。",
+        "translate": ""
+    },
+    {
+        "source": "It is possible for `addr` to yield multiple addresses, but `send_to` will only send data to the first address yielded by `addr`.",
+        "suggest": "`addr` 可以产生多个地址，但是 `send_to` 只会将数据发送到 `addr` 产生的第一个地址。",
+        "translate": ""
+    },
+    {
+        "source": "This will return an error when the IP version of the local socket does not match that returned from [`ToSocketAddrs`].",
+        "suggest": "当本地套接字的 IP 版本与 [`ToSocketAddrs`] 返回的 IP 版本不匹配时，这将返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "See issue #34202 for more details.",
+        "suggest": "有关更多详细信息，请参见 issue #34202。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the socket address of the remote peer this socket was connected to.",
+        "suggest": "返回此套接字连接到的远程对等方的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "If the socket isn't connected, it will return a [`NotConnected`] error.",
+        "suggest": "如果未连接套接字，它将返回 [`NotConnected`] 错误。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the socket address that this socket was created from.",
+        "suggest": "返回创建此套接字的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "The returned `UdpSocket` is a reference to the same socket that this object references.",
+        "suggest": "返回的 `UdpSocket` 是与此 object 引用相同的套接字的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Both handles will read and write the same port, and options set on one socket will be propagated to the other.",
+        "suggest": "两个句柄都将读取和写入相同的端口，并且在一个套接字上设置的选项将传播到另一个套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the `SO_BROADCAST` option for this socket.",
+        "suggest": "设置此套接字的 `SO_BROADCAST` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "When enabled, this socket is allowed to send packets to a broadcast address.",
+        "suggest": "启用后，允许此套接字将数据包发送到广播地址。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `SO_BROADCAST` option for this socket.",
+        "suggest": "获取此套接字的 `SO_BROADCAST` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::set_broadcast`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::set_broadcast`]。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the `IP_MULTICAST_LOOP` option for this socket.",
+        "suggest": "设置此套接字的 `IP_MULTICAST_LOOP` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "If enabled, multicast packets will be looped back to the local socket.",
+        "suggest": "如果启用，则多播数据包将循环回到本地套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this may not have any effect on IPv6 sockets.",
+        "suggest": "请注意，这可能对 IPv6 套接字没有任何影响。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `IP_MULTICAST_LOOP` option for this socket.",
+        "suggest": "获取此套接字的 `IP_MULTICAST_LOOP` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::set_multicast_loop_v4`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::set_multicast_loop_v4`]。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the `IP_MULTICAST_TTL` option for this socket.",
+        "suggest": "设置此套接字的 `IP_MULTICAST_TTL` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "Indicates the time-to-live value of outgoing multicast packets for this socket.",
+        "suggest": "指示此套接字的传出多播数据包的生存时间值。",
+        "translate": ""
+    },
+    {
+        "source": "The default value is 1 which means that multicast packets don't leave the local network unless explicitly requested.",
+        "suggest": "默认值为 1，这意味着除非明确请求，否则多播数据包不会离开本地网络。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `IP_MULTICAST_TTL` option for this socket.",
+        "suggest": "获取此套接字的 `IP_MULTICAST_TTL` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::set_multicast_ttl_v4`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::set_multicast_ttl_v4`]。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the value of the `IPV6_MULTICAST_LOOP` option for this socket.",
+        "suggest": "设置此套接字的 `IPV6_MULTICAST_LOOP` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "Controls whether this socket sees the multicast packets it sends itself.",
+        "suggest": "控制此套接字是否看到自己发送的多播数据包。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this may not have any affect on IPv4 sockets.",
+        "suggest": "请注意，这可能对 IPv4 套接字没有任何影响。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the value of the `IPV6_MULTICAST_LOOP` option for this socket.",
+        "suggest": "获取此套接字的 `IPV6_MULTICAST_LOOP` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::set_multicast_loop_v6`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::set_multicast_loop_v6`]。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::set_ttl`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::set_ttl`]。",
+        "translate": ""
+    },
+    {
+        "source": "Executes an operation of the `IP_ADD_MEMBERSHIP` type.",
+        "suggest": "执行 `IP_ADD_MEMBERSHIP` 类型的操作。",
+        "translate": ""
+    },
+    {
+        "source": "This function specifies a new multicast group for this socket to join.",
+        "suggest": "此函数为此套接字指定一个新的多播组。",
+        "translate": ""
+    },
+    {
+        "source": "The address must be a valid multicast address, and `interface` is the address of the local interface with which the system should join the multicast group.",
+        "suggest": "该地址必须是有效的多播地址，而 `interface` 是系统应加入多播组的本地接口的地址。",
+        "translate": ""
+    },
+    {
+        "source": "If it's equal to `INADDR_ANY` then an appropriate interface is chosen by the system.",
+        "suggest": "如果等于 `INADDR_ANY`，则系统选择适当的接口。",
+        "translate": ""
+    },
+    {
+        "source": "Executes an operation of the `IPV6_ADD_MEMBERSHIP` type.",
+        "suggest": "执行 `IPV6_ADD_MEMBERSHIP` 类型的操作。",
+        "translate": ""
+    },
+    {
+        "source": "The address must be a valid multicast address, and `interface` is the index of the interface to join/leave (or 0 to indicate any interface).",
+        "suggest": "该地址必须是有效的多播地址，并且 `interface` 是接口到 join/leave 的索引 (或 0 表示任何接口)。",
+        "translate": ""
+    },
+    {
+        "source": "Executes an operation of the `IP_DROP_MEMBERSHIP` type.",
+        "suggest": "执行 `IP_DROP_MEMBERSHIP` 类型的操作。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::join_multicast_v4`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::join_multicast_v4`]。",
+        "translate": ""
+    },
+    {
+        "source": "Executes an operation of the `IPV6_DROP_MEMBERSHIP` type.",
+        "suggest": "执行 `IPV6_DROP_MEMBERSHIP` 类型的操作。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about this option, see [`UdpSocket::join_multicast_v6`].",
+        "suggest": "有关此选项的更多信息，请参见 [`UdpSocket::join_multicast_v6`]。",
+        "translate": ""
+    },
+    {
+        "source": "Connects this UDP socket to a remote address, allowing the `send` and `recv` syscalls to be used to send data and also applies filters to only receive data from the specified address.",
+        "suggest": "将此 UDP 套接字连接到远程地址，从而允许使用 `send` 和 `recv` 系统调用来发送数据，并且还应用过滤器以仅接收来自指定地址的数据。",
+        "translate": ""
+    },
+    {
+        "source": "If `addr` yields multiple addresses, `connect` will be attempted with each of the addresses until the underlying OS function returns no error.",
+        "suggest": "如果 `addr` 产生多个地址，则将使用每个地址尝试 `connect`，直到基础 OS 函数未返回错误为止。",
+        "translate": ""
+    },
+    {
+        "source": "Note that usually, a successful `connect` call does not specify that there is a remote server listening on the port, rather, such an error would only be detected after the first send.",
+        "suggest": "请注意，通常，成功的 `connect` 调用不会指定有远程服务器在端口上侦听，而是仅在第一次发送后才检测到此错误。",
+        "translate": ""
+    },
+    {
+        "source": "If the OS returns an error for each of the specified addresses, the error returned from the last connection attempt (the last address) is returned.",
+        "suggest": "如果操作系统为每个指定的地址返回错误，则返回从上次连接尝试 (最后一个地址) 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a UDP socket bound to `127.0.0.1:3400` and connect the socket to",
+        "suggest": "创建绑定到 `127.0.0.1:3400` 的 UDP 套接字并将该套接字连接到",
+        "translate": ""
+    },
+    {
+        "source": "Unlike in the TCP case, passing an array of addresses to the `connect` function of a UDP socket is not a useful thing to do: The OS will be unable to determine whether something is listening on the remote address without the application sending data.",
+        "suggest": "与 TCP 情况不同，将地址数组传递给 UDP 套接字的 `connect` 函数不是一件有用的事情: 在没有应用程序发送数据的情况下，操作系统将无法确定是否有人在监听远程地址。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data on the socket to the remote address to which it is connected.",
+        "suggest": "将套接字上的数据发送到它所连接的远程地址。",
+        "translate": ""
+    },
+    {
+        "source": "will connect this socket to a remote address.",
+        "suggest": "将此套接字连接到远程地址。",
+        "translate": ""
+    },
+    {
+        "source": "This method will fail if the socket is not connected.",
+        "suggest": "如果未连接套接字，则此方法将失败。",
+        "translate": ""
+    },
+    {
+        "source": "Receives a single datagram message on the socket from the remote address to which it is connected.",
+        "suggest": "从套接字连接到的远程地址在套接字上接收单个数据报消息。",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes read.",
+        "suggest": "成功时，返回读取的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Receives single datagram on the socket from the remote address to which it is connected, without removing the message from input queue.",
+        "suggest": "从套接字所连接的远程地址接收套接字上的单个数据报，而不会从输入队列中删除消息。",
+        "translate": ""
+    },
+    {
+        "source": "Moves this UDP socket into or out of nonblocking mode.",
+        "suggest": "将此 UDP 套接字移入或移出非阻塞模式。",
+        "translate": ""
+    },
+    {
+        "source": "This will result in `recv`, `recv_from`, `send`, and `send_to` operations becoming nonblocking, i.e., immediately returning from their calls.",
+        "suggest": "这将导致 `recv`，`recv_from`，`send` 和 `send_to` 操作变为非阻塞，即立即从其调用中返回。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a UDP socket bound to `127.0.0.1:7878` and read bytes in nonblocking mode:",
+        "suggest": "创建绑定到 `127.0.0.1:7878` 的 UDP 套接字，并以非阻塞模式读取字节:",
+        "translate": ""
+    },
+    {
+        "source": "Additional functionality for numerics.",
+        "suggest": "数字的附加功能。",
+        "translate": ""
+    },
+    {
+        "source": "This module provides some extra types that are useful when doing numerical work.",
+        "suggest": "该模块提供了一些额外的类型，这些类型在进行数值工作时很有用。",
+        "translate": ""
+    },
+    {
+        "source": "See the individual documentation for each piece for more information.",
+        "suggest": "有关更多信息，请参见每篇文章的单独文档。",
+        "translate": ""
+    },
+    {
+        "source": "OS-specific extensions to [`fs::Metadata`].",
+        "suggest": "[`fs::Metadata`] 的特定于 OS 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Gain a reference to the underlying `stat` structure which contains the raw information returned by the OS.",
+        "suggest": "获得对基础 `stat` 结构体的引用，该基础体包含 OS 返回的原始信息。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of the returned `stat` are **not** consistent across Unix platforms.",
+        "suggest": "返回的 `stat` 的内容在 Unix 平台上是不一致的。",
+        "translate": ""
+    },
+    {
+        "source": "The `os::unix::fs::MetadataExt` trait contains the cross-Unix abstractions contained within the raw stat.",
+        "suggest": "`os::unix::fs::MetadataExt` trait 包含原始统计信息中包含的跨 Unix 抽象。",
+        "translate": ""
+    },
+    {
+        "source": "Android-specific definitions",
+        "suggest": "特定于 Android 的定义",
+        "translate": ""
+    },
+    {
+        "source": "Android-specific raw type definitions",
+        "suggest": "特定于 Android 的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Dragonfly-specific definitions",
+        "suggest": "Dragonfly 的特定定义",
+        "translate": ""
+    },
+    {
+        "source": "Dragonfly-specific raw type definitions",
+        "suggest": "Dragonfly 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific definitions",
+        "suggest": "特定于 Linux 的定义",
+        "translate": ""
+    },
+    {
+        "source": "Emscripten-specific raw type definitions This is basically exactly the same as the linux definitions, except using the musl-specific stat64 structure in liblibc.",
+        "suggest": "特定于 Emscripten 的原始类型定义除了在 liblibc 中使用特定于 musl 的 stat64 结构体之外，这基本上与 linux 定义完全相同。",
+        "translate": ""
+    },
+    {
+        "source": "Functionality specific to the `x86_64-fortanix-unknown-sgx` target.",
+        "suggest": "`x86_64-fortanix-unknown-sgx` 目标特定的功能。",
+        "translate": ""
+    },
+    {
+        "source": "This includes functions to deal with memory isolation, usercalls, and the SGX instruction set.",
+        "suggest": "这包括处理内存隔离，用户调用和 SGX 指令集的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Low-level interfaces to usercalls.",
+        "suggest": "灵活的用户调用接口。",
+        "translate": ""
+    },
+    {
+        "source": "See the [ABI documentation] for more information.",
+        "suggest": "有关更多信息，请参见 [ABI documentation]。",
+        "translate": ""
+    },
+    {
+        "source": "Primitives for allocating memory in userspace as well as copying data to and from user memory.",
+        "suggest": "用于在用户空间中分配内存以及在用户内存之间复制数据的原语。",
+        "translate": ""
+    },
+    {
+        "source": "Lowest-level interfaces to usercalls and usercall ABI type definitions.",
+        "suggest": "用户调用和用户调用 ABI 类型定义的最底层接口。",
+        "translate": ""
+    },
+    {
+        "source": "fortanix-sgx-abi re-exports",
+        "suggest": "fortanix-sgx-abi 重导出",
+        "translate": ""
+    },
+    {
+        "source": "Functions for querying mapping information for pointers.",
+        "suggest": "用于查询指针映射信息的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Functions for querying thread-related information.",
+        "suggest": "用于查询线程相关信息的函数。",
+        "translate": ""
+    },
+    {
+        "source": "The methods below use libc::stat, so they work fine when libc is built with FreeBSD 12 ABI.",
+        "suggest": "下面的方法使用 libc::stat，因此，当 libc 用 FreeBSD 12 ABI 构建时，它们可以正常工作。",
+        "translate": ""
+    },
+    {
+        "source": "This method would just return nonsense.",
+        "suggest": "这种方法只会返回废话。",
+        "translate": ""
+    },
+    {
+        "source": "FreeBSD-specific definitions",
+        "suggest": "FreeBSD 特定的定义",
+        "translate": ""
+    },
+    {
+        "source": "FreeBSD-specific raw type definitions",
+        "suggest": "FreeBSD 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Fuchsia-specific definitions",
+        "suggest": "Fuchsia 的特定定义",
+        "translate": ""
+    },
+    {
+        "source": "Fuchsia-specific raw type definitions",
+        "suggest": "Fuchsia 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Haiku-specific definitions",
+        "suggest": "ku 句的特定定义",
+        "translate": ""
+    },
+    {
+        "source": "Haiku-specific raw type definitions",
+        "suggest": "ku 句特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Use the direct definition of usize, instead of uintptr_t like in libc",
+        "suggest": "使用 usize 的直接定义，而不是像 libc 中的 uintptr_t",
+        "translate": ""
+    },
+    {
+        "source": "illumos-specific definitions",
+        "suggest": "illumos 特定的定义",
+        "translate": ""
+    },
+    {
+        "source": "illumos-specific raw type definitions",
+        "suggest": "特定于 illumos 的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "iOS-specific definitions",
+        "suggest": "iOS 特定的定义",
+        "translate": ""
+    },
+    {
+        "source": "iOS-specific raw type definitions",
+        "suggest": "iOS 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific extensions to primitives in the `std::fs` module.",
+        "suggest": "`std::fs` 模块中特定于 Linux 的原语扩展。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of the returned [`stat`] are **not** consistent across Unix platforms.",
+        "suggest": "返回的 [`stat`] 的内容在 Unix 平台上是不一致的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the device ID on which this file resides.",
+        "suggest": "返回此文件所在的设备 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the inode number.",
+        "suggest": "返回索引节点号。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the file type and mode.",
+        "suggest": "返回文件类型和模式。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of hard links to file.",
+        "suggest": "返回文件的硬链接数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the user ID of the file owner.",
+        "suggest": "返回文件所有者的用户标识。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the group ID of the file owner.",
+        "suggest": "返回文件所有者的组 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the device ID that this file represents.",
+        "suggest": "返回此文件表示的设备 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Only relevant for special file.",
+        "suggest": "仅与特殊文件有关。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the size of the file (if it is a regular file or a symbolic link) in bytes.",
+        "suggest": "返回文件的大小 (如果是常规文件或符号链接)，以字节为单位。",
+        "translate": ""
+    },
+    {
+        "source": "The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.",
+        "suggest": "符号链接的大小是它包含的路径名的长度，没有终止的空字节。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last access time of the file, in seconds since Unix Epoch.",
+        "suggest": "返回文件的最后访问时间，以自 Unix 纪元以来的秒数为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last access time of the file, in nanoseconds since [`st_atime`].",
+        "suggest": "返回文件的最后访问时间，自 [`st_atime`] 起以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last modification time of the file, in seconds since Unix Epoch.",
+        "suggest": "返回文件的最后修改时间，以自 Unix 纪元以来的秒数为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last modification time of the file, in nanoseconds since [`st_mtime`].",
+        "suggest": "返回文件的最后修改时间，自 [`st_mtime`] 起以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last status change time of the file, in seconds since Unix Epoch.",
+        "suggest": "返回文件的最后状态更改时间，以自 Unix 纪元以来的秒数为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last status change time of the file, in nanoseconds since [`st_ctime`].",
+        "suggest": "返回文件的最后状态更改时间，自 [`st_ctime`] 起以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the \"preferred\" block size for efficient filesystem I/O.",
+        "suggest": "返回有效文件系统 I/O 的 \"preferred\" 块大小。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of blocks allocated to the file, 512-byte units.",
+        "suggest": "返回分配给文件的块数，以 512 字节为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific definitions.",
+        "suggest": "特定于 Linux 的定义。",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific raw type definitions.",
+        "suggest": "特定于 Linux 的原始类型定义。",
+        "translate": ""
+    },
+    {
+        "source": "macOS-specific definitions",
+        "suggest": "macOS 特定的定义",
+        "translate": ""
+    },
+    {
+        "source": "macOS-specific raw type definitions",
+        "suggest": "macOS 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "OS-specific functionality.",
+        "suggest": "特定于操作系统的功能。",
+        "translate": ""
+    },
+    {
+        "source": "When documenting libstd we want to show unix/windows/linux/wasi modules as these are the \"main modules\" that are used across platforms, so all modules are enabled when `cfg(doc)` is set.",
+        "suggest": "在记录 libstd 时，我们希望显示 unix/windows/linux/wasi 模块，因为这些模块是跨平台使用的 \"main modules\"，因此在设置 `cfg(doc)` 时将启用所有模块。",
+        "translate": ""
+    },
+    {
+        "source": "This should help show platform-specific functionality in a hopefully cross-platform way in the documentation.",
+        "suggest": "这应该有助于以有希望的跨平台方式在文档中显示特定于平台的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Note that we deliberately avoid `cfg_if!` here to work around a rust-analyzer bug that would make `std::os` submodules unusable:",
+        "suggest": "请注意，我们在这里特意避免使用 `cfg_if!` 来解决 rust-analyzer 错误，该错误会使 `std::os` 子模块不可用:",
+        "translate": ""
+    },
+    {
+        "source": "If we're not documenting libstd then we just expose the main modules as we otherwise would.",
+        "suggest": "如果我们没有记录 libstd，那么我们将像其他方式那样公开主要模块。",
+        "translate": ""
+    },
+    {
+        "source": "OpenBSD-specific definitions",
+        "suggest": "特定于 OpenBSD 的定义",
+        "translate": ""
+    },
+    {
+        "source": "NetBSD-specific raw type definitions",
+        "suggest": "NetBSD 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "OpenBSD-specific raw type definitions",
+        "suggest": "特定于 OpenBSD 的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `char` type.",
+        "suggest": "等效于 C 的 `char` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "is completely unlike [Rust's `char` type];",
+        "suggest": "完全不同于 [Rust's `char` type];",
+        "translate": ""
+    },
+    {
+        "source": "while Rust's type represents a unicode scalar value, C's `char` type is just an ordinary integer.",
+        "suggest": "Rust 的类型表示一个 Unicode 标量值，而 C 的 `char` 类型只是一个普通整数。",
+        "translate": ""
+    },
+    {
+        "source": "This type will always be either [`i8`] or [`u8`], as the type is defined as being one byte long.",
+        "suggest": "该类型将始终为 [`i8`] 或 [`u8`]，因为该类型被定义为一个字节长。",
+        "translate": ""
+    },
+    {
+        "source": "C chars are most commonly used to make C strings.",
+        "suggest": "C 字符最常用于制作 C 字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike Rust, where the length of a string is included alongside the string, C strings mark the end of a string with the character `'\\0'`.",
+        "suggest": "与 Rust 不同，Rust 的字符串长度包含在字符串的旁边，而 C 字符串则用字符 `'\\0'` 标记字符串的结尾。",
+        "translate": ""
+    },
+    {
+        "source": "See [`CStr`] for more information.",
+        "suggest": "有关更多信息，请参见 [`CStr`]。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `double` type.",
+        "suggest": "等效于 C 的 `double` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`f64`], which is guaranteed to be an [IEEE-754 double-precision float] in Rust.",
+        "suggest": "此类型几乎总是 [`f64`]，并保证它是 Rust 中的 [IEEE-754 double-precision float]。",
+        "translate": ""
+    },
+    {
+        "source": "That said, the standard technically only guarantees that it be a floating-point number with at least the precision of a [`float`], and it may be `f32` or something entirely different from the IEEE-754 standard.",
+        "suggest": "也就是说，该标准从技术上仅保证它是至少具有 [`float`] 精度的浮点数，并且它可以是 `f32` 或与 IEEE-754 标准完全不同的东西。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `float` type.",
+        "suggest": "等效于 C 的 `float` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`f32`], which is guaranteed to be an [IEEE-754 single-precision float] in Rust.",
+        "suggest": "此类型几乎总是 [`f32`]，并保证它是 Rust 中的 [IEEE-754 single-precision float]。",
+        "translate": ""
+    },
+    {
+        "source": "That said, the standard technically only guarantees that it be a floating-point number, and it may have less precision than `f32` or not follow the IEEE-754 standard at all.",
+        "suggest": "就是说，该标准从技术上仅保证它是浮点数，并且它的精度可能低于 `f32` 或完全不遵循 IEEE-754 标准。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `signed int` (`int`) type.",
+        "suggest": "等效于 C 的 `signed int` (`int`) 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`i32`], but may differ on some esoteric systems.",
+        "suggest": "这种类型几乎总是 [`i32`]，但在某些深奥的系统上可能有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be a signed integer that is at least the size of a [`short`];",
+        "suggest": "C 标准从技术上仅要求此类型为带符号的整数，至少应为 [`short`] 的大小。",
+        "translate": ""
+    },
+    {
+        "source": "some systems define it as an [`i16`], for example.",
+        "suggest": "例如，某些系统将其定义为 [`i16`]。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `signed long` (`long`) type.",
+        "suggest": "等效于 C 的 `signed long` (`long`) 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will always be [`i32`] or [`i64`].",
+        "suggest": "此类型将始终为 [`i32`] 或 [`i64`]。",
+        "translate": ""
+    },
+    {
+        "source": "Most notably, many Linux-based systems assume an `i64`, but Windows assumes `i32`.",
+        "suggest": "最值得注意的是，许多基于 Linux 的系统都使用 `i64`，但 Windows 则使用 `i32`。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be a signed integer that is at least 32 bits and at least the size of an [`int`], although in practice, no system would have a `long` that is neither an `i32` nor `i64`.",
+        "suggest": "从技术上讲，C 标准仅要求该类型为至少 32 位且至少为 [`int`] 大小的有符号整数，尽管实际上，没有系统会拥有既不是 `i32` 也不是 `i64` 的 `long`。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `signed long long` (`long long`) type.",
+        "suggest": "等效于 C 的 `signed long long` (`long long`) 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`i64`], but may differ on some systems.",
+        "suggest": "此类型几乎总是 [`i64`]，但在某些系统上可能有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be a signed integer that is at least 64 bits and at least the size of a [`long`], although in practice, no system would have a `long long` that is not an `i64`, as most systems do not have a standardised [`i128`] type.",
+        "suggest": "C 标准从技术上仅要求此类型为至少 64 位且至少为 [`long`] 大小的有符号整数，尽管实际上，没有系统会拥有不是 `long long` 的 `long long`，因为大多数系统都没有标准化的 [`i128`] 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Platform-specific types, as defined by C.",
+        "suggest": "特定于平台的类型，由 C 定义。",
+        "translate": ""
+    },
+    {
+        "source": "Code that interacts via FFI will almost certainly be using the base types provided by C, which aren't nearly as nicely defined as Rust's primitive types.",
+        "suggest": "通过 FFI 进行交互的代码几乎肯定会使用 C 提供的基本类型，而这些基本类型的定义不如 Rust 的基本类型好。",
+        "translate": ""
+    },
+    {
+        "source": "This module provides types which will match those defined by C, so that code that interacts with C will refer to the correct types.",
+        "suggest": "该模块提供的类型将与 C 定义的类型匹配，以便与 C 交互的代码将引用正确的类型。",
+        "translate": ""
+    },
+    {
+        "source": "To verify that the NonZero types in this file's macro invocations correspond",
+        "suggest": "验证此文件的宏调用中的 NonZero 类型是否对应",
+        "translate": ""
+    },
+    {
+        "source": "NB this does not check that the main c_* types are right.",
+        "suggest": "NB 这不会检查主要的 c_ * 类型是否正确。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `signed char` type.",
+        "suggest": "等效于 C 的 `signed char` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will always be [`i8`], but is included for completeness.",
+        "suggest": "此类型将始终为 [`i8`]，但出于完整性考虑将其包括在内。",
+        "translate": ""
+    },
+    {
+        "source": "It is defined as being a signed integer the same size as a C [`char`].",
+        "suggest": "它定义为与 C [`char`] 大小相同的有符号整数。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `signed short` (`short`) type.",
+        "suggest": "等效于 C 的 `signed short` (`short`) 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`i16`], but may differ on some esoteric systems.",
+        "suggest": "这种类型几乎总是 [`i16`]，但在某些深奥的系统上可能有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be a signed integer with at least 16 bits;",
+        "suggest": "C 标准从技术上仅要求此类型是至少 16 位的有符号整数;",
+        "translate": ""
+    },
+    {
+        "source": "some systems may define it as `i32`, for example.",
+        "suggest": "例如，某些系统可能将其定义为 `i32`。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `unsigned char` type.",
+        "suggest": "等效于 C 的 `unsigned char` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will always be [`u8`], but is included for completeness.",
+        "suggest": "此类型将始终为 [`u8`]，但出于完整性考虑将其包括在内。",
+        "translate": ""
+    },
+    {
+        "source": "It is defined as being an unsigned integer the same size as a C [`char`].",
+        "suggest": "它定义为与 C [`char`] 大小相同的无符号整数。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `unsigned int` type.",
+        "suggest": "等效于 C 的 `unsigned int` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`u32`], but may differ on some esoteric systems.",
+        "suggest": "这种类型几乎总是 [`u32`]，但在某些深奥的系统上可能有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be an unsigned integer with the same size as an [`int`];",
+        "suggest": "从技术上讲，C 标准仅要求此类型是与 [`int`] 大小相同的无符号整数。",
+        "translate": ""
+    },
+    {
+        "source": "some systems define it as a [`u16`], for example.",
+        "suggest": "例如，某些系统将其定义为 [`u16`]。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `unsigned long` type.",
+        "suggest": "等效于 C 的 `unsigned long` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will always be [`u32`] or [`u64`].",
+        "suggest": "此类型将始终为 [`u32`] 或 [`u64`]。",
+        "translate": ""
+    },
+    {
+        "source": "Most notably, many Linux-based systems assume an `u64`, but Windows assumes `u32`.",
+        "suggest": "最值得注意的是，许多基于 Linux 的系统都使用 `u64`，但 Windows 则使用 `u32`。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be an unsigned integer with the size of a [`long`], although in practice, no system would have a `ulong` that is neither a `u32` nor `u64`.",
+        "suggest": "C 标准从技术上仅要求此类型是 [`long`] 大小的无符号整数，尽管在实践中，没有系统会使用既不是 `u32` 也不是 `u64` 的 `ulong`。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `unsigned long long` type.",
+        "suggest": "等效于 C 的 `unsigned long long` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`u64`], but may differ on some systems.",
+        "suggest": "此类型几乎总是 [`u64`]，但在某些系统上可能有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be an unsigned integer with the size of a [`long long`], although in practice, no system would have a `long long` that is not a `u64`, as most systems do not have a standardised [`u128`] type.",
+        "suggest": "C 标准从技术上仅要求此类型是 [`long long`] 大小的无符号整数，尽管实际上，没有系统会具有不是 `u64` 的 `long long`，因为大多数系统都没有标准化的 [`u128`] 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `unsigned short` type.",
+        "suggest": "等效于 C 的 `unsigned short` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type will almost always be [`u16`], but may differ on some esoteric systems.",
+        "suggest": "这种类型几乎总是 [`u16`]，但在某些深奥的系统上可能有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "The C standard technically only requires that this type be an unsigned integer with the same size as a [`short`].",
+        "suggest": "C 标准从技术上仅要求此类型是与 [`short`] 大小相同的无符号整数。",
+        "translate": ""
+    },
+    {
+        "source": "Redox-specific definitions",
+        "suggest": "特定于 `Redox` 的定义",
+        "translate": ""
+    },
+    {
+        "source": "Redox-specific raw type definitions",
+        "suggest": "特定于 `Redox` 的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "Solaris-specific definitions",
+        "suggest": "Solaris 特定的定义",
+        "translate": ""
+    },
+    {
+        "source": "Solaris-specific raw type definitions",
+        "suggest": "Solaris 特定的原始类型定义",
+        "translate": ""
+    },
+    {
+        "source": "VxWorks-specific definitions",
+        "suggest": "VxWorks 特定的定义",
+        "translate": ""
+    }
+]

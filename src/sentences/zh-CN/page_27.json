@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "FIXME mov on windows, movlps on i686",
+        "suggest": "FIXME windows 上的 mov，i686 上的 movlps",
+        "translate": ""
+    },
+    {
+        "source": "Stores a 128-bit integer vector to a 128-bit aligned memory location.",
+        "suggest": "将 128 位整数 vector 存储到 128 位对齐的内存位置。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a 32-bit integer value in the specified memory location.",
+        "suggest": "将 32 位整数值存储在指定的内存位置。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a vector where the low element is extracted from `a` and its upper element is zero.",
+        "suggest": "返回 vector，其中从 `a` 提取低位元素，其高位元素为零。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME movd on windows, movd on i686",
+        "suggest": "FIXME 在 windows 上移动，在 i686 上移动",
+        "translate": ""
+    },
+    {
+        "source": "Converts packed 16-bit integers from `a` and `b` to packed 8-bit integers using signed saturation.",
+        "suggest": "使用带符号的饱和度将包装的 16 位整数从 `a` 和 `b` 转换为包装的 8 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Converts packed 32-bit integers from `a` and `b` to packed 16-bit integers using signed saturation.",
+        "suggest": "使用带符号的饱和度将包装的 32 位整数从 `a` 和 `b` 转换为包装的 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Converts packed 16-bit integers from `a` and `b` to packed 8-bit integers using unsigned saturation.",
+        "suggest": "使用无符号饱和度将 `a` 和 `b` 的包装的 16 位整数转换为包装的 8 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the `imm8` element of `a`.",
+        "suggest": "返回 `a` 的 `imm8` 元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector where the `imm8` element of `a` is replaced with `i`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的 `imm8` 元素替换为 `i`。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles 32-bit integers in `a` using the control in `imm8`.",
+        "suggest": "使用 `imm8` 中的控件对 `a` 中的 32 位整数进行混洗。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles 16-bit integers in the high 64 bits of `a` using the control in `imm8`.",
+        "suggest": "使用 `imm8` 中的控件对 `a` 的高 64 位中的 16 位整数进行混洗。",
+        "translate": ""
+    },
+    {
+        "source": "Put the results in the high 64 bits of the returned vector, with the low 64 bits being copied from from `a`.",
+        "suggest": "将结果放入返回的 vector 的高 64 位中，并从 `a` 复制低 64 位。",
+        "translate": ""
+    },
+    {
+        "source": "See _mm_shuffle_epi32.",
+        "suggest": "请参见 _mm_shuffle_epi32。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles 16-bit integers in the low 64 bits of `a` using the control in `imm8`.",
+        "suggest": "使用 `imm8` 中的控件在 `a` 的低 64 位中对 16 位整数进行混洗。",
+        "translate": ""
+    },
+    {
+        "source": "Put the results in the low 64 bits of the returned vector, with the high 64 bits being copied from from `a`.",
+        "suggest": "将结果放入返回的 vector 的低 64 位，从 `a` 复制高 64 位。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 8-bit integers from the high half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的高半部分解包并交织 8 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 16-bit integers from the high half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的高半部分解包并交织 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 32-bit integers from the high half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的高半部分解包并交织 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 64-bit integers from the high half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的高半部分解包并交织 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 8-bit integers from the low half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的下半部分解包并交织 8 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 16-bit integers from the low half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的下半部分解包并交织 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 32-bit integers from the low half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的下半部分解包并交织 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Unpacks and interleave 64-bit integers from the low half of `a` and `b`.",
+        "suggest": "从 `a` 和 `b` 的下半部分解包并交织 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the sum of the low elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素替换为 `a` 和 `b` 的低位元素之和。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the result of diving the lower element of `a` by the lower element of `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的下限元素被 `a` 的下限元素除以 `b` 的下限元素所代替。",
+        "translate": ""
+    },
+    {
+        "source": "Divide packed double-precision (64-bit) floating-point elements in `a` by packed elements in `b`.",
+        "suggest": "将 `a` 中的包装的双精度 (64-bit) 浮点元素除以 `b` 中的包装的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the maximum of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素最大值取代。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the maximum values from corresponding elements in `a` and `b`.",
+        "suggest": "返回一个新的 vector，它具有 `a` 和 `b` 中相应元素的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the minimum of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素的最小值替换。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the minimum values from corresponding elements in `a` and `b`.",
+        "suggest": "返回一个新的 vector，它具有 `a` 和 `b` 中相应元素的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by multiplying the low elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素相乘。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the square root of the lower element `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低端元素替换为下部元素 `b` 的平方根。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the square root of each of the values in `a`.",
+        "suggest": "返回一个新的 vector，它具有 `a` 中每个值的平方根。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by subtracting the low element by `b` from the low element of `a`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低端元素被 `a` 的低端元素减去 `b` 的低端元素所代替。",
+        "translate": ""
+    },
+    {
+        "source": "Subtract packed double-precision (64-bit) floating-point elements in `b` from `a`.",
+        "suggest": "从 `a` 中减去 `b` 中的包装的双精度 (64-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the bitwise AND of packed double-precision (64-bit) floating-point elements in `a` and `b`.",
+        "suggest": "计算 `a` 和 `b` 中包装的双精度 (64-bit) 浮点元素的按位与。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the bitwise NOT of `a` and then AND with `b`.",
+        "suggest": "计算 `a` 的按位 NOT，然后计算 `b` 的 AND。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the bitwise OR of `a` and `b`.",
+        "suggest": "计算 `a` 和 `b` 的按位或。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the equality comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素的相等比较取代。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the less-than comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素的小于比较所代替。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the less-than-or-equal comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素小于或等于的比较所取代。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the greater-than comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素大于的比较所代替。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the greater-than-or-equal comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素大于或等于的比较所取代。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the result of comparing both of the lower elements of `a` and `b` to `NaN`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素都与 `NaN` 进行比较的结果所代替。",
+        "translate": ""
+    },
+    {
+        "source": "If neither are equal to `NaN` then `0xFFFFFFFFFFFFFFFF` is used and `0` otherwise.",
+        "suggest": "如果两者都不等于 `NaN`，则使用 `0xFFFFFFFFFFFFFFFF`，否则使用 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "If either is equal to `NaN` then `0xFFFFFFFFFFFFFFFF` is used and `0` otherwise.",
+        "suggest": "如果其中一个等于 `NaN`，则使用 `0xFFFFFFFFFFFFFFFF`，否则使用 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the not-equal comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素的不相等比较代替。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the not-less-than comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素相当的比较所取代。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the not-less-than-or-equal comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素相等或不小于的比较所取代。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the not-greater-than comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素的不大于比较所代替。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a new vector with the low element of `a` replaced by the not-greater-than-or-equal comparison of the lower elements of `a` and `b`.",
+        "suggest": "返回一个新的 vector，其中 `a` 的低位元素被 `a` 和 `b` 的低位元素的不大于等于相等的比较所取代。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for equality.",
+        "suggest": "比较 `a` 和 `b` 中的相应元素是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for less-than.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素小于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for less-than-or-equal",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否小于等于",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for greater-than.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否大于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for greater-than-or-equal.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否大于等于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` to see if neither is `NaN`.",
+        "suggest": "比较 `a` 和 `b` 中的相应元素以查看 `NaN` 是否都不是。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` to see if either is `NaN`.",
+        "suggest": "比较 `a` 和 `b` 中的相应元素，以查看是否为 `NaN`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for not-equal.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for not-less-than.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素不少于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for not-less-than-or-equal.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否等于或大于等于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for not-greater-than.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否大于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares corresponding elements in `a` and `b` for not-greater-than-or-equal.",
+        "suggest": "比较 `a` 和 `b` 中的对应元素是否大于等于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower element of `a` and `b` for equality.",
+        "suggest": "比较 `a` 和 `b` 的下部元素是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower element of `a` and `b` for less-than.",
+        "suggest": "比较 `a` 和 `b` 的下限元素小于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower element of `a` and `b` for less-than-or-equal.",
+        "suggest": "比较 `a` 和 `b` 的下限元素是否等于或小于等于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower element of `a` and `b` for greater-than.",
+        "suggest": "比较 `a` 和 `b` 的下限元素是否大于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower element of `a` and `b` for greater-than-or-equal.",
+        "suggest": "比较 `a` 和 `b` 的下限元素是否大于等于。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower element of `a` and `b` for not-equal.",
+        "suggest": "比较 `a` 和 `b` 的下部元素是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "Converts packed double-precision (64-bit) floating-point elements in `a` to packed single-precision (32-bit) floating-point elements",
+        "suggest": "将 `a` 中的包装的双精度 (64-bit) 浮点元素转换为包装的单精度 (32-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lower double-precision (64-bit) floating-point element in a to a 32-bit integer.",
+        "suggest": "将 a 中的较低双精度 (64-bit) 浮点元素转换为 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lower double-precision (64-bit) floating-point element in `b` to a single-precision (32-bit) floating-point element, store the result in the lower element of the return value, and copies the upper element from `a` to the upper element the return value.",
+        "suggest": "将 `b` 中的下部双精度 (64-bit) 浮点元素转换为单精度 (32-bit) 浮点元素，将结果存储在返回值的下部元素中，并将上部元素从 `a` 复制到返回值的上部元素中。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the lower double-precision (64-bit) floating-point element of `a`.",
+        "suggest": "返回 `a` 的较低的双精度 (64-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lower single-precision (32-bit) floating-point element in `b` to a double-precision (64-bit) floating-point element, store the result in the lower element of the return value, and copies the upper element from `a` to the upper element the return value.",
+        "suggest": "将 `b` 中的下部单精度 (32-bit) 浮点元素转换为双精度 (64-bit) 浮点元素，将结果存储在返回值的下部元素中，然后将 `a` 的上部元素复制到返回值的上部元素中。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lower double-precision (64-bit) floating-point element in `a` to a 32-bit integer with truncation.",
+        "suggest": "将 `a` 中较低的双精度 (64-bit) 浮点元素转换为带截断的 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Copies double-precision (64-bit) floating-point element `a` to the lower element of the packed 64-bit return value.",
+        "suggest": "将双精度 (64-bit) 浮点元素 `a` 复制到包装的 64 位返回值的低位元素。",
+        "translate": ""
+    },
+    {
+        "source": "Broadcasts double-precision (64-bit) floating-point value a to all elements of the return value.",
+        "suggest": "向返回值的所有元素广播双精度 (64-bit) 浮点值 a。",
+        "translate": ""
+    },
+    {
+        "source": "Sets packed double-precision (64-bit) floating-point elements in the return value with the supplied values.",
+        "suggest": "使用提供的值在返回值中设置包装的双精度 (64-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Sets packed double-precision (64-bit) floating-point elements in the return value with the supplied values in reverse order.",
+        "suggest": "在返回值中设置包装的双精度 (64-bit) 浮点元素，并以相反的顺序提供提供的值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns packed double-precision (64-bit) floating-point elements with all zeros.",
+        "suggest": "返回全零的包装的双精度 (64-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME xorpd expected",
+        "suggest": "FIXME xorpd 预期",
+        "translate": ""
+    },
+    {
+        "source": "The mask is stored in the 2 least significant bits of the return value.",
+        "suggest": "掩码存储在返回值的 2 个最低有效位中。",
+        "translate": ""
+    },
+    {
+        "source": "Loads 128-bits (composed of 2 packed double-precision (64-bit) floating-point elements) from memory into the returned vector.",
+        "suggest": "从内存中将 128 位 (由 2 个包装的双精度 (64-bit) 浮点元素组成) 加载到返回的 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "must be aligned on a 16-byte boundary or a general-protection exception may be generated.",
+        "suggest": "必须在 16 字节边界上对齐，否则可能会产生一般保护异常。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a 64-bit double-precision value to the low element of a",
+        "suggest": "将 64 位双精度值加载到",
+        "translate": ""
+    },
+    {
+        "source": "128-bit integer vector and clears the upper element.",
+        "suggest": "128 位整数 vector 并清除高位元素。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a double-precision value into the high-order bits of a 128-bit vector of `[2 x double]`.",
+        "suggest": "将双精度值加载到 `[2 x double]` 的 128 位 vector 的高阶位中。",
+        "translate": ""
+    },
+    {
+        "source": "The low-order bits are copied from the low-order bits of the first operand.",
+        "suggest": "低位从第一个操作数的低位复制而来。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a double-precision value into the low-order bits of a 128-bit vector of `[2 x double]`.",
+        "suggest": "将双精度值加载到 `[2 x double]` 的 128 位 vector 的低位中。",
+        "translate": ""
+    },
+    {
+        "source": "The high-order bits are copied from the high-order bits of the first operand.",
+        "suggest": "高阶位是从第一个操作数的高阶位复制而来的。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a 128-bit floating point vector of `[2 x double]` to a 128-bit aligned memory location.",
+        "suggest": "将 `[2 x double]` 的 128 位浮点 vector 存储到 128 位对齐的内存位置。",
+        "translate": ""
+    },
+    {
+        "source": "Stores the lower 64 bits of a 128-bit vector of `[2 x double]` to a memory location.",
+        "suggest": "将 `[2 x double]` 的 128 位 vector 的低 64 位存储到内存位置。",
+        "translate": ""
+    },
+    {
+        "source": "Stores 128-bits (composed of 2 packed double-precision (64-bit) floating-point elements) from `a` into memory.",
+        "suggest": "将来自 `a` 的 128 位 (由 2 个包装的双精度 (64-bit) 浮点元素组成) 存储到内存中。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME movupd expected",
+        "suggest": "FIXME movupd 预期",
+        "translate": ""
+    },
+    {
+        "source": "Stores the lower double-precision (64-bit) floating-point element from `a` into 2 contiguous elements in memory.",
+        "suggest": "将来自 `a` 的较低的双精度 (64-bit) 浮点元素存储到内存中的 2 个连续元素中。",
+        "translate": ""
+    },
+    {
+        "source": "must be aligned on a",
+        "suggest": "必须对齐",
+        "translate": ""
+    },
+    {
+        "source": "16-byte boundary or a general-protection exception may be generated.",
+        "suggest": "可能会生成 16 字节边界或一般保护异常。",
+        "translate": ""
+    },
+    {
+        "source": "Stores 2 double-precision (64-bit) floating-point elements from `a` into memory in reverse order.",
+        "suggest": "将 `a` 中的 2 个双精度 (64-bit) 浮点元素以相反的顺序存储到内存中。",
+        "translate": ""
+    },
+    {
+        "source": "Stores the upper 64 bits of a 128-bit vector of `[2 x double]` to a memory location.",
+        "suggest": "将 `[2 x double]` 的 128 位 vector 的高 64 位存储到存储位置。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a double-precision (64-bit) floating-point element from memory into both elements of returned vector.",
+        "suggest": "将内存中的双精度 (64-bit) 浮点元素加载到返回的 vector 的两个元素中。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME LLVM uses different codegen",
+        "suggest": "FIXME LLVM 使用不同的代码生成",
+        "translate": ""
+    },
+    {
+        "source": "FIXME same as _mm_load1_pd",
+        "suggest": "FIXME 与 _mm_load1_pd 相同",
+        "translate": ""
+    },
+    {
+        "source": "Loads 2 double-precision (64-bit) floating-point elements from memory into the returned vector in reverse order.",
+        "suggest": "以相反的顺序将 2 个双精度 (64-bit) 浮点元素从内存加载到返回的 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a 128-bit floating-point vector of `[2 x double]` from two",
+        "suggest": "从两个创建一个 `[2 x double]` 的 128 位浮点 vector",
+        "translate": ""
+    },
+    {
+        "source": "128-bit vector parameters of `[2 x double]`, using the immediate-value parameter as a specifier.",
+        "suggest": "`[2 x double]` 的 128 位 vector 参数，使用立即值参数作为说明符。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a 128-bit floating-point vector of `[2 x double]`.",
+        "suggest": "构造 `[2 x double]` 的 128 位浮点 vector。",
+        "translate": ""
+    },
+    {
+        "source": "The lower",
+        "suggest": "下层",
+        "translate": ""
+    },
+    {
+        "source": "64 bits are set to the lower 64 bits of the second parameter.",
+        "suggest": "将 64 位设置为第二个参数的低 64 位。",
+        "translate": ""
+    },
+    {
+        "source": "The upper",
+        "suggest": "上层",
+        "translate": ""
+    },
+    {
+        "source": "64 bits are set to the upper 64 bits of the first parameter.",
+        "suggest": "将 64 位设置为第一个参数的高 64 位。",
+        "translate": ""
+    },
+    {
+        "source": "Casts a 128-bit floating-point vector of `[2 x double]` into a 128-bit floating-point vector of `[4 x float]`.",
+        "suggest": "将 `[2 x double]` 的 128 位浮点 vector 转换为 `[4 x float]` 的 128 位浮点 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Casts a 128-bit floating-point vector of `[2 x double]` into a 128-bit integer vector.",
+        "suggest": "将 `[2 x double]` 的 128 位浮点 vector 转换为 128 位整数 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Casts a 128-bit floating-point vector of `[4 x float]` into a 128-bit floating-point vector of `[2 x double]`.",
+        "suggest": "将 `[4 x float]` 的 128 位浮点 vector 转换为 `[2 x double]` 的 128 位浮点 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Casts a 128-bit floating-point vector of `[4 x float]` into a 128-bit integer vector.",
+        "suggest": "将 `[4 x float]` 的 128 位浮点 vector 转换为 128 位整数 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Casts a 128-bit integer vector into a 128-bit floating-point vector of `[2 x double]`.",
+        "suggest": "将 128 位整数 vector 转换为 `[2 x double]` 的 128 位浮点 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Casts a 128-bit integer vector into a 128-bit floating-point vector of `[4 x float]`.",
+        "suggest": "将 128 位整数 vector 转换为 `[4 x float]` 的 128 位浮点 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Returns vector of type __m128d with undefined elements.",
+        "suggest": "返回带有未定义元素的 __m128d 类型的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "this function should return MaybeUninit<__m128d>",
+        "suggest": "该函数应返回 MaybeUninit<__m128d>",
+        "translate": ""
+    },
+    {
+        "source": "Returns vector of type __m128i with undefined elements.",
+        "suggest": "返回带有未定义元素的 __m128i 类型的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "this function should return MaybeUninit<__m128i>",
+        "suggest": "该函数应返回 MaybeUninit<__m128i>",
+        "translate": ""
+    },
+    {
+        "source": "The resulting `__m128d` element is composed by the low-order values of the two `__m128d` interleaved input elements, i.e.:",
+        "suggest": "所得的 `__m128d` 元素由两个 `__m128d` 交错输入元素的低阶值组成，即:",
+        "translate": ""
+    },
+    {
+        "source": "The `[127:64]` bits are copied from the `[127:64]` bits of the second input * The `[63:0]` bits are copied from the `[127:64]` bits of the first input",
+        "suggest": "从第二个输入的 `[127:64]` 位复制 `[127:64]` 位 * 从第一个输入的 `[127:64]` 位复制 `[63:0]` 位",
+        "translate": ""
+    },
+    {
+        "source": "The resulting `__m128d` element is composed by the high-order values of the two `__m128d` interleaved input elements, i.e.:",
+        "suggest": "所得的 `__m128d` 元素由两个 `__m128d` 交错输入元素的高阶值组成，即:",
+        "translate": ""
+    },
+    {
+        "source": "The `[127:64]` bits are copied from the `[63:0]` bits of the second input",
+        "suggest": "`[127:64]` 位是从第二个输入的 `[63:0]` 位复制而来",
+        "translate": ""
+    },
+    {
+        "source": "The `[63:0]` bits are copied from the `[63:0]` bits of the first input",
+        "suggest": "从第一个输入的 `[63:0]` 位复制 `[63:0]` 位",
+        "translate": ""
+    },
+    {
+        "source": "make sure d is not aligned to 16-byte boundary",
+        "suggest": "确保 d 不与 16 字节边界对齐",
+        "translate": ""
+    },
+    {
+        "source": "Streaming SIMD Extensions 3 (SSE3)",
+        "suggest": "流式 SIMD 扩展 3 (SSE3)",
+        "translate": ""
+    },
+    {
+        "source": "Alternatively add and subtract packed single-precision (32-bit) floating-point elements in `a` to/from packed elements in `b`.",
+        "suggest": "或者，在 `a` 中的包装的单精度 (32-bit) 浮点元素上加减 `b` 中的包装的元素 to/from。",
+        "translate": ""
+    },
+    {
+        "source": "Alternatively add and subtract packed double-precision (64-bit) floating-point elements in `a` to/from packed elements in `b`.",
+        "suggest": "或者，在 `a` 中的包装的双精度 (64-bit) 浮点元素中加减 `b` 中的 to/from 包装的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontally adds adjacent pairs of double-precision (64-bit) floating-point elements in `a` and `b`, and pack the results.",
+        "suggest": "在 `a` 和 `b` 中水平添加相邻对的双精度 (64-bit) 浮点元素，并包装结果。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontally adds adjacent pairs of single-precision (32-bit) floating-point elements in `a` and `b`, and pack the results.",
+        "suggest": "在 `a` 和 `b` 中水平添加相邻对的单精度 (32-bit) 浮点元素对，并包装结果。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontally subtract adjacent pairs of double-precision (64-bit) floating-point elements in `a` and `b`, and pack the results.",
+        "suggest": "水平减去 `a` 和 `b` 中相邻的双精度 (64-bit) 浮点元素对，然后包装结果。",
+        "translate": ""
+    },
+    {
+        "source": "Loads 128-bits of integer data from unaligned memory.",
+        "suggest": "从未对齐的内存中加载 128 位整数数据。",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic may perform better than `_mm_loadu_si128` when the data crosses a cache line boundary.",
+        "suggest": "当数据越过缓存行边界时，此内联函数可能比 `_mm_loadu_si128` 更好。",
+        "translate": ""
+    },
+    {
+        "source": "Duplicate the low double-precision (64-bit) floating-point element from `a`.",
+        "suggest": "从 `a` 复制低双精度 (64-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a double-precision (64-bit) floating-point element from memory into both elements of return vector.",
+        "suggest": "将内存中的双精度 (64-bit) 浮点元素加载到返回 vector 的两个元素中。",
+        "translate": ""
+    },
+    {
+        "source": "Duplicate odd-indexed single-precision (32-bit) floating-point elements from `a`.",
+        "suggest": "`a` 中重复的奇数索引单精度 (32-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Duplicate even-indexed single-precision (32-bit) floating-point elements from `a`.",
+        "suggest": "`a` 中重复的偶数索引单精度 (32-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "round to nearest, and suppress exceptions:",
+        "suggest": "四舍五入到最接近的值，并排除异常:",
+        "translate": ""
+    },
+    {
+        "source": "round down, and suppress exceptions:",
+        "suggest": "四舍五入并抑制异常:",
+        "translate": ""
+    },
+    {
+        "source": "round up, and suppress exceptions:",
+        "suggest": "汇总并排除异常:",
+        "translate": ""
+    },
+    {
+        "source": "truncate, and suppress exceptions:",
+        "suggest": "截断并抑制异常:",
+        "translate": ""
+    },
+    {
+        "source": "use MXCSR.RC;",
+        "suggest": "使用 MXCSR.RC;",
+        "translate": ""
+    },
+    {
+        "source": "see `_MM_SET_ROUNDING_MODE`:",
+        "suggest": "参见 `_MM_SET_ROUNDING_MODE`:",
+        "translate": ""
+    },
+    {
+        "source": "Streaming SIMD Extensions 4.1 (SSE4.1)",
+        "suggest": "流式 SIMD 扩展 4.1 (SSE4.1)",
+        "translate": ""
+    },
+    {
+        "source": "rounding constans",
+        "suggest": "四舍五入",
+        "translate": ""
+    },
+    {
+        "source": "round to nearest",
+        "suggest": "四舍五入到最接近的",
+        "translate": ""
+    },
+    {
+        "source": "round down",
+        "suggest": "四舍五入",
+        "translate": ""
+    },
+    {
+        "source": "round up",
+        "suggest": "围捕",
+        "translate": ""
+    },
+    {
+        "source": "do not suppress exceptions",
+        "suggest": "不要抑制异常",
+        "translate": ""
+    },
+    {
+        "source": "suppress exceptions",
+        "suggest": "抑制异常",
+        "translate": ""
+    },
+    {
+        "source": "round to nearest and do not suppress exceptions",
+        "suggest": "四舍五入到最接近，不排除异常",
+        "translate": ""
+    },
+    {
+        "source": "round down and do not suppress exceptions",
+        "suggest": "四舍五入，不抑制异常",
+        "translate": ""
+    },
+    {
+        "source": "round up and do not suppress exceptions",
+        "suggest": "四舍五入，不抑制异常",
+        "translate": ""
+    },
+    {
+        "source": "truncate and do not suppress exceptions",
+        "suggest": "截断并且不抑制异常",
+        "translate": ""
+    },
+    {
+        "source": "use MXCSR.RC and do not suppress exceptions;",
+        "suggest": "使用 MXCSR.RC 且不抑制异常;",
+        "translate": ""
+    },
+    {
+        "source": "see",
+        "suggest": "请参见",
+        "translate": ""
+    },
+    {
+        "source": "use MXCSR.RC and suppress exceptions;",
+        "suggest": "使用 MXCSR.RC 并抑制异常;",
+        "translate": ""
+    },
+    {
+        "source": "see `vendor::_MM_SET_ROUNDING_MODE`",
+        "suggest": "见 `vendor::_MM_SET_ROUNDING_MODE`",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed 8-bit integers from `a` and `b` using `mask`",
+        "suggest": "使用 `mask` 混合 `a` 和 `b` 中的包装 8 位整数",
+        "translate": ""
+    },
+    {
+        "source": "The high bit of each corresponding mask byte determines the selection.",
+        "suggest": "每个对应的屏蔽字节的高位确定选择。",
+        "translate": ""
+    },
+    {
+        "source": "If the high bit is set the element of `a` is selected.",
+        "suggest": "如果设置了高位，则选择 `a` 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "The element of `b` is selected otherwise.",
+        "suggest": "否则选择 `b` 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed 16-bit integers from `a` and `b` using the mask `imm8`.",
+        "suggest": "使用掩码 `imm8` 混合 `a` 和 `b` 中的包装 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "The mask bits determine the selection.",
+        "suggest": "掩码位确定选择。",
+        "translate": ""
+    },
+    {
+        "source": "A clear bit selects the corresponding element of `a`, and a set bit the corresponding element of `b`.",
+        "suggest": "清除位选择 `a` 的相应元素，置 1 位选择 `b` 的相应元素。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM7 prefers the single-precision floating-point domain when possible",
+        "suggest": "LLVM7 尽可能使用单精度浮点域",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed double-precision (64-bit) floating-point elements from `a` and `b` using `mask`",
+        "suggest": "使用 `mask` 混合来自 `a` 和 `b` 的包装的双精度 (64-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed single-precision (32-bit) floating-point elements from `a` and `b` using `mask`",
+        "suggest": "使用 `mask` 混合来自 `a` 和 `b` 的包装的单精度 (32-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed double-precision (64-bit) floating-point elements from `a` and `b` using control mask `imm2`",
+        "suggest": "使用控制掩码 `imm2` 混合 `a` 和 `b` 中的包装的双精度 (64-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed single-precision (32-bit) floating-point elements from `a` and `b` using mask `imm4`",
+        "suggest": "使用掩码 `imm4` 混合 `a` 和 `b` 中的包装的单精度 (32-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a single-precision (32-bit) floating-point element from `a`, selected with `imm8`",
+        "suggest": "从 `a` 提取单精度 (32-bit) 浮点元素，并用 `imm8` 选择",
+        "translate": ""
+    },
+    {
+        "source": "Extracts an 32-bit integer from `a` selected with `imm8`",
+        "suggest": "从用 `imm8` 选择的 `a` 中提取 32 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Select a single value in `a` to store at some position in `b`, Then zero elements according to `imm8`.",
+        "suggest": "在 `a` 中选择一个值存储在 `b` 的某个位置，然后根据 `imm8` 零个元素。",
+        "translate": ""
+    },
+    {
+        "source": "specifies which bits from operand `a` will be copied, which bits in the result they will be copied to, and which bits in the result will be cleared.",
+        "suggest": "指定将复制操作数 `a` 中的哪些位，将其复制到结果中的哪些位，以及清除结果中的哪些位。",
+        "translate": ""
+    },
+    {
+        "source": "The following assignments are made:",
+        "suggest": "进行以下分配:",
+        "translate": ""
+    },
+    {
+        "source": "Bits `[7:6]` specify the bits to copy from operand `a`:",
+        "suggest": "`[7:6]` 位指定要从操作数 `a` 复制的位:",
+        "translate": ""
+    },
+    {
+        "source": "Selects bits `[31:0]` from operand `a`.",
+        "suggest": "从操作数 `a` 中选择位 `[31:0]`。",
+        "translate": ""
+    },
+    {
+        "source": "Selects bits `[63:32]` from operand `a`.",
+        "suggest": "从操作数 `a` 中选择位 `[63:32]`。",
+        "translate": ""
+    },
+    {
+        "source": "Selects bits `[95:64]` from operand `a`.",
+        "suggest": "从操作数 `a` 中选择位 `[95:64]`。",
+        "translate": ""
+    },
+    {
+        "source": "Selects bits `[127:96]` from operand `a`.",
+        "suggest": "从操作数 `a` 中选择位 `[127:96]`。",
+        "translate": ""
+    },
+    {
+        "source": "Bits `[5:4]` specify the bits in the result to which the selected bits from operand `a` are copied:",
+        "suggest": "`[5:4]` 位指定结果中的位，将从操作数 `a` 中选择的位复制到该位:",
+        "translate": ""
+    },
+    {
+        "source": "Copies the selected bits from `a` to result bits `[31:0]`.",
+        "suggest": "将所选位从 `a` 复制到结果位 `[31:0]`。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the selected bits from `a` to result bits `[63:32]`.",
+        "suggest": "将所选位从 `a` 复制到结果位 `[63:32]`。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the selected bits from `a` to result bits `[95:64]`.",
+        "suggest": "将所选位从 `a` 复制到结果位 `[95:64]`。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the selected bits from `a` to result bits `[127:96]`.",
+        "suggest": "将所选位从 `a` 复制到结果位 `[127:96]`。",
+        "translate": ""
+    },
+    {
+        "source": "Bits `[3:0]`: If any of these bits are set, the corresponding result element is cleared.",
+        "suggest": "`[3:0]` 位: 如果这些位中的任何一位被置位，则相应的结果元素将被清除。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of `a` with the 8-bit integer from `i` inserted at a location specified by `imm8`.",
+        "suggest": "返回 `a` 的副本，其中 `i` 的 8 位整数插入在 `imm8` 指定的位置。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of `a` with the 32-bit integer from `i` inserted at a location specified by `imm8`.",
+        "suggest": "返回 `a` 的副本，其中 `i` 的 32 位整数插入在 `imm8` 指定的位置。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed 8-bit integers in `a` and `b` and returns packed maximum values in dst.",
+        "suggest": "比较 `a` 和 `b` 中的包装的 8 位整数，并以 dst 返回包装的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed unsigned 16-bit integers in `a` and `b`, and returns packed maximum.",
+        "suggest": "比较 `a` 和 `b` 中包装的无符号 16 位整数，并返回包装的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed 32-bit integers in `a` and `b`, and returns packed maximum values.",
+        "suggest": "比较 `a` 和 `b` 中的包装的 32 位整数，并返回包装的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed unsigned 32-bit integers in `a` and `b`, and returns packed maximum values.",
+        "suggest": "比较 `a` 和 `b` 中的包装无符号 32 位整数，并返回包装最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed 8-bit integers in `a` and `b` and returns packed minimum values in dst.",
+        "suggest": "比较 `a` 和 `b` 中的包装的 8 位整数，并以 dst 返回包装的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed unsigned 16-bit integers in `a` and `b`, and returns packed minimum.",
+        "suggest": "比较 `a` 和 `b` 中的包装的无符号 16 位整数，并返回包装的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed 32-bit integers in `a` and `b`, and returns packed minimum values.",
+        "suggest": "比较 `a` 和 `b` 中的包装的 32 位整数，并返回包装的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed unsigned 32-bit integers in `a` and `b`, and returns packed minimum values.",
+        "suggest": "比较 `a` 和 `b` 中的包装的无符号 32 位整数，并返回包装的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed 64-bit integers in `a` and `b` for equality",
+        "suggest": "比较 `a` 和 `b` 中的包装 64 位整数是否相等",
+        "translate": ""
+    },
+    {
+        "source": "Sign extend packed 8-bit integers in `a` to packed 16-bit integers",
+        "suggest": "符号将 `a` 中的包装 8 位整数扩展为包装 16 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Sign extend packed 8-bit integers in `a` to packed 32-bit integers",
+        "suggest": "符号将 `a` 中的包装 8 位整数扩展为包装 32 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Sign extend packed 8-bit integers in the low 8 bytes of `a` to packed",
+        "suggest": "符号将 `a` 的低 8 字节中的包装的 8 位整数扩展为包装的",
+        "translate": ""
+    },
+    {
+        "source": "64-bit integers",
+        "suggest": "64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Sign extend packed 16-bit integers in `a` to packed 32-bit integers",
+        "suggest": "符号将 `a` 中的包装的 16 位整数扩展为包装的 32 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Sign extend packed 16-bit integers in `a` to packed 64-bit integers",
+        "suggest": "符号将 `a` 中的包装 16 位整数扩展为包装 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Sign extend packed 32-bit integers in `a` to packed 64-bit integers",
+        "suggest": "符号将 `a` 中的包装 32 位整数扩展为包装 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Zeroes extend packed unsigned 8-bit integers in `a` to packed 16-bit integers",
+        "suggest": "零将 `a` 中的包装的无符号 8 位整数扩展为包装的 16 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Zeroes extend packed unsigned 8-bit integers in `a` to packed 32-bit integers",
+        "suggest": "零将 `a` 中的包装无符号 8 位整数扩展为包装 32 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Zeroes extend packed unsigned 8-bit integers in `a` to packed 64-bit integers",
+        "suggest": "零将 `a` 中的包装无符号 8 位整数扩展为包装 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Zeroes extend packed unsigned 16-bit integers in `a` to packed 32-bit integers",
+        "suggest": "零将 `a` 中的包装的无符号 16 位整数扩展为包装的 32 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Zeroes extend packed unsigned 16-bit integers in `a` to packed 64-bit integers",
+        "suggest": "零将 `a` 中的包装的无符号 16 位整数扩展为包装的 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Zeroes extend packed unsigned 32-bit integers in `a` to packed 64-bit integers",
+        "suggest": "零将 `a` 中的包装无符号 32 位整数扩展为包装 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Returns the dot product of two __m128d vectors.",
+        "suggest": "返回两个 __m128d vectors 的点积。",
+        "translate": ""
+    },
+    {
+        "source": "is the broadcast mask, and `imm8[5:4]` is the condition mask.",
+        "suggest": "是广播掩码，而 `imm8[5:4]` 是条件掩码。",
+        "translate": ""
+    },
+    {
+        "source": "If a condition mask bit is zero, the corresponding multiplication is replaced by a value of `0.0`.",
+        "suggest": "如果条件掩码位为零，则将相应的乘法替换为 `0.0` 的值。",
+        "translate": ""
+    },
+    {
+        "source": "If a broadcast mask bit is one, the result of the dot product will be stored in the return value component.",
+        "suggest": "如果广播掩码位为 1，则点积的结果将存储在返回值组件中。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise if the broadcast mask bit is zero then the return component will be zero.",
+        "suggest": "否则，如果广播掩码位为零，则返回分量将为零。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the dot product of two __m128 vectors.",
+        "suggest": "返回两个 __m128 vectors 的点积。",
+        "translate": ""
+    },
+    {
+        "source": "is the broadcast mask, and `imm8[7:4]` is the condition mask.",
+        "suggest": "是广播掩码，而 `imm8[7:4]` 是条件掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed double-precision (64-bit) floating-point elements in `a` down to an integer value, and stores the results as packed double-precision floating-point elements.",
+        "suggest": "将 `a` 中的包装的双精度 (64-bit) 浮点元素四舍五入为整数，并将结果存储为包装的双精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed single-precision (32-bit) floating-point elements in `a` down to an integer value, and stores the results as packed single-precision floating-point elements.",
+        "suggest": "将 `a` 中的包装的单精度 (32-bit) 浮点元素四舍五入为整数，并将结果存储为包装的单精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower double-precision (64-bit) floating-point element in `b` down to an integer value, store the result as a double-precision floating-point element in the lower element of the intrinsic result, and copies the upper element from `a` to the upper element of the intrinsic result.",
+        "suggest": "将 `b` 中的下部双精度 (64-bit) 浮点元素四舍五入为整数值，将结果作为双精度浮点元素存储在内部结果的下部元素中，并将上部元素从 `a` 复制到上部内在结果的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower single-precision (32-bit) floating-point element in `b` down to an integer value, store the result as a single-precision floating-point element in the lower element of the intrinsic result, and copies the upper 3 packed elements from `a` to the upper elements of the intrinsic result.",
+        "suggest": "将 `b` 中的下部单精度 (32-bit) 浮点元素四舍五入为整数值，将结果作为单精度浮点元素存储在内部结果的下部元素中，然后将 `a` 的上部 3 个包装的元素复制到内在结果的上层要素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed double-precision (64-bit) floating-point elements in `a` up to an integer value, and stores the results as packed double-precision floating-point elements.",
+        "suggest": "将 `a` 中的包装的双精度 (64-bit) 浮点元素四舍五入为整数，并将结果存储为包装的双精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed single-precision (32-bit) floating-point elements in `a` up to an integer value, and stores the results as packed single-precision floating-point elements.",
+        "suggest": "将 `a` 中的包装的单精度 (32-bit) 浮点元素四舍五入为整数，并将结果存储为包装的单精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower double-precision (64-bit) floating-point element in `b` up to an integer value, store the result as a double-precision floating-point element in the lower element of the intrisic result, and copies the upper element from `a` to the upper element of the intrinsic result.",
+        "suggest": "将 `b` 中的下部双精度 (64-bit) 浮点元素四舍五入为整数，将结果作为双精度浮点元素存储在本征结果的下部元素中，并将上部元素从 `a` 复制到上部内在结果的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower single-precision (32-bit) floating-point element in `b` up to an integer value, store the result as a single-precision floating-point element in the lower element of the intrinsic result, and copies the upper 3 packed elements from `a` to the upper elements of the intrinsic result.",
+        "suggest": "将 `b` 中的下部单精度 (32-bit) 浮点元素四舍五入为整数，将结果作为单精度浮点元素存储在内部结果的下部元素中，并将高 3 个包装的元素从 `a` 复制到内在结果的上层要素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed double-precision (64-bit) floating-point elements in `a` using the `rounding` parameter, and stores the results as packed double-precision floating-point elements.",
+        "suggest": "使用 `rounding` 参数在 `a` 中对包装的双精度 (64-bit) 浮点元素进行四舍五入，并将结果存储为包装的双精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Rounding is done according to the rounding parameter, which can be one of:",
+        "suggest": "根据舍入参数进行舍入，该参数可以是以下之一:",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed single-precision (32-bit) floating-point elements in `a` using the `rounding` parameter, and stores the results as packed single-precision floating-point elements.",
+        "suggest": "使用 `rounding` 参数在 `a` 中对包装的单精度 (32-bit) 浮点元素进行四舍五入，并将结果存储为包装的单精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower double-precision (64-bit) floating-point element in `b` using the `rounding` parameter, store the result as a double-precision floating-point element in the lower element of the intrinsic result, and copies the upper element from `a` to the upper element of the intrinsic result.",
+        "suggest": "使用 `rounding` 参数舍入 `b` 中的下部双精度 (64-bit) 浮点元素，将结果作为双精度浮点元素存储在内部结果的下部元素中，并将上部元素从 `a` 复制到上部元素内在结果。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower single-precision (32-bit) floating-point element in `b` using the `rounding` parameter, store the result as a single-precision floating-point element in the lower element of the intrinsic result, and copies the upper 3 packed elements from `a` to the upper elements of the instrinsic result.",
+        "suggest": "使用 `rounding` 参数舍入 `b` 中的下部单精度 (32-bit) 浮点元素，将结果作为单精度浮点元素存储在内部结果的下部元素中，并将上部 3 个包装的元素从 `a` 复制到内在结果的上层元素。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the minimum unsigned 16-bit element in the 128-bit __m128i vector, returning a vector containing its value in its first position, and its index in its second position;",
+        "suggest": "在 128 位 __m128i vector 中查找最小的无符号 16 位元素，并返回一个 vector，其中在第一个位置包含其值，在第二个位置包含其索引;",
+        "translate": ""
+    },
+    {
+        "source": "all other elements are set to zero.",
+        "suggest": "所有其他元素都设置为零。",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic corresponds to the `VPHMINPOSUW` / `PHMINPOSUW` instruction.",
+        "suggest": "该内联函数对应于 `VPHMINPOSUW`/`PHMINPOSUW` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "A 128-bit vector of type `__m128i`.",
+        "suggest": "`__m128i` 类型的 128 位 vector。",
+        "translate": ""
+    },
+    {
+        "source": "A 128-bit value where:",
+        "suggest": "128 位值，其中:",
+        "translate": ""
+    },
+    {
+        "source": "bits `[15:0]` - contain the minimum value found in parameter `a`,",
+        "suggest": "`[15:0]` 位 - 包含在参数 `a` 中找到的最小值，",
+        "translate": ""
+    },
+    {
+        "source": "bits `[18:16]` - contain the index of the minimum value",
+        "suggest": "`[18:16]` 位 - 包含最小值的索引",
+        "translate": ""
+    },
+    {
+        "source": "remaining bits are set to `0`.",
+        "suggest": "其余位设置为 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Multiplies the low 32-bit integers from each packed 64-bit element in `a` and `b`, and returns the signed 64-bit result.",
+        "suggest": "将 `a` 和 `b` 中每个包装的 64 位元素的低 32 位整数相乘，并返回带符号的 64 位结果。",
+        "translate": ""
+    },
+    {
+        "source": "Multiplies the packed 32-bit integers in `a` and `b`, producing intermediate",
+        "suggest": "将 `a` 和 `b` 中包装的 32 位整数相乘，产生中间值",
+        "translate": ""
+    },
+    {
+        "source": "64-bit integers, and returns the lowest 32-bit, whatever they might be, reinterpreted as a signed integer.",
+        "suggest": "64 位整数，并返回最低的 32 位 (无论它们是什么)，都将重新解释为有符号整数。",
+        "translate": ""
+    },
+    {
+        "source": "While `pmulld __m128i::splat(2), __m128i::splat(2)` returns the obvious `__m128i::splat(4)`, due to wrapping arithmetic `pmulld __m128i::splat(i32::MAX), __m128i::splat(2)` would return a negative number.",
+        "suggest": "虽然 `pmulld __m128i::splat(2), __m128i::splat(2)` 返回明显的 `__m128i::splat(4)`，但由于包装算术，`pmulld __m128i::splat(i32::MAX), __m128i::splat(2)` 将返回负数。",
+        "translate": ""
+    },
+    {
+        "source": "Subtracts 8-bit unsigned integer values and computes the absolute values of the differences to the corresponding bits in the destination.",
+        "suggest": "减去 8 位无符号整数值，然后将差的绝对值计算为目标中的相应位。",
+        "translate": ""
+    },
+    {
+        "source": "Then sums of the absolute differences are returned according to the bit fields in the immediate operand.",
+        "suggest": "然后，根据立即操作数中的位字段返回绝对差之和。",
+        "translate": ""
+    },
+    {
+        "source": "The following algorithm is performed:",
+        "suggest": "执行以下算法:",
+        "translate": ""
+    },
+    {
+        "source": "An 8-bit immediate operand specifying how the absolute differences are to be calculated",
+        "suggest": "一个 8 位 immediate 数，指定如何计算绝对差",
+        "translate": ""
+    },
+    {
+        "source": "Bit `[2]` specify the offset for operand `a`",
+        "suggest": "`[2]` 位指定操作数 `a` 的偏移量",
+        "translate": ""
+    },
+    {
+        "source": "Bits `[1:0]` specify the offset for operand `b`",
+        "suggest": "`[1:0]` 位指定操作数 `b` 的偏移量",
+        "translate": ""
+    },
+    {
+        "source": "A `__m128i` vector containing the sums of the sets of   absolute differences between both operands.",
+        "suggest": "`__m128i` vector 包含两个操作数之间的绝对差集的总和。",
+        "translate": ""
+    },
+    {
+        "source": "Tests whether the specified bits in a 128-bit integer vector are all zeros.",
+        "suggest": "测试 128 位整数 vector 中的指定位是否全部为零。",
+        "translate": ""
+    },
+    {
+        "source": "A 128-bit integer vector containing the bits to be tested.",
+        "suggest": "包含要测试的位的 128 位整数 vector。",
+        "translate": ""
+    },
+    {
+        "source": "A 128-bit integer vector selecting which bits to test in operand `a`.",
+        "suggest": "一个 128 位整数 vector，用于选择要在操作数 `a` 中测试的位。",
+        "translate": ""
+    },
+    {
+        "source": "if the specified bits are all zeros,",
+        "suggest": "如果指定的位全为零，",
+        "translate": ""
+    },
+    {
+        "source": "Tests whether the specified bits in a 128-bit integer vector are all ones.",
+        "suggest": "测试 128 位整数 vector 中的指定位是否全部为 1。",
+        "translate": ""
+    },
+    {
+        "source": "if the specified bits are all ones,",
+        "suggest": "如果指定的位全为 1，",
+        "translate": ""
+    },
+    {
+        "source": "Tests whether the specified bits in a 128-bit integer vector are neither all zeros nor all ones.",
+        "suggest": "测试 128 位整数 vector 中的指定位是否既不是全零也不是全 1。",
+        "translate": ""
+    },
+    {
+        "source": "if the specified bits are neither all zeros nor all ones,",
+        "suggest": "如果指定的位既不是全零也不是全 1，",
+        "translate": ""
+    },
+    {
+        "source": "Tests whether the specified bits in `a` 128-bit integer vector are all ones.",
+        "suggest": "测试 `a` 128 位整数 vector 中的指定位是否全部为 1。",
+        "translate": ""
+    },
+    {
+        "source": "if the bits specified in the operand are all set to 1,",
+        "suggest": "如果操作数中指定的位都设置为 1，",
+        "translate": ""
+    },
+    {
+        "source": "Attention, most significant bit in r[2] is treated as a sign bit:",
+        "suggest": "注意，r[2] 中的最高有效位被视为符号位:",
+        "translate": ""
+    },
+    {
+        "source": "Chunk the haystack into 16 byte chunks and find the first \"\\r\\n\\t\" in the chunk.",
+        "suggest": "将 haystack 分成 16 个字节的块，并在该块中找到第一个 \"\\r\\n\\t\"。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure your input is 16 byte aligned",
+        "suggest": "确保您的输入是 16 字节对齐的",
+        "translate": ""
+    },
+    {
+        "source": "Load the input",
+        "suggest": "加载输入",
+        "translate": ""
+    },
+    {
+        "source": "Use _SIDD_CMP_EQUAL_ANY to find the index of any bytes in b",
+        "suggest": "使用 _SIDD_CMP_EQUAL_ANY 查找 b 中任何字节的索引",
+        "translate": ""
+    },
+    {
+        "source": "Specify the ranges of values to be searched for [A-Za-z0-9].",
+        "suggest": "指定要搜索的 [A-Za-z0-9] 值的范围。",
+        "translate": ""
+    },
+    {
+        "source": "Use _SIDD_CMP_RANGES to find the index of first byte in ranges.",
+        "suggest": "使用 _SIDD_CMP_RANGES 查找范围内第一个字节的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Which in this case will be the first alpha numeric byte found in the string.",
+        "suggest": "在这种情况下，它将是字符串中找到的第一个字母数字字节。",
+        "translate": ""
+    },
+    {
+        "source": "Specify _SIDD_UWORD_OPS to compare words instead of bytes, and use _SIDD_CMP_EQUAL_EACH to compare the two strings.",
+        "suggest": "指定 _SIDD_UWORD_OPS 以比较单词而不是字节，并使用 _SIDD_CMP_EQUAL_EACH 比较两个字符串。",
+        "translate": ""
+    },
+    {
+        "source": "The string we want to find a substring in",
+        "suggest": "我们要在其中找到子字符串的字符串",
+        "translate": ""
+    },
+    {
+        "source": "The string we want to search for with some extra bytes we do not want to search for.",
+        "suggest": "我们要搜索的字符串带有一些我们不想搜索的额外字节。",
+        "translate": ""
+    },
+    {
+        "source": "We explicitly specify we only want to search `b` for the first 3 characters of a.",
+        "suggest": "我们明确指定只想在 `b` 中搜索 a 的前 3 个字符。",
+        "translate": ""
+    },
+    {
+        "source": "Streaming SIMD Extensions 4.2 (SSE4.2)",
+        "suggest": "流式 SIMD 扩展 4.2 (SSE4.2)",
+        "translate": ""
+    },
+    {
+        "source": "Extends SSE4.1 with STTNI (String and Text New Instructions).",
+        "suggest": "使用 STTNI (字符串和文本新指令) 扩展 SSE4.1。",
+        "translate": ""
+    },
+    {
+        "source": "String contains unsigned 8-bit characters *(Default)*",
+        "suggest": "字符串包含无符号的 8 位字符 *(默认)*",
+        "translate": ""
+    },
+    {
+        "source": "String contains unsigned 16-bit characters",
+        "suggest": "字符串包含无符号的 16 位字符",
+        "translate": ""
+    },
+    {
+        "source": "String contains signed 8-bit characters",
+        "suggest": "字符串包含带符号的 8 位字符",
+        "translate": ""
+    },
+    {
+        "source": "For each character in `a`, find if it is in `b` *(Default)*",
+        "suggest": "对于 `a` 中的每个字符，查找它是否在 `b` 中 *(默认)*",
+        "translate": ""
+    },
+    {
+        "source": "For each character in `a`, determine if",
+        "suggest": "对于 `a` 中的每个字符，确定是否",
+        "translate": ""
+    },
+    {
+        "source": "The strings defined by `a` and `b` are equal",
+        "suggest": "`a` 和 `b` 定义的字符串相等",
+        "translate": ""
+    },
+    {
+        "source": "Search for the defined substring in the target",
+        "suggest": "在目标中搜索定义的子字符串",
+        "translate": ""
+    },
+    {
+        "source": "Do not negate results *(Default)*",
+        "suggest": "不取消结果 *(默认)*",
+        "translate": ""
+    },
+    {
+        "source": "Negates results",
+        "suggest": "取反结果",
+        "translate": ""
+    },
+    {
+        "source": "Do not negate results before the end of the string",
+        "suggest": "不要在字符串结尾之前取反结果",
+        "translate": ""
+    },
+    {
+        "source": "Negates results only before the end of the string",
+        "suggest": "仅在字符串结尾之前取反结果",
+        "translate": ""
+    },
+    {
+        "source": "**Index only**: return the least significant bit *(Default)*",
+        "suggest": "**仅索引**: 返回最低有效位 *(默认)*",
+        "translate": ""
+    },
+    {
+        "source": "**Index only**: return the most significant bit",
+        "suggest": "**仅索引**: 返回最高有效位",
+        "translate": ""
+    },
+    {
+        "source": "**Mask only**: return the bit mask",
+        "suggest": "**仅掩码**: 返回位掩码",
+        "translate": ""
+    },
+    {
+        "source": "**Mask only**: return the byte mask",
+        "suggest": "**仅掩码**: 返回字节掩码",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8`, and return the generated mask.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，并返回生成的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8` and return the generated index.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，并返回生成的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to [`_mm_cmpestri`] with the exception that [`_mm_cmpestri`] requires the lengths of `a` and `b` to be explicitly specified.",
+        "suggest": "与 [`_mm_cmpestri`] 相似，不同之处在于 [`_mm_cmpestri`] 需要明确指定 `a` 和 `b` 的长度。",
+        "translate": ""
+    },
+    {
+        "source": "Control modes",
+        "suggest": "控制方式",
+        "translate": ""
+    },
+    {
+        "source": "The control specified by `imm8` may be one or more of the following.",
+        "suggest": "`imm8` 指定的控件可以是以下一项或多项。",
+        "translate": ""
+    },
+    {
+        "source": "Data size and signedness",
+        "suggest": "数据大小和签名",
+        "translate": ""
+    },
+    {
+        "source": "Comparison options",
+        "suggest": "比较选项",
+        "translate": ""
+    },
+    {
+        "source": "Result polarity",
+        "suggest": "结果极性",
+        "translate": ""
+    },
+    {
+        "source": "Bit returned",
+        "suggest": "返回位",
+        "translate": ""
+    },
+    {
+        "source": "Finds a substring using [`_SIDD_CMP_EQUAL_ORDERED`]",
+        "suggest": "使用 [`_SIDD_CMP_EQUAL_ORDERED`] 查找子字符串",
+        "translate": ""
+    },
+    {
+        "source": "The `_mm_cmpistri` intrinsic may also be used to find the existance of one or more of a given set of characters in the haystack.",
+        "suggest": "`_mm_cmpistri` 内联函数还可以用于查找 haystack 中一个或多个给定字符集的存在。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the index of the first character in the haystack that is within a range of characters.",
+        "suggest": "查找字符范围内的 haystack 中第一个字符的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Working with 16-bit characters.",
+        "suggest": "使用 16 位字符。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8`, and return `1` if any character in `b` was null.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，如果 `b` 中的任何字符为 null，则返回 `1`。",
+        "translate": ""
+    },
+    {
+        "source": "and `0` otherwise.",
+        "suggest": "`0` 否则。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8`, and return `1` if the resulting mask was non-zero, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，如果结果掩码为非零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8`, and returns `1` if any character in `a` was null, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，如果 `a` 中的任何字符为 null，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8`, and return bit `0` of the resulting bit mask.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，并返回结果位掩码的 `0` 位。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `imm8`, and return `1` if `b` did not contain a null character and the resulting mask was zero, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中具有隐式长度的包装字符串，如果 `b` 不包含空字符并且结果掩码为零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `imm8`, and return the generated mask.",
+        "suggest": "使用 `imm8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，并返回生成的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings `a` and `b` with lengths `la` and `lb` using the control in `imm8` and return the generated index.",
+        "suggest": "使用 `imm8` 中的控件比较长度为 `la` 和 `lb` 的包装字符串 `a` 和 `b`，并返回生成的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to [`_mm_cmpistri`] with the exception that [`_mm_cmpistri`] implicitly determines the length of `a` and `b`.",
+        "suggest": "与 [`_mm_cmpistri`] 相似，但 [`_mm_cmpistri`] 隐式确定 `a` 和 `b` 的长度。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `imm8`, and return `1` if any character in `b` was null, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中长度为 `la` 和 `lb` 的包装字符串，如果 `b` 中的任何字符为 null，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `imm8`, and return `1` if the resulting mask was non-zero, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中长度为 `la` 和 `lb` 的包装字符串，如果结果掩码为非零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `imm8`, and return `1` if any character in a was null, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，如果 a 中的任何字符为 null，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `imm8`, and return bit `0` of the resulting bit mask.",
+        "suggest": "使用 `imm8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，并返回生成的位掩码的位 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `imm8`, and return `1` if `b` did not contain a null character and the resulting mask was zero, and `0` otherwise.",
+        "suggest": "使用 `imm8` 中的控件比较 `a` 和 `b` 中长度为 `la` 和 `lb` 的包装字符串，如果 `b` 不包含空字符并且结果掩码为零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Starting with the initial value in `crc`, return the accumulated CRC32 value for unsigned 8-bit integer `v`.",
+        "suggest": "从 `crc` 中的初始值开始，返回无符号 8 位整数 `v` 的累积 CRC32 值。",
+        "translate": ""
+    },
+    {
+        "source": "Starting with the initial value in `crc`, return the accumulated CRC32 value for unsigned 16-bit integer `v`.",
+        "suggest": "从 `crc` 中的初始值开始，返回无符号 16 位整数 `v` 的累积 CRC32 值。",
+        "translate": ""
+    },
+    {
+        "source": "Starting with the initial value in `crc`, return the accumulated CRC32 value for unsigned 32-bit integer `v`.",
+        "suggest": "从 `crc` 中的初始值开始，返回无符号 32 位整数 `v` 的累积 CRC32 值。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed 64-bit integers in `a` and `b` for greater-than, return the results.",
+        "suggest": "比较 `a` 和 `b` 中的包装的 64 位整数是否大于，返回结果。",
+        "translate": ""
+    },
+    {
+        "source": "SSE 4.2 string and text comparison ops",
+        "suggest": "SSE 4.2 字符串和文本比较操作",
+        "translate": ""
+    },
+    {
+        "source": "SSE 4.2 CRC instructions",
+        "suggest": "SSE 4.2 CRC 指令",
+        "translate": ""
+    },
+    {
+        "source": "Currently one cannot `load` a &[u8] that is is less than 16 in length.",
+        "suggest": "目前，一个 &[u8] that 的长度不能小于 16。",
+        "translate": ""
+    },
+    {
+        "source": "This makes loading strings less than 16 in length a bit difficult.",
+        "suggest": "这使得加载长度小于 16 的字符串有些困难。",
+        "translate": ""
+    },
+    {
+        "source": "Rather than `load` and mutate the __m128i, it is easier to memcpy the given string to a local slice with length 16 and `load` the local slice.",
+        "suggest": "与其将 `load` 和 __m128i 进行可变的，不如将给定的字符串存储到长度为 16 的本地切片中，而将 `load` 替换为本地切片则更加容易。",
+        "translate": ""
+    },
+    {
+        "source": "`i686`'s Streaming SIMD Extensions 4a (`SSE4a`)",
+        "suggest": "i686 的流 SIMD 扩展 4a (`SSE4a`)",
+        "translate": ""
+    },
+    {
+        "source": "_mm_extracti_si64(x, len, idx) // EXTRQ FIXME(blocked on #248): _mm_inserti_si64(x, y, len, idx) // INSERTQ",
+        "suggest": "_mm_extracti_si64(x, len, idx)//EXTRQ FIXME(blocked on #248): _mm_inserti_si64(x, y, len, idx)//INSERTQ",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the bit range specified by `y` from the lower 64 bits of `x`.",
+        "suggest": "从 `x` 的低 64 位提取 `y` 指定的位范围。",
+        "translate": ""
+    },
+    {
+        "source": "The `[13:8]` bits of `y` specify the index of the bit-range to extract.",
+        "suggest": "`y` 的 `[13:8]` 位指定要提取的位范围的索引。",
+        "translate": ""
+    },
+    {
+        "source": "The `[5:0]` bits of `y` specify the length of the bit-range to extract.",
+        "suggest": "`y` 的 `[5:0]` 位指定要提取的位范围的长度。",
+        "translate": ""
+    },
+    {
+        "source": "All other bits are ignored.",
+        "suggest": "所有其他位均被忽略。",
+        "translate": ""
+    },
+    {
+        "source": "If the length is zero, it is interpreted as `64`.",
+        "suggest": "如果长度为零，则将其解释为 `64`。",
+        "translate": ""
+    },
+    {
+        "source": "If the length and index are zero, the lower 64 bits of `x` are extracted.",
+        "suggest": "如果长度和索引为零，则提取 `x` 的低 64 位。",
+        "translate": ""
+    },
+    {
+        "source": "If `length == 0 && index > 0` or `lenght + index > 64` the result is undefined.",
+        "suggest": "如果是 `length == 0 && index > 0` 或 `lenght + index > 64`，则结果不确定。",
+        "translate": ""
+    },
+    {
+        "source": "Inserts the `[length:0]` bits of `y` into `x` at `index`.",
+        "suggest": "将 `y` 的 `[length:0]` 位插入 `index` 处的 `x`。",
+        "translate": ""
+    },
+    {
+        "source": "The bits of `y`:",
+        "suggest": "`y` 的位:",
+        "translate": ""
+    },
+    {
+        "source": "specify the `length`,",
+        "suggest": "指定 `length`，",
+        "translate": ""
+    },
+    {
+        "source": "specify the index.",
+        "suggest": "指定索引。",
+        "translate": ""
+    },
+    {
+        "source": "If the `length` is zero it is interpreted as `64`.",
+        "suggest": "如果 `length` 为零，则将其解释为 `64`。",
+        "translate": ""
+    },
+    {
+        "source": "If `index + length > 64` or `index > 0 && length == 0` the result is undefined.",
+        "suggest": "如果是 `index + length > 64` 或 `index > 0 && length == 0`，则结果不确定。",
+        "translate": ""
+    },
+    {
+        "source": "Non-temporal store of `a.0` into `p`.",
+        "suggest": "`a.0` 的非临时存储到 `p` 中。",
+        "translate": ""
+    },
+    {
+        "source": "Writes 64-bit data to a memory location without polluting the caches.",
+        "suggest": "将 64 位数据写入内存位置，而不会污染缓存。",
+        "translate": ""
+    },
+    {
+        "source": "Writes 32-bit data to a memory location without polluting the caches.",
+        "suggest": "将 32 位数据写入内存位置，而不会污染高速缓存。",
+        "translate": ""
+    },
+    {
+        "source": "bit range extracted",
+        "suggest": "提取位范围",
+        "translate": ""
+    },
+    {
+        "source": "2^3 = 8 ^length = 2^2 = 4",
+        "suggest": "2 ^ 3=8 ^length =2 ^ 2=4",
+        "translate": ""
+    },
+    {
+        "source": "bit range inserted",
+        "suggest": "插入的位范围",
+        "translate": ""
+    },
+    {
+        "source": "bit range replaced",
+        "suggest": "位范围已替换",
+        "translate": ""
+    },
+    {
+        "source": "replaced 1010 with 0110",
+        "suggest": "用 1010 代替 1010",
+        "translate": ""
+    },
+    {
+        "source": "Supplemental Streaming SIMD Extensions 3 (SSSE3)",
+        "suggest": "补充流 SIMD 扩展 3 (SSSE3)",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of packed 8-bit signed integers in `a` and return the unsigned results.",
+        "suggest": "计算 `a` 中包装的 8 位带符号整数的绝对值，并返回无符号结果。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of each of the packed 16-bit signed integers in `a` and return the 16-bit unsigned integer",
+        "suggest": "计算 `a` 中每个包装的 16 位有符号整数的绝对值，并返回 16 位无符号整数",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of each of the packed 32-bit signed integers in `a` and return the 32-bit unsigned integer",
+        "suggest": "计算 `a` 中每个包装的 32 位有符号整数的绝对值，并返回 32 位无符号整数",
+        "translate": ""
+    },
+    {
+        "source": "The last 4 bits of each byte of `b` are used as addresses into the 16 bytes of `a`.",
+        "suggest": "`b` 的每个字节的后 4 位用作 `a` 的 16 个字节的地址。",
+        "translate": ""
+    },
+    {
+        "source": "Picturing `a` and `b` as `[u8; 16]`, `_mm_shuffle_epi8` is logically equivalent to:",
+        "suggest": "将 `a` 和 `b` 描绘为 `[u8; 16]`，`_mm_shuffle_epi8` 在逻辑上等效于:",
+        "translate": ""
+    },
+    {
+        "source": "Concatenate 16-byte blocks in `a` and `b` into a 32-byte temporary result, shift the result right by `n` bytes, and returns the low 16 bytes.",
+        "suggest": "将 `a` 和 `b` 中的 16 字节块连接成一个 32 字节的临时结果，将结果右移 `n` 字节，然后返回低 16 字节。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontally adds the adjacent pairs of values contained in 2 packed",
+        "suggest": "水平相加 2 个包装的包中包含的相邻值对",
+        "translate": ""
+    },
+    {
+        "source": "128-bit vectors of `[8 x i16]`.",
+        "suggest": "`[8 x i16]` 的 128 位 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Negative sums less than 8000h are saturated to 8000h.",
+        "suggest": "小于 8000h 的负数和将饱和到 8000h。",
+        "translate": ""
+    },
+    {
+        "source": "128-bit vectors of `[4 x i32]`.",
+        "suggest": "`[4 x i32]` 的 128 位 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontally subtract the adjacent pairs of values contained in 2 packed 128-bit vectors of `[8 x i16]`.",
+        "suggest": "水平减去 `[8 x i16]` 的 2 个包装的 128 位 vectors 中包含的相邻值对。",
+        "translate": ""
+    },
+    {
+        "source": "Positive differences greater than",
+        "suggest": "正差异大于",
+        "translate": ""
+    },
+    {
+        "source": "7FFFh are saturated to 7FFFh.",
+        "suggest": "7FFFh 饱和到 7FFFh。",
+        "translate": ""
+    },
+    {
+        "source": "Negative differences less than 8000h are saturated to 8000h.",
+        "suggest": "小于 8000h 的负差会饱和到 8000h。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontally subtract the adjacent pairs of values contained in 2 packed 128-bit vectors of `[4 x i32]`.",
+        "suggest": "水平减去 `[4 x i32]` 的 2 个包装的 128 位 vectors 中包含的相邻值对。",
+        "translate": ""
+    },
+    {
+        "source": "Multiplies corresponding pairs of packed 8-bit unsigned integer values contained in the first source operand and packed 8-bit signed integer values contained in the second source operand, add pairs of contiguous products with signed saturation, and writes the 16-bit sums to the corresponding bits in the destination.",
+        "suggest": "将第一个源操作数中包含的包装的 8 位无符号整数值与第二个源操作数中包含的包装的 8 位有符号整数值的对应对相乘，相加具有符号饱和度的连续乘积对，并将 16 位和写入到目标中的相应位。",
+        "translate": ""
+    },
+    {
+        "source": "Multiplies packed 16-bit signed integer values, truncate the 32-bit product to the 18 most significant bits by right-shifting, round the truncated value by adding 1, and write bits `[16:1]` to the destination.",
+        "suggest": "将包装的 16 位带符号整数值相乘，通过右移将 32 位乘积截断为 18 个最高有效位，通过加 1 舍入舍入后的值，并将 `[16:1]` 位写入目标位置。",
+        "translate": ""
+    },
+    {
+        "source": "Negates packed 8-bit integers in `a` when the corresponding signed 8-bit integer in `b` is negative, and returns the result.",
+        "suggest": "当 `b` 中相应的带符号 8 位整数为负时，对 `a` 中的 8 位包装整数取反，并返回结果。",
+        "translate": ""
+    },
+    {
+        "source": "Elements in result are zeroed out when the corresponding element in `b` is zero.",
+        "suggest": "当 `b` 中的对应元素为零时，结果中的元素将被清零。",
+        "translate": ""
+    },
+    {
+        "source": "Negates packed 16-bit integers in `a` when the corresponding signed 16-bit integer in `b` is negative, and returns the results.",
+        "suggest": "当 `b` 中相应的带符号 16 位整数为负时，将 `a` 中的 16 位整数包装为无效，并返回结果。",
+        "translate": ""
+    },
+    {
+        "source": "Negates packed 32-bit integers in `a` when the corresponding signed 32-bit integer in `b` is negative, and returns the results.",
+        "suggest": "当 `b` 中相应的带符号 32 位整数为负时，对 `a` 中的包装 32 位整数求反，并返回结果。",
+        "translate": ""
+    },
+    {
+        "source": "Element in result are zeroed out when the corresponding element in `b` is zero.",
+        "suggest": "当 `b` 中的对应元素为零时，结果中的元素将被清零。",
+        "translate": ""
+    },
+    {
+        "source": "Trailing Bit Manipulation (TBM) instruction set.",
+        "suggest": "尾随位操作 (TBM) 指令集。",
+        "translate": ""
+    },
+    {
+        "source": "The reference is [AMD64 Architecture Programmer's Manual, Volume 3:",
+        "suggest": "引用的是 [AMD64 Architecture 程序员手册，第 3 卷:",
+        "translate": ""
+    },
+    {
+        "source": "General-Purpose and System Instructions][amd64_ref].",
+        "suggest": "通用和系统说明][amd64_ref]。",
+        "translate": ""
+    },
+    {
+        "source": "provides a quick overview of the available instructions.",
+        "suggest": "提供有关可用说明的快速概述。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM-CODEGEN ERROR: LLVM ERROR: Cannot select:",
+        "suggest": "LLVM-CODEGEN 错误: LLVM 错误: 无法选择:",
+        "translate": ""
+    },
+    {
+        "source": "intrinsic %llvm.x86.tbm.bextri.u32",
+        "suggest": "内部 % llvm.x86.tbm.bextri.u32",
+        "translate": ""
+    },
+    {
+        "source": "Clears all bits below the least significant zero bit of `x`.",
+        "suggest": "清除 `x` 的最低有效零位以下的所有位。",
+        "translate": ""
+    },
+    {
+        "source": "If there is no zero bit in `x`, it returns zero.",
+        "suggest": "如果 `x` 中没有零位，则返回零。",
+        "translate": ""
+    },
+    {
+        "source": "generates lots of instructions",
+        "suggest": "产生很多指令",
+        "translate": ""
+    },
+    {
+        "source": "Sets all bits of `x` to 1 except for the least significant zero bit.",
+        "suggest": "将 `x` 的所有位 (最低有效零位除外) 设置为 1。",
+        "translate": ""
+    },
+    {
+        "source": "If there is no zero bit in `x`, it sets all bits.",
+        "suggest": "如果 `x` 中没有零位，它将置位所有位。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the least significant zero bit of `x` and clears all other bits.",
+        "suggest": "设置 `x` 的最低有效零位并清除所有其他位。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the least significant zero bit of `x` and clears all bits above that bit.",
+        "suggest": "设置 `x` 的最低有效零位，并清除该位上方的所有位。",
+        "translate": ""
+    },
+    {
+        "source": "If there is no zero bit in `x`, it sets all the bits.",
+        "suggest": "如果 `x` 中没有零位，它将设置所有位。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the least significant zero bit of `x`.",
+        "suggest": "设置 `x` 的最低有效零位。",
+        "translate": ""
+    },
+    {
+        "source": "If there is no zero bit in `x`, it returns `x`.",
+        "suggest": "如果 `x` 中没有零位，则返回 `x`。",
+        "translate": ""
+    },
+    {
+        "source": "Sets all bits of `x` below the least significant one.",
+        "suggest": "将 `x` 的所有位设置在最低有效位以下。",
+        "translate": ""
+    },
+    {
+        "source": "If there is no set bit in `x`, it sets all the bits.",
+        "suggest": "如果 `x` 中没有设置位，它将设置所有位。",
+        "translate": ""
+    },
+    {
+        "source": "Clears least significant bit and sets all other bits.",
+        "suggest": "清除最低有效位并设置所有其他位。",
+        "translate": ""
+    },
+    {
+        "source": "Clears all bits below the least significant zero of `x` and sets all other bits.",
+        "suggest": "清除 `x` 的最低有效零以下的所有位，并设置所有其他位。",
+        "translate": ""
+    },
+    {
+        "source": "If the least significant bit of `x` is `0`, it sets all bits.",
+        "suggest": "如果 `x` 的最低有效位是 `0`，它将设置所有位。",
+        "translate": ""
+    },
+    {
+        "source": "Sets all bits below the least significant one of `x` and clears all other bits.",
+        "suggest": "将所有位设置为低于 `x` 的最低有效位，并清除所有其他位。",
+        "translate": ""
+    },
+    {
+        "source": "If the least significant bit of `x` is 1, it returns zero.",
+        "suggest": "如果 `x` 的最低有效位为 1，则返回零。",
+        "translate": ""
+    },
+    {
+        "source": "Utilities used in testing the x86 intrinsics",
+        "suggest": "测试 x86 内联函数中使用的实用工具",
+        "translate": ""
+    },
+    {
+        "source": "not actually an intrinsic but useful in various tests as we proted from `i64x2::new` which is backwards from `_mm_set_epi64x`",
+        "suggest": "实际上不是内在的，而是在各种测试中有用的，正如我们从 `i64x2::new` 推论出的那样 (从 `_mm_set_epi64x` 向后推)",
+        "translate": ""
+    },
+    {
+        "source": "These intrinsics doesn't exist on x86 b/c it requires a 64-bit register, which doesn't exist on x86!",
+        "suggest": "这些内联函数在 x86 b/c 上不存在，它需要一个 64 位寄存器，而 x86 上不存在!",
+        "translate": ""
+    },
+    {
+        "source": "`i586`'s `xsave` and `xsaveopt` target feature intrinsics",
+        "suggest": "i586 的 `xsave` 和 `xsaveopt` 目标功能内部",
+        "translate": ""
+    },
+    {
+        "source": "Performs a full or partial save of the enabled processor states to memory at `mem_addr`.",
+        "suggest": "将已启用的处理器状态全部或部分保存到 `mem_addr` 的内存中。",
+        "translate": ""
+    },
+    {
+        "source": "State is saved based on bits `[62:0]` in `save_mask` and XCR0.",
+        "suggest": "根据 `save_mask` 和 XCR0 中的 `[62:0]` 位保存状态。",
+        "translate": ""
+    },
+    {
+        "source": "must be aligned on a 64-byte boundary.",
+        "suggest": "必须在 64 字节边界上对齐。",
+        "translate": ""
+    },
+    {
+        "source": "The format of the XSAVE area is detailed in Section 13.4, “XSAVE Area,” of Intel® 64 and IA-32 Architectures Software Developer’s Manual, Volume 1.",
+        "suggest": "XSAVE 区域的格式在 <英特尔 ®64 和 IA-32 体系结构软件开发人员手册> 第 1 卷的第 13.4 节 `XSAVE 区域` 中有详细说明。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a full or partial restore of the enabled processor states using the state information stored in memory at `mem_addr`.",
+        "suggest": "使用 `mem_addr` 内存中存储的状态信息执行已启用处理器状态的全部或部分还原。",
+        "translate": ""
+    },
+    {
+        "source": "State is restored based on bits `[62:0]` in `rs_mask`, `XCR0`, and `mem_addr.HEADER.XSTATE_BV`.",
+        "suggest": "根据 `rs_mask`，`XCR0` 和 `mem_addr.HEADER.XSTATE_BV` 中的 `[62:0]` 位恢复状态。",
+        "translate": ""
+    },
+    {
+        "source": "for `XCR`",
+        "suggest": "对于 `XCR`",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic maps to `XSETBV` instruction.",
+        "suggest": "此固有的 maps 至 `XSETBV` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "Copies 64-bits from `val` to the extended control register (`XCR`) specified by `a`.",
+        "suggest": "从 `val` 复制 64 位到 `a` 指定的扩展控制寄存器 (`XCR`)。",
+        "translate": ""
+    },
+    {
+        "source": "Currently only `XFEATURE_ENABLED_MASK` `XCR` is supported.",
+        "suggest": "当前仅支持 `XFEATURE_ENABLED_MASK` `XCR`。",
+        "translate": ""
+    },
+    {
+        "source": "Reads the contents of the extended control register `XCR` specified in `xcr_no`.",
+        "suggest": "读取 `xcr_no` 中指定的扩展控制寄存器 `XCR` 的内容。",
+        "translate": ""
+    },
+    {
+        "source": "State is saved based on bits `[62:0]` in `save_mask` and `XCR0`.",
+        "suggest": "根据 `save_mask` 和 `XCR0` 中的 `[62:0]` 位保存状态。",
+        "translate": ""
+    },
+    {
+        "source": "The hardware may optimize the manner in which data is saved.",
+        "suggest": "硬件可以优化数据的保存方式。",
+        "translate": ""
+    },
+    {
+        "source": "The performance of this instruction will be equal to or better than using the `XSAVE` instruction.",
+        "suggest": "该指令的性能将等于或优于使用 `XSAVE` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "differs from `xsave` in that it uses compaction and that it may use init optimization.",
+        "suggest": "与 `xsave` 的不同之处在于它使用包装的，并且可以使用 init 优化。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a full or partial save of the enabled processor states to memory at",
+        "suggest": "将启用的处理器状态全部或部分保存到以下位置的内存中:",
+        "translate": ""
+    },
+    {
+        "source": "differs from xsave in that it can save state components corresponding to bits set in `IA32_XSS` `MSR` and that it may use the modified optimization.",
+        "suggest": "与 xsave 的不同之处在于，它可以保存与 `IA32_XSS` `MSR` 中设置的位相对应的状态分量，并且可以使用修改后的优化。",
+        "translate": ""
+    },
+    {
+        "source": "differs from `xrstor` in that it can restore state components corresponding to bits set in the `IA32_XSS` `MSR`;",
+        "suggest": "与 `xrstor` 的不同之处在于，它可以还原与 `IA32_XSS` `MSR` 中设置的位相对应的状态分量;",
+        "translate": ""
+    },
+    {
+        "source": "`xrstors` cannot restore from an `xsave` area in which the extended region is in the standard form.",
+        "suggest": "`xrstors` 无法从扩展区域为标准格式的 `xsave` 区域中恢复。",
+        "translate": ""
+    },
+    {
+        "source": "max size for 256-bit registers is 800 bytes:",
+        "suggest": "256 位寄存器的最大大小为 800 字节:",
+        "translate": ""
+    },
+    {
+        "source": "max size for 512-bit registers is 2560 bytes:",
+        "suggest": "512 位寄存器的最大大小为 2560 字节:",
+        "translate": ""
+    },
+    {
+        "source": "add source",
+        "suggest": "添加源",
+        "translate": ""
+    },
+    {
+        "source": "all registers",
+        "suggest": "所有寄存器",
+        "translate": ""
+    },
+    {
+        "source": "XSETBV is a privileged instruction we should only test this when running in privileged mode:",
+        "suggest": "XSETBV 是权限指令，我们仅应在权限模式下运行时对其进行测试:",
+        "translate": ""
+    },
+    {
+        "source": "this looks like a bug in Intel's SDE:",
+        "suggest": "这看起来像是英特尔 SDE 中的错误:",
+        "translate": ""
+    },
+    {
+        "source": "Adds unsigned 64-bit integers `a` and `b` with unsigned 8-bit carry-in `c_in` (carry flag), and store the unsigned 64-bit result in `out`, and the carry-out is returned (carry or overflow flag).",
+        "suggest": "将无符号的 64 位整数 `a` 和 `b` 与无符号的 8 位进位 `c_in` (进位标志) 相加，并将无符号的 64 位结果存储在 `out` 中，并返回进位 (进位或溢出标志)。",
+        "translate": ""
+    },
+    {
+        "source": "Adds unsigned 64-bit integers `a` and `b` with unsigned 8-bit carry-in `c_in` (carry or overflow flag), and store the unsigned 64-bit result in `out`, and the carry-out is returned (carry or overflow flag).",
+        "suggest": "将无符号的 64 位整数 `a` 和 `b` 与无符号的 8 位进位 `c_in` (进位或溢出标志) 相加，并将无符号的 64 位结果存储在 `out` 中，并返回进位 (进位或溢出标志)。",
+        "translate": ""
+    },
+    {
+        "source": "Adds unsigned 64-bit integers `a` and `b` with unsigned 8-bit carry-in `c_in`.",
+        "suggest": "将无符号的 64 位整数 `a` 和 `b` 与无符号的 8 位随身输入 `c_in` 相加。",
+        "translate": ""
+    },
+    {
+        "source": "(carry or overflow flag), and store the unsigned 64-bit result in `out`, and the carry-out is returned (carry or overflow flag).",
+        "suggest": "(进位或溢出标志)，并将无符号的 64 位结果存储在 `out` 中，并返回进位 (进位或溢出标志)。",
+        "translate": ""
+    },
+    {
+        "source": "Copies `a` to result, and insert the 64-bit integer `i` into result at the location specified by `index`.",
+        "suggest": "复制 `a` 到结果，然后在 `index` 指定的位置将 64 位整数 `i` 插入到 result 中。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a 64-bit integer from `a`, selected with `imm8`.",
+        "suggest": "从 `a` 中提取一个用 `imm8` 选择的 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "A multiplier of 8 is word-addressing",
+        "suggest": "8 的乘数是字寻址",
+        "translate": ""
+    },
+    {
+        "source": "calls an intrinsic",
+        "suggest": "称内在",
+        "translate": ""
+    },
+    {
+        "source": "Compares and exchange 16 bytes (128 bits) of data atomically.",
+        "suggest": "自动比较和交换 16 字节 (128 位) 的数据。",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic corresponds to the `cmpxchg16b` instruction on `x86_64` processors.",
+        "suggest": "此内联函数对应于 `x86_64` 处理器上的 `cmpxchg16b` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "It performs an atomic compare-and-swap, updating the `ptr` memory location to `val` if the current value in memory equals `old`.",
+        "suggest": "它执行原子比较和交换，如果内存中的当前值等于 `old`，则将 `ptr` 的内存位置更新为 `val`。",
+        "translate": ""
+    },
+    {
+        "source": "This function returns the previous value at the memory location.",
+        "suggest": "此函数在内存位置返回前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "If it is equal to `old` then the memory was updated to `new`.",
+        "suggest": "如果等于 `old`，则内存已更新为 `new`。",
+        "translate": ""
+    },
+    {
+        "source": "Memory Orderings",
+        "suggest": "内存顺序",
+        "translate": ""
+    },
+    {
+        "source": "This atomic operations has the same semantics of memory orderings as `AtomicUsize::compare_exchange` does, only operating on 16 bytes of memory instead of just a pointer.",
+        "suggest": "该原子操作与 `AtomicUsize::compare_exchange` 具有相同的内存顺序语义，只对 16 个字节的内存进行操作，而不仅仅是指针。",
+        "translate": ""
+    },
+    {
+        "source": "For more information on memory orderings here see the `compare_exchange` documentation for other `Atomic*` types in the standard library.",
+        "suggest": "有关此处的内存顺序的更多信息，请参见标准库中其他 `Atomic*` 类型的 `compare_exchange` 文档。",
+        "translate": ""
+    },
+    {
+        "source": "This method is unsafe because it takes a raw pointer and will attempt to read and possibly write the memory at the pointer.",
+        "suggest": "此方法是不安全的，因为它使用裸指针，并且将尝试读取并可能在指针处写入内存。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer must also be aligned on a 16-byte boundary.",
+        "suggest": "指针还必须在 16 字节边界上对齐。",
+        "translate": ""
+    },
+    {
+        "source": "This method also requires the `cmpxchg16b` CPU feature to be available at runtime to work correctly.",
+        "suggest": "此方法还要求 `cmpxchg16b` CPU 功能在运行时可用，才能正常工作。",
+        "translate": ""
+    },
+    {
+        "source": "If the CPU running the binary does not actually support `cmpxchg16b` and the program enters an execution path that eventually would reach this function the behavior is undefined.",
+        "suggest": "如果运行二进制文件的 CPU 实际上不支持 `cmpxchg16b`，并且程序输入了最终会到达该函数的执行路径，则该行为未定义。",
+        "translate": ""
+    },
+    {
+        "source": "The `success` ordering must also be stronger or equal to `failure`, or this function call is undefined.",
+        "suggest": "`success` 的顺序也必须大于或等于 `failure`，否则此函数调用是未定义的。",
+        "translate": ""
+    },
+    {
+        "source": "See the `Atomic*` documentation's `compare_exchange` function for more information.",
+        "suggest": "有关更多信息，请参见 `Atomic*` 文档的 `compare_exchange` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "When `compare_exchange` panics, this is undefined behavior.",
+        "suggest": "当 `compare_exchange` panics 时，这是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "Currently this function aborts the process with an undefined instruction.",
+        "suggest": "当前，该函数使用未定义的指令中止进程。",
+        "translate": ""
+    },
+    {
+        "source": "The above block is all copied from libcore, and this statement is also copied from libcore except that it's a panic in libcore and we have a little bit more of a lightweight panic here.",
+        "suggest": "上面的代码块都是从 libcore 复制的，该语句也是从 libcore 复制的，除了它是 libcore 中的 panic，我们这里还有一些轻量级的 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Read a hardware generated 64-bit random value and store the result in val.",
+        "suggest": "读取硬件生成的 64 位随机值，并将结果存储在 val 中。",
+        "translate": ""
+    },
+    {
+        "source": "Read a 64-bit NIST SP800-90B and SP800-90C compliant random value and store in val.",
+        "suggest": "读取符合 NIST SP800-90B 和 SP800-90C 的 64 位随机值，并存储在 val 中。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lowest 32 bit float in the input vector to a 64 bit integer.",
+        "suggest": "将输入 vector 中的最低 32 位浮点型转换为 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "If the result cannot be represented as a 64 bit integer the result will be `0x8000_0000_0000_0000` (`i64::MIN`) or trigger an invalid operation floating point exception if unmasked (see [`_mm_setcsr`](fn._mm_setcsr.html)).",
+        "suggest": "如果结果不能表示为 64 位整数，则结果将为 `0x8000_0000_0000_0000` (`i64::MIN`) 或在未屏蔽的情况下触发无效的操作浮点异常 (请参见 [`_mm_setcsr`](fn._mm_setcsr.html))。)",
+        "translate": ""
+    },
+    {
+        "source": "This corresponds to the `CVTSS2SI` instruction (with 64 bit output).",
+        "suggest": "这对应于 `CVTSS2SI` 指令 (具有 64 位输出)。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lowest 32 bit float in the input vector to a 64 bit integer with truncation.",
+        "suggest": "将输入 vector 中的最低 32 位浮点型转换为带截断的 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "If the result cannot be represented as a 64 bit integer the result will be `0x8000_0000_0000_0000` (`i64::MIN`) or an invalid operation floating point exception if unmasked (see [`_mm_setcsr`](fn._mm_setcsr.html)).",
+        "suggest": "如果结果不能表示为 64 位整数，则结果将为 `0x8000_0000_0000_0000` (`i64::MIN`) 或无效的操作浮点异常 (如果未屏蔽) (请参见 [`_mm_setcsr`](fn._mm_setcsr.html)))。",
+        "translate": ""
+    },
+    {
+        "source": "This corresponds to the `CVTTSS2SI` instruction (with 64 bit output).",
+        "suggest": "这对应于 `CVTTSS2SI` 指令 (具有 64 位输出)。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a 64 bit integer to a 32 bit float.",
+        "suggest": "将 64 位整数转换为 32 位浮点型。",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic corresponds to the `CVTSI2SS` instruction (with 64 bit input).",
+        "suggest": "此内联函数对应于 `CVTSI2SS` 指令 (具有 64 位输入)。",
+        "translate": ""
+    },
+    {
+        "source": "`x86_64`'s Streaming SIMD Extensions 2 (SSE2)",
+        "suggest": "x86_64 的 Streaming SIMD 扩展 2 (SSE2)",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lower double-precision (64-bit) floating-point element in a to a 64-bit integer.",
+        "suggest": "将 a 中的较低双精度 (64-bit) 浮点元素转换为 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Alias for `_mm_cvtsd_si64`",
+        "suggest": "`_mm_cvtsd_si64` 的别名",
+        "translate": ""
+    },
+    {
+        "source": "Converts the lower double-precision (64-bit) floating-point element in `a` to a 64-bit integer with truncation.",
+        "suggest": "将 `a` 中较低的双精度 (64-bit) 浮点元素转换为带截断的 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Alias for `_mm_cvttsd_si64`",
+        "suggest": "`_mm_cvttsd_si64` 的别名",
+        "translate": ""
+    },
+    {
+        "source": "Stores a 64-bit integer value in the specified memory location.",
+        "suggest": "将 64 位整数值存储在指定的内存位置。",
+        "translate": ""
+    },
+    {
+        "source": "`i686`'s Streaming SIMD Extensions 4.1 (SSE4.1)",
+        "suggest": "i686 的流 SIMD 扩展 4.1 (SSE4.1)",
+        "translate": ""
+    },
+    {
+        "source": "Extracts an 64-bit integer from `a` selected with `imm8`",
+        "suggest": "从用 `imm8` 选择的 `a` 中提取 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of `a` with the 64-bit integer from `i` inserted at a location specified by `imm8`.",
+        "suggest": "返回 `a` 的副本，其中 `i` 的 64 位整数插入在 `imm8` 指定的位置。",
+        "translate": ""
+    },
+    {
+        "source": "`x86_64`'s Streaming SIMD Extensions 4.2 (SSE4.2)",
+        "suggest": "x86_64 的流式 SIMD 扩展 4.2 (SSE4.2)",
+        "translate": ""
+    },
+    {
+        "source": "Starting with the initial value in `crc`, return the accumulated CRC32 value for unsigned 64-bit integer `v`.",
+        "suggest": "从 `crc` 中的初始值开始，返回无符号 64 位整数 `v` 的累积 CRC32 值。",
+        "translate": ""
+    },
+    {
+        "source": "`x86_64`'s `xsave` and `xsaveopt` target feature intrinsics",
+        "suggest": "x86_64 的 `xsave` 和 `xsaveopt` 目标功能内部",
+        "translate": ""
+    },
+    {
+        "source": "The performance of this instruction will be equal to or better than using the `XSAVE64` instruction.",
+        "suggest": "该指令的性能将等于或优于使用 `XSAVE64` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "All these tests fail with Intel SDE.",
+        "suggest": "所有这些测试均因 Intel SDE 而失败。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of the `#[simd_test]` macro",
+        "suggest": "`#[simd_test]` 宏的实现",
+        "translate": ""
+    },
+    {
+        "source": "This macro expands to a `#[test]` function which tests the local machine for the appropriate cfg before calling the inner test function.",
+        "suggest": "该宏扩展为 `#[test]` 函数，该函数在调用内部测试函数之前先对本地计算机进行适当的 cfg 测试。",
+        "translate": ""
+    },
+    {
+        "source": "On MIPS CI run-time feature detection always returns false due",
+        "suggest": "在 MIPS CI 上，运行时功能检测始终由于以下原因而返回 false",
+        "translate": ""
+    },
+    {
+        "source": "to this qemu bug:",
+        "suggest": "这个 qemu 错误:",
+        "translate": ""
+    },
+    {
+        "source": "This is a workaround to force the MIPS tests to always run on CI.",
+        "suggest": "这是一种强制 MIPS 测试始终在 CI 上运行的解决方法。",
+        "translate": ""
+    },
+    {
+        "source": "see above",
+        "suggest": "看上面",
+        "translate": ""
+    },
+    {
+        "source": "See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html",
+        "suggest": "在 https://doc.rust-lang.org/cargo/reference/manifest.html 上查看更多键及其定义",
+        "translate": ""
+    },
+    {
+        "source": "Neon intrinsic code generator",
+        "suggest": "Neon 内在代码生成器",
+        "translate": ""
+    },
+    {
+        "source": "A small tool that allows to quickly generate intrinsics for the NEON architecture.",
+        "suggest": "一个小型工具，可以快速生成 NEON 体系结构的内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "The specification for the intrinsics can be found in `neon.spec`.",
+        "suggest": "内在规范可以在 `neon.spec` 中找到。",
+        "translate": ""
+    },
+    {
+        "source": "To run and re-generate the code run the following from the root of the `stdarch` crate.",
+        "suggest": "要运行并重新生成代码，请从 `stdarch` crate 的根目录运行以下代码。",
+        "translate": ""
+    },
+    {
+        "source": "not supported by rust \"float8x16_t\", not supported by rust \"float16x4_t\", not supported by rust \"float16x8_t\", not supported by rust",
+        "suggest": "rust \"float8x16_t\" 不支持，rust \"float16x4_t\" 不支持，rust \"float16x8_t\" 不支持，rust 不支持",
+        "translate": ""
+    },
+    {
+        "source": "THIS FILE IS GENERATED FORM neon.spec DO NOT CHANGE IT MANUALLY",
+        "suggest": "该文件是 neon.spec 格式生成的，请勿手动更改",
+        "translate": ""
+    },
+    {
+        "source": "We use a crates.io dependency to disassemble wasm binaries to look for instructions for `#[assert_instr]`.",
+        "suggest": "我们使用 crates.io 依赖项来分解 wasm 二进制文件，以查找 `#[assert_instr]` 的指令。",
+        "translate": ""
+    },
+    {
+        "source": "Note that we use an `=` dependency here instead of a floating dependency because the text format for wasm changes over time, and we want to make updates to this explicit rather than automatically picking up updates which might break CI with new instruction names.",
+        "suggest": "请注意，我们在这里使用 `=` 依赖关系而不是浮动依赖关系，因为 wasm 的文本格式会随着时间而变化，并且我们要对此显式进行更新，而不是自动获取可能会用新指令名称破坏 CI 的更新。",
+        "translate": ""
+    },
+    {
+        "source": "Disassembly calling function for most targets.",
+        "suggest": "反汇编为大多数目标调用函数。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the \"shim\" name from the `symbol`.",
+        "suggest": "从 `symbol` 中提取 \"shim\" 名称。",
+        "translate": ""
+    },
+    {
+        "source": "Remove trailing colon:",
+        "suggest": "删除尾随的冒号:",
+        "translate": ""
+    },
+    {
+        "source": "Remove Rust paths",
+        "suggest": "删除 Rust 路径",
+        "translate": ""
+    },
+    {
+        "source": "Normalize to no leading underscore to handle platforms that may inject extra ones in symbol names.",
+        "suggest": "规范化为不带下划线的前导下划线，以处理可能在符号名称中插入多余的下划线的平台。",
+        "translate": ""
+    },
+    {
+        "source": "has a suffix such as @@4.",
+        "suggest": "后缀为 @@4。",
+        "translate": ""
+    },
+    {
+        "source": "does not return valid UTF-8 output:",
+        "suggest": "不返回有效的 UTF-8 输出:",
+        "translate": ""
+    },
+    {
+        "source": "Each line of instructions should look like:",
+        "suggest": "每行说明应如下所示:",
+        "translate": ""
+    },
+    {
+        "source": "Each line looks like:",
+        "suggest": "每行看起来像:",
+        "translate": ""
+    },
+    {
+        "source": "skip x86-specific prefix",
+        "suggest": "跳过特定于 x86 的前缀",
+        "translate": ""
+    },
+    {
+        "source": "objdump with --no-show-raw-insn Each line of instructions should look like:",
+        "suggest": "带 --no-show-raw-insn 的 objdump 每行指令应类似于:",
+        "translate": ""
+    },
+    {
+        "source": "Runtime support needed for testing the stdarch crate.",
+        "suggest": "测试标准 crate 所需的运行时支持。",
+        "translate": ""
+    },
+    {
+        "source": "This basically just disassembles the current executable and then parses the output once globally and then provides the `assert` function which makes assertions about the disassembly of a function.",
+        "suggest": "这基本上只是反汇编当前的可执行文件，然后在全局范围内解析一次输出，然后提供 `assert` 函数，该函数对反汇编函数进行断言。",
+        "translate": ""
+    },
+    {
+        "source": "For black_box",
+        "suggest": "对于 black_box",
+        "translate": ""
+    },
+    {
+        "source": "Main entry point for this crate, called by the `#[assert_instr]` macro.",
+        "suggest": "crate 的主入口，由 `#[assert_instr]` 宏调用。",
+        "translate": ""
+    },
+    {
+        "source": "This asserts that the function at `fnptr` contains the instruction `expected` provided.",
+        "suggest": "这断言 `fnptr` 处的函数包含提供的指令 `expected`。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure that the shim is not removed",
+        "suggest": "确保未移除垫片",
+        "translate": ""
+    },
+    {
+        "source": "If the expected intrinsic is a nop it is compiled away so we can't check for it - aka the intrinsic is not generating any code",
+        "suggest": "如果期望的内联函数是 nop，它将被编译掉，所以我们无法对其进行检查 - 内联函数不会生成任何代码",
+        "translate": ""
+    },
+    {
+        "source": "Look for `expected` as the first part of any instruction in this function, e.g., tzcntl in tzcntl %rax,%rax.",
+        "suggest": "在此函数的任何指令的第一部分中查找 `expected`，例如 tzcntl%rax，%rax 中的 tzcntl。",
+        "translate": ""
+    },
+    {
+        "source": "Look for `call` instructions in the disassembly to detect whether inlining failed: all intrinsics are `#[inline(always)]`, so calling one intrinsic from another should not generate `call` instructions.",
+        "suggest": "在反汇编中查找 `call` 指令以检测内联是否失败: 所有内联函数都为 `#[inline(always)]`，因此从另一个内联函数调用一个内联函数不应生成 `call` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "On 32-bit x86 position independent code will call itself and be immediately followed by a `pop` to learn about the current address.",
+        "suggest": "在 32 位 x86 上，位置无关代码将自行调用，紧随其后的是 `pop`，以了解当前地址。",
+        "translate": ""
+    },
+    {
+        "source": "Let's not take that into account when considering whether a function failed inlining something.",
+        "suggest": "在考虑函数是否无法内联某些东西时，不要考虑这一点。",
+        "translate": ""
+    },
+    {
+        "source": "returns a pretty big aggregate structure, so exempt it from the slightly more restrictive 22 instructions below.",
+        "suggest": "返回一个相当大的聚合结构体，因此可以将其从下面的 22 条说明中略加限制。",
+        "translate": ""
+    },
+    {
+        "source": "Apparently, on Windows, LLVM generates a bunch of saves/restores of xmm registers around these intstructions, which exceeds the limit of 20 below.",
+        "suggest": "显然，在 Windows 上，LLVM 围绕这些指令生成了一堆 Xmm 的 saves/restores 寄存器，超过了下面的 20 个限制。",
+        "translate": ""
+    },
+    {
+        "source": "As it seems dictated by Windows's ABI (I believe?), we probably can't do much about it.",
+        "suggest": "正如 Windows 的 ABI (我相信吗? ) 所规定的那样，我们可能对此无能为力。",
+        "translate": ""
+    },
+    {
+        "source": "Intrinsics using `cvtpi2ps` are typically \"composites\" and in some cases exceed the limit.",
+        "suggest": "使用 `cvtpi2ps` 的内联函数通常是 \"composites\"，在某些情况下会超出限制。",
+        "translate": ""
+    },
+    {
+        "source": "Original limit was 20 instructions, but ARM DSP Intrinsics are exactly 20 instructions long.",
+        "suggest": "最初的限制是 20 条指令，但是 ARM DSP Intrinsics 恰好是 20 条指令。",
+        "translate": ""
+    },
+    {
+        "source": "So, bump the limit to 22 instead of adding here a long list of exceptions.",
+        "suggest": "因此，将限制提高到 22，而不是在此处添加一长串例外。",
+        "translate": ""
+    },
+    {
+        "source": "Help debug by printing out the found disassembly, and then panic as we didn't find the instruction.",
+        "suggest": "先打印发现的反汇编，然后打印 panic，以帮助进行调试，因为我们找不到指令。",
+        "translate": ""
+    },
+    {
+        "source": "See comment in `assert-instr-macro` crate for why this exists",
+        "suggest": "请参见 `assert-instr-macro` crate 中的注释以了解为什么存在",
+        "translate": ""
+    },
+    {
+        "source": "Disassembly calling function for `wasm32` targets.",
+        "suggest": "针对 `wasm32` 目标的反汇编调用函数。",
+        "translate": ""
+    },
+    {
+        "source": "Use `std::env::args` to find the path to our executable.",
+        "suggest": "使用 `std::env::args` 查找可执行文件的路径。",
+        "translate": ""
+    },
+    {
+        "source": "Assume the environment is configured such that we can read that file.",
+        "suggest": "假设配置了环境，以便我们可以读取该文件。",
+        "translate": ""
+    },
+    {
+        "source": "Read it and use the `wasmprinter` crate to transform the binary to text, then search the text for appropriately named functions.",
+        "suggest": "读取它，并使用 `wasmprinter` crate 将二进制文件转换为文本，然后在文本中搜索适当命名的函数。",
+        "translate": ""
+    },
+    {
+        "source": "If this isn't a function, we don't care about it.",
+        "suggest": "如果这不是一个函数，那么我们将不在乎。",
+        "translate": ""
+    },
+    {
+        "source": "Empty functions will end in `))` so there's nothing to do, otherwise we'll have a bunch of following lines which are instructions.",
+        "suggest": "空函数将以 `))` 结尾，因此无需执行任何操作，否则我们将有一堆以下指令行。",
+        "translate": ""
+    },
+    {
+        "source": "Lines that have an imbalanced `)` mark the end of a function.",
+        "suggest": "`)` 不平衡的行标记函数的结尾。",
+        "translate": ""
+    },
+    {
+        "source": "The second element here split on whitespace should be the name of the function, skipping the type/params/results",
+        "suggest": "在空格上分割的第二个元素应该是函数的名称，跳过 type/params/results",
+        "translate": ""
+    },
+    {
+        "source": "Google Tag Manager",
+        "suggest": "Google 跟踪代码管理器",
+        "translate": ""
+    },
+    {
+        "source": "End Google Tag Manager",
+        "suggest": "结束 Google 跟踪代码管理器",
+        "translate": ""
+    },
+    {
+        "source": "Hot fix for accordion icons",
+        "suggest": "`accordion` 图标的热修复",
+        "translate": ""
+    },
+    {
+        "source": "When customizing this component, ensure to use \"Coveo.$\" instead of the regular jQuery \"$\" to avoid any conflicts with Sitecore's Page Editor/Experience Editor.",
+        "suggest": "自定义此组件时，请确保使用 \"Coveo.$\" 而不是常规的 jQuery \"$\"，以避免与 Sitecore 的 Page Editor/Experience 编辑器发生任何冲突。",
+        "translate": ""
+    },
+    {
+        "source": "START ProductItemContent",
+        "suggest": "开始 ProductItemContent",
+        "translate": ""
+    },
+    {
+        "source": "START Newsletter",
+        "suggest": "开始时事通讯",
+        "translate": ""
+    },
+    {
+        "source": "Newsletter form",
+        "suggest": "通讯形式",
+        "translate": ""
+    },
+    {
+        "source": "END newsletter form",
+        "suggest": "结束时事通讯表格",
+        "translate": ""
+    },
+    {
+        "source": "START newsletter modal window",
+        "suggest": "启动新闻通讯模态窗口",
+        "translate": ""
+    },
+    {
+        "source": "END newsletter modal window",
+        "suggest": "结束时事通讯模式窗口",
+        "translate": ""
+    },
+    {
+        "source": "End NewsLetterHorizontal",
+        "suggest": "结束新闻信水平",
+        "translate": ""
+    },
+    {
+        "source": "END Newsletter",
+        "suggest": "结束时事通讯",
+        "translate": ""
+    },
+    {
+        "source": "START Internal Footer",
+        "suggest": "开始内部页脚",
+        "translate": ""
+    },
+    {
+        "source": "START Footer Section",
+        "suggest": "开始页脚部分",
+        "translate": ""
+    },
+    {
+        "source": "END Footer Section",
+        "suggest": "结束页脚部分",
+        "translate": ""
+    },
+    {
+        "source": "START Internal Right",
+        "suggest": "开始内部权利",
+        "translate": ""
+    },
+    {
+        "source": "END Internal Footer",
+        "suggest": "结束内部页脚",
+        "translate": ""
+    },
+    {
+        "source": "START External Footer",
+        "suggest": "开始外部页脚",
+        "translate": ""
+    },
+    {
+        "source": "START External links",
+        "suggest": "开始外部链接",
+        "translate": ""
+    },
+    {
+        "source": "START External Right",
+        "suggest": "开始外部权利",
+        "translate": ""
+    },
+    {
+        "source": "END External Right",
+        "suggest": "结束外部权利",
+        "translate": ""
+    },
+    {
+        "source": "END External Links",
+        "suggest": "结束外部链接",
+        "translate": ""
+    },
+    {
+        "source": "START Trademark Statement",
+        "suggest": "开始商标声明",
+        "translate": ""
+    },
+    {
+        "source": "END Trademark Statement",
+        "suggest": "结束商标声明",
+        "translate": ""
+    },
+    {
+        "source": "START Legal",
+        "suggest": "开始法律",
+        "translate": ""
+    },
+    {
+        "source": "END Legal",
+        "suggest": "结束法律",
+        "translate": ""
+    },
+    {
+        "source": "END External Footer",
+        "suggest": "END 外部页脚",
+        "translate": ""
+    },
+    {
+        "source": "strip leading underscore from fn name when building a test _mm_foo -> mm_foo such that the test name is test_mm_foo.",
+        "suggest": "构建测试 _mm_foo -> mm_foo 时，请从 fn 名称中删除前划线，以使测试名称为 test_mm_foo。",
+        "translate": ""
+    },
+    {
+        "source": "Both pointers and references can have a mut token (*mut and &mut)",
+        "suggest": "指针和引用都可以有一个 mut token (*mut and &mut)",
+        "translate": ""
+    },
+    {
+        "source": "If they don't (*const or &) then they are \"const\"",
+        "suggest": "如果不是 (*const or&)，则为 \"const\"",
+        "translate": ""
+    },
+    {
+        "source": "A small custom parser to parse out the instruction in `assert_instr`.",
+        "suggest": "一个小型的自定义解析器，用于解析 `assert_instr` 中的指令。",
+        "translate": ""
+    },
+    {
+        "source": "should probably just reuse `Invoc` from the `assert-instr-macro` crate.",
+        "suggest": "应该应该只重用 `assert-instr-macro` crate 中的 `Invoc`。",
+        "translate": ""
+    },
+    {
+        "source": "consume everything remaining",
+        "suggest": "消耗掉剩下的一切",
+        "translate": ""
+    },
+    {
+        "source": "This is a giant HTML blob downloaded from https://developer.arm.com/technologies/neon/intrinsicswhichcontainsallNEONintrinsicsatleast.WedomanualHTMLparsingbelow.",
+        "suggest": "这是从 https://developer.arm.com/technologies/neon/intrinsicswhichcontainsallNEONintrinsicsatleast.WedomanualHTMLparsingbelow 下载的巨大 HTML Blob。",
+        "translate": ""
+    },
+    {
+        "source": "Skip some intrinsics that aren't NEON and are located in different places than the whitelists below.",
+        "suggest": "跳过一些不是 NEON 且与下面的白名单不同的地方的内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "Skip all these intrinsics as they're not listed in NEON descriptions online.",
+        "suggest": "跳过所有这些内联函数，因为它们未在线上在 NEON 说明中列出。",
+        "translate": ""
+    },
+    {
+        "source": "we still need to verify these intrinsics or find a reference for them, need to figure out where though!",
+        "suggest": "我们仍然需要验证这些内联函数或为它们找到引用，但是需要弄清楚在哪里!",
+        "translate": ""
+    },
+    {
+        "source": "sometimes arm says `foo` and disassemblers say `vfoo`, or sometimes disassemblers say `vfoo` and arm says `sfoo` or `ffoo`",
+        "suggest": "有时 arm 表示 `foo`，反汇编器表示 `vfoo`，或者有时反汇编器表示 `vfoo` 和 arm 表示 `sfoo` 或 `ffoo`",
+        "translate": ""
+    },
+    {
+        "source": "verify `target_feature`.",
+        "suggest": "验证 `target_feature`。",
+        "translate": ""
+    },
+    {
+        "source": "Find `for=\"...\"` in `<label>`",
+        "suggest": "在 `<label>` 中查找 `for=\"...\"`",
+        "translate": ""
+    },
+    {
+        "source": "Find contents of inner `<div>` in `<label>`",
+        "suggest": "在 `<label>` 中查找内部 `<div>` 的内容",
+        "translate": ""
+    },
+    {
+        "source": "Find the instruction within the article",
+        "suggest": "在文章中找到说明",
+        "translate": ""
+    },
+    {
+        "source": "Verification of MIPS MSA intrinsics",
+        "suggest": "MIPS MSA 内联函数的验证",
+        "translate": ""
+    },
+    {
+        "source": "This file is obtained from",
+        "suggest": "该文件来自",
+        "translate": ""
+    },
+    {
+        "source": "The intrinsics are just C function declarations of the form:",
+        "suggest": "内联函数只是以下形式的 C 函数声明:",
+        "translate": ""
+    },
+    {
+        "source": "The instruction is the intrinsic name without the __msa_ prefix.",
+        "suggest": "该指令是不带 __msa_ 前缀的固有名称。",
+        "translate": ""
+    },
+    {
+        "source": "With all underscores but the first one replaced with a `.`",
+        "suggest": "带有所有下划线，但第一个用 `.` 代替",
+        "translate": ""
+    },
+    {
+        "source": "Parse the C intrinsic header file:",
+        "suggest": "解析 C 内部头文件:",
+        "translate": ""
+    },
+    {
+        "source": "Skip some intrinsics that aren't part of MSA",
+        "suggest": "跳过一些不属于 MSA 的内联函数",
+        "translate": ""
+    },
+    {
+        "source": "Normalize slightly to get rid of assembler differences",
+        "suggest": "稍微规范化以消除汇编程序差异",
+        "translate": ""
+    },
+    {
+        "source": "This XML document was downloaded from Intel's site.",
+        "suggest": "该 XML 文档是从 Intel 网站下载的。",
+        "translate": ""
+    },
+    {
+        "source": "To update this you can visit intel's intrinsics guide online documentation:",
+        "suggest": "要对此进行更新，您可以访问 intel 的内联函数指南在线文档:",
+        "translate": ""
+    },
+    {
+        "source": "Open up the network console and you'll see an xml file was downloaded (currently called data-3.4.xml).",
+        "suggest": "打开网络控制台，您将看到一个 xml 文件已下载 (当前称为 data-3.4.xml)。",
+        "translate": ""
+    },
+    {
+        "source": "That's the file we downloaded here.",
+        "suggest": "那就是我们在这里下载的文件。",
+        "translate": ""
+    },
+    {
+        "source": "this list should be almost empty",
+        "suggest": "此列表应该几乎是空的",
+        "translate": ""
+    },
+    {
+        "source": "These aren't defined by Intel but they're defined by what appears to be all other compilers.",
+        "suggest": "这些不是由 Intel 定义的，而是由似乎所有其他编译器定义的。",
+        "translate": ""
+    },
+    {
+        "source": "For more information see rust-lang/stdarch#307, and otherwise these signatures have all been manually verified.",
+        "suggest": "有关更多信息，请参见 rust-lang/stdarch#307，否则，所有这些签名均已手动验证。",
+        "translate": ""
+    },
+    {
+        "source": "Not listed with intel, but manually verified",
+        "suggest": "未与 Intel 一起列出，但已手动验证",
+        "translate": ""
+    },
+    {
+        "source": "The UD2 intrinsic is not defined by Intel, but it was agreed on in the RFC Issue 2512:",
+        "suggest": "UD2 内联函数不是由 Intel 定义的，但是在 RFC Issue 2512 中已达成共识:",
+        "translate": ""
+    },
+    {
+        "source": "Intel requires the mask argument for _mm_shuffle_ps to be an unsigned integer, but all other _mm_shuffle_..",
+        "suggest": "英特尔要求 _mm_shuffle_ps 的 mask 参数为无符号整数，而其他所有 _mm_shuffle_.。",
+        "translate": ""
+    },
+    {
+        "source": "intrinsics take a signed-integer.",
+        "suggest": "内联函数采用带符号整数。",
+        "translate": ""
+    },
+    {
+        "source": "This breaks `_MM_SHUFFLE` for",
+        "suggest": "这打破了 `_MM_SHUFFLE`",
+        "translate": ""
+    },
+    {
+        "source": "these are all AMD-specific intrinsics",
+        "suggest": "这些都是 AMD 特有的内联函数",
+        "translate": ""
+    },
+    {
+        "source": "currently focused mainly on missing SIMD intrinsics, but there's definitely some other assorted ones that we're missing.",
+        "suggest": "目前主要集中在缺少 SIMD 内联函数上，但是肯定还有其他一些我们缺少的。",
+        "translate": ""
+    },
+    {
+        "source": "we'll get to avx-512 later",
+        "suggest": "我们稍后再去 avx-512",
+        "translate": ""
+    },
+    {
+        "source": "generate a bulleted list of missing intrinsics",
+        "suggest": "生成缺少内联函数的项目符号列表",
+        "translate": ""
+    },
+    {
+        "source": "Verify that all `#[target_feature]` annotations are correct, ensuring that we've actually enabled the right instruction set for this intrinsic.",
+        "suggest": "验证所有 `#[target_feature]` 批注是否正确，以确保我们实际上已为此内联函数启用了正确的指令集。",
+        "translate": ""
+    },
+    {
+        "source": "These don't actually have a target feature unlike their brethren with the `x` inside the name which requires adx",
+        "suggest": "这些人实际上没有目标功能，与他们的弟兄不同，名称中的 `x` 要求 adx",
+        "translate": ""
+    },
+    {
+        "source": "The pause intrinsic is in the SSE2 module, but it is backwards compatible with CPUs without SSE2, and it therefore does not need the target-feature attribute.",
+        "suggest": "暂停本征位于 SSE2 模块中，但与不具有 SSE2 的 CPU 向后兼容，因此不需要 target-feature 属性。",
+        "translate": ""
+    },
+    {
+        "source": "this is needed by _xsave and probably some related intrinsics, but let's just skip it for now.",
+        "suggest": "_xsave 和一些相关的内联函数需要此功能，但现在我们就跳过它。",
+        "translate": ""
+    },
+    {
+        "source": "these flags on the rdtsc/rtdscp intrinsics we don't test for right now, but we may wish to add these one day!",
+        "suggest": "我们暂时不测试 rdtsc/rtdscp 内联函数上的这些标志，但我们可能希望添加这些天!",
+        "translate": ""
+    },
+    {
+        "source": "For more info see #308",
+        "suggest": "有关更多信息，请参见 #308。",
+        "translate": ""
+    },
+    {
+        "source": "Fix mismatching feature names:",
+        "suggest": "修复不匹配的功能名称:",
+        "translate": ""
+    },
+    {
+        "source": "The XML file names IFMA as \"avx512ifma52\", while Rust calls it \"avx512ifma\".",
+        "suggest": "XML 文件将 IFMA 命名为 \"avx512ifma52\"，而 Rust 则将其命名为 \"avx512ifma\"。",
+        "translate": ""
+    },
+    {
+        "source": "The XML file names BITALG as \"avx512_bitalg\", while Rust calls it \"avx512bitalg\".",
+        "suggest": "XML 文件将 BITALG 命名为 \"avx512_bitalg\"，而 Rust 则将其命名为 \"avx512bitalg\"。",
+        "translate": ""
+    },
+    {
+        "source": "Some AVX512f intrinsics are also supported by Knight's Corner.",
+        "suggest": "Knight's Corner 还支持某些 AVX512f 内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "The XML lists them as avx512f/kncni, but we are solely gating them behind avx512f since we don't have a KNC feature yet.",
+        "suggest": "XML 将它们列为 avx512f/kncni，但是由于我们还没有 KNC 功能，因此我们将它们仅列在 avx512f 后面。",
+        "translate": ""
+    },
+    {
+        "source": "The intrinsics guide calls `f16c` `fp16c` in disagreement with Intel's architecture manuals.",
+        "suggest": "内联函数指南将 `f16c` `fp16c` 称为与英特尔的体系结构手册不同的地方。",
+        "translate": ""
+    },
+    {
+        "source": "If intel doesn't list any instructions and we do then don't bother trying to look for instructions in intel, we've just got some extra assertions on our end.",
+        "suggest": "如果 intel 没有列出任何指令，而我们也没有这样做，那就不要再试图在 intel 中寻找指令了，我们最终会得到一些额外的断言。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure we've got the right return type.",
+        "suggest": "确保我们有正确的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "If there's no arguments on Rust's side intel may list one \"void\" argument, so handle that here.",
+        "suggest": "如果 Rust 的侧面 intel 上没有任何参数，则可能列出一个 \"void\" 参数，因此请在此处进行处理。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise we want all parameters to be exactly the same",
+        "suggest": "否则，我们希望所有参数都完全相同",
+        "translate": ""
+    },
+    {
+        "source": "These intrinsics have all been manually verified against Clang's headers to be available on x86, and the u64 arguments seem spurious I guess?",
+        "suggest": "这些内联函数都已针对 Clang 的标头进行了手动验证，以在 x86 上可用，并且 u64 参数似乎是虚假的，我猜吗?",
+        "translate": ""
+    },
+    {
+        "source": "Apparently all of clang/msvc/gcc accept these intrinsics on",
+        "suggest": "显然，所有 clang/msvc/gcc 都接受这些内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "32-bit, so let's do the same",
+        "suggest": "32 位，所以我们做同样的事情",
+        "translate": ""
+    },
+    {
+        "source": "These return a 64-bit argument but they're assembled from other",
+        "suggest": "这些返回一个 64 位参数，但它们是从其他汇编而成的",
+        "translate": ""
+    },
+    {
+        "source": "32-bit registers, so these work on 32-bit just fine.",
+        "suggest": "32 位寄存器，因此它们可以在 32 位上正常工作。",
+        "translate": ""
+    },
+    {
+        "source": "See #308 for more info.",
+        "suggest": "有关更多信息，请参见 #308。",
+        "translate": ""
+    },
+    {
+        "source": "Make pointer adjacent to the type: float * foo => float* foo",
+        "suggest": "使指针与类型相邻: float *foo => float* foo",
+        "translate": ""
+    },
+    {
+        "source": "Make mutability modifier adjacent to the pointer:",
+        "suggest": "使可变性修饰符与指针相邻:",
+        "translate": ""
+    },
+    {
+        "source": "Normalize mutability modifier to after the type:",
+        "suggest": "将可变性修饰符归一化为以下类型:",
+        "translate": ""
+    },
+    {
+        "source": "This is a macro (?) in C which seems to mutate its arguments, but that means that we're taking pointers to arguments in rust as we're not exposing it as a macro.",
+        "suggest": "这是 C 语言中的宏 (?)，似乎在更改其参数，但这意味着我们将指针指向 rust 中的参数，因为我们没有将其公开为宏。",
+        "translate": ""
+    },
+    {
+        "source": "The _rdtsc intrinsic uses a __int64 return type, but this is a bug in",
+        "suggest": "_rdtsc 内联函数使用 __int64 返回类型，但这是一个错误",
+        "translate": ""
+    },
+    {
+        "source": "the intrinsics guide:",
+        "suggest": "内联函数指南:",
+        "translate": ""
+    },
+    {
+        "source": "We have manually fixed the bug by changing the return type to `u64`.",
+        "suggest": "我们已经通过将返回类型更改为 `u64` 来手动修复了该错误。",
+        "translate": ""
+    },
+    {
+        "source": "The _bittest and _bittest64 intrinsics takes a mutable pointer in the intrinsics guide even though it never writes through the pointer:",
+        "suggest": "_bittest 和 _bittest64 内联函数在内联函数指南中使用一个可变指针，即使它从未通过指针写入:",
+        "translate": ""
+    },
+    {
+        "source": "The _xrstor, _fxrstor, _xrstor64, _fxrstor64 intrinsics take a mutable pointer in the intrinsics guide even though they never write through the pointer:",
+        "suggest": "_xrstor，_fxrstor，_xrstor64，_fxrstor64 内联函数在内联函数指南中使用一个可变指针，即使它们从不编写指针:",
+        "translate": ""
+    },
+    {
+        "source": "Rust's standard library run-time CPU feature detection",
+        "suggest": "Rust 的标准库运行时 CPU 功能检测",
+        "translate": ""
+    },
+    {
+        "source": "The private `std::detect` module implements run-time feature detection in Rust's standard library.",
+        "suggest": "专用 `std::detect` 模块在 Rust 的标准库中实现了运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "This allows detecting whether the CPU the binary runs on supports certain features, like SIMD instructions.",
+        "suggest": "这样可以检测二进制文件所运行的 CPU 是否支持某些功能，例如 SIMD 指令。",
+        "translate": ""
+    },
+    {
+        "source": "APIs are available as part of `libstd`.",
+        "suggest": "API 是 `libstd` 的一部分。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer using it via the standard library than through this crate.",
+        "suggest": "与通过此 crate 相比，更喜欢通过标准库使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Unstable features of `std::detect` are available on nightly Rust behind the `feature(stdsimd)` feature-gate.",
+        "suggest": "`std::detect` 的不稳定特性可在 `feature(stdsimd)` 功能门后的每晚 Rust 上获得。",
+        "translate": ""
+    },
+    {
+        "source": "If you need run-time feature detection in `#[no_std]` environments, Rust `core` library cannot help you.",
+        "suggest": "如果需要在 `#[no_std]` 环境中进行运行时功能检测，则 Rust `core` 库无法为您提供帮助。",
+        "translate": ""
+    },
+    {
+        "source": "By design, Rust `core` is platform independent, but performing run-time feature detection requires a certain level of cooperation from the platform.",
+        "suggest": "根据设计，Rust `core` 是独立于平台的，但是执行运行时特征检测需要平台提供一定程度的合作。",
+        "translate": ""
+    },
+    {
+        "source": "You can then manually include `std_detect` as a dependency to get similar run-time feature detection support than the one offered by Rust's standard library.",
+        "suggest": "然后，您可以手动将 `std_detect` 作为依赖项包括在内，以获得与 Rust 标准库所提供的功能类似的运行时特征检测支持。",
+        "translate": ""
+    },
+    {
+        "source": "We intend to make `std_detect` more flexible and configurable in this regard to better serve the needs of `#[no_std]` targets.",
+        "suggest": "我们打算在这方面使 `std_detect` 更加灵活和可配置，以更好地满足 `#[no_std]` 目标的需求。",
+        "translate": ""
+    },
+    {
+        "source": "(enabled by default, requires `libc`): Enable to use `libc::dlsym` to query whether [`getauxval`] is linked into the binary.",
+        "suggest": "(默认情况下启用，需要 `libc`) : 启用以使用 `libc::dlsym` 查询 [`getauxval`] 是否链接到二进制文件中。",
+        "translate": ""
+    },
+    {
+        "source": "When this is not the case, this feature allows other fallback methods to perform run-time feature detection.",
+        "suggest": "如果不是这种情况，则此功能允许其他后备方法执行运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "When this feature is disabled, `std_detect` assumes that [`getauxval`] is linked to the binary.",
+        "suggest": "禁用此功能后，`std_detect` 假定 [`getauxval`] 已链接到二进制文件。",
+        "translate": ""
+    },
+    {
+        "source": "If that is not the case the behavior is undefined.",
+        "suggest": "如果不是这种情况，则行为是不确定的。",
+        "translate": ""
+    },
+    {
+        "source": "(enabled by default, requires `std`): Enable to perform run-time feature detection using file APIs (e.g. `/proc/cpuinfo`, etc.) if other more performant methods fail.",
+        "suggest": "(默认情况下启用，需要 `std`) : 如果其他性能更高的方法失败，则启用使用文件 API (例如 `/proc/cpuinfo` 等) 执行运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "This feature requires `libstd` as a dependency, preventing the crate from working on applications in which `std` is not available.",
+        "suggest": "此功能需要 `libstd` 作为依赖项，从而阻止 crate 在无法使用 `std` 的应用程序上工作。",
+        "translate": ""
+    },
+    {
+        "source": "All `x86`/`x86_64` targets are supported on all platforms by querying the `cpuid` instruction directly for the features supported by the hardware and the operating system.",
+        "suggest": "通过直接查询 `cpuid` 指令以获取硬件和操作系统支持的功能，所有平台都支持所有 `x86`/`x86_64` 目标。",
+        "translate": ""
+    },
+    {
+        "source": "`std_detect` assumes that the binary is an user-space application.",
+        "suggest": "`std_detect` 假定二进制文件是一个 user-space 应用程序。",
+        "translate": ""
+    },
+    {
+        "source": "If you need raw support for querying `cpuid`, consider using the [`cupid`](https://crates.io/crates/cupid) crate.",
+        "suggest": "如果需要原始支持来查询 `cpuid`，请考虑使用 [`cupid`](https://crates.io/crates/cupid) crate。",
+        "translate": ""
+    },
+    {
+        "source": "`mips{32,64}{,el}`, `powerpc{32,64}{,le}`: `std_detect` supports these on Linux by querying ELF auxiliary vectors (using `getauxval` when available), and if that fails, by querying `/proc/cpuinfo`.",
+        "suggest": "`mips{32,64}{,el}`，`powerpc{32,64}{,le}`: `std_detect` 在 Linux 上支持这些功能，方法是查询 ELF 辅助 vectors (如果可用，使用 `getauxval`)，如果失败，则通过查询 `/proc/cpuinfo`。",
+        "translate": ""
+    },
+    {
+        "source": "partial support for doing run-time feature detection by directly querying `mrs` is implemented for Linux >= 4.11, but not enabled by default.",
+        "suggest": "对于 Linux>= 4.11，实现了通过直接查询 `mrs` 进行运行时特征检测的部分支持，但默认情况下未启用。",
+        "translate": ""
+    },
+    {
+        "source": "run-time feature detection is implemented by directly querying `mrs`.",
+        "suggest": "运行时特征检测是通过直接查询 `mrs` 来实现的。",
+        "translate": ""
+    },
+    {
+        "source": "Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in `std_detect` by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.",
+        "suggest": "除非您明确声明，否则您有意提交的任何捐赠 (按照 Apache-2.0 许可的定义) 都应包含在 `std_detect` 中，并且应具有上述双重许可权利，且无任何其他条款或条件。",
+        "translate": ""
+    },
+    {
+        "source": "run-time features.",
+        "suggest": "运行时功能。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if `aarch64` feature is enabled.",
+        "suggest": "检查是否启用了 `aarch64` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "Advanced SIMD (ASIMD)",
+        "suggest": "进阶 SIMD (ASIMD)",
+        "translate": ""
+    },
+    {
+        "source": "Polynomial Multiply",
+        "suggest": "多项式乘法",
+        "translate": ""
+    },
+    {
+        "source": "Floating point support",
+        "suggest": "浮点支持",
+        "translate": ""
+    },
+    {
+        "source": "Half-float support.",
+        "suggest": "半浮动支持。",
+        "translate": ""
+    },
+    {
+        "source": "Scalable Vector Extension (SVE)",
+        "suggest": "可扩展 Vector 扩展 (SVE)",
+        "translate": ""
+    },
+    {
+        "source": "(Cyclic Redundancy Check)",
+        "suggest": "(循环冗余校验)",
+        "translate": ""
+    },
+    {
+        "source": "Crypto: AES + PMULL + SHA1 + SHA2",
+        "suggest": "加密: AES + PMULL + SHA1 + SHA2",
+        "translate": ""
+    },
+    {
+        "source": "Atomics (Large System Extension)",
+        "suggest": "原子 (大型系统扩展)",
+        "translate": ""
+    },
+    {
+        "source": "Rounding Double Multiply (ASIMDRDM)",
+        "suggest": "四舍五入 (ASIMDRDM)",
+        "translate": ""
+    },
+    {
+        "source": "Release consistent Processor consistent (RcPc)",
+        "suggest": "发布一致的处理器 (RcPc)",
+        "translate": ""
+    },
+    {
+        "source": "Vector Dot-Product (ASIMDDP)",
+        "suggest": "Vector 点积 (ASIMDDP)",
+        "translate": ""
+    },
+    {
+        "source": "Transactional Memory Extensions (TME)",
+        "suggest": "事务性内存扩展 (TME)",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on ARM Aarch32.",
+        "suggest": "ARM Aarch32 上的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if `arm` feature is enabled.",
+        "suggest": "检查是否启用了 `arm` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "Advanced SIMD (NEON) - Aarch32",
+        "suggest": "进阶 SIMD (NEON)-Aarch32",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on MIPS.",
+        "suggest": "MIPS 上的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if `mips` feature is enabled.",
+        "suggest": "检查是否启用了 `mips` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "SIMD Architecture (MSA)",
+        "suggest": "SIMD 架构 (MSA)",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on MIPS64.",
+        "suggest": "MIPS64 上的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if `mips64` feature is enabled.",
+        "suggest": "检查是否启用了 `mips64` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on PowerPC.",
+        "suggest": "PowerPC 上的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if `powerpc` feature is enabled.",
+        "suggest": "检查是否启用了 `powerpc` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on PowerPC64.",
+        "suggest": "PowerPC64 上的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "This module implements minimal run-time feature detection for x86.",
+        "suggest": "该模块为 x86 实现了最小的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "The features are detected using the `detect_features` function below.",
+        "suggest": "使用下面的 `detect_features` 函数可以检测到这些功能。",
+        "translate": ""
+    },
+    {
+        "source": "This function uses the CPUID instruction to read the feature flags from the CPU and encodes them in an `usize` where each bit position represents whether a feature is available (bit is set) or unavaiable (bit is cleared).",
+        "suggest": "该函数使用 CPUID 指令从 CPU 读取功能标志并将其编码在 `usize` 中，其中每个位的位置表示功能是可用的 (设置了位) 还是不可用的 (清除了位)。",
+        "translate": ""
+    },
+    {
+        "source": "The enum `Feature` is used to map bit positions to feature names, and the the `__crate::detect::check_for!` macro is used to map string literals (e.g., \"avx\") to these bit positions (e.g., `Feature::avx`).",
+        "suggest": "枚举 `Feature` 用于 map 位位置以指定功能名称，而 `__crate::detect::check_for!` 宏用于 map 字符串字面量 (例如 \"avx\") 到这些位位置 (例如 `Feature::avx`)。",
+        "translate": ""
+    },
+    {
+        "source": "The run-time feature detection is performed by the `__crate::detect::check_for(Feature) -> bool` function.",
+        "suggest": "运行时功能检测由 `__crate::detect::check_for(Feature) -> bool` 函数执行。",
+        "translate": ""
+    },
+    {
+        "source": "On its first call, this functions queries the CPU for the available features and stores them in a global `AtomicUsize` variable.",
+        "suggest": "在第一次调用时，此函数向 CPU 查询可用功能，并将其存储在 `AtomicUsize` 变量中。",
+        "translate": ""
+    },
+    {
+        "source": "The query is performed by just checking whether the feature bit in this global variable is set or cleared.",
+        "suggest": "通过仅检查此变量中的特征位是否已设置或清除来执行查询。",
+        "translate": ""
+    },
+    {
+        "source": "A macro to test at *runtime* whether a CPU feature is available on x86/x86-64 platforms.",
+        "suggest": "一个在 *运行时* 测试 x86/x86-64 平台上是否具有 CPU 功能的宏。",
+        "translate": ""
+    },
+    {
+        "source": "This macro is provided in the standard library and will detect at runtime whether the specified CPU feature is detected.",
+        "suggest": "标准库中提供了此宏，它将在运行时检测是否检测到指定的 CPU 功能。",
+        "translate": ""
+    },
+    {
+        "source": "This does **not** resolve at compile time unless the specified feature is already enabled for the entire crate.",
+        "suggest": "除非在整个 crate 中启用了指定功能，否则在编译时不会解析。",
+        "translate": ""
+    },
+    {
+        "source": "Runtime detection currently relies mostly on the `cpuid` instruction.",
+        "suggest": "当前，运行时检测主要依赖于 `cpuid` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "This macro only takes one argument which is a string literal of the feature being tested for.",
+        "suggest": "该宏仅使用一个参数，该参数是要测试的功能的字符串字面量。",
+        "translate": ""
+    },
+    {
+        "source": "The feature names supported are the lowercase versions of the ones defined by Intel in [their documentation][docs].",
+        "suggest": "支持的功能名称是 [their documentation][docs] 中 Intel 定义的功能的小写版本。",
+        "translate": ""
+    },
+    {
+        "source": "Supported arguments",
+        "suggest": "支持参数",
+        "translate": ""
+    },
+    {
+        "source": "This macro supports the same names that `#[target_feature]` supports.",
+        "suggest": "该宏支持 `#[target_feature]` 支持的相同名称。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `#[target_feature]`, however, this macro does not support names separated with a comma.",
+        "suggest": "但是，与 `#[target_feature]` 不同，此宏不支持用逗号分隔的名称。",
+        "translate": ""
+    },
+    {
+        "source": "Instead testing for multiple features must be done through separate macro invocations for now.",
+        "suggest": "相反，针对多个功能的测试目前必须通过单独的宏调用来完成。",
+        "translate": ""
+    },
+    {
+        "source": "Supported arguments are:",
+        "suggest": "支持的参数有:",
+        "translate": ""
+    },
+    {
+        "source": "abm is a synonym for lzcnt",
+        "suggest": "abm 是 lzcnt 的同义词",
+        "translate": ""
+    },
+    {
+        "source": "AES (Advanced Encryption Standard New Instructions AES-NI)",
+        "suggest": "AES (高级加密标准新指令 AES-NI)",
+        "translate": ""
+    },
+    {
+        "source": "CLMUL (Carry-less Multiplication)",
+        "suggest": "CLMUL (无运载乘数)",
+        "translate": ""
+    },
+    {
+        "source": "TSC (Time Stamp Counter)",
+        "suggest": "TSC (时间戳计数器)",
+        "translate": ""
+    },
+    {
+        "source": "MMX (MultiMedia eXtensions)",
+        "suggest": "MMX (多媒体扩展)",
+        "translate": ""
+    },
+    {
+        "source": "SSE (Streaming SIMD Extensions)",
+        "suggest": "SSE (流式 SIMD 扩展)",
+        "translate": ""
+    },
+    {
+        "source": "(Streaming SIMD Extensions 2)",
+        "suggest": "(流式 SIMD 扩展 2)",
+        "translate": ""
+    },
+    {
+        "source": "(Streaming SIMD Extensions 3)",
+        "suggest": "(流式 SIMD 扩展 3)",
+        "translate": ""
+    },
+    {
+        "source": "(Supplemental Streaming SIMD Extensions 3)",
+        "suggest": "(补充流式 SIMD 扩展 3)",
+        "translate": ""
+    },
+    {
+        "source": "(Streaming SIMD Extensions 4.1)",
+        "suggest": "(流式 SIMD 扩展 4.1)",
+        "translate": ""
+    },
+    {
+        "source": "(Streaming SIMD Extensions 4.2)",
+        "suggest": "(流式 SIMD 扩展 4.2)",
+        "translate": ""
+    },
+    {
+        "source": "SSE4a (Streaming SIMD Extensions 4a)",
+        "suggest": "SSE4a (流式 SIMD 扩展 4a)",
+        "translate": ""
+    },
+    {
+        "source": "AVX (Advanced Vector Extensions)",
+        "suggest": "AVX (高级 Vector 扩展)",
+        "translate": ""
+    },
+    {
+        "source": "(Advanced Vector Extensions 2)",
+        "suggest": "(高级 Vector 扩展 2)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 CD (Conflict Detection Instructions)",
+        "suggest": "AVX-512 CD (冲突检测说明)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 ER (Expo nential and Reciprocal Instructions)",
+        "suggest": "AVX-512 ER (指数和对等指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 PF (Prefetch Instructions)",
+        "suggest": "AVX-512 PF (预取说明)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 BW (Byte and Word Instructions)",
+        "suggest": "AVX-512 BW (字节和字指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 DQ (Doubleword and Quadword)",
+        "suggest": "AVX-512 DQ (双字和四字)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VL (Vector Length Extensions)",
+        "suggest": "AVX-512 VL (Vector 长度扩展)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 IFMA (Integer Fused Multiply Add)",
+        "suggest": "AVX-512 IFMA (整数融合乘加)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VBMI (Vector Byte Manipulation Instructions)",
+        "suggest": "AVX-512 VBMI (Vector 字节操作指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VPOPCNTDQ (Vector Population Count Doubleword and Quadword)",
+        "suggest": "AVX-512 VPOPCNTDQ (Vector 人口计数双字和四字)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VBMI2 (Additional byte, word, dword and qword capabilities)",
+        "suggest": "AVX-512 VBMI2 (附加的字节，字，dword 和 qword 功能)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 GFNI (Galois Field New Instruction)",
+        "suggest": "AVX-512 GFNI (加卢瓦现场新指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VAES (Vector AES instruction)",
+        "suggest": "AVX-512 VAES (Vector AES 指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VPCLMULQDQ (Vector PCLMULQDQ instructions)",
+        "suggest": "AVX-512 VPCLMULQDQ (Vector PCLMULQDQ 指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 VNNI (Vector Neural Network Instructions)",
+        "suggest": "AVX-512 VNNI (Vector 神经网络指令)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 BITALG (Support for VPOPCNT[B,W] and VPSHUFBITQMB)",
+        "suggest": "AVX-512 BITALG (支持 VPOPCNT [B，W] 和 VPSHUFBITQMB)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 BF16 (BFLOAT16 instructions)",
+        "suggest": "AVX-512 BF16 (BFLOAT16 说明)",
+        "translate": ""
+    },
+    {
+        "source": "AVX-512 P2INTERSECT",
+        "suggest": "AVX-512 P2 相交",
+        "translate": ""
+    },
+    {
+        "source": "F16C (Conversions between IEEE-754 `binary16` and `binary32` formats)",
+        "suggest": "F16C (IEEE-754 `binary16` 和 `binary32` 格式之间的转换)",
+        "translate": ""
+    },
+    {
+        "source": "FMA (Fused Multiply Add)",
+        "suggest": "FMA (融合乘加)",
+        "translate": ""
+    },
+    {
+        "source": "(Bit Manipulation Instructions 1)",
+        "suggest": "(位操作说明 1)",
+        "translate": ""
+    },
+    {
+        "source": "(Bit Manipulation Instructions 2)",
+        "suggest": "(位操作说明 2)",
+        "translate": ""
+    },
+    {
+        "source": "ABM (Advanced Bit Manipulation) / LZCNT (Leading Zero Count)",
+        "suggest": "ABM (高级位处理) /LZCNT (领先零计数)",
+        "translate": ""
+    },
+    {
+        "source": "TBM (Trailing Bit Manipulation)",
+        "suggest": "TBM (牵引钻头操纵)",
+        "translate": ""
+    },
+    {
+        "source": "POPCNT (Population Count)",
+        "suggest": "POPCNT (人口数)",
+        "translate": ""
+    },
+    {
+        "source": "FXSR (Floating-point context fast save and restor)",
+        "suggest": "FXSR (浮点上下文快速保存和还原)",
+        "translate": ""
+    },
+    {
+        "source": "XSAVE (Save Processor Extended States)",
+        "suggest": "XSAVE (保存处理器扩展状态)",
+        "translate": ""
+    },
+    {
+        "source": "XSAVEOPT (Save Processor Extended States Optimized)",
+        "suggest": "XSAVEOPT (优化保存处理器扩展状态)",
+        "translate": ""
+    },
+    {
+        "source": "XSAVES (Save Processor Extended States Supervisor)",
+        "suggest": "XSAVES (保存处理器扩展状态主管)",
+        "translate": ""
+    },
+    {
+        "source": "XSAVEC (Save Processor Extended States Compacted)",
+        "suggest": "XSAVEC (包装的保存的处理器扩展状态)",
+        "translate": ""
+    },
+    {
+        "source": "CMPXCH16B (16-byte compare-and-swap instruction)",
+        "suggest": "CMPXCH16B (16 字节比较和交换指令)",
+        "translate": ""
+    },
+    {
+        "source": "ADX, Intel ADX (Multi-Precision Add-Carry Instruction Extensions)",
+        "suggest": "ADX，Intel ADX (多精度加载指令扩展)",
+        "translate": ""
+    },
+    {
+        "source": "RTM, Intel (Restricted Transactional Memory)",
+        "suggest": "RTM，英特尔 (受限事务存储器)",
+        "translate": ""
+    },
+    {
+        "source": "Bit manipulation utilities.",
+        "suggest": "钻头操纵实用工具。",
+        "translate": ""
+    },
+    {
+        "source": "Tests the `bit` of `x`.",
+        "suggest": "测试 `x` 的 `bit`。",
+        "translate": ""
+    },
+    {
+        "source": "Caches run-time feature detection so that it only needs to be computed once.",
+        "suggest": "缓存运行时功能检测，因此只需要计算一次即可。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the `bit` of `x`.",
+        "suggest": "设置 `x` 的 `bit`。",
+        "translate": ""
+    },
+    {
+        "source": "Unset the `bit of `x`.",
+        "suggest": "取消 `x` 的位。",
+        "translate": ""
+    },
+    {
+        "source": "Maximum number of features that can be cached.",
+        "suggest": "可以缓存的最大功能数。",
+        "translate": ""
+    },
+    {
+        "source": "This type is used to initialize the cache",
+        "suggest": "此类型用于初始化缓存",
+        "translate": ""
+    },
+    {
+        "source": "the `debug_assert!` would catch that we do not add more Features than the one fitting our cache.",
+        "suggest": "`debug_assert!` 会发现我们添加的功能不超过适合我们缓存的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Tests the `bit` of the cache.",
+        "suggest": "测试缓存的 `bit`。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the `bit` of the cache.",
+        "suggest": "设置缓存的 `bit`。",
+        "translate": ""
+    },
+    {
+        "source": "Unsets the `bit` of the cache.",
+        "suggest": "取消设置缓存的 `bit`。",
+        "translate": ""
+    },
+    {
+        "source": "This global variable is a cache of the features supported by the CPU.",
+        "suggest": "该变量是 CPU 支持的功能的缓存。",
+        "translate": ""
+    },
+    {
+        "source": "on x64, we only use the first slot",
+        "suggest": "在 x64 上，我们仅使用第一个插槽",
+        "translate": ""
+    },
+    {
+        "source": "Feature cache with capacity for `size_of::<usize::MAX>() * 8 - 1` features.",
+        "suggest": "具有 `size_of::<usize::MAX>() * 8 - 1` 功能容量的功能缓存。",
+        "translate": ""
+    },
+    {
+        "source": "0 is used to represent an uninitialized cache, and (at least) the most significant bit is set on any cache which has been initialized.",
+        "suggest": "0 用于表示未初始化的缓存，并且 (至少) 最高有效位设置在任何已初始化的缓存上。",
+        "translate": ""
+    },
+    {
+        "source": "we use `Relaxed` atomic operations, because we are only interested in the effects of operations on a single memory location.",
+        "suggest": "我们使用 `Relaxed` 原子操作，因为我们只对操作在单个内存位置上的影响感兴趣。",
+        "translate": ""
+    },
+    {
+        "source": "That is, we only need \"modification order\", and not the full-blown \"happens before\".",
+        "suggest": "也就是说，我们只需要 \"modification order\"，而不需要成熟的 \"happens before\"。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an uninitialized cache.",
+        "suggest": "创建一个未初始化的缓存。",
+        "translate": ""
+    },
+    {
+        "source": "Is the `bit` in the cache set?",
+        "suggest": "缓存中的 `bit` 是否已设置?",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the cache has not been initialized.",
+        "suggest": "如果尚未初始化缓存，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Initializes the cache.",
+        "suggest": "初始化缓存。",
+        "translate": ""
+    },
+    {
+        "source": "We only have to detect features once, and it's fairly costly, so hint to LLVM that it should assume that cache hits are more common than misses (which is the point of caching).",
+        "suggest": "我们只需要检测一次功能，这是相当昂贵的，因此向 LLVM 暗示它应该假定缓存命中比未命中更为常见 (这是缓存的重点)。",
+        "translate": ""
+    },
+    {
+        "source": "It's possibly unfortunate that this function needs to reach across modules like this to call `os::detect_features`, but it produces the best code out of several attempted variants.",
+        "suggest": "可能不幸的是，此函数需要跨这样的模块才能调用 `os::detect_features`，但它会在尝试的多个成员中产生最佳的代码。",
+        "translate": ""
+    },
+    {
+        "source": "The `Initializer` that the cache was initialized with is returned, so that the caller can call `test()` on it without having to load the value from the cache again.",
+        "suggest": "返回用于初始化缓存的 `Initializer`，以便调用者可以在其上调用 `test()`，而不必再次从缓存中加载该值。",
+        "translate": ""
+    },
+    {
+        "source": "Tests the `bit` of the storage.",
+        "suggest": "测试存储器的 `bit`。",
+        "translate": ""
+    },
+    {
+        "source": "If the storage has not been initialized, initializes it with the result of `os::detect_features()`.",
+        "suggest": "如果尚未初始化存储，请使用 `os::detect_features()` 的结果对其进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "On its first invocation, it detects the CPU features and caches them in the `CACHE` global variable as an `AtomicU64`.",
+        "suggest": "首次调用时，它将检测到 CPU 功能，并将其作为 `AtomicU64` 缓存在 `CACHE` 变量中。",
+        "translate": ""
+    },
+    {
+        "source": "It uses the `Feature` variant to index into this variable as a bitset.",
+        "suggest": "它使用 `Feature` 成员作为位集索引到该变量中。",
+        "translate": ""
+    },
+    {
+        "source": "If the bit is set, the feature is enabled, and otherwise it is disabled.",
+        "suggest": "如果该位置 1，则启用该功能，否则禁用该功能。",
+        "translate": ""
+    },
+    {
+        "source": "If the feature `std_detect_env_override` is enabled looks for the env variable `RUST_STD_DETECT_UNSTABLE` and uses its its content to disable Features that would had been otherwise detected.",
+        "suggest": "如果启用了功能 `std_detect_env_override`，则查找 env 变量 `RUST_STD_DETECT_UNSTABLE`，并使用其内容禁用本来可以检测到的功能。",
+        "translate": ""
+    },
+    {
+        "source": "The `is_{target_arch}_feature_detected!` macro are only available on their architecture.",
+        "suggest": "`is_{target_arch}_feature_detected!` 宏仅在其体系结构上可用。",
+        "translate": ""
+    },
+    {
+        "source": "These macros provide a better error messages when the user attempts to call them in a different architecture.",
+        "suggest": "当用户尝试在不同的体系结构中调用它们时，这些宏会提供更好的错误消息。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_x86_feature_detected` is used somewhere else than `x86` and `x86_64` targets.",
+        "suggest": "如果在 `x86` 和 `x86_64` 目标之外的其他地方使用 `is_x86_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_arm_feature_detected` is used somewhere else than `ARM` targets.",
+        "suggest": "如果在 `ARM` 目标以外的其他地方使用 `is_arm_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_aarch64_feature_detected` is used somewhere else than `aarch64` targets.",
+        "suggest": "如果在 `aarch64` 目标以外的其他地方使用 `is_aarch64_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_powerpc_feature_detected` is used somewhere else than `PowerPC` targets.",
+        "suggest": "如果在 `PowerPC` 目标以外的其他地方使用 `is_powerpc_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_powerpc64_feature_detected` is used somewhere else than `PowerPC64` targets.",
+        "suggest": "如果在 `PowerPC64` 目标以外的其他地方使用 `is_powerpc64_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_mips_feature_detected` is used somewhere else than `MIPS` targets.",
+        "suggest": "如果在 `MIPS` 目标以外的其他地方使用 `is_mips_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Prevents compilation if `is_mips64_feature_detected` is used somewhere else than `MIPS64` targets.",
+        "suggest": "如果在 `MIPS64` 目标以外的其他地方使用 `is_mips64_feature_detected`，则阻止编译。",
+        "translate": ""
+    },
+    {
+        "source": "Each variant denotes a position in a bitset for a particular feature.",
+        "suggest": "每个成员表示特定特征在位集中的位置。",
+        "translate": ""
+    },
+    {
+        "source": "do not use this, it is an implementation detail subject to change.",
+        "suggest": "不要使用它，它是一个实现细节，随时可能更改。",
+        "translate": ""
+    },
+    {
+        "source": "Do not add variants after last:",
+        "suggest": "最后不要添加成员:",
+        "translate": ""
+    },
+    {
+        "source": "Each function performs run-time feature detection for a single feature.",
+        "suggest": "每个函数都对单个功能执行运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "This allow us to use stability attributes on a per feature basis.",
+        "suggest": "这使我们可以基于每个功能使用稳定性属性。",
+        "translate": ""
+    },
+    {
+        "source": "This module implements run-time feature detection.",
+        "suggest": "此模块实现运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "The `is_{arch}_feature_detected!(\"feature-name\")` macros take the name of a feature as a string-literal, and return a boolean indicating whether the feature is enabled at run-time or not.",
+        "suggest": "`is_{arch}_feature_detected!(\"feature-name\")` 宏将功能名称命名为字符串 - 字面量，并返回一个布尔值，指示是否在运行时启用该功能。",
+        "translate": ""
+    },
+    {
+        "source": "These macros do two things:",
+        "suggest": "这些宏可做两件事:",
+        "translate": ""
+    },
+    {
+        "source": "map the string-literal into an integer stored as a `Feature` enum,",
+        "suggest": "map 将字符串 - 字面量转换为存储为 `Feature` 枚举的整数，",
+        "translate": ""
+    },
+    {
+        "source": "call a `os::check_for(x: Feature)` function that returns `true` if the feature is enabled.",
+        "suggest": "调用一个 `os::check_for(x: Feature)` 函数，如果启用了该功能，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "The `Feature` enums are also implemented in the `arch/{target_arch}.rs` modules.",
+        "suggest": "`Feature` 枚举也在 `arch/{target_arch}.rs` 模块中实现。",
+        "translate": ""
+    },
+    {
+        "source": "The `check_for` functions are, in general, Operating System dependent.",
+        "suggest": "通常，`check_for` 函数取决于操作系统。",
+        "translate": ""
+    },
+    {
+        "source": "Most architectures do not allow user-space programs to query the feature bits due to security concerns (x86 is the big exception).",
+        "suggest": "由于安全方面的考虑，大多数体系结构都不允许 user-space 程序查询功能位 (x86 是个大例外)。",
+        "translate": ""
+    },
+    {
+        "source": "These functions are implemented in the `os/{target_os}.rs` modules.",
+        "suggest": "这些函数在 `os/{target_os}.rs` 模块中实现。",
+        "translate": ""
+    },
+    {
+        "source": "Unimplemented architecture:",
+        "suggest": "未实现的架构:",
+        "translate": ""
+    },
+    {
+        "source": "This module needs to be public because the `is_{arch}_feature_detected!` macros expand calls to items within it in user crates.",
+        "suggest": "该模块必须是公共的，因为 `is_{arch}_feature_detected!` 宏在用户 crates 中扩展了对其内项目的调用。",
+        "translate": ""
+    },
+    {
+        "source": "When running under miri all target-features that are not enabled at compile-time are reported as disabled at run-time.",
+        "suggest": "在 miri 下运行时，在编译时未启用的所有目标功能都将在运行时报告为已禁用。",
+        "translate": ""
+    },
+    {
+        "source": "For features for which `cfg(target_feature)` returns true, this run-time detection logic is never called.",
+        "suggest": "对于 `cfg(target_feature)` 返回 true 的功能，永远不会调用此运行时检测逻辑。",
+        "translate": ""
+    },
+    {
+        "source": "On x86/x86_64 no OS specific functionality is required.",
+        "suggest": "在 x86/x86_64 上，不需要操作系统特定的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Performs run-time feature detection.",
+        "suggest": "执行运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an `Iterator<Item=(&'static str, bool)>` where `Item.0` is the feature name, and `Item.1` is a `bool` which is `true` if the feature is supported by the host and `false` otherwise.",
+        "suggest": "返回 `Iterator<Item=(&'static str, bool)>`，其中 `Item.0` 是功能名称，`Item.1` 是 `bool`，如果主机支持该功能，则 `true` 是 `true`，否则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for Aarch64 on any OS that emulates the mrs instruction.",
+        "suggest": "在任何模拟 mrs 指令的 OS 上 Aarch64 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "On FreeBSD >= 12.0, Linux >= 4.11 and other operating systems, it is possible to use privileged system registers from userspace to check CPU feature support.",
+        "suggest": "在 FreeBSD>= 12.0，Linux>= 4.11 和其他操作系统上，可以使用用户空间中的权限系统寄存器来检查 CPU 功能支持。",
+        "translate": ""
+    },
+    {
+        "source": "system registers ID_AA64ISAR0_EL1, ID_AA64PFR0_EL1, ID_AA64ISAR1_EL1 have bits dedicated to features like AdvSIMD, CRC32, AES, atomics (LSE), etc.",
+        "suggest": "系统寄存器 ID_AA64ISAR0_EL1，ID_AA64PFR0_EL1，ID_AA64ISAR1_EL1 具有专用于 AdvSIMD，CRC32，AES，原子 (LSE) 等功能的位。",
+        "translate": ""
+    },
+    {
+        "source": "Each part of the register indicates the level of support for a certain feature, e.g.",
+        "suggest": "寄存器的每个部分指示对某个功能的支持级别，例如",
+        "translate": ""
+    },
+    {
+        "source": "when ID_AA64ISAR0_EL1\\[7:4\\] is >= 1, AES is supported;",
+        "suggest": "当 ID_AA64ISAR0_EL1\\[7: 4\\] 为 >= 1 时，支持 AES;",
+        "translate": ""
+    },
+    {
+        "source": "when it's >= 2, PMULL is supported.",
+        "suggest": ">= 2 时，支持 PMULL。",
+        "translate": ""
+    },
+    {
+        "source": "For proper support of [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb), the OS has to always report only the features supported by all cores, like [FreeBSD does](https://reviews.freebsd.org/D17137#393947).",
+        "suggest": "为了正确支持 [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb)，操作系统必须始终仅报告所有内核所支持的功能，例如 [FreeBSD does](https://reviews.freebsd.org/D17137#393947)。",
+        "translate": ""
+    },
+    {
+        "source": "Try to read the features from the system registers.",
+        "suggest": "尝试从系统寄存器中读取功能。",
+        "translate": ""
+    },
+    {
+        "source": "This will cause SIGILL if the current OS is not trapping the mrs instruction.",
+        "suggest": "如果当前操作系统未捕获 mrs 指令，则将导致 SIGILL。",
+        "translate": ""
+    },
+    {
+        "source": "ID_AA64ISAR0_EL1 - Instruction Set Attribute Register 0",
+        "suggest": "ID_AA64ISAR0_EL1 - 指令集属性寄存器 0",
+        "translate": ""
+    },
+    {
+        "source": "Crypto is specified as AES + PMULL + SHA1 + SHA2 per LLVM/hosts.cpp",
+        "suggest": "每个 LLVM/hosts.cpp 将加密指定为 AES + PMULL + SHA1 + SHA2",
+        "translate": ""
+    },
+    {
+        "source": "ID_AA64PFR0_EL1 - Processor Feature Register 0",
+        "suggest": "ID_AA64PFR0_EL1 - 处理器功能寄存器 0",
+        "translate": ""
+    },
+    {
+        "source": "SIMD support requires float support - if half-floats are supported, it also requires half-float support:",
+        "suggest": "SIMD 支持需要浮点数支持 - 如果支持半浮点数，则它也需要半浮点数支持:",
+        "translate": ""
+    },
+    {
+        "source": "SIMD extensions require SIMD support:",
+        "suggest": "SIMD 扩展需要 SIMD 支持:",
+        "translate": ""
+    },
+    {
+        "source": "ID_AA64ISAR1_EL1 - Instruction Set Attribute Register 1",
+        "suggest": "ID_AA64ISAR1_EL1 - 指令集属性寄存器 1",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for Aarch64 on FreeBSD.",
+        "suggest": "FreeBSD 上 Aarch64 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for ARM on FreeBSD",
+        "suggest": "FreeBSD 上 ARM 的运行时功能检测",
+        "translate": ""
+    },
+    {
+        "source": "Try to read the features from the auxiliary vector",
+        "suggest": "尝试从辅助 vector 读取特征",
+        "translate": ""
+    },
+    {
+        "source": "Parses ELF auxiliary vectors.",
+        "suggest": "解析 ELF 辅助 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Key to access the CPU Hardware capabilities bitfield.",
+        "suggest": "访问 CPU 硬件功能位域的键。",
+        "translate": ""
+    },
+    {
+        "source": "Key to access the CPU Hardware capabilities 2 bitfield.",
+        "suggest": "访问 CPU 硬件功能 2 位域的键。",
+        "translate": ""
+    },
+    {
+        "source": "Cache HWCAP bitfields of the ELF Auxiliary Vector.",
+        "suggest": "缓存 ELF 辅助 Vector 的 HWCAP 位域。",
+        "translate": ""
+    },
+    {
+        "source": "If an entry cannot be read all the bits in the bitfield are set to zero.",
+        "suggest": "如果无法读取条目，则位域中的所有位均设置为零。",
+        "translate": ""
+    },
+    {
+        "source": "This should be interpreted as all the features being disabled.",
+        "suggest": "这应该解释为所有功能都被禁用。",
+        "translate": ""
+    },
+    {
+        "source": "ELF Auxiliary Vector",
+        "suggest": "ELF 辅助 Vector",
+        "translate": ""
+    },
+    {
+        "source": "The auxiliary vector is a memory region in a running ELF program's stack composed of (key: usize, value: usize) pairs.",
+        "suggest": "辅助 vector 是正在运行的 ELF 程序栈中的存储区域，该栈由 (键: usize，值: usize) 对组成。",
+        "translate": ""
+    },
+    {
+        "source": "The keys used in the aux vector are platform dependent.",
+        "suggest": "辅助 vector 中使用的键取决于平台。",
+        "translate": ""
+    },
+    {
+        "source": "For FreeBSD, they are defined in [sys/elf_common.h][elf_common_h].",
+        "suggest": "对于 FreeBSD，它们在 [sys/elf_common.h][elf_common_h] 中定义。",
+        "translate": ""
+    },
+    {
+        "source": "The hardware capabilities of a given CPU can be queried with the  `AT_HWCAP` and `AT_HWCAP2` keys.",
+        "suggest": "可以使用 `AT_HWCAP` 和 `AT_HWCAP2` 键查询给定 CPU 的硬件功能。",
+        "translate": ""
+    },
+    {
+        "source": "Note that run-time feature detection is not invoked for features that can be detected at compile-time.",
+        "suggest": "请注意，对于可在编译时检测到的功能，不会调用运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Tries to read the `key` from the auxiliary vector.",
+        "suggest": "尝试从辅助 vector 读取 `key`。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on FreeBSD",
+        "suggest": "FreeBSD 上的运行时功能检测",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for PowerPC on FreeBSD.",
+        "suggest": "FreeBSD 上 PowerPC 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for Aarch64 on Linux.",
+        "suggest": "Linux 上 Aarch64 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Try to read the features from the auxiliary vector, and if that fails, try to read them from /proc/cpuinfo.",
+        "suggest": "尝试从辅助 vector 读取功能，如果失败，请尝试从 /proc/cpuinfo 读取功能。",
+        "translate": ""
+    },
+    {
+        "source": "These values are part of the platform-specific [asm/hwcap.h][hwcap] .",
+        "suggest": "这些值是特定于平台的 [asm/hwcap.h][hwcap] 的一部分。",
+        "translate": ""
+    },
+    {
+        "source": "Reads AtHwcap from the auxiliary vector.",
+        "suggest": "从辅助 vector 读取 AtHwcap。",
+        "translate": ""
+    },
+    {
+        "source": "Reads AtHwcap from /proc/cpuinfo .",
+        "suggest": "从 /proc/cpuinfo 读取 AtHwcap。",
+        "translate": ""
+    },
+    {
+        "source": "64-bit names.",
+        "suggest": "64 位名称。",
+        "translate": ""
+    },
+    {
+        "source": "In 32-bit compatibility mode /proc/cpuinfo will map some of the 64-bit names to some 32-bit feature names.",
+        "suggest": "在 32 位兼容模式下，/proc/cpuinfo 会将某些 64 位名称 map 转换为某些 32 位要素名称。",
+        "translate": ""
+    },
+    {
+        "source": "This does not cover that yet.",
+        "suggest": "这还没有涵盖。",
+        "translate": ""
+    },
+    {
+        "source": "Initializes the cache from the feature -bits.",
+        "suggest": "从功能 -bits 初始化缓存。",
+        "translate": ""
+    },
+    {
+        "source": "The features are enabled approximately like in LLVM host feature detection:",
+        "suggest": "这些功能的启用大致类似于 LLVM 主机功能检测:",
+        "translate": ""
+    },
+    {
+        "source": "Half-float support requires float support",
+        "suggest": "半浮动支持需要浮动支持",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for ARM on Linux.",
+        "suggest": "Linux 上 ARM 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "The values are part of the platform-specific [asm/hwcap.h][hwcap]",
+        "suggest": "这些值是特定于平台的 [asm/hwcap.h][hwcap] 的一部分",
+        "translate": ""
+    },
+    {
+        "source": "Is the CPU known to have a broken NEON unit?",
+        "suggest": "已知 CPU 的 NEON 单元损坏了吗?",
+        "translate": ""
+    },
+    {
+        "source": "There is no perfect way of reading the auxiliary vector.",
+        "suggest": "没有读取辅助 vector 的完美方法。",
+        "translate": ""
+    },
+    {
+        "source": "If the `std_detect_dlsym_getauxval` cargo feature is enabled, this will use `getauxval` if its linked to the binary, and otherwise proceed to a fallback implementation.",
+        "suggest": "如果启用了 `std_detect_dlsym_getauxval` cargo 功能，则在链接到二进制文件时将使用 `getauxval`，否则将进行后备实现。",
+        "translate": ""
+    },
+    {
+        "source": "When `std_detect_dlsym_getauxval` is disabled, this will assume that `getauxval` is linked to the binary - if that is not the case the behavior is undefined.",
+        "suggest": "禁用 `std_detect_dlsym_getauxval` 时，将假定 `getauxval` 已链接到二进制文件 - 如果不是这种情况，则行为未定义。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, if the `std_detect_file_io` cargo feature is enabled, it will try to read `/proc/self/auxv`.",
+        "suggest": "否则，如果启用了 `std_detect_file_io` cargo 功能，它将尝试读取 `/proc/self/auxv`。",
+        "translate": ""
+    },
+    {
+        "source": "If that fails, this function returns an error.",
+        "suggest": "如果失败，则此函数返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Also note that if this function returns an error, cpuinfo still can (and will) be used to try to perform run-time feature detecton on some platforms.",
+        "suggest": "还要注意，如果此函数返回错误，则 cpuinfo 仍可以 (并且将) 用于在某些平台上尝试执行运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "For more information about when `getauxval` is available check the great [`auxv` crate documentation][auxv_docs].",
+        "suggest": "有关 `getauxval` 何时可用的更多信息，请检查 [`auxv` crate documentation][auxv_docs]。",
+        "translate": ""
+    },
+    {
+        "source": "Try to call a dynamically-linked getauxval function.",
+        "suggest": "尝试调用动态链接的 getauxval 函数。",
+        "translate": ""
+    },
+    {
+        "source": "Targets with only AT_HWCAP:",
+        "suggest": "仅使用 AT_HWCAP 的目标:",
+        "translate": ""
+    },
+    {
+        "source": "Targets with AT_HWCAP and AT_HWCAP2:",
+        "suggest": "使用 AT_HWCAP 和 AT_HWCAP2 的目标:",
+        "translate": ""
+    },
+    {
+        "source": "If calling getauxval fails, try to read the auxiliary vector from its file:",
+        "suggest": "如果调用 getauxval 失败，请尝试从其文件中读取辅助 vector:",
+        "translate": ""
+    },
+    {
+        "source": "Tries to read the `key` from the auxiliary vector by calling the dynamically-linked `getauxval` function.",
+        "suggest": "尝试通过调用动态链接的 `getauxval` 函数从辅助 vector 中读取 `key`。",
+        "translate": ""
+    },
+    {
+        "source": "If the function is not linked, this function return `Err`.",
+        "suggest": "如果未链接该函数，则此函数返回 `Err`。",
+        "translate": ""
+    },
+    {
+        "source": "Tries to read the auxiliary vector from the `file`.",
+        "suggest": "尝试从 `file` 读取辅助 vector。",
+        "translate": ""
+    },
+    {
+        "source": "If this fails, this function returns `Err`.",
+        "suggest": "如果失败，则此函数返回 `Err`。",
+        "translate": ""
+    },
+    {
+        "source": "See <https://github.com/torvalds/linux/blob/v3.19/include/uapi/linux/auxvec.h>.",
+        "suggest": "请参见 <https://github.com/torvalds/linux/blob/v3.19/include/uapi/linux/auxvec.h>。",
+        "translate": ""
+    },
+    {
+        "source": "The auxiliary vector contains at most 32 (key,value) fields: from `AT_EXECFN = 31` to `AT_NULL = 0`.",
+        "suggest": "辅助 vector 最多包含 32 个 (key,value) 字段: 从 `AT_EXECFN = 31` 到 `AT_NULL = 0`。",
+        "translate": ""
+    },
+    {
+        "source": "That is, a buffer of",
+        "suggest": "就是说，",
+        "translate": ""
+    },
+    {
+        "source": "2*32 `usize` elements is enough to read the whole vector.",
+        "suggest": "2 * 32 个 `usize` 元素足以读取整个 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Tries to interpret the `buffer` as an auxiliary vector.",
+        "suggest": "尝试将 `buffer` 解释为辅助 vector。",
+        "translate": ""
+    },
+    {
+        "source": "If that fails, this function returns `Err`.",
+        "suggest": "如果失败，则此函数返回 `Err`。",
+        "translate": ""
+    },
+    {
+        "source": "Reads the Auxiliary Vector key from /proc/self/auxv using the auxv crate.",
+        "suggest": "使用 auxv crate 从 /proc/self/auxv 读取辅助 Vector 键。",
+        "translate": ""
+    },
+    {
+        "source": "Reads the Auxiliary Vector key from getauxval() using the auxv crate.",
+        "suggest": "使用 auxv crate 从 getauxval() 读取辅助 Vector 键。",
+        "translate": ""
+    },
+    {
+        "source": "on mips/mips64 getauxval returns 0, and /proc/self/auxv does not always contain the AT_HWCAP key under qemu.",
+        "suggest": "在 mips/mips64 上，getauxval 返回 0，并且 /proc/self/auxv 并不始终在 qemu 下包含 AT_HWCAP 密钥。",
+        "translate": ""
+    },
+    {
+        "source": "this file is incomplete (contains hwcap but not hwcap2), we want to fall back to /proc/cpuinfo in this case, so reading should fail.",
+        "suggest": "该文件不完整 (包含 hwcap，但不包含 hwcap2)，在这种情况下，我们想退回到 /proc/cpuinfo，因此读取失败。",
+        "translate": ""
+    },
+    {
+        "source": "Parses /proc/cpuinfo",
+        "suggest": "解析 /proc/cpuinfo",
+        "translate": ""
+    },
+    {
+        "source": "Reads /proc/cpuinfo into CpuInfo.",
+        "suggest": "将 /proc/cpuinfo 读入 CpuInfo。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the value of the cpuinfo `field`.",
+        "suggest": "返回 cpuinfo `field` 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the `raw` contents of `/proc/cpuinfo`",
+        "suggest": "返回 `/proc/cpuinfo` 的 `raw` 内容",
+        "translate": ""
+    },
+    {
+        "source": "Field of cpuinfo",
+        "suggest": "cpuinfo 字段",
+        "translate": ""
+    },
+    {
+        "source": "Does the field exist?",
+        "suggest": "字段是否存在?",
+        "translate": ""
+    },
+    {
+        "source": "Does the field contain `other`?",
+        "suggest": "该字段是否包含 `other`?",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for MIPS on Linux.",
+        "suggest": "Linux 上 MIPS 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Try to read the features from the auxiliary vector, and if that fails, try to read them from `/proc/cpuinfo`.",
+        "suggest": "尝试从辅助 vector 读取功能，如果失败，请尝试从 `/proc/cpuinfo` 读取功能。",
+        "translate": ""
+    },
+    {
+        "source": "fall back via `cpuinfo`.",
+        "suggest": "通过 `cpuinfo` 退回。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on Linux",
+        "suggest": "Linux 上的运行时功能检测",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for PowerPC on Linux.",
+        "suggest": "Linux 上 PowerPC 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "The values are part of the platform-specific [asm/cputable.h][cputable]",
+        "suggest": "这些值是特定于平台的 [asm/cputable.h][cputable] 的一部分",
+        "translate": ""
+    },
+    {
+        "source": "the PowerPC values are the mask to do the test (instead of the index of the bit to test like in ARM and Aarch64)",
+        "suggest": "PowerPC 值是进行测试的掩码 (而不是像 ARM 和 Aarch64 一样要测试的位的索引)",
+        "translate": ""
+    },
+    {
+        "source": "PowerPC's /proc/cpuinfo lacks a proper Feature field, but `altivec` support is indicated in the `cpu` field.",
+        "suggest": "PowerPC 的 /proc/cpuinfo 缺少适当的 Feature 字段，但 `cpu` 字段中指出了对 `altivec` 的支持。",
+        "translate": ""
+    },
+    {
+        "source": "Other operating systems",
+        "suggest": "其他作业系统",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for Aarch64 on Windows.",
+        "suggest": "Windows 上 Aarch64 的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "Try to read the features using IsProcessorFeaturePresent.",
+        "suggest": "尝试使用 IsProcessorFeaturePresent 来阅读特征。",
+        "translate": ""
+    },
+    {
+        "source": "The following Microsoft documents isn't updated for aarch64.",
+        "suggest": "下列 Microsoft 文档未针对 aarch64 更新。",
+        "translate": ""
+    },
+    {
+        "source": "These are defined in winnt.h of Windows SDK",
+        "suggest": "这些在 Windows SDK 的 winnt.h 中定义",
+        "translate": ""
+    },
+    {
+        "source": "Some features such Feature::fp may be supported on current CPU, but no way to detect it by OS API.",
+        "suggest": "当前的 CPU 可能支持某些功能，例如 Feature::fp，但无法通过 OS API 进行检测。",
+        "translate": ""
+    },
+    {
+        "source": "Also, we require unsafe block for the extern \"system\" calls.",
+        "suggest": "另外，我们要求外部 \"system\" 调用使用不安全的块。",
+        "translate": ""
+    },
+    {
+        "source": "PF_ARM_V8_CRYPTO_INSTRUCTIONS_AVAILABLE means aes, sha1, sha2 and pmull support",
+        "suggest": "PF_ARM_V8_CRYPTO_INSTRUCTIONS_AVAILABLE 表示对 AES，sha1，sha2 和 pmull 的支持",
+        "translate": ""
+    },
+    {
+        "source": "run-time feature detection is OS independent.",
+        "suggest": "运行时功能检测与操作系统无关。",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection on x86 works by using the CPUID instruction.",
+        "suggest": "x86 上的运行时功能检测通过使用 CPUID 指令进行。",
+        "translate": ""
+    },
+    {
+        "source": "The [CPUID Wikipedia page][wiki_cpuid] contains all the information about which flags to set to query which values, and in which registers these are reported.",
+        "suggest": "[CPUID Wikipedia page][wiki_cpuid] 包含有关设置哪些标志以查询哪些值以及在哪些寄存器中报告这些标志的所有信息。",
+        "translate": ""
+    },
+    {
+        "source": "The definitive references are:",
+        "suggest": "权威的引用是:",
+        "translate": ""
+    },
+    {
+        "source": "If the x86 CPU does not support the CPUID instruction then it is too old to support any of the currently-detectable features.",
+        "suggest": "如果 x86 CPU 不支持 CPUID 指令，则它太旧了，无法支持任何当前可检测的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `__cpuid`/`__cpuid_count` from here on is safe because the CPU has `cpuid` support.",
+        "suggest": "从这里开始调用 `__cpuid`/`__cpuid_count` 是安全的，因为 CPU 支持 `cpuid`。",
+        "translate": ""
+    },
+    {
+        "source": "EAX = 0: Basic Information:",
+        "suggest": "EAX = 0: 基本信息:",
+        "translate": ""
+    },
+    {
+        "source": "EAX returns the \"Highest Function Parameter\", that is, the maximum leaf value for subsequent calls of `cpuinfo` in range [0,",
+        "suggest": "EAX 返回 \"Highest Function Parameter\"，即 `cpuinfo` 后续调用的最大叶子值，范围为 [0，",
+        "translate": ""
+    },
+    {
+        "source": "The vendor ID is stored in 12 u8 ascii chars, returned in EBX, EDX, and   ECX (in that order):",
+        "suggest": "供应商 ID 存储在 12 个 u8 ASCII 字符中，并以 EBX，EDX 和 ECX (按此顺序) 返回:",
+        "translate": ""
+    },
+    {
+        "source": "Earlier Intel 486, CPUID not implemented",
+        "suggest": "较早的 Intel 486，未实现 CPUID",
+        "translate": ""
+    },
+    {
+        "source": "Contains information about most x86 features.",
+        "suggest": "包含有关大多数 x86 功能的信息。",
+        "translate": ""
+    },
+    {
+        "source": "Contains information about bmi,bmi2, and avx2 support.",
+        "suggest": "包含有关 bmi，bmi2 和 avx2 支持的信息。",
+        "translate": ""
+    },
+    {
+        "source": "CPUID does not support \"Extended Features\"",
+        "suggest": "CPUID 不支持 \"Extended Features\"",
+        "translate": ""
+    },
+    {
+        "source": "EAX = 0x8000_0000, ECX = 0: Get Highest Extended Function Supported",
+        "suggest": "EAX=0x8000_0000，ECX = 0: 获得最高的扩展函数支持",
+        "translate": ""
+    },
+    {
+        "source": "EAX returns the max leaf value for extended information, that is, `cpuid` calls in range [0x8000_0000; u32::MAX]:",
+        "suggest": "EAX 返回扩展信息的最大叶子值，即范围 [0x8000_0000; u32::MAX] 中的 `cpuid` 调用:",
+        "translate": ""
+    },
+    {
+        "source": "EAX = 0x8000_0001, ECX=0: Queries \"Extended Processor Info and Feature",
+        "suggest": "EAX = 0x8000_0001，ECX=0: 查询扩展的处理器信息和功能",
+        "translate": ""
+    },
+    {
+        "source": "borrows value till the end of this scope:",
+        "suggest": "借用值，直到此作用域结束:",
+        "translate": ""
+    },
+    {
+        "source": "and `AVX` support:",
+        "suggest": "和 `AVX` 支持:",
+        "translate": ""
+    },
+    {
+        "source": "Here the CPU supports `XSAVE`.",
+        "suggest": "CPU 在这里支持 `XSAVE`。",
+        "translate": ""
+    },
+    {
+        "source": "Detect `OSXSAVE`, that is, whether the OS is AVX enabled and supports saving the state of the AVX/AVX2 vector registers on context-switches, see:",
+        "suggest": "检测 `OSXSAVE`，即操作系统是否已启用 AVX 并支持在上下文切换器上保存 AVX/AVX2 vector 寄存器的状态，请参见:",
+        "translate": ""
+    },
+    {
+        "source": "The OS must have signaled the CPU that it supports saving and restoring the:",
+        "suggest": "操作系统必须已向 CPU 发出信号，表明它支持保存和恢复以下内容:",
+        "translate": ""
+    },
+    {
+        "source": "by setting the corresponding bits of `XCR0` to `1`.",
+        "suggest": "通过将 `XCR0` 的相应位设置为 `1`。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because the CPU supports `xsave` and the OS has set `osxsave`.",
+        "suggest": "这是安全的，因为 CPU 支持 `xsave`，并且操作系统已设置 `osxsave`。",
+        "translate": ""
+    },
+    {
+        "source": "Test `XCR0.SSE[1]` and `XCR0.AVX[2]` with the mask `0b110 == 6`:",
+        "suggest": "使用掩码 `0b110 == 6` 测试 `XCR0.SSE[1]` 和 `XCR0.AVX[2]`:",
+        "translate": ""
+    },
+    {
+        "source": "Test `XCR0.AVX-512[7:5]` with the mask `0b1110_0000 == 224`:",
+        "suggest": "使用面罩 `0b1110_0000 == 224` 测试 `XCR0.AVX-512[7:5]`:",
+        "translate": ""
+    },
+    {
+        "source": "Only if the OS and the CPU support saving/restoring the AVX registers we enable `xsave` support:",
+        "suggest": "仅当 OS 和 CPU 支持 saving/restoring 和 AVX 寄存器时，我们才启用 `xsave` 支持:",
+        "translate": ""
+    },
+    {
+        "source": "See \"13.3 ENABLING THE XSAVE FEATURE SET AND XSAVE-ENABLED FEATURES\" in the \"Intel® 64 and IA-32 Architectures Software Developer’s Manual, Volume 1: Basic Architecture\":",
+        "suggest": "请参见 \"Intel® 64 and IA-32 Architectures Software Developer’s Manual, Volume 1: Basic Architecture\" 中的 \"13.3 ENABLING THE XSAVE FEATURE SET AND XSAVE-ENABLED FEATURES\":",
+        "translate": ""
+    },
+    {
+        "source": "\"Software enables the XSAVE feature set by setting CR4.OSXSAVE[bit 18] to 1 (e.g., with the MOV to CR4 instruction).",
+        "suggest": "` 软件通过将 CR4.OSXSAVE [位 18] 设置为 1 (例如，使用 MOV 至 CR4 指令) 来启用 XSAVE 功能集。",
+        "translate": ""
+    },
+    {
+        "source": "If this bit is 0, execution of any of XGETBV, XRSTOR, XRSTORS, XSAVE, XSAVEC, XSAVEOPT, XSAVES, and XSETBV causes an invalid-opcode exception (#UD)\"",
+        "suggest": "如果此位为 0，则执行 XGETBV，XRSTOR，XRSTORS，XSAVE，XSAVEC，XSAVEOPT，XSAVES 和 XSETBV 中的任何一个都会导致无效操作码异常 (#UD) `",
+        "translate": ""
+    },
+    {
+        "source": "For `xsaveopt`, `xsavec`, and `xsaves` we need to query:",
+        "suggest": "对于 `xsaveopt`，`xsavec` 和 `xsaves`，我们需要查询:",
+        "translate": ""
+    },
+    {
+        "source": "Processor Extended State Enumeration Sub-leaf (EAX = 0DH, ECX = 1):",
+        "suggest": "处理器扩展状态枚举子叶 (EAX=0DH，ECX=1) :",
+        "translate": ""
+    },
+    {
+        "source": "FMA (uses 256-bit wide registers):",
+        "suggest": "FMA (使用 256 位宽的寄存器) :",
+        "translate": ""
+    },
+    {
+        "source": "And AVX/AVX2:",
+        "suggest": "和 AVX/AVX2:",
+        "translate": ""
+    },
+    {
+        "source": "For AVX-512 the OS also needs to support saving/restoring the extended state, only then we enable AVX-512 support:",
+        "suggest": "对于 AVX-512，操作系统还需要支持 saving/restoring 扩展状态，只有这样我们才能启用 AVX-512 支持:",
+        "translate": ""
+    },
+    {
+        "source": "This detects ABM on AMD CPUs and LZCNT on Intel CPUs.",
+        "suggest": "这将检测 AMD CPU 上的 ABM 和 Intel CPU 上的 LZCNT。",
+        "translate": ""
+    },
+    {
+        "source": "On intel CPUs with popcnt, lzcnt implements the \"missing part\" of ABM, so we map both to the same internal feature.",
+        "suggest": "在具有 popcnt 的英特尔 CPU 上，lzcnt 实现了 ABM 的 \"missing part\"，因此我们 map 都具有相同的内部功能。",
+        "translate": ""
+    },
+    {
+        "source": "The `is_x86_feature_detected!(\"lzcnt\")` macro then internally maps to Feature::abm.",
+        "suggest": "`is_x86_feature_detected!(\"lzcnt\")` 宏然后在内部 maps 到 Feature::abm。",
+        "translate": ""
+    },
+    {
+        "source": "As Hygon Dhyana originates from AMD technology and shares most of the architecture with AMD's family 17h, but with different CPU Vendor ID(\"HygonGenuine\")/Family series number(Family 18h).",
+        "suggest": "Hygon Dhyana 源于 AMD 技术，与 AMD 家族 17h 共享大多数架构，但是 CPU 供应商 ID (`HygonGenuine`) / 家族系列 number(Family 18h) 不同。",
+        "translate": ""
+    },
+    {
+        "source": "For CPUID feature bits, Hygon Dhyana(family 18h) share the same definition with AMD family 17h.",
+        "suggest": "对于 CPUID 功能位，Hygon Dhyana(family 18h) 与 AMD 系列 17h 具有相同的定义。",
+        "translate": ""
+    },
+    {
+        "source": "Related AMD CPUID specification is https://www.amd.com/system/files/TechDocs/25481.pdf.",
+        "suggest": "相关的 AMD CPUID 规范为 https://www.amd.com/system/files/TechDocs/25481.pdf。",
+        "translate": ""
+    },
+    {
+        "source": "Related Hygon kernel patch can be found on",
+        "suggest": "可以在以下位置找到相关的 Hygon 内核补丁",
+        "translate": ""
+    },
+    {
+        "source": "These features are available on AMD arch CPUs:",
+        "suggest": "这些功能在 AMD arch CPU 上可用:",
+        "translate": ""
+    },
+    {
+        "source": "Run-time feature detection for the Rust standard library.",
+        "suggest": "Rust 标准库的运行时功能检测。",
+        "translate": ""
+    },
+    {
+        "source": "To detect whether a feature is enabled in the system running the binary use one of the appropriate macro for the target:",
+        "suggest": "若要检测是否在运行二进制文件的系统中启用了功能，请为目标使用适当的宏之一:",
+        "translate": ""
+    },
+    {
+        "source": "and `x86_64`:",
+        "suggest": "和 `x86_64`:",
+        "translate": ""
+    },
+    {
+        "source": "unstable implementation detail",
+        "suggest": "实现细节不稳定",
+        "translate": ""
+    },
+    {
+        "source": "An example showing runtime dispatch to an architecture-optimized implementation.",
+        "suggest": "一个示例，显示了将运行时分派给架构优化的实现。",
+        "translate": ""
+    },
+    {
+        "source": "This program implements hex encoding a slice into a predetermined destination using various different instruction sets.",
+        "suggest": "该程序使用各种不同的指令集，将切片十六进制编码为预定的目标。",
+        "translate": ""
+    },
+    {
+        "source": "This selects at runtime the most optimized implementation and uses that rather than being required to be compiled differently.",
+        "suggest": "这将在运行时选择最优化的实现，并使用该实现，而不是要求以不同的方式进行编译。",
+        "translate": ""
+    },
+    {
+        "source": "You can test out this program via:",
+        "suggest": "您可以通过以下方式测试该程序:",
+        "translate": ""
+    },
+    {
+        "source": "echo test | cargo +nightly run --release hex",
+        "suggest": "回声测试 | cargo + 每晚运行 - 释放十六进制",
+        "translate": ""
+    },
+    {
+        "source": "and you should see `746573740a` get printed out.",
+        "suggest": "并且您应该看到 `746573740a` 被打印出来。",
+        "translate": ""
+    },
+    {
+        "source": "return 0xff corresponding to the elements > 9, or 0x00 otherwise",
+        "suggest": "返回与元素 > 9 对应的 0xff，否则返回 0x00",
+        "translate": ""
+    },
+    {
+        "source": "add '0' or the offset depending on the masks",
+        "suggest": "根据掩码添加 '0' 或偏移量",
+        "translate": ""
+    },
+    {
+        "source": "interleave masked1 and masked2 bytes",
+        "suggest": "交织 masked1 和 masked2 字节",
+        "translate": ""
+    },
+    {
+        "source": "Store everything into the right destination now",
+        "suggest": "立即将所有内容存储到正确的目的地",
+        "translate": ""
+    },
+    {
+        "source": "Next we need to shuffle around masked{1,2} to get back to the original source text order.",
+        "suggest": "接下来，我们需要对 masked {1,2} 进行改组，以恢复原始的源文本顺序。",
+        "translate": ""
+    },
+    {
+        "source": "The first element (res1) we'll store uses all the low bytes from the 2 masks and the second element (res2) uses all the upper bytes.",
+        "suggest": "我们将存储的第一个元素 (res1) 使用 2 个掩码中的所有低字节，第二个元素 (res2) 使用所有高字节。",
+        "translate": ""
+    },
+    {
+        "source": "Run these with `cargo +nightly test --example hex -p stdarch`",
+        "suggest": "使用 `cargo +nightly test --example hex -p stdarch` 运行它们",
+        "translate": ""
+    },
+    {
+        "source": "Run these with `cargo +nightly bench --example hex -p stdarch`",
+        "suggest": "使用 `cargo +nightly bench --example hex -p stdarch` 运行它们",
+        "translate": ""
+    },
+    {
+        "source": "A simple slab allocator for pages in wasm",
+        "suggest": "一个简单的 slab 分配器，用于 wasm 中的页面",
+        "translate": ""
+    },
+    {
+        "source": "if we failed to allocate a page then return null",
+        "suggest": "如果我们无法分配页面，则返回 null",
+        "translate": ""
+    },
+    {
+        "source": "Dockers that are run through docker on linux",
+        "suggest": "在 linux 上通过 Docker 运行的 Docker",
+        "translate": ""
+    },
+    {
+        "source": "gh-actions build environment doesn't have linker support",
+        "suggest": "gh-actions 构建环境不具有链接器支持",
+        "translate": ""
+    },
+    {
+        "source": "Disassembly not implemented for the # following targets:",
+        "suggest": "以下 # 个目标未实现反汇编:",
+        "translate": ""
+    },
+    {
+        "source": "Configure some env vars based on matrix configuration",
+        "suggest": "根据矩阵配置配置一些环境变量",
+        "translate": ""
+    },
+    {
+        "source": "OSX go straight to `run.sh` ...",
+        "suggest": "OSX 直接进入 `run.sh` ...",
+        "translate": ""
+    },
+    {
+        "source": "while Linux goes to `run-docker.sh`",
+        "suggest": "当 Linux 转到 `run-docker.sh` 时",
+        "translate": ""
+    },
+    {
+        "source": "Copyright 2016 The Rust Project Developers.",
+        "suggest": "版权所有 2016 Rust 项目开发人员。",
+        "translate": ""
+    },
+    {
+        "source": "See the COPYRIGHT file at the top-level directory of this distribution and at http://rust-lang.org/COPYRIGHT.",
+        "suggest": "请参见此发行版本的顶级目录和 http://rust-lang.org/COPYRIGHT 处的 COPYRIGHT 文件。",
+        "translate": ""
+    },
+    {
+        "source": "Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or http://www.apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your option.",
+        "suggest": "在 Apache 许可下获得许可，版本 2.0",
+        "translate": ""
+    },
+    {
+        "source": "This file may not be copied, modified, or distributed except according to those terms.",
+        "suggest": "除非按照这些条款，否则不得复制，修改或分发此文件。",
+        "translate": ""
+    },
+    {
+        "source": "Copyright 2017 The Rust Project Developers.",
+        "suggest": "版权所有 2017 Rust 项目开发人员。",
+        "translate": ""
+    },
+    {
+        "source": "Extract android linker and libraries to /system This allows android executables to be run directly (or with qemu)",
+        "suggest": "将 android 链接器和库提取到 /system，这允许 android 可执行文件直接运行 (或与 qemu 一起运行)",
+        "translate": ""
+    },
+    {
+        "source": "clean up",
+        "suggest": "清理",
+        "translate": ""
+    },
+    {
+        "source": "Builds documentation for all target triples that we have a registered URL for in liblibc.",
+        "suggest": "为所有目标三元组构建文档，我们在 liblibc 中为其注册了 URL。",
+        "translate": ""
+    },
+    {
+        "source": "This scrapes the list of triples to document from `src/lib.rs` which has a bunch of `html_root_url` directives we pick up.",
+        "suggest": "这会从 `src/lib.rs` 抓取三元组列表以进行文档记录，`src/lib.rs` 具有一组我们选择的 `html_root_url` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "Tests are all super fast anyway, and they fault often enough on travis that having only one thread increases debuggability to be worth it.",
+        "suggest": "无论如何，测试都是超级快的，而且它们在 travis 上经常会出错，以至于只有一个线程会增加可调试性，这是值得的。",
+        "translate": ""
+    },
+    {
+        "source": "export RUST_BACKTRACE=full export RUST_TEST_NOCAPTURE=1 export RUST_TEST_THREADS=1",
+        "suggest": "导出 RUST_BACKTRACE = 完全导出 RUST_TEST_NOCAPTURE=1 导出 RUST_TEST_THREADS=1",
+        "translate": ""
+    },
+    {
+        "source": "On 32-bit use a static relocation model which avoids some extra instructions when dealing with static data, notably allowing some instruction assertion checks to pass below the 20 instruction limit.",
+        "suggest": "在 32 位上使用静态重定位模型，该模型在处理静态数据时避免了一些额外的指令，尤其是允许某些指令断言检查通过低于 20 条指令限制的情况。",
+        "translate": ""
+    },
+    {
+        "source": "If this is the default, dynamic, then too many instructions are generated when we assert the instruction for a function and it causes tests to fail.",
+        "suggest": "如果这是默认的，动态的，那么当我们声明一个函数的指令时会生成太多指令，这会导致测试失败。",
+        "translate": ""
+    },
+    {
+        "source": "It's not clear why `-Z plt=yes` is required here.",
+        "suggest": "目前尚不清楚为什么在这里需要 `-Z plt=yes`。",
+        "translate": ""
+    },
+    {
+        "source": "Probably a bug in LLVM.",
+        "suggest": "可能是 LLVM 中的错误。",
+        "translate": ""
+    },
+    {
+        "source": "If you can remove it and CI passes, please feel free to do so!",
+        "suggest": "如果您可以删除它并通过 CI 认证，请随时这样做!",
+        "translate": ""
+    },
+    {
+        "source": "Unoptimized build uses fast-isel which breaks with msa",
+        "suggest": "未优化的构建使用了与 MSA 冲突的快速岛",
+        "translate": ""
+    },
+    {
+        "source": "wasm targets can't catch panics so if a test failures make sure the test harness isn't trying to capture output, otherwise we won't get any useful output.",
+        "suggest": "wasm 目标无法捕获 panics，因此，如果测试失败，请确保测试工具没有试图捕获输出，否则我们将不会获得任何有用的输出。",
+        "translate": ""
+    },
+    {
+        "source": "Test targets compiled with extra features.",
+        "suggest": "测试具有附加功能的目标。",
+        "translate": ""
+    },
+    {
+        "source": "don't build anymore mips-*gnu* | mipsel-*gnu*) export RUSTFLAGS=\"${RUSTFLAGS} -C target-feature=+msa,+fp64,+mips32r5\" cargo_test \"--release\"",
+        "suggest": "不要再构建 mips-*gnu* |mipsel-*gnu*) export RUSTFLAGS=`$ {RUSTFLAGS} -C target-feature=+ msa，+ fp64，+ mips32r5` cargo_test \"--release\"",
+        "translate": ""
+    },
+    {
+        "source": "We don't build the ppc 32-bit targets with these - these targets are mostly unsupported for now.",
+        "suggest": "我们不使用这些构建 ppc 32 位目标 - 目前暂时不支持这些目标。",
+        "translate": ""
+    },
+    {
+        "source": "Test examples",
+        "suggest": "测试用例",
+        "translate": ""
+    },
+    {
+        "source": "We need cfg_target_feature to ensure the example is only",
+        "suggest": "我们需要 cfg_target_feature 以确保该示例仅为",
+        "translate": ""
+    },
+    {
+        "source": "run by `cargo test --doc` when the CPU supports the feature",
+        "suggest": "当 CPU 支持该功能时，由 `cargo test --doc` 运行",
+        "translate": ""
+    },
+    {
+        "source": "We need target_feature for the intrinsic to work",
+        "suggest": "我们需要 target_feature 才能使内联函数正常工作",
+        "translate": ""
+    },
+    {
+        "source": "rustdoc by default uses `extern crate stdarch`, but we need the",
+        "suggest": "rustdoc 默认使用 `extern crate stdarch`，但我们需要",
+        "translate": ""
+    },
+    {
+        "source": "The real main function",
+        "suggest": "真正的主要功能",
+        "translate": ""
+    },
+    {
+        "source": "Only run this if `<target feature>` is supported",
+        "suggest": "仅在支持 `<target feature>` 时运行此命令",
+        "translate": ""
+    },
+    {
+        "source": "if cfg_feature_enabled!(\"<target feature>\") {",
+        "suggest": "如果 cfg_feature_enabled! (`<target feature>`) {",
+        "translate": ""
+    },
+    {
+        "source": "Create a `worker` function that will only be run if the target feature",
+        "suggest": "创建一个 `worker` 函数，该函数仅在目标功能部件下运行",
+        "translate": ""
+    },
+    {
+        "source": "is supported and ensure that `target_feature` is enabled for your worker",
+        "suggest": "受支持，并确保为您的工作人员启用了 `target_feature`",
+        "translate": ""
+    },
+    {
+        "source": "Write your example here.",
+        "suggest": "在此处写下您的示例。",
+        "translate": ""
+    },
+    {
+        "source": "Feature specific intrinsics will work here!",
+        "suggest": "特定于功能的内联函数将在这里工作!",
+        "translate": ""
+    },
+    {
+        "source": "Go wild!",
+        "suggest": "去野外!",
+        "translate": ""
+    },
+    {
+        "source": "Contributing to stdarch",
+        "suggest": "为 stdarch 做贡献",
+        "translate": ""
+    },
+    {
+        "source": "The `stdarch` crate is more than willing to accept contributions!",
+        "suggest": "`stdarch` crate 非常愿意接受捐款!",
+        "translate": ""
+    },
+    {
+        "source": "First you'll probably want to check out the repository and make sure that tests pass for you:",
+        "suggest": "首先，您可能需要切换到仓库，并确保测试通过:",
+        "translate": ""
+    },
+    {
+        "source": "Where `<your-target-arch>` is the target triple as used by `rustup`, e.g. `x86_x64-unknown-linux-gnu` (without any preceding `nightly-` or similar).",
+        "suggest": "其中 `<your-target-arch>` 是 `rustup` 使用的目标三元组，例如 `x86_x64-unknown-linux-gnu` (没有任何先前的 `nightly-` 或类似物)。",
+        "translate": ""
+    },
+    {
+        "source": "Also remember that this repository requires the nightly channel of Rust!",
+        "suggest": "还请记住，该仓库需要 Rust 的每晚通道!",
+        "translate": ""
+    },
+    {
+        "source": "The above tests do in fact require nightly rust to be the default on your system, to set that use `rustup default nightly` (and `rustup default stable` to revert).",
+        "suggest": "实际上，以上测试确实要求将每晚的 rust 设置为系统上的默认设置，以使用 `rustup default nightly` (和 `rustup default stable` 进行还原) 进行设置。",
+        "translate": ""
+    },
+    {
+        "source": "If any of the above steps don't work,",
+        "suggest": "如果以上任何步骤都不起作用，",
+        "translate": ""
+    },
+    {
+        "source": "Next up you can [find an issue][issues] to help out on, we've selected a few with the [`help wanted`][help] and [`impl-period`][impl] tags which could particularly use some help.",
+        "suggest": "接下来，您可以使用 [查找问题][issues] 进行帮助，我们选择了一些带有 [`help wanted`][help] 和 [`impl-period`][impl] 标签的标签，这些标签可能特别有用。",
+        "translate": ""
+    }
+]

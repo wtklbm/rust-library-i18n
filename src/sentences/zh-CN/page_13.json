@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "When the pointer is aligned, read 2 words of data per iteration until we find a word containing a non-ascii byte.",
+        "suggest": "当指针对齐时，每次迭代读取 2 个字的数据，直到找到包含非 ASCII 字节的字。",
+        "translate": ""
+    },
+    {
+        "source": "since `align - index` and `ascii_block_size` are multiples of `usize_bytes`, `block = ptr.add(index)` is always aligned with a `usize` so it's safe to dereference both `block` and `block.offset(1)`.",
+        "suggest": "由于 `align - index` 和 `ascii_block_size` 是 `usize_bytes` 的倍数，因此 `block = ptr.add(index)` 始终与 `usize` 对齐，因此可以安全地引用 `block` 和 `block.offset(1)`。",
+        "translate": ""
+    },
+    {
+        "source": "break if there is a nonascii byte",
+        "suggest": "如果有一个非 ASCII 字节则中断",
+        "translate": ""
+    },
+    {
+        "source": "step from the point where the wordwise loop stopped",
+        "suggest": "从逐字循环停止的位置开始",
+        "translate": ""
+    },
+    {
+        "source": "Given a first byte, determines how many bytes are in this UTF-8 character.",
+        "suggest": "给定第一个字节，确定此 UTF-8 字符中有多少个字节。",
+        "translate": ""
+    },
+    {
+        "source": "Mask of the value bits of a continuation byte.",
+        "suggest": "连续字节的值位的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Value of the tag bits (tag mask is !CONT_MASK) of a continuation byte.",
+        "suggest": "连续字节的标记位 (标记掩码为 !CONT_MASK) 的值。",
+        "translate": ""
+    },
+    {
+        "source": "truncate `&str` to length at most equal to `max` return `true` if it were truncated, and the new str.",
+        "suggest": "将 `&str` 截断为最大长度，等于 `max`，如果截断则返回 `true`，并返回新的 str。",
+        "translate": ""
+    },
+    {
+        "source": "A stream which counts from one to five",
+        "suggest": "从一数到五的流",
+        "translate": ""
+    },
+    {
+        "source": "Note that we start `count` at zero, we'll see why in `poll_next()`'s implementation below.",
+        "suggest": "请注意，我们将 `count` 从零开始，我们将在下面的 `poll_next () ` 的实现中看到其原因。",
+        "translate": ""
+    },
+    {
+        "source": "Then, we implement `Stream` for our `Counter`:",
+        "suggest": "然后，我们为 `Counter` 实现 `Stream`:",
+        "translate": ""
+    },
+    {
+        "source": "Composable asynchronous iteration.",
+        "suggest": "可组合的异步迭代。",
+        "translate": ""
+    },
+    {
+        "source": "If futures are asynchronous values, then streams are asynchronous iterators.",
+        "suggest": "如果 futures 是异步值，则流是异步迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "If you've found yourself with an asynchronous collection of some kind, and needed to perform an operation on the elements of said collection, you'll quickly run into 'streams'.",
+        "suggest": "如果您发现自己具有某种异步集合，并且需要对所述集合的元素执行操作，那么您会很快遇到 'streams'。",
+        "translate": ""
+    },
+    {
+        "source": "Streams are heavily used in idiomatic asynchronous Rust code, so it's worth becoming familiar with them.",
+        "suggest": "流在惯用的异步 Rust 代码中大量使用，因此值得熟悉它们。",
+        "translate": ""
+    },
+    {
+        "source": "are the core portion: these traits define what kind of streams exist and what you can do with them.",
+        "suggest": "是核心部分: 这些 traits 定义了存在哪种类型的流以及可以对其进行处理。",
+        "translate": ""
+    },
+    {
+        "source": "Functions provide some helpful ways to create some basic streams.",
+        "suggest": "函数提供了一些有用的方法来创建一些基本流。",
+        "translate": ""
+    },
+    {
+        "source": "Structs are often the return types of the various methods on this module's traits.",
+        "suggest": "结构体通常是该模块的 traits 上各种方法的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "For more detail about why, see '[Implementing Stream](#implementing-stream)'.",
+        "suggest": "有关原因的更多详细信息，请参见 `[实现流] (#implementing-stream) `。",
+        "translate": ""
+    },
+    {
+        "source": "The heart and soul of this module is the [`Stream`] trait.",
+        "suggest": "该模块的核心是 [`Stream`] trait。",
+        "translate": ""
+    },
+    {
+        "source": "The core of [`Stream`] looks like this:",
+        "suggest": "[`Stream`] 的核心如下所示:",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `Iterator`, `Stream` makes a distinction between the [`poll_next`] method which is used when implementing a `Stream`, and a (to-be-implemented) `next` method which is used when consuming a stream.",
+        "suggest": "与 `Iterator` 不同，`Stream` 区分了实现 `Stream` 时使用的 [`poll_next`] 方法和使用流时使用的 (to-be-implemented) `next` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Consumers of `Stream` only need to consider `next`, which when called, returns a future which yields `Option<Stream::Item>`.",
+        "suggest": "`Stream` 的使用者只需要考虑 `next`，当调用 `next` 时，它会返回 future 并产生 `Option<Stream::Item>`。",
+        "translate": ""
+    },
+    {
+        "source": "The future returned by `next` will yield `Some(Item)` as long as there are elements, and once they've all been exhausted, will yield `None` to indicate that iteration is finished.",
+        "suggest": "只要有元素，`next` 返回的 future 就会产生 `Some(Item)`，一旦所有元素用完，就会产生 `None` 来指示迭代已完成。",
+        "translate": ""
+    },
+    {
+        "source": "If we're waiting on something asynchronous to resolve, the future will wait until the stream is ready to yield again.",
+        "suggest": "如果我们正在等待异步处理，则 future 将等待，直到流准备再次屈服。",
+        "translate": ""
+    },
+    {
+        "source": "Individual streams may choose to resume iteration, and so calling `next` again may or may not eventually yield `Some(Item)` again at some point.",
+        "suggest": "各个流可能选择恢复迭代，因此再次调用 `next` 可能会或可能最终不会在某个时候再次产生 `Some(Item)`。",
+        "translate": ""
+    },
+    {
+        "source": "[`Stream`]'s full definition includes a number of other methods as well, but they are default methods, built on top of [`poll_next`], and so you get them for free.",
+        "suggest": "[`Stream`] 的完整定义还包括许多其他方法，但是它们是默认方法，基于 [`poll_next`] 构建，因此您可以免费获得它们。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing Stream",
+        "suggest": "实现流",
+        "translate": ""
+    },
+    {
+        "source": "Creating a stream of your own involves two steps: creating a `struct` to hold the stream's state, and then implementing [`Stream`] for that `struct`.",
+        "suggest": "创建自己的流涉及两个步骤: 创建一个 `struct` 来保存流的状态，然后为该 `struct` 实现 [`Stream`]。",
+        "translate": ""
+    },
+    {
+        "source": "Let's make a stream named `Counter` which counts from `1` to `5`:",
+        "suggest": "让我们创建一个名为 `Counter` 的流，它从 `1` 到 `5` 计数:",
+        "translate": ""
+    },
+    {
+        "source": "Streams are *lazy*.",
+        "suggest": "流是懒惰的。",
+        "translate": ""
+    },
+    {
+        "source": "This means that just creating a stream doesn't _do_ a whole lot.",
+        "suggest": "这意味着仅仅创建一个流并不能做很多事情。",
+        "translate": ""
+    },
+    {
+        "source": "Nothing really happens until you call `next`.",
+        "suggest": "除非您调用 `next`，否则什么都不会发生。",
+        "translate": ""
+    },
+    {
+        "source": "This is sometimes a source of confusion when creating a stream solely for its side effects.",
+        "suggest": "当仅出于其副作用创建流时，这有时会引起混乱。",
+        "translate": ""
+    },
+    {
+        "source": "An interface for dealing with asynchronous iterators.",
+        "suggest": "用于处理异步迭代器的接口。",
+        "translate": ""
+    },
+    {
+        "source": "This is the main stream trait.",
+        "suggest": "这是主流 trait。",
+        "translate": ""
+    },
+    {
+        "source": "For more about the concept of streams generally, please see the [module-level documentation].",
+        "suggest": "有关一般的流概念的更多信息，请参见 [module-level documentation]。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, you may want to know how to [implement `Stream`][impl].",
+        "suggest": "特别是，您可能想知道如何 [implement `Stream`][impl]。",
+        "translate": ""
+    },
+    {
+        "source": "The type of items yielded by the stream.",
+        "suggest": "流产生的项的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Attempt to pull out the next value of this stream, registering the current task for wakeup if the value is not yet available, and returning `None` if the stream is exhausted.",
+        "suggest": "尝试拉出该流的下一个值，如果该值尚不可用，则注册当前任务以进行唤醒，如果流已用尽，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "There are several possible return values, each indicating a distinct stream state:",
+        "suggest": "有几个可能的返回值，每个返回值指示不同的流状态:",
+        "translate": ""
+    },
+    {
+        "source": "means that this stream's next value is not ready yet.",
+        "suggest": "表示该流的下一个值尚未准备好。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations will ensure that the current task will be notified when the next value may be ready.",
+        "suggest": "实现将确保在准备好下一个值时将通知当前任务。",
+        "translate": ""
+    },
+    {
+        "source": "means that the stream has successfully produced a value, `val`, and may produce further values on subsequent `poll_next` calls.",
+        "suggest": "表示流已成功产生值 `val`，并可能在随后的 `poll_next` 调用中产生进一步的值。",
+        "translate": ""
+    },
+    {
+        "source": "means that the stream has terminated, and `poll_next` should not be invoked again.",
+        "suggest": "表示流已终止，并且不应再次调用 `poll_next`。",
+        "translate": ""
+    },
+    {
+        "source": "Once a stream has finished (returned `Ready(None)` from `poll_next`), calling its `poll_next` method again may panic, block forever, or cause other kinds of problems;",
+        "suggest": "流完成后 (从 `poll_next` 返回 `Ready(None)`)，再次调用其 `poll_next` 方法可能会 panic，永远阻塞或引起其他类型的问题。",
+        "translate": ""
+    },
+    {
+        "source": "the `Stream` trait places no requirements on the effects of such a call.",
+        "suggest": "`Stream` trait 对这种调用的效果没有任何要求。",
+        "translate": ""
+    },
+    {
+        "source": "However, as the `poll_next` method is not marked `unsafe`, Rust's usual rules apply: calls must never cause undefined behavior (memory corruption, incorrect use of `unsafe` functions, or the like), regardless of the stream's state.",
+        "suggest": "但是，由于 `poll_next` 方法未标记为 `unsafe`，因此适用 Rust 的通常规则: 调用决不能引起未定义的行为 (内存损坏，对 `unsafe` 函数的错误使用等)，而与流的状态无关。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the bounds on the remaining length of the stream.",
+        "suggest": "返回流剩余长度上的边界。",
+        "translate": ""
+    },
+    {
+        "source": "It is not enforced that a stream implementation yields the declared number of elements.",
+        "suggest": "流实现不会产生声明数量的元素，这不是强制性的。",
+        "translate": ""
+    },
+    {
+        "source": "A buggy stream may yield less than the lower bound or more than the upper bound of elements.",
+        "suggest": "buggy 流产生的值可能小于元素的下限，也可能大于元素的上限。",
+        "translate": ""
+    },
+    {
+        "source": "is primarily intended to be used for optimizations such as reserving space for the elements of the stream, but must not be trusted to e.g., omit bounds checks in unsafe code.",
+        "suggest": "主要用于优化，例如为流的元素保留空间，但不得信任，例如可以省略不安全代码中的边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "The default implementation returns `(0, `[`None`]`)` which is correct for any stream.",
+        "suggest": "默认实现返回 ` (0，`[`None`]`)` 对任何流都是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Wait for the other thread to release the lock",
+        "suggest": "等待另一个线程释放锁",
+        "translate": ""
+    },
+    {
+        "source": "Safe as long as `my_atomic_op` is atomic.",
+        "suggest": "只要 `my_atomic_op` 是原子的就安全。",
+        "translate": ""
+    },
+    {
+        "source": "A mutual exclusion primitive based on spinlock.",
+        "suggest": "基于自旋锁的互斥原语。",
+        "translate": ""
+    },
+    {
+        "source": "Wait until the old value is `false`.",
+        "suggest": "等待直到旧值为 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "This fence synchronizes-with store in `unlock`.",
+        "suggest": "此防护与 `unlock` 中的存储同步。",
+        "translate": ""
+    },
+    {
+        "source": "prevent earlier writes from being moved beyond this point",
+        "suggest": "防止将较早的写入移至此点之外",
+        "translate": ""
+    },
+    {
+        "source": "Atomic types",
+        "suggest": "原子类型",
+        "translate": ""
+    },
+    {
+        "source": "Atomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.",
+        "suggest": "原子类型提供线程之间的原始共享内存通信，并且是其他并发类型的构建块。",
+        "translate": ""
+    },
+    {
+        "source": "This module defines atomic versions of a select number of primitive types, including [`AtomicBool`], [`AtomicIsize`], [`AtomicUsize`], [`AtomicI8`], [`AtomicU16`], etc.",
+        "suggest": "该模块定义了一些基本类型的原子版本，包括 [`AtomicBool`]，[`AtomicIsize`]，[`AtomicUsize`]，[`AtomicI8`]，[`AtomicU16`] 等。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic types present operations that, when used correctly, synchronize updates between threads.",
+        "suggest": "原子类型表示可正确使用的操作，这些操作可在线程之间同步更新。",
+        "translate": ""
+    },
+    {
+        "source": "Each method takes an [`Ordering`] which represents the strength of the memory barrier for that operation.",
+        "suggest": "每种方法都使用一个 [`Ordering`] 来表示该操作的内存屏障的强度。",
+        "translate": ""
+    },
+    {
+        "source": "These orderings are the same as the [C++20 atomic orderings][1].",
+        "suggest": "这些顺序与 [C++20 atomic orderings][1] 相同。",
+        "translate": ""
+    },
+    {
+        "source": "For more information see the [nomicon][2].",
+        "suggest": "有关更多信息，请参见 [nomicon][2]。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic variables are safe to share between threads (they implement [`Sync`]) but they do not themselves provide the mechanism for sharing and follow the [threading model](../../../std/thread/index.html#the-threading-model) of Rust.",
+        "suggest": "原子变量可以安全地在线程之间共享 (它们实现 [`Sync`])，但是它们本身并不提供共享机制并遵循 Rust 的 [threading model](../../../std/thread/index.html#the-threading-model)。",
+        "translate": ""
+    },
+    {
+        "source": "The most common way to share an atomic variable is to put it into an [`Arc`][arc] (an atomically-reference-counted shared pointer).",
+        "suggest": "共享原子变量的最常见方法是将其放入 [`Arc`][arc] (原子引用计数的共享指针)。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic types may be stored in static variables, initialized using the constant initializers like [`AtomicBool::new`].",
+        "suggest": "原子类型可以存储在静态变量中，可以使用常量初始化程序 (如 [`AtomicBool::new`]) 进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic statics are often used for lazy global initialization.",
+        "suggest": "原子静态常用于懒惰的初始化。",
+        "translate": ""
+    },
+    {
+        "source": "All atomic types in this module are guaranteed to be [lock-free] if they're available.",
+        "suggest": "如果可用，则保证该模块中的所有原子类型均为 [lock-free]。",
+        "translate": ""
+    },
+    {
+        "source": "This means they don't internally acquire a global mutex.",
+        "suggest": "这意味着他们没有在内部获得一个整体互斥锁。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic types and operations are not guaranteed to be wait-free.",
+        "suggest": "不能保证原子类型和操作无需等待。",
+        "translate": ""
+    },
+    {
+        "source": "This means that operations like `fetch_or` may be implemented with a compare-and-swap loop.",
+        "suggest": "这意味着可以使用比较和交换循环来实现类似 `fetch_or` 的操作。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic operations may be implemented at the instruction layer with larger-size atomics.",
+        "suggest": "原子操作可以在指令层用更大的原子来实现。",
+        "translate": ""
+    },
+    {
+        "source": "For example some platforms use 4-byte atomic instructions to implement `AtomicI8`.",
+        "suggest": "例如，某些平台使用 4 字节原子指令来实现 `AtomicI8`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this emulation should not have an impact on correctness of code, it's just something to be aware of.",
+        "suggest": "请注意，此仿真不应影响代码的正确性，这只是需要注意的事情。",
+        "translate": ""
+    },
+    {
+        "source": "The atomic types in this module may not be available on all platforms.",
+        "suggest": "此模块中的原子类型可能并非在所有平台上都可用。",
+        "translate": ""
+    },
+    {
+        "source": "The atomic types here are all widely available, however, and can generally be relied upon existing.",
+        "suggest": "但是，这里的原子类型都是广泛可用的，并且通常可以依赖现有原子类型。",
+        "translate": ""
+    },
+    {
+        "source": "Some notable exceptions are:",
+        "suggest": "一些值得注意的例外是:",
+        "translate": ""
+    },
+    {
+        "source": "and MIPS platforms with 32-bit pointers do not have `AtomicU64` or `AtomicI64` types.",
+        "suggest": "和带有 32 位指针的 MIPS 平台不具有 `AtomicU64` 或 `AtomicI64` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "platforms like `armv5te` that aren't for Linux only provide `load` and `store` operations, and do not support Compare and Swap (CAS) operations, such as `swap`, `fetch_add`, etc.",
+        "suggest": "不适用于 Linux 的 `armv5te` 之类的平台仅提供 `load` 和 `store` 操作，并且不支持 Compare and Swap (CAS) 操作，例如 `swap`，`fetch_add` 等。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally on Linux, these CAS operations are implemented via [operating system support], which may come with a performance penalty.",
+        "suggest": "此外，在 Linux 上，这些 CAS 操作是通过 [operating system support] 实现的，这可能会降低性能。",
+        "translate": ""
+    },
+    {
+        "source": "targets with `thumbv6m` only provide `load` and `store` operations, and do not support Compare and Swap (CAS) operations, such as `swap`, `fetch_add`, etc.",
+        "suggest": "使用 `thumbv6m` 的目标仅提供 `load` 和 `store` 操作，不支持比较和交换 (CAS) 操作，例如 `swap`，`fetch_add` 等。",
+        "translate": ""
+    },
+    {
+        "source": "Note that future platforms may be added that also do not have support for some atomic operations.",
+        "suggest": "请注意，可能会添加 future 平台，这些平台也不支持某些原子操作。",
+        "translate": ""
+    },
+    {
+        "source": "Maximally portable code will want to be careful about which atomic types are used.",
+        "suggest": "最大程度地讲，可移植代码将要注意所使用的原子类型。",
+        "translate": ""
+    },
+    {
+        "source": "and `AtomicIsize` are generally the most portable, but even then they're not available everywhere.",
+        "suggest": "和 `AtomicIsize` 通常是最便携的，但是即使到了那时，它们也并非随处可用。",
+        "translate": ""
+    },
+    {
+        "source": "For reference, the `std` library requires pointer-sized atomics, although `core` does not.",
+        "suggest": "对于引用，`std` 库需要指针大小的原子，尽管 `core` 不需要。",
+        "translate": ""
+    },
+    {
+        "source": "Currently you'll need to use `#[cfg(target_arch)]` primarily to conditionally compile in code with atomics.",
+        "suggest": "当前，您主要需要使用 `#[cfg(target_arch)]` 来有条件地用原子编译代码。",
+        "translate": ""
+    },
+    {
+        "source": "There is an unstable `#[cfg(target_has_atomic)]` as well which may be stabilized in the future.",
+        "suggest": "还有一个不稳定的 `#[cfg(target_has_atomic)]`，可以在 future 中将其稳定下来。",
+        "translate": ""
+    },
+    {
+        "source": "A simple spinlock:",
+        "suggest": "一个简单的自旋锁:",
+        "translate": ""
+    },
+    {
+        "source": "Keep a global count of live threads:",
+        "suggest": "保持活动线程的数量:",
+        "translate": ""
+    },
+    {
+        "source": "A boolean type which can be safely shared between threads.",
+        "suggest": "可以在线程之间安全共享的布尔类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type has the same in-memory representation as a [`bool`].",
+        "suggest": "此类型与 [`bool`] 具有相同的内存表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "This type is only available on platforms that support atomic loads and stores of `u8`.",
+        "suggest": "此类型仅在支持 `u8` 的原子加载和存储的平台上可用。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `AtomicBool` initialized to `false`.",
+        "suggest": "创建一个初始化为 `false` 的 `AtomicBool`。",
+        "translate": ""
+    },
+    {
+        "source": "Send is implicitly implemented for AtomicBool.",
+        "suggest": "Send 是为 AtomicBool 隐式实现的。",
+        "translate": ""
+    },
+    {
+        "source": "A raw pointer type which can be safely shared between threads.",
+        "suggest": "可以在线程之间安全共享的裸指针类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type has the same in-memory representation as a `*mut T`.",
+        "suggest": "此类型与 `*mut T` 具有相同的内存表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "This type is only available on platforms that support atomic loads and stores of pointers.",
+        "suggest": "此类型仅在支持原子加载和指针存储的平台上可用。",
+        "translate": ""
+    },
+    {
+        "source": "Its size depends on the target pointer's size.",
+        "suggest": "它的大小取决于目标指针的大小。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a null `AtomicPtr<T>`.",
+        "suggest": "创建一个空 `AtomicPtr<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic memory orderings",
+        "suggest": "原子内存顺序",
+        "translate": ""
+    },
+    {
+        "source": "Memory orderings specify the way atomic operations synchronize memory.",
+        "suggest": "内存顺序指定原子操作同步内存的方式。",
+        "translate": ""
+    },
+    {
+        "source": "In its weakest [`Ordering::Relaxed`], only the memory directly touched by the operation is synchronized.",
+        "suggest": "在最弱的 [`Ordering::Relaxed`] 中，仅同步操作直接触摸的内存。",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand, a store-load pair of [`Ordering::SeqCst`] operations synchronize other memory while additionally preserving a total order of such operations across all threads.",
+        "suggest": "另一方面，[`Ordering::SeqCst`] 操作的存储 - 加载对同步了其他内存，同时还保留了所有线程中此类操作的总顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Rust's memory orderings are [the same as those of C++20](https://en.cppreference.com/w/cpp/atomic/memory_order).",
+        "suggest": "Rust 的内存顺序为 [the same as those of C++20](https://en.cppreference.com/w/cpp/atomic/memory_order)。",
+        "translate": ""
+    },
+    {
+        "source": "For more information see the [nomicon].",
+        "suggest": "有关更多信息，请参见 [nomicon]。",
+        "translate": ""
+    },
+    {
+        "source": "No ordering constraints, only atomic operations.",
+        "suggest": "没有排序约束，只有原子操作。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to [`memory_order_relaxed`] in C++20.",
+        "suggest": "对应于 C++ 20 中的 [`memory_order_relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "When coupled with a store, all previous operations become ordered before any load of this value with [`Acquire`] (or stronger) ordering.",
+        "suggest": "当与存储耦合时，所有先前的操作都将在使用 [`Acquire`] (或更高级) 排序加载此值之前进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, all previous writes become visible to all threads that perform an [`Acquire`] (or stronger) load of this value.",
+        "suggest": "特别是，所有以前的写入操作对执行此值 [`Acquire`] (或更强) 的所有线程均可见。",
+        "translate": ""
+    },
+    {
+        "source": "Notice that using this ordering for an operation that combines loads and stores leads to a [`Relaxed`] load operation!",
+        "suggest": "请注意，对组合加载和存储的操作使用此顺序将导致 [`Relaxed`] 加载操作!",
+        "translate": ""
+    },
+    {
+        "source": "This ordering is only applicable for operations that can perform a store.",
+        "suggest": "此排序仅适用于可以执行存储的操作。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to [`memory_order_release`] in C++20.",
+        "suggest": "对应于 C++ 20 中的 [`memory_order_release`]。",
+        "translate": ""
+    },
+    {
+        "source": "When coupled with a load, if the loaded value was written by a store operation with [`Release`] (or stronger) ordering, then all subsequent operations become ordered after that store.",
+        "suggest": "与加载耦合时，如果加载的值是由具有 [`Release`] (或更高级) 排序的存储操作写入的，则所有后续操作在该存储之后都将被排序。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, all subsequent loads will see data written before the store.",
+        "suggest": "特别是，所有后续加载将看到在存储之前写入的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Notice that using this ordering for an operation that combines loads and stores leads to a [`Relaxed`] store operation!",
+        "suggest": "请注意，对组合加载和存储的操作使用此顺序将导致 [`Relaxed`] 存储操作!",
+        "translate": ""
+    },
+    {
+        "source": "This ordering is only applicable for operations that can perform a load.",
+        "suggest": "此排序仅适用于可以执行加载的操作。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to [`memory_order_acquire`] in C++20.",
+        "suggest": "对应于 C++ 20 中的 [`memory_order_acquire`]。",
+        "translate": ""
+    },
+    {
+        "source": "Has the effects of both [`Acquire`] and [`Release`] together:",
+        "suggest": "同时具有 [`Acquire`] 和 [`Release`] 的效果:",
+        "translate": ""
+    },
+    {
+        "source": "For loads it uses [`Acquire`] ordering.",
+        "suggest": "对于负载，它使用 [`Acquire`] 排序。",
+        "translate": ""
+    },
+    {
+        "source": "For stores it uses the [`Release`] ordering.",
+        "suggest": "对于商店，它使用 [`Release`] 排序。",
+        "translate": ""
+    },
+    {
+        "source": "Notice that in the case of `compare_and_swap`, it is possible that the operation ends up not performing any store and hence it has just [`Acquire`] ordering.",
+        "suggest": "请注意，在 `compare_and_swap` 的情况下，该操作可能最终不执行任何存储而因此仅具有 [`Acquire`] 排序。",
+        "translate": ""
+    },
+    {
+        "source": "However, `AcqRel` will never perform [`Relaxed`] accesses.",
+        "suggest": "但是，`AcqRel` 将永远不会执行 [`Relaxed`] 访问。",
+        "translate": ""
+    },
+    {
+        "source": "This ordering is only applicable for operations that combine both loads and stores.",
+        "suggest": "此排序仅适用于将加载和存储结合在一起的操作。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to [`memory_order_acq_rel`] in C++20.",
+        "suggest": "对应于 C++ 20 中的 [`memory_order_acq_rel`]。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`Acquire`]/[`Release`]/[`AcqRel`] (for load, store, and load-with-store operations, respectively) with the additional guarantee that all threads see all sequentially consistent operations in the same order.",
+        "suggest": "像 [`Acquire`]/[`Release`]/[`AcqRel`] (分别用于加载，存储和随存储加载操作) 一样，另外保证所有线程都可以按相同的顺序看到所有顺序一致的操作。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to [`memory_order_seq_cst`] in C++20.",
+        "suggest": "对应于 C++ 20 中的 [`memory_order_seq_cst`]。",
+        "translate": ""
+    },
+    {
+        "source": "An [`AtomicBool`] initialized to `false`.",
+        "suggest": "[`AtomicBool`] 初始化为 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `AtomicBool`.",
+        "suggest": "创建一个新的 `AtomicBool`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the underlying [`bool`].",
+        "suggest": "返回基础 [`bool`] 的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because the mutable reference guarantees that no other threads are concurrently accessing the atomic data.",
+        "suggest": "这是安全的，因为可变引用保证没有其他线程同时访问原子数据。",
+        "translate": ""
+    },
+    {
+        "source": "the mutable reference guarantees unique ownership.",
+        "suggest": "可变引用保证唯一的所有权。",
+        "translate": ""
+    },
+    {
+        "source": "Get atomic access to a `&mut bool`.",
+        "suggest": "获得对 `&mut bool` 的原子访问。",
+        "translate": ""
+    },
+    {
+        "source": "the mutable reference guarantees unique ownership, and alignment of both `bool` and `Self` is 1.",
+        "suggest": "可变引用保证唯一的所有权，并且 `bool` 和 `Self` 的对齐方式均为 1。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the atomic and returns the contained value.",
+        "suggest": "消耗原子并返回包含的值。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because passing `self` by value guarantees that no other threads are concurrently accessing the atomic data.",
+        "suggest": "这是安全的，因为按值传递 `self` 可以确保没有其他线程同时访问原子数据。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a value from the bool.",
+        "suggest": "从 bool 加载一个值。",
+        "translate": ""
+    },
+    {
+        "source": "takes an [`Ordering`] argument which describes the memory ordering of this operation.",
+        "suggest": "采用 [`Ordering`] 参数，该参数描述此操作的内存顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Possible values are [`SeqCst`], [`Acquire`] and [`Relaxed`].",
+        "suggest": "可能的值为 [`SeqCst`]，[`Acquire`] 和 [`Relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `order` is [`Release`] or [`AcqRel`].",
+        "suggest": "如果 `order` 是 [`Release`] 或 [`AcqRel`]，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "any data races are prevented by atomic intrinsics and the raw pointer passed in is valid because we got it from a reference.",
+        "suggest": "原子内联函数可以防止任何数据竞争，并且传入的裸指针是有效的，因为我们是从引用中获得的。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the bool.",
+        "suggest": "将值存储到 bool 中。",
+        "translate": ""
+    },
+    {
+        "source": "Possible values are [`SeqCst`], [`Release`] and [`Relaxed`].",
+        "suggest": "可能的值为 [`SeqCst`]，[`Release`] 和 [`Relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `order` is [`Acquire`] or [`AcqRel`].",
+        "suggest": "如果 `order` 是 [`Acquire`] 或 [`AcqRel`]，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the bool, returning the previous value.",
+        "suggest": "将值存储到 bool 中，返回前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Note that using [`Acquire`] makes the store part of this operation [`Relaxed`], and using [`Release`] makes the load part [`Relaxed`].",
+        "suggest": "请注意，使用 [`Acquire`] 会使该操作成为存储部分 [`Relaxed`]，而使用 [`Release`] 会使装入部分成为 [`Relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "This method is only available on platforms that support atomic operations on `u8`.",
+        "suggest": "此方法仅在支持 `u8` 上原子操作的平台上可用。",
+        "translate": ""
+    },
+    {
+        "source": "data races are prevented by atomic intrinsics.",
+        "suggest": "数据竞争被原子内在因素阻止。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the [`bool`] if the current value is the same as the `current` value.",
+        "suggest": "如果当前值与 `current` 值相同，则将值存储到 [`bool`] 中。",
+        "translate": ""
+    },
+    {
+        "source": "The return value is always the previous value.",
+        "suggest": "返回值始终是前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "If it is equal to `current`, then the value was updated.",
+        "suggest": "如果等于 `current`，则该值已更新。",
+        "translate": ""
+    },
+    {
+        "source": "also takes an [`Ordering`] argument which describes the memory ordering of this operation.",
+        "suggest": "还采用了 [`Ordering`] 参数，该参数描述了此操作的内存顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Notice that even when using [`AcqRel`], the operation might fail and hence just perform an `Acquire` load, but not have `Release` semantics.",
+        "suggest": "请注意，即使使用 [`AcqRel`]，该操作也可能失败，因此仅执行 `Acquire` 加载，但没有 `Release` 语义。",
+        "translate": ""
+    },
+    {
+        "source": "Using [`Acquire`] makes the store part of this operation [`Relaxed`] if it happens, and using [`Release`] makes the load part [`Relaxed`].",
+        "suggest": "如果发生此操作，则使用 [`Acquire`] 使其成为该操作 [`Relaxed`] 的存储部分，而使用 [`Release`] 使该操作成为存储部分 [`Relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "Migrating to `compare_exchange` and `compare_exchange_weak`",
+        "suggest": "迁移到 `compare_exchange` 和 `compare_exchange_weak`",
+        "translate": ""
+    },
+    {
+        "source": "is equivalent to `compare_exchange` with the following mapping for memory orderings:",
+        "suggest": "与 `compare_exchange` 等效，具有以下有关内存顺序的映射:",
+        "translate": ""
+    },
+    {
+        "source": "is allowed to fail spuriously even when the comparison succeeds, which allows the compiler to generate better assembly code when the compare and swap is used in a loop.",
+        "suggest": "即使比较成功，也允许错误地失败，这允许在循环中使用 compare 和 swap 时编译器生成更好的汇编代码。",
+        "translate": ""
+    },
+    {
+        "source": "The return value is a result indicating whether the new value was written and containing the previous value.",
+        "suggest": "返回值是指示是否写入了新值并包含先前值的结果。",
+        "translate": ""
+    },
+    {
+        "source": "On success this value is guaranteed to be equal to `current`.",
+        "suggest": "成功后，此值保证等于 `current`。",
+        "translate": ""
+    },
+    {
+        "source": "takes two [`Ordering`] arguments to describe the memory ordering of this operation.",
+        "suggest": "需要两个 [`Ordering`] 参数来描述此操作的内存顺序。",
+        "translate": ""
+    },
+    {
+        "source": "describes the required ordering for the read-modify-write operation that takes place if the comparison with `current` succeeds.",
+        "suggest": "描述了如果与 `current` 的比较成功，则进行读 - 修改 - 写操作所需的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "describes the required ordering for the load operation that takes place when the comparison fails.",
+        "suggest": "描述比较失败时发生的加载操作所需的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Using [`Acquire`] as success ordering makes the store part of this operation [`Relaxed`], and using [`Release`] makes the successful load [`Relaxed`].",
+        "suggest": "使用 [`Acquire`] 作为成功排序，使存储成为操作 [`Relaxed`] 的一部分，而使用 [`Release`]，则使装载成功 [`Relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "The failure ordering can only be [`SeqCst`], [`Acquire`] or [`Relaxed`] and must be equivalent to or weaker than the success ordering.",
+        "suggest": "失败排序只能是 [`SeqCst`]，[`Acquire`] 或 [`Relaxed`]，并且必须等于或弱于成功排序。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`AtomicBool::compare_exchange`], this function is allowed to spuriously fail even when the comparison succeeds, which can result in more efficient code on some platforms.",
+        "suggest": "与 [`AtomicBool::compare_exchange`] 不同，即使比较成功，也允许该函数错误地失败，这可能导致某些平台上的代码效率更高。",
+        "translate": ""
+    },
+    {
+        "source": "Logical \"and\" with a boolean value.",
+        "suggest": "具有布尔值的逻辑 \"and\"。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a logical \"and\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行逻辑 \"and\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the previous value.",
+        "suggest": "返回前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Logical \"nand\" with a boolean value.",
+        "suggest": "具有布尔值的逻辑 \"nand\"。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a logical \"nand\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行逻辑 \"nand\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "We can't use atomic_nand here because it can result in a bool with an invalid value.",
+        "suggest": "我们在这里不能使用 atomic_nand，因为它可能导致 bool 的值无效。",
+        "translate": ""
+    },
+    {
+        "source": "This happens because the atomic operation is done with an 8-bit integer internally, which would set the upper 7 bits.",
+        "suggest": "发生这种情况的原因是，原子操作内部使用 8 位整数完成，这将设置高 7 位。",
+        "translate": ""
+    },
+    {
+        "source": "So we just use fetch_xor or swap instead.",
+        "suggest": "因此，我们只使用 fetch_xor 或 swap 即可。",
+        "translate": ""
+    },
+    {
+        "source": "!(x & true) == !x We must invert the bool.",
+        "suggest": "!(x & true) == !x 我们必须反转 bool。",
+        "translate": ""
+    },
+    {
+        "source": "!(x & false) == true We must set the bool to true.",
+        "suggest": "!(x & false) == true 我们必须将 bool 设置为 true。",
+        "translate": ""
+    },
+    {
+        "source": "Logical \"or\" with a boolean value.",
+        "suggest": "具有布尔值的逻辑 \"or\"。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a logical \"or\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行逻辑 \"or\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Logical \"xor\" with a boolean value.",
+        "suggest": "具有布尔值的逻辑 \"xor\"。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a logical \"xor\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行逻辑 \"xor\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable pointer to the underlying [`bool`].",
+        "suggest": "返回指向基础 [`bool`] 的可变指针。",
+        "translate": ""
+    },
+    {
+        "source": "Doing non-atomic reads and writes on the resulting integer can be a data race.",
+        "suggest": "在结果整数上进行非原子读取和写入可以是数据竞争。",
+        "translate": ""
+    },
+    {
+        "source": "This method is mostly useful for FFI, where the function signature may use `*mut bool` instead of `&AtomicBool`.",
+        "suggest": "此方法对 FFI 最为有用，在 FFI 中，函数签名可以使用 `*mut bool` 而不是 `&AtomicBool`。",
+        "translate": ""
+    },
+    {
+        "source": "Returning an `*mut` pointer from a shared reference to this atomic is safe because the atomic types work with interior mutability.",
+        "suggest": "从共享引用返回 `*mut` 指针到此原子是安全的，因为原子类型可与内部可变性一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "All modifications of an atomic change the value through a shared reference, and can do so safely as long as they use atomic operations.",
+        "suggest": "原子的所有修改都通过共享的 quot 更改值，并且只要它们使用原子操作就可以安全地进行更改。",
+        "translate": ""
+    },
+    {
+        "source": "Any use of the returned raw pointer requires an `unsafe` block and still has to uphold the same restriction: operations on it must be atomic.",
+        "suggest": "对返回的裸指针的任何使用都需要一个 `unsafe` 块，并且仍然必须遵守相同的限制: 对其进行的操作必须是原子的。",
+        "translate": ""
+    },
+    {
+        "source": "Fetches the value, and applies a function to it that returns an optional new value.",
+        "suggest": "获取该值，并对其应用一个函数，该函数返回一个可选的新值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a `Result` of `Ok(previous_value)` if the function returned `Some(_)`, else `Err(previous_value)`.",
+        "suggest": "如果函数返回 `Some(_)`，则返回 `Ok(previous_value)` 的 `Result`，否则返回 `Err(previous_value)`。",
+        "translate": ""
+    },
+    {
+        "source": "This may call the function multiple times if the value has been changed from other threads in the meantime, as long as the function returns `Some(_)`, but the function will have been applied only once to the stored value.",
+        "suggest": "如果与此同时从其他线程更改了值，则只要函数返回 `Some(_)`，这可能会多次调用该函数，但是该函数仅对存储的值应用一次。",
+        "translate": ""
+    },
+    {
+        "source": "The first describes the required ordering for when the operation finally succeeds while the second describes the required ordering for loads.",
+        "suggest": "第一个描述了操作最终成功时所需的顺序，第二个描述了负载所需的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "These correspond to the success and failure orderings of [`AtomicBool::compare_exchange`] respectively.",
+        "suggest": "这些分别对应于 [`AtomicBool::compare_exchange`] 的成功和失败顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Using [`Acquire`] as success ordering makes the store part of this operation [`Relaxed`], and using [`Release`] makes the final successful load [`Relaxed`].",
+        "suggest": "使用 [`Acquire`] 作为成功排序，使存储成为该操作 [`Relaxed`] 的一部分，而使用 [`Release`]，则使最终成功加载 [`Relaxed`]。",
+        "translate": ""
+    },
+    {
+        "source": "The (failed) load ordering can only be [`SeqCst`], [`Acquire`] or [`Relaxed`] and must be equivalent to or weaker than the success ordering.",
+        "suggest": "(failed) 负载排序只能是 [`SeqCst`]，[`Acquire`] 或 [`Relaxed`]，并且必须等于或小于成功排序。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `AtomicPtr`.",
+        "suggest": "创建一个新的 `AtomicPtr`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the underlying pointer.",
+        "suggest": "返回基础指针的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Get atomic access to a pointer.",
+        "suggest": "获得对指针的原子访问。",
+        "translate": ""
+    },
+    {
+        "source": "the alignment of `*mut T` and `Self` is the same on all platforms supported by rust, as verified above.",
+        "suggest": "如上所述，在 rust 支持的所有平台上，`*mut T` 和 `Self` 的对齐方式均相同。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a value from the pointer.",
+        "suggest": "从指针加载一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the pointer.",
+        "suggest": "将值存储到指针中。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the pointer, returning the previous value.",
+        "suggest": "将一个值存储到指针中，返回前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "This method is only available on platforms that support atomic operations on pointers.",
+        "suggest": "此方法仅在支持对指针进行原子操作的平台上可用。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the pointer if the current value is the same as the `current` value.",
+        "suggest": "如果当前值与 `current` 值相同，则将一个值存储到指针中。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`AtomicPtr::compare_exchange`], this function is allowed to spuriously fail even when the comparison succeeds, which can result in more efficient code on some platforms.",
+        "suggest": "与 [`AtomicPtr::compare_exchange`] 不同，即使比较成功，也允许该函数错误地失败，这可能导致某些平台上的代码效率更高。",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic is unsafe because it operates on a raw pointer but we know for sure that the pointer is valid (we just got it from an `UnsafeCell` that we have by reference) and the atomic operation itself allows us to safely mutate the `UnsafeCell` contents.",
+        "suggest": "这个内联函数是不安全的，因为它在裸指针上操作，但是我们可以肯定该指针是有效的 (我们只是从引用中获得了 `UnsafeCell` 来获取它)，而原子操作本身允许我们安全地对 `UnsafeCell` 的内容进行可变。",
+        "translate": ""
+    },
+    {
+        "source": "These correspond to the success and failure orderings of [`AtomicPtr::compare_exchange`] respectively.",
+        "suggest": "这些分别对应于 [`AtomicPtr::compare_exchange`] 的成功和失败顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `bool` into an `AtomicBool`.",
+        "suggest": "将 `bool` 转换为 `AtomicBool`。",
+        "translate": ""
+    },
+    {
+        "source": "This macro ends up being unused on some architectures.",
+        "suggest": "该宏最终在某些体系结构上未使用。",
+        "translate": ""
+    },
+    {
+        "source": "An integer type which can be safely shared between threads.",
+        "suggest": "可以在线程之间安全共享的整数类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type has the same in-memory representation as the underlying integer type, [`",
+        "suggest": "此类型与基本整数类型 [` 具有相同的内存表示形式",
+        "translate": ""
+    },
+    {
+        "source": "For more about the differences between atomic types and non-atomic types as well as information about the portability of this type, please see the [module-level documentation].",
+        "suggest": "有关原子类型和非原子类型之间的区别以及有关此类型的可移植性的更多信息，请参见 [module-level documentation]。",
+        "translate": ""
+    },
+    {
+        "source": "This type is only available on platforms that support atomic loads and stores of [`",
+        "suggest": "此类型仅在支持原子负载和 [` 的存储的平台上可用",
+        "translate": ""
+    },
+    {
+        "source": "An atomic integer initialized to `0`.",
+        "suggest": "初始化为 `0` 的原子整数。",
+        "translate": ""
+    },
+    {
+        "source": "Send is implicitly implemented.",
+        "suggest": "发送是隐式实现的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new atomic integer.",
+        "suggest": "创建一个新的原子整数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the underlying integer.",
+        "suggest": "返回基础整数的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "the alignment of `$int_type` and `Self` is the same, as promised by $cfg_align and verified above.",
+        "suggest": "`$int_type` 和 `Self` 的对齐方式相同，如 $cfg_align 所承诺并已在上面进行了验证。",
+        "translate": ""
+    },
+    {
+        "source": "Loads a value from the atomic integer.",
+        "suggest": "从原子整数加载值。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the atomic integer.",
+        "suggest": "将值存储到原子整数中。",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the atomic integer, returning the previous value.",
+        "suggest": "将值存储到原子整数中，返回前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "This method is only available on platforms that support atomic operations on",
+        "suggest": "此方法仅在支持原子操作的平台上可用",
+        "translate": ""
+    },
+    {
+        "source": "Stores a value into the atomic integer if the current value is the same as the `current` value.",
+        "suggest": "如果当前值与 `current` 值相同，则将值存储到原子整数中。",
+        "translate": ""
+    },
+    {
+        "source": "this function is allowed to spuriously fail even when the comparison succeeds, which can result in more efficient code on some platforms.",
+        "suggest": "即使比较成功，此函数也可能会虚假地失败，这可能导致某些平台上的代码效率更高。",
+        "translate": ""
+    },
+    {
+        "source": "This operation wraps around on overflow.",
+        "suggest": "此操作在溢出时回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Subtracts from the current value, returning the previous value.",
+        "suggest": "从当前值减去，返回前一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Bitwise \"and\" with the current value.",
+        "suggest": "\"and\" 按位与当前值。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a bitwise \"and\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行按位 \"and\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Bitwise \"nand\" with the current value.",
+        "suggest": "\"nand\" 按位与当前值。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a bitwise \"nand\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行按位 \"nand\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Bitwise \"or\" with the current value.",
+        "suggest": "\"or\" 按位与当前值。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a bitwise \"or\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行按位 \"or\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Bitwise \"xor\" with the current value.",
+        "suggest": "\"xor\" 按位与当前值。",
+        "translate": ""
+    },
+    {
+        "source": "Performs a bitwise \"xor\" operation on the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "对当前值和参数 `val` 执行按位 \"xor\" 运算，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the maximum of the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "查找当前值和参数 `val` 的最大值，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to obtain the maximum value in one step, you can use the following:",
+        "suggest": "如果要一步获得最大值，可以使用以下方法:",
+        "translate": ""
+    },
+    {
+        "source": "Minimum with the current value.",
+        "suggest": "当前值的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the minimum of the current value and the argument `val`, and sets the new value to the result.",
+        "suggest": "查找当前值和参数 `val` 的最小值，并将新值设置为结果。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to obtain the minimum value in one step, you can use the following:",
+        "suggest": "如果要一步获得最小值，则可以使用以下方法:",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable pointer to the underlying integer.",
+        "suggest": "返回指向基础整数的可变指针。",
+        "translate": ""
+    },
+    {
+        "source": "This method is mostly useful for FFI, where the function signature may use",
+        "suggest": "此方法对于 FFI 最为有用，在 FFI 中可能使用函数签名",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_store`.",
+        "suggest": "调用者必须坚持 `atomic_store` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_load`.",
+        "suggest": "调用者必须坚持 `atomic_load` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_swap`.",
+        "suggest": "调用者必须坚持 `atomic_swap` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the previous value (like __sync_fetch_and_add).",
+        "suggest": "返回前一个值 (如 __sync_fetch_and_add)。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_add`.",
+        "suggest": "调用者必须坚持 `atomic_add` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the previous value (like __sync_fetch_and_sub).",
+        "suggest": "返回前一个值 (如 __sync_fetch_and_sub)。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_sub`.",
+        "suggest": "调用者必须坚持 `atomic_sub` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_compare_exchange`.",
+        "suggest": "调用者必须坚持 `atomic_compare_exchange` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_compare_exchange_weak`.",
+        "suggest": "调用者必须坚持 `atomic_compare_exchange_weak` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_and`",
+        "suggest": "调用者必须坚持 `atomic_and` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_nand`",
+        "suggest": "调用者必须坚持 `atomic_nand` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_or`",
+        "suggest": "调用者必须坚持 `atomic_or` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_xor`",
+        "suggest": "调用者必须坚持 `atomic_xor` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "returns the max value (signed comparison)",
+        "suggest": "返回最大值 (有符号比较)",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_max`",
+        "suggest": "调用者必须坚持 `atomic_max` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "returns the min value (signed comparison)",
+        "suggest": "返回最小值 (带符号的比较)",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_min`",
+        "suggest": "调用者必须坚持 `atomic_min` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "returns the max value (unsigned comparison)",
+        "suggest": "返回最大值 (无符号比较)",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_umax`",
+        "suggest": "调用者必须坚持 `atomic_umax` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "returns the min value (unsigned comparison)",
+        "suggest": "返回最小值 (无符号比较)",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `atomic_umin`",
+        "suggest": "调用者必须坚持 `atomic_umin` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "Depending on the specified order, a fence prevents the compiler and CPU from reordering certain types of memory operations around it.",
+        "suggest": "根据指定的顺序，fence 会阻止编译器和 CPU 重新排序围绕其进行的某些类型的内存操作。",
+        "translate": ""
+    },
+    {
+        "source": "That creates synchronizes-with relationships between it and atomic operations or fences in other threads.",
+        "suggest": "这会在它与其他线程中的原子操作或防护之间创建同步关系。",
+        "translate": ""
+    },
+    {
+        "source": "A fence 'A' which has (at least) [`Release`] ordering semantics, synchronizes with a fence 'B' with (at least) [`Acquire`] semantics, if and only if there exist operations X and Y, both operating on some atomic object 'M' such that A is sequenced before X, Y is synchronized before B and Y observes the change to M.",
+        "suggest": "具有 (至少) [`Release`] 排序语义的 Fence 'A' 与具有 (至少) [`Acquire`] 语义的 Fence 'B' 同步，当且仅当存在操作 X 和 Y 都在某个原子对象 'M' 上操作，使得 A 先于 X，Y 在 B 和 Y 观察到对 M 的更改之前已同步。",
+        "translate": ""
+    },
+    {
+        "source": "This provides a happens-before dependence between A and B.",
+        "suggest": "这提供了 A 和 B 之间的依存关系。",
+        "translate": ""
+    },
+    {
+        "source": "Atomic operations with [`Release`] or [`Acquire`] semantics can also synchronize with a fence.",
+        "suggest": "具有 [`Release`] 或 [`Acquire`] 语义的原子操作也可以与围栅同步。",
+        "translate": ""
+    },
+    {
+        "source": "A fence which has [`SeqCst`] ordering, in addition to having both [`Acquire`] and [`Release`] semantics, participates in the global program order of the other [`SeqCst`] operations and/or fences.",
+        "suggest": "除了具有 [`Acquire`] 和 [`Release`] 语义外，具有 [`SeqCst`] 顺序的篱笆还参与其他 [`SeqCst`] 操作或者篱笆的程序顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Accepts [`Acquire`], [`Release`], [`AcqRel`] and [`SeqCst`] orderings.",
+        "suggest": "接受 [`Acquire`]，[`Release`]，[`AcqRel`] 和 [`SeqCst`] 订购。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `order` is [`Relaxed`].",
+        "suggest": "如果 `order` 为 [`Relaxed`]，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "using an atomic fence is safe.",
+        "suggest": "使用原子栅栏是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "A compiler memory fence.",
+        "suggest": "编译器内存防护。",
+        "translate": ""
+    },
+    {
+        "source": "does not emit any machine code, but restricts the kinds of memory re-ordering the compiler is allowed to do.",
+        "suggest": "不会发出任何机器代码，但会限制允许编译器重新排序的内存类型。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically, depending on the given [`Ordering`] semantics, the compiler may be disallowed from moving reads or writes from before or after the call to the other side of the call to `compiler_fence`.",
+        "suggest": "具体来说，根据给定的 [`Ordering`] 语义，可能不允许编译器将调用之前或之后的读取或写入移动到 `compiler_fence` 的另一侧。",
+        "translate": ""
+    },
+    {
+        "source": "Note that it does **not** prevent the *hardware* from doing such re-ordering.",
+        "suggest": "请注意，它确实不会阻止 *硬件* 进行此类重新排序。",
+        "translate": ""
+    },
+    {
+        "source": "This is not a problem in a single-threaded, execution context, but when other threads may modify memory at the same time, stronger synchronization primitives such as [`fence`] are required.",
+        "suggest": "在单线程执行上下文中这不是问题，但是当其他线程可以同时修改内存时，则需要更强大的同步原语，例如 [`fence`]。",
+        "translate": ""
+    },
+    {
+        "source": "The re-ordering prevented by the different ordering semantics are:",
+        "suggest": "通过不同的排序语义防止的重新排序是:",
+        "translate": ""
+    },
+    {
+        "source": "with [`SeqCst`], no re-ordering of reads and writes across this point is allowed.",
+        "suggest": "对于 [`SeqCst`]，不允许在这一点上对读取和写入进行重新排序。",
+        "translate": ""
+    },
+    {
+        "source": "with [`Release`], preceding reads and writes cannot be moved past subsequent writes.",
+        "suggest": "对于 [`Release`]，不能将先前的读取和写入移至后续的写入之后。",
+        "translate": ""
+    },
+    {
+        "source": "with [`Acquire`], subsequent reads and writes cannot be moved ahead of preceding reads.",
+        "suggest": "如果使用 [`Acquire`]，则后续的读取和写入操作不能移至先前的读取操作之前。",
+        "translate": ""
+    },
+    {
+        "source": "with [`AcqRel`], both of the above rules are enforced.",
+        "suggest": "对于 [`AcqRel`]，将同时执行以上两个规则。",
+        "translate": ""
+    },
+    {
+        "source": "is generally only useful for preventing a thread from racing *with itself*.",
+        "suggest": "通常仅用于防止线程加速 *with 本身*。",
+        "translate": ""
+    },
+    {
+        "source": "That is, if a given thread is executing one piece of code, and is then interrupted, and starts executing code elsewhere (while still in the same thread, and conceptually still on the same core).",
+        "suggest": "也就是说，如果给定线程正在执行一段代码，然后被中断，并开始在其他位置执行代码 (虽然仍在同一线程中，并且从概念上讲仍在同一内核上)。",
+        "translate": ""
+    },
+    {
+        "source": "In traditional programs, this can only occur when a signal handler is registered.",
+        "suggest": "在传统程序中，只有在注册信号处理程序时才会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "In more low-level code, such situations can also arise when handling interrupts, when implementing green threads with pre-emption, etc.",
+        "suggest": "在更多灵活的代码中，当处理中断，以抢占方式实现绿色线程等时，也会出现这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Curious readers are encouraged to read the Linux kernel's discussion of [memory barriers].",
+        "suggest": "鼓励好奇的读者阅读 Linux 内核对 [memory barriers] 的讨论。",
+        "translate": ""
+    },
+    {
+        "source": "Without `compiler_fence`, the `assert_eq!` in following code is *not* guaranteed to succeed, despite everything happening in a single thread.",
+        "suggest": "如果没有 `compiler_fence`，则尽管所有内容都在单个线程中发生，但 * 不能保证以下代码中的 `assert_eq!` 成功。",
+        "translate": ""
+    },
+    {
+        "source": "To see why, remember that the compiler is free to swap the stores to `IMPORTANT_VARIABLE` and `IS_READ` since they are both `Ordering::Relaxed`.",
+        "suggest": "要了解原因，请记住编译器可以自由地将存储交换到 `IMPORTANT_VARIABLE` 和 `IS_READ`，因为它们都是 `Ordering::Relaxed`。",
+        "translate": ""
+    },
+    {
+        "source": "If it does, and the signal handler is invoked right after `IS_READY` is updated, then the signal handler will see `IS_READY=1`, but `IMPORTANT_VARIABLE=0`.",
+        "suggest": "如果是这样，并且在更新 `IS_READY` 之后立即调用信号处理程序，则信号处理程序将看到 `IS_READY=1`，但是看到 `IMPORTANT_VARIABLE=0`。",
+        "translate": ""
+    },
+    {
+        "source": "Using a `compiler_fence` remedies this situation.",
+        "suggest": "使用 `compiler_fence` 可以解决这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Signals the processor that it is inside a busy-wait spin-loop (\"spin lock\").",
+        "suggest": "向处理器发出信号，通知它处于忙于等待的自旋循环 (自旋锁) 中。",
+        "translate": ""
+    },
+    {
+        "source": "This function is deprecated in favor of [`hint::spin_loop`].",
+        "suggest": "不推荐使用此函数，而推荐使用 [`hint::spin_loop`]。",
+        "translate": ""
+    },
+    {
+        "source": "Synchronization primitives",
+        "suggest": "同步原语",
+        "translate": ""
+    },
+    {
+        "source": "Indicates whether a value is available or if the current task has been scheduled to receive a wakeup instead.",
+        "suggest": "指示值是否可用，或者当前任务是否已安排为接收唤醒。",
+        "translate": ""
+    },
+    {
+        "source": "Represents that a value is immediately ready.",
+        "suggest": "表示立即准备好值。",
+        "translate": ""
+    },
+    {
+        "source": "Represents that a value is not ready yet.",
+        "suggest": "表示尚未准备好值。",
+        "translate": ""
+    },
+    {
+        "source": "When a function returns `Pending`, the function *must* also ensure that the current task is scheduled to be awoken when progress can be made.",
+        "suggest": "当一个函数返回 `Pending` 时，该函数 *必须* 还必须确保计划在进度完成时唤醒当前任务。",
+        "translate": ""
+    },
+    {
+        "source": "Changes the ready value of this `Poll` with the closure provided.",
+        "suggest": "使用提供的闭包更改此 `Poll` 的就绪值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this is `Poll::Ready`",
+        "suggest": "如果是 `Poll::Ready`，则返回 `true`",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this is `Poll::Pending`",
+        "suggest": "如果是 `Poll::Pending`，则返回 `true`",
+        "translate": ""
+    },
+    {
+        "source": "Changes the success value of this `Poll` with the closure provided.",
+        "suggest": "使用提供的闭包更改此 `Poll` 的成功值。",
+        "translate": ""
+    },
+    {
+        "source": "Changes the error value of this `Poll` with the closure provided.",
+        "suggest": "使用提供的闭包更改此 `Poll` 的错误值。",
+        "translate": ""
+    },
+    {
+        "source": "Convert to a `Ready` variant.",
+        "suggest": "转换为 `Ready` 成员。",
+        "translate": ""
+    },
+    {
+        "source": "use num",
+        "suggest": "使用数字",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the successful type of a [`Poll<T>`].",
+        "suggest": "提取 [`Poll<T>`] 的成功类型。",
+        "translate": ""
+    },
+    {
+        "source": "This macro bakes in propagation of [`Pending`] signals by returning early.",
+        "suggest": "该宏通过提早返回来传播 [`Pending`] 信号。",
+        "translate": ""
+    },
+    {
+        "source": "The `ready!` call expands to:",
+        "suggest": "`ready!` 调用扩展为:",
+        "translate": ""
+    },
+    {
+        "source": "A `RawWaker` allows the implementor of a task executor to create a [`Waker`] which provides customized wakeup behavior.",
+        "suggest": "`RawWaker` 允许任务执行器的实现者创建 [`Waker`]，该 [`Waker`] 提供自定义的唤醒行为。",
+        "translate": ""
+    },
+    {
+        "source": "It consists of a data pointer and a [virtual function pointer table (vtable)][vtable] that customizes the behavior of the `RawWaker`.",
+        "suggest": "它由一个数据指针和一个自定义 `RawWaker` 行为的 [virtual function pointer table (vtable)][vtable] 组成。",
+        "translate": ""
+    },
+    {
+        "source": "A data pointer, which can be used to store arbitrary data as required by the executor.",
+        "suggest": "数据指针，可用于根据执行程序的要求存储任意数据。",
+        "translate": ""
+    },
+    {
+        "source": "This could be e.g.",
+        "suggest": "这可能是例如",
+        "translate": ""
+    },
+    {
+        "source": "a type-erased pointer to an `Arc` that is associated with the task.",
+        "suggest": "指向与任务关联的 `Arc` 的类型擦除的指针。",
+        "translate": ""
+    },
+    {
+        "source": "The value of this field gets passed to all functions that are part of the vtable as the first parameter.",
+        "suggest": "该字段的值作为第一个参数传递给 vtable 一部分的所有函数。",
+        "translate": ""
+    },
+    {
+        "source": "Virtual function pointer table that customizes the behavior of this waker.",
+        "suggest": "虚拟函数指针表，可自定义此唤醒程序的行为。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `RawWaker` from the provided `data` pointer and `vtable`.",
+        "suggest": "根据提供的 `data` 指针和 `vtable` 创建新的 `RawWaker`。",
+        "translate": ""
+    },
+    {
+        "source": "The `data` pointer can be used to store arbitrary data as required by the executor.",
+        "suggest": "`data` 指针可用于存储执行程序所需的任意数据。",
+        "translate": ""
+    },
+    {
+        "source": "The value of this pointer will get passed to all functions that are part of the `vtable` as the first parameter.",
+        "suggest": "该指针的值将作为第一个参数传递给 `vtable` 一部分的所有函数。",
+        "translate": ""
+    },
+    {
+        "source": "The `vtable` customizes the behavior of a `Waker` which gets created from a `RawWaker`.",
+        "suggest": "`vtable` 自定义从 `RawWaker` 创建的 `Waker` 的行为。",
+        "translate": ""
+    },
+    {
+        "source": "For each operation on the `Waker`, the associated function in the `vtable` of the underlying `RawWaker` will be called.",
+        "suggest": "对于 `Waker` 上的每个操作，将调用基础 `RawWaker` 的 `vtable` 中的关联函数。",
+        "translate": ""
+    },
+    {
+        "source": "A virtual function pointer table (vtable) that specifies the behavior of a [`RawWaker`].",
+        "suggest": "虚拟函数指针表 (vtable)，用于指定 [`RawWaker`] 的行为。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer passed to all functions inside the vtable is the `data` pointer from the enclosing [`RawWaker`] object.",
+        "suggest": "传递给 vtable 内所有函数的指针是来自封闭的 [`RawWaker`] 对象的 `data` 指针。",
+        "translate": ""
+    },
+    {
+        "source": "The functions inside this struct are only intended to be called on the `data` pointer of a properly constructed [`RawWaker`] object from inside the [`RawWaker`] implementation.",
+        "suggest": "仅应在 [`RawWaker`] 实现内部从正确构造的 [`RawWaker`] 对象的 `data` 指针上调用此结构体内部的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Calling one of the contained functions using any other `data` pointer will cause undefined behavior.",
+        "suggest": "使用任何其他 `data` 指针调用所包含的函数之一将导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "This function will be called when the [`RawWaker`] gets cloned, e.g. when the [`Waker`] in which the [`RawWaker`] is stored gets cloned.",
+        "suggest": "克隆 [`RawWaker`] 时，例如克隆存储 [`RawWaker`] 的 [`Waker`] 时，将调用此函数。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation of this function must retain all resources that are required for this additional instance of a [`RawWaker`] and associated task.",
+        "suggest": "此函数的实现必须保留 [`RawWaker`] 的此附加实例和关联任务所需的所有资源。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `wake` on the resulting [`RawWaker`] should result in a wakeup of the same task that would have been awoken by the original [`RawWaker`].",
+        "suggest": "在生成的 [`RawWaker`] 上调用 `wake` 应该会唤醒原 [`RawWaker`] 会唤醒的相同任务。",
+        "translate": ""
+    },
+    {
+        "source": "This function will be called when `wake` is called on the [`Waker`].",
+        "suggest": "在 [`Waker`] 上调用 `wake` 时将调用此函数。",
+        "translate": ""
+    },
+    {
+        "source": "It must wake up the task associated with this [`RawWaker`].",
+        "suggest": "它必须唤醒与此 [`RawWaker`] 相关的任务。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation of this function must make sure to release any resources that are associated with this instance of a [`RawWaker`] and associated task.",
+        "suggest": "此函数的实现必须确保释放与该 [`RawWaker`] 实例和关联任务相关联的所有资源。",
+        "translate": ""
+    },
+    {
+        "source": "This function will be called when `wake_by_ref` is called on the [`Waker`].",
+        "suggest": "在 [`Waker`] 上调用 `wake_by_ref` 时将调用此函数。",
+        "translate": ""
+    },
+    {
+        "source": "This function is similar to `wake`, but must not consume the provided data pointer.",
+        "suggest": "该函数与 `wake` 相似，但一定不能使用提供的数据指针。",
+        "translate": ""
+    },
+    {
+        "source": "This function gets called when a [`RawWaker`] gets dropped.",
+        "suggest": "丢弃 [`RawWaker`] 时将调用此函数。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `RawWakerVTable` from the provided `clone`, `wake`, `wake_by_ref`, and `drop` functions.",
+        "suggest": "从提供的 `clone`，`wake`，`wake_by_ref` 和 `drop` 函数创建新的 `RawWakerVTable`。",
+        "translate": ""
+    },
+    {
+        "source": "The `Context` of an asynchronous task.",
+        "suggest": "异步任务的 `Context`。",
+        "translate": ""
+    },
+    {
+        "source": "Currently, `Context` only serves to provide access to a `&Waker` which can be used to wake the current task.",
+        "suggest": "当前，`Context` 仅用于提供对可用于唤醒当前任务的 `&Waker` 的访问。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure we future-proof against variance changes by forcing the lifetime to be invariant (argument-position lifetimes are contravariant while return-position lifetimes are covariant).",
+        "suggest": "通过强制生命周期不变 (参数位置生命周期是协变量，而返回位置生命周期是协变量) 来确保 future 能够抵抗方差变化。",
+        "translate": ""
+    },
+    {
+        "source": "Create a new `Context` from a `&Waker`.",
+        "suggest": "从 `&Waker` 创建一个新的 `Context`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the `Waker` for the current task.",
+        "suggest": "返回当前任务的 `Waker` 引号。",
+        "translate": ""
+    },
+    {
+        "source": "A `Waker` is a handle for waking up a task by notifying its executor that it is ready to be run.",
+        "suggest": "`Waker` 是通过通知执行者准备运行来唤醒任务的句柄。",
+        "translate": ""
+    },
+    {
+        "source": "This handle encapsulates a [`RawWaker`] instance, which defines the executor-specific wakeup behavior.",
+        "suggest": "该句柄封装了 [`RawWaker`] 实例，该实例定义了特定于执行者的唤醒行为。",
+        "translate": ""
+    },
+    {
+        "source": "Implements [`Clone`], [`Send`], and [`Sync`].",
+        "suggest": "实现 [`Clone`]，[`Send`] 和 [`Sync`]。",
+        "translate": ""
+    },
+    {
+        "source": "Wake up the task associated with this `Waker`.",
+        "suggest": "唤醒与此 `Waker` 相关的任务。",
+        "translate": ""
+    },
+    {
+        "source": "The actual wakeup call is delegated through a virtual function call to the implementation which is defined by the executor.",
+        "suggest": "实际的唤醒调用通过虚拟函数调用委托给执行程序定义的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Don't call `drop` -- the waker will be consumed by `wake`.",
+        "suggest": "不要调用 `drop` - `wake` 将消耗唤醒器。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because `Waker::from_raw` is the only way to initialize `wake` and `data` requiring the user to acknowledge that the contract of `RawWaker` is upheld.",
+        "suggest": "这是安全的，因为 `Waker::from_raw` 是初始化 `wake` 和 `data` 的唯一方法，要求用户确认 `RawWaker` 的契约已得到遵守。",
+        "translate": ""
+    },
+    {
+        "source": "Wake up the task associated with this `Waker` without consuming the `Waker`.",
+        "suggest": "唤醒与此 `Waker` 相关的任务，而不消耗 `Waker`。",
+        "translate": ""
+    },
+    {
+        "source": "This is similar to `wake`, but may be slightly less efficient in the case where an owned `Waker` is available.",
+        "suggest": "这与 `wake` 相似，但是在拥有 `Waker` 的情况下效率可能稍低。",
+        "translate": ""
+    },
+    {
+        "source": "This method should be preferred to calling `waker.clone().wake()`.",
+        "suggest": "此方法应该比调用 `waker.clone().wake()` 更可取。",
+        "translate": ""
+    },
+    {
+        "source": "see `wake`",
+        "suggest": "见 `wake`",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `Waker` and another `Waker` have awoken the same task.",
+        "suggest": "如果此 `Waker` 和另一个 `Waker` 唤醒了同一任务，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "This function works on a best-effort basis, and may return false even when the `Waker`s would awaken the same task.",
+        "suggest": "该函数在尽力而为的基础上起作用，即使 `Waker`s 唤醒相同的任务，也可能返回 false。",
+        "translate": ""
+    },
+    {
+        "source": "However, if this function returns `true`, it is guaranteed that the `Waker`s will awaken the same task.",
+        "suggest": "但是，如果此函数返回 `true`，则可以确保 Waker 唤醒相同的任务。",
+        "translate": ""
+    },
+    {
+        "source": "This function is primarily used for optimization purposes.",
+        "suggest": "该函数主要用于优化目的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Waker` from [`RawWaker`].",
+        "suggest": "从 [`RawWaker`] 创建一个新的 `Waker`。",
+        "translate": ""
+    },
+    {
+        "source": "The behavior of the returned `Waker` is undefined if the contract defined in [`RawWaker`]'s and [`RawWakerVTable`]'s documentation is not upheld.",
+        "suggest": "如果未遵守 [RawWaker`] 和 [`RawWakerVTable`] 文档中定义的契约，则返回的 `Waker` 的行为是不确定的。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore this method is unsafe.",
+        "suggest": "因此，此方法是不安全的。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because `Waker::from_raw` is the only way to initialize `clone` and `data` requiring the user to acknowledge that the contract of [`RawWaker`] is upheld.",
+        "suggest": "这是安全的，因为 `Waker::from_raw` 是初始化 `clone` 和 `data` 的唯一方法，要求用户确认 [`RawWaker`] 的契约已得到遵守。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because `Waker::from_raw` is the only way to initialize `drop` and `data` requiring the user to acknowledge that the contract of `RawWaker` is upheld.",
+        "suggest": "这是安全的，因为 `Waker::from_raw` 是初始化 `drop` 和 `data` 的唯一方法，要求用户确认 `RawWaker` 的契约已得到遵守。",
+        "translate": ""
+    },
+    {
+        "source": "both declarations are equivalent",
+        "suggest": "这两个声明是等效的",
+        "translate": ""
+    },
+    {
+        "source": "note that due to rounding errors result is slightly different from 8.478 and 847800.0",
+        "suggest": "请注意，由于舍入错误，结果与 8.478 和 847800.0 略有不同",
+        "translate": ""
+    },
+    {
+        "source": "note that truncation is used, not rounding",
+        "suggest": "请注意使用截断，而不是四舍五入",
+        "translate": ""
+    },
+    {
+        "source": "note that due to rounding errors result is slightly different from 0.859_872_611",
+        "suggest": "请注意，由于舍入错误，结果与 0.859_872_611 略有不同",
+        "translate": ""
+    },
+    {
+        "source": "Temporal quantification.",
+        "suggest": "时间量化。",
+        "translate": ""
+    },
+    {
+        "source": "A `Duration` type to represent a span of time, typically used for system timeouts.",
+        "suggest": "`Duration` 类型代表时间跨度，通常用于系统超时。",
+        "translate": ""
+    },
+    {
+        "source": "Each `Duration` is composed of a whole number of seconds and a fractional part represented in nanoseconds.",
+        "suggest": "每个 `Duration` 由整数秒和以纳秒表示的小数部分组成。",
+        "translate": ""
+    },
+    {
+        "source": "If the underlying system does not support nanosecond-level precision, APIs binding a system timeout will typically round up the number of nanoseconds.",
+        "suggest": "如果基础系统不支持纳秒级精度，则绑定系统超时的 API 通常会将纳秒数舍入。",
+        "translate": ""
+    },
+    {
+        "source": "[`Duration`]s implement many common traits, including [`Add`], [`Sub`], and other [`ops`] traits.",
+        "suggest": "[`Duration`] 实现了许多常见的 traits，包括 [`Add`]，[`Sub`] 和其他 [`ops`] traits。",
+        "translate": ""
+    },
+    {
+        "source": "It implements [`Default`] by returning a zero-length `Duration`.",
+        "suggest": "它通过返回零长度 `Duration` 来实现 [`Default`]。",
+        "translate": ""
+    },
+    {
+        "source": "Formatting `Duration` values",
+        "suggest": "格式化 `Duration` 值",
+        "translate": ""
+    },
+    {
+        "source": "intentionally does not have a `Display` impl, as there are a variety of ways to format spans of time for human readability.",
+        "suggest": "特意没有 `Display` 隐含功能，因为有多种方法可以格式化时间范围以提高可读性。",
+        "translate": ""
+    },
+    {
+        "source": "provides a `Debug` impl that shows the full precision of the value.",
+        "suggest": "提供一个 `Debug` impl 来显示值的完整精度。",
+        "translate": ""
+    },
+    {
+        "source": "The `Debug` output uses the non-ASCII \"µs\" suffix for microseconds.",
+        "suggest": "`Debug` 输出使用非 ASCII \"µs\" 后缀微秒。",
+        "translate": ""
+    },
+    {
+        "source": "If your program output may appear in contexts that cannot rely on full Unicode compatibility, you may wish to format `Duration` objects yourself or use a crate to do so.",
+        "suggest": "如果您的程序输出可能出现在不依赖于完全 Unicode 兼容性的上下文中，则您可能希望自己格式化 `Duration` 对象或使用 crate 这样做。",
+        "translate": ""
+    },
+    {
+        "source": "The duration of one second.",
+        "suggest": "持续时间为一秒。",
+        "translate": ""
+    },
+    {
+        "source": "The duration of one millisecond.",
+        "suggest": "一毫秒的持续时间。",
+        "translate": ""
+    },
+    {
+        "source": "The duration of one microsecond.",
+        "suggest": "一微秒的持续时间。",
+        "translate": ""
+    },
+    {
+        "source": "The duration of one nanosecond.",
+        "suggest": "1 纳秒的持续时间。",
+        "translate": ""
+    },
+    {
+        "source": "A duration of zero time.",
+        "suggest": "持续时间为零。",
+        "translate": ""
+    },
+    {
+        "source": "The maximum duration.",
+        "suggest": "最大持续时间。",
+        "translate": ""
+    },
+    {
+        "source": "It is roughly equal to a duration of 584,942,417,355 years.",
+        "suggest": "它大约等于 584,942,417,355 年的持续时间。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of whole seconds and additional nanoseconds.",
+        "suggest": "根据指定的整数秒数和其他纳秒数创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "If the number of nanoseconds is greater than 1 billion (the number of nanoseconds in a second), then it will carry over into the seconds provided.",
+        "suggest": "如果纳秒数大于 10 亿 (十亿分之一秒)，则它将延续到提供的秒数中。",
+        "translate": ""
+    },
+    {
+        "source": "This constructor will panic if the carry from the nanoseconds overflows the seconds counter.",
+        "suggest": "如果纳秒的进位溢出秒计数器，则此构造方法将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of whole seconds.",
+        "suggest": "根据指定的整数秒创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of milliseconds.",
+        "suggest": "从指定的毫秒数创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of microseconds.",
+        "suggest": "从指定的微秒数创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of nanoseconds.",
+        "suggest": "从指定的纳秒数创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if this `Duration` spans no time.",
+        "suggest": "如果此 `Duration` 不跨越时间，则返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of _whole_ seconds contained by this `Duration`.",
+        "suggest": "返回此 `Duration` 包含的 _whole_ 秒数。",
+        "translate": ""
+    },
+    {
+        "source": "The returned value does not include the fractional (nanosecond) part of the duration, which can be obtained using [`subsec_nanos`].",
+        "suggest": "返回的值不包括持续时间的小数 (nanosecond) 部分，可以使用 [`subsec_nanos`] 获得。",
+        "translate": ""
+    },
+    {
+        "source": "To determine the total number of seconds represented by the `Duration`, use `as_secs` in combination with [`subsec_nanos`]:",
+        "suggest": "要确定 `Duration` 代表的总秒数，请结合使用 `as_secs` 和 [`subsec_nanos`]:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the fractional part of this `Duration`, in whole milliseconds.",
+        "suggest": "以毫秒为单位返回此 `Duration` 的小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "This method does **not** return the length of the duration when represented by milliseconds.",
+        "suggest": "当以毫秒表示时，这个方法不会返回持续时间的长度。",
+        "translate": ""
+    },
+    {
+        "source": "The returned number always represents a fractional portion of a second (i.e., it is less than one thousand).",
+        "suggest": "返回的数字始终代表秒的小数部分 (即，小于一千)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the fractional part of this `Duration`, in whole microseconds.",
+        "suggest": "以整个微秒为单位返回此 `Duration` 的小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "This method does **not** return the length of the duration when represented by microseconds.",
+        "suggest": " 当以微秒表示时，这个方法不会返回持续时间的长度。",
+        "translate": ""
+    },
+    {
+        "source": "The returned number always represents a fractional portion of a second (i.e., it is less than one million).",
+        "suggest": "返回的数字始终代表秒的小数部分 (即，小于一百万)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the fractional part of this `Duration`, in nanoseconds.",
+        "suggest": "返回此 `Duration` 的小数部分，以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "This method does **not** return the length of the duration when represented by nanoseconds.",
+        "suggest": "当以纳秒表示时，这个方法不会返回持续时间的长度。",
+        "translate": ""
+    },
+    {
+        "source": "The returned number always represents a fractional portion of a second (i.e., it is less than one billion).",
+        "suggest": "返回的数字始终代表秒的小数部分 (即，小于十亿)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the total number of whole milliseconds contained by this `Duration`.",
+        "suggest": "返回此 `Duration` 包含的总毫秒数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the total number of whole microseconds contained by this `Duration`.",
+        "suggest": "返回此 `Duration` 包含的总微秒数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the total number of nanoseconds contained by this `Duration`.",
+        "suggest": "返回此 `Duration` 包含的纳秒总数。",
+        "translate": ""
+    },
+    {
+        "source": "Checked `Duration` addition.",
+        "suggest": "检查 `Duration` 的添加。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self + other`, returning [`None`] if overflow occurred.",
+        "suggest": "计算 `self + other`，如果发生溢出则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating `Duration` addition.",
+        "suggest": "`Duration` 饱和添加。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self + other`, returning [`Duration::MAX`] if overflow occurred.",
+        "suggest": "计算 `self + other`，如果发生溢出则返回 [`Duration::MAX`]。",
+        "translate": ""
+    },
+    {
+        "source": "Checked `Duration` subtraction.",
+        "suggest": "检查 `Duration` 减法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self - other`, returning [`None`] if the result would be negative or if overflow occurred.",
+        "suggest": "计算 `self - other`，如果结果为负或发生溢出，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating `Duration` subtraction.",
+        "suggest": "`Duration` 减法饱和。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self - other`, returning [`Duration::ZERO`] if the result would be negative or if overflow occurred.",
+        "suggest": "计算 `self - other`，如果结果为负或发生溢出，则返回 [`Duration::ZERO`]。",
+        "translate": ""
+    },
+    {
+        "source": "Checked `Duration` multiplication.",
+        "suggest": "检查 `Duration` 乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self * other`, returning [`None`] if overflow occurred.",
+        "suggest": "计算 `self * other`，如果发生溢出则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Multiply nanoseconds as u64, because it cannot overflow that way.",
+        "suggest": "将 u64 乘以纳秒，因为它不能那样溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating `Duration` multiplication.",
+        "suggest": "饱和 `Duration` 乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self * other`, returning [`Duration::MAX`] if overflow occurred.",
+        "suggest": "计算 `self * other`，如果发生溢出则返回 [`Duration::MAX`]。",
+        "translate": ""
+    },
+    {
+        "source": "Checked `Duration` division.",
+        "suggest": "检查 `Duration` 分区。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self / other`, returning [`None`] if `other == 0`.",
+        "suggest": "计算 `self / other`，如果为 `other == 0`，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of seconds contained by this `Duration` as `f64`.",
+        "suggest": "以 `f64` 形式返回此 `Duration` 包含的秒数。",
+        "translate": ""
+    },
+    {
+        "source": "The returned value does include the fractional (nanosecond) part of the duration.",
+        "suggest": "返回的值的确包含持续时间的小数 (nanosecond) 部分。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of seconds contained by this `Duration` as `f32`.",
+        "suggest": "以 `f32` 形式返回此 `Duration` 包含的秒数。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of seconds represented as `f64`.",
+        "suggest": "从指定的秒数 (表示为 `f64`) 创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "This constructor will panic if `secs` is not finite, negative or overflows `Duration`.",
+        "suggest": "如果 `secs` 不是有限的，负的或 `Duration` 溢出，则此构造函数将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Duration` from the specified number of seconds represented as `f32`.",
+        "suggest": "从指定的秒数 (表示为 `f32`) 创建一个新的 `Duration`。",
+        "translate": ""
+    },
+    {
+        "source": "Multiplies `Duration` by `f64`.",
+        "suggest": "将 `Duration` 乘以 `f64`。",
+        "translate": ""
+    },
+    {
+        "source": "This method will panic if result is not finite, negative or overflows `Duration`.",
+        "suggest": "如果结果不是有限的，负的或 `Duration` 溢出，则此方法将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Multiplies `Duration` by `f32`.",
+        "suggest": "将 `Duration` 乘以 `f32`。",
+        "translate": ""
+    },
+    {
+        "source": "Divide `Duration` by `f64`.",
+        "suggest": "将 `Duration` 除以 `f64`。",
+        "translate": ""
+    },
+    {
+        "source": "Divide `Duration` by `f32`.",
+        "suggest": "将 `Duration` 除以 `f32`。",
+        "translate": ""
+    },
+    {
+        "source": "Divide `Duration` by `Duration` and return `f64`.",
+        "suggest": "将 `Duration` 除以 `Duration`，然后返回 `f64`。",
+        "translate": ""
+    },
+    {
+        "source": "Divide `Duration` by `Duration` and return `f32`.",
+        "suggest": "将 `Duration` 除以 `Duration`，然后返回 `f32`。",
+        "translate": ""
+    },
+    {
+        "source": "Formats a floating point number in decimal notation.",
+        "suggest": "用十进制表示法格式化浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "The number is given as the `integer_part` and a fractional part.",
+        "suggest": "数字以 `integer_part` 和小数形式给出。",
+        "translate": ""
+    },
+    {
+        "source": "The value of the fractional part is `fractional_part / divisor`.",
+        "suggest": "小数部分的值为 `fractional_part / divisor`。",
+        "translate": ""
+    },
+    {
+        "source": "So `integer_part` = 3, `fractional_part` = 12 and `divisor` = 100 represents the number `3.012`.",
+        "suggest": "因此 `integer_part` =3，`fractional_part` =12，`divisor` =100 代表数字 `3.012`。",
+        "translate": ""
+    },
+    {
+        "source": "Trailing zeros are omitted.",
+        "suggest": "尾随零被省略。",
+        "translate": ""
+    },
+    {
+        "source": "must not be above 100_000_000.",
+        "suggest": "不得超过 100_000_000。",
+        "translate": ""
+    },
+    {
+        "source": "It also should be a power of 10, everything else doesn't make sense.",
+        "suggest": "它也应该是 10 的幂，其他所有都没有意义。",
+        "translate": ""
+    },
+    {
+        "source": "has to be less than `10 * divisor`!",
+        "suggest": "必须小于 `10 * divisor`!",
+        "translate": ""
+    },
+    {
+        "source": "Encode the fractional part into a temporary buffer.",
+        "suggest": "将小数部分编码到临时缓冲区中。",
+        "translate": ""
+    },
+    {
+        "source": "The buffer only need to hold 9 elements, because `fractional_part` has to be smaller than 10^9.",
+        "suggest": "缓冲区仅需要容纳 9 个元素，因为 `fractional_part` 必须小于 10 ^ 9。",
+        "translate": ""
+    },
+    {
+        "source": "The buffer is prefilled with '0' digits to simplify the code below.",
+        "suggest": "缓冲区中预填充了 '0' 数字，以简化下面的代码。",
+        "translate": ""
+    },
+    {
+        "source": "The next digit is written at this position",
+        "suggest": "下一位写在该位置",
+        "translate": ""
+    },
+    {
+        "source": "We keep writing digits into the buffer while there are non-zero digits left and we haven't written enough digits yet.",
+        "suggest": "当剩余的数字不为零时，我们一直在将数字写入缓冲区，但尚未写入足够的数字。",
+        "translate": ""
+    },
+    {
+        "source": "Write new digit into the buffer",
+        "suggest": "将新数字写入缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "If a precision < 9 was specified, there may be some non-zero digits left that weren't written into the buffer.",
+        "suggest": "如果指定的精度 < 9，则可能还有一些未写入缓冲区的非零数字。",
+        "translate": ""
+    },
+    {
+        "source": "In that case we need to perform rounding to match the semantics of printing normal floating point numbers.",
+        "suggest": "在那种情况下，我们需要进行舍入以匹配打印普通浮点数的语义。",
+        "translate": ""
+    },
+    {
+        "source": "However, we only need to do work when rounding up.",
+        "suggest": "但是，我们只需要在四舍五入时进行工作。",
+        "translate": ""
+    },
+    {
+        "source": "This happens if the first digit of the remaining ones is >= 5.",
+        "suggest": "如果其余一位的第一位为 >= 5，则会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Round up the number contained in the buffer.",
+        "suggest": "将缓冲区中包含的数字四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "We go through the buffer backwards and keep track of the carry.",
+        "suggest": "我们向后穿过缓冲区，并跟踪进位。",
+        "translate": ""
+    },
+    {
+        "source": "If the digit in the buffer is not '9', we just need to increment it and can stop then (since we don't have a carry anymore).",
+        "suggest": "如果缓冲区中的数字不是 '9'，我们只需要递增它就可以停止 (因为我们再也没有进位)。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, we set it to '0' (overflow) and continue.",
+        "suggest": "否则，我们将其设置为 '0' (overflow) 并继续。",
+        "translate": ""
+    },
+    {
+        "source": "If we still have the carry bit set, that means that we set the whole buffer to '0's and need to increment the integer part.",
+        "suggest": "如果我们仍然设置了进位位，则意味着我们将整个缓冲区设置为 `0`，并且需要增加整数部分。",
+        "translate": ""
+    },
+    {
+        "source": "Determine the end of the buffer: if precision is set, we just use as many digits from the buffer (capped to 9).",
+        "suggest": "确定缓冲区的末尾: 如果设置了精度，我们将使用缓冲区中的尽可能多的数字 (上限为 9)。",
+        "translate": ""
+    },
+    {
+        "source": "If it isn't set, we only use all digits up to the last non-zero one.",
+        "suggest": "如果未设置，我们将仅使用所有数字，直到最后一个非零数字。",
+        "translate": ""
+    },
+    {
+        "source": "If we haven't emitted a single fractional digit and the precision wasn't set to a non-zero value, we don't print the decimal point.",
+        "suggest": "如果我们没有发出单个小数位，并且精度未设置为非零值，则不打印小数点。",
+        "translate": ""
+    },
+    {
+        "source": "We are only writing ASCII digits into the buffer and it was initialized with '0's, so it contains valid UTF8.",
+        "suggest": "我们仅将 ASCII 数字写入缓冲区，并且已将其初始化为 0，因此它包含有效的 UTF8。",
+        "translate": ""
+    },
+    {
+        "source": "If the user request a precision > 9, we pad '0's at the end.",
+        "suggest": "如果用户要求精度 > 9，则在末尾填充 '0'。",
+        "translate": ""
+    },
+    {
+        "source": "Print leading '+' sign if requested",
+        "suggest": "如果需要，请打印前导 '+' 标志",
+        "translate": ""
+    },
+    {
+        "source": "See src/libstd/primitive_docs.rs for documentation.",
+        "suggest": "有关文档，请参见 src/libstd/primitive_docs.rs。",
+        "translate": ""
+    },
+    {
+        "source": "macro for implementing n-ary tuple functions and operations",
+        "suggest": "用于实现 n 元元组的函数和操作的宏",
+        "translate": ""
+    },
+    {
+        "source": "Constructs an expression that performs a lexical ordering using method $rel.",
+        "suggest": "创建一个使用方法 $rel 执行词法排序的表达式。",
+        "translate": ""
+    },
+    {
+        "source": "The values are interleaved, so the macro invocation for `(a1, a2, a3) < (b1, b2, b3)` would be `lexical_ord!(lt, a1, b1, a2, b2, a3, b3)` (and similarly for `lexical_cmp`)",
+        "suggest": "这些值是交错的，因此 `(a1, a2, a3) < (b1, b2, b3)` 的宏调用将为 `lexical_ord!(lt, a1, b1, a2, b2, a3, b3)` (对于 `lexical_cmp` 同样)",
+        "translate": ""
+    },
+    {
+        "source": "For use in liballoc, not re-exported in libstd.",
+        "suggest": "供在 liballoc 中使用，而不在 libstd 中重导出。",
+        "translate": ""
+    },
+    {
+        "source": "This script uses the following Unicode tables:",
+        "suggest": "该脚本使用以下 Unicode 表:",
+        "translate": ""
+    },
+    {
+        "source": "The following code was generated by \"src/libcore/unicode/printable.py\",",
+        "suggest": "以下代码是由 \"src/libcore/unicode/printable.py\" 生成的，",
+        "translate": ""
+    },
+    {
+        "source": "do not edit directly!",
+        "suggest": "不要直接编辑!",
+        "translate": ""
+    },
+    {
+        "source": "The following code was generated by \"src/libcore/unicode/printable.py\", do not edit directly!",
+        "suggest": "以下代码是 \"src/libcore/unicode/printable.py\" 生成的，请勿直接编辑!",
+        "translate": ""
+    },
+    {
+        "source": "This file is generated by src/tools/unicode-table-generator;",
+        "suggest": "该文件由 src/tools/unicode-table-generator 生成;",
+        "translate": ""
+    },
+    {
+        "source": "do not edit manually!",
+        "suggest": "不要手动编辑!",
+        "translate": ""
+    },
+    {
+        "source": "Lower 6 bits",
+        "suggest": "低 6 位",
+        "translate": ""
+    },
+    {
+        "source": "Note that this *cannot* be past the end of the array, as the last element is greater than std::char::MAX (the largest possible needle).",
+        "suggest": "请注意，此 *不能* 超出数组的末尾，因为最后一个元素大于 std::char::MAX (可能的最大针数)。",
+        "translate": ""
+    },
+    {
+        "source": "So, we cannot have found it (i.e. Ok(idx) + 1 != length) and the correct location cannot be past it, so Err(idx) != length either.",
+        "suggest": "因此，我们找不到它 (即 Ok(idx) + 1! = 长度)，并且正确的位置也不能超过它，因此 Err(idx)! = 长度也没有。",
+        "translate": ""
+    },
+    {
+        "source": "This means that we can avoid bounds checking for the accesses below, too.",
+        "suggest": "这意味着我们也可以避免对下面的访问进行边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "Collapses all unit items from an iterator into one.",
+        "suggest": "将一个迭代器中的所有单元项折叠为一个。",
+        "translate": ""
+    },
+    {
+        "source": "This is more useful when combined with higher-level abstractions, like collecting to a `Result<(), E>` where you only care about errors:",
+        "suggest": "与更高级别的抽象结合使用时，此功能尤其有用，例如收集到仅关心错误的 `Result<(), E>` 上:",
+        "translate": ""
+    },
+    {
+        "source": "This test makes sure the correct number of elements are dropped.",
+        "suggest": "这个测试确保丢弃了正确数量的元素。",
+        "translate": ""
+    },
+    {
+        "source": "The `R` type is just a reference to a `Cell` that is incremented when an `R` is dropped.",
+        "suggest": "`R` 类型只是对 `Cell` 的引用，当 `R` 被丢弃时，`Cell` 会递增。",
+        "translate": ""
+    },
+    {
+        "source": "This is somewhat verbose because `Foo` does not implement `Copy` since it implements `Drop`.",
+        "suggest": "这有点冗长，因为 `Foo` 不实现 `Copy`，因为它实现了 `Drop`。",
+        "translate": ""
+    },
+    {
+        "source": "Consequently, we cannot write `[Foo(i); 5]`.",
+        "suggest": "因此，我们无法编写 `[Foo(i); 5]`。",
+        "translate": ""
+    },
+    {
+        "source": "Simple: drop new iterator.",
+        "suggest": "简单的: 丢弃新的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Call `next()` once.",
+        "suggest": "一次调用 `next()`。",
+        "translate": ""
+    },
+    {
+        "source": "Check `clone` and calling `next`/`next_back`.",
+        "suggest": "检查 `clone` 并调用 `next`/`next_back`。",
+        "translate": ""
+    },
+    {
+        "source": "Check via `nth`.",
+        "suggest": "通过 `nth` 检查。",
+        "translate": ""
+    },
+    {
+        "source": "Check every element.",
+        "suggest": "检查每个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This test does not work on targets without panic=unwind support.",
+        "suggest": "该测试不适用于没有 panic=unwind 支持的目标。",
+        "translate": ""
+    },
+    {
+        "source": "To work around this problem, test is marked is should_panic, so it will be automagically skipped on unsuitable targets, such as wasm32-unknown-unkown.",
+        "suggest": "要变通解决此问题，将 test 标记为 should_panic，以便在不适当的目标 (例如 wasm32-unknown-unkown) 上自动跳过该测试。",
+        "translate": ""
+    },
+    {
+        "source": "It means that we use panic for indicating success.",
+        "suggest": "这意味着我们使用 panic 表示成功。",
+        "translate": ""
+    },
+    {
+        "source": "check that all bombs are successfully dropped",
+        "suggest": "检查所有 bombs 是否已成功丢弃",
+        "translate": ""
+    },
+    {
+        "source": "See note on above test for why `should_panic` is used.",
+        "suggest": "关于为什么使用 `should_panic` 的原因，请参见上述测试的说明。",
+        "translate": ""
+    },
+    {
+        "source": "Dotted capital I, Kelvin sign, Sharp S.",
+        "suggest": "虚线大写字母 I，开尔文符号，夏普 S。",
+        "translate": ""
+    },
+    {
+        "source": "Test IndexMut on String.",
+        "suggest": "在 String 上测试 IndexMut。",
+        "translate": ""
+    },
+    {
+        "source": "Shorthands used by the is_ascii_* tests.",
+        "suggest": "is_ascii_ * 测试使用的简写形式。",
+        "translate": ""
+    },
+    {
+        "source": "does a good amount of pointer manipulation and has alignment-dependent computation.",
+        "suggest": "进行了大量的指针操作，并具有与对齐有关的计算。",
+        "translate": ""
+    },
+    {
+        "source": "This is all sanity-checked via `debug_assert!`s, so we test various sizes/alignments thoroughly versus an \"obviously correct\" baseline function.",
+        "suggest": "所有这些都通过 `debug_assert! `s 进行了完整性检查，因此我们将各种 sizes/alignments 与 \"obviously correct\" 基线函数进行全面测试。",
+        "translate": ""
+    },
+    {
+        "source": "The \"obviously-correct\" baseline mentioned above.",
+        "suggest": "上面提到的 \"obviously-correct\" 基线。",
+        "translate": ""
+    },
+    {
+        "source": "Helper to repeat `l` copies of `b0` followed by `l` copies of `b1`.",
+        "suggest": "助手重复 `b0` 的 `l` 副本，然后是 `b1` 的 `l` 副本。",
+        "translate": ""
+    },
+    {
+        "source": "Potentially misaligned head",
+        "suggest": "头部可能未对准",
+        "translate": ""
+    },
+    {
+        "source": "Potentially misaligned tail",
+        "suggest": "尾巴可能未对准",
+        "translate": ""
+    },
+    {
+        "source": "Both head and tail are potentially misaligned",
+        "suggest": "头部和尾部都可能未对齐",
+        "translate": ""
+    },
+    {
+        "source": "test that the `is_ascii` methods of `char` and `u8` are usable in a const context",
+        "suggest": "测试 `char` 和 `u8` 的 `is_ascii` 方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "Missing intrinsic in compiler-builtins",
+        "suggest": "编译器内联函数中缺少内联函数",
+        "translate": ""
+    },
+    {
+        "source": "Note that we're not really testing the mutability here but it's important on Android at the moment (#49775)",
+        "suggest": "请注意，我们并不是真正在这里测试可变性，但是在 (#49775) 上，这对于 Android 很重要",
+        "translate": ""
+    },
+    {
+        "source": "Using Cell in any way should never cause clone() to be invoked -- after all, that would permit evil user code to abuse `Cell` and trigger crashes.",
+        "suggest": "以任何方式使用 Cell 绝不应该引起 clone() 的调用 - 毕竟，这将使邪恶的用户代码滥用 `Cell` 并触发崩溃。",
+        "translate": ""
+    },
+    {
+        "source": "not ẞ: Latin capital letter sharp s",
+        "suggest": "不是ẞ: 拉丁大写字母 sharp s",
+        "translate": ""
+    },
+    {
+        "source": "combining character",
+        "suggest": "组合字符",
+        "translate": ""
+    },
+    {
+        "source": "zero width space",
+        "suggest": "零宽空格",
+        "translate": ""
+    },
+    {
+        "source": "private use 1",
+        "suggest": "private 使用 1",
+        "translate": ""
+    },
+    {
+        "source": "private use 2",
+        "suggest": "private 使用 2",
+        "translate": ""
+    },
+    {
+        "source": "Check counting",
+        "suggest": "检查计数",
+        "translate": ""
+    },
+    {
+        "source": "Check nth",
+        "suggest": "检查第几个",
+        "translate": ""
+    },
+    {
+        "source": "Check that OoB is handled correctly",
+        "suggest": "检查 OoB 是否得到正确处理",
+        "translate": ""
+    },
+    {
+        "source": "Check the first char",
+        "suggest": "检查第一个字符",
+        "translate": ""
+    },
+    {
+        "source": "Check the second char",
+        "suggest": "检查第二个字符",
+        "translate": ""
+    },
+    {
+        "source": "Check the last char",
+        "suggest": "检查最后一个字符",
+        "translate": ""
+    },
+    {
+        "source": "Check OoB",
+        "suggest": "检查 OOB",
+        "translate": ""
+    },
+    {
+        "source": "For all possible in-bound offsets",
+        "suggest": "对于所有可能的入站偏移量",
+        "translate": ""
+    },
+    {
+        "source": "Check last",
+        "suggest": "最后检查",
+        "translate": ""
+    },
+    {
+        "source": "Check len",
+        "suggest": "检查 len",
+        "translate": ""
+    },
+    {
+        "source": "Check size_hint (= len in ExactSizeIterator)",
+        "suggest": "检查 size_hint (= len in ExactSizeIterator)",
+        "translate": ""
+    },
+    {
+        "source": "Check post-last",
+        "suggest": "检查 post-last",
+        "translate": ""
+    },
+    {
+        "source": "Our type.",
+        "suggest": "我们的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Our implementation of `PartialEq` to support `==` and `!=`.",
+        "suggest": "`PartialEq` 的实现支持 `==` 和 `!=`。",
+        "translate": ""
+    },
+    {
+        "source": "Our custom eq allows numbers which are near each other to be equal!",
+        "suggest": "我们的自定义 eq 允许彼此接近的数字相等!",
+        "translate": ""
+    },
+    {
+        "source": "Now these binary operators will work when applied!",
+        "suggest": "现在，这些二进制运算符将在应用时起作用!",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Ordering` are usable in a const context",
+        "suggest": "测试 `Ordering` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "Test default methods in PartialOrd and PartialEq",
+        "suggest": "测试 PartialOrd 和 PartialEq 中的默认方法",
+        "translate": ""
+    },
+    {
+        "source": "Aligned to two bytes",
+        "suggest": "对齐两个字节",
+        "translate": ""
+    },
+    {
+        "source": "Since DATA.as_ptr() is aligned to two bytes, adding 1 byte to that produces an unaligned *const u16",
+        "suggest": "由于 DATA.as_ptr() 对齐为两个字节，因此向其添加 1 个字节将产生未对齐的 *const u16",
+        "translate": ""
+    },
+    {
+        "source": "Ensure errors in a map entry don't trigger panics (#65231)",
+        "suggest": "确保 map 条目中的错误不会触发 panics (#65231)",
+        "translate": ""
+    },
+    {
+        "source": "No residual flags left by pointer formatting",
+        "suggest": "指针格式化没有剩余标志",
+        "translate": ""
+    },
+    {
+        "source": "Formatting integers should select the right implementation based off the type of the argument.",
+        "suggest": "格式化整数应该根据参数的类型选择正确的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Also, hex/octal/binary should be defined for integers, but they shouldn't emit the negative sign.",
+        "suggest": "同样，应该为整数定义 hex/octal/binary，但它们不应发出负号。",
+        "translate": ""
+    },
+    {
+        "source": "Test a larger number",
+        "suggest": "测试更大的数字",
+        "translate": ""
+    },
+    {
+        "source": "test that float and integer match",
+        "suggest": "测试浮点数和整数是否匹配",
+        "translate": ""
+    },
+    {
+        "source": "test adding precision",
+        "suggest": "测试添加精度",
+        "translate": ""
+    },
+    {
+        "source": "test rounding",
+        "suggest": "测试四舍五入",
+        "translate": ""
+    },
+    {
+        "source": "test huge precision",
+        "suggest": "测试极高的精度",
+        "translate": ""
+    },
+    {
+        "source": "test zero precision",
+        "suggest": "测试零精度",
+        "translate": ""
+    },
+    {
+        "source": "test padding with precision (and sign)",
+        "suggest": "精确测试填充 (和符号)",
+        "translate": ""
+    },
+    {
+        "source": "Miri cannot hash pointers",
+        "suggest": "Miri 不能 hash 指针",
+        "translate": ""
+    },
+    {
+        "source": "Hash just the bytes of the slice, without length prefix",
+        "suggest": "仅散列切片的字节，不带长度前缀",
+        "translate": ""
+    },
+    {
+        "source": "Check that `const_assume` feature allow `assume` intrinsic to be used in const contexts.",
+        "suggest": "检查 `const_assume` 功能是否允许在常量上下文中使用 `assume` 内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "the entire function is not safe, but it is just an example not used elsewhere.",
+        "suggest": "整个函数并不安全，但这只是其他地方未使用的示例。",
+        "translate": ""
+    },
+    {
+        "source": "this chains an iterator of length 0 with an iterator of length 1, so after calling `.next()` once, the iterator is empty and the state is `ChainState::Back`.",
+        "suggest": "这将长度为 0 的迭代器与长度为 1 的迭代器链接在一起，因此，一次调用 `.next()` 之后，迭代器为空，状态为 `ChainState::Back`。",
+        "translate": ""
+    },
+    {
+        "source": "should now disregard the size hint of the left iterator",
+        "suggest": "现在应该忽略左迭代器的大小提示",
+        "translate": ""
+    },
+    {
+        "source": "Chain shouldn't be fused in its second iterator, depending on direction",
+        "suggest": "链不应在其第二个迭代器中融合，具体取决于方向",
+        "translate": ""
+    },
+    {
+        "source": "use rev to access try_rfold",
+        "suggest": "使用 rev 访问 try_rfold",
+        "translate": ""
+    },
+    {
+        "source": "skip the last 15, ending in state Front",
+        "suggest": "跳过最后 15 个，以状态 Front 结尾的",
+        "translate": ""
+    },
+    {
+        "source": "skip the first 15, ending in state Back",
+        "suggest": "跳过前 15 个，以状态 Back 结尾",
+        "translate": ""
+    },
+    {
+        "source": "test that .chain() is well behaved with an unfused iterator",
+        "suggest": "使用未融合的迭代器测试 .chain() 的行为是否良好",
+        "translate": ""
+    },
+    {
+        "source": "steal a couple to get an interesting offset",
+        "suggest": "移动一对儿以获得有趣的补偿",
+        "translate": ""
+    },
+    {
+        "source": "Tests `Flatten::fold` with items already picked off the front and back, to make sure all parts of the `Flatten` are folded correctly.",
+        "suggest": "测试 `Flatten::fold` 的正面和背面是否已折断项目，以确保 `Flatten` 的所有部件均正确折叠。",
+        "translate": ""
+    },
+    {
+        "source": "have front and back iters in progress",
+        "suggest": "正在进行前后迭代",
+        "translate": ""
+    },
+    {
+        "source": "Tests `FlatMap::fold` with items already picked off the front and back, to make sure all parts of the `FlatMap` are folded correctly.",
+        "suggest": "测试 `FlatMap::fold` 的正面和背面是否已折断项目，以确保 `FlatMap` 的所有部件均正确折叠。",
+        "translate": ""
+    },
+    {
+        "source": "Can't check len now because count consumes.",
+        "suggest": "由于计数已消耗，现在无法检查 len。",
+        "translate": ""
+    },
+    {
+        "source": "Abort after the first item.",
+        "suggest": "在第一个项之后终止。",
+        "translate": ""
+    },
+    {
+        "source": "Abort after the second item.",
+        "suggest": "在第二项之后终止。",
+        "translate": ""
+    },
+    {
+        "source": "Abort after the third item.",
+        "suggest": "在第三个项之后终止。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that panics whenever `next` or next_back` is called after `None` has already been returned.",
+        "suggest": "`None` 返回后，只要调用 `next` 或 next_back` 的 panics 的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This does not violate `Iterator`'s contract.",
+        "suggest": "这不违反 `Iterator` 的契约。",
+        "translate": ""
+    },
+    {
+        "source": "Used to test that iterator adaptors don't poll their inner iterators after exhausting them.",
+        "suggest": "用于测试迭代器适配器用完之后是否不轮询其内部迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator wrapper that panics whenever `next` or `next_back` is called after `None` has been returned.",
+        "suggest": "返回 `None` 之后，每当调用 `next` 或 `next_back` 时，panics 的迭代器包装器。",
+        "translate": ""
+    },
+    {
+        "source": "alternates between `None` and `Some(())`",
+        "suggest": "在 `None` 和 `Some(())` 之间交替",
+        "translate": ""
+    },
+    {
+        "source": "This is an iterator that follows the Iterator contract, but it is not fused.",
+        "suggest": "这是遵循 Iterator 契约的迭代器，但未融合。",
+        "translate": ""
+    },
+    {
+        "source": "After having returned None once, it will start producing elements if .next() is called again.",
+        "suggest": "一次返回 None 后，如果再次调用 .next()，它将开始生成元素。",
+        "translate": ""
+    },
+    {
+        "source": "first, try on references",
+        "suggest": "首先，尝试引用",
+        "translate": ""
+    },
+    {
+        "source": "try before `peek()`",
+        "suggest": "在 `peek()` 之前尝试",
+        "translate": ""
+    },
+    {
+        "source": "try after peek()",
+        "suggest": "peek() 之后尝试",
+        "translate": ""
+    },
+    {
+        "source": "make sure `next()` still behaves",
+        "suggest": "确保 `next()` 仍然正常运行",
+        "translate": ""
+    },
+    {
+        "source": "make sure comparison works for owned values",
+        "suggest": "确保比较适用于拥有的值",
+        "translate": ""
+    },
+    {
+        "source": "make sure basic functionality works",
+        "suggest": "确保基本功能正常",
+        "translate": ""
+    },
+    {
+        "source": "Check that the loop using .peek() terminates",
+        "suggest": "检查使用 .peek() 的循环是否终止",
+        "translate": ""
+    },
+    {
+        "source": "test the type inference",
+        "suggest": "测试类型推断",
+        "translate": ""
+    },
+    {
+        "source": "make sure the skipped parts have not been consumed",
+        "suggest": "确保跳过的部分没有被消耗",
+        "translate": ""
+    },
+    {
+        "source": "process skips before folding",
+        "suggest": "折叠前跳过过程",
+        "translate": ""
+    },
+    {
+        "source": "large step",
+        "suggest": "大步",
+        "translate": ""
+    },
+    {
+        "source": "n + 1 overflows",
+        "suggest": "n + 1 上溢",
+        "translate": ""
+    },
+    {
+        "source": "to set `first_take` to `false`",
+        "suggest": "将 `first_take` 设置为 `false`",
+        "translate": ""
+    },
+    {
+        "source": "The two checks in each case are needed because the logic is different before the first call to `next()`.",
+        "suggest": "在每种情况下都需要两次检查，因为在第一次调用 `next()` 之前逻辑是不同的。",
+        "translate": ""
+    },
+    {
+        "source": "exact multiple",
+        "suggest": "精确倍数",
+        "translate": ""
+    },
+    {
+        "source": "larger base range, but not enough to get another element",
+        "suggest": "基本范围较大，但不足以获取其他元素",
+        "translate": ""
+    },
+    {
+        "source": "smaller base range, so fewer resulting elements",
+        "suggest": "基本范围更小，因此生成的元素更少",
+        "translate": ""
+    },
+    {
+        "source": "infinite upper bound",
+        "suggest": "无限上限",
+        "translate": ""
+    },
+    {
+        "source": "still infinite with larger step",
+        "suggest": "步长仍然无限",
+        "translate": ""
+    },
+    {
+        "source": "propagates ExactSizeIterator",
+        "suggest": "传播 ExactSizeIterator",
+        "translate": ""
+    },
+    {
+        "source": "Cannot be TrustedLen as a step greater than one makes an iterator with (usize::MAX, None) no longer meet the safety requirements",
+        "suggest": "不能成为 TrustedLen 大于 1 的步骤使 ( (useize::MAX，None) 的迭代器不再满足安全要求",
+        "translate": ""
+    },
+    {
+        "source": "The second iterator is one item longer, so `next_back` is called on it one more time.",
+        "suggest": "第二个迭代器长一个项目，因此 `next_back` 会再被调用一次。",
+        "translate": ""
+    },
+    {
+        "source": "test that it has the side effect nested inside enumerate",
+        "suggest": "测试它是否具有嵌套在枚举中的副作用",
+        "translate": ""
+    },
+    {
+        "source": "You're probably viewing this file because you're adding a test (or you might just be browsing, in that case, hey there!).",
+        "suggest": "您可能正在查看此文件，因为您要添加测试 (或者可能只是在浏览，在这种情况下，嘿! )。",
+        "translate": ""
+    },
+    {
+        "source": "The iter test suite is split into two big modules, and some miscellaneous smaller modules.",
+        "suggest": "iter 测试套件分为两个大模块和一些其他较小的模块。",
+        "translate": ""
+    },
+    {
+        "source": "The two big modules are `adapters` and `traits`.",
+        "suggest": "两个大模块是 `adapters` 和 `traits`。",
+        "translate": ""
+    },
+    {
+        "source": "are for methods on `Iterator` that adapt the data inside the iterator, whether it be by emitting another iterator or returning an item from inside the iterator after executing a closure on each item.",
+        "suggest": "适用于 `Iterator` 上适应迭代器内部数据的方法，无论是通过发出另一个迭代器还是在对每个项执行闭包后从迭代器内部返回一个项来实现。",
+        "translate": ""
+    },
+    {
+        "source": "are for trait's that extend an `Iterator` (and the `Iterator` trait itself, mostly containing miscellaneous methods).",
+        "suggest": "用于扩展 `Iterator` 的 trait (以及 `Iterator` trait 本身，主要包含其他方法)。",
+        "translate": ""
+    },
+    {
+        "source": "For the most part, if a test in `traits` uses a specific adapter, then it should be moved to that adapter's test file in `adapters`.",
+        "suggest": "在大多数情况下，如果 `traits` 中的测试使用特定的适配器，则应将其移动到 `adapters` 中该适配器的测试文件中。",
+        "translate": ""
+    },
+    {
+        "source": "this test is only meaningful when sizeof usize < sizeof u64",
+        "suggest": "仅当 sizeof usize <sizeof u64 时，此测试才有意义",
+        "translate": ""
+    },
+    {
+        "source": "takes the sum by repeatedly calling `next` on `iter`, thus testing that repeated calls to `ResultShunt::try_fold` produce the expected results",
+        "suggest": "通过反复调用 `iter` 上的 `next` 来求和，因此测试重复调用 `ResultShunt::try_fold` 会产生预期的结果",
+        "translate": ""
+    },
+    {
+        "source": "If you've made a test that happens to use one of DoubleEnded's methods, but it tests another adapter or trait, you should *add it to the adapter or trait's test file*.",
+        "suggest": "如果您进行的测试碰巧使用了 DoubleEnded 的方法之一，但是它测试了另一个适配器或 trait，则应 *add it 到适配器或 trait 的测试文件*。",
+        "translate": ""
+    },
+    {
+        "source": "Some examples would be `adapters::cloned::test_cloned_try_folds` or `adapters::flat_map::test_double_ended_flat_map`, which use `try_fold` and `next_back`, but test their own adapter.",
+        "suggest": "`adapters::cloned::test_cloned_try_folds` 或 `adapters::flat_map::test_double_ended_flat_map` 是一些示例，它们使用 `try_fold` 和 `next_back`，但是测试它们自己的适配器。",
+        "translate": ""
+    },
+    {
+        "source": "A wrapper struct that implements `Eq` and `Ord` based on the wrapped integer modulo 3.",
+        "suggest": "包装器结构体，基于包装的整数模 3 实现 `Eq` 和 `Ord`。",
+        "translate": ""
+    },
+    {
+        "source": "Used to test that `Iterator::max` and `Iterator::min` return the correct element if some of them are equal.",
+        "suggest": "如果其中一些相等，则用于测试 `Iterator::max` 和 `Iterator::min` 返回正确的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Sequence with NaN",
+        "suggest": "NaN 序列",
+        "translate": ""
+    },
+    {
+        "source": "sum the first five values",
+        "suggest": "将前五个值相加",
+        "translate": ""
+    },
+    {
+        "source": "multiple of 3",
+        "suggest": "3 的倍数",
+        "translate": ""
+    },
+    {
+        "source": "multiple of 4",
+        "suggest": "4 的倍数",
+        "translate": ""
+    },
+    {
+        "source": "multiple of 5",
+        "suggest": "5 的倍数",
+        "translate": ""
+    },
+    {
+        "source": "Skip u64/i64 to avoid differences with 32-bit vs 64-bit platforms",
+        "suggest": "跳过 u64/i64 以避免与 32 位和 64 位平台之间的差异",
+        "translate": ""
+    },
+    {
+        "source": "borrow of inner `Option<T>` --+",
+        "suggest": "内部 `Option<T>` 的借用 -+",
+        "translate": ""
+    },
+    {
+        "source": "temporary (unique) borrow of inner `Option<T>`   |",
+        "suggest": "内部 `Option<T>` 的临时 (unique) 借用 |",
+        "translate": ""
+    },
+    {
+        "source": "up until here ---------------------------+",
+        "suggest": "直到这里 --- ------------------------+",
+        "translate": ""
+    },
+    {
+        "source": "also test unsizing",
+        "suggest": "还测试大小",
+        "translate": ""
+    },
+    {
+        "source": "Using as a pattern is supported by the compiler:",
+        "suggest": "编译器支持将其用作模式:",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `NonZeroX>` are usable in a const context",
+        "suggest": "测试 `NonZeroX>` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "only tests NonZero8",
+        "suggest": "仅测试 NonZero8",
+        "translate": ""
+    },
+    {
+        "source": "Take a float literal, turn it into a string in various ways (that are all trusted to be correct) and see if those strings are parsed back to the value of the literal.",
+        "suggest": "以浮点数的字面量，以各种方式将其转换为字符串 (都相信是正确的)，然后查看这些字符串是否已解析回字面量。",
+        "translate": ""
+    },
+    {
+        "source": "Requires a *polymorphic literal*, i.e., one that can serve as f64 as well as f32.",
+        "suggest": "需要一个 *polymorphic 字面量*，即可以同时用作 f64 和 f32 的字面量*。",
+        "translate": ""
+    },
+    {
+        "source": "2^65 - 3, triggers half-to-even with even significand",
+        "suggest": "2 ^ 65-3，偶数触发一半到偶数",
+        "translate": ""
+    },
+    {
+        "source": "Triggers the tricky underflow case in AlgorithmM (for f32)",
+        "suggest": "触发 AlgorithmM 中棘手的下溢情况 (对于 f32)",
+        "translate": ""
+    },
+    {
+        "source": "Triggers AlgorithmR",
+        "suggest": "触发算法 R",
+        "translate": ""
+    },
+    {
+        "source": "Triggers another path through AlgorithmR",
+        "suggest": "通过 AlgorithmR 触发另一条路径",
+        "translate": ""
+    },
+    {
+        "source": "and yet another.",
+        "suggest": "还有另一个。",
+        "translate": ""
+    },
+    {
+        "source": "This number triggers the fast path and is handled incorrectly when compiling on x86 without SSE2 (i.e., using the x87 FPU stack).",
+        "suggest": "在不使用 SSE2 的 x86 上进行编译时 (即，使用 x87 FPU 栈)，该数字将触发快速路径，并且处理不正确。",
+        "translate": ""
+    },
+    {
+        "source": "At the time of this writing, this returns Err(..), but this is a bug that should be fixed.",
+        "suggest": "在撰写本文时，它将返回 Err(..)，但这是一个应该修复的错误。",
+        "translate": ""
+    },
+    {
+        "source": "It makes no sense to enshrine that in a test, the important part is that it doesn't panic.",
+        "suggest": "毫无疑问的是，在测试中，重要的部分是它不是 panic。",
+        "translate": ""
+    },
+    {
+        "source": "intentionally written without {min,max}_sig() as a sanity check",
+        "suggest": "故意写成没有 {min，max} _sig () 的健全性检查",
+        "translate": ""
+    },
+    {
+        "source": "The significands are perfectly in range, so the exponent should not matter",
+        "suggest": "有效位数在范围内，因此指数应该无关紧要",
+        "translate": ""
+    },
+    {
+        "source": "For subnormals, MIN_SUBNORMAL is the ULP",
+        "suggest": "对于次标准而言，MIN_SUBNORMAL 是 ULP",
+        "translate": ""
+    },
+    {
+        "source": "Ignore the \"sign\" (quiet / signalling flag) of NAN.",
+        "suggest": "忽略 NAN 的 \"sign\" (安静 / 信令标志)。",
+        "translate": ""
+    },
+    {
+        "source": "It can vary between runtime operations and LLVM folding.",
+        "suggest": "它在运行时操作和 LLVM 折叠之间可能会有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "extreme values:",
+        "suggest": "极端值:",
+        "translate": ""
+    },
+    {
+        "source": "assuming a correct `ldexp` has been supplied, the given arguments cannot possibly cause undefined behavior",
+        "suggest": "假设提供了正确的 `ldexp`，则给定的参数不可能导致未定义的行为",
+        "translate": ""
+    },
+    {
+        "source": "use a large enough buffer",
+        "suggest": "使用足够大的缓冲区",
+        "translate": ""
+    },
+    {
+        "source": "check significant digits",
+        "suggest": "检查有效数字",
+        "translate": ""
+    },
+    {
+        "source": "check if this is a rounding-to-even case.",
+        "suggest": "检查这是否是四舍五入的情况。",
+        "translate": ""
+    },
+    {
+        "source": "we avoid rounding ...x5000...",
+        "suggest": "我们避免四舍五入... x5000 ...",
+        "translate": ""
+    },
+    {
+        "source": "(with infinite zeroes) to ...(x+1) when x is even.",
+        "suggest": "x 为偶数时 (带有无限零) 到 ...(x+1)。",
+        "translate": ""
+    },
+    {
+        "source": "if this returns true, expected_[..i] is all `9`s and being rounded up.",
+        "suggest": "如果返回 true，则 Expected _ [.. i] 全部为 9，并被四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "we should always return `100..00` (`i` digits) instead, since that's what we can came up with `i` digits anyway.",
+        "suggest": "我们应该始终返回 `100..00` (`i` 位)，因为无论如何我们都可以使用 `i` 位。",
+        "translate": ""
+    },
+    {
+        "source": "assumes that the adjustment to the length is done by caller, which we simply ignore.",
+        "suggest": "假设对长度的调整是由调用方完成的，我们将忽略它。",
+        "translate": ""
+    },
+    {
+        "source": "check exact rounding for zero- and negative-width cases",
+        "suggest": "检查零宽度和负宽度情况下的精确舍入",
+        "translate": ""
+    },
+    {
+        "source": "check infinite zero digits",
+        "suggest": "检查无限零位数",
+        "translate": ""
+    },
+    {
+        "source": "Returns `x * 2^exp`.",
+        "suggest": "返回 `x * 2^exp`。",
+        "translate": ""
+    },
+    {
+        "source": "Almost same to `std::{f32,f64}::ldexp`.",
+        "suggest": "与 `std::{f32,f64}::ldexp` 几乎相同。",
+        "translate": ""
+    },
+    {
+        "source": "This is used for testing.",
+        "suggest": "这用于测试。",
+        "translate": ""
+    },
+    {
+        "source": "in the following comments, three numbers are spaced by 1 ulp apart, and the second one is being formatted.",
+        "suggest": "在下面的注释中，三个数字以 1 ulp 的间隔隔开，第二个数字被格式化了。",
+        "translate": ""
+    },
+    {
+        "source": "some tests are derived from [1].",
+        "suggest": "一些测试是从 [1] 派生的。",
+        "translate": ""
+    },
+    {
+        "source": "Vern Paxson, A Program for Testing IEEE Decimal-Binary Conversion",
+        "suggest": "Vern Paxson，用于测试 IEEE 十进制 - 二进制转换的程序",
+        "translate": ""
+    },
+    {
+        "source": "(1/3 in the default rounding)",
+        "suggest": "(1/3 在默认的四舍五入中)",
+        "translate": ""
+    },
+    {
+        "source": "regression test for decoders",
+        "suggest": "解码器回归测试",
+        "translate": ""
+    },
+    {
+        "source": "Table 16: Stress Inputs for Converting 24-bit Binary to Decimal, < 1/2 ULP",
+        "suggest": "表 16: 用于将 24 位二进制转换为十进制，<1/2 ULP 的应力输入",
+        "translate": ""
+    },
+    {
+        "source": "Table 17: Stress Inputs for Converting 24-bit Binary to Decimal, > 1/2 ULP",
+        "suggest": "表 17: 用于将 24 位二进制转换为十进制的应力输入，> 1/2 ULP",
+        "translate": ""
+    },
+    {
+        "source": "this example is explicitly mentioned in the paper.",
+        "suggest": "本文中明确提到了这个示例。",
+        "translate": ""
+    },
+    {
+        "source": "explicit test case for equally closest representations.",
+        "suggest": "同样近似表示的显式测试用例。",
+        "translate": ""
+    },
+    {
+        "source": "Dragon has its own tie-breaking rule;",
+        "suggest": "Dragon 有自己的 tie-breaking 规则。",
+        "translate": ""
+    },
+    {
+        "source": "Grisu should fall back.",
+        "suggest": "Grisu 应该后退。",
+        "translate": ""
+    },
+    {
+        "source": "tie breaking should always prefer that.",
+        "suggest": "决胜局应该总是更喜欢这样做。",
+        "translate": ""
+    },
+    {
+        "source": "Table 3: Stress Inputs for Converting 53-bit Binary to Decimal, < 1/2 ULP",
+        "suggest": "表 3: 用于将 53 位二进制转换为十进制 (<1/2 ULP) 的压力输入",
+        "translate": ""
+    },
+    {
+        "source": "Table 4: Stress Inputs for Converting 53-bit Binary to Decimal, > 1/2 ULP",
+        "suggest": "表 4: 用于将 53 位二进制转换为十进制，(>1/2 ULP) 的压力输入",
+        "translate": ""
+    },
+    {
+        "source": "very large output",
+        "suggest": "非常大的输出",
+        "translate": ""
+    },
+    {
+        "source": "the true value of 1.0e23f64 is less than 10^23, but that shouldn't matter here",
+        "suggest": "1.0e23f64 的真实值小于 10 ^ 23，但这无关紧要",
+        "translate": ""
+    },
+    {
+        "source": "okay, this is becoming tough.",
+        "suggest": "好的，这变得越来越困难。",
+        "translate": ""
+    },
+    {
+        "source": "fortunately for us, this is almost the worst case.",
+        "suggest": "对我们来说幸运的是，这几乎是最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "because it really is less than 0.95",
+        "suggest": "因为它确实小于 0.95",
+        "translate": ""
+    },
+    {
+        "source": "really is less than 0.0095",
+        "suggest": "确实小于 0.0095",
+        "translate": ""
+    },
+    {
+        "source": "using rng pulls in i128 support, which doesn't work",
+        "suggest": "使用 rng 拉入 i128 支持，该方法不起作用",
+        "translate": ""
+    },
+    {
+        "source": "we have only 2^23 * (2^8 - 1) - 1 = 2,139,095,039 positive finite f32 values, so why not simply testing all of them?",
+        "suggest": "我们只有 2 ^ 23 * (2 ^ 8-1) -1=2,139,095,039 个正有限 f32 值，那么为什么不简单地测试所有这些值呢?",
+        "translate": ""
+    },
+    {
+        "source": "this is of course very stressful (and thus should be behind an `#[ignore]` attribute), but with `-C opt-level=3 -C lto` this only takes about an hour or so.",
+        "suggest": "这当然很麻烦 (因此应该放在 `#[ignore]` 属性后面)，但是使用 `-C opt-level=3 -C lto` 大约只需要一个小时左右。",
+        "translate": ""
+    },
+    {
+        "source": "iterate from 0x0000_0001 to 0x7f7f_ffff, i.e., all finite ranges",
+        "suggest": "从 0x0000_0001 迭代到 0x7f7f_ffff，即所有有限范围",
+        "translate": ""
+    },
+    {
+        "source": "it is too expensive",
+        "suggest": "它太贵了",
+        "translate": ""
+    },
+    {
+        "source": "it is hard to directly test the optimality of the output, but we can at least test if two different algorithms agree to each other.",
+        "suggest": "很难直接测试输出的最优性，但是我们至少可以测试两种不同的算法是否彼此一致。",
+        "translate": ""
+    },
+    {
+        "source": "this reports the progress and the number of f32 values returned `None`.",
+        "suggest": "这将报告进度和返回的 f32 值 `None` 的数量。",
+        "translate": ""
+    },
+    {
+        "source": "with `--nocapture` (and plenty of time and appropriate rustc flags), this should print:",
+        "suggest": "使用 `--nocapture` (以及足够的时间和适当的 rustc 标志) 时，应打印:",
+        "translate": ""
+    },
+    {
+        "source": "this again probably has to use appropriate rustc flags.",
+        "suggest": "再次可能必须使用适当的 rustc 标志。",
+        "translate": ""
+    },
+    {
+        "source": "This test ends up running what I can only assume is some corner-ish case of the `exp2` library function, defined in whatever C runtime we're using.",
+        "suggest": "该测试最终运行的是我只能假定的 `exp2` 库函数的某种极端情况，该情况在我们使用的任何 C 运行时中都已定义。",
+        "translate": ""
+    },
+    {
+        "source": "In VS 2013 this function apparently had a bug as this test fails when linked, but with VS 2015 the bug appears fixed as the test runs just fine.",
+        "suggest": "在 VS 2013 中，此函数显然存在一个错误，因为该测试在链接时失败，但是在 VS 2015 中，该错误似乎已修复，因为测试运行良好。",
+        "translate": ""
+    },
+    {
+        "source": "The bug seems to be a difference in return value of `exp2(-1057)`, where in VS 2013 it returns a double with the bit pattern 0x2 and in VS 2015 it returns 0x20000.",
+        "suggest": "该错误似乎是 `exp2(-1057)` 返回值的差异，在 VS 2013 中，它返回带有位模式 0x2 的双精度值，而在 VS 2015 中，它返回 0x20000。",
+        "translate": ""
+    },
+    {
+        "source": "For now just ignore this test entirely on MSVC as it's tested elsewhere anyway and we're not super interested in testing each platform's exp2 implementation.",
+        "suggest": "现在，只需要完全忽略 MSVC 上的此测试，因为它无论如何都已在其他地方进行了测试，我们对测试每个平台的 exp2 实现并不十分感兴趣。",
+        "translate": ""
+    },
+    {
+        "source": "full range for f64",
+        "suggest": "f64 的完整范围",
+        "translate": ""
+    },
+    {
+        "source": "See comments in dragon.rs's exact_sanity_test for why this test is ignored on MSVC",
+        "suggest": "有关为何在 MSVC 上忽略此测试的信息，请参见 dragon.rs 的 _sanity_test 中的注释",
+        "translate": ""
+    },
+    {
+        "source": "Rotating these should make no difference",
+        "suggest": "旋转这些应该没有区别",
+        "translate": ""
+    },
+    {
+        "source": "We test using 124 bits because to ensure that overlong bit shifts do not cause undefined behaviour.",
+        "suggest": "我们使用 124 位进行测试，因为要确保过长的移位不会引起不确定的行为。",
+        "translate": ""
+    },
+    {
+        "source": "See #10183.",
+        "suggest": "请参见 #10183。",
+        "translate": ""
+    },
+    {
+        "source": "Rotating by 0 should have no effect",
+        "suggest": "旋转 0 应该没有效果",
+        "translate": ""
+    },
+    {
+        "source": "Rotating by a multiple of word size should also have no effect",
+        "suggest": "旋转字大小的倍数也应该无效",
+        "translate": ""
+    },
+    {
+        "source": "Swapping these should make no difference",
+        "suggest": "交换这些应该没有区别",
+        "translate": ""
+    },
+    {
+        "source": "use `^` to represent .pow() with no overflow.",
+        "suggest": "使用 `^` 表示 .pow()，没有溢出。",
+        "translate": ""
+    },
+    {
+        "source": "if itest::MAX == 2^j-1, then itest is a `j` bit int, so that `itest::MAX*itest::MAX == 2^(2*j)-2^(j+1)+1`, thussaturating_pow the overflowing result is exactly 1.",
+        "suggest": "如果 itest::MAX == 2 ^ j-1，则 itest 是一个 `j` 位 int，因此 `itest::MAX *itest::MAX == 2^(2* j)-2^(j+1)+1`，因此 saturating_pow 溢出结果正好为 1。",
+        "translate": ""
+    },
+    {
+        "source": "test for negative exponent.",
+        "suggest": "测试负指数。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the attribute to all items in the block.",
+        "suggest": "将属性添加到块中的所有项。",
+        "translate": ""
+    },
+    {
+        "source": "Groups items that assume the pointer width is either 16/32/64, and has to be altered if support for larger/smaller pointer widths are added in the future.",
+        "suggest": "假定指针宽度为 16/32/64 的组项，并且如果在 future 中添加了对 larger/smaller 指针宽度的支持，则必须进行更改。",
+        "translate": ""
+    },
+    {
+        "source": "Helper function for testing numeric operations",
+        "suggest": "用于测试数值运算的 Helper 函数",
+        "translate": ""
+    },
+    {
+        "source": "Helper function for asserting number parsing returns a specific error",
+        "suggest": "断言数字解析的 Helper 函数返回特定错误",
+        "translate": ""
+    },
+    {
+        "source": "Conversions where the full width of $source can be represented as $target",
+        "suggest": "$source 的全角可以表示为 $target 的转换",
+        "translate": ""
+    },
+    {
+        "source": "Conversions where max of $source can be represented as $target,",
+        "suggest": "最多可以将 $source 表示为 $target 的转换，",
+        "translate": ""
+    },
+    {
+        "source": "Conversions where max of $source can not be represented as $target, but min can.",
+        "suggest": "$source 的最大值不能表示为 $target，但最小可以表示为 $target。",
+        "translate": ""
+    },
+    {
+        "source": "Conversions where min/max of $source can not be represented as $target.",
+        "suggest": "$source 的 min/max 不能表示为 $target 的转换。",
+        "translate": ""
+    },
+    {
+        "source": "Conversions where neither the min nor the max of $source can be represented by $target, but max/min of the target can be represented by the source.",
+        "suggest": "$source 的最小值和最大值都不能用 $target 表示，而目标的 max/min 可以用源表示的转换。",
+        "translate": ""
+    },
+    {
+        "source": "For types L and R, checks that a trait implementation exists for",
+        "suggest": "对于类型 L 和 R，检查是否存在 trait 实现",
+        "translate": ""
+    },
+    {
+        "source": "binary ops: L op R, L op &R, &L op R and &L op &R",
+        "suggest": "二进制操作: L op R，L op &R，&L op R 和 &L op &R",
+        "translate": ""
+    },
+    {
+        "source": "assign ops: &mut L op R, &mut L op &R",
+        "suggest": "分配操作: &mut L op R，&mut L op &R",
+        "translate": ""
+    },
+    {
+        "source": "For all specified types T, checks that a trait implementation exists for",
+        "suggest": "对于所有指定的类型 T，检查是否存在 trait 实现",
+        "translate": ""
+    },
+    {
+        "source": "binary ops: T op T, T op &T, &T op T and &T op &T",
+        "suggest": "二进制操作: T op T，T op &T，&T op T 和 &T op &T",
+        "translate": ""
+    },
+    {
+        "source": "assign ops: &mut T op T, &mut T op &T",
+        "suggest": "分配操作: &mut T op T，&mut T op &T",
+        "translate": ""
+    },
+    {
+        "source": "unary ops: op T and op &T",
+        "suggest": "一元运算符: 运算符 T 和运算符 &T",
+        "translate": ""
+    },
+    {
+        "source": "Don't warn about overflowing ops on 32-bit platforms",
+        "suggest": "不要警告 32 位平台上的操作会溢出",
+        "translate": ""
+    },
+    {
+        "source": "This isn't stable surface area, but helps keep `?` cheap between them, even if LLVM can't always take advantage of it right now.",
+        "suggest": "这不是稳定的表面积，但是即使 LLVM 现在不能总是利用它，也可以使 `?` 便宜。",
+        "translate": ""
+    },
+    {
+        "source": "(Sadly Result and Option are inconsistent, so ControlFlow can't match both.)",
+        "suggest": "(可悲的是结果和选项不一致，因此 ControlFlow 不能同时匹配两者。)",
+        "translate": ""
+    },
+    {
+        "source": "Test the Range structs and syntax.",
+        "suggest": "测试范围结构体和语法。",
+        "translate": ""
+    },
+    {
+        "source": "Not much to test.",
+        "suggest": "测试不多。",
+        "translate": ""
+    },
+    {
+        "source": "references to literals are OK",
+        "suggest": "引用字面量还可以",
+        "translate": ""
+    },
+    {
+        "source": "Test we can use two different types with a common supertype.",
+        "suggest": "测试我们可以将两个不同的类型与一个共同的超类型一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "test that all range types can be structurally matched upon",
+        "suggest": "测试所有范围类型是否可以在结构上匹配",
+        "translate": ""
+    },
+    {
+        "source": "Test Deref implementations",
+        "suggest": "测试 Deref 实现",
+        "translate": ""
+    },
+    {
+        "source": "Test that `&mut T` implements `DerefMut<T>`",
+        "suggest": "测试 `&mut T` 实现 `DerefMut<T>`",
+        "translate": ""
+    },
+    {
+        "source": "Test that `&T` and `&mut T` implement `Deref<T>`",
+        "suggest": "测试 `&T` 和 `&mut T` 实现 `Deref<T>`",
+        "translate": ""
+    },
+    {
+        "source": "test that it does not take more elements than it needs",
+        "suggest": "测试它不需要的元素是否超出了需要的数量",
+        "translate": ""
+    },
+    {
+        "source": "None works",
+        "suggest": "没有效果",
+        "translate": ""
+    },
+    {
+        "source": "Immutable ref works",
+        "suggest": "不可变 ref works",
+        "translate": ""
+    },
+    {
+        "source": "Double Immutable ref works",
+        "suggest": "Double 不可变 ref 作品",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Option` are usable in a const context",
+        "suggest": "测试 `Option` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "This macro makes it easier to write tests that do a series of iterations",
+        "suggest": "此宏使编写进行一系列迭代的测试变得更加容易",
+        "translate": ""
+    },
+    {
+        "source": "Combined enum for the results of next() and next_match()/next_reject()",
+        "suggest": "next() 和 next_match () /next_reject () 结果的组合枚举",
+        "translate": ""
+    },
+    {
+        "source": "variant names purposely chosen to be the same length for easy alignment",
+        "suggest": "特意选择的成员名称具有相同的长度，以便于对齐",
+        "translate": ""
+    },
+    {
+        "source": "these tests focus on single-character searching  (CharSearcher) and on next()/next_match(), not next_reject().",
+        "suggest": "这些测试专注于单字符搜索 (CharSearcher) 和 next () /next_match ()，而不是 next_reject()。",
+        "translate": ""
+    },
+    {
+        "source": "This is because the memchr changes make next_match() for single chars complex, but next_reject() continues to use next() under the hood.",
+        "suggest": "这是因为 memchr 的更改使 next_match() 变得更复杂，但 next_reject() 继续在引擎盖下使用 next()。",
+        "translate": ""
+    },
+    {
+        "source": "We should add more test cases for all of these, as well as tests for StrSearcher and higher level tests for str::find() (etc)",
+        "suggest": "我们应该为所有这些添加更多的测试用例，以及针对 StrSearcher 的测试和针对 str::find () (etc) 的更高级别的测试。",
+        "translate": ""
+    },
+    {
+        "source": "Á, 각, ก, 😀 all end in 0x81 🁀, ᘀ do not end in 0x81 but contain the byte ꁁ has 0x81 as its second and third bytes.",
+        "suggest": "Á，각，ก，😀全部以 0x81 结尾，🁀不是以 0x81 结尾，但包含字节ꁁ以 0x81 作为第二和第三字节。",
+        "translate": ""
+    },
+    {
+        "source": "The memchr-using implementation of next_match and next_match_back temporarily violate the property that the search is always on a unicode boundary, which is fine as long as this never reaches next() or next_back().",
+        "suggest": "使用 next_match 和 next_match_back 的 memchr 的实现暂时违反了搜索始终在 unicode 边界上的属性，只要没有到达 next() 或 next_back()，就可以了。",
+        "translate": ""
+    },
+    {
+        "source": "So we test if next() is correct after each next_match() as well.",
+        "suggest": "因此，我们还要在每个 next_match() 之后测试 next() 是否正确。",
+        "translate": ""
+    },
+    {
+        "source": "this isn't really a test, more of documentation on the indices of each character in the stresstest string",
+        "suggest": "这并不是真正的测试，更多有关 Stresstest 字符串中每个字符的索引的文档",
+        "translate": ""
+    },
+    {
+        "source": "Ensures that double ended searching comes to a convergence",
+        "suggest": "确保双头搜索趋同",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Pin` are usable in a const context",
+        "suggest": "测试 `Pin` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "`pin_mut_const` tests that the methods of `Pin<&mut T>` are usable in a const context.",
+        "suggest": "`pin_mut_const` 测试 `Pin<&mut T>` 的方法在 const 上下文中是否可用。",
+        "translate": ""
+    },
+    {
+        "source": "A const fn is used because `&mut` is not (yet) usable in constants.",
+        "suggest": "使用 const fn 是因为 `&mut` 不能在常量中使用 (yet)。",
+        "translate": ""
+    },
+    {
+        "source": "Pointers to unsized types -- slices",
+        "suggest": "指向未定义大小的类型的指针 - 切片",
+        "translate": ""
+    },
+    {
+        "source": "Pointers to unsized types -- trait objects",
+        "suggest": "指向未定义大小的类型指针 - trait 对象",
+        "translate": ""
+    },
+    {
+        "source": "Lifetime inference",
+        "suggest": "生命周期推断",
+        "translate": ""
+    },
+    {
+        "source": "Have a symbol for the test below.",
+        "suggest": "在下面的测试中有一个符号。",
+        "translate": ""
+    },
+    {
+        "source": "It doesn’t need to be an actual variadic function, match the ABI, or even point to an actual executable code, because the function itself is never invoked.",
+        "suggest": "它不需要是实际的可变参数函数，匹配 ABI 甚至不需要指向实际的可执行代码，因为该函数本身从未被调用。",
+        "translate": ""
+    },
+    {
+        "source": "For pointers of stride = 0, the pointer is already aligned or it cannot be aligned at all, because no amount of elements will align the pointer.",
+        "suggest": "对于 stride=0 的指针，该指针已经对齐或根本无法对齐，因为没有数量的元素将对齐该指针。",
+        "translate": ""
+    },
+    {
+        "source": "For pointers of stride = 1, the pointer can always be aligned.",
+        "suggest": "对于跨度 = 1 的指针，指针始终可以对齐。",
+        "translate": ""
+    },
+    {
+        "source": "The offset is equal to number of bytes.",
+        "suggest": "偏移量等于字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Naive but definitely correct way to find the *first* aligned element of stride::<T>.",
+        "suggest": "天真但绝对正确的方法来查找跨度的 *first* 对齐元素 `stride::<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "For pointers of stride != 1, we verify the algorithm against the naivest possible implementation",
+        "suggest": "对于跨度为 `!= 1` 的指针，我们针对最幼稚的实现对算法进行了验证",
+        "translate": ""
+    },
+    {
+        "source": "Different trait => different vtable pointer",
+        "suggest": "不同的 trait => 不同的 vtable 指针",
+        "translate": ""
+    },
+    {
+        "source": "Different erased type => different vtable pointer",
+        "suggest": "不同的 erased 类型 => 不同的 vtable 指针",
+        "translate": ""
+    },
+    {
+        "source": "Same erased type and same trait => same vtable pointer",
+        "suggest": "相同的 erased 类型和相同的 trait => 相同的 vtable 指针",
+        "translate": ""
+    },
+    {
+        "source": "The `Metadata` associated type has an `Ord` bound, so this is valid:",
+        "suggest": "`Metadata` 关联类型具有 `Ord` 绑定，因此这是有效的:",
+        "translate": ""
+    },
+    {
+        "source": "trait impls generated by the compiler like those of `Pointee` are not checked for bounds of associated type.",
+        "suggest": "不会检查由编译器生成的 trait impls (如 `Pointee`)，是否有关联类型的界限。",
+        "translate": ""
+    },
+    {
+        "source": "So with a buggy libcore we could have both:",
+        "suggest": "因此，使用 buggy libcore，我们可以同时拥有两个:",
+        "translate": ""
+    },
+    {
+        "source": "… and cause an ICE here:",
+        "suggest": "… 并在这里引发 ICE",
+        "translate": ""
+    },
+    {
+        "source": "For this reason, let’s check here that bounds are satisfied:",
+        "suggest": "因此，让我们在这里检查边界是否满足:",
+        "translate": ""
+    },
+    {
+        "source": "Keep this in sync with the associated type in `library/core/src/ptr/metadata.rs`",
+        "suggest": "使其与 `library/core/src/ptr/metadata.rs` 中的关联类型保持同步",
+        "translate": ""
+    },
+    {
+        "source": "A slightly more interesting library that could be built on top of metadata APIs.",
+        "suggest": "可以在元数据 API 之上构建的稍微有趣的库。",
+        "translate": ""
+    },
+    {
+        "source": "It could be generalized to any `T: ?Sized` (not just trait object) if `{size,align}_of_for_meta<T: ?Sized>(T::Metadata)` are added.",
+        "suggest": "如果添加了 `{size,align}_of_for_meta<T: ?Sized>(T::Metadata)`，则可以将其推广到任何 `T: ?Sized` (不仅仅是 trait 对象)。",
+        "translate": ""
+    },
+    {
+        "source": "Constructing a `ThinBox` without consuming and deallocating a `Box` requires either the unstable `Unsize` marker trait, or the unstable `unsized_locals` language feature, or taking `&dyn T` and restricting to `T: Copy`.",
+        "suggest": "创建一个 `ThinBox` 而不消耗和释放 `Box` 既需要不稳定的 `Unsize` 标记 trait，也需要不稳定的 `unsized_locals` 语言特性，或者使用 `&dyn T` 并限制为 `T: Copy`。",
+        "translate": ""
+    },
+    {
+        "source": "is pointer-sized:",
+        "suggest": "指针大小:",
+        "translate": ""
+    },
+    {
+        "source": "If `ThinBox<T>` is generalized to any `T: ?Sized`, handle ZSTs with a dangling pointer without going through `alloc()`, like `Box<T>` does.",
+        "suggest": "如果将 `ThinBox<T>` 泛化为任何 `T: ?Sized`，请像 `Box<T>` 一样使用悬垂指针处理 ZST，而无需通过 `alloc()`。",
+        "translate": ""
+    },
+    {
+        "source": "can this line be shared with the same in `value_ptr()` without upsetting Stacked Borrows?",
+        "suggest": "这一行是否可以与 `value_ptr ()` 中的同一行共享而不会影响栈上的借用?",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Result` are usable in a const context",
+        "suggest": "测试 `Result` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "Test implementation specific behavior when finding equivalent elements.",
+        "suggest": "查找等效元素时，测试特定于实现的行为。",
+        "translate": ""
+    },
+    {
+        "source": "It is ok to break this test but when you do a crater run is highly advisable.",
+        "suggest": "可以通过此测试，但建议您进行陨石坑运行。",
+        "translate": ""
+    },
+    {
+        "source": "check the v_ptrs array, just to be sure",
+        "suggest": "检查 v_ptrs 数组，只是要确保",
+        "translate": ""
+    },
+    {
+        "source": "stepping through with nth(0)",
+        "suggest": "逐步使用 nth(0)",
+        "translate": ""
+    },
+    {
+        "source": "Make sure iterators and slice patterns yield consistent addresses for various types, including ZSTs.",
+        "suggest": "确保迭代器和切片模式为各种类型 (包括 ZST) 生成一致的地址。",
+        "translate": ""
+    },
+    {
+        "source": "ZST with alignment > 0",
+        "suggest": "对齐 > 0 的 ZST",
+        "translate": ""
+    },
+    {
+        "source": "This checks all six indexing methods, given an input range that should succeed.",
+        "suggest": "给定应该成功的输入范围，这将检查所有六个索引方法。",
+        "translate": ""
+    },
+    {
+        "source": "(it is NOT suitable for testing invalid inputs)",
+        "suggest": "(不适用于测试无效输入)",
+        "translate": ""
+    },
+    {
+        "source": "Test cases for bad index operations.",
+        "suggest": "不良索引操作的测试用例。",
+        "translate": ""
+    },
+    {
+        "source": "each test case needs a unique name to namespace the tests",
+        "suggest": "每个测试用例都需要一个唯一的名称来为测试命名空间",
+        "translate": ""
+    },
+    {
+        "source": "one or more similar inputs for which data[input] succeeds, and the corresponding output as an array.",
+        "suggest": "数据 [输入] 成功的一个或多个相似输入，以及对应的输出作为数组。",
+        "translate": ""
+    },
+    {
+        "source": "is out of range before exhaustion, so it stands to reason that it still would be after.",
+        "suggest": "在精疲力尽之前超出了范围，因此可以推断它仍然会在精疲力尽之后。",
+        "translate": ""
+    },
+    {
+        "source": "len>4 so the unroll is used",
+        "suggest": "`len > 4`，因此使用展开",
+        "translate": ""
+    },
+    {
+        "source": "short-circuiting try_fold, through other methods",
+        "suggest": "通过其他方法使 try_fold 短路",
+        "translate": ""
+    },
+    {
+        "source": "In case of edge cases involving multiple algorithms",
+        "suggest": "在 edge 情况下，涉及多种算法",
+        "translate": ""
+    },
+    {
+        "source": "covers so many kinds of pointer usage, that this is just a good test for pointers in general.",
+        "suggest": "涵盖了各种各样的指针用法，因此，这通常只是对指针的一个很好的测试。",
+        "translate": ""
+    },
+    {
+        "source": "This uses a `[usize; 4]` to hit all algorithms without overwhelming miri",
+        "suggest": "这使用 `[usize; 4]` 来执行所有算法，而不会压倒 miri",
+        "translate": ""
+    },
+    {
+        "source": "Test heapsort using `<` operator.",
+        "suggest": "使用 `<` 运算符测试 heapsort。",
+        "translate": ""
+    },
+    {
+        "source": "Test heapsort using `>` operator.",
+        "suggest": "使用 `>` 运算符测试 heapsort。",
+        "translate": ""
+    },
+    {
+        "source": "Sort at index using a completely random comparison function.",
+        "suggest": "使用完全随机的比较函数按索引排序。",
+        "translate": ""
+    },
+    {
+        "source": "test fallback implementations on all platforms",
+        "suggest": "在所有平台上测试后备实现",
+        "translate": ""
+    },
+    {
+        "source": "Make sure that we do not create empty unaligned slices for the mid part, even when the overall slice is too short to contain an aligned address.",
+        "suggest": "即使整个切片太短而无法包含对齐的地址，也请确保我们不会在中间部分创建空的未对齐的切片。",
+        "translate": ""
+    },
+    {
+        "source": "used to create `mid` in a way that there was some intermediate incorrect aliasing, invalidating the resulting `mid` slice.",
+        "suggest": "用于创建 `mid` 的方式是存在一些中间错误的别名，从而使生成的 `mid` 切片无效。",
+        "translate": ""
+    },
+    {
+        "source": "Start to end, with a RangeTo.",
+        "suggest": "从 RangeTo 开始到结束。",
+        "translate": ""
+    },
+    {
+        "source": "End to start, with a RangeFrom.",
+        "suggest": "以 RangeFrom 开始结束。",
+        "translate": ""
+    },
+    {
+        "source": "Overlapping, with a RangeInclusive.",
+        "suggest": "与 RangeInclusive 重叠。",
+        "translate": ""
+    },
+    {
+        "source": "Whole slice, with a RangeFull.",
+        "suggest": "整个切片，带 RangeFull。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure that copying at the end of slice won't cause UB.",
+        "suggest": "确保在切片末尾进行复制不会导致 UB。",
+        "translate": ""
+    },
+    {
+        "source": "The length is only 13, so 14 is out of bounds.",
+        "suggest": "长度只有 13，所以 14 越界。",
+        "translate": ""
+    },
+    {
+        "source": "The length is only 13, so a slice of length 4 starting at index 10 is out of bounds.",
+        "suggest": "长度仅为 13，因此从索引 10 开始的长度为 4 的切片越界。",
+        "translate": ""
+    },
+    {
+        "source": "2 is greater than 1, so this range is invalid.",
+        "suggest": "2 大于 1，因此此范围无效。",
+        "translate": ""
+    },
+    {
+        "source": "an inclusive range ending at usize::MAX would make src_end overflow",
+        "suggest": "一个以 usize::MAX 结尾的范围将使 src_end 溢出",
+        "translate": ""
+    },
+    {
+        "source": "Make sure that destructors get run on slice literals",
+        "suggest": "确保析构函数在切片字面量上运行",
+        "translate": ""
+    },
+    {
+        "source": "All `str` tests live in liballoc/tests",
+        "suggest": "所有 `str` 测试都在 liballoc/tests 中进行",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Poll` are usable in a const context",
+        "suggest": "测试 `Poll` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Duration` are usable in a const context",
+        "suggest": "测试 `Duration` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of Rust panics via process aborts",
+        "suggest": "通过进程中止实现 Rust panics",
+        "translate": ""
+    },
+    {
+        "source": "When compared to the implementation via unwinding, this crate is *much* simpler!",
+        "suggest": "与通过展开的实现相比，此 crate 简单得多!",
+        "translate": ""
+    },
+    {
+        "source": "That being said, it's not quite as versatile, but here goes!",
+        "suggest": "话虽这么说，它不是很通用，但是可以了!",
+        "translate": ""
+    },
+    {
+        "source": "the payload and shim to the relevant abort on the platform in question.",
+        "suggest": "有效载荷并填充到相关平台上的相关终端。",
+        "translate": ""
+    },
+    {
+        "source": "call std::sys::abort_internal",
+        "suggest": "调用 std::sys::abort_internal",
+        "translate": ""
+    },
+    {
+        "source": "On Windows, use the processor-specific __fastfail mechanism.",
+        "suggest": "在 Windows 上，使用特定于处理器的 __fastfail 机制。",
+        "translate": ""
+    },
+    {
+        "source": "In Windows 8 and later, this will terminate the process immediately without running any in-process exception handlers.",
+        "suggest": "在 Windows 8 和更高版本中，这将立即终止进程，而无需运行任何进程内异常处理程序。",
+        "translate": ""
+    },
+    {
+        "source": "In earlier versions of Windows, this sequence of instructions will be treated as an access violation, terminating the process but without necessarily bypassing all exception handlers.",
+        "suggest": "在 Windows 的早期版本中，此指令序列将被视为访问冲突，从而终止进程，但不必绕过所有异常处理程序。",
+        "translate": ""
+    },
+    {
+        "source": "this is the same implementation as in libstd's `abort_internal`",
+        "suggest": "这与 libstd `abort_internal` 中的实现相同",
+        "translate": ""
+    },
+    {
+        "source": "This... is a bit of an oddity.",
+        "suggest": "这... 有点奇怪。",
+        "translate": ""
+    },
+    {
+        "source": "is that this is required to link correctly, the longer explanation is below.",
+        "suggest": "是正确链接所必需的，下面将进行详细说明。",
+        "translate": ""
+    },
+    {
+        "source": "Right now the binaries of libcore/libstd that we ship are all compiled with `-C panic=unwind`.",
+        "suggest": "现在，我们出厂的 libcore/libstd 二进制文件都已用 `-C panic=unwind` 编译。",
+        "translate": ""
+    },
+    {
+        "source": "This is done to ensure that the binaries are maximally compatible with as many situations as possible.",
+        "suggest": "这样做是为了确保二进制文件最大程度地与尽可能多的情况兼容。",
+        "translate": ""
+    },
+    {
+        "source": "The compiler, however, requires a \"personality function\" for all functions compiled with `-C panic=unwind`.",
+        "suggest": "但是，对于使用 `-C panic=unwind` 编译的所有函数，编译器都需要 \"personality function\"。",
+        "translate": ""
+    },
+    {
+        "source": "This personality function is hardcoded to the symbol `rust_eh_personality` and is defined by the `eh_personality` lang item.",
+        "suggest": "此个性函数被硬编码为符号 `rust_eh_personality`，并由 `eh_personality` lang 项定义。",
+        "translate": ""
+    },
+    {
+        "source": "why not just define that lang item here?",
+        "suggest": "为什么不在这里定义该 lang 项?",
+        "translate": ""
+    },
+    {
+        "source": "Good question!",
+        "suggest": "好问题!",
+        "translate": ""
+    },
+    {
+        "source": "The way that panic runtimes are linked in is actually a little subtle in that they're \"sort of\" in the compiler's crate store, but only actually linked if another isn't actually linked.",
+        "suggest": "panic 运行时的链接方式实际上有点微妙，因为它们在编译器的 crate 存储区中是 \"sort of\"，但只有在另一个未链接时才实际链接。",
+        "translate": ""
+    },
+    {
+        "source": "This ends up meaning that both this crate and the panic_unwind crate can appear in the compiler's crate store, and if both define the `eh_personality` lang item then that'll hit an error.",
+        "suggest": "结束意味着这 crate 和 panic_unwind crate 都可以出现在编译器的 crate 存储中，如果两者都定义了 `eh_personality` lang 项，那么将报错。",
+        "translate": ""
+    },
+    {
+        "source": "To handle this the compiler only requires the `eh_personality` is defined if the panic runtime being linked in is the unwinding runtime, and otherwise it's not required to be defined (rightfully so).",
+        "suggest": "要解决此问题，如果链接到的 panic 运行时是展开运行时，则仅要求定义 `eh_personality`，否则就不需要定义 (正确地如此)。",
+        "translate": ""
+    },
+    {
+        "source": "In this case, however, this library just defines this symbol so there's at least some personality somewhere.",
+        "suggest": "但是，在这种情况下，该库仅定义了此符号，因此某处至少具有某些个性。",
+        "translate": ""
+    },
+    {
+        "source": "Essentially this symbol is just defined to get wired up to libcore/libstd binaries, but it should never be called as we don't link in an unwinding runtime at all.",
+        "suggest": "本质上，此符号只是为了连接到 libcore/libstd 二进制文件而定义的，但由于我们根本不在展开运行时中链接，因此永远不应调用它。",
+        "translate": ""
+    },
+    {
+        "source": "On x86_64-pc-windows-gnu we use our own personality function that needs to return `ExceptionContinueSearch` as we're passing on all our frames.",
+        "suggest": "在 x86_64-pc-windows-gnu 上，我们使用自己的个性函数，当我们传递所有帧时，该函数需要返回 `ExceptionContinueSearch`。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to above, this corresponds to the `eh_catch_typeinfo` lang item that's only used on Emscripten currently.",
+        "suggest": "与上面类似，这对应于当前仅在 Emscripten 上使用的 `eh_catch_typeinfo` lang 项。",
+        "translate": ""
+    },
+    {
+        "source": "Since panics don't generate exceptions and foreign exceptions are currently UB with -C panic=abort (although this may be subject to change), any catch_unwind calls will never use this typeinfo.",
+        "suggest": "由于 panics 不会生成异常，并且外部异常当前是 -C panic = 终止的 UB (尽管可能会更改)，所以任何 catch_unwind 调用将永远不会使用此 typeinfo。",
+        "translate": ""
+    },
+    {
+        "source": "These two are called by our startup objects on i686-pc-windows-gnu, but they don't need to do anything so the bodies are nops.",
+        "suggest": "我们的启动对象在 i686-pc-windows-gnu 上调用了这两个对象，但是它们不需要执行任何操作，因此它们的主体是点头的。",
+        "translate": ""
+    },
+    {
+        "source": "Unwinding for *wasm32* target.",
+        "suggest": "展开适用于 *wasm32* 目标。",
+        "translate": ""
+    },
+    {
+        "source": "Right now we don't support this, so this is just stubs.",
+        "suggest": "目前我们不支持此功能，因此这只是存根。",
+        "translate": ""
+    },
+    {
+        "source": "Parsing of GCC-style Language-Specific Data Area (LSDA) For details see:",
+        "suggest": "GCC 样式的特定于语言的数据区域 (LSDA) 的解析有关详细信息，请参见:",
+        "translate": ""
+    },
+    {
+        "source": "A reference implementation may be found in the GCC source tree (`<root>/libgcc/unwind-c.c` as of this writing).",
+        "suggest": "在 GCC 源代码树 (截至撰写本文时为 `<root>/libgcc/unwind-c.c`) 中可以找到引用的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Current instruction pointer",
+        "suggest": "当前指令指针",
+        "translate": ""
+    },
+    {
+        "source": "Address of the current function",
+        "suggest": "当前函数的地址",
+        "translate": ""
+    },
+    {
+        "source": "base address for landing pad offsets",
+        "suggest": "landing pad 偏移的基本地址",
+        "translate": ""
+    },
+    {
+        "source": "Rust doesn't analyze exception types, so we don't care about the type table",
+        "suggest": "Rust 不会分析异常类型，因此我们不在乎类型表",
+        "translate": ""
+    },
+    {
+        "source": "Callsite table is sorted by cs_start, so if we've passed the ip, we may stop searching.",
+        "suggest": "Callsite 表按 cs_start 排序，因此，如果我们已通过 ip，则可能会停止搜索。",
+        "translate": ""
+    },
+    {
+        "source": "Ip is not present in the table.",
+        "suggest": "表中不存在 ip。",
+        "translate": ""
+    },
+    {
+        "source": "This should not happen...",
+        "suggest": "这不应该发生...",
+        "translate": ""
+    },
+    {
+        "source": "but it does:",
+        "suggest": "但它确实:",
+        "translate": ""
+    },
+    {
+        "source": "So rather than returning EHAction::Terminate, we do this.",
+        "suggest": "因此，我们这样做不是返回 EHAction::Terminate。",
+        "translate": ""
+    },
+    {
+        "source": "SjLj version:",
+        "suggest": "SjLj 版本:",
+        "translate": ""
+    },
+    {
+        "source": "The \"IP\" is an index into the call-site table, with two exceptions:",
+        "suggest": "\"IP\" 是调用站点表的索引，但有两个例外:",
+        "translate": ""
+    },
+    {
+        "source": "means 'no-action', and 0 means 'terminate'.",
+        "suggest": "表示 'no-action'，0 表示 'terminate'。",
+        "translate": ""
+    },
+    {
+        "source": "Can never have null landing pad for sjlj -- that would have been indicated by a -1 call site index.",
+        "suggest": "永远不会有 sjlj 的空着陆垫 - -1 调用站点索引会指示该着陆垫。",
+        "translate": ""
+    },
+    {
+        "source": "If cs_action is 0 then this is a cleanup (Drop::drop).",
+        "suggest": "如果 cs_action 为 0，则为清除 (Drop::drop)。",
+        "translate": ""
+    },
+    {
+        "source": "We run these for both Rust panics and foreign exceptions.",
+        "suggest": "我们为 Rust panics 和外部异常运行它们。",
+        "translate": ""
+    },
+    {
+        "source": "Stop unwinding Rust panics at catch_unwind.",
+        "suggest": "在 catch_unwind 停止展开 Rust panics。",
+        "translate": ""
+    },
+    {
+        "source": "DW_EH_PE_aligned implies it's an absolute pointer value",
+        "suggest": "DW_EH_PE_aligned 表示它是绝对指针值",
+        "translate": ""
+    },
+    {
+        "source": "relative to address of the encoded value, despite the name",
+        "suggest": "相对于编码值的地址，尽管有名称",
+        "translate": ""
+    },
+    {
+        "source": "Utilities for parsing DWARF-encoded data streams.",
+        "suggest": "解析 DWARF 编码的数据流的实用工具。",
+        "translate": ""
+    },
+    {
+        "source": "See <http://www.dwarfstd.org>, DWARF-4 standard, Section 7 - \"Data Representation\"",
+        "suggest": "参见 <http://www.dwarfstd.org>，DWARF-4 标准第 7 节 - \"Data Representation\"",
+        "translate": ""
+    },
+    {
+        "source": "This module is used only by x86_64-pc-windows-gnu for now, but we are compiling it everywhere to avoid regressions.",
+        "suggest": "目前，此模块仅由 x86_64-pc-windows-gnu 使用，但是我们在各处编译它，以避免出现回归。",
+        "translate": ""
+    },
+    {
+        "source": "DWARF streams are packed, so e.g., a u32 would not necessarily be aligned on a 4-byte boundary.",
+        "suggest": "DWARF 流已被包装，因此，例如 u32 不必在 4 字节边界上对齐。",
+        "translate": ""
+    },
+    {
+        "source": "This may cause problems on platforms with strict alignment requirements.",
+        "suggest": "这可能会在具有严格对齐要求的平台上引起问题。",
+        "translate": ""
+    },
+    {
+        "source": "By wrapping data in a \"packed\" struct, we are telling the backend to generate \"misalignment-safe\" code.",
+        "suggest": "通过将数据包装在 \"packed\" 结构体中，我们告诉后端生成 \"misalignment-safe\" 代码。",
+        "translate": ""
+    },
+    {
+        "source": "ULEB128 and SLEB128 encodings are defined in Section 7.6 - \"Variable Length Data\".",
+        "suggest": "7.6-\"Variable Length Data\" 节中定义了 ULEB128 和 SLEB128 编码。",
+        "translate": ""
+    },
+    {
+        "source": "Unwinding for *emscripten* target.",
+        "suggest": "为 *emscripten* 目标展开。",
+        "translate": ""
+    },
+    {
+        "source": "Whereas Rust's usual unwinding implementation for Unix platforms calls into the libunwind APIs directly, on Emscripten we instead call into the C++ unwinding APIs.",
+        "suggest": "Rust 的 Unix 平台通常的展开实现直接调用 libunwind API，而在 Emscripten 上，我们改为调用 C++ 展开 API。",
+        "translate": ""
+    },
+    {
+        "source": "This is just an expedience since Emscripten's runtime always implements those APIs and does not implement libunwind.",
+        "suggest": "这只是一种权宜之计，因为 Emscripten 的运行时始终实现那些 API，而不实现 libunwind。",
+        "translate": ""
+    },
+    {
+        "source": "This matches the layout of std::type_info in C++",
+        "suggest": "这与 C++ 中 std::type_info 的布局匹配",
+        "translate": ""
+    },
+    {
+        "source": "The leading `\\x01` byte here is actually a magical signal to LLVM to *not* apply any other mangling like prefixing with a `_` character.",
+        "suggest": "这里的前导 `\\x01` 字节实际上是向 LLVM 发出的神奇信号，*不* 应用任何其他操作，例如以 `_` 字符作为前缀。",
+        "translate": ""
+    },
+    {
+        "source": "This symbol is the vtable used by C++'s `std::type_info`.",
+        "suggest": "此符号是 C++ `std::type_info` 使用的 vtable。",
+        "translate": ""
+    },
+    {
+        "source": "Objects of type `std::type_info`, type descriptors, have a pointer to this table.",
+        "suggest": "`std::type_info` 类型的对象 (类型描述符) 具有指向此表的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Type descriptors are referenced by the C++ EH structures defined above and that we construct below.",
+        "suggest": "类型描述符由上面定义的 C++ EH 结构引用，并在下面构造。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the real size is larger than 3 usize, but we only need our vtable to point to the third element.",
+        "suggest": "请注意，实际大小大于 3 usize，但是我们只需要 vtable 指向第三个元素。",
+        "translate": ""
+    },
+    {
+        "source": "for a rust_panic class",
+        "suggest": "对于 rust_panic 类",
+        "translate": ""
+    },
+    {
+        "source": "Normally we would use .as_ptr().add(2) but this doesn't work in a const context.",
+        "suggest": "通常我们会使用.as_ptr ()。add (2)，但这在 const 上下文中不起作用。",
+        "translate": ""
+    },
+    {
+        "source": "This intentionally doesn't use the normal name mangling scheme because we don't want C++ to be able to produce or catch Rust panics.",
+        "suggest": "因为我们不希望 C++ 能够产生或捕获 Rust panics，所以这有意不使用普通名称处理方案。",
+        "translate": ""
+    },
+    {
+        "source": "This is necessary because C++ code can capture our execption with std::exception_ptr and rethrow it multiple times, possibly even in another thread.",
+        "suggest": "这是必需的，因为 C++ 代码可以使用 std::exception_ptr 捕获我们的执行并将其重新抛出多次，甚至可能在另一个线程中也是如此。",
+        "translate": ""
+    },
+    {
+        "source": "This needs to be an Option because the object's lifetime follows C++ semantics: when catch_unwind moves the Box out of the exception it must still leave the exception object in a valid state because its destructor is still going to be called by __cxa_end_catch.",
+        "suggest": "这必须是一个选项，因为对象的生命周期遵循 C++ 语义: 当 catch_unwind 将 Box 移出异常时，它仍必须保持异常对象处于有效状态，因为它的析构函数仍将由 __cxa_end_catch 调用。",
+        "translate": ""
+    },
+    {
+        "source": "actually gives us a pointer to this structure.",
+        "suggest": "实际上为我们提供了一个指向该结构体的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Since cleanup() isn't allowed to panic, we just abort instead.",
+        "suggest": "由于不允许将 cleanup() 用作 panic，因此我们只需终止。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of panics backed by libgcc/libunwind (in some form).",
+        "suggest": "由 libgcc/libunwind 支持的 panics 的实现 (以某种形式)。",
+        "translate": ""
+    },
+    {
+        "source": "For background on exception handling and stack unwinding please see \"Exception Handling in LLVM\" (llvm.org/docs/ExceptionHandling.html) and documents linked from it.",
+        "suggest": "有关异常处理和栈的背景展开，请参见 \"Exception Handling in LLVM\" (llvm.org/docs/ExceptionHandling.html) 及其链接的文档。",
+        "translate": ""
+    },
+    {
+        "source": "These are also good reads:",
+        "suggest": "这些也是不错的读物:",
+        "translate": ""
+    },
+    {
+        "source": "A brief summary",
+        "suggest": "简要总结",
+        "translate": ""
+    },
+    {
+        "source": "Exception handling happens in two phases: a search phase and a cleanup phase.",
+        "suggest": "异常处理分为两个阶段: 搜索阶段和清理阶段。",
+        "translate": ""
+    },
+    {
+        "source": "In both phases the unwinder walks stack frames from top to bottom using information from the stack frame unwind sections of the current process's modules (\"module\" here refers to an OS module, i.e., an executable or a dynamic library).",
+        "suggest": "在这两个阶段中，展开器都使用当前进程模块的栈框架 unwind 部分 (此处的 \"module\" 指 OS 模块，即可执行文件或动态库) 中的信息从上到下遍历栈框架。",
+        "translate": ""
+    },
+    {
+        "source": "For each stack frame, it invokes the associated \"personality routine\", whose address is also stored in the unwind info section.",
+        "suggest": "对于每个栈帧，它调用关联的 \"personality routine\"，其地址也存储在 unwind info 节中。",
+        "translate": ""
+    },
+    {
+        "source": "In the search phase, the job of a personality routine is to examine exception object being thrown, and to decide whether it should be caught at that stack frame.",
+        "suggest": "在搜索阶段，个性例程的工作是检查抛出的异常对象，并确定是否应在该栈帧处捕获该异常对象。",
+        "translate": ""
+    },
+    {
+        "source": "Once the handler frame has been identified, cleanup phase begins.",
+        "suggest": "一旦确定了处理程序框架，清除阶段就会开始。",
+        "translate": ""
+    },
+    {
+        "source": "In the cleanup phase, the unwinder invokes each personality routine again.",
+        "suggest": "在清理阶段，展开器再次调用每个个性例程。",
+        "translate": ""
+    },
+    {
+        "source": "This time it decides which (if any) cleanup code needs to be run for the current stack frame.",
+        "suggest": "这次，它决定需要为当前栈帧运行哪些 (如果有的话) 清除代码。",
+        "translate": ""
+    },
+    {
+        "source": "If so, the control is transferred to a special branch in the function body, the \"landing pad\", which invokes destructors, frees memory, etc.",
+        "suggest": "如果是这样，则将控件转移到函数体中的特殊分支 \"landing pad\"，该分支调用析构函数，释放内存等。",
+        "translate": ""
+    },
+    {
+        "source": "At the end of the landing pad, control is transferred back to the unwinder and unwinding resumes.",
+        "suggest": "在着陆架的尽头，控制权被转移回展开器，并且展开恢复。",
+        "translate": ""
+    },
+    {
+        "source": "Once stack has been unwound down to the handler frame level, unwinding stops and the last personality routine transfers control to the catch block.",
+        "suggest": "一旦将栈展开到处理程序框架级别，展开将停止，最后一个个性例程将控制权转移到 catch 块。",
+        "translate": ""
+    },
+    {
+        "source": "Rust's exception class identifier.",
+        "suggest": "Rust 的异常类标识符。",
+        "translate": ""
+    },
+    {
+        "source": "This is used by personality routines to determine whether the exception was thrown by their own runtime.",
+        "suggest": "个性例程使用它来确定异常是否由其自己的运行时引发。",
+        "translate": ""
+    },
+    {
+        "source": "M O Z \\0  R U S T -- vendor, language",
+        "suggest": "MOZ\\0 RUST - 供应商，语言",
+        "translate": ""
+    },
+    {
+        "source": "Register ids were lifted from LLVM's TargetLowering::getExceptionPointerRegister() and TargetLowering::getExceptionSelectorRegister() for each architecture, then mapped to DWARF register numbers via register definition tables (typically <arch>RegisterInfo.td, search for \"DwarfRegNum\").",
+        "suggest": "对于每种体系结构，从 LLVM 的 TargetLowering::getExceptionPointerRegister () 和 TargetLowering::getExceptionSelectorRegister () 提取寄存器 ID，然后通过寄存器定义表将其映射到 DWARF 寄存器号 (通常是) <arch>RegisterInfo.td，搜索 \"DwarfRegNum\")。",
+        "translate": ""
+    },
+    {
+        "source": "See also http://llvm.org/docs/WritingAnLLVMBackend.html#defining-a-register.",
+        "suggest": "另请参见 http://llvm.org/docs/WritingAnLLVMBackend.html#defining-a-register。",
+        "translate": ""
+    },
+    {
+        "source": "The following code is based on GCC's C and C++ personality routines.",
+        "suggest": "以下代码基于 GCC 的 C 和 C++ 个性例程。",
+        "translate": ""
+    },
+    {
+        "source": "For reference, see:",
+        "suggest": "有关引用，请参见:",
+        "translate": ""
+    },
+    {
+        "source": "EHABI personality routine.",
+        "suggest": "EHABI 的性格常规。",
+        "translate": ""
+    },
+    {
+        "source": "uses the default routine instead since it uses SjLj unwinding.",
+        "suggest": "使用默认例程代替，因为它使用 SjLj 展开。",
+        "translate": ""
+    },
+    {
+        "source": "Backtraces on ARM will call the personality routine with state == _US_VIRTUAL_UNWIND_FRAME | _US_FORCE_UNWIND.",
+        "suggest": "ARM 上的回溯将调用状态 == _US_VIRTUAL_UNWIND_FRAME 的个性例程。_US_FORCE_UNWIND。",
+        "translate": ""
+    },
+    {
+        "source": "In those cases we want to continue unwinding the stack, otherwise all our backtraces would end at __rust_try",
+        "suggest": "在那种情况下，我们想继续展开栈，否则我们所有的回溯都将以 __rust_try 结尾",
+        "translate": ""
+    },
+    {
+        "source": "The DWARF unwinder assumes that _Unwind_Context holds things like the function and LSDA pointers, however ARM EHABI places them into the exception object.",
+        "suggest": "DWARF 展开器假定 _Unwind_Context 包含函数和 LSDA 指针之类的内容，但是 ARM EHABI 将其放入异常对象中。",
+        "translate": ""
+    },
+    {
+        "source": "To preserve signatures of functions like _Unwind_GetLanguageSpecificData(), which take only the context pointer, GCC personality routines stash a pointer to exception_object in the context, using location reserved for ARM's \"scratch register\" (r12).",
+        "suggest": "为了保留仅使用上下文指针的 _Unwind_GetLanguageSpecificData() 之类的函数签名，GCC 个性化例程使用为 \"scratch register\" (r12) 保留的位置在上下文中存储了指向 exception_object 的指针。",
+        "translate": ""
+    },
+    {
+        "source": "...A more principled approach would be to provide the full definition of ARM's _Unwind_Context in our libunwind bindings and fetch the required data from there directly, bypassing DWARF compatibility functions.",
+        "suggest": "... 更原则的方法是在我们的 libunwind 绑定中提供分支的 _Unwind_Context 的完整定义，并绕过 DWARF 兼容性函数直接从那里获取所需的数据。",
+        "translate": ""
+    },
+    {
+        "source": "EHABI requires the personality routine to update the SP value in the barrier cache of the exception object.",
+        "suggest": "EHABI 要求个性例程更新异常对象的屏障缓存中的 SP 值。",
+        "translate": ""
+    },
+    {
+        "source": "On ARM EHABI the personality routine is responsible for actually unwinding a single stack frame before returning (ARM EHABI Sec.",
+        "suggest": "在 ARM EHABI 上，个性例程负责在返回之前实际展开单个栈帧 (ARM EHABI Sec。",
+        "translate": ""
+    },
+    {
+        "source": "defined in libgcc",
+        "suggest": "在 libgcc 中定义",
+        "translate": ""
+    },
+    {
+        "source": "Default personality routine, which is used directly on most targets and indirectly on Windows x86_64 via SEH.",
+        "suggest": "默认人格程序，可直接在大多数目标上使用，并通过 SEH 间接在 Windows x86_64 上使用。",
+        "translate": ""
+    },
+    {
+        "source": "On x86_64 MinGW targets, the unwinding mechanism is SEH however the unwind handler data (aka LSDA) uses GCC-compatible encoding.",
+        "suggest": "在 x86_64 MinGW 目标上，展开机制为 SEH，但是 unwind 处理程序数据 (aka LSDA) 使用 GCC 兼容的编码。",
+        "translate": ""
+    },
+    {
+        "source": "The personality routine for most of our targets.",
+        "suggest": "我们大多数目标的性格常规。",
+        "translate": ""
+    },
+    {
+        "source": "The return address points 1 byte past the call instruction, which could be in the next IP range in LSDA range table.",
+        "suggest": "返回地址指向调用指令后的 1 个字节，该地址可能在 LSDA 范围表中的下一个 IP 范围内。",
+        "translate": ""
+    },
+    {
+        "source": "Frame unwind info registration",
+        "suggest": "框架 unwind 信息注册",
+        "translate": ""
+    },
+    {
+        "source": "Each module's image contains a frame unwind info section (usually \".eh_frame\").",
+        "suggest": "每个模块的映像都包含一个框架 unwind 信息部分 (通常为 \".eh_frame\")。",
+        "translate": ""
+    },
+    {
+        "source": "When a module is loaded/unloaded into the process, the unwinder must be informed about the location of this section in memory.",
+        "suggest": "当一个模块加载/卸载到进程中时，必须通知展开器这个部分在内存中的位置。",
+        "translate": ""
+    },
+    {
+        "source": "The methods of achieving that vary by the platform.",
+        "suggest": "实现目标的方法因平台而异。",
+        "translate": ""
+    },
+    {
+        "source": "On some (e.g., Linux), the unwinder can discover unwind info sections on its own (by dynamically enumerating currently loaded modules via the dl_iterate_phdr() API and finding their \".eh_frame\" sections);",
+        "suggest": "在某些情况下 (例如 Linux)，展开器可以自己发现 unwind 信息部分 (通过 dl_iterate_phdr() API and finding their \".eh_frame\" sections) 动态枚举当前加载的模块;",
+        "translate": ""
+    },
+    {
+        "source": "Others, like Windows, require modules to actively register their unwind info sections via unwinder API.",
+        "suggest": "Windows 等其他组件则需要模块通过展开器 API 主动注册其 unwind 信息部分。",
+        "translate": ""
+    },
+    {
+        "source": "This module defines two symbols which are referenced and called from rsbegin.rs to register our information with the GCC runtime.",
+        "suggest": "该模块定义了两个符号，这些符号从 rsbegin.rs 进行引用和调用，以将我们的信息注册到 GCC 运行时。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation of stack unwinding is (for now) deferred to libgcc_eh, however Rust crates use these Rust-specific entry points to avoid potential clashes with any GCC runtime.",
+        "suggest": "栈扩展的实现 (现在) 推迟到 libgcc_eh 进行，但是 Rust crates 使用这些 Rust 特定的入口点来避免与任何 GCC 运行时潜在的冲突。",
+        "translate": ""
+    },
+    {
+        "source": "Unwinding for *hermit* target.",
+        "suggest": "为 `hermit` 目标展开。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of panics via stack unwinding",
+        "suggest": "通过栈实现 panics 展开",
+        "translate": ""
+    },
+    {
+        "source": "This crate is an implementation of panics in Rust using \"most native\" stack unwinding mechanism of the platform this is being compiled for.",
+        "suggest": "crate 是使用正在编译的平台的 \"most native\" 栈展开机制在 Rust 中实现 panics 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "This essentially gets categorized into three buckets currently:",
+        "suggest": "目前，这实际上可分为三类:",
+        "translate": ""
+    },
+    {
+        "source": "MSVC targets use SEH in the `seh.rs` file.",
+        "suggest": "MSVC 目标在 `seh.rs` 文件中使用 SEH。",
+        "translate": ""
+    },
+    {
+        "source": "Emscripten uses C++ exceptions in the `emcc.rs` file.",
+        "suggest": "Emscripten 在 `emcc.rs` 文件中使用 C++ 异常。",
+        "translate": ""
+    },
+    {
+        "source": "All other targets use libunwind/libgcc in the `gcc.rs` file.",
+        "suggest": "所有其他目标都使用 `gcc.rs` 文件中的 libunwind/libgcc。",
+        "translate": ""
+    },
+    {
+        "source": "More documentation about each implementation can be found in the respective module.",
+        "suggest": "有关每种实现的更多文档可以在各自的模块中找到。",
+        "translate": ""
+    },
+    {
+        "source": "is unused with Miri, so silence warnings.",
+        "suggest": "Miri 未使用，因此发出静默警告。",
+        "translate": ""
+    },
+    {
+        "source": "Rust runtime's startup objects depend on these symbols, so make them public.",
+        "suggest": "Rust 运行时的启动对象取决于这些符号，因此请将它们公开。",
+        "translate": ""
+    },
+    {
+        "source": "Targets that don't support unwinding.",
+        "suggest": "不支持的目标展开。",
+        "translate": ""
+    },
+    {
+        "source": "Use the Miri runtime.",
+        "suggest": "使用 Miri 运行时。",
+        "translate": ""
+    },
+    {
+        "source": "We still need to also load the normal runtime above, as rustc expects certain lang items from there to be defined.",
+        "suggest": "我们还需要在上面加载正常的运行时，因为 rustc 希望从那里定义某些 lang 项。",
+        "translate": ""
+    },
+    {
+        "source": "Use the real runtime.",
+        "suggest": "使用实际的运行时。",
+        "translate": ""
+    },
+    {
+        "source": "Handler in libstd called when a panic object is dropped outside of `catch_unwind`.",
+        "suggest": "当在 `catch_unwind` 之外丢弃一个 panic 对象时，libstd 中的处理程序被调用。",
+        "translate": ""
+    },
+    {
+        "source": "Handler in libstd called when a foreign exception is caught.",
+        "suggest": "当捕获到外部异常时，将在 libstd 中调用处理程序。",
+        "translate": ""
+    },
+    {
+        "source": "Entry point for raising an exception, just delegates to the platform-specific implementation.",
+        "suggest": "引发异常的入口点，仅代表特定于平台的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Unwinding panics for Miri.",
+        "suggest": "展开 Miri 的 panics。",
+        "translate": ""
+    },
+    {
+        "source": "The type of the payload that the Miri engine propagates through unwinding for us.",
+        "suggest": "Miri 引擎通过展开传播的有效载荷的类型对我们来说。",
+        "translate": ""
+    },
+    {
+        "source": "Must be pointer-sized.",
+        "suggest": "必须为指针大小。",
+        "translate": ""
+    },
+    {
+        "source": "Miri-provided extern function to begin unwinding.",
+        "suggest": "Miri 提供的外部函数开始展开。",
+        "translate": ""
+    },
+    {
+        "source": "The payload we pass to `miri_start_panic` will be exactly the argument we get in `cleanup` below.",
+        "suggest": "我们传递给 `miri_start_panic` 的有效负载将恰好是我们在下面的 `cleanup` 中获得的参数。",
+        "translate": ""
+    },
+    {
+        "source": "So we just box it up once, to get something pointer-sized.",
+        "suggest": "因此，我们只需将 box 设置一次，即可获得指针大小的对象。",
+        "translate": ""
+    },
+    {
+        "source": "Recover the underlying `Box`.",
+        "suggest": "恢复基础 `Box`。",
+        "translate": ""
+    },
+    {
+        "source": "On Windows (currently only on MSVC), the default exception handling mechanism is Structured Exception Handling (SEH).",
+        "suggest": "在 Windows 上 (当前仅在 MSVC 上)，默认的异常处理机制是结构化异常处理 (SEH)。",
+        "translate": ""
+    },
+    {
+        "source": "This is quite different than Dwarf-based exception handling (e.g., what other unix platforms use) in terms of compiler internals, so LLVM is required to have a good deal of extra support for SEH.",
+        "suggest": "就编译器内部而言，这与基于 Dwarf 的异常处理 (例如，其他 unix 平台使用的异常处理) 完全不同，因此要求 LLVM 对 SEH 提供大量额外支持。",
+        "translate": ""
+    },
+    {
+        "source": "In a nutshell, what happens here is:",
+        "suggest": "简而言之，这里发生的是:",
+        "translate": ""
+    },
+    {
+        "source": "The `panic` function calls the standard Windows function `_CxxThrowException` to throw a C++-like exception, triggering the unwinding process.",
+        "suggest": "`panic` 函数调用标准 Windows 函数 `_CxxThrowException` 引发类似 C++ 的异常，从而触发展开进程。",
+        "translate": ""
+    },
+    {
+        "source": "All landing pads generated by the compiler use the personality function `__CxxFrameHandler3`, a function in the CRT, and the unwinding code in Windows will use this personality function to execute all cleanup code on the stack.",
+        "suggest": "编译器生成的所有着陆垫都使用个性函数 `__CxxFrameHandler3` (CRT 中的一个函数)，而 Windows 中的展开代码将使用此个性函数来执行栈上的所有清理代码。",
+        "translate": ""
+    },
+    {
+        "source": "All compiler-generated calls to `invoke` have a landing pad set as a `cleanuppad` LLVM instruction, which indicates the start of the cleanup routine.",
+        "suggest": "编译器生成的所有对 `invoke` 的调用都将着陆区设置为 `cleanuppad` LLVM 指令，该指令指示清除例程的开始。",
+        "translate": ""
+    },
+    {
+        "source": "The personality (in step 2, defined in the CRT) is responsible for running the cleanup routines.",
+        "suggest": "个性 (在 CRT 中定义的步骤 2) 负责运行清除例程。",
+        "translate": ""
+    },
+    {
+        "source": "Eventually the \"catch\" code in the `try` intrinsic (generated by the compiler) is executed and indicates that control should come back to Rust.",
+        "suggest": "最终，执行 `try` 内联函数中的 \"catch\" 代码 (由编译器生成)，并指示控件应返回 Rust。",
+        "translate": ""
+    },
+    {
+        "source": "This is done via a `catchswitch` plus a `catchpad` instruction in LLVM IR terms, finally returning normal control to the program with a `catchret` instruction.",
+        "suggest": "这是通过 `catchswitch` 加上 LLVM IR 术语中的 `catchpad` 指令完成的，最后使用 `catchret` 指令将正常控制权返回给程序。",
+        "translate": ""
+    },
+    {
+        "source": "Some specific differences from the gcc-based exception handling are:",
+        "suggest": "与基于 gcc 的异常处理的某些特定区别是:",
+        "translate": ""
+    },
+    {
+        "source": "Rust has no custom personality function, it is instead *always* `__CxxFrameHandler3`.",
+        "suggest": "Rust 没有自定义的个性函数，而是 *始终*`__CxxFrameHandler3`。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, no extra filtering is performed, so we end up catching any C++ exceptions that happen to look like the kind we're throwing.",
+        "suggest": "此外，没有执行任何额外的过滤，因此我们最终捕获了所有碰巧看起来像我们抛出的 C++ 异常。",
+        "translate": ""
+    },
+    {
+        "source": "Note that throwing an exception into Rust is undefined behavior anyway, so this should be fine.",
+        "suggest": "注意，向 Rust 抛出异常是未定义的行为，因此应该没问题。",
+        "translate": ""
+    },
+    {
+        "source": "We've got some data to transmit across the unwinding boundary, specifically a `Box<dyn Any + Send>`.",
+        "suggest": "我们已经有一些数据可以跨展开边界传输，特别是 `Box<dyn Any + Send>`。",
+        "translate": ""
+    },
+    {
+        "source": "Like with Dwarf exceptions these two pointers are stored as a payload in the exception itself.",
+        "suggest": "像 Dwarf 异常一样，这两个指针作为有效载荷存储在异常本身中。",
+        "translate": ""
+    },
+    {
+        "source": "On MSVC, however, there's no need for an extra heap allocation because the call stack is preserved while filter functions are being executed.",
+        "suggest": "但是，在 MSVC 上，不需要额外的堆分配，因为在执行过滤器函数时会保留调用栈。",
+        "translate": ""
+    },
+    {
+        "source": "This means that the pointers are passed directly to `_CxxThrowException` which are then recovered in the filter function to be written to the stack frame of the `try` intrinsic.",
+        "suggest": "这意味着将指针直接传递到 `_CxxThrowException`，然后将其在过滤器函数中恢复以写入 `try` 内联函数的栈帧。",
+        "translate": ""
+    },
+    {
+        "source": "This needs to be an Option because we catch the exception by reference and its destructor is executed by the C++ runtime.",
+        "suggest": "这必须是一个 Option，因为我们通过 quot 捕获了异常，并且其析构函数由 C++ 运行时执行。",
+        "translate": ""
+    },
+    {
+        "source": "When we take the Box out of the exception, we need to leave the exception in a valid state for its destructor to run without double-dropping the Box.",
+        "suggest": "当我们将 Box 排除在异常之外时，我们需要将异常保持在有效状态，以使其析构函数得以运行，而无需双重丢弃 Box。",
+        "translate": ""
+    },
+    {
+        "source": "First up, a whole bunch of type definitions.",
+        "suggest": "首先，介绍一堆类型定义。",
+        "translate": ""
+    },
+    {
+        "source": "There's a few platform-specific oddities here, and a lot that's just blatantly copied from LLVM.",
+        "suggest": "这里有一些特定于平台的奇怪之处，很多都是从 LLVM 中公然复制的。",
+        "translate": ""
+    },
+    {
+        "source": "The purpose of all this is to implement the `panic` function below through a call to `_CxxThrowException`.",
+        "suggest": "所有这些目的是通过调用 `_CxxThrowException` 来实现下面的 `panic` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "This function takes two arguments.",
+        "suggest": "此函数需要两个参数。",
+        "translate": ""
+    },
+    {
+        "source": "The first is a pointer to the data we're passing in, which in this case is our trait object.",
+        "suggest": "第一个是指向我们要传递的数据的指针，在这种情况下，它是我们的 trait 对象。",
+        "translate": ""
+    },
+    {
+        "source": "Pretty easy to find!",
+        "suggest": "很容易找到!",
+        "translate": ""
+    },
+    {
+        "source": "The next, however, is more complicated.",
+        "suggest": "但是，下一个更为复杂。",
+        "translate": ""
+    },
+    {
+        "source": "This is a pointer to a `_ThrowInfo` structure, and it generally is just intended to just describe the exception being thrown.",
+        "suggest": "这是指向 `_ThrowInfo` 结构体的指针，通常仅用于描述所抛出的异常。",
+        "translate": ""
+    },
+    {
+        "source": "Currently the definition of this type [1] is a little hairy, and the main oddity (and difference from the online article) is that on 32-bit the pointers are pointers but on 64-bit the pointers are expressed as 32-bit offsets from the `__ImageBase` symbol.",
+        "suggest": "目前，[1] 类型的定义有点毛茸茸，主要的奇怪之处 (与在线文章不同) 是在 32 位上，指针是指针，但在 64 位上，指针表示为相对于 32 位偏移量。`__ImageBase` 符号。",
+        "translate": ""
+    },
+    {
+        "source": "The `ptr_t` and `ptr!` macro in the modules below are used to express this.",
+        "suggest": "以下模块中的 `ptr_t` 和 `ptr!` 宏用于表达这一点。",
+        "translate": ""
+    },
+    {
+        "source": "The maze of type definitions also closely follows what LLVM emits for this sort of operation.",
+        "suggest": "类型定义的迷宫还密切关注 LLVM 为此类操作发出的内容。",
+        "translate": ""
+    },
+    {
+        "source": "For example, if you compile this C++ code on MSVC and emit the LLVM IR:",
+        "suggest": "例如，如果您在 MSVC 上编译此 C++ 代码并发出 LLVM IR:",
+        "translate": ""
+    },
+    {
+        "source": "That's essentially what we're trying to emulate.",
+        "suggest": "从本质上讲，这就是我们要模仿的东西。",
+        "translate": ""
+    },
+    {
+        "source": "Most of the constant values below were just copied from LLVM,",
+        "suggest": "下面的大多数常量值都是从 LLVM 复制的，",
+        "translate": ""
+    },
+    {
+        "source": "In any case, these structures are all constructed in a similar manner, and it's just somewhat verbose for us.",
+        "suggest": "无论如何，这些结构都是以类似的方式构造的，对我们来说只是有些冗长。",
+        "translate": ""
+    },
+    {
+        "source": "Note that we intentionally ignore name mangling rules here: we don't want C++ to be able to catch Rust panics by simply declaring a `struct rust_panic`.",
+        "suggest": "请注意，我们在这里有意忽略名称处理规则: 我们不希望 C++ 能够通过简单地声明 `struct rust_panic` 来捕获 Rust panics。",
+        "translate": ""
+    },
+    {
+        "source": "When modifying, make sure that the type name string exactly matches the one used in `compiler/rustc_codegen_llvm/src/intrinsic.rs`.",
+        "suggest": "进行修改时，请确保类型名称字符串与 `compiler/rustc_codegen_llvm/src/intrinsic.rs` 中使用的字符串完全匹配。",
+        "translate": ""
+    },
+    {
+        "source": "This type descriptor is only used when throwing an exception.",
+        "suggest": "仅在引发异常时使用此类型描述符。",
+        "translate": ""
+    },
+    {
+        "source": "The catch part is handled by the try intrinsic, which generates its own TypeDescriptor.",
+        "suggest": "catch 部分由 try 内联函数处理，try 内联函数生成自己的 TypeDescriptor。",
+        "translate": ""
+    },
+    {
+        "source": "This is fine since the MSVC runtime uses string comparison on the type name to match TypeDescriptors rather than pointer equality.",
+        "suggest": "这很好，因为 MSVC 运行时在类型名称上使用字符串比较来匹配 TypeDescriptor 而不是指针相等。",
+        "translate": ""
+    },
+    {
+        "source": "Destructor used if the C++ code decides to capture the exception and drop it without propagating it.",
+        "suggest": "如果 C++ 代码决定捕获异常并将其丢弃而不传播，则使用析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "The catch part of the try intrinsic will set the first word of the exception object to 0 so that it is skipped by the destructor.",
+        "suggest": "try 内联函数的 catch 部分会将异常对象的第一个字设置为 0，以便析构函数将其跳过。",
+        "translate": ""
+    },
+    {
+        "source": "Note that x86 Windows uses the \"thiscall\" calling convention for C++ member functions instead of the default \"C\" calling convention.",
+        "suggest": "请注意，x86 Windows 对 C++ 成员函数使用 \"thiscall\" 调用约定，而不是默认的 \"C\" 调用约定。",
+        "translate": ""
+    },
+    {
+        "source": "The exception_copy function is a bit special here: it is invoked by the MSVC runtime under a try/catch block and the panic that we generate here will be used as the result of the exception copy.",
+        "suggest": "exception_copy 函数在这里有点特殊: 它由 MSVC 运行时在 try/catch 块下调用，我们在此处生成的 panic 将用作异常副本的结果。",
+        "translate": ""
+    },
+    {
+        "source": "This is used by the C++ runtime to support capturing exceptions with std::exception_ptr, which we can't support because Box<dyn Any> isn't clonable.",
+        "suggest": "C++ 运行时使用它来支持捕获 std::exception_ptr 的异常，由于 Box<dyn Any> 不完整，我们无法支持该异常。",
+        "translate": ""
+    },
+    {
+        "source": "_CxxThrowException executes entirely on this stack frame, so there's no need to otherwise transfer `data` to the heap.",
+        "suggest": "_CxxThrowException 完全在此栈帧上执行，因此无需将 `data` 转移到堆。",
+        "translate": ""
+    },
+    {
+        "source": "We just pass a stack pointer to this function.",
+        "suggest": "我们只是将栈指针传递给该函数。",
+        "translate": ""
+    },
+    {
+        "source": "The ManuallyDrop is needed here since we don't want Exception to be dropped when unwinding.",
+        "suggest": "这里需要使用 ManuallyDrop，因为我们不希望在展开时删除 Exception。",
+        "translate": ""
+    },
+    {
+        "source": "Instead it will be dropped by exception_cleanup which is invoked by the C++ runtime.",
+        "suggest": "相反，它将由 C++ 运行时调用的 exception_cleanup 丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "This... may seems surprising, and justifiably so.",
+        "suggest": "这……可能看起来令人惊讶，而且理所当然地如此。",
+        "translate": ""
+    },
+    {
+        "source": "On 32-bit MSVC the pointers between these structure are just that, pointers.",
+        "suggest": "在 32 位 MSVC 上，这些结构体之间的指针就是指针。",
+        "translate": ""
+    },
+    {
+        "source": "On 64-bit MSVC, however, the pointers between structures are rather expressed as 32-bit offsets from `__ImageBase`.",
+        "suggest": "但是，在 64 位 MSVC 上，结构之间的指针被表示为相对于 `__ImageBase` 的 32 位偏移量。",
+        "translate": ""
+    },
+    {
+        "source": "Consequently, on 32-bit MSVC we can declare all these pointers in the `static`s above.",
+        "suggest": "因此，在 32 位 MSVC 上，我们可以在上面的 `static` 中声明所有这些指针。",
+        "translate": ""
+    },
+    {
+        "source": "On 64-bit MSVC, we would have to express subtraction of pointers in statics, which Rust does not currently allow, so we can't actually do that.",
+        "suggest": "在 64 位 MSVC 上，我们将不得不在静态变量中表示指针的减法，而 Rust 当前不允许这样做，因此我们实际上无法做到这一点。",
+        "translate": ""
+    },
+    {
+        "source": "The next best thing, then is to fill in these structures at runtime (panicking is already the \"slow path\" anyway).",
+        "suggest": "接下来的第二件事是在运行时填充这些结构 (无论如何，恐慌已经是 \"slow path\")。",
+        "translate": ""
+    },
+    {
+        "source": "So here we reinterpret all of these pointer fields as 32-bit integers and then store the relevant value into it (atomically, as concurrent panics may be happening).",
+        "suggest": "因此，在这里，我们将所有这些指针字段重新解释为 32 位整数，然后将相关值存储到其中 (从原子上讲，可能会发生并发 panics)。",
+        "translate": ""
+    },
+    {
+        "source": "Technically the runtime will probably do a nonatomic read of these fields, but in theory they never read the *wrong* value so it shouldn't be too bad...",
+        "suggest": "从技术上讲，运行时可能会以非原子方式读取这些字段，但是从理论上讲，它们从不读取 *rong* 值，因此它应该不会太糟...",
+        "translate": ""
+    },
+    {
+        "source": "In any case, we basically need to do something like this until we can express more operations in statics (and we may never be able to).",
+        "suggest": "在任何情况下，我们基本上都需要做这样的事情，直到我们可以在静态变量中表达更多的操作为止 (而且我们可能永远做不到)。",
+        "translate": ""
+    },
+    {
+        "source": "A NULL payload here means that we got here from the catch (...) of __rust_try.",
+        "suggest": "此处的 NULL 负载意味着我们是从 __rust_try 的 (...) 捕获那里到达的。",
+        "translate": ""
+    },
+    {
+        "source": "This happens when a non-Rust foreign exception is caught.",
+        "suggest": "当捕获到非 Rust 外部异常时，会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "This is required by the compiler to exist (e.g., it's a lang item), but it's never actually called by the compiler because __C_specific_handler or _except_handler3 is the personality function that is always used.",
+        "suggest": "这是编译器必须存在的 (例如，它是一个 lang 项)，但是实际上从来没有被编译器调用，因为 __C_specific_handler 或 _except_handler3 是始终使用的个性函数。",
+        "translate": ""
+    },
+    {
+        "source": "Hence this is just an aborting stub.",
+        "suggest": "因此，这只是一个终止存根。",
+        "translate": ""
+    },
+    {
+        "source": "Buffer management for same-process client<->server communication.",
+        "suggest": "用于同一进程客户端 <-> 服务器通信的缓冲区管理。",
+        "translate": ""
+    },
+    {
+        "source": "Fast path to avoid going through an FFI call.",
+        "suggest": "避免经历 FFI 调用的快速路径。",
+        "translate": ""
+    },
+    {
+        "source": "This utility function is nested in here because it can *only* be safely called on `Buffer`s created by *this* `proc_macro`.",
+        "suggest": "此实用程序函数嵌套在这里，因为它只能在 *this*`proc_macro` 创建的 `Buffer` 上安全地调用。",
+        "translate": ""
+    },
+    {
+        "source": "Client-side types.",
+        "suggest": "客户端类型。",
+        "translate": ""
+    },
+    {
+        "source": "use a reference to the `static COUNTERS`, instead of a wrapper `fn` pointer, once `const fn` can reference `static`s.",
+        "suggest": "一旦 `const fn` 可以引用 `static`s，请使用 `static COUNTERS` 的引用而不是包装器 `fn` 的指针。",
+        "translate": ""
+    }
+]

@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "Outputs the detailed cause of parsing an integer failing.",
+        "suggest": "输出解析整数失败的详细原因。",
+        "translate": ""
+    },
+    {
+        "source": "deprecated way",
+        "suggest": "弃用的方式",
+        "translate": ""
+    },
+    {
+        "source": "intended way",
+        "suggest": "预期的方式",
+        "translate": ""
+    },
+    {
+        "source": "Values between `0` and `min` are Subnormal.",
+        "suggest": "`0` 和 `min` 之间的值是次标准的。",
+        "translate": ""
+    },
+    {
+        "source": "is not casting!",
+        "suggest": "没有铸造!",
+        "translate": ""
+    },
+    {
+        "source": "Constants specific to the `f32` single-precision floating point type.",
+        "suggest": "`f32` 单精度浮点类型专用的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Mathematically significant numbers are provided in the `consts` sub-module.",
+        "suggest": "`consts` 子模块中提供了数学上有效的数字。",
+        "translate": ""
+    },
+    {
+        "source": "For the constants defined directly in this module (as distinct from those defined in the `consts` sub-module), new code should instead use the associated constants defined directly on the `f32` type.",
+        "suggest": "对于直接在此模块中定义的常量 (不同于 `consts` 子模块中定义的常量)，新代码应改为使用直接在 `f32` 类型上定义的关联常量。",
+        "translate": ""
+    },
+    {
+        "source": "The radix or base of the internal representation of `f32`.",
+        "suggest": "`f32` 内部表示形式的基数或基数。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::RADIX`] instead.",
+        "suggest": "请改用 [`f32::RADIX`]。",
+        "translate": ""
+    },
+    {
+        "source": "Number of significant digits in base 2.",
+        "suggest": "以 2 为底的有效位数。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MANTISSA_DIGITS`] instead.",
+        "suggest": "请改用 [`f32::MANTISSA_DIGITS`]。",
+        "translate": ""
+    },
+    {
+        "source": "Approximate number of significant digits in base 10.",
+        "suggest": "以 10 为基数的有效位数的大概数字。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::DIGITS`] instead.",
+        "suggest": "请改用 [`f32::DIGITS`]。",
+        "translate": ""
+    },
+    {
+        "source": "value for `f32`.",
+        "suggest": "`f32` 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::EPSILON`] instead.",
+        "suggest": "请改用 [`f32::EPSILON`]。",
+        "translate": ""
+    },
+    {
+        "source": "This is the difference between `1.0` and the next larger representable number.",
+        "suggest": "这是 `1.0` 与下一个较大的可表示数字之间的差异。",
+        "translate": ""
+    },
+    {
+        "source": "Smallest finite `f32` value.",
+        "suggest": "最小的 `f32` 有限值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MIN`] instead.",
+        "suggest": "请改用 [`f32::MIN`]。",
+        "translate": ""
+    },
+    {
+        "source": "Smallest positive normal `f32` value.",
+        "suggest": "最小正 `f32` 正值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MIN_POSITIVE`] instead.",
+        "suggest": "请改用 [`f32::MIN_POSITIVE`]。",
+        "translate": ""
+    },
+    {
+        "source": "Largest finite `f32` value.",
+        "suggest": "最大的有限 `f32` 值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MAX`] instead.",
+        "suggest": "请改用 [`f32::MAX`]。",
+        "translate": ""
+    },
+    {
+        "source": "One greater than the minimum possible normal power of 2 exponent.",
+        "suggest": "比 2 的最小可能标准幂大一。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MIN_EXP`] instead.",
+        "suggest": "请改用 [`f32::MIN_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Maximum possible power of 2 exponent.",
+        "suggest": "2 指数的最大可能乘方。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MAX_EXP`] instead.",
+        "suggest": "请改用 [`f32::MAX_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Minimum possible normal power of 10 exponent.",
+        "suggest": "最小可能的标准幂为 10 指数。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MIN_10_EXP`] instead.",
+        "suggest": "请改用 [`f32::MIN_10_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Maximum possible power of 10 exponent.",
+        "suggest": "最大可能功效为 10 指数。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::MAX_10_EXP`] instead.",
+        "suggest": "请改用 [`f32::MAX_10_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Not a Number (NaN).",
+        "suggest": "不是数字 (NaN)。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::NAN`] instead.",
+        "suggest": "请改用 [`f32::NAN`]。",
+        "translate": ""
+    },
+    {
+        "source": "Infinity (∞).",
+        "suggest": "无限 (∞)。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::INFINITY`] instead.",
+        "suggest": "请改用 [`f32::INFINITY`]。",
+        "translate": ""
+    },
+    {
+        "source": "Negative infinity (−∞).",
+        "suggest": "负无穷大 (−∞)。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f32::NEG_INFINITY`] instead.",
+        "suggest": "请改用 [`f32::NEG_INFINITY`]。",
+        "translate": ""
+    },
+    {
+        "source": "Basic mathematical constants.",
+        "suggest": "基本数学常量。",
+        "translate": ""
+    },
+    {
+        "source": "replace with mathematical constants from cmath.",
+        "suggest": "用 cmath 中的数学常量替换。",
+        "translate": ""
+    },
+    {
+        "source": "Archimedes' constant (π)",
+        "suggest": "阿基米德的恒定 (π)",
+        "translate": ""
+    },
+    {
+        "source": "The full circle constant (τ)",
+        "suggest": "整圈常量 (τ)",
+        "translate": ""
+    },
+    {
+        "source": "Equal to 2π.",
+        "suggest": "等于 2π。",
+        "translate": ""
+    },
+    {
+        "source": "Euler's number (e)",
+        "suggest": "欧拉数 (e)",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this value is `NaN`.",
+        "suggest": "如果此值为 `NaN`，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "`abs` is publicly unavailable in libcore due to concerns about portability, so this implementation is for private use internally.",
+        "suggest": "由于担心可移植性，`abs` 在 libcore 中公开不可用，因此该实现仅供内部使用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this value is positive infinity or negative infinity, and `false` otherwise.",
+        "suggest": "如果此值是正无穷大或负无穷大，则返回 `true`，否则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this number is neither infinite nor `NaN`.",
+        "suggest": "如果此数字既不是无限的也不是 `NaN`，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "There's no need to handle NaN separately: if self is NaN, the comparison is not true, exactly as desired.",
+        "suggest": "无需单独处理 NaN: 如果 self 是 NaN，则比较不完全正确。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the number is [subnormal].",
+        "suggest": "如果数字为 [subnormal]，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the number is neither zero, infinite, [subnormal], or `NaN`.",
+        "suggest": "如果数字不为零，无穷大，[subnormal] 或 `NaN`，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the floating point category of the number.",
+        "suggest": "返回数字的浮点类别。",
+        "translate": ""
+    },
+    {
+        "source": "If only one property is going to be tested, it is generally faster to use the specific predicate instead.",
+        "suggest": "如果仅要测试一个属性，则通常使用特定谓词会更快。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if `self` has a positive sign, including `+0.0`, `NaN`s with positive sign bit and positive infinity.",
+        "suggest": "如果 `self` 具有正号，则返回 `true`，包括 `+0.0`，带有正号位和正无穷大的 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if `self` has a negative sign, including `-0.0`, `NaN`s with negative sign bit and negative infinity.",
+        "suggest": "如果 `self` 带有负号，则返回 `true`，包括 `-0.0`，带有负号位和负无穷大的 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "IEEE754 says: isSignMinus(x) is true if and only if x has negative sign.",
+        "suggest": "IEEE754 说: 当且仅当 x 具有负号时，isSignMinus(x) 才为 true。",
+        "translate": ""
+    },
+    {
+        "source": "isSignMinus applies to zeros and NaNs as well.",
+        "suggest": "isSignMinus 也适用于零和 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "Takes the reciprocal (inverse) of a number,",
+        "suggest": "取数字的倒数 (inverse)，",
+        "translate": ""
+    },
+    {
+        "source": "Converts radians to degrees.",
+        "suggest": "将弧度转换为度。",
+        "translate": ""
+    },
+    {
+        "source": "Use a constant for better precision.",
+        "suggest": "使用常量可获得更好的精度。",
+        "translate": ""
+    },
+    {
+        "source": "Converts degrees to radians.",
+        "suggest": "将度数转换为弧度。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the maximum of the two numbers.",
+        "suggest": "返回两个数字的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "If one of the arguments is NaN, then the other argument is returned.",
+        "suggest": "如果参数之一是 NaN，则返回另一个参数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the minimum of the two numbers.",
+        "suggest": "返回两个数字中的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Rounds toward zero and converts to any primitive integer type, assuming that the value is finite and fits in that type.",
+        "suggest": "舍入为零并转换为任何原始整数类型，前提是该值是有限的并且适合该类型。",
+        "translate": ""
+    },
+    {
+        "source": "The value must:",
+        "suggest": "该值必须:",
+        "translate": ""
+    },
+    {
+        "source": "Not be `NaN`",
+        "suggest": "不是 `NaN`",
+        "translate": ""
+    },
+    {
+        "source": "Not be infinite",
+        "suggest": "不是无限的",
+        "translate": ""
+    },
+    {
+        "source": "Be representable in the return type `Int`, after truncating off its fractional part",
+        "suggest": "截断小数部分后，可以在返回类型 `Int` 中表示",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `FloatToInt::to_int_unchecked`.",
+        "suggest": "调用者必须坚持 `FloatToInt::to_int_unchecked` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Raw transmutation to `u32`.",
+        "suggest": "原始 trans 变为 `u32`。",
+        "translate": ""
+    },
+    {
+        "source": "This is currently identical to `transmute::<f32, u32>(self)` on all platforms.",
+        "suggest": "当前，这与所有平台上的 `transmute::<f32, u32>(self)` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "See `from_bits` for some discussion of the portability of this operation (there are almost no issues).",
+        "suggest": "有关此操作的可移植性的某些讨论，请参见 `from_bits` (几乎没有问题)。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this function is distinct from `as` casting, which attempts to preserve the *numeric* value, and not the bitwise value.",
+        "suggest": "请注意，此函数与 `as` 强制转换不同，后者试图保留 *数字* 值，而不是按位值。",
+        "translate": ""
+    },
+    {
+        "source": "`u32` is a plain old datatype so we can always transmute to it",
+        "suggest": "`u32` 是一个普通的旧数据类型，因此我们可以随时将其转换",
+        "translate": ""
+    },
+    {
+        "source": "Raw transmutation from `u32`.",
+        "suggest": "来自 `u32` 的原始 mut 变。",
+        "translate": ""
+    },
+    {
+        "source": "This is currently identical to `transmute::<u32, f32>(v)` on all platforms.",
+        "suggest": "当前，这与所有平台上的 `transmute::<u32, f32>(v)` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "It turns out this is incredibly portable, for two reasons:",
+        "suggest": "事实证明，此方法具有很高的可移植性，其原因有两个:",
+        "translate": ""
+    },
+    {
+        "source": "Floats and Ints have the same endianness on all supported platforms.",
+        "suggest": "浮点数和整数在所有受支持的平台上具有相同的字节序。",
+        "translate": ""
+    },
+    {
+        "source": "IEEE-754 very precisely specifies the bit layout of floats.",
+        "suggest": "IEEE-754 非常精确地指定了 float 的位布局。",
+        "translate": ""
+    },
+    {
+        "source": "However there is one caveat: prior to the 2008 version of IEEE-754, how to interpret the NaN signaling bit wasn't actually specified.",
+        "suggest": "但是，有一个警告: 在 2008 年版本的 IEEE-754 之前，实际上并未指定如何解释 NaN 信令位。",
+        "translate": ""
+    },
+    {
+        "source": "Most platforms (notably x86 and ARM) picked the interpretation that was ultimately standardized in 2008, but some didn't (notably MIPS).",
+        "suggest": "大多数平台 (特别是 x86 和 ARM) 采用了最终在 2008 年标准化的解释，但有些则没有 (特别是 MIPS)。",
+        "translate": ""
+    },
+    {
+        "source": "As a result, all signaling NaNs on MIPS are quiet NaNs on x86, and vice-versa.",
+        "suggest": "结果，MIPS 上的所有信令 NaN 都是 x86 上的安静 NaN，反之亦然。",
+        "translate": ""
+    },
+    {
+        "source": "Rather than trying to preserve signaling-ness cross-platform, this implementation favors preserving the exact bits.",
+        "suggest": "该实现方式不是尝试保留跨信令的信令，而是倾向于保留确切的位。",
+        "translate": ""
+    },
+    {
+        "source": "This means that any payloads encoded in NaNs will be preserved even if the result of this method is sent over the network from an x86 machine to a MIPS one.",
+        "suggest": "这意味着，即使通过网络从 x86 机器向 MIPS 机器发送此方法的结果，所有以 NaNs 编码的有效载荷都将保留。",
+        "translate": ""
+    },
+    {
+        "source": "If the results of this method are only manipulated by the same architecture that produced them, then there is no portability concern.",
+        "suggest": "如果此方法的结果仅由产生它们的相同体系结构来操纵，则无需考虑可移植性。",
+        "translate": ""
+    },
+    {
+        "source": "If the input isn't NaN, then there is no portability concern.",
+        "suggest": "如果输入的不是 NaN，则不存在可移植性问题。",
+        "translate": ""
+    },
+    {
+        "source": "If you don't care about signalingness (very likely), then there is no portability concern.",
+        "suggest": "如果您不太在意信号传递 (非常可能)，那么就不必担心可移植性。",
+        "translate": ""
+    },
+    {
+        "source": "`u32` is a plain old datatype so we can always transmute from it It turns out the safety issues with sNaN were overblown!",
+        "suggest": "`u32` 是一个普通的旧数据类型，因此我们可以随时对其进行转换事实证明 sNaN 的安全性问题被夸大了!",
+        "translate": ""
+    },
+    {
+        "source": "Hooray!",
+        "suggest": "万岁!",
+        "translate": ""
+    },
+    {
+        "source": "Return the memory representation of this floating point number as a byte array in big-endian (network) byte order.",
+        "suggest": "以大端 (网络) 字节顺序的字节数组形式返回此浮点数的内存表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "Return the memory representation of this floating point number as a byte array in little-endian byte order.",
+        "suggest": "以小字节序字节顺序将浮点数的内存表示形式返回为字节数组。",
+        "translate": ""
+    },
+    {
+        "source": "Return the memory representation of this floating point number as a byte array in native byte order.",
+        "suggest": "返回此浮点数的内存表示形式，以原生字节顺序的字节数组形式。",
+        "translate": ""
+    },
+    {
+        "source": "As the target platform's native endianness is used, portable code should use [`to_be_bytes`] or [`to_le_bytes`], as appropriate, instead.",
+        "suggest": "由于使用了目标平台的原生字节序，因此，可移植代码应酌情使用 [`to_be_bytes`] 或 [`to_le_bytes`]。",
+        "translate": ""
+    },
+    {
+        "source": "should be preferred over this whenever possible.",
+        "suggest": "应尽可能优先于此。",
+        "translate": ""
+    },
+    {
+        "source": "`f32` is a plain old datatype so we can always transmute to it",
+        "suggest": "`f32` 是一个普通的旧数据类型，因此我们可以随时将其转换",
+        "translate": ""
+    },
+    {
+        "source": "Create a floating point value from its representation as a byte array in big endian.",
+        "suggest": "从其表示形式以 big endian 的字节数组创建一个浮点值。",
+        "translate": ""
+    },
+    {
+        "source": "Create a floating point value from its representation as a byte array in little endian.",
+        "suggest": "从它的表示形式以 Little Endian 的字节数组创建一个浮点值。",
+        "translate": ""
+    },
+    {
+        "source": "Create a floating point value from its representation as a byte array in native endian.",
+        "suggest": "从其表示形式 (以原生字节序形式的字节数组形式) 创建浮点值。",
+        "translate": ""
+    },
+    {
+        "source": "As the target platform's native endianness is used, portable code likely wants to use [`from_be_bytes`] or [`from_le_bytes`], as appropriate instead.",
+        "suggest": "由于使用了目标平台的原生字节序，因此可移植代码可能希望酌情使用 [`from_be_bytes`] 或 [`from_le_bytes`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an ordering between self and other values.",
+        "suggest": "返回 self 和其他值之间的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike the standard partial comparison between floating point numbers, this comparison always produces an ordering in accordance to the totalOrder predicate as defined in IEEE 754 (2008 revision) floating point standard.",
+        "suggest": "与浮点数之间的标准部分比较不同，此比较始终根据 IEEE 754 (2008 修订版) 浮点标准中定义的 totalOrder 谓词产生排序。",
+        "translate": ""
+    },
+    {
+        "source": "The values are ordered in following order:",
+        "suggest": "值按以下顺序排序:",
+        "translate": ""
+    },
+    {
+        "source": "Negative quiet NaN",
+        "suggest": "负安静 NaN",
+        "translate": ""
+    },
+    {
+        "source": "Negative signaling NaN",
+        "suggest": "负信号 NaN",
+        "translate": ""
+    },
+    {
+        "source": "Negative infinity",
+        "suggest": "负无穷大",
+        "translate": ""
+    },
+    {
+        "source": "Negative numbers",
+        "suggest": "负数",
+        "translate": ""
+    },
+    {
+        "source": "Negative subnormal numbers",
+        "suggest": "负次正规数",
+        "translate": ""
+    },
+    {
+        "source": "Negative zero",
+        "suggest": "负零",
+        "translate": ""
+    },
+    {
+        "source": "Positive zero",
+        "suggest": "正零",
+        "translate": ""
+    },
+    {
+        "source": "Positive subnormal numbers",
+        "suggest": "次正数",
+        "translate": ""
+    },
+    {
+        "source": "Positive numbers",
+        "suggest": "正数",
+        "translate": ""
+    },
+    {
+        "source": "Positive infinity",
+        "suggest": "正无穷大",
+        "translate": ""
+    },
+    {
+        "source": "Positive signaling NaN",
+        "suggest": "阳性信号 NaN",
+        "translate": ""
+    },
+    {
+        "source": "Positive quiet NaN",
+        "suggest": "积极安静的 NaN",
+        "translate": ""
+    },
+    {
+        "source": "Note that this function does not always agree with the [`PartialOrd`] and [`PartialEq`] implementations of `f32`.",
+        "suggest": "请注意，此函数并不总是与 `f32` 的 [`PartialOrd`] 和 [`PartialEq`] 实现一致。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, they regard negative and positive zero as equal, while `total_cmp` doesn't.",
+        "suggest": "特别是，他们将负零和正零视为相等，而 `total_cmp` 则不一样。",
+        "translate": ""
+    },
+    {
+        "source": "In case of negatives, flip all the bits except the sign to achieve a similar layout as two's complement integers",
+        "suggest": "如果是负数，将除符号外的所有位翻转以实现与二进制补码整数相似的布局",
+        "translate": ""
+    },
+    {
+        "source": "Why does this work?",
+        "suggest": "为什么这样做?",
+        "translate": ""
+    },
+    {
+        "source": "IEEE 754 floats consist of three fields:",
+        "suggest": "IEEE 754 浮点数包含三个字段:",
+        "translate": ""
+    },
+    {
+        "source": "Sign bit, exponent and mantissa.",
+        "suggest": "符号位，指数和尾数。",
+        "translate": ""
+    },
+    {
+        "source": "The set of exponent and mantissa fields as a whole have the property that their bitwise order is equal to the numeric magnitude where the magnitude is defined.",
+        "suggest": "整个指数和尾数字段具有以下属性: 它们的按位顺序等于定义大小的数字大小。",
+        "translate": ""
+    },
+    {
+        "source": "The magnitude is not normally defined on NaN values, but IEEE 754 totalOrder defines the NaN values also to follow the bitwise order.",
+        "suggest": "幅度通常不是在 NaN 值上定义的，但是 IEEE 754 totalOrder 将 NaN 值也定义为遵循位顺序。",
+        "translate": ""
+    },
+    {
+        "source": "This leads to order explained in the doc comment.",
+        "suggest": "这导致了文档注释中解释的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "However, the representation of magnitude is the same for negative and positive numbers – only the sign bit is different.",
+        "suggest": "但是，对于负数和正数，幅值的表示是相同的-仅符号位不同。",
+        "translate": ""
+    },
+    {
+        "source": "To easily compare the floats as signed integers, we need to flip the exponent and mantissa bits in case of negative numbers.",
+        "suggest": "为了轻松地将浮点数与带符号整数进行比较，在负数的情况下，我们需要翻转指数位和尾数位。",
+        "translate": ""
+    },
+    {
+        "source": "We effectively convert the numbers to \"two's complement\" form.",
+        "suggest": "我们将数字有效地转换为 \"two's complement\" 形式。",
+        "translate": ""
+    },
+    {
+        "source": "To do the flipping, we construct a mask and XOR against it.",
+        "suggest": "为了进行翻转，我们构造了一个掩码并对它进行 XOR。",
+        "translate": ""
+    },
+    {
+        "source": "We branchlessly calculate an \"all-ones except for the sign bit\" mask from negative-signed values: right shifting sign-extends the integer, so we \"fill\" the mask with sign bits, and then convert to unsigned to push one more zero bit.",
+        "suggest": "我们从负号值无分支地计算 \"all-ones except for the sign bit\" 掩码: 右移符号以扩展整数，因此我们用符号位 \"fill\" 掩码，然后转换为无符号以压入另一个零位。",
+        "translate": ""
+    },
+    {
+        "source": "On positive values, the mask is all zeros, so it's a no-op.",
+        "suggest": "如果为正值，则掩码全为零，因此是空操作。",
+        "translate": ""
+    },
+    {
+        "source": "Restrict a value to a certain interval unless it is NaN.",
+        "suggest": "除非是 NaN，否则将值限制为一定的时间间隔。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this function returns NaN if the initial value was NaN as well.",
+        "suggest": "请注意，如果初始值也为 NaN，则此函数将返回 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `min > max`, `min` is NaN, or `max` is NaN.",
+        "suggest": "如果 `min > max`，`min` 为 NaN 或 `max` 为 NaN，则 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Constants specific to the `f64` double-precision floating point type.",
+        "suggest": "`f64` 双精度浮点类型专用的常量。",
+        "translate": ""
+    },
+    {
+        "source": "For the constants defined directly in this module (as distinct from those defined in the `consts` sub-module), new code should instead use the associated constants defined directly on the `f64` type.",
+        "suggest": "对于直接在此模块中定义的常量 (不同于 `consts` 子模块中定义的常量)，新代码应改为使用直接在 `f64` 类型上定义的关联常量。",
+        "translate": ""
+    },
+    {
+        "source": "The radix or base of the internal representation of `f64`.",
+        "suggest": "`f64` 内部表示形式的基数或基数。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::RADIX`] instead.",
+        "suggest": "请改用 [`f64::RADIX`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MANTISSA_DIGITS`] instead.",
+        "suggest": "请改用 [`f64::MANTISSA_DIGITS`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::DIGITS`] instead.",
+        "suggest": "请改用 [`f64::DIGITS`]。",
+        "translate": ""
+    },
+    {
+        "source": "value for `f64`.",
+        "suggest": "`f64` 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::EPSILON`] instead.",
+        "suggest": "请改用 [`f64::EPSILON`]。",
+        "translate": ""
+    },
+    {
+        "source": "Smallest finite `f64` value.",
+        "suggest": "最小的 `f64` 有限值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MIN`] instead.",
+        "suggest": "请改用 [`f64::MIN`]。",
+        "translate": ""
+    },
+    {
+        "source": "Smallest positive normal `f64` value.",
+        "suggest": "最小正 `f64` 正值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MIN_POSITIVE`] instead.",
+        "suggest": "请改用 [`f64::MIN_POSITIVE`]。",
+        "translate": ""
+    },
+    {
+        "source": "Largest finite `f64` value.",
+        "suggest": "最大的有限 `f64` 值。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MAX`] instead.",
+        "suggest": "请改用 [`f64::MAX`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MIN_EXP`] instead.",
+        "suggest": "请改用 [`f64::MIN_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MAX_EXP`] instead.",
+        "suggest": "请改用 [`f64::MAX_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MIN_10_EXP`] instead.",
+        "suggest": "请改用 [`f64::MIN_10_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::MAX_10_EXP`] instead.",
+        "suggest": "请改用 [`f64::MAX_10_EXP`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::NAN`] instead.",
+        "suggest": "请改用 [`f64::NAN`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::INFINITY`] instead.",
+        "suggest": "请改用 [`f64::INFINITY`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`f64::NEG_INFINITY`] instead.",
+        "suggest": "请改用 [`f64::NEG_INFINITY`]。",
+        "translate": ""
+    },
+    {
+        "source": "The division here is correctly rounded with respect to the true value of 180/π.",
+        "suggest": "此处的除法相对于 180/π 的真实值正确取整。",
+        "translate": ""
+    },
+    {
+        "source": "(This differs from f32, where a constant must be used to ensure a correctly rounded result.)",
+        "suggest": "(这与 f32 不同，在 f32 中，必须使用常量来确保正确舍入结果。)",
+        "translate": ""
+    },
+    {
+        "source": "Raw transmutation to `u64`.",
+        "suggest": "原始 trans 变为 `u64`。",
+        "translate": ""
+    },
+    {
+        "source": "This is currently identical to `transmute::<f64, u64>(self)` on all platforms.",
+        "suggest": "当前，这与所有平台上的 `transmute::<f64, u64>(self)` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "`u64` is a plain old datatype so we can always transmute to it",
+        "suggest": "`u64` 是一个普通的旧数据类型，因此我们可以随时将其转换",
+        "translate": ""
+    },
+    {
+        "source": "Raw transmutation from `u64`.",
+        "suggest": "来自 `u64` 的原始 mut 变。",
+        "translate": ""
+    },
+    {
+        "source": "This is currently identical to `transmute::<u64, f64>(v)` on all platforms.",
+        "suggest": "当前，这与所有平台上的 `transmute::<u64, f64>(v)` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "If you don't care about signaling-ness (very likely), then there is no portability concern.",
+        "suggest": "如果您不太在意信号传递性，那么就不必担心可移植性。",
+        "translate": ""
+    },
+    {
+        "source": "`u64` is a plain old datatype so we can always transmute from it It turns out the safety issues with sNaN were overblown!",
+        "suggest": "`u64` 是一个普通的旧数据类型，因此我们可以随时对其进行转换事实证明 sNaN 的安全性问题被夸大了!",
+        "translate": ""
+    },
+    {
+        "source": "`f64` is a plain old datatype so we can always transmute to it",
+        "suggest": "`f64` 是一个普通的旧数据类型，因此我们可以随时将其转换",
+        "translate": ""
+    },
+    {
+        "source": "Note that this function does not always agree with the [`PartialOrd`] and [`PartialEq`] implementations of `f64`.",
+        "suggest": "请注意，此函数并不总是与 `f64` 的 [`PartialOrd`] 和 [`PartialEq`] 实现一致。",
+        "translate": ""
+    },
+    {
+        "source": "Decodes a floating-point value into individual parts and error ranges.",
+        "suggest": "将浮点值解码为单独的部分和错误范围。",
+        "translate": ""
+    },
+    {
+        "source": "Decoded unsigned finite value, such that:",
+        "suggest": "解码后的无符号有限值，例如:",
+        "translate": ""
+    },
+    {
+        "source": "The original value equals to `mant * 2^exp`.",
+        "suggest": "原始值等于 `mant * 2^exp`。",
+        "translate": ""
+    },
+    {
+        "source": "Any number from `(mant - minus) * 2^exp` to `(mant + plus) * 2^exp` will round to the original value.",
+        "suggest": "从 `(mant - minus)*2^exp` 到 `(mant + plus)* 2^exp` 的任何数字都将四舍五入为原始值。",
+        "translate": ""
+    },
+    {
+        "source": "The range is inclusive only when `inclusive` is `true`.",
+        "suggest": "仅当 `inclusive` 为 `true` 时，范围才包括在内。",
+        "translate": ""
+    },
+    {
+        "source": "The scaled mantissa.",
+        "suggest": "缩放的尾数。",
+        "translate": ""
+    },
+    {
+        "source": "The lower error range.",
+        "suggest": "较低的误差范围。",
+        "translate": ""
+    },
+    {
+        "source": "The upper error range.",
+        "suggest": "上限误差范围。",
+        "translate": ""
+    },
+    {
+        "source": "The shared exponent in base 2.",
+        "suggest": "以 2 为底的共享指数。",
+        "translate": ""
+    },
+    {
+        "source": "True when the error range is inclusive.",
+        "suggest": "当错误范围包括在内时为真。",
+        "translate": ""
+    },
+    {
+        "source": "In IEEE 754, this is true when the original mantissa was even.",
+        "suggest": "在 IEEE 754 中，当原始尾数为偶数时，这是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Decoded unsigned value.",
+        "suggest": "解码后的无符号值。",
+        "translate": ""
+    },
+    {
+        "source": "Infinities, either positive or negative.",
+        "suggest": "无穷大，正数或负数。",
+        "translate": ""
+    },
+    {
+        "source": "Zero, either positive or negative.",
+        "suggest": "零，正数或负数。",
+        "translate": ""
+    },
+    {
+        "source": "Finite numbers with further decoded fields.",
+        "suggest": "具有进一步解码字段的有限数字。",
+        "translate": ""
+    },
+    {
+        "source": "A floating point type which can be `decode`d.",
+        "suggest": "可以被解码的浮点类型。",
+        "translate": ""
+    },
+    {
+        "source": "The minimum positive normalized value.",
+        "suggest": "最小正归一化值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a sign (true when negative) and `FullDecoded` value from given floating point number.",
+        "suggest": "从给定的浮点数返回一个符号 (当为负数时为 true) 和 `FullDecoded` 值。",
+        "translate": ""
+    },
+    {
+        "source": "neighbors: (mant - 2, exp) -- (mant, exp) -- (mant + 2, exp) Float::integer_decode always preserves the exponent, so the mantissa is scaled for subnormals.",
+        "suggest": "neighbors: (mant - 2, exp) -- (mant, exp) -- (mant + 2, exp) Float::integer_decode 始终保留指数，因此尾数针对正常以下进行缩放。",
+        "translate": ""
+    },
+    {
+        "source": "neighbors: (maxmant, exp - 1) -- (minnormmant, exp) -- (minnormmant + 1, exp) where maxmant = minnormmant * 2 - 1",
+        "suggest": "neighbors: (maxmant, exp - 1) -- (minnormmant, exp) -- (minnormmant + 1, exp) 其中 maxmant = minnormmant * 2 - 1",
+        "translate": ""
+    },
+    {
+        "source": "neighbors: (mant - 1, exp) -- (mant, exp) -- (mant + 1, exp)",
+        "suggest": "neighbors: (mant - 1, exp) -- (mant, exp) -- (mant + 1, exp)",
+        "translate": ""
+    },
+    {
+        "source": "The exponent estimator.",
+        "suggest": "指数估计量。",
+        "translate": ""
+    },
+    {
+        "source": "Finds `k_0` such that `10^(k_0-1) < mant * 2^exp <= 10^(k_0+1)`.",
+        "suggest": "查找 `k_0`，如 `10^(k_0-1) < mant * 2^exp <= 10^(k_0+1)`。",
+        "translate": ""
+    },
+    {
+        "source": "This is used to approximate `k = ceil(log_10 (mant * 2^exp))`;",
+        "suggest": "这用于近似 `k = ceil(log_10 (mant * 2^exp))`;",
+        "translate": ""
+    },
+    {
+        "source": "the true `k` is either `k_0` or `k_0+1`.",
+        "suggest": "真正的 `k` 是 `k_0` 或 `k_0+1`。",
+        "translate": ""
+    },
+    {
+        "source": "1292913986 = floor(2^32 * log_10 2) therefore this always underestimates (or is exact), but not much.",
+        "suggest": "1292913986 = floor(2^32 * log_10 2) 因此，这总是低估 (或准确)，但幅度不大。",
+        "translate": ""
+    },
+    {
+        "source": "while this is extensively documented, this is in principle private which is only made public for testing.",
+        "suggest": "尽管对此进行了广泛记录，但原则上是私有的，仅对测试公开。",
+        "translate": ""
+    },
+    {
+        "source": "do not expose us.",
+        "suggest": "不要暴露我们。",
+        "translate": ""
+    },
+    {
+        "source": "Digit-generation algorithms.",
+        "suggest": "数字生成算法。",
+        "translate": ""
+    },
+    {
+        "source": "The minimum size of buffer necessary for the shortest mode.",
+        "suggest": "最短模式所需的最小缓冲区大小。",
+        "translate": ""
+    },
+    {
+        "source": "It is a bit non-trivial to derive, but this is one plus the maximal number of significant decimal digits from formatting algorithms with the shortest result.",
+        "suggest": "导出它并不是一件容易的事，但这是一个加格式运算结果最短的有效十进制数字的最大数目。",
+        "translate": ""
+    },
+    {
+        "source": "The exact formula is `ceil(# bits in mantissa * log_10 2 + 1)`.",
+        "suggest": "确切的公式是 `ceil(# bits in mantissa * log_10 2 + 1)`。",
+        "translate": ""
+    },
+    {
+        "source": "When `d` contains decimal digits, increase the last digit and propagate carry.",
+        "suggest": "当 `d` 包含十进制数字时，增加最后一位数字并传播进位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a next digit when it causes the length to change.",
+        "suggest": "当它导致长度改变时，返回下一个数字。",
+        "translate": ""
+    },
+    {
+        "source": "d[i+1..n] is all nines",
+        "suggest": "d[i+1..n] 都是 9",
+        "translate": ""
+    },
+    {
+        "source": "rounds to 1000..000 with an increased exponent",
+        "suggest": "四舍五入到 1000..000 并增加指数",
+        "translate": ""
+    },
+    {
+        "source": "an empty buffer rounds up (a bit strange but reasonable)",
+        "suggest": "空缓冲区向上取整 (有点奇怪但合理)",
+        "translate": ""
+    },
+    {
+        "source": "Formatted parts.",
+        "suggest": "格式化的零件。",
+        "translate": ""
+    },
+    {
+        "source": "Given number of zero digits.",
+        "suggest": "给定零位数。",
+        "translate": ""
+    },
+    {
+        "source": "A literal number up to 5 digits.",
+        "suggest": "字面量数字，最多 5 位。",
+        "translate": ""
+    },
+    {
+        "source": "A verbatim copy of given bytes.",
+        "suggest": "给定字节的逐字副本。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the exact byte length of given part.",
+        "suggest": "返回给定部分的确切字节长度。",
+        "translate": ""
+    },
+    {
+        "source": "Writes a part into the supplied buffer.",
+        "suggest": "将零件写入提供的缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of written bytes, or `None` if the buffer is not enough.",
+        "suggest": "返回写入的字节数，如果缓冲区不足，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "(It may still leave partially written bytes in the buffer; do not rely on that.)",
+        "suggest": "(它可能仍会将部分写入的字节保留在缓冲区中; 不要依赖于此。)",
+        "translate": ""
+    },
+    {
+        "source": "Formatted result containing one or more parts.",
+        "suggest": "包含一个或多个部分的格式化结果。",
+        "translate": ""
+    },
+    {
+        "source": "This can be written to the byte buffer or converted to the allocated string.",
+        "suggest": "可以将其写入字节缓冲区或转换为分配的字符串。",
+        "translate": ""
+    },
+    {
+        "source": "A byte slice representing a sign, either `\"\"`, `\"-\"` or `\"+\"`.",
+        "suggest": "表示符号 (`\"\"`，`\"-\"` 或 `\"+\"`) 的字节切片。",
+        "translate": ""
+    },
+    {
+        "source": "Formatted parts to be rendered after a sign and optional zero padding.",
+        "suggest": "在符号和可选的零填充之后要渲染的格式化部分。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the exact byte length of combined formatted result.",
+        "suggest": "返回组合格式结果的确切字节长度。",
+        "translate": ""
+    },
+    {
+        "source": "Writes all formatted parts into the supplied buffer.",
+        "suggest": "将所有格式化的部分写入提供的缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "Formats given decimal digits `0.<...buf...> * 10^exp` into the decimal form with at least given number of fractional digits.",
+        "suggest": "将给定的十进制数字 `0.<...buf...> * 10^exp` 格式化为至少具有给定数目的小数位数的十进制格式。",
+        "translate": ""
+    },
+    {
+        "source": "The result is stored to the supplied parts array and a slice of written parts is returned.",
+        "suggest": "结果存储到提供的部分数组中，并返回写入部分的切片。",
+        "translate": ""
+    },
+    {
+        "source": "can be less than the number of actual fractional digits in `buf`;",
+        "suggest": "可以小于 `buf` 中的实际小数位数;",
+        "translate": ""
+    },
+    {
+        "source": "it will be ignored and full digits will be printed.",
+        "suggest": "它将被忽略并且将打印全数字。",
+        "translate": ""
+    },
+    {
+        "source": "It is only used to print additional zeroes after rendered digits.",
+        "suggest": "它仅用于在渲染的数字后打印其他零。",
+        "translate": ""
+    },
+    {
+        "source": "Thus `frac_digits` of 0 means that it will only print given digits and nothing else.",
+        "suggest": "因此，`frac_digits` 为 0 意味着它将仅打印给定的数字，而不会打印其他任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "if there is the restriction on the last digit position, `buf` is assumed to be left-padded with the virtual zeroes.",
+        "suggest": "如果对最后一位的位置有限制，则假定 `buf` 左填充虚拟零。",
+        "translate": ""
+    },
+    {
+        "source": "the number of virtual zeroes, `nzeroes`, equals to `max(0, exp + frac_digits - buf.len())`, so that the position of the last digit `exp - buf.len() - nzeroes` is no more than `-frac_digits`:",
+        "suggest": "虚拟零的数量 `nzeroes` 等于 `max(0, exp + frac_digits - buf.len())`，因此最后一位 `exp - buf.len() - nzeroes` 的位置不超过 `-frac_digits`:",
+        "translate": ""
+    },
+    {
+        "source": "is individually calculated for each case in order to avoid overflow.",
+        "suggest": "为避免溢出，对每种情况分别进行计算。",
+        "translate": ""
+    },
+    {
+        "source": "the decimal point is before rendered digits:",
+        "suggest": "小数点在呈现的数字之前:",
+        "translate": ""
+    },
+    {
+        "source": "we just initialized the elements `..4`.",
+        "suggest": "我们刚刚初始化了元素 `..4`。",
+        "translate": ""
+    },
+    {
+        "source": "we just initialized the elements `..3`.",
+        "suggest": "我们刚刚初始化了元素 `..3`。",
+        "translate": ""
+    },
+    {
+        "source": "the decimal point is inside rendered digits:",
+        "suggest": "小数点位于呈现的数字内部:",
+        "translate": ""
+    },
+    {
+        "source": "the decimal point is after rendered digits: [1234][____0000] or [1234][__][.][__].",
+        "suggest": "小数点位于显示的数字之后: [1234][____0000] 或者 [1234][__][.][__]。",
+        "translate": ""
+    },
+    {
+        "source": "we just initialized the elements `..2`.",
+        "suggest": "我们刚刚初始化了元素 `..2`。",
+        "translate": ""
+    },
+    {
+        "source": "Formats the given decimal digits `0.<...buf...> * 10^exp` into the exponential form with at least the given number of significant digits.",
+        "suggest": "将给定的十进制数字 `0.<...buf...> * 10^exp` 格式化为至少具有给定数量的有效数字的指数形式。",
+        "translate": ""
+    },
+    {
+        "source": "When `upper` is `true`, the exponent will be prefixed by `E`;",
+        "suggest": "当 `upper` 为 `true` 时，指数将以 `E` 为前缀;",
+        "translate": ""
+    },
+    {
+        "source": "otherwise that's `e`.",
+        "suggest": "否则就是 `e`。",
+        "translate": ""
+    },
+    {
+        "source": "can be less than the number of actual significant digits in `buf`;",
+        "suggest": "可以小于 `buf` 中的实际有效数字位数;",
+        "translate": ""
+    },
+    {
+        "source": "Thus, `min_digits == 0` means that it will only print the given digits and nothing else.",
+        "suggest": "因此，`min_digits == 0` 意味着它将仅打印给定的数字，而不会打印其他任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "avoid underflow when exp is i16::MIN",
+        "suggest": "当 exp 为 i16::MIN 时避免下溢",
+        "translate": ""
+    },
+    {
+        "source": "we just initialized the elements `..n + 2`.",
+        "suggest": "我们刚刚初始化了元素 `..n + 2`。",
+        "translate": ""
+    },
+    {
+        "source": "Sign formatting options.",
+        "suggest": "标志格式设置选项。",
+        "translate": ""
+    },
+    {
+        "source": "Prints `-` only for the negative non-zero values.",
+        "suggest": "仅将 `-` 打印为负非零值。",
+        "translate": ""
+    },
+    {
+        "source": "-1  0  0  1  inf nan",
+        "suggest": "-1 0 0 1 inf nan",
+        "translate": ""
+    },
+    {
+        "source": "Prints `-` only for any negative values (including the negative zero).",
+        "suggest": "仅针对任何负值 (包括负零) 打印 `-`。",
+        "translate": ""
+    },
+    {
+        "source": "-1 -0  0  1  inf nan",
+        "suggest": "-1 -0 0 1 inf nan",
+        "translate": ""
+    },
+    {
+        "source": "Prints `-` for the negative non-zero values, or `+` otherwise.",
+        "suggest": "将 `-` 打印为负非零值，否则为 `+`。",
+        "translate": ""
+    },
+    {
+        "source": "-1 +0 +0 +1 +inf nan",
+        "suggest": "-1 +0 +0 +1 + inf nan",
+        "translate": ""
+    },
+    {
+        "source": "Prints `-` for any negative values (including the negative zero), or `+` otherwise.",
+        "suggest": "为任何负值 (包括负零) 打印 `-`，否则为 `+`。",
+        "translate": ""
+    },
+    {
+        "source": "-1 -0 +0 +1 +inf nan",
+        "suggest": "-1 -0 +0 +1 +inf nan",
+        "translate": ""
+    },
+    {
+        "source": "Returns the static byte string corresponding to the sign to be formatted.",
+        "suggest": "返回与要格式化的符号对应的静态字节字符串。",
+        "translate": ""
+    },
+    {
+        "source": "It can be either `\"\"`, `\"+\"` or `\"-\"`.",
+        "suggest": "它可以是 `\"\"`，`\"+\"` 或 `\"-\"`。",
+        "translate": ""
+    },
+    {
+        "source": "Formats the given floating point number into the decimal form with at least given number of fractional digits.",
+        "suggest": "将给定的浮点数格式化为至少具有给定数目的小数位数的十进制形式。",
+        "translate": ""
+    },
+    {
+        "source": "The result is stored to the supplied parts array while utilizing given byte buffer as a scratch.",
+        "suggest": "将结果存储到提供的零件阵列中，同时利用给定的字节缓冲区作为暂存器。",
+        "translate": ""
+    },
+    {
+        "source": "is currently unused but left for the future decision to change the case of non-finite values, i.e., `inf` and `nan`.",
+        "suggest": "当前未使用，但由 future 决定更改非限定值 (即 `inf` 和 `nan`) 的大小写。",
+        "translate": ""
+    },
+    {
+        "source": "The first part to be rendered is always a `Part::Sign` (which can be an empty string if no sign is rendered).",
+        "suggest": "要渲染的第一部分始终是 `Part::Sign` (如果未渲染任何符号，则可以为空字符串)。",
+        "translate": ""
+    },
+    {
+        "source": "should be the underlying digit-generation function.",
+        "suggest": "应该是基本的数字生成函数。",
+        "translate": ""
+    },
+    {
+        "source": "It should return the part of the buffer that it initialized.",
+        "suggest": "它应该返回它初始化的缓冲区的一部分。",
+        "translate": ""
+    },
+    {
+        "source": "You probably would want `strategy::grisu::format_shortest` for this.",
+        "suggest": "您可能需要 `strategy::grisu::format_shortest`。",
+        "translate": ""
+    },
+    {
+        "source": "can be less than the number of actual fractional digits in `v`;",
+        "suggest": "可以小于 `v` 中的实际小数位数;",
+        "translate": ""
+    },
+    {
+        "source": "The byte buffer should be at least `MAX_SIG_DIGITS` bytes long.",
+        "suggest": "字节缓冲区的长度至少应为 `MAX_SIG_DIGITS` 字节。",
+        "translate": ""
+    },
+    {
+        "source": "There should be at least 4 parts available, due to the worst case like `[+][0.][0000][2][0000]` with `frac_digits = 10`.",
+        "suggest": "由于最坏的情况，例如 `[+][0.][0000][2][0000]` 和 `frac_digits = 10`，应该至少有 4 个零件可用。",
+        "translate": ""
+    },
+    {
+        "source": "we just initialized the elements `..1`.",
+        "suggest": "我们刚刚初始化了元素 `..1`。",
+        "translate": ""
+    },
+    {
+        "source": "Formats the given floating point number into the decimal form or the exponential form, depending on the resulting exponent.",
+        "suggest": "根据所得的指数，将给定的浮点数格式化为十进制形式或指数形式。",
+        "translate": ""
+    },
+    {
+        "source": "is used to determine the case of non-finite values (`inf` and `nan`) or the case of the exponent prefix (`e` or `E`).",
+        "suggest": "用于确定非限定值的大小写 (`inf` 和 `nan`) 或指数前缀的大小写 (`e` 或 `E`)。",
+        "translate": ""
+    },
+    {
+        "source": "The `dec_bounds` is a tuple `(lo, hi)` such that the number is formatted as decimal only when `10^lo <= V < 10^hi`.",
+        "suggest": "`dec_bounds` 是元组 `(lo, hi)`，因此仅当 `10^lo <= V < 10^hi` 时，数字格式设置为十进制。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is the *apparent* `V` instead of the actual `v`!",
+        "suggest": "请注意，这是 *表观*`V`，而不是实际的 `v`!",
+        "translate": ""
+    },
+    {
+        "source": "Thus any printed exponent in the exponential form cannot be in this range, avoiding any confusion.",
+        "suggest": "因此，任何以指数形式打印的指数都不能在此范围内，从而避免混淆。",
+        "translate": ""
+    },
+    {
+        "source": "There should be at least 6 parts available, due to the worst case like `[+][1][.][2345][e][-][6]`.",
+        "suggest": "由于最坏的情况，例如 `[+][1][.][2345][e][-][6]`，应该至少有 6 个零件可用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a rather crude approximation (upper bound) for the maximum buffer size calculated from the given decoded exponent.",
+        "suggest": "对于从给定的解码指数计算出的最大缓冲区大小，返回一个相当粗略的近似值 (上限)。",
+        "translate": ""
+    },
+    {
+        "source": "The exact limit is:",
+        "suggest": "确切的限制是:",
+        "translate": ""
+    },
+    {
+        "source": "when `exp < 0`, the maximum length is `ceil(log_10 (5^-exp * (2^64 - 1)))`.",
+        "suggest": "当为 `exp < 0` 时，最大长度为 `ceil(log_10 (5^-exp * (2^64 - 1)))`。",
+        "translate": ""
+    },
+    {
+        "source": "when `exp >= 0`, the maximum length is `ceil(log_10 (2^exp * (2^64 - 1)))`.",
+        "suggest": "当为 `exp >= 0` 时，最大长度为 `ceil(log_10 (2^exp * (2^64 - 1)))`。",
+        "translate": ""
+    },
+    {
+        "source": "is less than `ceil(log_10 (2^64 - 1)) + ceil(exp * log_10 x)`, which is in turn less than `20 + (1 + exp * log_10 x)`.",
+        "suggest": "小于 `ceil(log_10 (2^64 - 1)) + ceil(exp *log_10 x)`，后者又小于 `20 + (1 + exp* log_10 x)`。",
+        "translate": ""
+    },
+    {
+        "source": "We use the facts that `log_10 2 < 5/16` and `log_10 5 < 12/16`, which is enough for our purposes.",
+        "suggest": "我们使用 `log_10 2 < 5/16` 和 `log_10 5 < 12/16` 这样的事实，足以满足我们的目的。",
+        "translate": ""
+    },
+    {
+        "source": "Why do we need this?",
+        "suggest": "我们为什么需要这个?",
+        "translate": ""
+    },
+    {
+        "source": "`format_exact` functions will fill the entire buffer unless limited by the last digit restriction, but it is possible that the number of digits requested is ridiculously large (say, 30,000 digits).",
+        "suggest": "`format_exact` 函数将填充整个缓冲区，除非受最后一位数字的限制，但所请求的位数可能非常大 (例如 30,000 位)。",
+        "translate": ""
+    },
+    {
+        "source": "The vast majority of buffer will be filled with zeroes, so we don't want to allocate all the buffer beforehand.",
+        "suggest": "绝大多数缓冲区将填充零，因此我们不想预先分配所有缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "Consequently, for any given arguments,",
+        "suggest": "因此，对于任何给定的参数，",
+        "translate": ""
+    },
+    {
+        "source": "826 bytes of buffer should be sufficient for `f64`.",
+        "suggest": "`f64` 的 826 字节缓冲区应该足够。",
+        "translate": ""
+    },
+    {
+        "source": "Compare this with the actual number for the worst case: 770 bytes (when `exp = -1074`).",
+        "suggest": "将其与最坏情况下的实际数字进行比较: 770 字节 (当 `exp = -1074` 时)。",
+        "translate": ""
+    },
+    {
+        "source": "Formats given floating point number into the exponential form with exactly given number of significant digits.",
+        "suggest": "将给定的浮点数格式化为具有给定的有效位数的指数形式。",
+        "translate": ""
+    },
+    {
+        "source": "is used to determine the case of the exponent prefix (`e` or `E`).",
+        "suggest": "用于确定指数前缀 (`e` 或 `E`) 的大小写。",
+        "translate": ""
+    },
+    {
+        "source": "You probably would want `strategy::grisu::format_exact` for this.",
+        "suggest": "您可能需要 `strategy::grisu::format_exact`。",
+        "translate": ""
+    },
+    {
+        "source": "The byte buffer should be at least `ndigits` bytes long unless `ndigits` is so large that only the fixed number of digits will be ever written.",
+        "suggest": "字节缓冲区的长度至少应为 `ndigits` 字节，除非 `ndigits` 太大，以至于只能写入固定数量的数字。",
+        "translate": ""
+    },
+    {
+        "source": "(The tipping point for `f64` is about 800, so 1000 bytes should be enough.) There should be at least 6 parts available, due to the worst case like `[+][1][.][2345][e][-][6]`.",
+        "suggest": "(`f64` 的临界点大约为 800，因此 1000 字节应该足够。) 由于最坏的情况 (例如 `[+][1][.][2345][e][-][6]`)，因此至少应有 6 个可用部分。",
+        "translate": ""
+    },
+    {
+        "source": "Formats given floating point number into the decimal form with exactly given number of fractional digits.",
+        "suggest": "将给定的浮点数格式转换为十进制形式，并精确给出小数位数。",
+        "translate": ""
+    },
+    {
+        "source": "The byte buffer should be enough for the output unless `frac_digits` is so large that only the fixed number of digits will be ever written.",
+        "suggest": "除非 `frac_digits` 太大以至于只能写入固定的位数，否则字节缓冲区应该足以用于输出。",
+        "translate": ""
+    },
+    {
+        "source": "(The tipping point for `f64` is about 800, and 1000 bytes should be enough.) There should be at least 4 parts available, due to the worst case like `[+][0.][0000][2][0000]` with `frac_digits = 10`.",
+        "suggest": "(`f64` 的临界点大约为 800，并且 1000 字节应该足够。) 由于最坏的情况，例如 `[+][0.][0000][2][0000]` 和 `frac_digits = 10`，应该至少有 4 个可用部分。",
+        "translate": ""
+    },
+    {
+        "source": "it *is* possible that `frac_digits` is ridiculously large.",
+        "suggest": "`frac_digits` 可能非常大。",
+        "translate": ""
+    },
+    {
+        "source": "will end rendering digits much earlier in this case, because we are strictly limited by `maxlen`.",
+        "suggest": "在这种情况下，由于我们受到 `maxlen` 的严格限制，因此将更早地结束渲染数字。",
+        "translate": ""
+    },
+    {
+        "source": "the restriction couldn't been met, so this should render like zero no matter `exp` was.",
+        "suggest": "该限制无法满足，因此无论 `exp` 为何，该值都应呈现为零。",
+        "translate": ""
+    },
+    {
+        "source": "this does not include the case that the restriction has been met only after the final rounding-up;",
+        "suggest": "这不包括仅在最后四舍五入后才达到限制的情况;",
+        "translate": ""
+    },
+    {
+        "source": "it's a regular case with `exp = limit + 1`.",
+        "suggest": "这是 `exp = limit + 1` 的常规情况。",
+        "translate": ""
+    },
+    {
+        "source": "Almost direct (but slightly optimized) Rust translation of Figure 3 of \"Printing Floating-Point Numbers Quickly and Accurately\"[^1].",
+        "suggest": "快速，准确地打印浮点数 [^1] 图 3 的几乎直接 (但略有优化) 的 Rust 翻译。",
+        "translate": ""
+    },
+    {
+        "source": "G. and Dybvig, R.",
+        "suggest": "G. 和 Dybvig，R.",
+        "translate": ""
+    },
+    {
+        "source": "K. 1996.",
+        "suggest": "K.1996.",
+        "translate": ""
+    },
+    {
+        "source": "Printing floating-point numbers",
+        "suggest": "打印浮点数",
+        "translate": ""
+    },
+    {
+        "source": "quickly and accurately.",
+        "suggest": "快速准确。",
+        "translate": ""
+    },
+    {
+        "source": "SIGPLAN Not.",
+        "suggest": "SIGPLAN 不是。",
+        "translate": ""
+    },
+    {
+        "source": "31, 5 (May. 1996), 108-116.",
+        "suggest": "31，5 (1996 年 5 月)，108-116。",
+        "translate": ""
+    },
+    {
+        "source": "precalculated arrays of `Digit`s for 10^(2^n)",
+        "suggest": "为 10^(2^n) 预先计算的 `Digit` 数组",
+        "translate": ""
+    },
+    {
+        "source": "only usable when `x < 16 * scale`;",
+        "suggest": "仅在 `x < 16 * scale` 时可用;",
+        "translate": ""
+    },
+    {
+        "source": "`scaleN` should be `scale.mul_small(N)`",
+        "suggest": "`scaleN` 应该是 `scale.mul_small(N)`",
+        "translate": ""
+    },
+    {
+        "source": "The shortest mode implementation for Dragon.",
+        "suggest": "Dragon 的最短模式实现。",
+        "translate": ""
+    },
+    {
+        "source": "the number `v` to format is known to be:",
+        "suggest": "已知要格式化的数字 `v` 为:",
+        "translate": ""
+    },
+    {
+        "source": "equal to `mant * 2^exp`;",
+        "suggest": "等于 `mant * 2^exp`;",
+        "translate": ""
+    },
+    {
+        "source": "preceded by `(mant - 2 * minus) * 2^exp` in the original type;",
+        "suggest": "原始类型前面带有 `(mant - 2 *minus)* 2^exp`;",
+        "translate": ""
+    },
+    {
+        "source": "followed by `(mant + 2 * plus) * 2^exp` in the original type.",
+        "suggest": "后面是原始类型的 `(mant + 2 *plus)* 2^exp`。",
+        "translate": ""
+    },
+    {
+        "source": "obviously, `minus` and `plus` cannot be zero.",
+        "suggest": "显然，`minus` 和 `plus` 不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "(for infinities, we use out-of-range values.) also we assume that at least one digit is generated, i.e., `mant` cannot be zero too.",
+        "suggest": "(对于无穷大，我们使用越界的值。) 我们还假定至少生成一个数字，即 `mant` 也不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "this also means that any number between `low = (mant - minus) * 2^exp` and `high = (mant + plus) * 2^exp` will map to this exact floating point number, with bounds included when the original mantissa was even (i.e., `!mant_was_odd`).",
+        "suggest": "这也意味着 `low = (mant - minus)*2^exp` 和 `high = (mant + plus)* 2^exp` 之间的任何数字都将 map 转换为该精确的浮点数，并包括原始尾数为偶数 (即 `!mant_was_odd`) 时的范围。",
+        "translate": ""
+    },
+    {
+        "source": "is `if d.inclusive {a <= b} else {a < b}`",
+        "suggest": "是 `if d.inclusive {a <= b} else {a < b}`",
+        "translate": ""
+    },
+    {
+        "source": "estimate `k_0` from original inputs satisfying `10^(k_0-1) < high <= 10^(k_0+1)`.",
+        "suggest": "从满足 `10^(k_0-1) < high <= 10^(k_0+1)` 的原始输入中估算 `k_0`。",
+        "translate": ""
+    },
+    {
+        "source": "the tight bound `k` satisfying `10^(k-1) < high <= 10^k` is calculated later.",
+        "suggest": "满足 `10^(k-1) < high <= 10^k` 的紧定 `k` 稍后计算。",
+        "translate": ""
+    },
+    {
+        "source": "convert `{mant, plus, minus} * 2^exp` into the fractional form so that:",
+        "suggest": "将 `{mant, plus, minus} * 2^exp` 转换为小数形式，以便:",
+        "translate": ""
+    },
+    {
+        "source": "divide `mant` by `10^k`.",
+        "suggest": "将 `mant` 除以 `10^k`。",
+        "translate": ""
+    },
+    {
+        "source": "now `scale / 10 < mant + plus <= scale * 10`.",
+        "suggest": "现在是 `scale / 10 < mant + plus <= scale * 10`。",
+        "translate": ""
+    },
+    {
+        "source": "fixup when `mant + plus > scale` (or `>=`).",
+        "suggest": "`mant + plus > scale` (或 `>=`) 时修正。",
+        "translate": ""
+    },
+    {
+        "source": "we are not actually modifying `scale`, since we can skip the initial multiplication instead.",
+        "suggest": "我们实际上并没有修改 `scale`，因为我们可以跳过初始乘法。",
+        "translate": ""
+    },
+    {
+        "source": "now `scale < mant + plus <= scale * 10` and we are ready to generate digits.",
+        "suggest": "现在 `scale < mant + plus <= scale * 10`，我们准备生成数字。",
+        "translate": ""
+    },
+    {
+        "source": "note that `d[0]` *can* be zero, when `scale - plus < mant < scale`.",
+        "suggest": "请注意，当 `scale - plus < mant < scale` 时，`d[0]`*可以* 为零。",
+        "translate": ""
+    },
+    {
+        "source": "in this case rounding-up condition (`up` below) will be triggered immediately.",
+        "suggest": "在这种情况下，将立即触发舍入条件 (下面的 `up`)。",
+        "translate": ""
+    },
+    {
+        "source": "equivalent to scaling `scale` by 10",
+        "suggest": "相当于将 `scale` 缩放 10",
+        "translate": ""
+    },
+    {
+        "source": "cache `(2, 4, 8) * scale` for digit generation.",
+        "suggest": "缓存 `(2, 4, 8) * scale` 用于数字生成。",
+        "translate": ""
+    },
+    {
+        "source": "invariants, where `d[0..n-1]` are digits generated so far:",
+        "suggest": "不可变变量，其中 `d[0..n-1]` 是到目前为止生成的数字:",
+        "translate": ""
+    },
+    {
+        "source": "(thus `mant / scale < 10`) where `d[i..j]` is a shorthand for `d[i] * 10^(j-i) + ...",
+        "suggest": "(因此 `mant / scale < 10`)，其中 `d[i..j]` 是 `d [i] * 10 ^ (ji) + ... 的简写",
+        "translate": ""
+    },
+    {
+        "source": "generate one digit:",
+        "suggest": "产生一位数字:",
+        "translate": ""
+    },
+    {
+        "source": "this is a simplified description of the modified Dragon algorithm.",
+        "suggest": "这是对修改后的 Dragon 算法的简化描述。",
+        "translate": ""
+    },
+    {
+        "source": "many intermediate derivations and completeness arguments are omitted for convenience.",
+        "suggest": "为了方便起见，省略了许多中间派生和完整性参数。",
+        "translate": ""
+    },
+    {
+        "source": "start with modified invariants, as we've updated `n`:",
+        "suggest": "从修改的不可变变量开始，因为我们更新了 `n`:",
+        "translate": ""
+    },
+    {
+        "source": "assume that `d[0..n-1]` is the shortest representation between `low` and `high`, i.e., `d[0..n-1]` satisfies both of the following but `d[0..n-2]` doesn't:",
+        "suggest": "假定 `d[0..n-1]` 是 `low` 和 `high` 之间的最短表示形式，即 `d[0..n-1]` 满足以下两个条件，但 `d[0..n-2]` 不满足:",
+        "translate": ""
+    },
+    {
+        "source": "(bijectivity: digits round to `v`);",
+        "suggest": "(双射性: 数字四舍五入为 `v`) ;",
+        "translate": ""
+    },
+    {
+        "source": "(the last digit is correct).",
+        "suggest": "(最后一位数字正确)。",
+        "translate": ""
+    },
+    {
+        "source": "the second condition simplifies to `2 * mant <= scale`.",
+        "suggest": "第二个条件简化为 `2 * mant <= scale`。",
+        "translate": ""
+    },
+    {
+        "source": "solving invariants in terms of `mant`, `low` and `high` yields a simpler version of the first condition:",
+        "suggest": "根据 `mant`，`low` 和 `high` 求解不可变变量产生第一个条件的简单版本:",
+        "translate": ""
+    },
+    {
+        "source": "since `-plus < 0 <= mant`, we have the correct shortest representation when `mant < minus` and `2 * mant <= scale`.",
+        "suggest": "自 `-plus < 0 <= mant` 以来，我们拥有正确的最短表示形式 `mant < minus` 和 `2 * mant <= scale`。",
+        "translate": ""
+    },
+    {
+        "source": "(the former becomes `mant <= minus` when the original mantissa is even.)",
+        "suggest": "(当原始尾数为偶数时，前者变为 `mant <= minus`。)",
+        "translate": ""
+    },
+    {
+        "source": "when the second doesn't hold (`2 * mant > scale`), we need to increase the last digit.",
+        "suggest": "当第二个不保存 (`2 * mant > scale`) 时，我们需要增加最后一位。",
+        "translate": ""
+    },
+    {
+        "source": "this is enough for restoring that condition: we already know that the digit generation guarantees `0 <= v / 10^(k-n) - d[0..n-1] < 1`.",
+        "suggest": "这足以恢复该条件: 我们已经知道数字生成可以保证 `0 <= v / 10^(k-n) - d[0..n-1] < 1`。",
+        "translate": ""
+    },
+    {
+        "source": "in this case, the first condition becomes `-plus < mant - scale < minus`.",
+        "suggest": "在这种情况下，第一个条件变为 `-plus < mant - scale < minus`。",
+        "translate": ""
+    },
+    {
+        "source": "since `mant < scale` after the generation, we have `scale < mant + plus`.",
+        "suggest": "自从 `mant < scale` 产生以来，我们有了 `scale < mant + plus`。",
+        "translate": ""
+    },
+    {
+        "source": "(again, this becomes `scale <= mant + plus` when the original mantissa is even.)",
+        "suggest": "(同样，当原始尾数为偶数时，它变为 `scale <= mant + plus`。)",
+        "translate": ""
+    },
+    {
+        "source": "in short:",
+        "suggest": "简而言之:",
+        "translate": ""
+    },
+    {
+        "source": "stop and round `down` (keep digits as is) when `mant < minus` (or `<=`).",
+        "suggest": "`mant < minus` (或 `<=`) 时，停止并四舍五入 `down` (保持数字不变)。",
+        "translate": ""
+    },
+    {
+        "source": "stop and round `up` (increase the last digit) when `scale < mant + plus` (or `<=`).",
+        "suggest": "`scale < mant + plus` (或 `<=`) 时，停止并四舍五入 `up` (增加最后一位)。",
+        "translate": ""
+    },
+    {
+        "source": "keep generating otherwise.",
+        "suggest": "否则继续生成。",
+        "translate": ""
+    },
+    {
+        "source": "we have the shortest representation, proceed to the rounding",
+        "suggest": "我们具有最短的表示，请继续进行四舍五入",
+        "translate": ""
+    },
+    {
+        "source": "restore the invariants.",
+        "suggest": "恢复不变式。",
+        "translate": ""
+    },
+    {
+        "source": "this makes the algorithm always terminating: `minus` and `plus` always increases, but `mant` is clipped modulo `scale` and `scale` is fixed.",
+        "suggest": "这使得算法总是终止: `minus` 和 `plus` 总是增加，但是 `mant` 被裁剪为 `scale` 模，并且 `scale` 是固定的。",
+        "translate": ""
+    },
+    {
+        "source": "rounding up happens when i) only the rounding-up condition was triggered, or ii) both conditions were triggered and tie breaking prefers rounding up.",
+        "suggest": "当 i) 仅触发了舍入条件，或者 ii) 两个条件都被触发并且平局打破更倾向于舍入时，发生舍入。",
+        "translate": ""
+    },
+    {
+        "source": "if rounding up changes the length, the exponent should also change.",
+        "suggest": "如果四舍五入改变了长度，则指数也应改变。",
+        "translate": ""
+    },
+    {
+        "source": "it seems that this condition is very hard to satisfy (possibly impossible), but we are just being safe and consistent here.",
+        "suggest": "似乎很难满足这个条件 (可能是不可能的)，但是我们在这里只是安全和一致的。",
+        "translate": ""
+    },
+    {
+        "source": "we initialized that memory above.",
+        "suggest": "我们在上面初始化了该内存。",
+        "translate": ""
+    },
+    {
+        "source": "The exact and fixed mode implementation for Dragon.",
+        "suggest": "Dragon 的确切和固定模式实现。",
+        "translate": ""
+    },
+    {
+        "source": "estimate `k_0` from original inputs satisfying `10^(k_0-1) < v <= 10^(k_0+1)`.",
+        "suggest": "从满足 `10^(k_0-1) < v <= 10^(k_0+1)` 的原始输入中估算 `k_0`。",
+        "translate": ""
+    },
+    {
+        "source": "fixup when `mant + plus >= scale`, where `plus / scale = 10^-buf.len() / 2`.",
+        "suggest": "`mant + plus >= scale` 时的修正，`plus / scale = 10^-buf.len() / 2` 时的修正。",
+        "translate": ""
+    },
+    {
+        "source": "in order to keep the fixed-size bignum, we actually use `mant + floor(plus) >= scale`.",
+        "suggest": "为了保留固定大小的 bignum，我们实际上使用 `mant + floor(plus) >= scale`。",
+        "translate": ""
+    },
+    {
+        "source": "again with the shortest algorithm, `d[0]` can be zero but will be eventually rounded up.",
+        "suggest": "再次使用最短算法，`d[0]` 可以为零，但最终会四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "if we are working with the last-digit limitation, we need to shorten the buffer before the actual rendering in order to avoid double rounding.",
+        "suggest": "如果使用的是最后一位数字的限制，则需要在实际渲染之前缩短缓冲区，以避免双舍入。",
+        "translate": ""
+    },
+    {
+        "source": "note that we have to enlarge the buffer again when rounding up happens!",
+        "suggest": "请注意，在进行舍入操作时，我们必须再次扩大缓冲区!",
+        "translate": ""
+    },
+    {
+        "source": "oops, we cannot even produce *one* digit.",
+        "suggest": "糟糕，我们甚至无法产生 *一位* 数字。",
+        "translate": ""
+    },
+    {
+        "source": "this is possible when, say, we've got something like 9.5 and it's being rounded to 10.",
+        "suggest": "例如，当我们有类似 9.5 的值并将其四舍五入时，这是可能的。",
+        "translate": ""
+    },
+    {
+        "source": "we return an empty buffer, with an exception of the later rounding-up case which occurs when `k == limit` and has to produce exactly one digit.",
+        "suggest": "我们返回一个空缓冲区，但以后的向上舍入情况除外，后者发生在 `k == limit` 且必须产生一位数字的情况下。",
+        "translate": ""
+    },
+    {
+        "source": "(this can be expensive, so do not calculate them when the buffer is empty.)",
+        "suggest": "(这可能很昂贵，因此在缓冲区为空时不要计算它们。)",
+        "translate": ""
+    },
+    {
+        "source": "following digits are all zeroes, we stop here do *not* try to perform rounding!",
+        "suggest": "以下数字全为零，我们在这里停止 *不要* 尝试进行舍入!",
+        "translate": ""
+    },
+    {
+        "source": "rather, fill remaining digits.",
+        "suggest": "而是填写剩余的数字。",
+        "translate": ""
+    },
+    {
+        "source": "rounding up if we stop in the middle of digits if the following digits are exactly 5000..., check the prior digit and try to round to even (i.e., avoid rounding up when the prior digit is even).",
+        "suggest": "如果以下几位恰好是 5000，则四舍五入，如果我们停在数字的中间，请检查前一位并尝试四舍五入为偶数 (即，避免在前一位为偶数时四舍五入)。",
+        "translate": ""
+    },
+    {
+        "source": "`buf[len-1]` is initialized.",
+        "suggest": "`buf[len-1]` 被初始化。",
+        "translate": ""
+    },
+    {
+        "source": "but we've been requested a fixed number of digits, so do not alter the buffer...",
+        "suggest": "但是我们被要求提供固定数量的数字，所以请不要更改缓冲区...",
+        "translate": ""
+    },
+    {
+        "source": "...unless we've been requested the fixed precision instead.",
+        "suggest": "... 除非我们被要求使用固定精度。",
+        "translate": ""
+    },
+    {
+        "source": "we also need to check that, if the original buffer was empty, the additional digit can only be added when `k == limit` (edge case).",
+        "suggest": "我们还需要检查一下，如果原始缓冲区为空，则只能在 `k == limit` (edge 情况) 下添加附加数字。",
+        "translate": ""
+    },
+    {
+        "source": "Rust adaptation of the Grisu3 algorithm described in \"Printing Floating-Point Numbers Quickly and Accurately with Integers\"[^1].",
+        "suggest": "Grisu3 算法的 Rust 适应性，在使用整数快速而准确地打印浮点数 [^1] 中进行了介绍。",
+        "translate": ""
+    },
+    {
+        "source": "It uses about 1KB of precomputed table, and in turn, it's very quick for most inputs.",
+        "suggest": "它使用大约 1KB 的预先计算表，因此，对于大多数输入而言，它非常快。",
+        "translate": ""
+    },
+    {
+        "source": "2010. Printing floating-point numbers quickly and",
+        "suggest": "2010. 快速打印浮点数和",
+        "translate": ""
+    },
+    {
+        "source": "accurately with integers.",
+        "suggest": "准确地使用整数。",
+        "translate": ""
+    },
+    {
+        "source": "see the comments in `format_shortest_opt` for the rationale.",
+        "suggest": "有关基本原理，请参见 `format_shortest_opt` 中的注释。",
+        "translate": ""
+    },
+    {
+        "source": "Given `x > 0`, returns `(k, 10^k)` such that `10^k <= x < 10^(k+1)`.",
+        "suggest": "给定 `x > 0`，则返回 `(k, 10^k)`，如 `10^k <= x < 10^(k+1)`。",
+        "translate": ""
+    },
+    {
+        "source": "The shortest mode implementation for Grisu.",
+        "suggest": "Grisu 的最短模式实现。",
+        "translate": ""
+    },
+    {
+        "source": "It returns `None` when it would return an inexact representation otherwise.",
+        "suggest": "否则，当返回不精确的表示形式时，它将返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "we need at least three bits of additional precision",
+        "suggest": "我们至少需要三位额外的精度",
+        "translate": ""
+    },
+    {
+        "source": "start with the normalized values with the shared exponent",
+        "suggest": "从具有共享指数的归一化值开始",
+        "translate": ""
+    },
+    {
+        "source": "find any `cached = 10^minusk` such that `ALPHA <= minusk + plus.e + 64 <= GAMMA`.",
+        "suggest": "找到任何 `cached = 10^minusk` 这样的 `ALPHA <= minusk + plus.e + 64 <= GAMMA`。",
+        "translate": ""
+    },
+    {
+        "source": "since `plus` is normalized, this means `2^(62 + ALPHA) <= plus * cached < 2^(64 + GAMMA)`;",
+        "suggest": "由于 `plus` 已标准化，这意味着 `2^(62 + ALPHA) <= plus * cached < 2^(64 + GAMMA)`;",
+        "translate": ""
+    },
+    {
+        "source": "given our choices of `ALPHA` and `GAMMA`, this puts `plus * cached` into `[4, 2^32)`.",
+        "suggest": "考虑到我们选择了 `ALPHA` 和 `GAMMA`，这会将 `plus * cached` 放入 `[4, 2^32)`。",
+        "translate": ""
+    },
+    {
+        "source": "it is obviously desirable to maximize `GAMMA - ALPHA`, so that we don't need many cached powers of 10, but there are some considerations:",
+        "suggest": "显然，最大化 `GAMMA - ALPHA` 是可取的，这样我们就不需要很多 10 的缓存幂，但是有一些注意事项:",
+        "translate": ""
+    },
+    {
+        "source": "we want to keep `floor(plus * cached)` within `u32` since it needs a costly division.",
+        "suggest": "我们希望将 `floor(plus * cached)` 保留在 `u32` 之内，因为它需要一个代价高昂的除法。",
+        "translate": ""
+    },
+    {
+        "source": "(this is not really avoidable, remainder is required for accuracy estimation.)",
+        "suggest": "(这实际上是无法避免的，需要剩余的部分来进行准确性估算。)",
+        "translate": ""
+    },
+    {
+        "source": "the remainder of `floor(plus * cached)` repeatedly gets multiplied by 10, and it should not overflow.",
+        "suggest": "`floor(plus * cached)` 的其余部分反复乘以 10，并且不应溢出。",
+        "translate": ""
+    },
+    {
+        "source": "the first gives `64 + GAMMA <= 32`, while the second gives `10 * 2^-ALPHA <= 2^64`;",
+        "suggest": "第一个给出 `64 + GAMMA <= 32`，第二个给出 `10 * 2^-ALPHA <= 2^64`;",
+        "translate": ""
+    },
+    {
+        "source": "and -32 is the maximal range with this constraint, and V8 also uses them.",
+        "suggest": "-32 是具有此约束的最大范围，V8 也使用它们。",
+        "translate": ""
+    },
+    {
+        "source": "scale fps.",
+        "suggest": "缩放 fps。",
+        "translate": ""
+    },
+    {
+        "source": "this gives the maximal error of 1 ulp (proved from Theorem 5.1).",
+        "suggest": "这给出了 1 ulp 的最大误差 (由定理 5.1 证明)。",
+        "translate": ""
+    },
+    {
+        "source": "+- actual range of minus",
+        "suggest": "+- 负的实际范围",
+        "translate": ""
+    },
+    {
+        "source": "above `minus`, `v` and `plus` are *quantized* approximations (error < 1 ulp).",
+        "suggest": "`minus` 之上的 `v` 和 `plus` 被量化为近似值 (误差 < 1 ulp)。",
+        "translate": ""
+    },
+    {
+        "source": "as we don't know the error is positive or negative, we use two approximations spaced equally and have the maximal error of 2 ulps.",
+        "suggest": "因为我们不知道误差是正还是负，所以我们使用两个等距分布的近似值，并且最大误差为 2 ulps。",
+        "translate": ""
+    },
+    {
+        "source": "the \"unsafe region\" is a liberal interval which we initially generate.",
+        "suggest": "\"unsafe region\" 是我们最初生成的自由区间。",
+        "translate": ""
+    },
+    {
+        "source": "the \"safe region\" is a conservative interval which we only accept.",
+        "suggest": "\"safe region\" 是我们仅接受的保守区间。",
+        "translate": ""
+    },
+    {
+        "source": "we start with the correct repr within the unsafe region, and try to find the closest repr to `v` which is also within the safe region.",
+        "suggest": "我们从不安全区域内的正确 repr 开始，然后尝试找到也在安全区域内与 `v` 最接近的 repr。",
+        "translate": ""
+    },
+    {
+        "source": "if we can't, we give up.",
+        "suggest": "如果不能，我们就放弃。",
+        "translate": ""
+    },
+    {
+        "source": "shared exponent",
+        "suggest": "共享指数",
+        "translate": ""
+    },
+    {
+        "source": "divide `plus1` into integral and fractional parts.",
+        "suggest": "将 `plus1` 分为整数部分和小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "integral parts are guaranteed to fit in u32, since cached power guarantees `plus < 2^32` and normalized `plus.f` is always less than `2^64 - 2^4` due to the precision requirement.",
+        "suggest": "由于精度要求，缓存的幂保证了 `plus < 2^32`，归一化的 `plus.f` 始终小于 `2^64 - 2^4`，因此保证了集成部件可以装入 u32。",
+        "translate": ""
+    },
+    {
+        "source": "calculate the largest `10^max_kappa` no more than `plus1` (thus `plus1 < 10^(max_kappa+1)`).",
+        "suggest": "计算最大的 `10^max_kappa` 不超过 `plus1` (因此 `plus1 < 10^(max_kappa+1)`)。",
+        "translate": ""
+    },
+    {
+        "source": "this is an upper bound of `kappa` below.",
+        "suggest": "这是下面的 `kappa` 的上限。",
+        "translate": ""
+    },
+    {
+        "source": "Theorem 6.2: if `k` is the greatest integer s.t.",
+        "suggest": "定理 6.2: 如果 `k` 是最大整数 s.t。",
+        "translate": ""
+    },
+    {
+        "source": "then `V = floor(y / 10^k) * 10^k` is in `[x, y]` and one of the shortest representations (with the minimal number of significant digits) in that range.",
+        "suggest": "那么 `V = floor(y / 10^k) * 10^k` 在 `[x, y]` 中，并且是该范围内最短的表示形式之一 (有效位数最少)。",
+        "translate": ""
+    },
+    {
+        "source": "find the digit length `kappa` between `(minus1, plus1)` as per Theorem 6.2.",
+        "suggest": "根据定理 6.2，找到 `(minus1, plus1)` 之间的数字长度 `kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "Theorem 6.2 can be adopted to exclude `x` by requiring `y mod 10^k < y - x` instead.",
+        "suggest": "通过定理 6.2 可以通过要求 `y mod 10^k < y - x` 来排除 `x`。",
+        "translate": ""
+    },
+    {
+        "source": "(e.g., `x` = 32000, `y` = 32777; `kappa` = 2 since `y mod 10^3 = 777 < y - x = 777`.) the algorithm relies on the later verification phase to exclude `y`.",
+        "suggest": "(例如，`x` =32000，`y` =32777; `kappa` =2，因为 `y mod 10 ^ 3=777 <y-x=777`。) 该算法依赖于以后的验证阶段来排除 `y`。",
+        "translate": ""
+    },
+    {
+        "source": "render integral parts, while checking for the accuracy at each step.",
+        "suggest": "渲染组成部分，同时检查每一步的准确性。",
+        "translate": ""
+    },
+    {
+        "source": "digits yet to be rendered",
+        "suggest": "尚未渲染的数字",
+        "translate": ""
+    },
+    {
+        "source": "we always have at least one digit to render, as `plus1 >= 10^kappa` invariants:",
+        "suggest": "我们总是有一个数字要渲染，作为 `plus1 >= 10^kappa` 不变量:",
+        "translate": ""
+    },
+    {
+        "source": "(it follows that `remainder = plus1int % 10^(kappa+1)`)",
+        "suggest": "(它遵循 `remainder = plus1int % 10^(kappa+1)`)",
+        "translate": ""
+    },
+    {
+        "source": "divide `remainder` by `10^kappa`.",
+        "suggest": "将 `remainder` 除以 `10^kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "both are scaled by `2^-e`.",
+        "suggest": "两者均按照 `2^-e` 缩放。",
+        "translate": ""
+    },
+    {
+        "source": "we've found the correct `kappa`.",
+        "suggest": "我们找到了正确的 `kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "scale 10^kappa back to the shared exponent",
+        "suggest": "将 10 ^ kappa 缩放回共享指数",
+        "translate": ""
+    },
+    {
+        "source": "break the loop when we have rendered all integral digits.",
+        "suggest": "绘制所有整数后，请中断循环。",
+        "translate": ""
+    },
+    {
+        "source": "the exact number of digits is `max_kappa + 1` as `plus1 < 10^(max_kappa+1)`.",
+        "suggest": "确切的位数是 `max_kappa + 1` 和 `plus1 < 10^(max_kappa+1)`。",
+        "translate": ""
+    },
+    {
+        "source": "restore invariants",
+        "suggest": "恢复不变量",
+        "translate": ""
+    },
+    {
+        "source": "render fractional parts, while checking for the accuracy at each step.",
+        "suggest": "渲染小数部分，同时检查每个步骤的准确性。",
+        "translate": ""
+    },
+    {
+        "source": "this time we rely on repeated multiplications, as division will lose the precision.",
+        "suggest": "这次我们依靠重复的乘法，因为除法将失去精度。",
+        "translate": ""
+    },
+    {
+        "source": "the next digit should be significant as we've tested that before breaking out invariants, where `m = max_kappa + 1` (# of digits in the integral part):",
+        "suggest": "下一个数字应该是有效的，因为我们已经在分解不可变变量之前进行了测试，其中 `m = max_kappa + 1` (整数部分的数字) :",
+        "translate": ""
+    },
+    {
+        "source": "won't overflow,",
+        "suggest": "不会溢出",
+        "translate": ""
+    },
+    {
+        "source": "both are scaled by `2^e / 10^kappa`, so the latter is implicit here.",
+        "suggest": "两者都按 `2^e / 10^kappa` 缩放，因此后者在这里是隐式的。",
+        "translate": ""
+    },
+    {
+        "source": "implicit divisor",
+        "suggest": "隐式除数",
+        "translate": ""
+    },
+    {
+        "source": "we've generated all significant digits of `plus1`, but not sure if it's the optimal one.",
+        "suggest": "我们已经生成了 `plus1` 的所有有效数字，但不确定是否是最佳数字。",
+        "translate": ""
+    },
+    {
+        "source": "for example, if `minus1` is 3.14153...",
+        "suggest": "例如，如果 `minus1` 为 3.14153 ...",
+        "translate": ""
+    },
+    {
+        "source": "and `plus1` is 3.14158..., there are 5 different shortest representation from 3.14154 to 3.14158 but we only have the greatest one.",
+        "suggest": "`plus1` 是 3.14158 ...，从 3.14154 到 3.14158 有 5 种不同的最短表示形式，但我们只有最大的一种。",
+        "translate": ""
+    },
+    {
+        "source": "we have to successively decrease the last digit and check if this is the optimal repr.",
+        "suggest": "我们必须连续减少最后一位并检查这是否是最佳代表。",
+        "translate": ""
+    },
+    {
+        "source": "there are at most 9 candidates (..1 to ..9), so this is fairly quick.",
+        "suggest": "最多有 9 个候选人 (..1 到..9)，所以这相当快。",
+        "translate": ""
+    },
+    {
+        "source": "(\"rounding\" phase)",
+        "suggest": "(\"rounding\" 阶段)",
+        "translate": ""
+    },
+    {
+        "source": "the function checks if this \"optimal\" repr is actually within the ulp ranges, and also, it is possible that the \"second-to-optimal\" repr can actually be optimal due to the rounding error.",
+        "suggest": "函数检查此 \"optimal\" repr 是否实际上在 ulp 范围内，并且由于舍入误差，\"second-to-optimal\" repr 实际上可能是最佳的。",
+        "translate": ""
+    },
+    {
+        "source": "in either cases this returns `None`.",
+        "suggest": "在这两种情况下，都将返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "(\"weeding\" phase)",
+        "suggest": "(\"weeding\" 阶段)",
+        "translate": ""
+    },
+    {
+        "source": "all arguments here are scaled by the common (but implicit) value `k`, so that:",
+        "suggest": "这里的所有参数均按公共 (但隐式) 值 `k` 进行缩放，以便:",
+        "translate": ""
+    },
+    {
+        "source": "(and also, `remainder < threshold`)",
+        "suggest": "(还有 `remainder < threshold`)",
+        "translate": ""
+    },
+    {
+        "source": "(and also, `threshold > plus1v` from prior invariants)",
+        "suggest": "(以及先前不可变变量的 `threshold > plus1v`)",
+        "translate": ""
+    },
+    {
+        "source": "produce two approximations to `v` (actually `plus1 - v`) within 1.5 ulps.",
+        "suggest": "在 1.5 ulps 内对 `v` (实际上是 `plus1 - v`) 产生两个近似值。",
+        "translate": ""
+    },
+    {
+        "source": "the resulting representation should be the closest representation to both.",
+        "suggest": "结果表示应为两者最接近的表示。",
+        "translate": ""
+    },
+    {
+        "source": "here `plus1 - v` is used since calculations are done with respect to `plus1` in order to avoid overflow/underflow (hence the seemingly swapped names).",
+        "suggest": "这里使用 `plus1 - v` 是因为针对 `plus1` 进行了计算，以避免使用 overflow/underflow (因此，似乎交换了名称)。",
+        "translate": ""
+    },
+    {
+        "source": "decrease the last digit and stop at the closest representation to `v + 1 ulp`.",
+        "suggest": "减少最后一位数字，并停在最接近 `v + 1 ulp` 的位置。",
+        "translate": ""
+    },
+    {
+        "source": "we work with the approximated digits `w(n)`, which is initially equal to `plus1 - plus1 % 10^kappa`.",
+        "suggest": "我们使用的近似数字 `w(n)` 最初等于 `plus1 - plus1 % 10^kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "after running the loop body `n` times,",
+        "suggest": "将循环体运行 `n` 次之后，",
+        "translate": ""
+    },
+    {
+        "source": "we set `plus1w(n) = plus1 - w(n) = plus1 % 10^kappa + n * 10^kappa` (thus `remainder = plus1w(0)`) to simplify checks.",
+        "suggest": "我们将 `plus1w(n) = plus1 - w(n) = plus1 % 10^kappa + n * 10^kappa` 设置为 (因此 `remainder= plus1w(0)`) 以简化检查。",
+        "translate": ""
+    },
+    {
+        "source": "note that `plus1w(n)` is always increasing.",
+        "suggest": "请注意，`plus1w(n)` 一直在增加。",
+        "translate": ""
+    },
+    {
+        "source": "we have three conditions to terminate.",
+        "suggest": "我们有三个条件可以终止。",
+        "translate": ""
+    },
+    {
+        "source": "any of them will make the loop unable to proceed, but we then have at least one valid representation known to be closest to `v + 1 ulp` anyway.",
+        "suggest": "它们中的任何一个都将使循环无法继续进行，但是无论如何我们至少拥有一个已知的最接近 `v + 1 ulp` 的有效表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "we will denote them as TC1 through TC3 for brevity.",
+        "suggest": "为了简便起见，我们将它们表示为 TC1 至 TC3。",
+        "translate": ""
+    },
+    {
+        "source": "`w(n) <= v + 1 ulp`, i.e., this is the last repr that can be the closest one.",
+        "suggest": "`w(n) <= v + 1 ulp`，即这是最接近的代表。",
+        "translate": ""
+    },
+    {
+        "source": "this is equivalent to `plus1 - w(n) = plus1w(n) >= plus1 - (v + 1 ulp) = plus1v_up`.",
+        "suggest": "这等效于 `plus1 - w(n) = plus1w(n) >= plus1 - (v + 1 ulp) = plus1v_up`。",
+        "translate": ""
+    },
+    {
+        "source": "combined with TC2 (which checks if `w(n+1)` is valid), this prevents the possible overflow on the calculation of `plus1w(n)`.",
+        "suggest": "与 TC2 (检查 `w(n+1)` 是否有效) 结合使用，可以防止 `plus1w(n)` 的计算可能出现溢出。",
+        "translate": ""
+    },
+    {
+        "source": "`w(n+1) < minus1`, i.e., the next repr definitely does not round to `v`.",
+        "suggest": "`w(n+1) < minus1`，即下一个代表肯定不会舍入到 `v`。",
+        "translate": ""
+    },
+    {
+        "source": "this is equivalent to `plus1 - w(n) + 10^kappa = plus1w(n) + 10^kappa > plus1 - minus1 = threshold`.",
+        "suggest": "这等效于 `plus1 - w(n) + 10^kappa = plus1w(n) + 10^kappa > plus1 - minus1 = threshold`。",
+        "translate": ""
+    },
+    {
+        "source": "the left hand side can overflow, but we know `threshold > plus1v`, so if TC1 is false, `threshold - plus1w(n) > threshold - (plus1v - 1 ulp) > 1 ulp` and we can safely test if `threshold - plus1w(n) < 10^kappa` instead.",
+        "suggest": "左侧可能会溢出，但是我们知道 `threshold > plus1v`，所以如果 TC1 为假，则 `threshold - plus1w(n) > threshold - (plus1v - 1 ulp) > 1 ulp`，我们可以安全地测试 `threshold - plus1w(n) < 10^kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "`abs(w(n) - (v + 1 ulp)) <= abs(w(n+1) - (v + 1 ulp))`, i.e., the next repr is no closer to `v + 1 ulp` than the current repr.",
+        "suggest": "`abs(w(n) - (v + 1 ulp)) <= abs(w(n+1) - (v + 1 ulp))`，即下一个代表不比当前代表更接近 `v + 1 ulp`。",
+        "translate": ""
+    },
+    {
+        "source": "given `z(n) = plus1v_up - plus1w(n)`, this becomes `abs(z(n)) <= abs(z(n+1))`.",
+        "suggest": "给定 `z(n) = plus1v_up - plus1w(n)`，则变为 `abs(z(n)) <= abs(z(n+1))`。",
+        "translate": ""
+    },
+    {
+        "source": "again assuming that TC1 is false, we have `z(n) > 0`.",
+        "suggest": "再次假设 TC1 为假，我们得到 `z(n) > 0`。",
+        "translate": ""
+    },
+    {
+        "source": "we have two cases to consider:",
+        "suggest": "我们有两种情况要考虑:",
+        "translate": ""
+    },
+    {
+        "source": "when `z(n+1) >= 0`: TC3 becomes `z(n) <= z(n+1)`.",
+        "suggest": "当 `z(n+1) >= 0`: TC3 变为 `z(n) <= z(n+1)`。",
+        "translate": ""
+    },
+    {
+        "source": "as `plus1w(n)` is increasing, `z(n)` should be decreasing and this is clearly false.",
+        "suggest": "随着 `plus1w(n)` 的增加，`z(n)` 应该减少，这显然是错误的。",
+        "translate": ""
+    },
+    {
+        "source": "when `z(n+1) < 0`:",
+        "suggest": "当 `z(n+1) < 0`:",
+        "translate": ""
+    },
+    {
+        "source": "TC3a: the precondition is `plus1v_up < plus1w(n) + 10^kappa`.",
+        "suggest": "TC3a: 前提是 `plus1v_up < plus1w(n) + 10^kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "assuming TC2 is false, `threshold >= plus1w(n) + 10^kappa` so it cannot overflow.",
+        "suggest": "假设 TC2 为 false，则为 `threshold >= plus1w(n) + 10^kappa`，因此它不会溢出。",
+        "translate": ""
+    },
+    {
+        "source": "TC3b: TC3 becomes `z(n) <= -z(n+1)`, i.e.,",
+        "suggest": "TC3b: TC3 变为 `z(n) <= -z(n+1)`，即",
+        "translate": ""
+    },
+    {
+        "source": "the negated TC1 gives `plus1v_up > plus1w(n)`, so it cannot overflow or underflow when combined with TC3a.",
+        "suggest": "取反的 TC1 给出 `plus1v_up > plus1w(n)`，因此与 TC3a 结合使用时不会溢出或下溢。",
+        "translate": ""
+    },
+    {
+        "source": "consequently, we should stop when `TC1 || TC2 || (TC3a && TC3b)`.",
+        "suggest": "因此，我们应该在 `TC1 || TC2 || (TC3a && TC3b)` 时停止。",
+        "translate": ""
+    },
+    {
+        "source": "the following is equal to its inverse,",
+        "suggest": "以下等价于它的逆，",
+        "translate": ""
+    },
+    {
+        "source": "the shortest repr cannot end with `0`",
+        "suggest": "最短的代表不能以 `0` 结尾",
+        "translate": ""
+    },
+    {
+        "source": "check if this representation is also the closest representation to `v - 1 ulp`.",
+        "suggest": "检查此表示形式是否也是最接近 `v - 1 ulp` 的表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "this is simply same to the terminating conditions for `v + 1 ulp`, with all `plus1v_up` replaced by `plus1v_down` instead.",
+        "suggest": "这与 `v + 1 ulp` 的终止条件完全相同，所有 `plus1v_up` 都替换为 `plus1v_down`。",
+        "translate": ""
+    },
+    {
+        "source": "overflow analysis equally holds.",
+        "suggest": "溢出分析同样成立。",
+        "translate": ""
+    },
+    {
+        "source": "now we have the closest representation to `v` between `plus1` and `minus1`.",
+        "suggest": "现在，我们在 `plus1` 和 `minus1` 之间具有最接近 `v` 的表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "this is too liberal, though, so we reject any `w(n)` not between `plus0` and `minus0`, i.e., `plus1 - plus1w(n) <= minus0` or `plus1 - plus1w(n) >= plus0`.",
+        "suggest": "但是，这太宽松了，因此我们拒绝 `plus0` 和 `minus0` 之间的任何 `w(n)`，即 `plus1 - plus1w(n) <= minus0` 或 `plus1 - plus1w(n) >= plus0`。",
+        "translate": ""
+    },
+    {
+        "source": "we utilize the facts that `threshold = plus1 - minus1` and `plus1 - plus0 = minus0 - minus1 = 2 ulp`.",
+        "suggest": "我们利用 `threshold = plus1 - minus1` 和 `plus1 - plus0 = minus0 - minus1 = 2 ulp` 的事实。",
+        "translate": ""
+    },
+    {
+        "source": "The shortest mode implementation for Grisu with Dragon fallback.",
+        "suggest": "具有 Dragon 后备功能的 Grisu 的最短模式实现。",
+        "translate": ""
+    },
+    {
+        "source": "This should be used for most cases.",
+        "suggest": "在大多数情况下都应使用此方法。",
+        "translate": ""
+    },
+    {
+        "source": "The borrow checker is not smart enough to let us use `buf` in the second branch, so we launder the lifetime here.",
+        "suggest": "借用检查器不够智能，无法在第二个分支中使用 `buf`，因此我们在这里清洗生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "But we only re-use `buf` if `format_shortest_opt` returned `None` so this is okay.",
+        "suggest": "但是，只有在 `format_shortest_opt` 返回 `None` 的情况下，我们才重新使用 `buf`，所以可以。",
+        "translate": ""
+    },
+    {
+        "source": "The exact and fixed mode implementation for Grisu.",
+        "suggest": "Grisu 的确切和固定模式实现。",
+        "translate": ""
+    },
+    {
+        "source": "normalize and scale `v`.",
+        "suggest": "归一化和缩放 `v`。",
+        "translate": ""
+    },
+    {
+        "source": "divide `v` into integral and fractional parts.",
+        "suggest": "将 `v` 分为整数部分和小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "both old `v` and new `v` (scaled by `10^-k`) has an error of < 1 ulp (Theorem 5.1).",
+        "suggest": "旧 `v` 和新 `v` (由 `10^-k` 缩放) 的误差均小于 1 ulp (定理 5.1)。",
+        "translate": ""
+    },
+    {
+        "source": "as we don't know the error is positive or negative, we use two approximations spaced equally and have the maximal error of 2 ulps (same to the shortest case).",
+        "suggest": "因为我们不知道误差是正还是负，所以我们使用两个等距的近似值，并且最大误差为 2 ulps (与最短的情况相同)。",
+        "translate": ""
+    },
+    {
+        "source": "the goal is to find the exactly rounded series of digits that are common to both `v - 1 ulp` and `v + 1 ulp`, so that we are maximally confident.",
+        "suggest": "目的是找到 `v - 1 ulp` 和 `v + 1 ulp` 共有的精确四舍五入的数字序列，以便我们有最大的信心。",
+        "translate": ""
+    },
+    {
+        "source": "if this is not possible, we don't know which one is the correct output for `v`, so we give up and fall back.",
+        "suggest": "如果无法做到这一点，我们不知道哪一个是 `v` 的正确输出，因此我们放弃并退回。",
+        "translate": ""
+    },
+    {
+        "source": "is defined as `1 ulp * 2^e` here (same to the ulp in `vfrac`), and we will scale it whenever `v` gets scaled.",
+        "suggest": "在这里定义为 `1 ulp * 2^e` (与 `vfrac` 中的 ulp 相同)，只要 `v` 得到缩放，我们就会对其进行缩放。",
+        "translate": ""
+    },
+    {
+        "source": "calculate the largest `10^max_kappa` no more than `v` (thus `v < 10^(max_kappa+1)`).",
+        "suggest": "计算最大的 `10^max_kappa` 不超过 `v` (因此 `v < 10^(max_kappa+1)`)。",
+        "translate": ""
+    },
+    {
+        "source": "in principle we can immediately call `possibly_round` with an empty buffer, but scaling `max_ten_kappa << e` by 10 can result in overflow.",
+        "suggest": "原则上，我们可以立即使用空缓冲区调用 `possibly_round`，但是将 `max_ten_kappa << e` 缩放 10 会导致溢出。",
+        "translate": ""
+    },
+    {
+        "source": "thus we are being sloppy here and widen the error range by a factor of 10.",
+        "suggest": "因此我们在这里很草率，错误范围扩大了 10 倍。",
+        "translate": ""
+    },
+    {
+        "source": "this will increase the false negative rate, but only very, *very* slightly;",
+        "suggest": "这会增加假阴性率，但只会非常非常轻微地提高假阴性率;",
+        "translate": ""
+    },
+    {
+        "source": "it can only matter noticeably when the mantissa is bigger than 60 bits.",
+        "suggest": "仅当尾数大于 60 位时才有意义。",
+        "translate": ""
+    },
+    {
+        "source": "`len=0`, so the obligation of having initialized this memory is trivial.",
+        "suggest": "`len=0`，因此初始化此内存的义务微不足道。",
+        "translate": ""
+    },
+    {
+        "source": "render integral parts.",
+        "suggest": "渲染不可分割的部分。",
+        "translate": ""
+    },
+    {
+        "source": "the error is entirely fractional, so we don't need to check it in this part.",
+        "suggest": "该错误完全是零星的，因此我们无需在此部分中进行检查。",
+        "translate": ""
+    },
+    {
+        "source": "we always have at least one digit to render invariants:",
+        "suggest": "我们总是至少有一位数字来表示不变式:",
+        "translate": ""
+    },
+    {
+        "source": "(it follows that `remainder = vint % 10^(kappa+1)`)",
+        "suggest": "(之后是 `remainder = vint % 10^(kappa+1)`)",
+        "translate": ""
+    },
+    {
+        "source": "is the buffer full?",
+        "suggest": "缓冲区是否已满?",
+        "translate": ""
+    },
+    {
+        "source": "run the rounding pass with the remainder.",
+        "suggest": "用余数运行舍入通行证。",
+        "translate": ""
+    },
+    {
+        "source": "we have initialized `len` many bytes.",
+        "suggest": "我们已经将 `len` 初始化了很多字节。",
+        "translate": ""
+    },
+    {
+        "source": "render fractional parts.",
+        "suggest": "渲染小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "in principle we can continue to the last available digit and check for the accuracy.",
+        "suggest": "原则上，我们可以继续到最后一个可用数字并检查准确性。",
+        "translate": ""
+    },
+    {
+        "source": "unfortunately we are working with the finite-sized integers, so we need some criterion to detect the overflow.",
+        "suggest": "不幸的是，我们正在使用有限大小的整数，因此我们需要一些标准来检测溢出。",
+        "translate": ""
+    },
+    {
+        "source": "uses `remainder > err`, which becomes false when the first `i` significant digits of `v - 1 ulp` and `v` differ.",
+        "suggest": "使用 `remainder > err`，当 `v - 1 ulp` 和 `v` 的前 `i` 有效数字不同时，此错误。",
+        "translate": ""
+    },
+    {
+        "source": "however this rejects too many otherwise valid input.",
+        "suggest": "但是，这会拒绝太多否则有效的输入。",
+        "translate": ""
+    },
+    {
+        "source": "since the later phase has a correct overflow detection, we instead use tighter criterion:",
+        "suggest": "由于后面的阶段具有正确的溢出检测功能，因此我们使用更严格的标准:",
+        "translate": ""
+    },
+    {
+        "source": "we continue til `err` exceeds `10^kappa / 2`, so that the range between `v - 1 ulp` and `v + 1 ulp` definitely contains two or more rounded representations.",
+        "suggest": "我们继续直到 `err` 超过 `10^kappa / 2`，以便 `v - 1 ulp` 和 `v + 1 ulp` 之间的范围肯定包含两个或多个舍入表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "this is same to the first two comparisons from `possibly_round`, for the reference.",
+        "suggest": "对于引用，这与 `possibly_round` 的前两次比较相同。",
+        "translate": ""
+    },
+    {
+        "source": "invariants, where `m = max_kappa + 1` (# of digits in the integral part):",
+        "suggest": "不可变变量，其中 `m = max_kappa + 1` (整数部分的位数) :",
+        "translate": ""
+    },
+    {
+        "source": "further calculation is useless (`possibly_round` definitely fails), so we give up.",
+        "suggest": "进一步的计算是没有用的 (`possibly_round` 肯定会失败)，所以我们放弃了。",
+        "translate": ""
+    },
+    {
+        "source": "we've generated all requested digits of `v`, which should be also same to corresponding digits of `v - 1 ulp`.",
+        "suggest": "我们已经生成了所有要求的 `v` 数字，这些数字也应该与 `v - 1 ulp` 的相应数字相同。",
+        "translate": ""
+    },
+    {
+        "source": "now we check if there is a unique representation shared by both `v - 1 ulp` and `v + 1 ulp`;",
+        "suggest": "现在，我们检查 `v - 1 ulp` 和 `v + 1 ulp` 是否共享唯一的表示形式;",
+        "translate": ""
+    },
+    {
+        "source": "this can be either same to generated digits, or to the rounded-up version of those digits.",
+        "suggest": "这可以与生成的数字相同，也可以与这些数字的四舍五入形式相同。",
+        "translate": ""
+    },
+    {
+        "source": "if the range contains multiple representations of the same length, we cannot be sure and should return `None` instead.",
+        "suggest": "如果范围包含相同长度的多个表示形式，则不能确定，应返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "the first `len` bytes of `buf` must be initialized.",
+        "suggest": "`buf` 的前 `len` 字节必须初始化。",
+        "translate": ""
+    },
+    {
+        "source": "(for the reference, the dotted line indicates the exact value for possible representations in given number of digits.)",
+        "suggest": "(对于引用，虚线表示在给定数字位数下可能表示的确切值。)",
+        "translate": ""
+    },
+    {
+        "source": "error is too large that there are at least three possible representations between `v - 1 ulp` and `v + 1 ulp`.",
+        "suggest": "错误太大，以至于 `v - 1 ulp` 和 `v + 1 ulp` 之间至少存在三种可能的表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "we cannot determine which one is correct.",
+        "suggest": "我们无法确定哪一个是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "in fact, 1/2 ulp is enough to introduce two possible representations.",
+        "suggest": "实际上，1/2 ulp 足以引入两种可能的表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "(remember that we need a unique representation for both `v - 1 ulp` and `v + 1 ulp`.) this won't overflow, as `ulp < ten_kappa` from the first check.",
+        "suggest": "(请记住，对于 `v - 1 ulp` 和 `v + 1 ulp`，我们都需要一个唯一的表示形式。) 这不会溢出，因为从第一次检查起就是 `ulp < ten_kappa`。",
+        "translate": ""
+    },
+    {
+        "source": "if `v + 1 ulp` is closer to the rounded-down representation (which is already in `buf`), then we can safely return.",
+        "suggest": "如果 `v + 1 ulp` 更接近四舍五入的表示形式 (已经存在于 `buf` 中)，那么我们可以安全地返回。",
+        "translate": ""
+    },
+    {
+        "source": "note that `v - 1 ulp` *can* be less than the current representation, but as `1 ulp < 10^kappa / 2`, this condition is enough:",
+        "suggest": "请注意，`v - 1 ulp` 可以小于当前表示形式，但是作为 `1 ulp < 10^kappa / 2`，此条件就足够了:",
+        "translate": ""
+    },
+    {
+        "source": "the distance between `v - 1 ulp` and the current representation cannot exceed `10^kappa / 2`.",
+        "suggest": "`v - 1 ulp` 和当前表示之间的距离不能超过 `10^kappa / 2`。",
+        "translate": ""
+    },
+    {
+        "source": "the condition equals to `remainder + ulp < 10^kappa / 2`.",
+        "suggest": "条件等于 `remainder + ulp < 10^kappa / 2`。",
+        "translate": ""
+    },
+    {
+        "source": "since this can easily overflow, first check if `remainder < 10^kappa / 2`.",
+        "suggest": "由于这很容易溢出，因此请首先检查 `remainder < 10^kappa / 2`。",
+        "translate": ""
+    },
+    {
+        "source": "we've already verified that `ulp < 10^kappa / 2`, so as long as `10^kappa` did not overflow after all, the second check is fine.",
+        "suggest": "我们已经验证了 `ulp < 10^kappa / 2`，因此只要 `10^kappa` 毕竟没有溢出，第二次检查就可以了。",
+        "translate": ""
+    },
+    {
+        "source": "our caller initialized that memory.",
+        "suggest": "我们的调用者初始化了该内存。",
+        "translate": ""
+    },
+    {
+        "source": "on the other hands, if `v - 1 ulp` is closer to the rounded-up representation, we should round up and return.",
+        "suggest": "另一方面，如果 `v - 1 ulp` 更接近于四舍五入的表示形式，我们应该四舍五入并返回。",
+        "translate": ""
+    },
+    {
+        "source": "for the same reason we don't need to check `v + 1 ulp`.",
+        "suggest": "出于同样的原因，我们不需要检查 `v + 1 ulp`。",
+        "translate": ""
+    },
+    {
+        "source": "the condition equals to `remainder - ulp >= 10^kappa / 2`.",
+        "suggest": "条件等于 `remainder - ulp >= 10^kappa / 2`。",
+        "translate": ""
+    },
+    {
+        "source": "again we first check if `remainder > ulp` (note that this is not `remainder >= ulp`, as `10^kappa` is never zero).",
+        "suggest": "再次，我们首先检查是否为 `remainder > ulp` (请注意，这不是 `remainder >= ulp`，因为 `10^kappa` 永远不会为零)。",
+        "translate": ""
+    },
+    {
+        "source": "also note that `remainder - ulp <= 10^kappa`, so the second check does not overflow.",
+        "suggest": "还请注意 `remainder - ulp <= 10^kappa`，因此第二次检查不会溢出。",
+        "translate": ""
+    },
+    {
+        "source": "our caller must have initialized that memory.",
+        "suggest": "我们的调用者必须已初始化该内存。",
+        "translate": ""
+    },
+    {
+        "source": "only add an additional digit when we've been requested the fixed precision.",
+        "suggest": "仅在要求我们提供固定精度时才添加一个额外的数字。",
+        "translate": ""
+    },
+    {
+        "source": "we also need to check that, if the original buffer was empty, the additional digit can only be added when `exp == limit` (edge case).",
+        "suggest": "我们还需要检查一下，如果原始缓冲区为空，则只能在 `exp == limit` (edge 情况) 下添加附加数字。",
+        "translate": ""
+    },
+    {
+        "source": "we and our caller initialized that memory.",
+        "suggest": "我们和调用者初始化了该内存。",
+        "translate": ""
+    },
+    {
+        "source": "otherwise we are doomed (i.e., some values between `v - 1 ulp` and `v + 1 ulp` are rounding down and others are rounding up) and give up.",
+        "suggest": "否则，我们注定要失败 (即，`v - 1 ulp` 和 `v + 1 ulp` 之间的一些值四舍五入，而其他值则四舍五入) 并放弃。",
+        "translate": ""
+    },
+    {
+        "source": "The exact and fixed mode implementation for Grisu with Dragon fallback.",
+        "suggest": "具有 Dragon 后备功能的 Grisu 的精确和固定模式实现。",
+        "translate": ""
+    },
+    {
+        "source": "But we only re-use `buf` if `format_exact_opt` returned `None` so this is okay.",
+        "suggest": "但是，只有在 `format_exact_opt` 返回 `None` 的情况下，我们才重新使用 `buf`，所以可以。",
+        "translate": ""
+    },
+    {
+        "source": "The smallest value that can be represented by this integer type.",
+        "suggest": "此整数类型可以表示的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "The largest value that can be represented by this integer type.",
+        "suggest": "此整数类型可以表示的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "The size of this integer type in bits.",
+        "suggest": "此整数类型的大小 (以位为单位)。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a string slice in a given base to an integer.",
+        "suggest": "将给定基数的字符串切片转换为整数。",
+        "translate": ""
+    },
+    {
+        "source": "The string is expected to be an optional `+` or `-` sign followed by digits.",
+        "suggest": "该字符串应为可选的 `+` 或 `-` 符号，后跟数字。",
+        "translate": ""
+    },
+    {
+        "source": "Digits are a subset of these characters, depending on `radix`:",
+        "suggest": "根据 `radix`，数字是这些字符的子集:",
+        "translate": ""
+    },
+    {
+        "source": "This function panics if `radix` is not in the range from 2 to 36.",
+        "suggest": "如果 `radix` 不在 2 到 36 之间，则此函数 panics。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of ones in the binary representation of `self`.",
+        "suggest": "返回 `self` 二进制表示形式中的位数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of zeros in the binary representation of `self`.",
+        "suggest": "返回 `self` 二进制表示形式中的零数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of leading zeros in the binary representation of `self`.",
+        "suggest": "返回 `self` 二进制表示形式中前导零的数目。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of trailing zeros in the binary representation of `self`.",
+        "suggest": "返回 `self` 二进制表示形式中的尾随零数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of leading ones in the binary representation of `self`.",
+        "suggest": "返回 `self` 二进制表示形式中前导数字。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of trailing ones in the binary representation of `self`.",
+        "suggest": "返回 `self` 二进制表示形式中的尾随数字。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts the bits to the left by a specified amount, `n`, wrapping the truncated bits to the end of the resulting integer.",
+        "suggest": "将位左移指定的量 `n`，将截断的位包装到结果整数的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Please note this isn't the same operation as the `<<` shifting operator!",
+        "suggest": "请注意，此操作与 `<<` 移位运算符不同!",
+        "translate": ""
+    },
+    {
+        "source": "Shifts the bits to the right by a specified amount, `n`, wrapping the truncated bits to the beginning of the resulting integer.",
+        "suggest": "将位右移指定的量 `n`，将截断的位包装到结果整数的开头。",
+        "translate": ""
+    },
+    {
+        "source": "Please note this isn't the same operation as the `>>` shifting operator!",
+        "suggest": "请注意，此操作与 `>>` 移位运算符不同!",
+        "translate": ""
+    },
+    {
+        "source": "Reverses the byte order of the integer.",
+        "suggest": "反转整数的字节顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Reverses the order of bits in the integer.",
+        "suggest": "反转整数中的位顺序。",
+        "translate": ""
+    },
+    {
+        "source": "The least significant bit becomes the most significant bit, second least-significant bit becomes second most-significant bit, etc.",
+        "suggest": "最低有效位变为最高有效位，第二最低有效位变为第二最高有效位，依此类推。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an integer from big endian to the target's endianness.",
+        "suggest": "将整数从大端字节序转换为目标的字节序。",
+        "translate": ""
+    },
+    {
+        "source": "On big endian this is a no-op.",
+        "suggest": "在大端节序序上，这是个禁忌。",
+        "translate": ""
+    },
+    {
+        "source": "On little endian the bytes are swapped.",
+        "suggest": "在小端字节序上，字节被交换。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an integer from little endian to the target's endianness.",
+        "suggest": "将整数从小端字节序转换为目标的字节序。",
+        "translate": ""
+    },
+    {
+        "source": "On little endian this is a no-op.",
+        "suggest": "在小端字节序上，这是个禁忌。",
+        "translate": ""
+    },
+    {
+        "source": "On big endian the bytes are swapped.",
+        "suggest": "在大字节序中，字节被交换。",
+        "translate": ""
+    },
+    {
+        "source": "Converts `self` to big endian from the target's endianness.",
+        "suggest": "将 `self` 从目标的字节序转换为大字节序。",
+        "translate": ""
+    },
+    {
+        "source": "or not to be?",
+        "suggest": "还是不是?",
+        "translate": ""
+    },
+    {
+        "source": "Converts `self` to little endian from the target's endianness.",
+        "suggest": "将 `self` 从目标的字节序转换为 Little Endian。",
+        "translate": ""
+    },
+    {
+        "source": "Checked integer addition.",
+        "suggest": "检查整数加法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self + rhs`, returning `None` if overflow occurred.",
+        "suggest": "计算 `self + rhs`，如果发生溢出则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Unchecked integer addition.",
+        "suggest": "未经检查的整数加法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self + rhs`, assuming overflow cannot occur.",
+        "suggest": "假设不会发生溢出，则计算 `self + rhs`。",
+        "translate": ""
+    },
+    {
+        "source": "This results in undefined behavior when",
+        "suggest": "当以下情况时，这导致未定义的行为",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `unchecked_add`.",
+        "suggest": "调用者必须坚持 `unchecked_add` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Checked integer subtraction.",
+        "suggest": "检查整数减法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self - rhs`, returning `None` if overflow occurred.",
+        "suggest": "计算 `self - rhs`，如果发生溢出则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Unchecked integer subtraction.",
+        "suggest": "未经检查的整数减法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self - rhs`, assuming overflow cannot occur.",
+        "suggest": "假设不会发生溢出，则计算 `self - rhs`。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `unchecked_sub`.",
+        "suggest": "调用者必须坚持 `unchecked_sub` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Checked integer multiplication.",
+        "suggest": "检查整数乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self * rhs`, returning `None` if overflow occurred.",
+        "suggest": "计算 `self * rhs`，如果发生溢出则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Unchecked integer multiplication.",
+        "suggest": "未经检查的整数乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self * rhs`, assuming overflow cannot occur.",
+        "suggest": "假设不会发生溢出，则计算 `self * rhs`。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `unchecked_mul`.",
+        "suggest": "调用者必须坚持 `unchecked_mul` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Checked integer division.",
+        "suggest": "检查整数除法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self / rhs`, returning `None` if `rhs == 0` or the division results in overflow.",
+        "suggest": "计算 `self / rhs`，如果 `rhs == 0` 或除法导致溢出，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "div by zero and by INT_MIN have been checked above",
+        "suggest": "上面已经检查了 div 的零和 INT_MIN 的值",
+        "translate": ""
+    },
+    {
+        "source": "Checked Euclidean division.",
+        "suggest": "检查欧几里得除法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.div_euclid(rhs)`, returning `None` if `rhs == 0` or the division results in overflow.",
+        "suggest": "计算 `self.div_euclid(rhs)`，如果 `rhs == 0` 或除法导致溢出，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked integer remainder.",
+        "suggest": "检查整数余数。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self % rhs`, returning `None` if `rhs == 0` or the division results in overflow.",
+        "suggest": "计算 `self % rhs`，如果 `rhs == 0` 或除法导致溢出，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked Euclidean remainder.",
+        "suggest": "检查欧几里得的余数。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.rem_euclid(rhs)`, returning `None` if `rhs == 0` or the division results in overflow.",
+        "suggest": "计算 `self.rem_euclid(rhs)`，如果 `rhs == 0` 或除法导致溢出，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked negation.",
+        "suggest": "检查否定。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `-self`, returning `None` if `self == MIN`.",
+        "suggest": "计算 `-self`，如果为 `self == MIN`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked shift left.",
+        "suggest": "检查左移。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self << rhs`, returning `None` if `rhs` is larger than or equal to the number of bits in `self`.",
+        "suggest": "计算 `self << rhs`，如果 `rhs` 大于或等于 `self` 中的位数，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked shift right.",
+        "suggest": "检查右移。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self >> rhs`, returning `None` if `rhs` is larger than or equal to the number of bits in `self`.",
+        "suggest": "计算 `self >> rhs`，如果 `rhs` 大于或等于 `self` 中的位数，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked absolute value.",
+        "suggest": "检查的绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.abs()`, returning `None` if `self == MIN`.",
+        "suggest": "计算 `self.abs()`，如果为 `self == MIN`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked exponentiation.",
+        "suggest": "检查取幂。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.pow(exp)`, returning `None` if overflow occurred.",
+        "suggest": "计算 `self.pow(exp)`，如果发生溢出则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "since exp!=0, finally the exp must be 1.",
+        "suggest": "由于 `exp != 0`，最终 exp 必须为 1。",
+        "translate": ""
+    },
+    {
+        "source": "Deal with the final bit of the exponent separately, since squaring the base afterwards is not necessary and may cause a needless overflow.",
+        "suggest": "分开处理指数的最后一位，因为在此之后对底数进行平方是不必要的，并且可能导致不必要的溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating integer addition.",
+        "suggest": "饱和整数加法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self + rhs`, saturating at the numeric bounds instead of overflowing.",
+        "suggest": "计算 `self + rhs`，在数字范围内饱和，而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating integer subtraction.",
+        "suggest": "饱和整数减法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self - rhs`, saturating at the numeric bounds instead of overflowing.",
+        "suggest": "计算 `self - rhs`，在数字范围内饱和，而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating integer negation.",
+        "suggest": "饱和整数求反。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `-self`, returning `MAX` if `self == MIN` instead of overflowing.",
+        "suggest": "计算 `-self`，如果 `self == MIN` 则返回 `MAX` 而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating absolute value.",
+        "suggest": "饱和绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.abs()`, returning `MAX` if `self == MIN` instead of overflowing.",
+        "suggest": "计算 `self.abs()`，如果 `self == MIN` 则返回 `MAX` 而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating integer multiplication.",
+        "suggest": "饱和整数乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self * rhs`, saturating at the numeric bounds instead of overflowing.",
+        "suggest": "计算 `self * rhs`，在数字范围内饱和，而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating integer exponentiation.",
+        "suggest": "饱和整数幂。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.pow(exp)`, saturating at the numeric bounds instead of overflowing.",
+        "suggest": "计算 `self.pow(exp)`，在数字范围内饱和，而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) addition.",
+        "suggest": "包装 (modular) 添加。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self + rhs`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self + rhs`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) subtraction.",
+        "suggest": "包装 (modular) 减法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self - rhs`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self - rhs`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) multiplication.",
+        "suggest": "包装 (modular) 乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self * rhs`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self * rhs`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) division.",
+        "suggest": "包装 (modular) 分区。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self / rhs`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self / rhs`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "The only case where such wrapping can occur is when one divides `MIN / -1` on a signed type (where `MIN` is the negative minimal value for the type);",
+        "suggest": "可能发生这种换行的唯一情况是将 `MIN / -1` 除以有符号类型 (其中 `MIN` 是该类型的负最小值)。",
+        "translate": ""
+    },
+    {
+        "source": "this is equivalent to `-MIN`, a positive value that is too large to represent in the type.",
+        "suggest": "这等效于 `-MIN`，它是一个太大的正值，无法在类型中表示。",
+        "translate": ""
+    },
+    {
+        "source": "In such a case, this function returns `MIN` itself.",
+        "suggest": "在这种情况下，此函数将返回 `MIN` 本身。",
+        "translate": ""
+    },
+    {
+        "source": "This function will panic if `rhs` is 0.",
+        "suggest": "如果 `rhs` 为 0，则此函数将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping Euclidean division.",
+        "suggest": "包装欧几里得除法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.div_euclid(rhs)`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self.div_euclid(rhs)`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping will only occur in `MIN / -1` on a signed type (where `MIN` is the negative minimal value for the type).",
+        "suggest": "包装只会在 `MIN / -1` 上的带符号类型 (其中 `MIN` 是该类型的负最小值) 上发生。",
+        "translate": ""
+    },
+    {
+        "source": "This is equivalent to `-MIN`, a positive value that is too large to represent in the type.",
+        "suggest": "这等效于 `-MIN`，它是一个太大的正值，无法在类型中表示。",
+        "translate": ""
+    },
+    {
+        "source": "In this case, this method returns `MIN` itself.",
+        "suggest": "在这种情况下，此方法将返回 `MIN` 本身。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) remainder.",
+        "suggest": "包装 (modular) 余数。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self % rhs`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self % rhs`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Such wrap-around never actually occurs mathematically;",
+        "suggest": "这种折回实际上在数学上从来没有发生过。",
+        "translate": ""
+    },
+    {
+        "source": "implementation artifacts make `x % y` invalid for `MIN / -1` on a signed type (where `MIN` is the negative minimal value).",
+        "suggest": "实现工件会导致 `x % y` 对于带符号类型的 `MIN / -1` 无效 (其中 `MIN` 为负最小值)。",
+        "translate": ""
+    },
+    {
+        "source": "In such a case, this function returns `0`.",
+        "suggest": "在这种情况下，此函数返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping Euclidean remainder.",
+        "suggest": "包装欧几里得的余数。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.rem_euclid(rhs)`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self.rem_euclid(rhs)`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping will only occur in `MIN % -1` on a signed type (where `MIN` is the negative minimal value for the type).",
+        "suggest": "包装只会在 `MIN % -1` 上的带符号类型 (其中 `MIN` 是该类型的负最小值) 上发生。",
+        "translate": ""
+    },
+    {
+        "source": "In this case, this method returns 0.",
+        "suggest": "在这种情况下，此方法返回 0。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) negation.",
+        "suggest": "包装 (modular) 取反。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `-self`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `-self`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "The only case where such wrapping can occur is when one negates `MIN` on a signed type (where `MIN` is the negative minimal value for the type);",
+        "suggest": "可能发生这种换行的唯一情况是对有符号类型的 `MIN` 求反 (其中 `MIN` 是该类型的负最小值) ; 否则，可能会发生这种换行。",
+        "translate": ""
+    },
+    {
+        "source": "this is a positive value that is too large to represent in the type.",
+        "suggest": "这是一个太大的正值，无法在类型中表示。",
+        "translate": ""
+    },
+    {
+        "source": "Panic-free bitwise shift-left;",
+        "suggest": "无 Panic - 按位左移;",
+        "translate": ""
+    },
+    {
+        "source": "yields `self << mask(rhs)`, where `mask` removes any high-order bits of `rhs` that would cause the shift to exceed the bitwidth of the type.",
+        "suggest": "产生 `self << mask(rhs)`，其中 `mask` 删除 `rhs` 的所有高位，这些高位将导致移位超过该类型的位宽。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is *not* the same as a rotate-left;",
+        "suggest": "注意，这与左旋不同;",
+        "translate": ""
+    },
+    {
+        "source": "the RHS of a wrapping shift-left is restricted to the range of the type, rather than the bits shifted out of the LHS being returned to the other end.",
+        "suggest": "环绕左移的 RHS 限于该类型的范围，而不是从 LHS 移出的位返回到另一端。",
+        "translate": ""
+    },
+    {
+        "source": "The primitive integer types all implement a [`rotate_left`](Self::rotate_left) function, which may be what you want instead.",
+        "suggest": "所有原始整数类型都实现了 [`rotate_left`](Self::rotate_left) 函数，而您可能想要的是 [`rotate_left`](Self::rotate_left) 函数。",
+        "translate": ""
+    },
+    {
+        "source": "the masking by the bitsize of the type ensures that we do not shift out of bounds",
+        "suggest": "通过类型的位大小进行掩蔽可确保我们不会越界",
+        "translate": ""
+    },
+    {
+        "source": "Panic-free bitwise shift-right;",
+        "suggest": "无 Panic - 按位右移;",
+        "translate": ""
+    },
+    {
+        "source": "yields `self >> mask(rhs)`, where `mask` removes any high-order bits of `rhs` that would cause the shift to exceed the bitwidth of the type.",
+        "suggest": "产生 `self >> mask(rhs)`，其中 `mask` 删除 `rhs` 的所有高位，这些高位将导致移位超过该类型的位宽。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is *not* the same as a rotate-right;",
+        "suggest": "注意，这与右旋转不同。",
+        "translate": ""
+    },
+    {
+        "source": "the RHS of a wrapping shift-right is restricted to the range of the type, rather than the bits shifted out of the LHS being returned to the other end.",
+        "suggest": "换行右移的 RHS 限于类型的范围，而不是从 LHS 移出的位返回到另一端。",
+        "translate": ""
+    },
+    {
+        "source": "The primitive integer types all implement a [`rotate_right`](Self::rotate_right) function, which may be what you want instead.",
+        "suggest": "所有原始整数类型都实现了 [`rotate_right`](Self::rotate_right) 函数，而您可能想要的是 [`rotate_right`](Self::rotate_right) 函数。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) absolute value.",
+        "suggest": "包装 (modular) 绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.abs()`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self.abs()`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "The only case where such wrapping can occur is when one takes the absolute value of the negative minimal value for the type;",
+        "suggest": "可能发生这种换行的唯一情况是，当类型取负的最小值的绝对值时;",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of `self` without any wrapping or panicking.",
+        "suggest": "计算 `self` 的绝对值，而不会引起任何包裹或恐慌。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) exponentiation.",
+        "suggest": "包装 (modular) 指数。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.pow(exp)`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self.pow(exp)`，在类型的边界处回绕。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self` + `rhs`",
+        "suggest": "计算 `self` + `rhs`",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the addition along with a boolean indicating whether an arithmetic overflow would occur.",
+        "suggest": "返回一个加法元组以及一个布尔值，该布尔值指示是否会发生算术溢出。",
+        "translate": ""
+    },
+    {
+        "source": "If an overflow would have occurred then the wrapped value is returned.",
+        "suggest": "如果将发生溢出，则返回包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self` - `rhs`",
+        "suggest": "计算 `self`-`rhs`",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the subtraction along with a boolean indicating whether an arithmetic overflow would occur.",
+        "suggest": "返回一个减法的元组以及一个布尔值，该布尔值指示是否会发生算术溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the multiplication of `self` and `rhs`.",
+        "suggest": "计算 `self` 和 `rhs` 的乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the multiplication along with a boolean indicating whether an arithmetic overflow would occur.",
+        "suggest": "返回乘法的元组以及一个布尔值，该布尔值指示是否会发生算术溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the divisor when `self` is divided by `rhs`.",
+        "suggest": "`self` 除以 `rhs` 时计算除数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the divisor along with a boolean indicating whether an arithmetic overflow would occur.",
+        "suggest": "返回除数的元组以及指示是否将发生算术溢出的布尔值。",
+        "translate": ""
+    },
+    {
+        "source": "If an overflow would occur then self is returned.",
+        "suggest": "如果将发生溢出，则返回 self。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the quotient of Euclidean division `self.div_euclid(rhs)`.",
+        "suggest": "计算欧几里得除法 `self.div_euclid(rhs)` 的商。",
+        "translate": ""
+    },
+    {
+        "source": "If an overflow would occur then `self` is returned.",
+        "suggest": "如果将发生溢出，则返回 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the remainder when `self` is divided by `rhs`.",
+        "suggest": "`self` 除以 `rhs` 时计算余数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the remainder after dividing along with a boolean indicating whether an arithmetic overflow would occur.",
+        "suggest": "返回除法运算后的余数元组和一个布尔值，该布尔值指示是否会发生算术溢出。",
+        "translate": ""
+    },
+    {
+        "source": "If an overflow would occur then 0 is returned.",
+        "suggest": "如果将发生溢出，则返回 0。",
+        "translate": ""
+    },
+    {
+        "source": "Overflowing Euclidean remainder.",
+        "suggest": "溢出的欧几里得余数。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self.rem_euclid(rhs)`.",
+        "suggest": "计算 `self.rem_euclid(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Negates self, overflowing if this is equal to the minimum value.",
+        "suggest": "求反，如果等于最小值，则溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the negated version of self along with a boolean indicating whether an overflow happened.",
+        "suggest": "返回否定形式 self 的元组以及一个布尔值，该布尔值指示是否发生了溢出。",
+        "translate": ""
+    },
+    {
+        "source": "If `self` is the minimum value (e.g., `i32::MIN` for values of type `i32`), then the minimum value will be returned again and `true` will be returned for an overflow happening.",
+        "suggest": "如果 `self` 是最小值 (例如，对于类型 `i32` 的值，则为 `i32::MIN`)，则将再次返回该最小值，并且将发生溢出时返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts self left by `rhs` bits.",
+        "suggest": "将自身左移 `rhs` 位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the shifted version of self along with a boolean indicating whether the shift value was larger than or equal to the number of bits.",
+        "suggest": "返回 self 的移位版本的元组以及一个布尔值，该布尔值指示 shift 值是否大于或等于位数。",
+        "translate": ""
+    },
+    {
+        "source": "If the shift value is too large, then value is masked (N-1) where N is the number of bits, and this value is then used to perform the shift.",
+        "suggest": "如果移位值太大，则将值屏蔽 (N-1)，其中 N 是位数，然后使用该值执行移位。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts self right by `rhs` bits.",
+        "suggest": "将 self 右移 `rhs` 位。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of `self`.",
+        "suggest": "计算 `self` 的绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the absolute version of self along with a boolean indicating whether an overflow happened.",
+        "suggest": "返回 self 的绝对版本的元组以及一个布尔值，该布尔值指示是否发生了溢出。",
+        "translate": ""
+    },
+    {
+        "source": "If self is the minimum value",
+        "suggest": "如果 self 是最小值",
+        "translate": ""
+    },
+    {
+        "source": "then the minimum value will be returned again and true will be returned for an overflow happening.",
+        "suggest": "然后将再次返回最小值，并在发生溢出时返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Raises self to the power of `exp`, using exponentiation by squaring.",
+        "suggest": "通过平方运算，将自己提升到 `exp` 的功效。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the exponentiation along with a bool indicating whether an overflow happened.",
+        "suggest": "返回一个指数的元组以及一个 bool，指示是否发生了溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Scratch space for storing results of overflowing_mul.",
+        "suggest": "暂存空间，用于存储 overflowing_mul 的结果。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the quotient of Euclidean division of `self` by `rhs`.",
+        "suggest": "计算 `self` 的欧几里得除以 `rhs` 的商。",
+        "translate": ""
+    },
+    {
+        "source": "This computes the integer `n` such that `self = n * rhs + self.rem_euclid(rhs)`, with `0 <= self.rem_euclid(rhs) < rhs`.",
+        "suggest": "这将计算整数 `n`，例如 `self = n * rhs + self.rem_euclid(rhs)` 和 `0 <= self.rem_euclid(rhs) < rhs`。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, the result is `self / rhs` rounded to the integer `n` such that `self >= n * rhs`.",
+        "suggest": "换句话说，结果是将 `self / rhs` 舍入为 `n` 的整数 `n`。",
+        "translate": ""
+    },
+    {
+        "source": "If `self > 0`, this is equal to round towards zero (the default in Rust);",
+        "suggest": "如果为 `self > 0`，则等于舍入为零 (Rust 中的默认值) ;",
+        "translate": ""
+    },
+    {
+        "source": "if `self < 0`, this is equal to round towards +/- infinity.",
+        "suggest": "如果为 `self < 0`，则等于朝 +/- 无限取整。",
+        "translate": ""
+    },
+    {
+        "source": "This function will panic if `rhs` is 0 or the division results in overflow.",
+        "suggest": "如果 `rhs` 为 0 或除法导致溢出，则该函数将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the least nonnegative remainder of `self (mod rhs)`.",
+        "suggest": "计算 `self (mod rhs)` 的最小非负余数。",
+        "translate": ""
+    },
+    {
+        "source": "This is done as if by the Euclidean division algorithm -- given `r = self.rem_euclid(rhs)`, `self = rhs * self.div_euclid(rhs) + r`, and `0 <= r < abs(rhs)`.",
+        "suggest": "就像通过欧几里得除法算法一样 - 给定 `r = self.rem_euclid(rhs)`，`self = rhs * self.div_euclid(rhs) + r` 和 `0 <= r < abs(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Overflow behavior",
+        "suggest": "溢出行为",
+        "translate": ""
+    },
+    {
+        "source": "The absolute value of",
+        "suggest": "的绝对值",
+        "translate": ""
+    },
+    {
+        "source": "cannot be represented as an",
+        "suggest": "不能表示为",
+        "translate": ""
+    },
+    {
+        "source": "and attempting to calculate it will cause an overflow.",
+        "suggest": "并尝试计算它会导致溢出。",
+        "translate": ""
+    },
+    {
+        "source": "This means that code in debug mode will trigger a panic on this case and optimized code will return",
+        "suggest": "这意味着在这种情况下，处于调试模式的代码将触发 panic，并且优化后的代码将返回",
+        "translate": ""
+    },
+    {
+        "source": "without a panic.",
+        "suggest": "没有 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the #[inline] above means that the overflow semantics of the subtraction depend on the crate we're being inlined into.",
+        "suggest": "请注意，上面的 #[inline] 表示减法的溢出语义取决于我们要内联的 crate。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a number representing sign of `self`.",
+        "suggest": "返回一个表示 `self` 的符号的数字。",
+        "translate": ""
+    },
+    {
+        "source": "if the number is zero",
+        "suggest": "如果数字为零",
+        "translate": ""
+    },
+    {
+        "source": "if the number is positive",
+        "suggest": "如果数字为正",
+        "translate": ""
+    },
+    {
+        "source": "if the number is negative",
+        "suggest": "如果数字为负",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if `self` is positive and `false` if the number is zero or negative.",
+        "suggest": "如果 `self` 为正数，则返回 `true`; 如果数字为零或负数，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if `self` is negative and `false` if the number is zero or positive.",
+        "suggest": "如果 `self` 为负，则返回 `true`; 如果数字为零或正，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Return the memory representation of this integer as a byte array in big-endian (network) byte order.",
+        "suggest": "以大端 (网络) 字节顺序将这个整数的内存表示形式作为字节数组返回。",
+        "translate": ""
+    },
+    {
+        "source": "Return the memory representation of this integer as a byte array in little-endian byte order.",
+        "suggest": "以小端字节顺序将这个整数的内存表示形式返回为字节数组。",
+        "translate": ""
+    },
+    {
+        "source": "Return the memory representation of this integer as a byte array in native byte order.",
+        "suggest": "将此整数的内存表示作为本机字节顺序的字节数组返回。",
+        "translate": ""
+    },
+    {
+        "source": "const sound because integers are plain old datatypes so we can always transmute them to arrays of bytes",
+        "suggest": "const 之所以听起来不错，是因为整数是普通的旧数据类型，因此我们始终可以将它们转换为字节数组",
+        "translate": ""
+    },
+    {
+        "source": "integers are plain old datatypes so we can always transmute them to arrays of bytes",
+        "suggest": "整数是普通的旧数据类型，因此我们始终可以将它们转换为字节数组",
+        "translate": ""
+    },
+    {
+        "source": "Create an integer value from its representation as a byte array in big endian.",
+        "suggest": "从其表示形式以 big endian 的字节数组形式创建一个整数值。",
+        "translate": ""
+    },
+    {
+        "source": "When starting from a slice rather than an array, fallible conversion APIs can be used:",
+        "suggest": "从切片而不是数组开始时，可以使用容易出错的转换 API:",
+        "translate": ""
+    },
+    {
+        "source": "Create an integer value from its representation as a byte array in little endian.",
+        "suggest": "从它的表示形式以 little endian 的字节数组形式创建一个整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Create an integer value from its memory representation as a byte array in native endianness.",
+        "suggest": "从其内存表示形式创建一个整数值，以原生字节序表示为字节数组。",
+        "translate": ""
+    },
+    {
+        "source": "const sound because integers are plain old datatypes so we can always transmute to them",
+        "suggest": "const 之所以听起来不错，是因为整数是普通的旧数据类型，因此我们可以随时将其转换为整数",
+        "translate": ""
+    },
+    {
+        "source": "integers are plain old datatypes so we can always transmute to them",
+        "suggest": "整数是普通的旧数据类型，因此我们可以随时将其转换为整数",
+        "translate": ""
+    },
+    {
+        "source": "New code should prefer to use",
+        "suggest": "新代码应优先使用",
+        "translate": ""
+    },
+    {
+        "source": "Returns the smallest value that can be represented by this integer type.",
+        "suggest": "返回此整数类型可以表示的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the largest value that can be represented by this integer type.",
+        "suggest": "返回此整数类型可以表示的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Numeric traits and functions for the built-in numeric types.",
+        "suggest": "内置数字类型的数字 traits 和函数。",
+        "translate": ""
+    },
+    {
+        "source": "Used because the `?` operator is not allowed in a const context.",
+        "suggest": "之所以使用它，是因为 const 上下文中不允许使用 `?` 运算符。",
+        "translate": ""
+    },
+    {
+        "source": "All these modules are technically private and only exposed for coretests:",
+        "suggest": "所有这些模块在技术上都是私有的，仅针对核心测试公开:",
+        "translate": ""
+    },
+    {
+        "source": "import int_impl!",
+        "suggest": "导入 int_impl!",
+        "translate": ""
+    },
+    {
+        "source": "import uint_impl!",
+        "suggest": "导入 uint_impl!",
+        "translate": ""
+    },
+    {
+        "source": "If 6th bit set ascii is upper case.",
+        "suggest": "如果第 6 位的 ascii 为大写。",
+        "translate": ""
+    },
+    {
+        "source": "Unset the fifth bit if this is a lowercase letter",
+        "suggest": "如果这是小写字母，请取消设置第五位",
+        "translate": ""
+    },
+    {
+        "source": "Set the fifth bit if this is an uppercase letter",
+        "suggest": "如果这是一个大写字母，则设置第五个位",
+        "translate": ""
+    },
+    {
+        "source": "Assumes self is ascii",
+        "suggest": "假设自己是 ascii",
+        "translate": ""
+    },
+    {
+        "source": "This is equivalent to `to_ascii_lowercase(a) == to_ascii_lowercase(b)`.",
+        "suggest": "这等效于 `to_ascii_lowercase(a) == to_ascii_lowercase(b)`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this value to its ASCII upper case equivalent in-place.",
+        "suggest": "将此值就地转换为其 ASCII 大写等效项。",
+        "translate": ""
+    },
+    {
+        "source": "To return a new uppercased value without modifying the existing one, use [`to_ascii_uppercase`].",
+        "suggest": "要返回新的大写值而不修改现有值，请使用 [`to_ascii_uppercase`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this value to its ASCII lower case equivalent in-place.",
+        "suggest": "将此值就地转换为其 ASCII 小写等效项。",
+        "translate": ""
+    },
+    {
+        "source": "To return a new lowercased value without modifying the existing one, use [`to_ascii_lowercase`].",
+        "suggest": "要返回新的小写值而不修改现有值，请使用 [`to_ascii_lowercase`]。",
+        "translate": ""
+    },
+    {
+        "source": "A classification of floating point numbers.",
+        "suggest": "浮点数的分类。",
+        "translate": ""
+    },
+    {
+        "source": "This `enum` is used as the return type for [`f32::classify`] and [`f64::classify`].",
+        "suggest": "该 `enum` 用作 [`f32::classify`] 和 [`f64::classify`] 的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "See their documentation for more.",
+        "suggest": "有关更多信息，请参见他们的文档。",
+        "translate": ""
+    },
+    {
+        "source": "often obtained by dividing by zero.",
+        "suggest": "通常通过除以零获得。",
+        "translate": ""
+    },
+    {
+        "source": "Positive or negative infinity.",
+        "suggest": "正或负无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "Positive or negative zero.",
+        "suggest": "正零或负零。",
+        "translate": ""
+    },
+    {
+        "source": "De-normalized floating point representation (less precise than `Normal`).",
+        "suggest": "非规范化的浮点表示 (精度不及 `Normal`)。",
+        "translate": ""
+    },
+    {
+        "source": "A regular floating point number.",
+        "suggest": "常规浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "all valid digits are ascii, so we will just iterate over the utf8 bytes and cast them to chars.",
+        "suggest": "所有有效数字均为 ascii，因此我们将遍历 utf8 字节并将其转换为 char。",
+        "translate": ""
+    },
+    {
+        "source": "will safely return None for anything other than a valid ascii digit for the given radix, including the first-byte of multi-byte sequences",
+        "suggest": "对于给定的基数 (包括多字节序列的第一个字节)，除了有效的 ASCII 数字外，将安全地返回 None。",
+        "translate": ""
+    },
+    {
+        "source": "The number is positive",
+        "suggest": "这个数字是正数",
+        "translate": ""
+    },
+    {
+        "source": "The number is negative",
+        "suggest": "这个数字是负数",
+        "translate": ""
+    },
+    {
+        "source": "Definitions of integer that is known not to equal zero.",
+        "suggest": "已知不等于零的整数的定义。",
+        "translate": ""
+    },
+    {
+        "source": "An integer that is known not to equal zero.",
+        "suggest": "已知不等于零的整数。",
+        "translate": ""
+    },
+    {
+        "source": "This enables some memory layout optimization.",
+        "suggest": "这样可以进行一些内存布局优化。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a non-zero without checking the value.",
+        "suggest": "创建一个非零值而不检查该值。",
+        "translate": ""
+    },
+    {
+        "source": "The value must not be zero.",
+        "suggest": "该值不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "this is guaranteed to be safe by the caller.",
+        "suggest": "调用者保证这是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a non-zero if the given value is not zero.",
+        "suggest": "如果给定值不为零，则创建一个非零值。",
+        "translate": ""
+    },
+    {
+        "source": "we just checked that there's no `0`",
+        "suggest": "我们只是检查了没有 `0`",
+        "translate": ""
+    },
+    {
+        "source": "Returns the value as a primitive type.",
+        "suggest": "以原始类型返回该值。",
+        "translate": ""
+    },
+    {
+        "source": "since `self` and `rhs` are both nonzero, the result of the bitwise-or will be nonzero.",
+        "suggest": "由于 `self` 和 `rhs` 都不为零，所以按位或的结果将为非零。",
+        "translate": ""
+    },
+    {
+        "source": "since `self` is nonzero, the result of the bitwise-or will be nonzero regardless of the value of `rhs`.",
+        "suggest": "由于 `self` 为非零值，因此无论 `rhs` 的值如何，按位或运算的结果都将为非零值。",
+        "translate": ""
+    },
+    {
+        "source": "since `rhs` is nonzero, the result of the bitwise-or will be nonzero regardless of the value of `self`.",
+        "suggest": "由于 `rhs` 为非零值，因此无论 `self` 的值如何，按位或运算的结果都将为非零值。",
+        "translate": ""
+    },
+    {
+        "source": "On many architectures, this function can perform better than `leading_zeros()` on the underlying integer type, as special handling of zero can be avoided.",
+        "suggest": "在许多体系结构上，此函数可以在基础整数类型上比 `leading_zeros()` 更好地执行，因为可以避免对零的特殊处理。",
+        "translate": ""
+    },
+    {
+        "source": "since `self` can not be zero it is safe to call ctlz_nonzero",
+        "suggest": "由于 `self` 不能为零，因此可以安全地调用 ctlz_nonzero",
+        "translate": ""
+    },
+    {
+        "source": "On many architectures, this function can perform better than `trailing_zeros()` on the underlying integer type, as special handling of zero can be avoided.",
+        "suggest": "在许多体系结构上，此函数可以在基础整数类型上比 `trailing_zeros()` 更好地执行，因为可以避免对零的特殊处理。",
+        "translate": ""
+    },
+    {
+        "source": "since `self` can not be zero it is safe to call cttz_nonzero",
+        "suggest": "由于 `self` 不能为零，因此可以安全地调用 cttz_nonzero",
+        "translate": ""
+    },
+    {
+        "source": "This operation rounds towards zero, truncating any fractional part of the exact result, and cannot panic.",
+        "suggest": "此运算将舍入为零，舍去精确结果的任何小数部分，并且不能为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "div by zero is checked because `other` is a nonzero, and MIN/-1 is checked because `self` is an unsigned int.",
+        "suggest": "因为 `other` 是一个非零值，所以检查 div by 零，因为 `self` 是一个无符号整数，所以检查了 MIN/-1。",
+        "translate": ""
+    },
+    {
+        "source": "This operation satisfies `n % d == n - (n / d) * d`, and cannot panic.",
+        "suggest": "此操作满足 `n % d == n - (n / d) * d`，但不能为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "rem by zero is checked because `other` is a nonzero, and MIN/-1 is checked because `self` is an unsigned int.",
+        "suggest": "因为 `other` 是一个非零值，所以检查了 rem by zero，因为 `self` 是一个无符号 int，所以检查了 MIN/-1。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if and only if `self == (1 << k)` for some `k`.",
+        "suggest": "当且仅当某些 `k` 的 `self == (1 << k)` 时，才返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "On many architectures, this function can perform better than `is_power_of_two()` on the underlying integer type, as special handling of zero can be avoided.",
+        "suggest": "在许多体系结构上，此函数可以在基础整数类型上比 `is_power_of_two()` 更好地执行，因为可以避免对零的特殊处理。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM 11 normalizes `unchecked_sub(x, 1) & x == 0` to the implementation seen here.",
+        "suggest": "LLVM 11 将 `unchecked_sub(x, 1) & x == 0` 标准化为此处看到的实现。",
+        "translate": ""
+    },
+    {
+        "source": "On the basic x86-64 target, this saves 3 instructions for the zero check.",
+        "suggest": "在基本的 x86-64 目标上，这会保存 3 条用于零位检查的指令。",
+        "translate": ""
+    },
+    {
+        "source": "On x86_64 with BMI1, being nonzero lets it codegen to `BLSR`, which saves an instruction compared to the `POPCNT` implementation on the underlying integer type.",
+        "suggest": "在带有 BMI1 的 x86_64 上，非零值使其代码生成到 `BLSR`，与在底层整数类型上的 `POPCNT` 实现相比，它节省了一条指令。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 128-bit signed integer type.",
+        "suggest": "128 位有符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "New code should use the associated constants directly on the primitive type.",
+        "suggest": "新代码应直接在原始类型上使用关联的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 16-bit signed integer type.",
+        "suggest": "16 位带符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 32-bit signed integer type.",
+        "suggest": "32 位带符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 64-bit signed integer type.",
+        "suggest": "64 位有符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 8-bit signed integer type.",
+        "suggest": "8 位带符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the pointer-sized signed integer type.",
+        "suggest": "指针大小的有符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 128-bit unsigned integer type.",
+        "suggest": "128 位无符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 16-bit unsigned integer type.",
+        "suggest": "16 位无符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 32-bit unsigned integer type.",
+        "suggest": "32 位无符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 64-bit unsigned integer type.",
+        "suggest": "64 位无符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the 8-bit unsigned integer type.",
+        "suggest": "8 位无符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "Constants for the pointer-sized unsigned integer type.",
+        "suggest": "指针大小的无符号整数类型的常量。",
+        "translate": ""
+    },
+    {
+        "source": "The string is expected to be an optional `+` sign followed by digits.",
+        "suggest": "该字符串应为可选的 `+` 符号，后跟数字。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self / rhs`, returning `None` if `rhs == 0`.",
+        "suggest": "计算 `self / rhs`，如果为 `rhs == 0`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "div by zero has been checked above and unsigned types have no other failure modes for division",
+        "suggest": "上面已经检查了 div 除以零的情况，并且无符号类型没有其他可用于除法的故障模式",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.div_euclid(rhs)`, returning `None` if `rhs == 0`.",
+        "suggest": "计算 `self.div_euclid(rhs)`，如果为 `rhs == 0`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self % rhs`, returning `None` if `rhs == 0`.",
+        "suggest": "计算 `self % rhs`，如果为 `rhs == 0`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Checked Euclidean modulo.",
+        "suggest": "检查欧几里德模数。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.rem_euclid(rhs)`, returning `None` if `rhs == 0`.",
+        "suggest": "计算 `self.rem_euclid(rhs)`，如果为 `rhs == 0`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `-self`, returning `None` unless `self == 0`.",
+        "suggest": "计算 `-self`，除非 `self == 0`，否则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that negating any positive integer will overflow.",
+        "suggest": "请注意，取反任何正整数将溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Please note that this example is shared between integer types.",
+        "suggest": "请注意，此示例在整数类型之间共享。",
+        "translate": ""
+    },
+    {
+        "source": "Which explains why `u8` is used here.",
+        "suggest": "这就解释了为什么在这里使用 `u8`。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapped division on unsigned types is just normal division.",
+        "suggest": "无符号类型的包装除法只是普通除法。",
+        "translate": ""
+    },
+    {
+        "source": "There's no way wrapping could ever happen.",
+        "suggest": "包装是不可能发生的。",
+        "translate": ""
+    },
+    {
+        "source": "This function exists, so that all operations are accounted for in the wrapping operations.",
+        "suggest": "该函数存在，因此所有操作都在包装操作中考虑。",
+        "translate": ""
+    },
+    {
+        "source": "Since, for the positive integers, all common definitions of division are equal, this is exactly equal to `self.wrapping_div(rhs)`.",
+        "suggest": "因为对于正整数，所有除法的通用定义都是相等的，所以它恰好等于 `self.wrapping_div(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapped remainder calculation on unsigned types is just the regular remainder calculation.",
+        "suggest": "无符号类型的包装余数计算只是常规余数计算。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping Euclidean modulo.",
+        "suggest": "包装欧几里德模。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self.rem_euclid(rhs)`.",
+        "suggest": "计算 `self.rem_euclid(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapped modulo calculation on unsigned types is just the regular remainder calculation.",
+        "suggest": "无符号类型的包装模运算只是常规的余数计算。",
+        "translate": ""
+    },
+    {
+        "source": "Since, for the positive integers, all common definitions of division are equal, this is exactly equal to `self.wrapping_rem(rhs)`.",
+        "suggest": "因为对于正整数，所有除法的通用定义都是相等的，所以它恰好等于 `self.wrapping_rem(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Since unsigned types do not have negative equivalents all applications of this function will wrap (except for `-0`).",
+        "suggest": "由于无符号类型没有负的等效项，因此该函数的所有应用程序都将自动换行 (`-0` 除外)。",
+        "translate": ""
+    },
+    {
+        "source": "For values smaller than the corresponding signed type's maximum the result is the same as casting the corresponding signed value.",
+        "suggest": "对于小于相应有符号类型的最大值的值，结果与强制转换相应有符号值的结果相同。",
+        "translate": ""
+    },
+    {
+        "source": "Any larger values are equivalent to `MAX + 1 - (val - MAX - 1)` where `MAX` is the corresponding signed type's maximum.",
+        "suggest": "任何较大的值都等于 `MAX + 1 - (val - MAX - 1)`，其中 `MAX` 是对应的有符号类型的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Which explains why `i8` is used here.",
+        "suggest": "这就解释了为什么在这里使用 `i8`。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage",
+        "suggest": "基本用法",
+        "translate": ""
+    },
+    {
+        "source": "Which explains why `u32` is used here.",
+        "suggest": "这就解释了为什么在这里使用 `u32`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that for unsigned integers overflow never occurs, so the second value is always `false`.",
+        "suggest": "请注意，对于无符号整数，永远不会发生溢出，因此第二个值始终为 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Since, for the positive integers, all common definitions of division are equal, this is exactly equal to `self.overflowing_div(rhs)`.",
+        "suggest": "因为对于正整数，所有除法的通用定义都是相等的，所以它恰好等于 `self.overflowing_div(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the remainder `self.rem_euclid(rhs)` as if by Euclidean division.",
+        "suggest": "以欧几里得除法计算余数 `self.rem_euclid(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of the modulo after dividing along with a boolean indicating whether an arithmetic overflow would occur.",
+        "suggest": "返回除以布尔后的模元，并返回一个布尔值，指示是否会发生算术溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Since, for the positive integers, all common definitions of division are equal, this operation is exactly equal to `self.overflowing_rem(rhs)`.",
+        "suggest": "由于对于正整数，所有除法的通用定义均相等，因此该运算恰好等于 `self.overflowing_rem(rhs)`。",
+        "translate": ""
+    },
+    {
+        "source": "Negates self in an overflowing fashion.",
+        "suggest": "以一种泛滥的方式否定自我。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `!self + 1` using wrapping operations to return the value that represents the negation of this unsigned value.",
+        "suggest": "使用包装操作返回 `!self + 1`，以返回表示该无符号值的取反的值。",
+        "translate": ""
+    },
+    {
+        "source": "Note that for positive unsigned values overflow always occurs, but negating 0 does not overflow.",
+        "suggest": "请注意，对于正的无符号值，总是会发生溢出，但取反 0 不会溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Performs Euclidean division.",
+        "suggest": "执行欧几里得除法。",
+        "translate": ""
+    },
+    {
+        "source": "Since, for the positive integers, all common definitions of division are equal, this is exactly equal to `self / rhs`.",
+        "suggest": "因为对于正整数，所有除法的通用定义都是相等的，所以它恰好等于 `self / rhs`。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the least remainder of `self (mod rhs)`.",
+        "suggest": "计算 `self (mod rhs)` 的最小余数。",
+        "translate": ""
+    },
+    {
+        "source": "Since, for the positive integers, all common definitions of division are equal, this is exactly equal to `self % rhs`.",
+        "suggest": "因为对于正整数，所有除法的通用定义都是相等的，所以它恰好等于 `self % rhs`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if and only if `self == 2^k` for some `k`.",
+        "suggest": "当且仅当某些 `k` 的 `self == 2^k` 时，才返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns one less than next power of two.",
+        "suggest": "返回比下一个 2 的幂小 1 的值。",
+        "translate": ""
+    },
+    {
+        "source": "(For 8u8 next power of two is 8u8 and for 6u8 it is 8u8)",
+        "suggest": "(对于 8u8，下一个 2 的幂为 8u8，对于 6u8 为 8u8)",
+        "translate": ""
+    },
+    {
+        "source": "This method cannot overflow, as in the `next_power_of_two` overflow cases it instead ends up returning the maximum value of the type, and can return 0 for 0.",
+        "suggest": "此方法不能溢出，因为在 `next_power_of_two` 溢出情况下，它最终返回该类型的最大值，并且可以为 0 返回 0。",
+        "translate": ""
+    },
+    {
+        "source": "Because `p > 0`, it cannot consist entirely of leading zeros.",
+        "suggest": "由于 `p > 0`，它不能完全由前导零组成。",
+        "translate": ""
+    },
+    {
+        "source": "That means the shift is always in-bounds, and some processors (such as intel pre-haswell) have more efficient ctlz intrinsics when the argument is non-zero.",
+        "suggest": "这意味着移位始终是边界内的，并且当参数为非零值时，某些处理器 (例如 intel pre-haswell) 具有更有效的 ctlz 内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the smallest power of two greater than or equal to `self`.",
+        "suggest": "返回大于或等于 `self` 的 2 的最小幂。",
+        "translate": ""
+    },
+    {
+        "source": "When return value overflows (i.e., `self > (1 << (N-1))` for type `uN`), it panics in debug mode and return value is wrapped to 0 in release mode (the only situation in which method can return 0).",
+        "suggest": "当返回值溢出时 (即 `uN` 类型为 `self > (1 << (N-1))`)，它在调试模式下为 panics，在释放模式下返回值为 0 (这是唯一的方法可以返回 0 的情况)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the smallest power of two greater than or equal to `n`.",
+        "suggest": "返回大于或等于 `n` 的 2 的最小幂。",
+        "translate": ""
+    },
+    {
+        "source": "If the next power of two is greater than the type's maximum value, `None` is returned, otherwise the power of two is wrapped in `Some`.",
+        "suggest": "如果下一个 2 的幂大于该类型的最大值，则返回 `None`，否则将 2 的幂包装在 `Some` 中。",
+        "translate": ""
+    },
+    {
+        "source": "If the next power of two is greater than the type's maximum value, the return value is wrapped to `0`.",
+        "suggest": "如果下一个 2 的幂大于该类型的最大值，则返回值将包装为 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Create a native endian integer value from its representation as a byte array in big endian.",
+        "suggest": "根据其表示形式 (大字节序中的字节数组) 创建一个本地字节序整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Create a native endian integer value from its representation as a byte array in little endian.",
+        "suggest": "从它的表示形式以 little endian 的字节数组创建一个本地 endian 整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Create a native endian integer value from its memory representation as a byte array in native endianness.",
+        "suggest": "从其内存表示形式以原生字节序形式创建一个原生字节序整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Definitions of `Wrapping<T>`.",
+        "suggest": "`Wrapping<T>` 的定义。",
+        "translate": ""
+    },
+    {
+        "source": "Provides intentionally-wrapped arithmetic on `T`.",
+        "suggest": "在 `T` 上提供有意包装的算法。",
+        "translate": ""
+    },
+    {
+        "source": "Operations like `+` on `u32` values are intended to never overflow, and in some debug configurations overflow is detected and results in a panic.",
+        "suggest": "`u32` 值上的 `+` 之类的操作旨在永不溢出，并且在某些调试配置中，检测到溢出并导致 panic。",
+        "translate": ""
+    },
+    {
+        "source": "While most arithmetic falls into this category, some code explicitly expects and relies upon modular arithmetic (e.g., hashing).",
+        "suggest": "尽管大多数算术都属于此类，但是某些代码明确期望并依赖于模块化算术 (例如，哈希)。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping arithmetic can be achieved either through methods like `wrapping_add`, or through the `Wrapping<T>` type, which says that all standard arithmetic operations on the underlying value are intended to have wrapping semantics.",
+        "suggest": "可以通过诸如 `wrapping_add` 之类的方法或通过 `Wrapping<T>` 类型来实现包装算术，该方法表示对基础值的所有标准算术运算都旨在具有包装语义。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying value can be retrieved through the `.0` index of the `Wrapping` tuple.",
+        "suggest": "可以通过 `Wrapping` 元组的 `.0` 索引检索基础值。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME (#23545): uncomment the remaining impls",
+        "suggest": "FIXME (#23545): 取消对其余 impls 的注释",
+        "translate": ""
+    },
+    {
+        "source": "impl Op<T> for Wrapping<T>, impl OpAssign<T> for Wrapping<T>",
+        "suggest": "Wrapping<T> 的 impl Op<T>，Wrapping<T> 的 impl OpAssign<T>",
+        "translate": ""
+    },
+    {
+        "source": "Reverses the bit pattern of the integer.",
+        "suggest": "反转整数的位模式。",
+        "translate": ""
+    },
+    {
+        "source": "Which explains why `i16` is used here.",
+        "suggest": "这就解释了为什么在这里使用 `i16`。",
+        "translate": ""
+    },
+    {
+        "source": "Results that are too large are wrapped:",
+        "suggest": "太大的结果将被包装:",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of `self`, wrapping around at the boundary of the type.",
+        "suggest": "计算 `self` 的绝对值，环绕在类型的边界处。",
+        "translate": ""
+    },
+    {
+        "source": "The only case where such wrapping can occur is when one takes the absolute value of the negative minimal value for the type this is a positive value that is too large to represent in the type.",
+        "suggest": "可能发生这种换行的唯一情况是，当一个类型取负的最小值的绝对值时，该正值太大而无法在类型中表示。",
+        "translate": ""
+    },
+    {
+        "source": "When return value overflows (i.e., `self > (1 << (N-1))` for type `uN`), overflows to `2^N = 0`.",
+        "suggest": "当返回值溢出时 (即，`uN` 类型为 `self > (1 << (N-1))`)，溢出到 `2^N = 0`。",
+        "translate": ""
+    },
+    {
+        "source": "Notice that the implementation uses the associated type `Output`.",
+        "suggest": "请注意，该实现使用关联类型 `Output`。",
+        "translate": ""
+    },
+    {
+        "source": "By the fundamental theorem of arithmetic, rational numbers in lowest terms are unique.",
+        "suggest": "根据算术的基本定理，最低限度的有理数是唯一的。",
+        "translate": ""
+    },
+    {
+        "source": "So, by keeping `Rational`s in reduced form, we can derive `Eq` and `PartialEq`.",
+        "suggest": "因此，通过将 `Rational` 保持为简化形式，我们可以得出 `Eq` 和 `PartialEq`。",
+        "translate": ""
+    },
+    {
+        "source": "Reduce to lowest terms by dividing by the greatest common divisor.",
+        "suggest": "用最大公约数除以最低条件。",
+        "translate": ""
+    },
+    {
+        "source": "The multiplication of rational numbers is a closed operation.",
+        "suggest": "有理数的乘法是一个封闭运算。",
+        "translate": ""
+    },
+    {
+        "source": "Euclid's two-thousand-year-old algorithm for finding the greatest common divisor.",
+        "suggest": "欧几里德 (Euclid) 具有 2000 年历史的算法，用于找到最大公约数。",
+        "translate": ""
+    },
+    {
+        "source": "The division of rational numbers is a closed operation.",
+        "suggest": "有理数的除法是封闭的运算。",
+        "translate": ""
+    },
+    {
+        "source": "If we were to divide &[0, 1, 2, 3, 4, 5, 6, 7] into slices of size 3, the remainder would be &[6, 7].",
+        "suggest": "如果将 &[0，1、2、3、4、5、6、7] 分成大小为 3 的切片，则其余部分将为 &[6，7]。",
+        "translate": ""
+    },
+    {
+        "source": "The answer to both operations is 1.75",
+        "suggest": "两种操作的答案是 1.75",
+        "translate": ""
+    },
+    {
+        "source": "A negative positive is a negative.",
+        "suggest": "负数肯定是负数。",
+        "translate": ""
+    },
+    {
+        "source": "A double negative is a positive.",
+        "suggest": "双重否定是积极的。",
+        "translate": ""
+    },
+    {
+        "source": "Zero is its own negation.",
+        "suggest": "零是它自己的否定。",
+        "translate": ""
+    },
+    {
+        "source": "The addition operator `+`.",
+        "suggest": "加法运算符 `+`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `Rhs` is `Self` by default, but this is not mandatory.",
+        "suggest": "请注意，默认情况下 `Rhs` 是 `Self`，但这不是强制性的。",
+        "translate": ""
+    },
+    {
+        "source": "For example, [`std::time::SystemTime`] implements `Add<Duration>`, which permits operations of the form `SystemTime = SystemTime + Duration`.",
+        "suggest": "例如，[`std::time::SystemTime`] 实现 `Add<Duration>`，它允许以 `SystemTime = SystemTime + Duration` 形式进行操作。",
+        "translate": ""
+    },
+    {
+        "source": "`Add`able points",
+        "suggest": "可加分",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Add` with generics",
+        "suggest": "使用泛型实现 `Add`",
+        "translate": ""
+    },
+    {
+        "source": "Here is an example of the same `Point` struct implementing the `Add` trait using generics.",
+        "suggest": "这是使用泛型实现 `Add` trait 的同一 `Point` 结构体的示例。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `+` operator.",
+        "suggest": "应用 `+` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `+` operation.",
+        "suggest": "执行 `+` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The subtraction operator `-`.",
+        "suggest": "减法运算符 `-`。",
+        "translate": ""
+    },
+    {
+        "source": "For example, [`std::time::SystemTime`] implements `Sub<Duration>`, which permits operations of the form `SystemTime = SystemTime - Duration`.",
+        "suggest": "例如，[`std::time::SystemTime`] 实现 `Sub<Duration>`，它允许以 `SystemTime = SystemTime - Duration` 形式进行操作。",
+        "translate": ""
+    },
+    {
+        "source": "`Sub`tractable points",
+        "suggest": "可减分",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Sub` with generics",
+        "suggest": "使用泛型实现 `Sub`",
+        "translate": ""
+    },
+    {
+        "source": "Here is an example of the same `Point` struct implementing the `Sub` trait using generics.",
+        "suggest": "这是使用泛型实现 `Sub` trait 的同一 `Point` 结构体的示例。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `-` operator.",
+        "suggest": "应用 `-` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `-` operation.",
+        "suggest": "执行 `-` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The multiplication operator `*`.",
+        "suggest": "乘法运算符 `*`。",
+        "translate": ""
+    },
+    {
+        "source": "`Mul`tipliable rational numbers",
+        "suggest": "可复制的有理数",
+        "translate": ""
+    },
+    {
+        "source": "Multiplying vectors by scalars as in linear algebra",
+        "suggest": "将 vectors 乘以线性代数中的标量",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `*` operator.",
+        "suggest": "应用 `*` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `*` operation.",
+        "suggest": "执行 `*` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The division operator `/`.",
+        "suggest": "除法运算符 `/`。",
+        "translate": ""
+    },
+    {
+        "source": "`Div`idable rational numbers",
+        "suggest": "可划分的有理数",
+        "translate": ""
+    },
+    {
+        "source": "Dividing vectors by scalars as in linear algebra",
+        "suggest": "将 vectors 除以线性代数中的标量",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `/` operator.",
+        "suggest": "应用 `/` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `/` operation.",
+        "suggest": "执行 `/` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "This operation rounds towards zero, truncating any fractional part of the exact result.",
+        "suggest": "此运算将舍入为零，舍去精确结果的任何小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "The remainder operator `%`.",
+        "suggest": "余数运算符 `%`。",
+        "translate": ""
+    },
+    {
+        "source": "This example implements `Rem` on a `SplitSlice` object.",
+        "suggest": "本示例在 `SplitSlice` 对象上实现 `Rem`。",
+        "translate": ""
+    },
+    {
+        "source": "After `Rem` is implemented, one can use the `%` operator to find out what the remaining elements of the slice would be after splitting it into equal slices of a given length.",
+        "suggest": "实现 `Rem` 后，可以使用 `%` 运算符将其拆分为给定长度的相等切片后，找出切片的其余元素。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `%` operator.",
+        "suggest": "应用 `%` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `%` operation.",
+        "suggest": "执行 `%` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "This operation satisfies `n % d == n - (n / d) * d`.",
+        "suggest": "此操作满足 `n % d == n - (n / d) * d`。",
+        "translate": ""
+    },
+    {
+        "source": "The result has the same sign as the left operand.",
+        "suggest": "结果具有与左操作数相同的符号。",
+        "translate": ""
+    },
+    {
+        "source": "The remainder from the division of two floats.",
+        "suggest": "其余部分来自两个彩车的划分。",
+        "translate": ""
+    },
+    {
+        "source": "The remainder has the same sign as the dividend and is computed as:",
+        "suggest": "余数与除数具有相同的符号，并计算为:",
+        "translate": ""
+    },
+    {
+        "source": "The unary negation operator `-`.",
+        "suggest": "一元求反运算符 `-`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `Neg` for `Sign`, which allows the use of `-` to negate its value.",
+        "suggest": "`Sign` 的 `Neg` 实现，它允许使用 `-` 取反其值。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the unary `-` operation.",
+        "suggest": "执行一元 `-` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The addition assignment operator `+=`.",
+        "suggest": "加法赋值运算符 `+=`。",
+        "translate": ""
+    },
+    {
+        "source": "This example creates a `Point` struct that implements the `AddAssign` trait, and then demonstrates add-assigning to a mutable `Point`.",
+        "suggest": "本示例创建一个 `Point` 结构体，该结构体实现 `AddAssign` trait，然后演示对可变 `Point` 的添加分配。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `+=` operation.",
+        "suggest": "执行 `+=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The subtraction assignment operator `-=`.",
+        "suggest": "减法赋值运算符 `-=`。",
+        "translate": ""
+    },
+    {
+        "source": "This example creates a `Point` struct that implements the `SubAssign` trait, and then demonstrates sub-assigning to a mutable `Point`.",
+        "suggest": "本示例创建一个实现 `SubAssign` trait 的 `Point` 结构体，然后演示对可变 `Point` 的子分配。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `-=` operation.",
+        "suggest": "执行 `-=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The multiplication assignment operator `*=`.",
+        "suggest": "乘法分配运算符 `*=`。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `*=` operation.",
+        "suggest": "执行 `*=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The division assignment operator `/=`.",
+        "suggest": "部门分配运算符 `/=`。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `/=` operation.",
+        "suggest": "执行 `/=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The remainder assignment operator `%=`.",
+        "suggest": "余数赋值运算符 `%=`。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `%=` operation.",
+        "suggest": "执行 `%=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "rhs is the \"right-hand side\" of the expression `a & b`",
+        "suggest": "rhs 是表达式 `a & b` 的 \"right-hand side\"",
+        "translate": ""
+    },
+    {
+        "source": "rhs is the \"right-hand side\" of the expression `a | b`",
+        "suggest": "rhs 是表达式 `a | b` 的 \"right-hand side\"",
+        "translate": ""
+    },
+    {
+        "source": "rhs is the \"right-hand side\" of the expression `a ^ b`",
+        "suggest": "rhs 是表达式 `a ^ b` 的 \"right-hand side\"",
+        "translate": ""
+    },
+    {
+        "source": "Rotate the vector by `rhs` places.",
+        "suggest": "将 vector 旋转 `rhs` 个位置。",
+        "translate": ""
+    },
+    {
+        "source": "rhs is the \"right-hand side\" of the expression `a &= b`",
+        "suggest": "rhs 是表达式 `a &= b` 的 \"right-hand side\"",
+        "translate": ""
+    },
+    {
+        "source": "is the \"right-hand side\" of the expression `a &= b`.",
+        "suggest": "是表达式 `a &= b` 的 \"right-hand side\"。",
+        "translate": ""
+    },
+    {
+        "source": "The unary logical negation operator `!`.",
+        "suggest": "一元逻辑否定运算符 `!`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `Not` for `Answer`, which enables the use of `!` to invert its value.",
+        "suggest": "用于 `Answer` 的 `Not` 的实现，该实现允许使用 `!` 反转其值。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `!` operator.",
+        "suggest": "应用 `!` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the unary `!` operation.",
+        "suggest": "执行一元 `!` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The bitwise AND operator `&`.",
+        "suggest": "按位与运算符 `&`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitAnd` for a wrapper around `bool`.",
+        "suggest": "`BitAnd` 的实现，用于围绕 `bool` 的包装。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitAnd` for a wrapper around `Vec<bool>`.",
+        "suggest": "`BitAnd` 的实现，用于围绕 `Vec<bool>` 的包装。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `&` operator.",
+        "suggest": "应用 `&` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `&` operation.",
+        "suggest": "执行 `&` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The bitwise OR operator `|`.",
+        "suggest": "按位或运算符 `|`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitOr` for a wrapper around `bool`.",
+        "suggest": "`BitOr` 的实现，用于围绕 `bool` 的包装。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitOr` for a wrapper around `Vec<bool>`.",
+        "suggest": "`BitOr` 的实现，用于围绕 `Vec<bool>` 的包装。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `|` operator.",
+        "suggest": "应用 `|` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `|` operation.",
+        "suggest": "执行 `|` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The bitwise XOR operator `^`.",
+        "suggest": "按位 XOR 运算符 `^`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitXor` that lifts `^` to a wrapper around `bool`.",
+        "suggest": "`BitXor` 的实现，将 `^` 提升到 `bool` 周围的包装器中。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitXor` trait for a wrapper around `Vec<bool>`.",
+        "suggest": "`BitXor` trait 的实现，用于 `Vec<bool>` 周围的包装器。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `^` operator.",
+        "suggest": "应用 `^` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `^` operation.",
+        "suggest": "执行 `^` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The left shift operator `<<`.",
+        "suggest": "左移位运算符 `<<`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that because this trait is implemented for all integer types with multiple right-hand-side types, Rust's type checker has special handling for `_ << _`, setting the result type for integer operations to the type of the left-hand-side operand.",
+        "suggest": "请注意，因为此 trait 是针对具有多个右侧类型的所有整数类型实现的，所以 Rust 的类型检查器对 `_ << _` 具有特殊的处理方式，将整数运算的结果类型设置为左侧操作数的类型。",
+        "translate": ""
+    },
+    {
+        "source": "This means that though `a << b` and `a.shl(b)` are one and the same from an evaluation standpoint, they are different when it comes to type inference.",
+        "suggest": "这意味着尽管从评估的角度来看，`a << b` 和 `a.shl(b)` 是相同的，但是在类型推断方面它们是不同的。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `Shl` that lifts the `<<` operation on integers to a wrapper around `usize`.",
+        "suggest": "`Shl` 的实现，将整数的 `<<` 操作提升为 `usize` 的包装器。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `Shl` that spins a vector leftward by a given amount.",
+        "suggest": "`Shl` 的实现，将 vector 向左旋转给定的数量。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `<<` operator.",
+        "suggest": "应用 `<<` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `<<` operation.",
+        "suggest": "执行 `<<` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The right shift operator `>>`.",
+        "suggest": "右移运算符 `>>`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that because this trait is implemented for all integer types with multiple right-hand-side types, Rust's type checker has special handling for `_ >> _`, setting the result type for integer operations to the type of the left-hand-side operand.",
+        "suggest": "请注意，因为此 trait 是针对具有多个右侧类型的所有整数类型实现的，所以 Rust 的类型检查器对 `_ >> _` 具有特殊的处理方式，将整数运算的结果类型设置为左侧操作数的类型。",
+        "translate": ""
+    },
+    {
+        "source": "This means that though `a >> b` and `a.shr(b)` are one and the same from an evaluation standpoint, they are different when it comes to type inference.",
+        "suggest": "这意味着尽管从评估的角度来看，`a >> b` 和 `a.shr(b)` 是相同的，但是在类型推断方面它们是不同的。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `Shr` that lifts the `>>` operation on integers to a wrapper around `usize`.",
+        "suggest": "`Shr` 的实现，将整数的 `>>` 操作提升为 `usize` 的包装器。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `Shr` that spins a vector rightward by a given amount.",
+        "suggest": "`Shr` 的实现，将 vector 向右旋转给定的数量。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting type after applying the `>>` operator.",
+        "suggest": "应用 `>>` 运算符后的结果类型。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `>>` operation.",
+        "suggest": "执行 `>>` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The bitwise AND assignment operator `&=`.",
+        "suggest": "按位与分配运算符 `&=`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `BitAndAssign` that lifts the `&=` operator to a wrapper around `bool`.",
+        "suggest": "`BitAndAssign` 的实现，将 `&=` 运算符提升为 `bool` 的包装器。",
+        "translate": ""
+    },
+    {
+        "source": "Here, the `BitAndAssign` trait is implemented for a wrapper around `Vec<bool>`.",
+        "suggest": "这里，`BitAndAssign` trait 是为 `Vec<bool>` 周围的包装器实现的。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `&=` operation.",
+        "suggest": "执行 `&=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The bitwise OR assignment operator `|=`.",
+        "suggest": "按位或赋值运算符 `|=`。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `|=` operation.",
+        "suggest": "执行 `|=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The bitwise XOR assignment operator `^=`.",
+        "suggest": "按位 XOR 赋值运算符 `^=`。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `^=` operation.",
+        "suggest": "执行 `^=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The left shift assignment operator `<<=`.",
+        "suggest": "左移赋值运算符 `<<=`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `ShlAssign` for a wrapper around `usize`.",
+        "suggest": "`ShlAssign` 的实现，用于围绕 `usize` 的包装。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `<<=` operation.",
+        "suggest": "执行 `<<=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "The right shift assignment operator `>>=`.",
+        "suggest": "右移赋值运算符 `>>=`。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation of `ShrAssign` for a wrapper around `usize`.",
+        "suggest": "`ShrAssign` 的实现，用于围绕 `usize` 的包装。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the `>>=` operation.",
+        "suggest": "执行 `>>=` 操作。",
+        "translate": ""
+    },
+    {
+        "source": "Used to tell an operation whether it should exit early or go on as usual.",
+        "suggest": "用于告诉操作是应该提前退出还是像往常一样继续操作。",
+        "translate": ""
+    },
+    {
+        "source": "This is used when exposing things (like graph traversals or visitors) where you want the user to be able to choose whether to exit early.",
+        "suggest": "在将您希望用户能够选择是否提前退出的事物 (例如图形遍历或访问者) 公开时使用。",
+        "translate": ""
+    },
+    {
+        "source": "Having the enum makes it clearer -- no more wondering \"wait, what did `false` mean again?\" -- and allows including a value.",
+        "suggest": "有了枚举可以使它更清晰 - 不必再奇怪 \"wait, what did `false` mean again?\" 了 - 并允许包含一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Early-exiting from [`Iterator::try_for_each`]:",
+        "suggest": "从 [`Iterator::try_for_each`] 提前退出:",
+        "translate": ""
+    },
+    {
+        "source": "A basic tree traversal:",
+        "suggest": "基本的树遍历:",
+        "translate": ""
+    },
+    {
+        "source": "Move on to the next phase of the operation as normal.",
+        "suggest": "照常进行操作的下一个阶段。",
+        "translate": ""
+    },
+    {
+        "source": "Exit the operation without running subsequent phases.",
+        "suggest": "退出操作而不运行后续阶段。",
+        "translate": ""
+    },
+    {
+        "source": "Yes, the order of the variants doesn't match the type parameters.",
+        "suggest": "是的，成员的顺序与类型参数不匹配。",
+        "translate": ""
+    },
+    {
+        "source": "They're in this order so that `ControlFlow<A, B>` <-> `Result<B, A>` is a no-op conversion in the `Try` implementation.",
+        "suggest": "它们是按此顺序排列的，因此 `ControlFlow<A, B>` <-> `Result<B, A>` 是 `Try` 实现中的无操作转换。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this is a `Break` variant.",
+        "suggest": "如果这是 `Break` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this is a `Continue` variant.",
+        "suggest": "如果这是 `Continue` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the `ControlFlow` into an `Option` which is `Some` if the `ControlFlow` was `Break` and `None` otherwise.",
+        "suggest": "如果 `ControlFlow` 为 `Break`，则将 `ControlFlow` 转换为 `Some`，否则为 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Maps `ControlFlow<B, C>` to `ControlFlow<T, C>` by applying a function to the break value in case it exists.",
+        "suggest": "Maps `ControlFlow<B, C>` 到 `ControlFlow<T, C>` 通过在中断值 (如果存在) 上应用函数来实现。",
+        "translate": ""
+    },
+    {
+        "source": "Create a `ControlFlow` from any type implementing `Try`.",
+        "suggest": "从实现 `Try` 的任何类型创建 `ControlFlow`。",
+        "translate": ""
+    },
+    {
+        "source": "Convert a `ControlFlow` into any type implementing `Try`;",
+        "suggest": "将 `ControlFlow` 转换为实现 `Try` 的任何类型;",
+        "translate": ""
+    },
+    {
+        "source": "It's frequently the case that there's no value needed with `Continue`, so this provides a way to avoid typing `(())`, if you prefer it.",
+        "suggest": "通常，`Continue` 不需要任何值，因此，如果愿意，这提供了一种避免输入 `(())` 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "APIs like `try_for_each` don't need values with `Break`, so this provides a way to avoid typing `(())`, if you prefer it.",
+        "suggest": "像 `try_for_each` 这样的 API 不需要 `Break` 的值，因此，如果您愿意的话，这提供了一种避免输入 `(())` 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Used for immutable dereferencing operations, like `*v`.",
+        "suggest": "用于不可变解引用操作，例如 `*v`。",
+        "translate": ""
+    },
+    {
+        "source": "In addition to being used for explicit dereferencing operations with the (unary) `*` operator in immutable contexts, `Deref` is also used implicitly by the compiler in many circumstances.",
+        "suggest": "`Deref` 除了在不可变上下文中用于 (unary) `*` 运算符的显式解引用操作外，在许多情况下，编译器都隐式使用 `Deref`。",
+        "translate": ""
+    },
+    {
+        "source": "This mechanism is called ['`Deref` coercion'][more].",
+        "suggest": "该机制称为 ['`Deref` coercion'][more]。",
+        "translate": ""
+    },
+    {
+        "source": "In mutable contexts, [`DerefMut`] is used.",
+        "suggest": "在可变上下文中，使用 [`DerefMut`]。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Deref` for smart pointers makes accessing the data behind them convenient, which is why they implement `Deref`.",
+        "suggest": "为智能指针实现 `Deref` 使得访问它们背后的数据变得方便，这就是为什么它们实现 `Deref` 的原因。",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand, the rules regarding `Deref` and [`DerefMut`] were designed specifically to accommodate smart pointers.",
+        "suggest": "另一方面，有关 `Deref` 和 [`DerefMut`] 的规则是专门为容纳智能指针而设计的。",
+        "translate": ""
+    },
+    {
+        "source": "Because of this, **`Deref` should only be implemented for smart pointers** to avoid confusion.",
+        "suggest": "因此，**`Deref` 只应为智能指针实现**，以避免混淆。",
+        "translate": ""
+    },
+    {
+        "source": "For similar reasons, **this trait should never fail**.",
+        "suggest": "出于类似的原因，**此 trait 永远不会失败**。",
+        "translate": ""
+    },
+    {
+        "source": "Failure during dereferencing can be extremely confusing when `Deref` is invoked implicitly.",
+        "suggest": "当隐式调用 `Deref` 时，解引用过程中的失败可能会造成极大的混乱。",
+        "translate": ""
+    },
+    {
+        "source": "More on `Deref` coercion",
+        "suggest": "有关 `Deref` 强制的更多信息",
+        "translate": ""
+    },
+    {
+        "source": "If `T` implements `Deref<Target = U>`, and `x` is a value of type `T`, then:",
+        "suggest": "如果 `T` 实现 `Deref<Target = U>`，并且 `x` 是 `T` 类型的值，则:",
+        "translate": ""
+    }
+]

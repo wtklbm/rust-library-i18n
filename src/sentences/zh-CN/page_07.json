@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "Check to see if we've finished counting or not.",
+        "suggest": "检查我们是否已经完成计数。",
+        "translate": ""
+    },
+    {
+        "source": "And now we can use it!",
+        "suggest": "现在我们可以使用它了!",
+        "translate": ""
+    },
+    {
+        "source": "is still owned by this function.",
+        "suggest": "仍然归此函数所有。",
+        "translate": ""
+    },
+    {
+        "source": "same as `values.iter_mut()`",
+        "suggest": "与 `values.iter_mut()` 相同",
+        "translate": ""
+    },
+    {
+        "source": "same as `values.iter()`",
+        "suggest": "与 `values.iter()` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Oh no!",
+        "suggest": "不好了!",
+        "translate": ""
+    },
+    {
+        "source": "An infinite loop!",
+        "suggest": "无限循环!",
+        "translate": ""
+    },
+    {
+        "source": "causes an infinite loop, so we won't reach this point!",
+        "suggest": "导致无限循环，所以我们不会达到这一点!",
+        "translate": ""
+    },
+    {
+        "source": "Composable external iteration.",
+        "suggest": "可组合的外部迭代。",
+        "translate": ""
+    },
+    {
+        "source": "If you've found yourself with a collection of some kind, and needed to perform an operation on the elements of said collection, you'll quickly run into 'iterators'.",
+        "suggest": "如果您发现自己具有某种类型的集合，并且需要对所述集合的元素执行操作，那么您会很快遇到 'iterators'。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators are heavily used in idiomatic Rust code, so it's worth becoming familiar with them.",
+        "suggest": "迭代器在惯用的 Rust 代码中大量使用，所以值得熟悉它们。",
+        "translate": ""
+    },
+    {
+        "source": "Before explaining more, let's talk about how this module is structured:",
+        "suggest": "在解释更多内容之前，让我们讨论一下该模块的结构:",
+        "translate": ""
+    },
+    {
+        "source": "This module is largely organized by type:",
+        "suggest": "该模块主要是按类型来组织的:",
+        "translate": ""
+    },
+    {
+        "source": "are the core portion: these traits define what kind of iterators exist and what you can do with them.",
+        "suggest": "是核心部分: 这些 traits 定义了存在哪种迭代器，以及可以使用它们进行哪些操作。",
+        "translate": ""
+    },
+    {
+        "source": "The methods of these traits are worth putting some extra study time into.",
+        "suggest": "这些 traits 的方法值得投入一些额外的学习时间。",
+        "translate": ""
+    },
+    {
+        "source": "provide some helpful ways to create some basic iterators.",
+        "suggest": "提供了一些有用的方法来创建一些基本的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "are often the return types of the various methods on this module's traits.",
+        "suggest": "通常是模块 traits 上各种方法的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "You'll usually want to look at the method that creates the `struct`, rather than the `struct` itself.",
+        "suggest": "通常，您将需要查看创建 `struct` 的方法，而不是 `struct` 本身。",
+        "translate": ""
+    },
+    {
+        "source": "For more detail about why, see '[Implementing Iterator](#implementing-iterator)'.",
+        "suggest": "有关原因的更多详细信息，请参见 [实现迭代器](#implementing-iterator)。",
+        "translate": ""
+    },
+    {
+        "source": "That's it!",
+        "suggest": "就是这样!",
+        "translate": ""
+    },
+    {
+        "source": "Let's dig into iterators.",
+        "suggest": "让我们深入研究迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The heart and soul of this module is the [`Iterator`] trait.",
+        "suggest": "该模块的核心是 [`Iterator`] trait。",
+        "translate": ""
+    },
+    {
+        "source": "The core of [`Iterator`] looks like this:",
+        "suggest": "[`Iterator`] 的核心如下所示:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator has a method, [`next`], which when called, returns an [`Option`]`<Item>`.",
+        "suggest": "迭代器具有 [`next`] 方法，该方法在调用时将返回 [`Option`]`<Item>`。",
+        "translate": ""
+    },
+    {
+        "source": "will return [`Some(Item)`] as long as there are elements, and once they've all been exhausted, will return `None` to indicate that iteration is finished.",
+        "suggest": "只要有元素，它们将返回 [`Some(Item)`]，一旦所有元素用尽，将返回 `None` 表示迭代已完成。",
+        "translate": ""
+    },
+    {
+        "source": "Individual iterators may choose to resume iteration, and so calling [`next`] again may or may not eventually start returning [`Some(Item)`] again at some point (for example, see [`TryIter`]).",
+        "suggest": "各个迭代器可能选择恢复迭代，因此再次调用 [`next`] 可能会或可能不会最终在某个时候再次开始返回 [`Some(Item)`] (例如，请参见 [`TryIter`])。",
+        "translate": ""
+    },
+    {
+        "source": "[`Iterator`]'s full definition includes a number of other methods as well, but they are default methods, built on top of [`next`], and so you get them for free.",
+        "suggest": "[`Iterator`] 的完整定义还包括许多其他方法，但是它们是默认方法，基于 [`next`] 构建，因此您可以免费获得它们。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators are also composable, and it's common to chain them together to do more complex forms of processing.",
+        "suggest": "迭代器也是可组合的，通常将它们链接在一起以进行更复杂的处理形式。",
+        "translate": ""
+    },
+    {
+        "source": "See the [Adapters](#adapters) section below for more details.",
+        "suggest": "有关更多详细信息，请参见下面的 [Adapters](#adapters) 部分。",
+        "translate": ""
+    },
+    {
+        "source": "The three forms of iteration",
+        "suggest": "三种迭代形式",
+        "translate": ""
+    },
+    {
+        "source": "There are three common methods which can create iterators from a collection:",
+        "suggest": "有三种常见的方法可以从集合中创建迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "which iterates over `&T`.",
+        "suggest": "在 `&T` 上迭代。",
+        "translate": ""
+    },
+    {
+        "source": "which iterates over `&mut T`.",
+        "suggest": "在 `&mut T` 上迭代。",
+        "translate": ""
+    },
+    {
+        "source": "which iterates over `T`.",
+        "suggest": "在 `T` 上迭代。",
+        "translate": ""
+    },
+    {
+        "source": "Various things in the standard library may implement one or more of the three, where appropriate.",
+        "suggest": "在适当的情况下，标准库中的各种内容都可以实现这三个中的一个或多个。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing Iterator",
+        "suggest": "实现迭代器",
+        "translate": ""
+    },
+    {
+        "source": "Creating an iterator of your own involves two steps: creating a `struct` to hold the iterator's state, and then implementing [`Iterator`] for that `struct`.",
+        "suggest": "创建自己的迭代器涉及两个步骤: 创建一个 `struct` 来保存迭代器的状态，然后为该 `struct` 实现 [`Iterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "This is why there are so many `struct`s in this module: there is one for each iterator and iterator adapter.",
+        "suggest": "这就是为什么此模块中有这么多 `struct` 的原因: 每个迭代器和迭代器适配器都有一个。",
+        "translate": ""
+    },
+    {
+        "source": "Let's make an iterator named `Counter` which counts from `1` to `5`:",
+        "suggest": "让我们创建一个名为 `Counter` 的迭代器，该迭代器的范围从 `1` 到 `5`:",
+        "translate": ""
+    },
+    {
+        "source": "Calling [`next`] this way gets repetitive.",
+        "suggest": "以这种方式调用 [`next`] 将重复进行。",
+        "translate": ""
+    },
+    {
+        "source": "Rust has a construct which can call [`next`] on your iterator, until it reaches `None`.",
+        "suggest": "Rust 有一个构造，可以在迭代器上调用 [`next`]，直到它到达 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Let's go over that next.",
+        "suggest": "让我们接下来讨论。",
+        "translate": ""
+    },
+    {
+        "source": "Also note that `Iterator` provides a default implementation of methods such as `nth` and `fold` which call `next` internally.",
+        "suggest": "还要注意，`Iterator` 提供了内部调用 `next` 的方法的默认实现，例如 `nth` 和 `fold`。",
+        "translate": ""
+    },
+    {
+        "source": "However, it is also possible to write a custom implementation of methods like `nth` and `fold` if an iterator can compute them more efficiently without calling `next`.",
+        "suggest": "但是，如果迭代器可以在不调用 `next` 的情况下更有效地计算它们，则还可以编写方法的自定义实现，例如 `nth` 和 `fold`。",
+        "translate": ""
+    },
+    {
+        "source": "loops and `IntoIterator`",
+        "suggest": "循环和 `IntoIterator`",
+        "translate": ""
+    },
+    {
+        "source": "Rust's `for` loop syntax is actually sugar for iterators.",
+        "suggest": "Rust 的 `for` 循环语法实际上是迭代器的语法糖。",
+        "translate": ""
+    },
+    {
+        "source": "Here's a basic example of `for`:",
+        "suggest": "这是 `for` 的基本示例:",
+        "translate": ""
+    },
+    {
+        "source": "This will print the numbers one through five, each on their own line.",
+        "suggest": "这将打印数字 1 到 5，每个数字都在各自的行上。",
+        "translate": ""
+    },
+    {
+        "source": "But you'll notice something here: we never called anything on our vector to produce an iterator.",
+        "suggest": "但是您会在这里注意到: 我们从未在 vector 上调用任何东西来产生迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "What gives?",
+        "suggest": "是什么赋予了?",
+        "translate": ""
+    },
+    {
+        "source": "There's a trait in the standard library for converting something into an iterator:",
+        "suggest": "标准库中有一个 trait，用于将某些东西转换为迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "This trait has one method, [`into_iter`], which converts the thing implementing [`IntoIterator`] into an iterator.",
+        "suggest": "trait 具有一个方法 [`into_iter`]，该方法将实现 [`IntoIterator`] 的类型转换为迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Let's take a look at that `for` loop again, and what the compiler converts it into:",
+        "suggest": "让我们再次看一下 `for` 循环，以及编译器将其转换为什么:",
+        "translate": ""
+    },
+    {
+        "source": "Rust de-sugars this into:",
+        "suggest": "Rust 将其反糖化为:",
+        "translate": ""
+    },
+    {
+        "source": "First, we call `into_iter()` on the value.",
+        "suggest": "首先，我们在值上调用 `into_iter()`。",
+        "translate": ""
+    },
+    {
+        "source": "Then, we match on the iterator that returns, calling [`next`] over and over until we see a `None`.",
+        "suggest": "然后，我们在返回的迭代器上进行匹配，一遍又一遍地调用 [`next`]，直到我们看到一个 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "At that point, we `break` out of the loop, and we're done iterating.",
+        "suggest": "到那时，我们 `break` 退出了循环，我们已经完成了迭代。",
+        "translate": ""
+    },
+    {
+        "source": "There's one more subtle bit here: the standard library contains an interesting implementation of [`IntoIterator`]:",
+        "suggest": "这里还有一点微妙之处: 标准库包含一个有趣的 [`IntoIterator`] 实现:",
+        "translate": ""
+    },
+    {
+        "source": "In other words, all [`Iterator`]s implement [`IntoIterator`], by just returning themselves.",
+        "suggest": "换句话说，所有 [`Iterator`] 都通过返回自身来实现 [`IntoIterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "This means two things:",
+        "suggest": "这意味着两件事:",
+        "translate": ""
+    },
+    {
+        "source": "If you're writing an [`Iterator`], you can use it with a `for` loop.",
+        "suggest": "如果要编写 [`Iterator`]，则可以将其与 `for` 循环一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "If you're creating a collection, implementing [`IntoIterator`] for it will allow your collection to be used with the `for` loop.",
+        "suggest": "如果要创建集合，则为其实现 [`IntoIterator`] 将使您的集合可以与 `for` 循环一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "Iterating by reference",
+        "suggest": "通过引用进行迭代",
+        "translate": ""
+    },
+    {
+        "source": "Since [`into_iter()`] takes `self` by value, using a `for` loop to iterate over a collection consumes that collection.",
+        "suggest": "由于 [`into_iter()`] 将 `self` 作为值，因此使用 `for` 循环遍历一个集合将消耗该集合。",
+        "translate": ""
+    },
+    {
+        "source": "Often, you may want to iterate over a collection without consuming it.",
+        "suggest": "通常，您可能需要迭代一个集合而不使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Many collections offer methods that provide iterators over references, conventionally called `iter()` and `iter_mut()` respectively:",
+        "suggest": "许多集合提供了在引用上提供迭代器的方法，通常分别称为 `iter()` 和 `iter_mut()`:",
+        "translate": ""
+    },
+    {
+        "source": "If a collection type `C` provides `iter()`, it usually also implements `IntoIterator` for `&C`, with an implementation that just calls `iter()`.",
+        "suggest": "如果集合类型 `C` 提供 `iter()`，则它通常还为 `&C` 实现 `IntoIterator`，而该实现只是调用 `iter()`。",
+        "translate": ""
+    },
+    {
+        "source": "Likewise, a collection `C` that provides `iter_mut()` generally implements `IntoIterator` for `&mut C` by delegating to `iter_mut()`.",
+        "suggest": "同样，提供 `iter_mut()` 的集合 `C` 通常通过委派给 `iter_mut()` 来为 `&mut C` 实现 `IntoIterator`。",
+        "translate": ""
+    },
+    {
+        "source": "This enables a convenient shorthand:",
+        "suggest": "这样可以方便快捷地实现以下目的:",
+        "translate": ""
+    },
+    {
+        "source": "While many collections offer `iter()`, not all offer `iter_mut()`.",
+        "suggest": "尽管许多集合都提供 `iter()`，但并非所有人都提供 `iter_mut()`。",
+        "translate": ""
+    },
+    {
+        "source": "For example, mutating the keys of a [`HashSet<T>`] or [`HashMap<K, V>`] could put the collection into an inconsistent state if the key hashes change, so these collections only offer `iter()`.",
+        "suggest": "例如，如果键的哈希值发生更改，则对 [`HashSet<T>`] 或 [`HashMap<K, V>`] 的键进行更改可能会使该集合处于不一致状态，因此这些集合仅提供 `iter()`。",
+        "translate": ""
+    },
+    {
+        "source": "Functions which take an [`Iterator`] and return another [`Iterator`] are often called 'iterator adapters', as they're a form of the 'adapter pattern'.",
+        "suggest": "接受一个 [`Iterator`] 并返回另一个 [`Iterator`] 的函数通常被称为迭代器适配器，因为它们是适配器模式的一种形式。",
+        "translate": ""
+    },
+    {
+        "source": "Common iterator adapters include [`map`], [`take`], and [`filter`].",
+        "suggest": "常见的迭代器适配器包括 [`map`]，[`take`] 和 [`filter`]。",
+        "translate": ""
+    },
+    {
+        "source": "For more, see their documentation.",
+        "suggest": "有关更多信息，请参见其文档。",
+        "translate": ""
+    },
+    {
+        "source": "If an iterator adapter panics, the iterator will be in an unspecified (but memory safe) state.",
+        "suggest": "如果迭代器适配器为 panics，则迭代器将处于未指定 (但内存安全) 状态。",
+        "translate": ""
+    },
+    {
+        "source": "This state is also not guaranteed to stay the same across versions of Rust, so you should avoid relying on the exact values returned by an iterator which panicked.",
+        "suggest": "也不能保证此状态在 Rust 的各个版本中都保持不变，因此您应避免依赖 panicked 的迭代器返回的确切值。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators (and iterator [adapters](#adapters)) are *lazy*.",
+        "suggest": "迭代器 (和迭代器 [适配器](#adapters)) 是懒惰的)。",
+        "translate": ""
+    },
+    {
+        "source": "This means that just creating an iterator doesn't _do_ a whole lot.",
+        "suggest": "这意味着仅仅创建一个迭代器并不会做很多事情。",
+        "translate": ""
+    },
+    {
+        "source": "Nothing really happens until you call [`next`].",
+        "suggest": "除非您调用 [`next`]，否则什么都不会发生。",
+        "translate": ""
+    },
+    {
+        "source": "This is sometimes a source of confusion when creating an iterator solely for its side effects.",
+        "suggest": "当创建仅出于其副作用的迭代器时，这有时会引起混乱。",
+        "translate": ""
+    },
+    {
+        "source": "For example, the [`map`] method calls a closure on each element it iterates over:",
+        "suggest": "例如，[`map`] 方法在其迭代的每个元素上调用一个闭包:",
+        "translate": ""
+    },
+    {
+        "source": "This will not print any values, as we only created an iterator, rather than using it.",
+        "suggest": "这将不会打印任何值，因为我们只是创建了一个迭代器，而不是使用它。",
+        "translate": ""
+    },
+    {
+        "source": "The compiler will warn us about this kind of behavior:",
+        "suggest": "编译器将警告我们这种行为:",
+        "translate": ""
+    },
+    {
+        "source": "The idiomatic way to write a [`map`] for its side effects is to use a `for` loop or call the [`for_each`] method:",
+        "suggest": "编写 [`map`] 的副作用的惯用方式是使用 `for` 循环或调用 [`for_each`] 方法:",
+        "translate": ""
+    },
+    {
+        "source": "Another common way to evaluate an iterator is to use the [`collect`] method to produce a new collection.",
+        "suggest": "评估迭代器的另一种常见方法是使用 [`collect`] 方法来生成新的集合。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators do not have to be finite.",
+        "suggest": "迭代器不必一定是有限的。",
+        "translate": ""
+    },
+    {
+        "source": "As an example, an open-ended range is an infinite iterator:",
+        "suggest": "例如，开放式范围是一个无限迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "It is common to use the [`take`] iterator adapter to turn an infinite iterator into a finite one:",
+        "suggest": "通常使用 [`take`] 迭代器适配器将无限迭代器转换为有限迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "This will print the numbers `0` through `4`, each on their own line.",
+        "suggest": "这将在各自的行上打印数字 `0` 至 `4`。",
+        "translate": ""
+    },
+    {
+        "source": "Bear in mind that methods on infinite iterators, even those for which a result can be determined mathematically in finite time, may not terminate.",
+        "suggest": "请记住，无限迭代器上的方法，即使可以在有限时间内数学确定结果的方法，也可能不会终止。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically, methods such as [`min`], which in the general case require traversing every element in the iterator, are likely not to return successfully for any infinite iterators.",
+        "suggest": "具体来说，通常需要遍历迭代器中每个元素的方法 (如 [`min`]) 对于任何无限迭代器都可能不会成功返回。",
+        "translate": ""
+    },
+    {
+        "source": "Objects that have a notion of *successor* and *predecessor* operations.",
+        "suggest": "具有 *successor* 和 *predecessor* 操作概念的对象。",
+        "translate": ""
+    },
+    {
+        "source": "The *successor* operation moves towards values that compare greater.",
+        "suggest": "*successor* 操作朝着比较大的值移动。",
+        "translate": ""
+    },
+    {
+        "source": "The *predecessor* operation moves towards values that compare lesser.",
+        "suggest": "**predecessor** 运算将移向比较较小的值。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is `unsafe` because its implementation must be correct for the safety of `unsafe trait TrustedLen` implementations, and the results of using this trait can otherwise be trusted by `unsafe` code to be correct and fulfill the listed obligations.",
+        "suggest": "trait 是 `unsafe`，因为它的实现对于 `unsafe trait TrustedLen` 实现的安全性而言必须是正确的，否则 `unsafe` 代码可以信任使用此 trait 的结果是正确的并履行列出的义务。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of *successor* steps required to get from `start` to `end`.",
+        "suggest": "返回从 `start` 到 `end` 所需的 *successor* 步骤的数量。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the number of steps would overflow `usize` (or is infinite, or if `end` would never be reached).",
+        "suggest": "如果步数溢出 `usize` (或者是无限的，或者永远不会达到 `end`)，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "For any `a`, `b`, and `n`:",
+        "suggest": "对于任何 `a`，`b` 和 `n`:",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `Step::forward_checked(&a, n) == Some(b)`",
+        "suggest": "当且仅当 `Step::forward_checked(&a, n) == Some(b)`",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `Step::backward_checked(&a, n) == Some(a)`",
+        "suggest": "当且仅当 `Step::backward_checked(&a, n) == Some(a)`",
+        "translate": ""
+    },
+    {
+        "source": "only if `a <= b`",
+        "suggest": "仅当 `a <= b`",
+        "translate": ""
+    },
+    {
+        "source": "Corollary: `steps_between(&a, &b) == Some(0)` if and only if `a == b`",
+        "suggest": "推论: `steps_between(&a, &b) == Some(0)` 当且仅当 `a == b`",
+        "translate": ""
+    },
+    {
+        "source": "Note that `a <= b` does _not_ imply `steps_between(&a, &b) != None`;",
+        "suggest": "请注意，`a <= b` 确实不表示 `steps_between(&a, &b) != None`。",
+        "translate": ""
+    },
+    {
+        "source": "this is the case when it would require more than `usize::MAX` steps to get to `b`",
+        "suggest": "当需要多个 `usize::MAX` 步骤才能到达 `b` 时，就是这种情况",
+        "translate": ""
+    },
+    {
+        "source": "if `a > b`",
+        "suggest": "如果 `a > b`",
+        "translate": ""
+    },
+    {
+        "source": "Returns the value that would be obtained by taking the *successor* of `self` `count` times.",
+        "suggest": "返回通过将 `self` `count` 的 *successor* 而获得的值。",
+        "translate": ""
+    },
+    {
+        "source": "If this would overflow the range of values supported by `Self`, returns `None`.",
+        "suggest": "如果这会溢出 `Self` 支持的值范围，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "For any `a`, `n`, and `m`:",
+        "suggest": "对于任何 `a`，`n` 和 `m`:",
+        "translate": ""
+    },
+    {
+        "source": "For any `a`, `n`, and `m` where `n + m` does not overflow:",
+        "suggest": "对于 `n + m` 不会溢出的任何 `a`，`n` 和 `m`:",
+        "translate": ""
+    },
+    {
+        "source": "For any `a` and `n`:",
+        "suggest": "对于任何 `a` 和 `n`:",
+        "translate": ""
+    },
+    {
+        "source": "If this would overflow the range of values supported by `Self`, this function is allowed to panic, wrap, or saturate.",
+        "suggest": "如果这会使 `Self` 支持的值范围溢出，则可以将此函数设置为 panic，自动换行或饱和。",
+        "translate": ""
+    },
+    {
+        "source": "The suggested behavior is to panic when debug assertions are enabled, and to wrap or saturate otherwise.",
+        "suggest": "启用调试断言后，建议的行为是 panic，否则将自动换行或饱和。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafe code should not rely on the correctness of behavior after overflow.",
+        "suggest": "不安全的代码不应依赖溢出后行为的正确性。",
+        "translate": ""
+    },
+    {
+        "source": "For any `a`, `n`, and `m`, where no overflow occurs:",
+        "suggest": "对于任何 `a`，`n` 和 `m`，都不会发生溢出:",
+        "translate": ""
+    },
+    {
+        "source": "For any `a` and `n`, where no overflow occurs:",
+        "suggest": "对于任何 `a` 和 `n`，都不会发生溢出:",
+        "translate": ""
+    },
+    {
+        "source": "It is undefined behavior for this operation to overflow the range of values supported by `Self`.",
+        "suggest": "该操作溢出 `Self` 支持的值范围是不确定的行为。",
+        "translate": ""
+    },
+    {
+        "source": "If you cannot guarantee that this will not overflow, use `forward` or `forward_checked` instead.",
+        "suggest": "如果不能保证不会溢出，请改用 `forward` 或 `forward_checked`。",
+        "translate": ""
+    },
+    {
+        "source": "For any `a`:",
+        "suggest": "对于任何 `a`:",
+        "translate": ""
+    },
+    {
+        "source": "if there exists `b` such that `b > a`, it is safe to call `Step::forward_unchecked(a, 1)`",
+        "suggest": "如果存在 `b` 这样的 `b > a`，则调用 `Step::forward_unchecked(a, 1)` 是安全的",
+        "translate": ""
+    },
+    {
+        "source": "if there exists `b`, `n` such that `steps_between(&a, &b) == Some(n)`, it is safe to call `Step::forward_unchecked(a, m)` for any `m <= n`.",
+        "suggest": "如果存在 `b`，`n` (例如 `steps_between(&a, &b) == Some(n)`)，则对于任何 `m <= n` 都可以调用 `Step::forward_unchecked(a, m)`。",
+        "translate": ""
+    },
+    {
+        "source": "is equivalent to `Step::forward(a, n)`",
+        "suggest": "相当于 `Step::forward(a, n)`",
+        "translate": ""
+    },
+    {
+        "source": "Returns the value that would be obtained by taking the *predecessor* of `self` `count` times.",
+        "suggest": "返回通过获取 self `count` 次的 *predecessor* 而获得的值。",
+        "translate": ""
+    },
+    {
+        "source": "If you cannot guarantee that this will not overflow, use `backward` or `backward_checked` instead.",
+        "suggest": "如果不能保证不会溢出，请改用 `backward` 或 `backward_checked`。",
+        "translate": ""
+    },
+    {
+        "source": "if there exists `b` such that `b < a`, it is safe to call `Step::backward_unchecked(a, 1)`",
+        "suggest": "如果存在 `b` 这样的 `b < a`，则调用 `Step::backward_unchecked(a, 1)` 是安全的",
+        "translate": ""
+    },
+    {
+        "source": "if there exists `b`, `n` such that `steps_between(&b, &a) == Some(n)`, it is safe to call `Step::backward_unchecked(a, m)` for any `m <= n`.",
+        "suggest": "如果存在 `b`，`n` (例如 `steps_between(&b, &a) == Some(n)`)，则对于任何 `m <= n` 都可以调用 `Step::backward_unchecked(a, m)`。",
+        "translate": ""
+    },
+    {
+        "source": "is equivalent to `Step::backward(a, n)`",
+        "suggest": "相当于 `Step::backward(a, n)`",
+        "translate": ""
+    },
+    {
+        "source": "These are still macro-generated because the integer literals resolve to different types.",
+        "suggest": "这些仍然是宏生成的，因为整数字面量可以解析为不同的类型。",
+        "translate": ""
+    },
+    {
+        "source": "the caller has to guarantee that `start + n` doesn't overflow.",
+        "suggest": "调用者必须保证 `start + n` 不会溢出。",
+        "translate": ""
+    },
+    {
+        "source": "the caller has to guarantee that `start - n` doesn't overflow.",
+        "suggest": "调用者必须保证 `start - n` 不会溢出。",
+        "translate": ""
+    },
+    {
+        "source": "In debug builds, trigger a panic on overflow.",
+        "suggest": "在调试版本中，溢出时触发 panic。",
+        "translate": ""
+    },
+    {
+        "source": "This should optimize completely out in release builds.",
+        "suggest": "这应该在发行版本中完全优化。",
+        "translate": ""
+    },
+    {
+        "source": "Do wrapping math to allow e.g.",
+        "suggest": "进行数学包装以允许例如",
+        "translate": ""
+    },
+    {
+        "source": "This relies on $u_narrower <= usize",
+        "suggest": "这取决于 `$u_narrower <= usize`",
+        "translate": ""
+    },
+    {
+        "source": "if n is out of range, `unsigned_start + n` is too",
+        "suggest": "如果 n 越界，则 `unsigned_start + n` 也是",
+        "translate": ""
+    },
+    {
+        "source": "if n is out of range, `unsigned_start - n` is too",
+        "suggest": "如果 n 越界，则 `unsigned_start - n` 也是",
+        "translate": ""
+    },
+    {
+        "source": "This relies on $i_narrower <= usize",
+        "suggest": "这取决于 `$i_narrower <= usize`",
+        "translate": ""
+    },
+    {
+        "source": "Casting to isize extends the width but preserves the sign.",
+        "suggest": "转换为 isize 可以扩展宽度，但可以保留符号。",
+        "translate": ""
+    },
+    {
+        "source": "Use wrapping_sub in isize space and cast to usize to compute the difference that may not fit inside the range of isize.",
+        "suggest": "在 isize 空间中使用 wrapping_sub 并强制转换为 usize，以计算可能不适合 isize 范围内的差异。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping handles cases like `Step::forward(-120_i8, 200) == Some(80_i8)`, even though 200 is out of range for i8.",
+        "suggest": "包装处理 `Step::forward(-120_i8, 200) == Some(80_i8)` 之类的情况，即使 i8 超出 200 的范围。",
+        "translate": ""
+    },
+    {
+        "source": "Addition overflowed",
+        "suggest": "加法溢出",
+        "translate": ""
+    },
+    {
+        "source": "If n is out of range of e.g.",
+        "suggest": "如果 n 超出例如的范围",
+        "translate": ""
+    },
+    {
+        "source": "then it is bigger than the entire range for i8 is wide so `any_i8 + n` necessarily overflows i8.",
+        "suggest": "则它大于 i8 的整个范围，因此 `any_i8 + n` 必然溢出 i8。",
+        "translate": ""
+    },
+    {
+        "source": "Subtraction overflowed",
+        "suggest": "减法溢出",
+        "translate": ""
+    },
+    {
+        "source": "then it is bigger than the entire range for i8 is wide so `any_i8 - n` necessarily overflows i8.",
+        "suggest": "则它大于 i8 的整个范围，因此 `any_i8 - n` 必然溢出 i8。",
+        "translate": ""
+    },
+    {
+        "source": "If the difference is too big for e.g.",
+        "suggest": "如果相差太大，例如",
+        "translate": ""
+    },
+    {
+        "source": "i128, it's also gonna be too big for usize with fewer bits.",
+        "suggest": "i128，它对于使用更少位的实用程序来说也太大了。",
+        "translate": ""
+    },
+    {
+        "source": "res is a valid unicode scalar (below 0x110000 and not in 0xD800..0xE000)",
+        "suggest": "res 是有效的 unicode 标量 (0x110000 以下且不在 0xD800..0xE000 中)",
+        "translate": ""
+    },
+    {
+        "source": "the caller must guarantee that this doesn't overflow the range of values for a char.",
+        "suggest": "调用者必须保证这不会溢出 char 的值范围。",
+        "translate": ""
+    },
+    {
+        "source": "because of the previous contract, this is guaranteed by the caller to be a valid char.",
+        "suggest": "由于以前的契约，调用者保证这是有效的字符。",
+        "translate": ""
+    },
+    {
+        "source": "just checked precondition",
+        "suggest": "刚刚检查的前提条件",
+        "translate": ""
+    },
+    {
+        "source": "These macros generate `ExactSizeIterator` impls for various range types.",
+        "suggest": "这些宏为各种范围类型生成 `ExactSizeIterator` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "is required to always return an exact `usize`, so no range can be longer than `usize::MAX`.",
+        "suggest": "必须始终返回精确的 `usize`，因此范围不能超过 `usize::MAX`。",
+        "translate": ""
+    },
+    {
+        "source": "For integer types in `Range<_>` this is the case for types narrower than or as wide as `usize`.",
+        "suggest": "对于 `Range<_>` 中的整数类型，小于或等于 `usize` 的类型就是这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "For integer types in `RangeInclusive<_>` this is the case for types *strictly narrower* than `usize` since e.g.",
+        "suggest": "对于 `RangeInclusive<_>` 中的整数类型来说，这是严格比 `usize` 窄的类型的情况，例如",
+        "translate": ""
+    },
+    {
+        "source": "would be `u64::MAX + 1`.",
+        "suggest": "将是 `u64::MAX + 1`。",
+        "translate": ""
+    },
+    {
+        "source": "These are incorect per the reasoning above, but removing them would be a breaking change as they were stabilized in Rust 1.0.0.",
+        "suggest": "根据上面的说明，这些是不正确的，但是由于将它们稳定在 Rust 1.0.0 中，因此删除它们将是一个重大更改。",
+        "translate": ""
+    },
+    {
+        "source": "So e.g.",
+        "suggest": "所以例如",
+        "translate": ""
+    },
+    {
+        "source": "for example will compile without error or warnings on 16-bit platforms, but continue to give a wrong result.",
+        "suggest": "例如，将在 16 位平台上进行编译而不会出现错误或警告，但会继续产生错误的结果。",
+        "translate": ""
+    },
+    {
+        "source": "These are incorect per the reasoning above, but removing them would be a breaking change as they were stabilized in Rust 1.26.0.",
+        "suggest": "根据上面的说明，这些是不正确的，但是由于将它们稳定在 Rust 1.26.0 中，因此删除它们将是一个重大更改。",
+        "translate": ""
+    },
+    {
+        "source": "this could have been an iterator over i32, but alas, it's just not.",
+        "suggest": "这可能是 i32 上的迭代器，但是，事实并非如此。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that yields nothing.",
+        "suggest": "创建一个不产生任何结果的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that yields nothing.",
+        "suggest": "没有任何结果的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`empty()`] function.",
+        "suggest": "该 `struct` 由 [`empty()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "not #[derive] because that adds a Clone bound on T, which isn't necessary.",
+        "suggest": "而不是 #[derive]，因为这会在 T 上添加一个 Clone 绑定，这是不必要的。",
+        "translate": ""
+    },
+    {
+        "source": "not #[derive] because that adds a Default bound on T, which isn't necessary.",
+        "suggest": "不是 #[derive]，因为这会在 T 上添加一个默认界限，这是不必要的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new iterator where each iteration calls the provided closure `F: FnMut() -> Option<T>`.",
+        "suggest": "创建一个新的迭代器，每次迭代都调用提供的闭包 `F: FnMut() -> Option<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "This allows creating a custom iterator with any behavior without using the more verbose syntax of creating a dedicated type and implementing the [`Iterator`] trait for it.",
+        "suggest": "这允许创建具有任何行为的自定义迭代器，而无需使用更冗长的语法来创建专用类型并为其实现 [`Iterator`] trait。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the `FromFn` iterator doesn’t make assumptions about the behavior of the closure, and therefore conservatively does not implement [`FusedIterator`], or override [`Iterator::size_hint()`] from its default `(0, None)`.",
+        "suggest": "请注意，`FromFn` 迭代器不会对闭包的行为进行假设，因此保守地不会实现 [`FusedIterator`]，也不会从默认 `(0, None)` 覆盖 [`Iterator::size_hint()`]。",
+        "translate": ""
+    },
+    {
+        "source": "The closure can use captures and its environment to track state across iterations.",
+        "suggest": "闭包可以使用捕获及其环境来跟踪迭代之间的状态。",
+        "translate": ""
+    },
+    {
+        "source": "Depending on how the iterator is used, this may require specifying the [`move`] keyword on the closure.",
+        "suggest": "根据迭代器的使用方式，这可能需要在闭包上指定 [`move`] 关键字。",
+        "translate": ""
+    },
+    {
+        "source": "Let’s re-implement the counter iterator from [module-level documentation]:",
+        "suggest": "让我们从 [module-level documentation] 重新实现计数器迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator where each iteration calls the provided closure `F: FnMut() -> Option<T>`.",
+        "suggest": "一个迭代器，每次迭代调用提供的闭包 `F: FnMut() -> Option<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`iter::from_fn()`] function.",
+        "suggest": "该 `struct` 由 [`iter::from_fn()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "one is the loneliest number",
+        "suggest": "一个是最孤独的数字",
+        "translate": ""
+    },
+    {
+        "source": "just one, that's all we get",
+        "suggest": "只是一个，这就是我们得到的",
+        "translate": ""
+    },
+    {
+        "source": "we need to convert from an iterator of DirEntry-s to an iterator of PathBufs, so we use map",
+        "suggest": "我们需要将 DirEntry-s 的迭代器转换为 PathBufs 的迭代器，因此我们使用 map",
+        "translate": ""
+    },
+    {
+        "source": "now, our iterator just for our config file",
+        "suggest": "现在，我们的迭代器仅用于我们的配置文件",
+        "translate": ""
+    },
+    {
+        "source": "chain the two iterators together into one big iterator",
+        "suggest": "将两个迭代器链接到一个大迭代器中",
+        "translate": ""
+    },
+    {
+        "source": "this will give us all of the files in .foo as well as .foorc",
+        "suggest": "这将为我们提供 .foo 和 .foorc 中的所有文件",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that yields an element exactly once.",
+        "suggest": "创建一个迭代器，该迭代器只生成一次元素。",
+        "translate": ""
+    },
+    {
+        "source": "This is commonly used to adapt a single value into a [`chain()`] of other kinds of iteration.",
+        "suggest": "这通常用于将单个值适配到其他类型的迭代的 [`chain()`] 中。",
+        "translate": ""
+    },
+    {
+        "source": "Maybe you have an iterator that covers almost everything, but you need an extra special case.",
+        "suggest": "也许您有一个涵盖几乎所有内容的迭代器，但是您需要一个额外的特殊情况。",
+        "translate": ""
+    },
+    {
+        "source": "Maybe you have a function which works on iterators, but you only need to process one value.",
+        "suggest": "也许您有一个可在迭代器上使用的函数，但只需要处理一个值即可。",
+        "translate": ""
+    },
+    {
+        "source": "Chaining together with another iterator.",
+        "suggest": "与另一个迭代器链接在一起。",
+        "translate": ""
+    },
+    {
+        "source": "Let's say that we want to iterate over each file of the `.foo` directory, but also a configuration file,",
+        "suggest": "假设我们要遍历 `.foo` 目录的每个文件，还要遍历一个配置文件，",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that yields an element exactly once.",
+        "suggest": "一个仅产生一次元素的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`once()`] function.",
+        "suggest": "该 `struct` 由 [`once()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that lazily generates a value exactly once by invoking the provided closure.",
+        "suggest": "创建一个迭代器，该迭代器通过调用提供的闭包来懒惰地一次生成一个值。",
+        "translate": ""
+    },
+    {
+        "source": "This is commonly used to adapt a single value generator into a [`chain()`] of other kinds of iteration.",
+        "suggest": "这通常用于使单个值生成器适应其他类型的迭代的 [`chain()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`once()`], this function will lazily generate the value on request.",
+        "suggest": "与 [`once()`] 不同，此函数将根据要求延迟生成值。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that yields a single element of type `A` by applying the provided closure `F: FnOnce() -> A`.",
+        "suggest": "通过应用提供的闭包 `F: FnOnce() -> A` 产生类型为 `A` 的单个元素的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`once_with()`] function.",
+        "suggest": "该 `struct` 由 [`once_with()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "the number four 4ever:",
+        "suggest": "第四个 4ever:",
+        "translate": ""
+    },
+    {
+        "source": "yup, still four",
+        "suggest": "是的，还是四个",
+        "translate": ""
+    },
+    {
+        "source": "that last example was too many fours.",
+        "suggest": "最后一个例子太多了。",
+        "translate": ""
+    },
+    {
+        "source": "Let's only have four fours.",
+        "suggest": "我们只有四个四。",
+        "translate": ""
+    },
+    {
+        "source": "and now we're done",
+        "suggest": "现在我们完成了",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new iterator that endlessly repeats a single element.",
+        "suggest": "创建一个新的迭代器，该迭代器不断重复单个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The `repeat()` function repeats a single value over and over again.",
+        "suggest": "`repeat()` 函数一次又一次地重复单个值。",
+        "translate": ""
+    },
+    {
+        "source": "Infinite iterators like `repeat()` are often used with adapters like [`Iterator::take()`], in order to make them finite.",
+        "suggest": "无限迭代器 (如 `repeat()`) 通常与适配器 (如 [`Iterator::take()`]) 一起使用，以使其具有有限性。",
+        "translate": ""
+    },
+    {
+        "source": "If the element type of the iterator you need does not implement `Clone`, or if you do not want to keep the repeated element in memory, you can instead use the [`repeat_with()`] function.",
+        "suggest": "如果所需的迭代器元素类型未实现 `Clone`，或者不想将重复的元素保留在内存中，则可以改用 [`repeat_with()`] 函数。",
+        "translate": ""
+    },
+    {
+        "source": "Going finite with [`Iterator::take()`]:",
+        "suggest": "用 [`Iterator::take()`] 进行有限化:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that repeats an element endlessly.",
+        "suggest": "一个无限重复元素的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`repeat()`] function.",
+        "suggest": "该 `struct` 由 [`repeat()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "let's assume we have some value of a type that is not `Clone` or which don't want to have in memory just yet because it is expensive:",
+        "suggest": "让我们假设我们有一些不是 `Clone` 的值，或者因为它很昂贵而现在还不想在内存中:",
+        "translate": ""
+    },
+    {
+        "source": "a particular value forever:",
+        "suggest": "永远具有特定的值:",
+        "translate": ""
+    },
+    {
+        "source": "From the zeroth to the third power of two:",
+        "suggest": "从两个的零次幂到三次幂:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new iterator that repeats elements of type `A` endlessly by applying the provided closure, the repeater,",
+        "suggest": "创建一个新的迭代器，方法是应用提供的闭包，转发器，无限地重复 `A` 类型的元素，",
+        "translate": ""
+    },
+    {
+        "source": "The `repeat_with()` function calls the repeater over and over again.",
+        "suggest": "`repeat_with()` 函数一遍又一遍地调用中继器。",
+        "translate": ""
+    },
+    {
+        "source": "Infinite iterators like `repeat_with()` are often used with adapters like [`Iterator::take()`], in order to make them finite.",
+        "suggest": "无限迭代器 (如 `repeat_with()`) 通常与适配器 (如 [`Iterator::take()`]) 一起使用，以使其具有有限性。",
+        "translate": ""
+    },
+    {
+        "source": "If the element type of the iterator you need implements [`Clone`], and it is OK to keep the source element in memory, you should instead use the [`repeat()`] function.",
+        "suggest": "如果您需要的迭代器的元素类型实现 [`Clone`]，并且可以将源元素保留在内存中，则应改用 [`repeat()`] 函数。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator produced by `repeat_with()` is not a [`DoubleEndedIterator`].",
+        "suggest": "`repeat_with()` 产生的迭代器不是 [`DoubleEndedIterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "If you need `repeat_with()` to return a [`DoubleEndedIterator`], please open a GitHub issue explaining your use case.",
+        "suggest": "如果您需要 `repeat_with()` 来返回 [`DoubleEndedIterator`]，请打开 GitHub 问题，说明您的用例。",
+        "translate": ""
+    },
+    {
+        "source": "Using mutation and going finite:",
+        "suggest": "使用可变和有限化:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that repeats elements of type `A` endlessly by applying the provided closure `F: FnMut() -> A`.",
+        "suggest": "一个迭代器，通过应用提供的闭包 `F: FnMut() -> A`，无限地重复 `A` 类型的元素。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`repeat_with()`] function.",
+        "suggest": "该 `struct` 由 [`repeat_with()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new iterator where each successive item is computed based on the preceding one.",
+        "suggest": "创建一个新的迭代器，在该迭代器的基础上，每个连续项都根据前一个进行计算。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator starts with the given first item (if any) and calls the given `FnMut(&T) -> Option<T>` closure to compute each item’s successor.",
+        "suggest": "迭代器从给定的第一个项 (如果有) 开始，并调用给定的 `FnMut(&T) -> Option<T>` 闭包以计算每个项的后继项。",
+        "translate": ""
+    },
+    {
+        "source": "If this function returned `impl Iterator<Item=T>` it could be based on `unfold` and not need a dedicated type.",
+        "suggest": "如果此函数返回 `impl Iterator<Item=T>`，则它可能基于 `unfold`，并且不需要专用类型。",
+        "translate": ""
+    },
+    {
+        "source": "However having a named `Successors<T, F>` type allows it to be `Clone` when `T` and `F` are.",
+        "suggest": "但是，当 `T` 和 `F` 存在时，具有命名的 `Successors<T, F>` 类型可以使其成为 `Clone`。",
+        "translate": ""
+    },
+    {
+        "source": "An new iterator where each successive item is computed based on the preceding one.",
+        "suggest": "一个新的迭代器，其中每个连续项都是根据前一个进行计算的。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`iter::successors()`] function.",
+        "suggest": "该 `struct` 由 [`iter::successors()`] 函数创建。",
+        "translate": ""
+    },
+    {
+        "source": "Trait to represent types that can be created by summing up an iterator.",
+        "suggest": "Trait 表示可以通过汇总迭代器创建的类型。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is used to implement the [`sum()`] method on iterators.",
+        "suggest": "trait 用于在迭代器上实现 [`sum()`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Types which implement the trait can be generated by the [`sum()`] method.",
+        "suggest": "可以通过 [`sum()`] 方法生成实现 trait 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`FromIterator`] this trait should rarely be called directly and instead interacted with through [`Iterator::sum()`].",
+        "suggest": "像 [`FromIterator`] 一样，很少应直接调用 trait，而应通过 [`Iterator::sum()`] 与之交互。",
+        "translate": ""
+    },
+    {
+        "source": "Method which takes an iterator and generates `Self` from the elements by \"summing up\" the items.",
+        "suggest": "使用迭代器并通过 \"summing up\" 项从元素生成 `Self` 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Trait to represent types that can be created by multiplying elements of an iterator.",
+        "suggest": "Trait 表示可以通过乘以迭代器的元素来创建的类型。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is used to implement the [`product()`] method on iterators.",
+        "suggest": "trait 用于在迭代器上实现 [`product()`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Types which implement the trait can be generated by the [`product()`] method.",
+        "suggest": "可以通过 [`product()`] 方法生成实现 trait 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`FromIterator`] this trait should rarely be called directly and instead interacted with through [`Iterator::product()`].",
+        "suggest": "像 [`FromIterator`] 一样，很少应直接调用 trait，而应通过 [`Iterator::product()`] 与之交互。",
+        "translate": ""
+    },
+    {
+        "source": "Method which takes an iterator and generates `Self` from the elements by multiplying the items.",
+        "suggest": "该方法采用迭代器并通过乘以项从元素生成 `Self`。",
+        "translate": ""
+    },
+    {
+        "source": "Takes each element in the [`Iterator`]: if it is an [`Err`], no further elements are taken, and the [`Err`] is returned.",
+        "suggest": "接受 [`Iterator`] 中的每个元素: 如果它是 [`Err`]，则不再获取其他元素，并返回 [`Err`]。",
+        "translate": ""
+    },
+    {
+        "source": "Should no [`Err`] occur, the sum of all elements is returned.",
+        "suggest": "如果没有发生 [`Err`]，则返回所有元素的总和。",
+        "translate": ""
+    },
+    {
+        "source": "This sums up every integer in a vector, rejecting the sum if a negative element is encountered:",
+        "suggest": "这将对 vector 中的每个整数求和，如果遇到负元素，则拒绝求和:",
+        "translate": ""
+    },
+    {
+        "source": "Should no [`Err`] occur, the product of all elements is returned.",
+        "suggest": "如果没有发生 [`Err`]，则返回所有元素的乘积。",
+        "translate": ""
+    },
+    {
+        "source": "Takes each element in the [`Iterator`]: if it is a [`None`], no further elements are taken, and the [`None`] is returned.",
+        "suggest": "接受 [`Iterator`] 中的每个元素: 如果它是 [`None`]，则不再获取其他元素，并返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Should no [`None`] occur, the sum of all elements is returned.",
+        "suggest": "如果没有发生 [`None`]，则返回所有元素的总和。",
+        "translate": ""
+    },
+    {
+        "source": "This sums up the position of the character 'a' in a vector of strings, if a word did not have the character 'a' the operation returns `None`:",
+        "suggest": "这总结了字符 'a' 在字符串 vector 中的位置，如果单词没有字符 'a'，则该操作返回 `None`:",
+        "translate": ""
+    },
+    {
+        "source": "Should no [`None`] occur, the product of all elements is returned.",
+        "suggest": "如果没有发生 [`None`]，则返回所有元素的乘积。",
+        "translate": ""
+    },
+    {
+        "source": "A sample collection, that's just a wrapper over Vec<T>",
+        "suggest": "一个样本集合，这只是 Vec<T> 的包装",
+        "translate": ""
+    },
+    {
+        "source": "Let's give it some methods so we can create one and add things to it.",
+        "suggest": "让我们给它一些方法，以便我们可以创建一个方法并向其中添加一些东西。",
+        "translate": ""
+    },
+    {
+        "source": "and we'll implement FromIterator",
+        "suggest": "我们将实现 FromIterator",
+        "translate": ""
+    },
+    {
+        "source": "Now we can make a new iterator...",
+        "suggest": "现在我们可以创建一个新的迭代器...",
+        "translate": ""
+    },
+    {
+        "source": "and make a MyCollection out of it",
+        "suggest": "并用它制作一个 MyCollection",
+        "translate": ""
+    },
+    {
+        "source": "collect works too!",
+        "suggest": "也收集作品!",
+        "translate": ""
+    },
+    {
+        "source": "and we'll implement IntoIterator",
+        "suggest": "我们将实现 IntoIterator",
+        "translate": ""
+    },
+    {
+        "source": "Now we can make a new collection...",
+        "suggest": "现在我们可以进行一个新的集合了...",
+        "translate": ""
+    },
+    {
+        "source": "add some stuff to it",
+        "suggest": "添加一些东西",
+        "translate": ""
+    },
+    {
+        "source": "and then turn it into an Iterator:",
+        "suggest": "然后将其转换为迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "You can extend a String with some chars:",
+        "suggest": "您可以使用一些字符扩展 String:",
+        "translate": ""
+    },
+    {
+        "source": "since MyCollection has a list of i32s, we implement Extend for i32",
+        "suggest": "由于 MyCollection 包含 i32 的列表，因此我们为 i32 实现 Extend",
+        "translate": ""
+    },
+    {
+        "source": "This is a bit simpler with the concrete type signature: we can call extend on anything which can be turned into an Iterator which gives us i32s.",
+        "suggest": "使用具体的类型签名，这要简单一些: 我们可以调用扩展为可转换为 It32 的 Iterator 的任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "Because we need i32s to put into MyCollection.",
+        "suggest": "因为我们需要将 i32 放入 MyCollection 中。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation is very straightforward: loop through the iterator, and add() each element to ourselves.",
+        "suggest": "实现非常简单: 遍历迭代器，然后将每个元素 add() 传递给我们自己。",
+        "translate": ""
+    },
+    {
+        "source": "let's extend our collection with three more numbers",
+        "suggest": "让我们用三个数字扩展集合",
+        "translate": ""
+    },
+    {
+        "source": "we've added these elements onto the end",
+        "suggest": "我们已经将这些元素添加到最后",
+        "translate": ""
+    },
+    {
+        "source": "Conversion from an [`Iterator`].",
+        "suggest": "从 [`Iterator`] 转换。",
+        "translate": ""
+    },
+    {
+        "source": "By implementing `FromIterator` for a type, you define how it will be created from an iterator.",
+        "suggest": "通过为类型实现 `FromIterator`，可以定义如何从迭代器创建它。",
+        "translate": ""
+    },
+    {
+        "source": "This is common for types which describe a collection of some kind.",
+        "suggest": "这对于描述某种集合的类型很常见。",
+        "translate": ""
+    },
+    {
+        "source": "is rarely called explicitly, and is instead used through [`Iterator::collect()`] method.",
+        "suggest": "很少显式调用，而是通过 [`Iterator::collect()`] 方法使用。",
+        "translate": ""
+    },
+    {
+        "source": "See [`Iterator::collect()`]'s documentation for more examples.",
+        "suggest": "有关更多示例，请参见 [`Iterator::collect () `] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "See also:",
+        "suggest": "也可以看看:",
+        "translate": ""
+    },
+    {
+        "source": "Using [`Iterator::collect()`] to implicitly use `FromIterator`:",
+        "suggest": "使用 [`Iterator::collect()`] 隐式使用 `FromIterator`:",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `FromIterator` for your type:",
+        "suggest": "为您的类型实现 `FromIterator`:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a value from an iterator.",
+        "suggest": "从迭代器创建一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Conversion into an [`Iterator`].",
+        "suggest": "转换为 [`Iterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "By implementing `IntoIterator` for a type, you define how it will be converted to an iterator.",
+        "suggest": "通过为类型实现 `IntoIterator`，可以定义如何将其转换为迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "One benefit of implementing `IntoIterator` is that your type will [work with Rust's `for` loop syntax](crate::iter#for-loops-and-intoiterator).",
+        "suggest": "实现 `IntoIterator` 的好处之一是您的类型将为 [work with Rust's `for` loop syntax](crate::iter#for-loops-and-intoiterator)。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `IntoIterator` for your type:",
+        "suggest": "为您的类型实现 `IntoIterator`:",
+        "translate": ""
+    },
+    {
+        "source": "It is common to use `IntoIterator` as a trait bound.",
+        "suggest": "通常将 `IntoIterator` 用作 trait bound。",
+        "translate": ""
+    },
+    {
+        "source": "This allows the input collection type to change, so long as it is still an iterator.",
+        "suggest": "只要它仍然是迭代器，就可以更改输入集合类型。",
+        "translate": ""
+    },
+    {
+        "source": "Additional bounds can be specified by restricting on",
+        "suggest": "可以通过限制限制来指定其他范围",
+        "translate": ""
+    },
+    {
+        "source": "The type of the elements being iterated over.",
+        "suggest": "被迭代的元素的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Which kind of iterator are we turning this into?",
+        "suggest": "我们将其变成哪种迭代器?",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator from a value.",
+        "suggest": "从一个值创建一个迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Extend a collection with the contents of an iterator.",
+        "suggest": "用迭代器的内容扩展集合。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators produce a series of values, and collections can also be thought of as a series of values.",
+        "suggest": "迭代器产生一系列值，并且集合也可以视为一系列值。",
+        "translate": ""
+    },
+    {
+        "source": "The `Extend` trait bridges this gap, allowing you to extend a collection by including the contents of that iterator.",
+        "suggest": "`Extend` trait 弥补了这一差距，使您可以通过包含该迭代器的内容来扩展集合。",
+        "translate": ""
+    },
+    {
+        "source": "When extending a collection with an already existing key, that entry is updated or, in the case of collections that permit multiple entries with equal keys, that entry is inserted.",
+        "suggest": "当使用已经存在的键扩展集合时，该条目将被更新; 如果集合允许多个具有相同键的条目，则将插入该条目。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Extend`:",
+        "suggest": "实现 `Extend`:",
+        "translate": ""
+    },
+    {
+        "source": "Extends a collection with the contents of an iterator.",
+        "suggest": "用迭代器的内容扩展集合。",
+        "translate": ""
+    },
+    {
+        "source": "As this is the only required method for this trait, the [trait-level] docs contain more details.",
+        "suggest": "由于这是此 trait 唯一需要的方法，因此 [trait-level] 文档包含更多详细信息。",
+        "translate": ""
+    },
+    {
+        "source": "Extends a collection with exactly one element.",
+        "suggest": "用一个元素扩展一个集合。",
+        "translate": ""
+    },
+    {
+        "source": "Reserves capacity in a collection for the given number of additional elements.",
+        "suggest": "在集合中为给定数量的附加元素保留容量。",
+        "translate": ""
+    },
+    {
+        "source": "The default implementation does nothing.",
+        "suggest": "默认实现不执行任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "only `&3` was skipped",
+        "suggest": "仅跳过 `&3`",
+        "translate": ""
+    },
+    {
+        "source": "Because it short-circuited, the remaining elements are still available through the iterator.",
+        "suggest": "由于发生短路，因此其余元素仍可通过迭代器使用。",
+        "translate": ""
+    },
+    {
+        "source": "the sum of all of the elements of a",
+        "suggest": "a 的所有元素的总和",
+        "translate": ""
+    },
+    {
+        "source": "we can still use `iter`, as there are more elements.",
+        "suggest": "我们仍然可以使用 `iter`，因为还有更多元素。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator able to yield elements from both ends.",
+        "suggest": "一个能够从两端产生元素的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Something that implements `DoubleEndedIterator` has one extra capability over something that implements [`Iterator`]: the ability to also take `Item`s from the back, as well as the front.",
+        "suggest": "实现 `DoubleEndedIterator` 的东西比实现 [`Iterator`] 的东西具有一项额外的功能: 既可以从后面也可以从前面获得 `item` 的功能。",
+        "translate": ""
+    },
+    {
+        "source": "It is important to note that both back and forth work on the same range, and do not cross: iteration is over when they meet in the middle.",
+        "suggest": "重要的是要注意，来回运动都在相同的范围内，并且不会交叉: 当它们在中间相遇时，迭代就结束了。",
+        "translate": ""
+    },
+    {
+        "source": "In a similar fashion to the [`Iterator`] protocol, once a `DoubleEndedIterator` returns [`None`] from a [`next_back()`], calling it again may or may not ever return [`Some`] again.",
+        "suggest": "以与 [`Iterator`] 协议类似的方式，一旦 `DoubleEndedIterator` 从 [`next_back()`] 返回 [`None`]，再次调用它可能会也可能不会再返回 [`Some`]。",
+        "translate": ""
+    },
+    {
+        "source": "and [`next_back()`] are interchangeable for this purpose.",
+        "suggest": "[`next_back()`] 和 [`next_back()`] 可以互换使用。",
+        "translate": ""
+    },
+    {
+        "source": "Removes and returns an element from the end of the iterator.",
+        "suggest": "从迭代器的末尾删除并返回一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` when there are no more elements.",
+        "suggest": "没有更多元素时返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "The [trait-level] docs contain more details.",
+        "suggest": "[trait-level] 文档包含更多详细信息。",
+        "translate": ""
+    },
+    {
+        "source": "The elements yielded by `DoubleEndedIterator`'s methods may differ from the ones yielded by [`Iterator`]'s methods:",
+        "suggest": "DoubleEndedIterator 方法产生的元素可能与 [Iterator`] 方法产生的元素不同:",
+        "translate": ""
+    },
+    {
+        "source": "Advances the iterator from the back by `n` elements.",
+        "suggest": "通过 `n` 元素从后向前推进迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "is the reverse version of [`advance_by`].",
+        "suggest": "是 [`advance_by`] 的反向版本。",
+        "translate": ""
+    },
+    {
+        "source": "This method will eagerly skip `n` elements starting from the back by calling [`next_back`] up to `n` times until [`None`] is encountered.",
+        "suggest": "该方法将急切地从后面开始跳过 `n` 元素，方法是调用 [`next_back`] 最多 `n` 次，直到遇到 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "will return [`Ok(())`] if the iterator successfully advances by `n` elements, or [`Err(k)`] if [`None`] is encountered, where `k` is the number of elements the iterator is advanced by before running out of elements (i.e.",
+        "suggest": "如果迭代器成功地将 `n` 元素推进，则返回 [`Ok(())`]; 如果遇到 [`None`]，则返回 [`Err(k)`]，其中 `k` 是迭代器在元素用尽之前被推进的元素数 (即",
+        "translate": ""
+    },
+    {
+        "source": "the length of the iterator).",
+        "suggest": "迭代器的长度)。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `k` is always less than `n`.",
+        "suggest": "请注意，`k` 始终小于 `n`。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `advance_back_by(0)` does not consume any elements and always returns [`Ok(())`].",
+        "suggest": "调用 `advance_back_by(0)` 不会消耗任何元素，并且始终返回 [`Ok(())`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the `n`th element from the end of the iterator.",
+        "suggest": "从迭代器的末尾返回第 n 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This is essentially the reversed version of [`Iterator::nth()`].",
+        "suggest": "这实际上是 [`Iterator::nth()`] 的反向版本。",
+        "translate": ""
+    },
+    {
+        "source": "Although like most indexing operations, the count starts from zero, so `nth_back(0)` returns the first value from the end, `nth_back(1)` the second, and so on.",
+        "suggest": "尽管像大多数索引操作一样，计数从零开始，所以 `nth_back(0)` 从末尾返回第一个值，`nth_back(1)` 从第二个开始返回，依此类推。",
+        "translate": ""
+    },
+    {
+        "source": "Note that all elements between the end and the returned element will be consumed, including the returned element.",
+        "suggest": "请注意，将使用 end 和返回元素之间的所有元素，包括返回元素。",
+        "translate": ""
+    },
+    {
+        "source": "This also means that calling `nth_back(0)` multiple times on the same iterator will return different elements.",
+        "suggest": "这也意味着在同一迭代器上多次调用 `nth_back(0)` 将返回不同的元素。",
+        "translate": ""
+    },
+    {
+        "source": "will return [`None`] if `n` is greater than or equal to the length of the iterator.",
+        "suggest": "如果 `n` 大于或等于迭代器的长度，则将返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `nth_back()` multiple times doesn't rewind the iterator:",
+        "suggest": "多次调用 `nth_back()` 不会回退迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "Returning `None` if there are less than `n + 1` elements:",
+        "suggest": "如果少于 `n + 1` 个元素，则返回 `None`:",
+        "translate": ""
+    },
+    {
+        "source": "This is the reverse version of [`Iterator::try_fold()`]: it takes elements starting from the back of the iterator.",
+        "suggest": "这是 [`Iterator::try_fold()`] 的反向版本: 它从迭代器的背面开始接收元素。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator method that reduces the iterator's elements to a single, final value, starting from the back.",
+        "suggest": "一种迭代器方法，从背面开始，将迭代器的元素减少为单个最终值。",
+        "translate": ""
+    },
+    {
+        "source": "This is the reverse version of [`Iterator::fold()`]: it takes elements starting from the back of the iterator.",
+        "suggest": "这是 [`Iterator::fold()`] 的反向版本: 它从迭代器的背面开始接收元素。",
+        "translate": ""
+    },
+    {
+        "source": "takes two arguments: an initial value, and a closure with two arguments: an 'accumulator', and an element.",
+        "suggest": "接受两个参数: 一个初始值和一个带有两个参数的闭包: 一个 'accumulator' 和一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The closure returns the value that the accumulator should have for the next iteration.",
+        "suggest": "闭包返回累加器在下一次迭代中应具有的值。",
+        "translate": ""
+    },
+    {
+        "source": "The initial value is the value the accumulator will have on the first call.",
+        "suggest": "初始值是累加器在第一次调用时将具有的值。",
+        "translate": ""
+    },
+    {
+        "source": "After applying this closure to every element of the iterator, `rfold()` returns the accumulator.",
+        "suggest": "在将此闭包应用于迭代器的每个元素之后，`rfold()` 返回累加器。",
+        "translate": ""
+    },
+    {
+        "source": "This operation is sometimes called 'reduce' or 'inject'.",
+        "suggest": "该操作有时称为 'reduce' 或 'inject'。",
+        "translate": ""
+    },
+    {
+        "source": "Folding is useful whenever you have a collection of something, and want to produce a single value from it.",
+        "suggest": "每当您有一些东西想要从中产生单个值时，折叠就会很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This example builds a string, starting with an initial value and continuing with each element from the back until the front:",
+        "suggest": "本示例构建一个字符串，该字符串从初始值开始，并从后到前从每个元素开始:",
+        "translate": ""
+    },
+    {
+        "source": "Searches for an element of an iterator from the back that satisfies a predicate.",
+        "suggest": "从背面搜索满足谓词的迭代器的元素。",
+        "translate": ""
+    },
+    {
+        "source": "takes a closure that returns `true` or `false`.",
+        "suggest": "接受一个返回 `true` 或 `false` 的闭包。",
+        "translate": ""
+    },
+    {
+        "source": "It applies this closure to each element of the iterator, starting at the end, and if any of them return `true`, then `rfind()` returns [`Some(element)`].",
+        "suggest": "它将这个闭包应用到迭代器的每个元素 (从末尾开始)，如果其中任何一个返回 `true`，则 `rfind()` 返回 [`Some(element)`]。",
+        "translate": ""
+    },
+    {
+        "source": "If they all return `false`, it returns [`None`].",
+        "suggest": "如果它们都返回 `false`，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "is short-circuiting;",
+        "suggest": "短路;",
+        "translate": ""
+    },
+    {
+        "source": "in other words, it will stop processing as soon as the closure returns `true`.",
+        "suggest": "换句话说，一旦闭包返回 `true`，它将立即停止处理。",
+        "translate": ""
+    },
+    {
+        "source": "Because `rfind()` takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation where the argument is a double reference.",
+        "suggest": "由于 `rfind()` 接受 quot，并且许多迭代器迭代 quot，因此导致参数为双 quot 的情况可能令人困惑。",
+        "translate": ""
+    },
+    {
+        "source": "You can see this effect in the examples below, with `&&x`.",
+        "suggest": "在 `&&x` 的以下示例中，您可以看到这种效果。",
+        "translate": ""
+    },
+    {
+        "source": "Stopping at the first `true`:",
+        "suggest": "在第一个 `true` 处停止:",
+        "translate": ""
+    },
+    {
+        "source": "a finite range knows exactly how many times it will iterate",
+        "suggest": "一个有限的范围确切地知道它将迭代多少次",
+        "translate": ""
+    },
+    {
+        "source": "We can easily calculate the remaining number of iterations.",
+        "suggest": "我们可以轻松计算剩余的迭代次数。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that knows its exact length.",
+        "suggest": "知道其确切长度的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Many [`Iterator`]s don't know how many times they will iterate, but some do.",
+        "suggest": "许多 [`Iterator`] 不知道它们将迭代多少次，但是有些迭代器知道。",
+        "translate": ""
+    },
+    {
+        "source": "If an iterator knows how many times it can iterate, providing access to that information can be useful.",
+        "suggest": "如果迭代器知道可以迭代多少次，则提供对该信息的访问将很有用。",
+        "translate": ""
+    },
+    {
+        "source": "For example, if you want to iterate backwards, a good start is to know where the end is.",
+        "suggest": "例如，如果要向后迭代，一个好的开始就是知道终点在哪里。",
+        "translate": ""
+    },
+    {
+        "source": "When implementing an `ExactSizeIterator`, you must also implement [`Iterator`].",
+        "suggest": "实现 `ExactSizeIterator` 时，还必须实现 [`Iterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "When doing so, the implementation of [`Iterator::size_hint`] *must* return the exact size of the iterator.",
+        "suggest": "这样做时，[`Iterator::size_hint`] 的实现 *必须* 返回迭代器的确切大小。",
+        "translate": ""
+    },
+    {
+        "source": "The [`len`] method has a default implementation, so you usually shouldn't implement it.",
+        "suggest": "[`len`] 方法具有默认实现，因此通常不应该实现它。",
+        "translate": ""
+    },
+    {
+        "source": "However, you may be able to provide a more performant implementation than the default, so overriding it in this case makes sense.",
+        "suggest": "但是，您可能能够提供比默认设置更有效的实现，因此在这种情况下将其覆盖是有道理的。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this trait is a safe trait and as such does *not* and *cannot* guarantee that the returned length is correct.",
+        "suggest": "请注意，此 trait 是安全的 trait，因此 *not* 和 *cannot* 不能保证返回的长度正确。",
+        "translate": ""
+    },
+    {
+        "source": "This means that `unsafe` code **must not** rely on the correctness of [`Iterator::size_hint`].",
+        "suggest": "这意味着 `unsafe` 代码 ** 一定不要依赖 [`Iterator::size_hint`] 的正确性。",
+        "translate": ""
+    },
+    {
+        "source": "The unstable and unsafe [`TrustedLen`](super::marker::TrustedLen) trait gives this additional guarantee.",
+        "suggest": "不稳定且不安全的 [`TrustedLen`](super::marker::TrustedLen) trait 提供了此额外的保证。",
+        "translate": ""
+    },
+    {
+        "source": "In the [module-level docs], we implemented an [`Iterator`],",
+        "suggest": "在 [module-level docs] 中，我们实现了 [`Iterator`]，",
+        "translate": ""
+    },
+    {
+        "source": "Let's implement `ExactSizeIterator` for it as well:",
+        "suggest": "让我们也为其实现 `ExactSizeIterator`:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the exact length of the iterator.",
+        "suggest": "返回迭代器的确切长度。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation ensures that the iterator will return exactly `len()` more times a [`Some(T)`] value, before returning [`None`].",
+        "suggest": "该实现可确保迭代器在返回 [`None`] 之前，将返回 [`Some(T)`] 值的次数正好多于 `len()`。",
+        "translate": ""
+    },
+    {
+        "source": "This method has a default implementation, so you usually should not implement it directly.",
+        "suggest": "此方法具有默认实现，因此通常不应直接实现它。",
+        "translate": ""
+    },
+    {
+        "source": "However, if you can provide a more efficient implementation, you can do so.",
+        "suggest": "但是，如果您可以提供更有效的实现，则可以这样做。",
+        "translate": ""
+    },
+    {
+        "source": "See the [trait-level] docs for an example.",
+        "suggest": "有关示例，请参见 [trait-level] 文档。",
+        "translate": ""
+    },
+    {
+        "source": "This function has the same safety guarantees as the [`Iterator::size_hint`] function.",
+        "suggest": "该函数与 [`Iterator::size_hint`] 函数具有相同的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "This assertion is overly defensive, but it checks the invariant guaranteed by the trait.",
+        "suggest": "该断言过于防御，但它检查 trait 保证的不变性。",
+        "translate": ""
+    },
+    {
+        "source": "If this trait were rust-internal, we could use debug_assert!;",
+        "suggest": "如果此 trait 是内部的 rust，则可以使用 debug_assert! ;。",
+        "translate": ""
+    },
+    {
+        "source": "assert_eq! will check all Rust user implementations too.",
+        "suggest": "assert_eq! 还将检查所有 Rust 用户实现。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the iterator is empty.",
+        "suggest": "如果迭代器为空，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "This method has a default implementation using [`ExactSizeIterator::len()`], so you don't need to implement it yourself.",
+        "suggest": "此方法具有使用 [`ExactSizeIterator::len()`] 的默认实现，因此您无需自己实现。",
+        "translate": ""
+    },
+    {
+        "source": "A call to next() returns the next value...",
+        "suggest": "调用 next() 返回下一个值...",
+        "translate": ""
+    },
+    {
+        "source": "and then None once it's over.",
+        "suggest": "然后，一旦结束，就再也没有。",
+        "translate": ""
+    },
+    {
+        "source": "More calls may or may not return `None`.",
+        "suggest": "更多调用可能会也可能不会返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Here, they always will.",
+        "suggest": "在这里，他们总是会的。",
+        "translate": ""
+    },
+    {
+        "source": "The even numbers from zero to ten.",
+        "suggest": "偶数从零到十。",
+        "translate": ""
+    },
+    {
+        "source": "We might iterate from zero to ten times.",
+        "suggest": "我们可以从零迭代到十次。",
+        "translate": ""
+    },
+    {
+        "source": "Knowing that it's five exactly wouldn't be possible without executing filter().",
+        "suggest": "不执行 filter() 就不可能知道它是 5。",
+        "translate": ""
+    },
+    {
+        "source": "Let's add five more numbers with chain()",
+        "suggest": "让我们用 chain() 再添加五个数字",
+        "translate": ""
+    },
+    {
+        "source": "now both bounds are increased by five",
+        "suggest": "现在两个界限都增加了五个",
+        "translate": ""
+    },
+    {
+        "source": "an infinite iterator has no upper bound and the maximum possible lower bound",
+        "suggest": "无限迭代器没有上限，最大可能下限",
+        "translate": ""
+    },
+    {
+        "source": "only `&4` was skipped",
+        "suggest": "仅跳过 `&4`",
+        "translate": ""
+    },
+    {
+        "source": "The first element from `a`.",
+        "suggest": "`a` 中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The separator.",
+        "suggest": "分隔符。",
+        "translate": ""
+    },
+    {
+        "source": "The next element from `a`.",
+        "suggest": "`a` 中的下一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The last element from `a`.",
+        "suggest": "`a` 中的最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator is finished.",
+        "suggest": "迭代器完成。",
+        "translate": ""
+    },
+    {
+        "source": "The first element from `v`.",
+        "suggest": "`v` 中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The next element from `v`.",
+        "suggest": "`v` 中的下一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The last element from from `v`.",
+        "suggest": "来自 `v` 的最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "The closure mutably borrows its context to generate an item.",
+        "suggest": "闭包可变地借用其上下文以生成项。",
+        "translate": ""
+    },
+    {
+        "source": "don't do this:",
+        "suggest": "不要这样做:",
+        "translate": ""
+    },
+    {
+        "source": "it won't even execute, as it is lazy.",
+        "suggest": "它甚至不会执行，因为它很懒。",
+        "translate": ""
+    },
+    {
+        "source": "Rust will warn you about this.",
+        "suggest": "Rust 会就此警告您。",
+        "translate": ""
+    },
+    {
+        "source": "Instead, use for:",
+        "suggest": "而是用于:",
+        "translate": ""
+    },
+    {
+        "source": "need two *s!",
+        "suggest": "需要两个 *s!",
+        "translate": ""
+    },
+    {
+        "source": "both & and *",
+        "suggest": "& 和 *",
+        "translate": ""
+    },
+    {
+        "source": "two &s",
+        "suggest": "两个 &s",
+        "translate": ""
+    },
+    {
+        "source": "we can peek() multiple times, the iterator won't advance",
+        "suggest": "我们可以多次 peek()，迭代器不会前进",
+        "translate": ""
+    },
+    {
+        "source": "after the iterator is finished, so is peek()",
+        "suggest": "迭代器完成后，peek() 也是如此",
+        "translate": ""
+    },
+    {
+        "source": "while this would have been false, since we already got a false, skip_while() isn't used any more",
+        "suggest": "虽然这本来是错误的，但是由于我们已经得到了错误，所以不再使用 skip_while()",
+        "translate": ""
+    },
+    {
+        "source": "We have more elements that are less than zero, but since we already got a false, take_while() isn't used any more",
+        "suggest": "我们有更多小于零的元素，但是由于我们已经得到了错误，因此不再使用 take_while()",
+        "translate": ""
+    },
+    {
+        "source": "We have more elements which could fit in u32 (4, 5), but `map_while` returned `None` for `-3` (as the `predicate` returned `None`) and `collect` stops at the first `None` encountered.",
+        "suggest": "我们还有更多可能适合 u32 (4，5) 的元素，但是 `map_while` 为 `-3` 返回了 `None` (因为 `predicate` 返回了 `None`)，而 `collect` 在遇到的第一个 `None` 处停止。",
+        "translate": ""
+    },
+    {
+        "source": "each iteration, we'll multiply the state by the element",
+        "suggest": "每次迭代，我们将状态乘以元素",
+        "translate": ""
+    },
+    {
+        "source": "then, we'll yield the negation of the state",
+        "suggest": "然后，我们将得出国家的否定",
+        "translate": ""
+    },
+    {
+        "source": "returns an iterator",
+        "suggest": "返回一个迭代器",
+        "translate": ""
+    },
+    {
+        "source": "an iterator which alternates between Some and None",
+        "suggest": "一个在 Some 和 None 之间交替的迭代器",
+        "translate": ""
+    },
+    {
+        "source": "if it's even, Some(i32), else None",
+        "suggest": "如果是偶数，则为 Some(i32)，否则为 None",
+        "translate": ""
+    },
+    {
+        "source": "we can see our iterator going back and forth",
+        "suggest": "我们可以看到我们的迭代器来回走动",
+        "translate": ""
+    },
+    {
+        "source": "however, once we fuse it...",
+        "suggest": "但是，一旦我们融合了...",
+        "translate": ""
+    },
+    {
+        "source": "it will always return `None` after the first time.",
+        "suggest": "第一次之后它将始终返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "this iterator sequence is complex.",
+        "suggest": "该迭代器序列很复杂。",
+        "translate": ""
+    },
+    {
+        "source": "let's add some inspect() calls to investigate what's happening",
+        "suggest": "让我们添加一些 inspect() 调用以调查正在发生的事情",
+        "translate": ""
+    },
+    {
+        "source": "if we try to use iter again, it won't work.",
+        "suggest": "如果我们尝试再次使用 iter，它将无法正常工作。",
+        "translate": ""
+    },
+    {
+        "source": "The following line gives \"error: use of moved value:",
+        "suggest": "下面的行给出了 ` 错误: 移动值的使用:",
+        "translate": ""
+    },
+    {
+        "source": "let's try that again",
+        "suggest": "让我们再试一次",
+        "translate": ""
+    },
+    {
+        "source": "instead, we add in a .by_ref()",
+        "suggest": "相反，我们添加一个 .by_ref()",
+        "translate": ""
+    },
+    {
+        "source": "now this is just fine:",
+        "suggest": "现在这很好:",
+        "translate": ""
+    },
+    {
+        "source": "gives us the first error",
+        "suggest": "给我们第一个错误",
+        "translate": ""
+    },
+    {
+        "source": "gives us the list of answers",
+        "suggest": "给我们答案列表",
+        "translate": ""
+    },
+    {
+        "source": "Partition in-place between evens and odds",
+        "suggest": "在偶数和赔率之间进行适当的分区",
+        "translate": ""
+    },
+    {
+        "source": "the checked sum of all of the elements of the array",
+        "suggest": "数组所有元素的校验和",
+        "translate": ""
+    },
+    {
+        "source": "This sum overflows when adding the 100 element",
+        "suggest": "加 100 元素时，此总和溢出",
+        "translate": ""
+    },
+    {
+        "source": "It short-circuited, so the remaining items are still in the iterator:",
+        "suggest": "它短路，因此其余项仍在迭代器中:",
+        "translate": ""
+    },
+    {
+        "source": "the sum of all of the elements of the array",
+        "suggest": "数组所有元素的总和",
+        "translate": ""
+    },
+    {
+        "source": "for loop:",
+        "suggest": "for 循环:",
+        "translate": ""
+    },
+    {
+        "source": "they're the same",
+        "suggest": "他们是一样的",
+        "translate": ""
+    },
+    {
+        "source": "The returned index depends on iterator state",
+        "suggest": "返回的索引取决于迭代器状态",
+        "translate": ""
+    },
+    {
+        "source": "copied is the same as .map(|&x| x)",
+        "suggest": "复制的与 .map(|&x| x) 相同",
+        "translate": ""
+    },
+    {
+        "source": "cloned is the same as .map(|&x| x), for integers",
+        "suggest": "对于整数，cloneed 与 .map(|&x| x) 相同",
+        "translate": ""
+    },
+    {
+        "source": "ignore-tidy-filelength This file almost exclusively consists of the definition of `Iterator`.",
+        "suggest": "ignore-tidy-filelength 此文件几乎完全由 `Iterator` 的定义组成。",
+        "translate": ""
+    },
+    {
+        "source": "We can't split that into multiple files.",
+        "suggest": "我们不能将其拆分为多个文件。",
+        "translate": ""
+    },
+    {
+        "source": "An interface for dealing with iterators.",
+        "suggest": "用于处理迭代器的接口。",
+        "translate": ""
+    },
+    {
+        "source": "This is the main iterator trait.",
+        "suggest": "这是主要的迭代器 trait。",
+        "translate": ""
+    },
+    {
+        "source": "For more about the concept of iterators generally, please see the [module-level documentation].",
+        "suggest": "有关一般迭代器概念的更多信息，请参见 [module-level documentation]。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, you may want to know how to [implement `Iterator`][impl].",
+        "suggest": "特别是，您可能想知道如何 [implement `Iterator`][impl]。",
+        "translate": ""
+    },
+    {
+        "source": "Advances the iterator and returns the next value.",
+        "suggest": "推进迭代器并返回下一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`None`] when iteration is finished.",
+        "suggest": "迭代完成后返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Individual iterator implementations may choose to resume iteration, and so calling `next()` again may or may not eventually start returning [`Some(Item)`] again at some point.",
+        "suggest": "各个迭代器的实现可能选择恢复迭代，因此再次调用 `next()` 可能会或可能不会最终在某个时候开始再次返回 [`Some(Item)`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the bounds on the remaining length of the iterator.",
+        "suggest": "返回迭代器剩余长度的界限。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically, `size_hint()` returns a tuple where the first element is the lower bound, and the second element is the upper bound.",
+        "suggest": "具体来说，`size_hint()` 返回一个元组，其中第一个元素是下界，第二个元素是上界。",
+        "translate": ""
+    },
+    {
+        "source": "The second half of the tuple that is returned is an [`Option`]`<`[`usize`]`>`.",
+        "suggest": "返回的元组的后半部分是 [`Option`]`<`[`usize`]`>`。",
+        "translate": ""
+    },
+    {
+        "source": "A [`None`] here means that either there is no known upper bound, or the upper bound is larger than [`usize`].",
+        "suggest": "这里的 [`None`] 表示没有已知的上限，或者该上限大于 [`usize`]。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation notes",
+        "suggest": "实现说明",
+        "translate": ""
+    },
+    {
+        "source": "It is not enforced that an iterator implementation yields the declared number of elements.",
+        "suggest": "没有强制要求迭代器实现产生声明数量的元素。",
+        "translate": ""
+    },
+    {
+        "source": "A buggy iterator may yield less than the lower bound or more than the upper bound of elements.",
+        "suggest": "buggy 迭代器的结果可能小于元素的下限，也可能大于元素的上限。",
+        "translate": ""
+    },
+    {
+        "source": "is primarily intended to be used for optimizations such as reserving space for the elements of the iterator, but must not be trusted to e.g., omit bounds checks in unsafe code.",
+        "suggest": "主要用于优化，例如为迭代器的元素保留空间，但不得信任，例如可以省略不安全代码中的边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "An incorrect implementation of `size_hint()` should not lead to memory safety violations.",
+        "suggest": "`size_hint()` 的不正确实现不应导致违反内存安全性。",
+        "translate": ""
+    },
+    {
+        "source": "That said, the implementation should provide a correct estimation, because otherwise it would be a violation of the trait's protocol.",
+        "suggest": "也就是说，该实现应提供正确的估计，因为否则将违反 trait 的协议。",
+        "translate": ""
+    },
+    {
+        "source": "The default implementation returns `(0, `[`None`]`)` which is correct for any iterator.",
+        "suggest": "默认实现返回 ` (0，`[`None`]`)` 对任何迭代器都是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "A more complex example:",
+        "suggest": "一个更复杂的示例:",
+        "translate": ""
+    },
+    {
+        "source": "Returning `None` for an upper bound:",
+        "suggest": "返回 `None` 作为上限:",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the iterator, counting the number of iterations and returning it.",
+        "suggest": "使用迭代器，计算迭代次数并返回它。",
+        "translate": ""
+    },
+    {
+        "source": "This method will call [`next`] repeatedly until [`None`] is encountered, returning the number of times it saw [`Some`].",
+        "suggest": "此方法将反复调用 [`next`]，直到遇到 [`None`]，并返回它看到 [`Some`] 的次数。",
+        "translate": ""
+    },
+    {
+        "source": "Note that [`next`] has to be called at least once even if the iterator does not have any elements.",
+        "suggest": "请注意，即使迭代器没有任何元素，也必须至少调用一次 [`next`]。",
+        "translate": ""
+    },
+    {
+        "source": "The method does no guarding against overflows, so counting elements of an iterator with more than [`usize::MAX`] elements either produces the wrong result or panics.",
+        "suggest": "该方法无法防止溢出，因此对具有超过 [`usize::MAX`] 个元素的迭代器的元素进行计数会产生错误的结果或 panics。",
+        "translate": ""
+    },
+    {
+        "source": "This function might panic if the iterator has more than [`usize::MAX`] elements.",
+        "suggest": "如果迭代器具有多个 [`usize::MAX`] 元素，则此函数可能为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the iterator, returning the last element.",
+        "suggest": "使用迭代器，返回最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This method will evaluate the iterator until it returns [`None`].",
+        "suggest": "此方法将评估迭代器，直到返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "While doing so, it keeps track of the current element.",
+        "suggest": "这样做时，它会跟踪当前元素。",
+        "translate": ""
+    },
+    {
+        "source": "After [`None`] is returned, `last()` will then return the last element it saw.",
+        "suggest": "返回 [`None`] 之后，`last()` 将返回它看到的最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Advances the iterator by `n` elements.",
+        "suggest": "通过 `n` 元素使迭代器前进。",
+        "translate": ""
+    },
+    {
+        "source": "This method will eagerly skip `n` elements by calling [`next`] up to `n` times until [`None`] is encountered.",
+        "suggest": "该方法将通过最多 `n` 次调用 [`next`] 来急切地跳过 `n` 元素，直到遇到 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "will return [`Ok(())`][Ok] if the iterator successfully advances by `n` elements, or [`Err(k)`][Err] if [`None`] is encountered, where `k` is the number of elements the iterator is advanced by before running out of elements (i.e.",
+        "suggest": "如果迭代器成功地将 `n` 元素推进，则返回 [`Ok(())`][Ok]; 如果遇到 [`None`]，则返回 [`Err(k)`][Err]，其中 `k` 是迭代器在元素用尽之前被推进的元素数 (即",
+        "translate": ""
+    },
+    {
+        "source": "Calling `advance_by(0)` does not consume any elements and always returns [`Ok(())`][Ok].",
+        "suggest": "调用 `advance_by(0)` 不会消耗任何元素，并且始终返回 [`Ok(())`][Ok]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the `n`th element of the iterator.",
+        "suggest": "返回迭代器的第 n 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Like most indexing operations, the count starts from zero, so `nth(0)` returns the first value, `nth(1)` the second, and so on.",
+        "suggest": "像大多数索引操作一样，计数从零开始，因此 `nth(0)` 返回第一个值，`nth(1)` 返回第二个值，依此类推。",
+        "translate": ""
+    },
+    {
+        "source": "Note that all preceding elements, as well as the returned element, will be consumed from the iterator.",
+        "suggest": "请注意，所有先前的元素以及返回的元素都将从迭代器中使用。",
+        "translate": ""
+    },
+    {
+        "source": "That means that the preceding elements will be discarded, and also that calling `nth(0)` multiple times on the same iterator will return different elements.",
+        "suggest": "这意味着前面的元素将被丢弃，并且在同一迭代器上多次调用 `nth(0)` 将返回不同的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `nth()` multiple times doesn't rewind the iterator:",
+        "suggest": "多次调用 `nth()` 不会回退迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator starting at the same point, but stepping by the given amount at each iteration.",
+        "suggest": "创建一个从同一点开始的迭代器，但在每次迭代时以给定的数量逐步执行。",
+        "translate": ""
+    },
+    {
+        "source": "Note 1: The first element of the iterator will always be returned, regardless of the step given.",
+        "suggest": "Note 1: 无论给出的步骤如何，总是会返回迭代器的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Note 2: The time at which ignored elements are pulled is not fixed.",
+        "suggest": "Note 2: 被忽略的元素被拉出的时间不是固定的。",
+        "translate": ""
+    },
+    {
+        "source": "behaves like the sequence `next(), nth(step-1), nth(step-1), …`, but is also free to behave like the sequence",
+        "suggest": "表现得像序列 `next(), nth(step-1), nth(step-1),…`，但也可以像序列一样自由地表现",
+        "translate": ""
+    },
+    {
+        "source": "Which way is used may change for some iterators for performance reasons.",
+        "suggest": "由于性能原因，某些迭代器可能会更改使用哪种方式。",
+        "translate": ""
+    },
+    {
+        "source": "The second way will advance the iterator earlier and may consume more items.",
+        "suggest": "第二种方法将使迭代器更早地进行，并可能消耗更多的项。",
+        "translate": ""
+    },
+    {
+        "source": "is the equivalent of:",
+        "suggest": "等价于:",
+        "translate": ""
+    },
+    {
+        "source": "The method will panic if the given step is `0`.",
+        "suggest": "如果给定步骤为 `0`，则该方法将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Takes two iterators and creates a new iterator over both in sequence.",
+        "suggest": "接受两个迭代器，并依次在两个迭代器上创建一个新的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "will return a new iterator which will first iterate over values from the first iterator and then over values from the second iterator.",
+        "suggest": "将返回一个新的迭代器，该迭代器将首先对第一个迭代器的值进行迭代，然后对第二个迭代器的值进行迭代。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, it links two iterators together, in a chain.",
+        "suggest": "换句话说，它将两个迭代器链接在一起。",
+        "translate": ""
+    },
+    {
+        "source": "is commonly used to adapt a single value into a chain of other kinds of iteration.",
+        "suggest": "通常用于将单个值调整为其他类型的迭代链。",
+        "translate": ""
+    },
+    {
+        "source": "Since the argument to `chain()` uses [`IntoIterator`], we can pass anything that can be converted into an [`Iterator`], not just an [`Iterator`] itself.",
+        "suggest": "由于 `chain()` 的参数使用 [`IntoIterator`]，因此我们可以传递可以转换为 [`Iterator`] 的所有内容，而不仅仅是 [`Iterator`] 本身。",
+        "translate": ""
+    },
+    {
+        "source": "For example, slices (`&[T]`) implement [`IntoIterator`], and so can be passed to `chain()` directly:",
+        "suggest": "例如，切片 (`&[T]`) 实现 [`IntoIterator`]，因此可以直接传递给 `chain()`:",
+        "translate": ""
+    },
+    {
+        "source": "If you work with Windows API, you may wish to convert [`OsStr`] to `Vec<u16>`:",
+        "suggest": "如果使用 Windows API，则可能希望将 [`OsStr`] 转换为 `Vec<u16>`:",
+        "translate": ""
+    },
+    {
+        "source": "'Zips up' two iterators into a single iterator of pairs.",
+        "suggest": "将两个迭代器压缩为成对的单个迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "returns a new iterator that will iterate over two other iterators, returning a tuple where the first element comes from the first iterator, and the second element comes from the second iterator.",
+        "suggest": "返回一个新的迭代器，该迭代器将在其他两个迭代器上进行迭代，返回一个元组，其中第一个元素来自第一个迭代器，第二个元素来自第二个迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, it zips two iterators together, into a single one.",
+        "suggest": "换句话说，它将两个迭代器压缩在一起，形成一个单一的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "If either iterator returns [`None`], [`next`] from the zipped iterator will return [`None`].",
+        "suggest": "如果任一迭代器返回 [`None`]，则 zipped 迭代器中的 [`next`] 将返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "If the first iterator returns [`None`], `zip` will short-circuit and `next` will not be called on the second iterator.",
+        "suggest": "如果第一个迭代器返回 [`None`]，则 `zip` 将短路，第二个迭代器将不会调用 `next`。",
+        "translate": ""
+    },
+    {
+        "source": "Since the argument to `zip()` uses [`IntoIterator`], we can pass anything that can be converted into an [`Iterator`], not just an [`Iterator`] itself.",
+        "suggest": "由于 `zip()` 的参数使用 [`IntoIterator`]，因此我们可以传递可以转换为 [`Iterator`] 的所有内容，而不仅仅是 [`Iterator`] 本身。",
+        "translate": ""
+    },
+    {
+        "source": "For example, slices (`&[T]`) implement [`IntoIterator`], and so can be passed to `zip()` directly:",
+        "suggest": "例如，切片 (`&[T]`) 实现 [`IntoIterator`]，因此可以直接传递给 `zip()`:",
+        "translate": ""
+    },
+    {
+        "source": "is often used to zip an infinite iterator to a finite one.",
+        "suggest": "通常用于将无限迭代器压缩为有限迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This works because the finite iterator will eventually return [`None`], ending the zipper.",
+        "suggest": "这是可行的，因为有限迭代器最终将返回 [`None`]，从而结束拉链。",
+        "translate": ""
+    },
+    {
+        "source": "Zipping with `(0..)` can look a lot like [`enumerate`]:",
+        "suggest": "使用 `(0..)` 压缩看起来很像 [`enumerate`]:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new iterator which places a copy of `separator` between adjacent items of the original iterator.",
+        "suggest": "创建一个新的迭代器，该迭代器将 `separator` 的副本放置在原始迭代器的相邻项之间。",
+        "translate": ""
+    },
+    {
+        "source": "In case `separator` does not implement [`Clone`] or needs to be computed every time, use [`intersperse_with`].",
+        "suggest": "如果 `separator` 未实现 [`Clone`] 或每次都需要计算，请使用 [`intersperse_with`]。",
+        "translate": ""
+    },
+    {
+        "source": "can be very useful to join an iterator's items using a common element:",
+        "suggest": "使用公共元素来加入迭代器的项可能非常有用:",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new iterator which places an item generated by `separator` between adjacent items of the original iterator.",
+        "suggest": "创建一个新的迭代器，该迭代器将 `separator` 生成的项放在原始迭代器的相邻项之间。",
+        "translate": ""
+    },
+    {
+        "source": "The closure will be called exactly once each time an item is placed between two adjacent items from the underlying iterator;",
+        "suggest": "每次将一个项放置在底层迭代器的两个相邻项之间时，闭包将被精确地调用一次;",
+        "translate": ""
+    },
+    {
+        "source": "specifically, the closure is not called if the underlying iterator yields less than two items and after the last item is yielded.",
+        "suggest": "具体来说，如果基础迭代器的产量少于两个项目，并且在产生最后一个项目之后，则不调用闭包。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator's item implements [`Clone`], it may be easier to use [`intersperse`].",
+        "suggest": "如果迭代器的项实现 [`Clone`]，则使用 [`intersperse`] 可能会更容易。",
+        "translate": ""
+    },
+    {
+        "source": "can be used in situations where the separator needs to be computed:",
+        "suggest": "可以在需要计算分隔符的情况下使用:",
+        "translate": ""
+    },
+    {
+        "source": "Takes a closure and creates an iterator which calls that closure on each element.",
+        "suggest": "获取一个闭包并创建一个迭代器，该迭代器在每个元素上调用该闭包。",
+        "translate": ""
+    },
+    {
+        "source": "transforms one iterator into another, by means of its argument:",
+        "suggest": "通过其参数将一个迭代器转换为另一个迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "something that implements [`FnMut`].",
+        "suggest": "实现 [`FnMut`] 的东西。",
+        "translate": ""
+    },
+    {
+        "source": "It produces a new iterator which calls this closure on each element of the original iterator.",
+        "suggest": "它产生一个新的迭代器，在原始迭代器的每个元素上调用此闭包。",
+        "translate": ""
+    },
+    {
+        "source": "If you are good at thinking in types, you can think of `map()` like this:",
+        "suggest": "如果您善于思考类型，则可以这样考虑 `map()`:",
+        "translate": ""
+    },
+    {
+        "source": "If you have an iterator that gives you elements of some type `A`, and you want an iterator of some other type `B`, you can use `map()`, passing a closure that takes an `A` and returns a `B`.",
+        "suggest": "如果您有一个迭代器为您提供某种类型的 `A` 元素，并且您想要某种其他类型的 `B` 的迭代器，则可以使用 `map()`，传递一个需要 `A` 并返回 `B` 的闭包。",
+        "translate": ""
+    },
+    {
+        "source": "is conceptually similar to a [`for`] loop.",
+        "suggest": "从概念上讲，它类似于 [`for`] 循环。",
+        "translate": ""
+    },
+    {
+        "source": "However, as `map()` is lazy, it is best used when you're already working with other iterators.",
+        "suggest": "但是，由于 `map()` 是惰性的，因此当您已经在使用其他迭代器时，最好使用 `map()`。",
+        "translate": ""
+    },
+    {
+        "source": "If you're doing some sort of looping for a side effect, it's considered more idiomatic to use [`for`] than `map()`.",
+        "suggest": "如果您要进行某种循环的副作用，则认为使用 [`for`] 比使用 `map()` 更惯用。",
+        "translate": ""
+    },
+    {
+        "source": "If you're doing some sort of side effect, prefer [`for`] to `map()`:",
+        "suggest": "如果您正在做某种副作用，请首选 [`for`] 而不是 `map()`:",
+        "translate": ""
+    },
+    {
+        "source": "Calls a closure on each element of an iterator.",
+        "suggest": "在迭代器的每个元素上调用一个闭包。",
+        "translate": ""
+    },
+    {
+        "source": "This is equivalent to using a [`for`] loop on the iterator, although `break` and `continue` are not possible from a closure.",
+        "suggest": "这等效于在迭代器上使用 [`for`] 循环，尽管不能从封闭包中获得 `break` 和 `continue`。",
+        "translate": ""
+    },
+    {
+        "source": "It's generally more idiomatic to use a `for` loop, but `for_each` may be more legible when processing items at the end of longer iterator chains.",
+        "suggest": "通常，使用 `for` 循环更为习惯，但是在较长的迭代器链的末尾处理 Item 时，`for_each` 可能更容易理解。",
+        "translate": ""
+    },
+    {
+        "source": "In some cases `for_each` may also be faster than a loop, because it will use internal iteration on adaptors like `Chain`.",
+        "suggest": "在某些情况下，`for_each` 可能比循环还要快，因为它会在 `Chain` 之类的适配器上使用内部迭代。",
+        "translate": ""
+    },
+    {
+        "source": "For such a small example, a `for` loop may be cleaner, but `for_each` might be preferable to keep a functional style with longer iterators:",
+        "suggest": "对于这么小的示例，`for` 循环可能更干净，但是 `for_each` 可能更适合于保留具有较长迭代器的功能样式:",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator which uses a closure to determine if an element should be yielded.",
+        "suggest": "创建一个迭代器，该迭代器使用闭包确定是否应产生元素。",
+        "translate": ""
+    },
+    {
+        "source": "Given an element the closure must return `true` or `false`.",
+        "suggest": "给定一个元素，闭包必须返回 `true` 或 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator will yield only the elements for which the closure returns true.",
+        "suggest": "返回的迭代器将仅生成闭包为其返回 true 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Because the closure passed to `filter()` takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation, where the type of the closure is a double reference:",
+        "suggest": "因为传递给 `filter()` 的闭包需要用一个引号引起来，并且许多迭代器迭代引用，所以这可能导致混乱的情况，其中闭包的类型是双引号:",
+        "translate": ""
+    },
+    {
+        "source": "It's common to instead use destructuring on the argument to strip away one:",
+        "suggest": "通常在参数上使用解构来去掉一个:",
+        "translate": ""
+    },
+    {
+        "source": "or both:",
+        "suggest": "或两个:",
+        "translate": ""
+    },
+    {
+        "source": "of these layers.",
+        "suggest": "这些层。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `iter.filter(f).next()` is equivalent to `iter.find(f)`.",
+        "suggest": "请注意，`iter.filter(f).next()` 等效于 `iter.find(f)`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that both filters and maps.",
+        "suggest": "创建一个同时过滤和 maps 的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator yields only the `value`s for which the supplied closure returns `Some(value)`.",
+        "suggest": "返回的迭代器只产生 `value`，而提供的闭包会返回 `Some(value)`。",
+        "translate": ""
+    },
+    {
+        "source": "can be used to make chains of [`filter`] and [`map`] more concise.",
+        "suggest": "可用于使 [`filter`] 和 [`map`] 的链更简洁。",
+        "translate": ""
+    },
+    {
+        "source": "The example below shows how a `map().filter().map()` can be shortened to a single call to `filter_map`.",
+        "suggest": "下面的示例显示了如何将 `map().filter().map()` 缩短为 `filter_map` 的单个调用。",
+        "translate": ""
+    },
+    {
+        "source": "Here's the same example, but with [`filter`] and [`map`]:",
+        "suggest": "这是相同的示例，但使用 [`filter`] 和 [`map`]:",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator which gives the current iteration count as well as the next value.",
+        "suggest": "创建一个迭代器，该迭代器给出当前迭代次数以及下一个值。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator returned yields pairs `(i, val)`, where `i` is the current index of iteration and `val` is the value returned by the iterator.",
+        "suggest": "返回的迭代器产生对 `(i, val)`，其中 `i` 是当前迭代索引，`val` 是迭代器返回的值。",
+        "translate": ""
+    },
+    {
+        "source": "keeps its count as a [`usize`].",
+        "suggest": "保持其计数为 [`usize`]。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to count by a different sized integer, the [`zip`] function provides similar functionality.",
+        "suggest": "如果要使用其他大小的整数进行计数，则 [`zip`] 函数提供了类似的功能。",
+        "translate": ""
+    },
+    {
+        "source": "The method does no guarding against overflows, so enumerating more than [`usize::MAX`] elements either produces the wrong result or panics.",
+        "suggest": "该方法无法防止溢出，因此枚举多个 [`usize::MAX`] 元素会产生错误的结果或 panics。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator might panic if the to-be-returned index would overflow a [`usize`].",
+        "suggest": "如果要返回的索引将溢出 [`usize`]，则返回的迭代器可能为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator which can use [`peek`] to look at the next element of the iterator without consuming it.",
+        "suggest": "创建一个迭代器，该迭代器可以使用 [`peek`] 来查看迭代器的下一个元素，而无需使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Adds a [`peek`] method to an iterator.",
+        "suggest": "将 [`peek`] 方法添加到迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the underlying iterator is still advanced when [`peek`] is called for the first time: In order to retrieve the next element, [`next`] is called on the underlying iterator, hence any side effects (i.e.",
+        "suggest": "请注意，首次调用 [`peek`] 时，基础迭代器仍处于高级状态: 为了检索下一个元素，在基础迭代器上调用 [`next`]，因此会产生任何副作用 (即，",
+        "translate": ""
+    },
+    {
+        "source": "anything other than fetching the next value) of the [`next`] method will occur.",
+        "suggest": "除了获取 [`next`] 方法的下一个值之外，其他所有操作都将发生。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that [`skip`]s elements based on a predicate.",
+        "suggest": "创建一个迭代器，该迭代器基于谓词 [`skip`] s 个元素。",
+        "translate": ""
+    },
+    {
+        "source": "takes a closure as an argument.",
+        "suggest": "将闭包作为参数。",
+        "translate": ""
+    },
+    {
+        "source": "It will call this closure on each element of the iterator, and ignore elements until it returns `false`.",
+        "suggest": "它将在迭代器的每个元素上调用此闭包，并忽略元素，直到返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "After `false` is returned, `skip_while()`'s job is over, and the rest of the elements are yielded.",
+        "suggest": "返回 `false` 后，`skip_while () ` 的工作结束，并产生元素的剩余部分。",
+        "translate": ""
+    },
+    {
+        "source": "Because the closure passed to `skip_while()` takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation, where the type of the closure argument is a double reference:",
+        "suggest": "因为传递给 `skip_while()` 的闭包需要一个引号，并且许多迭代器都在引用上进行迭代，所以这会导致一种可能令人困惑的情况，其中闭包参数的类型是双引号:",
+        "translate": ""
+    },
+    {
+        "source": "Stopping after an initial `false`:",
+        "suggest": "在初始 `false` 之后停止:",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that yields elements based on a predicate.",
+        "suggest": "创建一个迭代器，该迭代器根据谓词产生元素。",
+        "translate": ""
+    },
+    {
+        "source": "After `false` is returned, `take_while()`'s job is over, and the rest of the elements are ignored.",
+        "suggest": "返回 `false` 后，`take_while () ` 的工作结束，并且元素的剩余部分被忽略。",
+        "translate": ""
+    },
+    {
+        "source": "Because the closure passed to `take_while()` takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation, where the type of the closure is a double reference:",
+        "suggest": "因为传递给 `take_while()` 的闭包需要用一个引号引起来，并且许多迭代器迭代引用，所以这可能导致混乱的情况，其中闭包的类型是双引号:",
+        "translate": ""
+    },
+    {
+        "source": "Because `take_while()` needs to look at the value in order to see if it should be included or not, consuming iterators will see that it is removed:",
+        "suggest": "因为 `take_while()` 需要查看该值以查看是否应包含它，所以使用迭代器的人将看到它已被删除:",
+        "translate": ""
+    },
+    {
+        "source": "The `3` is no longer there, because it was consumed in order to see if the iteration should stop, but wasn't placed back into the iterator.",
+        "suggest": "`3` 不再存在，因为它已被消耗以查看迭代是否应该停止，但并未放回到迭代器中。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that both yields elements based on a predicate and maps.",
+        "suggest": "创建一个迭代器，该迭代器均基于谓词和 maps 产生元素。",
+        "translate": ""
+    },
+    {
+        "source": "It will call this closure on each element of the iterator, and yield elements while it returns [`Some(_)`][`Some`].",
+        "suggest": "它将在迭代器的每个元素上调用此闭包，并在返回 [`Some(_)`][`Some`] 时产生 yield 元素。",
+        "translate": ""
+    },
+    {
+        "source": "Here's the same example, but with [`take_while`] and [`map`]:",
+        "suggest": "这是相同的示例，但使用 [`take_while`] 和 [`map`]:",
+        "translate": ""
+    },
+    {
+        "source": "Stopping after an initial [`None`]:",
+        "suggest": "在初始 [`None`] 之后停止:",
+        "translate": ""
+    },
+    {
+        "source": "Because `map_while()` needs to look at the value in order to see if it should be included or not, consuming iterators will see that it is removed:",
+        "suggest": "因为 `map_while()` 需要查看该值以查看是否应包含它，所以使用迭代器的人将看到它已被删除:",
+        "translate": ""
+    },
+    {
+        "source": "The `-3` is no longer there, because it was consumed in order to see if the iteration should stop, but wasn't placed back into the iterator.",
+        "suggest": "`-3` 不再存在，因为它已被消耗以查看迭代是否应该停止，但并未放回到迭代器中。",
+        "translate": ""
+    },
+    {
+        "source": "Note that unlike [`take_while`] this iterator is **not** fused.",
+        "suggest": "请注意，与 [`take_while`] 不同，此迭代器是不融合的。",
+        "translate": ""
+    },
+    {
+        "source": "It is also not specified what this iterator returns after the first [`None`] is returned.",
+        "suggest": "还没有指定返回第一个 [`None`] 之后此迭代器返回的内容。",
+        "translate": ""
+    },
+    {
+        "source": "If you need fused iterator, use [`fuse`].",
+        "suggest": "如果需要融合迭代器，请使用 [`fuse`]。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that skips the first `n` elements.",
+        "suggest": "创建一个跳过前 `n` 个元素的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "After they have been consumed, the rest of the elements are yielded.",
+        "suggest": "消耗掉它们之后，剩下的元素就会产生。",
+        "translate": ""
+    },
+    {
+        "source": "Rather than overriding this method directly, instead override the `nth` method.",
+        "suggest": "而不是直接覆盖此方法，而是覆盖 `nth` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that yields its first `n` elements.",
+        "suggest": "创建一个迭代器，该迭代器产生其第一个 `n` 元素。",
+        "translate": ""
+    },
+    {
+        "source": "is often used with an infinite iterator, to make it finite:",
+        "suggest": "通常与无限迭代器配合使用以使其变得有限:",
+        "translate": ""
+    },
+    {
+        "source": "If less than `n` elements are available, `take` will limit itself to the size of the underlying iterator:",
+        "suggest": "如果少于 `n` 个元素可用，则 `take` 会将其自身限制为基础迭代器的大小:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator adaptor similar to [`fold`] that holds internal state and produces a new iterator.",
+        "suggest": "与 [`fold`] 相似的迭代器适配器，它保持内部状态并生成新的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "takes two arguments: an initial value which seeds the internal state, and a closure with two arguments, the first being a mutable reference to the internal state and the second an iterator element.",
+        "suggest": "接受两个参数: 一个初始值，该初始值填充内部状态; 一个闭包，包含两个参数，第一个是对内部状态的变量引用，第二个是迭代器元素。",
+        "translate": ""
+    },
+    {
+        "source": "The closure can assign to the internal state to share state between iterations.",
+        "suggest": "闭包可以分配给内部状态，以在迭代之间共享状态。",
+        "translate": ""
+    },
+    {
+        "source": "On iteration, the closure will be applied to each element of the iterator and the return value from the closure, an [`Option`], is yielded by the iterator.",
+        "suggest": "迭代时，闭包将应用于迭代器的每个元素，并且闭包的返回值 [`Option`] 由迭代器产生。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that works like map, but flattens nested structure.",
+        "suggest": "创建一个迭代器，其工作方式类似于 map，但是将嵌套的结构展平。",
+        "translate": ""
+    },
+    {
+        "source": "The [`map`] adapter is very useful, but only when the closure argument produces values.",
+        "suggest": "[`map`] 适配器非常有用，但仅当闭包参数产生值时才使用。",
+        "translate": ""
+    },
+    {
+        "source": "If it produces an iterator instead, there's an extra layer of indirection.",
+        "suggest": "如果它产生一个迭代器，则存在一个额外的间接层。",
+        "translate": ""
+    },
+    {
+        "source": "will remove this extra layer on its own.",
+        "suggest": "会自行删除此额外的图层。",
+        "translate": ""
+    },
+    {
+        "source": "You can think of `flat_map(f)` as the semantic equivalent of [`map`]ping, and then [`flatten`]ing as in `map(f).flatten()`.",
+        "suggest": "您可以将 `flat_map(f)` 视为 [`map`] ping  的语义等效项，然后像 map(f).flatten()` 中进行 [flatten]。",
+        "translate": ""
+    },
+    {
+        "source": "Another way of thinking about `flat_map()`: [`map`]'s closure returns one item for each element, and `flat_map()`'s closure returns an iterator for each element.",
+        "suggest": "关于 `flat_map()` 的另一种方式: [`map`] 的闭包为每个元素返回一个项，而 `flat_map () ` 的闭包为每个元素返回一个迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that flattens nested structure.",
+        "suggest": "创建一个可简化嵌套结构体的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you have an iterator of iterators or an iterator of things that can be turned into iterators and you want to remove one level of indirection.",
+        "suggest": "当您具有迭代器的迭代器或可以转换为迭代器的事物的迭代器并且要删除一个间接级别时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Mapping and then flattening:",
+        "suggest": "映射然后展平:",
+        "translate": ""
+    },
+    {
+        "source": "You can also rewrite this in terms of [`flat_map()`], which is preferable in this case since it conveys intent more clearly:",
+        "suggest": "您也可以用 [`flat_map()`] 来重写它，在这种情况下最好使用 [`flat_map()`]，因为它可以更清楚地传达意图:",
+        "translate": ""
+    },
+    {
+        "source": "Flattening only removes one level of nesting at a time:",
+        "suggest": "展平一次只能删除一层嵌套:",
+        "translate": ""
+    },
+    {
+        "source": "Here we see that `flatten()` does not perform a \"deep\" flatten.",
+        "suggest": "在这里，我们看到 `flatten()` 不执行深度展平。",
+        "translate": ""
+    },
+    {
+        "source": "Instead, only one level of nesting is removed.",
+        "suggest": "相反，仅删除了一层嵌套。",
+        "translate": ""
+    },
+    {
+        "source": "That is, if you `flatten()` a three-dimensional array, the result will be two-dimensional and not one-dimensional.",
+        "suggest": "也就是说，如果您用 `flatten()` 三维数组，则结果将是二维而不是一维的。",
+        "translate": ""
+    },
+    {
+        "source": "To get a one-dimensional structure, you have to `flatten()` again.",
+        "suggest": "要获得一维结构体，您必须再次 `flatten()`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator which ends after the first [`None`].",
+        "suggest": "创建一个迭代器，该迭代器在第一个 [`None`] 之后结束。",
+        "translate": ""
+    },
+    {
+        "source": "After an iterator returns [`None`], future calls may or may not yield [`Some(T)`] again.",
+        "suggest": "迭代器返回 [`None`] 之后，future 调用可能会或可能不会再次产生 [`Some(T)`]。",
+        "translate": ""
+    },
+    {
+        "source": "adapts an iterator, ensuring that after a [`None`] is given, it will always return [`None`] forever.",
+        "suggest": "调整迭代器，以确保在给出 [`None`] 之后，它将始终永远返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Does something with each element of an iterator, passing the value on.",
+        "suggest": "对迭代器的每个元素执行某些操作，将值传递给它。",
+        "translate": ""
+    },
+    {
+        "source": "When using iterators, you'll often chain several of them together.",
+        "suggest": "使用迭代器时，通常会将其中的几个链接在一起。",
+        "translate": ""
+    },
+    {
+        "source": "While working on such code, you might want to check out what's happening at various parts in the pipeline.",
+        "suggest": "在处理此类代码时，您可能想要切换到管道中各个部分的情况。",
+        "translate": ""
+    },
+    {
+        "source": "To do that, insert a call to `inspect()`.",
+        "suggest": "为此，将一个调用插入 `inspect()`。",
+        "translate": ""
+    },
+    {
+        "source": "It's more common for `inspect()` to be used as a debugging tool than to exist in your final code, but applications may find it useful in certain situations when errors need to be logged before being discarded.",
+        "suggest": "`inspect()` 用作调试工具要比最终代码中存在的更为普遍，但是在某些情况下，如果需要先记录错误然后丢弃，应用程序可能会发现它很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This will print:",
+        "suggest": "这将打印:",
+        "translate": ""
+    },
+    {
+        "source": "Logging errors before discarding them:",
+        "suggest": "在丢弃错误之前记录错误:",
+        "translate": ""
+    },
+    {
+        "source": "Borrows an iterator, rather than consuming it.",
+        "suggest": "借用一个迭代器，而不是使用它。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful to allow applying iterator adaptors while still retaining ownership of the original iterator.",
+        "suggest": "这在允许应用迭代器适配器的同时仍保留原始迭代器的所有权很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Transforms an iterator into a collection.",
+        "suggest": "将迭代器转换为集合。",
+        "translate": ""
+    },
+    {
+        "source": "can take anything iterable, and turn it into a relevant collection.",
+        "suggest": "可以采取任何可迭代的方法，并将其转化为相关的集合。",
+        "translate": ""
+    },
+    {
+        "source": "This is one of the more powerful methods in the standard library, used in a variety of contexts.",
+        "suggest": "这是在各种上下文中使用的标准库中功能更强大的方法之一。",
+        "translate": ""
+    },
+    {
+        "source": "The most basic pattern in which `collect()` is used is to turn one collection into another.",
+        "suggest": "使用 `collect()` 的最基本模式是将一个集合转换为另一个集合。",
+        "translate": ""
+    },
+    {
+        "source": "You take a collection, call [`iter`] on it, do a bunch of transformations, and then `collect()` at the end.",
+        "suggest": "您进行了一个收集，在其上调用 [`iter`]，进行了一堆转换，最后添加 `collect()`。",
+        "translate": ""
+    },
+    {
+        "source": "can also create instances of types that are not typical collections.",
+        "suggest": "也可以创建非典型集合类型的实例。",
+        "translate": ""
+    },
+    {
+        "source": "For example, a [`String`] can be built from [`char`]s, and an iterator of [`Result<T, E>`][`Result`] items can be collected into `Result<Collection<T>, E>`.",
+        "suggest": "例如，可以从 [`char`s] 构建 [`String`]，并且可以将 [`Result<T, E>`][`Result`] 项的迭代器收集到 `Result<Collection<T>, E>` 中。",
+        "translate": ""
+    },
+    {
+        "source": "See the examples below for more.",
+        "suggest": "有关更多信息，请参见下面的示例。",
+        "translate": ""
+    },
+    {
+        "source": "Because `collect()` is so general, it can cause problems with type inference.",
+        "suggest": "由于 `collect()` 非常通用，因此可能导致类型推断问题。",
+        "translate": ""
+    },
+    {
+        "source": "As such, `collect()` is one of the few times you'll see the syntax affectionately known as the 'turbofish':",
+        "suggest": "因此，`collect()` 是为数不多的被亲切地称为 'turbofish' 的语法之一:",
+        "translate": ""
+    },
+    {
+        "source": "This helps the inference algorithm understand specifically which collection you're trying to collect into.",
+        "suggest": "这有助于推理算法特别了解您要收集到的集合。",
+        "translate": ""
+    },
+    {
+        "source": "Note that we needed the `: Vec<i32>` on the left-hand side.",
+        "suggest": "请注意，我们需要在左侧使用 `: Vec<i32>`。",
+        "translate": ""
+    },
+    {
+        "source": "This is because we could collect into, for example, a [`VecDeque<T>`] instead:",
+        "suggest": "这是因为我们可以代替收集到例如 [`VecDeque<T>`] 中:",
+        "translate": ""
+    },
+    {
+        "source": "Using the 'turbofish' instead of annotating `doubled`:",
+        "suggest": "使用 'turbofish' 而不是注解 `doubled`:",
+        "translate": ""
+    },
+    {
+        "source": "Because `collect()` only cares about what you're collecting into, you can still use a partial type hint, `_`, with the turbofish:",
+        "suggest": "因为 `collect()` 只关心您要收集的内容，所以您仍然可以将局部类型提示 `_` 与 turbfish 一起使用:",
+        "translate": ""
+    },
+    {
+        "source": "Using `collect()` to make a [`String`]:",
+        "suggest": "使用 `collect()` 生成 [`String`]:",
+        "translate": ""
+    },
+    {
+        "source": "If you have a list of [`Result<T, E>`][`Result`]s, you can use `collect()` to see if any of them failed:",
+        "suggest": "如果您有 [`Result<T, E>`][`Result`]，您可以使用 `collect()` 来查看它们是否失败:",
+        "translate": ""
+    },
+    {
+        "source": "Consumes an iterator, creating two collections from it.",
+        "suggest": "使用一个迭代器，从中创建两个集合。",
+        "translate": ""
+    },
+    {
+        "source": "The predicate passed to `partition()` can return `true`, or `false`.",
+        "suggest": "传递给 `partition()` 的谓词可以返回 `true` 或 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "returns a pair, all of the elements for which it returned `true`, and all of the elements for which it returned `false`.",
+        "suggest": "返回一对，返回的所有元素都为 `true`，返回的所有元素都为 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`is_partitioned()`] and [`partition_in_place()`].",
+        "suggest": "另请参见 [`is_partitioned()`] 和 [`partition_in_place()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Reorders the elements of this iterator *in-place* according to the given predicate, such that all those that return `true` precede all those that return `false`.",
+        "suggest": "根据给定的谓词，对迭代器的元素进行就地重新排序，以使所有返回 `true` 的元素都在所有返回 `false` 的元素之前。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of `true` elements found.",
+        "suggest": "返回找到的 `true` 元素的数量。",
+        "translate": ""
+    },
+    {
+        "source": "The relative order of partitioned items is not maintained.",
+        "suggest": "未维护分区项的相对顺序。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`is_partitioned()`] and [`partition()`].",
+        "suggest": "另请参见 [`is_partitioned()`] 和 [`partition()`]。",
+        "translate": ""
+    },
+    {
+        "source": "should we worry about the count overflowing?",
+        "suggest": "我们应该担心计数溢出吗?",
+        "translate": ""
+    },
+    {
+        "source": "The only way to have more than `usize::MAX` mutable references is with ZSTs, which aren't useful to partition...",
+        "suggest": "拥有超过 `usize::MAX` 可变引用的唯一方法是使用 ZST，这对于分区没有用...",
+        "translate": ""
+    },
+    {
+        "source": "These closure \"factory\" functions exist to avoid genericity in `Self`.",
+        "suggest": "这些闭包工厂函数的存在是为了避免 `Self` 中的泛型。",
+        "translate": ""
+    },
+    {
+        "source": "Repeatedly find the first `false` and swap it with the last `true`.",
+        "suggest": "重复查找第一个 `false` 并将其与最后一个 `true` 交换。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this iterator are partitioned according to the given predicate, such that all those that return `true` precede all those that return `false`.",
+        "suggest": "检查此迭代器的元素是否根据给定的谓词进行了分区，以便所有返回 `true` 的元素都在所有返回 `false` 的元素之前。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`partition()`] and [`partition_in_place()`].",
+        "suggest": "另请参见 [`partition()`] 和 [`partition_in_place()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Either all items test `true`, or the first clause stops at `false` and we check that there are no more `true` items after that.",
+        "suggest": "所有项测试 `true`，或者第一个子句在 `false` 处停止，然后我们检查之后没有更多的 `true` 项。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator method that applies a function as long as it returns successfully, producing a single, final value.",
+        "suggest": "一个迭代器方法，它只要成功返回就应用函数，并产生单个最终值。",
+        "translate": ""
+    },
+    {
+        "source": "The closure either returns successfully, with the value that the accumulator should have for the next iteration, or it returns failure, with an error value that is propagated back to the caller immediately (short-circuiting).",
+        "suggest": "闭包要么成功返回并返回累加器在下一次迭代中应具有的值，要么返回失败，返回错误值并立即将错误值传播回调用方 (short-circuiting)。",
+        "translate": ""
+    },
+    {
+        "source": "Note to Implementors",
+        "suggest": "实现者注意",
+        "translate": ""
+    },
+    {
+        "source": "Several of the other (forward) methods have default implementations in terms of this one, so try to implement this explicitly if it can do something better than the default `for` loop implementation.",
+        "suggest": "就此而言，其他几种 (forward) 方法都具有默认实现，因此，如果它可以做得比默认 `for` 循环实现更好，请尝试显式实现此方法。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, try to have this call `try_fold()` on the internal parts from which this iterator is composed.",
+        "suggest": "特别是，请尝试将此 `try_fold()` 放在组成此迭代器的内部部件上。",
+        "translate": ""
+    },
+    {
+        "source": "If multiple calls are needed, the `?` operator may be convenient for chaining the accumulator value along, but beware any invariants that need to be upheld before those early returns.",
+        "suggest": "如果需要多次调用，则 `?` 运算符可能会很方便地将累加器值链接在一起，但是要提防在这些早期返回之前需要保留的所有不变式。",
+        "translate": ""
+    },
+    {
+        "source": "This is a `&mut self` method, so iteration needs to be resumable after hitting an error here.",
+        "suggest": "这是一种 `&mut self` 方法，因此在此处遇到错误后需要重新开始迭代。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator method that applies a fallible function to each item in the iterator, stopping at the first error and returning that error.",
+        "suggest": "一个迭代器方法，该方法将一个容易犯错的函数应用于迭代器中的每个项，在第一个错误处停止并返回该错误。",
+        "translate": ""
+    },
+    {
+        "source": "This can also be thought of as the fallible form of [`for_each()`] or as the stateless version of [`try_fold()`].",
+        "suggest": "也可以将其视为 [`for_each()`] 的错误形式或 [`try_fold()`] 的无状态版本。",
+        "translate": ""
+    },
+    {
+        "source": "Folds every element into an accumulator by applying an operation, returning the final result.",
+        "suggest": "通过应用操作将每个元素折叠到一个累加器中，返回最终结果。",
+        "translate": ""
+    },
+    {
+        "source": "After applying this closure to every element of the iterator, `fold()` returns the accumulator.",
+        "suggest": "在将此闭包应用于迭代器的每个元素之后，`fold()` 返回累加器。",
+        "translate": ""
+    },
+    {
+        "source": "`fold()`, and similar methods that traverse the entire iterator, may not terminate for infinite iterators, even on traits for which a result is determinable in finite time.",
+        "suggest": "`fold()` 和遍历整个迭代器的类似方法对于无限迭代器可能不会终止，即使在 traits 上也可以在有限时间内确定结果。",
+        "translate": ""
+    },
+    {
+        "source": "[`reduce()`] can be used to use the first element as the initial value, if the accumulator type and item type is the same.",
+        "suggest": "如果累加器类型和项类型相同，则可以使用 [`reduce()`] 将第一个元素用作初始值。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, try to have this call `fold()` on the internal parts from which this iterator is composed.",
+        "suggest": "特别是，请尝试将此 `fold()` 放在组成此迭代器的内部部件上。",
+        "translate": ""
+    },
+    {
+        "source": "Let's walk through each step of the iteration here:",
+        "suggest": "让我们在这里遍历迭代的每个步骤:",
+        "translate": ""
+    },
+    {
+        "source": "And so, our final result,",
+        "suggest": "因此，我们的最终结果是",
+        "translate": ""
+    },
+    {
+        "source": "It's common for people who haven't used iterators a lot to use a `for` loop with a list of things to build up a result.",
+        "suggest": "对于那些不经常使用迭代器的人，通常会使用 `for` 循环并附带一系列要建立结果的列表。",
+        "translate": ""
+    },
+    {
+        "source": "Those can be turned into `fold()`s:",
+        "suggest": "那些可以变成 `fold () `s:",
+        "translate": ""
+    },
+    {
+        "source": "Reduces the elements to a single one, by repeatedly applying a reducing operation.",
+        "suggest": "通过重复应用归约运算，将元素缩减为一个。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator is empty, returns [`None`];",
+        "suggest": "如果迭代器为空，则返回 [`None`]; 否则，返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "otherwise, returns the result of the reduction.",
+        "suggest": "否则，返回减少的结果。",
+        "translate": ""
+    },
+    {
+        "source": "For iterators with at least one element, this is the same as [`fold()`] with the first element of the iterator as the initial value, folding every subsequent element into it.",
+        "suggest": "对于具有至少一个元素的迭代器，这与将迭代器的第一个元素作为初始值的 [`fold()`] 相同，将每个后续元素折叠到其中。",
+        "translate": ""
+    },
+    {
+        "source": "Find the maximum value:",
+        "suggest": "找出最大值:",
+        "translate": ""
+    },
+    {
+        "source": "Tests if every element of the iterator matches a predicate.",
+        "suggest": "测试迭代器的每个元素是否与谓词匹配。",
+        "translate": ""
+    },
+    {
+        "source": "If any of them return `false`, it returns `false`.",
+        "suggest": "如果它们中的任何一个返回 `false`，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "An empty iterator returns `true`.",
+        "suggest": "空的迭代器将返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Stopping at the first `false`:",
+        "suggest": "在第一个 `false` 处停止:",
+        "translate": ""
+    },
+    {
+        "source": "Tests if any element of the iterator matches a predicate.",
+        "suggest": "测试迭代器的任何元素是否与谓词匹配。",
+        "translate": ""
+    },
+    {
+        "source": "If they all return `false`, it returns `false`.",
+        "suggest": "如果它们都返回 `false`，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "An empty iterator returns `false`.",
+        "suggest": "空的迭代器将返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Searches for an element of an iterator that satisfies a predicate.",
+        "suggest": "搜索满足谓词的迭代器的元素。",
+        "translate": ""
+    },
+    {
+        "source": "It applies this closure to each element of the iterator, and if any of them return `true`, then `find()` returns [`Some(element)`].",
+        "suggest": "它将这个闭包应用于迭代器的每个元素，如果其中任何一个返回 `true`，则 `find()` 返回 [`Some(element)`]。",
+        "translate": ""
+    },
+    {
+        "source": "Because `find()` takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation where the argument is a double reference.",
+        "suggest": "由于 `find()` 接受 quot，并且许多迭代器迭代 quot，因此导致参数为双 quot 的情况可能令人困惑。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `iter.find(f)` is equivalent to `iter.filter(f).next()`.",
+        "suggest": "请注意，`iter.find(f)` 等效于 `iter.filter(f).next()`。",
+        "translate": ""
+    },
+    {
+        "source": "Applies function to the elements of iterator and returns the first non-none result.",
+        "suggest": "将函数应用于迭代器的元素，并返回第一个非无结果。",
+        "translate": ""
+    },
+    {
+        "source": "is equivalent to `iter.filter_map(f).next()`.",
+        "suggest": "等同于 `iter.filter_map(f).next()`。",
+        "translate": ""
+    },
+    {
+        "source": "Applies function to the elements of iterator and returns the first true result or the first error.",
+        "suggest": "将函数应用于迭代器的元素，并返回第一个真结果或第一个错误。",
+        "translate": ""
+    },
+    {
+        "source": "Searches for an element in an iterator, returning its index.",
+        "suggest": "在迭代器中搜索元素，并返回其索引。",
+        "translate": ""
+    },
+    {
+        "source": "It applies this closure to each element of the iterator, and if one of them returns `true`, then `position()` returns [`Some(index)`].",
+        "suggest": "它将这个闭包应用于迭代器的每个元素，如果其中一个返回 `true`，则 `position()` 返回 [`Some(index)`]。",
+        "translate": ""
+    },
+    {
+        "source": "If all of them return `false`, it returns [`None`].",
+        "suggest": "如果它们全部返回 `false`，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "The method does no guarding against overflows, so if there are more than [`usize::MAX`] non-matching elements, it either produces the wrong result or panics.",
+        "suggest": "该方法无法防止溢出，因此，如果存在多个不匹配的 [`usize::MAX`] 元素，则会产生错误的结果或 panics。",
+        "translate": ""
+    },
+    {
+        "source": "This function might panic if the iterator has more than `usize::MAX` non-matching elements.",
+        "suggest": "如果迭代器具有多个 `usize::MAX` 不匹配元素，则此函数可能为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Searches for an element in an iterator from the right, returning its index.",
+        "suggest": "从右侧搜索迭代器中的元素，并返回其索引。",
+        "translate": ""
+    },
+    {
+        "source": "It applies this closure to each element of the iterator, starting from the end, and if one of them returns `true`, then `rposition()` returns [`Some(index)`].",
+        "suggest": "将从结束开始将此闭包应用于迭代器的每个元素，如果其中一个返回 `true`，则 `rposition()` 返回 [`Some(index)`]。",
+        "translate": ""
+    },
+    {
+        "source": "No need for an overflow check here, because `ExactSizeIterator` implies that the number of elements fits into a `usize`.",
+        "suggest": "这里不需要进行溢出检查，因为 `ExactSizeIterator` 表示元素数量适合 `usize`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the maximum element of an iterator.",
+        "suggest": "返回迭代器的最大元素。",
+        "translate": ""
+    },
+    {
+        "source": "If several elements are equally maximum, the last element is returned.",
+        "suggest": "如果几个元素最大相等，则返回最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator is empty, [`None`] is returned.",
+        "suggest": "如果迭代器为空，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the minimum element of an iterator.",
+        "suggest": "返回迭代器的最小元素。",
+        "translate": ""
+    },
+    {
+        "source": "If several elements are equally minimum, the first element is returned.",
+        "suggest": "如果几个元素相等地最小，则返回第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the element that gives the maximum value with respect to the specified comparison function.",
+        "suggest": "返回给出相对于指定比较函数的最大值的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the element that gives the minimum value with respect to the specified comparison function.",
+        "suggest": "返回给出相对于指定比较函数的最小值的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Reverses an iterator's direction.",
+        "suggest": "反转迭代器的方向。",
+        "translate": ""
+    },
+    {
+        "source": "Usually, iterators iterate from left to right.",
+        "suggest": "通常，迭代器从左到右进行迭代。",
+        "translate": ""
+    },
+    {
+        "source": "After using `rev()`, an iterator will instead iterate from right to left.",
+        "suggest": "使用 `rev()` 之后，迭代器将改为从右向左进行迭代。",
+        "translate": ""
+    },
+    {
+        "source": "This is only possible if the iterator has an end, so `rev()` only works on [`DoubleEndedIterator`]s.",
+        "suggest": "仅在迭代器具有结束符的情况下才有可能，因此 `rev()` 仅适用于 [`DoubleEndedIterator`] s。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an iterator of pairs into a pair of containers.",
+        "suggest": "将成对的迭代器转换为一对容器。",
+        "translate": ""
+    },
+    {
+        "source": "consumes an entire iterator of pairs, producing two collections: one from the left elements of the pairs, and one from the right elements.",
+        "suggest": "使用整个对的迭代器，产生两个集合: 一个来自对的左侧元素，另一个来自右侧的元素。",
+        "translate": ""
+    },
+    {
+        "source": "This function is, in some sense, the opposite of [`zip`].",
+        "suggest": "从某种意义上说，该函数与 [`zip`] 相反。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator which copies all of its elements.",
+        "suggest": "创建一个迭代器，该迭代器将复制其所有元素。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you have an iterator over `&T`, but you need an iterator over `T`.",
+        "suggest": "当在 `&T` 上具有迭代器，但在 `T` 上需要迭代器时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator which [`clone`]s all of its elements.",
+        "suggest": "创建一个迭代器，该迭代器将克隆所有元素。",
+        "translate": ""
+    },
+    {
+        "source": "Repeats an iterator endlessly.",
+        "suggest": "不断重复的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of stopping at [`None`], the iterator will instead start again, from the beginning.",
+        "suggest": "迭代器不会在 [`None`] 处停止，而是会从头开始重新启动。",
+        "translate": ""
+    },
+    {
+        "source": "After iterating again, it will start at the beginning again.",
+        "suggest": "再次迭代后，它将再次从头开始。",
+        "translate": ""
+    },
+    {
+        "source": "And again.",
+        "suggest": "然后再次。",
+        "translate": ""
+    },
+    {
+        "source": "Sums the elements of an iterator.",
+        "suggest": "对迭代器的元素求和。",
+        "translate": ""
+    },
+    {
+        "source": "Takes each element, adds them together, and returns the result.",
+        "suggest": "获取每个元素，将它们添加在一起，然后返回结果。",
+        "translate": ""
+    },
+    {
+        "source": "An empty iterator returns the zero value of the type.",
+        "suggest": "空的迭代器将返回该类型的零值。",
+        "translate": ""
+    },
+    {
+        "source": "When calling `sum()` and a primitive integer type is being returned, this method will panic if the computation overflows and debug assertions are enabled.",
+        "suggest": "当调用 `sum()` 并返回原始整数类型时，如果计算溢出并且启用了调试断言，则此方法将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Iterates over the entire iterator, multiplying all the elements",
+        "suggest": "遍历整个迭代器，将所有元素相乘",
+        "translate": ""
+    },
+    {
+        "source": "An empty iterator returns the one value of the type.",
+        "suggest": "空的迭代器将返回该类型的一个值。",
+        "translate": ""
+    },
+    {
+        "source": "When calling `product()` and a primitive integer type is being returned, method will panic if the computation overflows and debug assertions are enabled.",
+        "suggest": "当调用 `product()` 并返回原始整数类型时，如果计算溢出并且启用了调试断言，则方法将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "compares the elements of this [`Iterator`] with those of another.",
+        "suggest": "将此 [`Iterator`] 的元素与另一个元素进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "compares the elements of this [`Iterator`] with those of another with respect to the specified comparison function.",
+        "suggest": "就指定的比较函数而言，将此 [`Iterator`] 的元素与另一个元素进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are equal to those of another.",
+        "suggest": "确定此 [`Iterator`] 的元素是否与另一个元素相同。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are equal to those of another with respect to the specified equality function.",
+        "suggest": "关于指定的相等函数，确定 [`Iterator`] 的元素是否与另一个元素相等。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are unequal to those of another.",
+        "suggest": "确定此 [`Iterator`] 的元素是否与另一个元素不相等。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are [lexicographically](Ord#lexicographical-comparison) less than those of another.",
+        "suggest": "确定此 [`Iterator`] 的元素是否比另一个元素少 [按字典顺序](Ord#lexicographical-comparison)。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are [lexicographically](Ord#lexicographical-comparison) less or equal to those of another.",
+        "suggest": "确定此 [`Iterator`] 的元素是否 [按字典顺序](Ord#lexicographical-comparison) 小于或等于另一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are [lexicographically](Ord#lexicographical-comparison) greater than those of another.",
+        "suggest": "确定此 [`Iterator`] 的元素是否大于另一个元素的 [按字典顺序](Ord#lexicographical-comparison)。",
+        "translate": ""
+    },
+    {
+        "source": "Determines if the elements of this [`Iterator`] are [lexicographically](Ord#lexicographical-comparison) greater than or equal to those of another.",
+        "suggest": "确定此 [`Iterator`] 的元素是否 [按字典顺序](Ord#lexicographical-comparison) 大于或等于另一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this iterator are sorted.",
+        "suggest": "检查此迭代器的元素是否已排序。",
+        "translate": ""
+    },
+    {
+        "source": "That is, for each element `a` and its following element `b`, `a <= b` must hold.",
+        "suggest": "也就是说，对于每个元素 `a` 及其后续元素 `b`，`a <= b` 必须成立。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator yields exactly zero or one element, `true` is returned.",
+        "suggest": "如果迭代器的结果恰好为零或一个元素，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that if `Self::Item` is only `PartialOrd`, but not `Ord`, the above definition implies that this function returns `false` if any two consecutive items are not comparable.",
+        "suggest": "请注意，如果 `Self::Item` 仅是 `PartialOrd`，而不是 `Ord`，则上述定义意味着，如果任何两个连续的项都不具有可比性，则此函数将返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this iterator are sorted using the given comparator function.",
+        "suggest": "检查此迭代器的元素是否使用给定的比较器函数进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of using `PartialOrd::partial_cmp`, this function uses the given `compare` function to determine the ordering of two elements.",
+        "suggest": "该函数使用给定的 `compare` 函数来确定两个元素的顺序，而不是使用 `PartialOrd::partial_cmp`。",
+        "translate": ""
+    },
+    {
+        "source": "Apart from that, it's equivalent to [`is_sorted`];",
+        "suggest": "除此之外，它等效于 [`is_sorted`]。",
+        "translate": ""
+    },
+    {
+        "source": "see its documentation for more information.",
+        "suggest": "有关更多信息，请参见其文档。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this iterator are sorted using the given key extraction function.",
+        "suggest": "检查此迭代器的元素是否使用给定的键提取函数进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of comparing the iterator's elements directly, this function compares the keys of the elements, as determined by `f`.",
+        "suggest": "该函数不直接比较迭代器的元素，而是比较元素的键 (由 `f` 确定)。",
+        "translate": ""
+    },
+    {
+        "source": "See [TrustedRandomAccess]",
+        "suggest": "请参见 [TrustedRandomAccess]",
+        "translate": ""
+    },
+    {
+        "source": "The unusual name is to avoid name collisions in method resolution see #76479.",
+        "suggest": "不寻常的名称是为了避免方法解析中的名称冲突，请参见 #76479。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that always continues to yield `None` when exhausted.",
+        "suggest": "一个迭代器，用完后总是继续产生 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Calling next on a fused iterator that has returned `None` once is guaranteed to return [`None`] again.",
+        "suggest": "确保一次返回 `None` 的融合迭代器上的 next 调用保证再次返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "This trait should be implemented by all iterators that behave this way because it allows optimizing [`Iterator::fuse()`].",
+        "suggest": "该 trait 应该由以此方式运行的所有迭代器实现，因为它允许优化 [`Iterator::fuse()`]。",
+        "translate": ""
+    },
+    {
+        "source": "In general, you should not use `FusedIterator` in generic bounds if you need a fused iterator.",
+        "suggest": "通常，如果需要融合的迭代器，则不应在泛型范围内使用 `FusedIterator`。",
+        "translate": ""
+    },
+    {
+        "source": "Instead, you should just call [`Iterator::fuse()`] on the iterator.",
+        "suggest": "相反，您应该只在迭代器上调用 [`Iterator::fuse()`]。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator is already fused, the additional [`Fuse`] wrapper will be a no-op with no performance penalty.",
+        "suggest": "如果迭代器已经融合，则额外的 [`Fuse`] 包装器将是无操作的，并且不会降低性能。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that reports an accurate length using size_hint.",
+        "suggest": "一个使用 size_hint 报告准确长度的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator reports a size hint where it is either exact (lower bound is equal to upper bound), or the upper bound is [`None`].",
+        "suggest": "迭代器报告一个大小提示，该提示要么是精确的 (下限等于上限)，要么上限是 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "The upper bound must only be [`None`] if the actual iterator length is larger than [`usize::MAX`].",
+        "suggest": "如果实际的迭代器长度大于 [`usize::MAX`]，则上限必须仅为 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "In that case, the lower bound must be [`usize::MAX`], resulting in a [`Iterator::size_hint()`] of `(usize::MAX, None)`.",
+        "suggest": "在这种情况下，下限必须为 [`usize::MAX`]，从而导致 [`Iterator::size_hint()`] 为 `(usize::MAX, None)`。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator must produce exactly the number of elements it reported or diverge before reaching the end.",
+        "suggest": "迭代器必须精确地生成它所报告或发散的元素数量，然后才能结束。",
+        "translate": ""
+    },
+    {
+        "source": "This trait must only be implemented when the contract is upheld.",
+        "suggest": "只有在遵守契约的情况下才能实现 trait。",
+        "translate": ""
+    },
+    {
+        "source": "Consumers of this trait must inspect [`Iterator::size_hint()`]’s upper bound.",
+        "suggest": "trait 的使用者必须检查 [`Iterator::size_hint () `] 的上限。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that when yielding an item will have taken at least one element from its underlying [`SourceIter`].",
+        "suggest": "一个迭代器，当产生一个项时，它将从其基础 [`SourceIter`] 中获取至少一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Calling any method that advances the iterator, e.g.",
+        "suggest": "调用任何推进迭代器的方法，例如",
+        "translate": ""
+    },
+    {
+        "source": "or [`try_fold()`], guarantees that for each step at least one value of the iterator's underlying source has been moved out and the result of the iterator chain could be inserted in its place, assuming structural constraints of the source allow such an insertion.",
+        "suggest": "[`try_fold()`] 或 [`try_fold()`]，可确保对于每一步，迭代器的基础源的至少一个值已移出，并且迭代器链的结果可以插入到其位置，前提是源的结构约束允许这种插入。",
+        "translate": ""
+    },
+    {
+        "source": "In other words this trait indicates that an iterator pipeline can be collected in place.",
+        "suggest": "换句话说，此 trait 表示可以在适当位置收集迭代器管道。",
+        "translate": ""
+    },
+    {
+        "source": "ready initializing",
+        "suggest": "准备初始化",
+        "translate": ""
+    },
+    {
+        "source": "Lazy values and one-time initialization of static data.",
+        "suggest": "惰性值和静态数据的一次性初始化。",
+        "translate": ""
+    },
+    {
+        "source": "A cell which can be written to only once.",
+        "suggest": "一个单元只能写入一次。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `RefCell`, a `OnceCell` only provides shared `&T` references to its value.",
+        "suggest": "与 `RefCell` 不同，`OnceCell` 仅为其值提供共享的 `&T` 引用。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `Cell`, a `OnceCell` doesn't require copying or replacing the value to access it.",
+        "suggest": "与 `Cell` 不同，`OnceCell` 不需要复制或替换值即可访问它。",
+        "translate": ""
+    },
+    {
+        "source": "Invariant: written to at most once.",
+        "suggest": "不变式: 最多写入一次。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new empty cell.",
+        "suggest": "创建一个新的空 cell。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the reference to the underlying value.",
+        "suggest": "获取对基础值的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the cell is empty.",
+        "suggest": "如果 cell 为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Safe due to `inner`'s invariant",
+        "suggest": "由于 `inner` 的不变性而安全",
+        "translate": ""
+    },
+    {
+        "source": "Gets the mutable reference to the underlying value.",
+        "suggest": "获取基础值的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Safe because we have unique access",
+        "suggest": "安全，因为我们拥有独特的访问权限",
+        "translate": ""
+    },
+    {
+        "source": "Sets the contents of the cell to `value`.",
+        "suggest": "将 cell 的内容设置为 `value`。",
+        "translate": ""
+    },
+    {
+        "source": "This method returns `Ok(())` if the cell was empty and `Err(value)` if it was full.",
+        "suggest": "如果 cell 为空，则此方法返回 `Ok(())`; 如果 cell 已满，则返回 `Err(value)`。",
+        "translate": ""
+    },
+    {
+        "source": "Safe because we cannot have overlapping mutable borrows",
+        "suggest": "很安全，因为我们不能有重叠的可变借用",
+        "translate": ""
+    },
+    {
+        "source": "This is the only place where we set the slot, no races due to reentrancy/concurrency are possible, and we've checked that slot is currently `None`, so this write maintains the `inner`'s invariant.",
+        "suggest": "这是我们设置插槽的唯一地方，由于 reentrancy/concurrency 不可能发生竞争，并且我们检查了插槽当前是否为 `None`，因此此写入维护了 `inner` 的不变性。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the contents of the cell, initializing it with `f` if the cell was empty.",
+        "suggest": "获取 cell 的内容，如果 cell 为空，则使用 `f` 对其进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "If `f` panics, the panic is propagated to the caller, and the cell remains uninitialized.",
+        "suggest": "如果 `f` panics，则 panic 会传播给调用者，并且单元仍保持未初始化状态。",
+        "translate": ""
+    },
+    {
+        "source": "It is an error to reentrantly initialize the cell from `f`.",
+        "suggest": "重新从 `f` 初始化 cell 是错误的。",
+        "translate": ""
+    },
+    {
+        "source": "Doing so results in a panic.",
+        "suggest": "这样做会导致 panic。",
+        "translate": ""
+    },
+    {
+        "source": "If the cell was empty and `f` failed, an error is returned.",
+        "suggest": "如果单元为空并且 `f` 失败，则返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Note that *some* forms of reentrant initialization might lead to UB (see `reentrant_init` test).",
+        "suggest": "请注意，某些形式的可重入初始化可能会导致 UB (请参见 `reentrant_init` 测试)。",
+        "translate": ""
+    },
+    {
+        "source": "I believe that just removing this `assert`, while keeping `set/get` would be sound, but it seems better to panic, rather than to silently use an old value.",
+        "suggest": "我相信，仅删除此 `assert`，同时保留 `set/get` 听起来是不错的选择，但对于 panic 似乎更好，而不是默默地使用旧值。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the cell, returning the wrapped value.",
+        "suggest": "消费 cell，返回包装后的值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the cell was empty.",
+        "suggest": "如果 cell 为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Because `into_inner` takes `self` by value, the compiler statically verifies that it is not currently borrowed.",
+        "suggest": "因为 `into_inner` 按值取 `self`，所以编译器将静态验证它当前是否未被借用。",
+        "translate": ""
+    },
+    {
+        "source": "So it is safe to move out `Option<T>`.",
+        "suggest": "因此，移动 `Option<T>` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Takes the value out of this `OnceCell`, moving it back to an uninitialized state.",
+        "suggest": "从 `OnceCell` 中取出值，将其移回未初始化状态。",
+        "translate": ""
+    },
+    {
+        "source": "Has no effect and returns `None` if the `OnceCell` hasn't been initialized.",
+        "suggest": "无效，如果尚未初始化 `OnceCell`，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Safety is guaranteed by requiring a mutable reference.",
+        "suggest": "通过要求可变引用来保证安全。",
+        "translate": ""
+    },
+    {
+        "source": "A value which is initialized on the first access.",
+        "suggest": "在首次访问时初始化的值。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new lazy value with the given initializing function.",
+        "suggest": "使用给定的初始化函数创建一个新的惰性值。",
+        "translate": ""
+    },
+    {
+        "source": "Forces the evaluation of this lazy value and returns a reference to the result.",
+        "suggest": "强制对此延迟值求值，并向结果返回引用。",
+        "translate": ""
+    },
+    {
+        "source": "This is equivalent to the `Deref` impl, but is explicit.",
+        "suggest": "这等效于 `Deref` impl，但是是显式的。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new lazy value using `Default` as the initializing function.",
+        "suggest": "使用 `Default` 作为初始化函数创建一个新的惰性值。",
+        "translate": ""
+    },
+    {
+        "source": "The Rust Core Library",
+        "suggest": "Rust 核心库",
+        "translate": ""
+    },
+    {
+        "source": "The Rust Core Library is the dependency-free[^free] foundation of [The Rust Standard Library](../std/index.html).",
+        "suggest": "Rust 核心库是 [Rust 标准库](../std/index.html) 的无依赖 [^free] 基础。",
+        "translate": ""
+    },
+    {
+        "source": "It is the portable glue between the language and its libraries, defining the intrinsic and primitive building blocks of all Rust code.",
+        "suggest": "它是语言和标准库库之间的可移植粘合剂，它定义了所有 Rust 代码的内在和原始构建块。",
+        "translate": ""
+    },
+    {
+        "source": "It links to no upstream libraries, no system libraries, and no libc.",
+        "suggest": "它没有链接到上游库，没有系统库，也没有 libc。",
+        "translate": ""
+    },
+    {
+        "source": "Strictly speaking, there are some symbols which are needed but",
+        "suggest": "严格来说，有一些符号是必需的，但是",
+        "translate": ""
+    },
+    {
+        "source": "they aren't always necessary.",
+        "suggest": "它们并不总是必需的。",
+        "translate": ""
+    },
+    {
+        "source": "The core library is *minimal*: it isn't even aware of heap allocation, nor does it provide concurrency or I/O.",
+        "suggest": "核心库是 *最小的*: 它甚至不知道堆分配，也不提供并发或 I/O。",
+        "translate": ""
+    },
+    {
+        "source": "These things require platform integration, and this library is platform-agnostic.",
+        "suggest": "这些东西都需要平台集成，而核心库是与平台无关的。",
+        "translate": ""
+    },
+    {
+        "source": "How to use the core library",
+        "suggest": "如何使用核心库",
+        "translate": ""
+    },
+    {
+        "source": "Please note that all of these details are currently not considered stable.",
+        "suggest": "请注意，所有这些细节目前都被认为是不稳定的。",
+        "translate": ""
+    },
+    {
+        "source": "Fill me in with more detail when the interface settles",
+        "suggest": "当接口稳定后，请向我提供更多细节",
+        "translate": ""
+    },
+    {
+        "source": "This library is built on the assumption of a few existing symbols:",
+        "suggest": "这个库建立在一些现有符号的假设之上:",
+        "translate": ""
+    },
+    {
+        "source": "`memcmp`, `memset` - These are core memory routines which are often generated by LLVM.",
+        "suggest": "`memcmp`，`memset` - 这些是核心内存例程，通常由 LLVM 生成。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, this library can make explicit calls to these functions.",
+        "suggest": "此外，这个库可以显式地调用这些函数。",
+        "translate": ""
+    },
+    {
+        "source": "Their signatures are the same as found in C.",
+        "suggest": "它们的签名与 C 中的签名相同。",
+        "translate": ""
+    },
+    {
+        "source": "These functions are often provided by the system libc, but can also be provided by the [compiler-builtins crate](https://crates.io/crates/compiler_builtins).",
+        "suggest": "这些函数通常由系统 libc 提供，但也可以由 [编译器内置 crate](https://crates.io/crates/compiler_builtins) 提供。",
+        "translate": ""
+    },
+    {
+        "source": "This function takes four arguments, a `fmt::Arguments`, a `&'static str`, and two `u32`'s.",
+        "suggest": "这个函数需要四个参数，一个 `fmt::Arguments`，一个 `&'static str` 和两个 `u32'。",
+        "translate": ""
+    },
+    {
+        "source": "These four arguments dictate the panic message, the file at which panic was invoked, and the line and column inside the file.",
+        "suggest": "这四个参数指示 panic 消息，调用 panic 的文件以及文件中的行和列。",
+        "translate": ""
+    },
+    {
+        "source": "It is up to consumers of this core library to define this panic function;",
+        "suggest": "定义此 panic 函数由该核心库的使用者决定;",
+        "translate": ""
+    },
+    {
+        "source": "it is only required to never return.",
+        "suggest": "它只要求返回 never。",
+        "translate": ""
+    },
+    {
+        "source": "This requires a `lang` attribute named `panic_impl`.",
+        "suggest": "这需要一个名为 `panic_impl` 的 `lang` 属性。",
+        "translate": ""
+    },
+    {
+        "source": "is used by the failure mechanisms of the compiler.",
+        "suggest": "由编译器的故障机制使用。",
+        "translate": ""
+    },
+    {
+        "source": "This is often mapped to GCC's personality function, but crates which do not trigger a panic can be assured that this function is never called.",
+        "suggest": "这通常映射到 GCC 的 personality 函数，但是可以确保不会触发 panic 的 crate 永远不会调用此函数。",
+        "translate": ""
+    },
+    {
+        "source": "The `lang` attribute is called `eh_personality`.",
+        "suggest": "`lang` 属性称为 `eh_personality`。",
+        "translate": ""
+    },
+    {
+        "source": "Since libcore defines many fundamental lang items, all tests live in a separate crate, libcoretest, to avoid bizarre issues.",
+        "suggest": "由于 libcore 定义了许多基本 lang 项，因此所有测试都位于单独的 crate libcoretest 中，以避免出现奇怪的问题。",
+        "translate": ""
+    },
+    {
+        "source": "Here we explicitly #[cfg]-out this whole crate when testing.",
+        "suggest": "在这里，当测试时，我们显式 #[cfg]- 输出整个 crate。",
+        "translate": ""
+    },
+    {
+        "source": "If we don't do this, both the generated test artifact and the linked libtest (which transitively includes libcore) will both define the same set of lang items, and this will cause the E0152 \"found duplicate lang item\" error.",
+        "suggest": "如果我们不这样做，那么生成的测试工件和链接的 libtest (可传递地包括 libcore) 都将定义相同的 lang 项集，这将导致 E0152 \"found duplicate lang item\" 错误。",
+        "translate": ""
+    },
+    {
+        "source": "See discussion in #50466 for details.",
+        "suggest": "有关详细信息，请参见 #50466 中的讨论。",
+        "translate": ""
+    },
+    {
+        "source": "This cfg won't affect doc tests.",
+        "suggest": "此 cfg 不会影响文档测试。",
+        "translate": ""
+    },
+    {
+        "source": "See #65860",
+        "suggest": "请参见 #65860",
+        "translate": ""
+    },
+    {
+        "source": "does not need to be public",
+        "suggest": "不需要公开",
+        "translate": ""
+    },
+    {
+        "source": "Pull in the `core_arch` crate directly into libcore.",
+        "suggest": "将 `core_arch` crate 直接放到 libcore 中。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of `core_arch` are in a different repository:",
+        "suggest": "`core_arch` 的内容在不同的存储库中:",
+        "translate": ""
+    },
+    {
+        "source": "depends on libcore, but the contents of this module are set up in such a way that directly pulling it here works such that the crate uses the this crate as its libcore.",
+        "suggest": "依赖于 libcore，但是这个模块的内容是这样设置的: 直接将它 pull 到这里，这样 crate 就可以使用这个 crate 作为它的 libcore。",
+        "translate": ""
+    },
+    {
+        "source": "This annotation should be moved into rust-lang/stdarch after clashing_extern_declarations is merged.",
+        "suggest": "合并 clashing_extern_declarations 后，应将该注解移动到 rust-lang/stdarch 中。",
+        "translate": ""
+    },
+    {
+        "source": "It currently cannot because bootstrap fails as the lint hasn't been defined yet.",
+        "suggest": "当前不能，因为引导失败，因为尚未定义 lint。",
+        "translate": ""
+    },
+    {
+        "source": "the panic message for these assertions is the stringified value of the expression given.",
+        "suggest": "这些断言的 panic 消息是给定表达式的字符串化值。",
+        "translate": ""
+    },
+    {
+        "source": "a very simple function",
+        "suggest": "一个非常简单的函数",
+        "translate": ""
+    },
+    {
+        "source": "assert with a custom message",
+        "suggest": "使用自定义消息进行断言",
+        "translate": ""
+    },
+    {
+        "source": "The preferred method of quick returning Errors",
+        "suggest": "快速返回错误的首选方法",
+        "translate": ""
+    },
+    {
+        "source": "The previous method of quick returning Errors",
+        "suggest": "快速返回错误的先前方法",
+        "translate": ""
+    },
+    {
+        "source": "uses fmt::Write::write_fmt",
+        "suggest": "使用 fmt::Write::write_fmt",
+        "translate": ""
+    },
+    {
+        "source": "uses io::Write::write_fmt",
+        "suggest": "使用 io::Write::write_fmt",
+        "translate": ""
+    },
+    {
+        "source": "compile error if commented out",
+        "suggest": "如果注释掉，就会编译错误",
+        "translate": ""
+    },
+    {
+        "source": "one of the poorest implementations of x/3",
+        "suggest": "x/3 最差的实现之一",
+        "translate": ""
+    },
+    {
+        "source": "It makes no sense to `baz` a `MyStruct`, so we have no logic here at all.",
+        "suggest": "`baz` 和 `MyStruct` 没有任何意义，因此我们完全没有逻辑。",
+        "translate": ""
+    },
+    {
+        "source": "This will display \"thread 'main' panicked at 'not implemented'\".",
+        "suggest": "这将显示 \"thread 'main' panicked at 'not implemented'\"。",
+        "translate": ""
+    },
+    {
+        "source": "We have some logic here, We can add a message to unimplemented!",
+        "suggest": "我们这里有一些逻辑，我们可以向未实现中添加一条消息!",
+        "translate": ""
+    },
+    {
+        "source": "to display our omission.",
+        "suggest": "显示我们的遗漏。",
+        "translate": ""
+    },
+    {
+        "source": "This will display:",
+        "suggest": "这将显示:",
+        "translate": ""
+    },
+    {
+        "source": "implementation goes here",
+        "suggest": "实现在这里",
+        "translate": ""
+    },
+    {
+        "source": "let's not worry about implementing baz() for now",
+        "suggest": "让我们现在不必担心实现 baz()",
+        "translate": ""
+    },
+    {
+        "source": "we aren't even using baz(), so this is fine.",
+        "suggest": "我们甚至没有使用 baz()，所以很好。",
+        "translate": ""
+    },
+    {
+        "source": "will fail at compile time with message \"This macro only accepts `foo` or `bar`\"",
+        "suggest": "将在编译时失败，并显示消息 \"This macro only accepts `foo` or `bar`\"",
+        "translate": ""
+    },
+    {
+        "source": "fn concat_idents!(new, fun, name) { } // not usable in this way!",
+        "suggest": "fn concat_idents!(new, fun, name) { } // 无法以这种方式使用!",
+        "translate": ""
+    },
+    {
+        "source": "Expands to either `$crate::panic::panic_2015` or `$crate::panic::panic_2021` depending on the edition of the caller.",
+        "suggest": "根据调用者的版本扩展为 `$crate::panic::panic_2015` 或 `$crate::panic::panic_2021`。",
+        "translate": ""
+    },
+    {
+        "source": "Asserts that two expressions are equal to each other (using [`PartialEq`]).",
+        "suggest": "断言两个表达式彼此相等 (使用 [`PartialEq`])。",
+        "translate": ""
+    },
+    {
+        "source": "On panic, this macro will print the values of the expressions with their debug representations.",
+        "suggest": "在 panic 上，此宏将打印表达式的值及其调试表示。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`assert!`], this macro has a second form, where a custom panic message can be provided.",
+        "suggest": "像 [`assert!`] 一样，此宏具有第二种形式，可以在其中提供自定义 panic 消息。",
+        "translate": ""
+    },
+    {
+        "source": "The reborrows below are intentional.",
+        "suggest": "下面的重新借用是有意的。",
+        "translate": ""
+    },
+    {
+        "source": "Without them, the stack slot for the borrow is initialized even before the values are compared, leading to a noticeable slow down.",
+        "suggest": "如果没有它们，则即使在比较值之前，也会对借用的栈插槽进行初始化，从而导致速度明显下降。",
+        "translate": ""
+    },
+    {
+        "source": "Asserts that two expressions are not equal to each other (using [`PartialEq`]).",
+        "suggest": "断言两个表达式彼此不相等 (使用 [`PartialEq`])。",
+        "translate": ""
+    },
+    {
+        "source": "Asserts that a boolean expression is `true` at runtime.",
+        "suggest": "声明在运行时布尔表达式为 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "This will invoke the [`panic!`] macro if the provided expression cannot be evaluated to `true` at runtime.",
+        "suggest": "如果提供的表达式在运行时无法评估为 `true`，则将调用 [`panic!`] 宏。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`assert!`], this macro also has a second version, where a custom panic message can be provided.",
+        "suggest": "像 [`assert!`] 一样，此宏还具有第二个版本，可以在其中提供自定义 panic 消息。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`assert!`], `debug_assert!` statements are only enabled in non optimized builds by default.",
+        "suggest": "与 [`assert!`] 不同，默认情况下仅在未优化的构建中启用 `debug_assert!` 语句。",
+        "translate": ""
+    },
+    {
+        "source": "An optimized build will not execute `debug_assert!` statements unless `-C debug-assertions` is passed to the compiler.",
+        "suggest": "除非将 `-C debug-assertions` 传递给编译器，否则优化的构建将不执行 `debug_assert!` 语句。",
+        "translate": ""
+    },
+    {
+        "source": "This makes `debug_assert!` useful for checks that are too expensive to be present in a release build but may be helpful during development.",
+        "suggest": "这使 `debug_assert!` 对于检查成本太高而无法在发行版本中进行检查，但在开发过程中可能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "The result of expanding `debug_assert!` is always type checked.",
+        "suggest": "扩展 `debug_assert!` 的结果始终是类型检查的。",
+        "translate": ""
+    },
+    {
+        "source": "An unchecked assertion allows a program in an inconsistent state to keep running, which might have unexpected consequences but does not introduce unsafety as long as this only happens in safe code.",
+        "suggest": "未检查的断言允许处于不一致状态的程序继续运行，这可能会带来意想不到的后果，但不会引入不安全性，只要这种不安全性仅在安全代码中发生即可。",
+        "translate": ""
+    },
+    {
+        "source": "The performance cost of assertions, however, is not measurable in general.",
+        "suggest": "但是，断言的性能成本通常无法衡量。",
+        "translate": ""
+    },
+    {
+        "source": "Replacing [`assert!`] with `debug_assert!` is thus only encouraged after thorough profiling, and more importantly, only in safe code!",
+        "suggest": "因此，仅在经过全面分析后才鼓励使用 `debug_assert!` 替换 [`assert!`]，更重要的是，仅使用安全代码!",
+        "translate": ""
+    },
+    {
+        "source": "Asserts that two expressions are equal to each other.",
+        "suggest": "断言两个表达式彼此相等。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`assert_eq!`], `debug_assert_eq!` statements are only enabled in non optimized builds by default.",
+        "suggest": "与 [`assert_eq!`] 不同，默认情况下仅在未优化的构建中启用 `debug_assert_eq!` 语句。",
+        "translate": ""
+    },
+    {
+        "source": "An optimized build will not execute `debug_assert_eq!` statements unless `-C debug-assertions` is passed to the compiler.",
+        "suggest": "除非将 `-C debug-assertions` 传递给编译器，否则优化的构建将不执行 `debug_assert_eq!` 语句。",
+        "translate": ""
+    },
+    {
+        "source": "This makes `debug_assert_eq!` useful for checks that are too expensive to be present in a release build but may be helpful during development.",
+        "suggest": "这使 `debug_assert_eq!` 对于检查成本太高而无法在发行版本中进行检查，但在开发过程中可能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "The result of expanding `debug_assert_eq!` is always type checked.",
+        "suggest": "扩展 `debug_assert_eq!` 的结果始终是类型检查的。",
+        "translate": ""
+    },
+    {
+        "source": "Asserts that two expressions are not equal to each other.",
+        "suggest": "断言两个表达式彼此不相等。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`assert_ne!`], `debug_assert_ne!` statements are only enabled in non optimized builds by default.",
+        "suggest": "与 [`assert_ne!`] 不同，默认情况下仅在未优化的构建中启用 `debug_assert_ne!` 语句。",
+        "translate": ""
+    },
+    {
+        "source": "An optimized build will not execute `debug_assert_ne!` statements unless `-C debug-assertions` is passed to the compiler.",
+        "suggest": "除非将 `-C debug-assertions` 传递给编译器，否则优化的构建将不执行 `debug_assert_ne!` 语句。",
+        "translate": ""
+    },
+    {
+        "source": "This makes `debug_assert_ne!` useful for checks that are too expensive to be present in a release build but may be helpful during development.",
+        "suggest": "这使 `debug_assert_ne!` 对于检查成本太高而无法在发行版本中进行检查，但在开发过程中可能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "The result of expanding `debug_assert_ne!` is always type checked.",
+        "suggest": "扩展 `debug_assert_ne!` 的结果始终是类型检查的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns whether the given expression matches any of the given patterns.",
+        "suggest": "返回给定表达式是否与任何给定模式匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Like in a `match` expression, the pattern can be optionally followed by `if` and a guard expression that has access to names bound by the pattern.",
+        "suggest": "像在 `match` 表达式中一样，可以在模式后跟 `if` 和可以访问由模式绑定的名称的保护表达式。",
+        "translate": ""
+    },
+    {
+        "source": "Unwraps a result or propagates its error.",
+        "suggest": "解开结果或传播其错误。",
+        "translate": ""
+    },
+    {
+        "source": "The `?` operator was added to replace `try!` and should be used instead.",
+        "suggest": "添加了 `?` 运算符来替换 `try!`，应该用它来代替。",
+        "translate": ""
+    },
+    {
+        "source": "Furthermore, `try` is a reserved word in Rust 2018, so if you must use it, you will need to use the [raw-identifier syntax][ris]:",
+        "suggest": "此外，`try` 是 Rust 2018 中的保留字，因此如果必须使用它，则需要使用 [原始标识符语法][ris]:",
+        "translate": ""
+    },
+    {
+        "source": "matches the given [`Result`].",
+        "suggest": "匹配给定的 [`Result`]。",
+        "translate": ""
+    },
+    {
+        "source": "In case of the `Ok` variant, the expression has the value of the wrapped value.",
+        "suggest": "对于 `Ok` 成员，表达式具有包装值的值。",
+        "translate": ""
+    },
+    {
+        "source": "In case of the `Err` variant, it retrieves the inner error.",
+        "suggest": "对于 `Err` 成员，它检索内部错误。",
+        "translate": ""
+    },
+    {
+        "source": "`try!` then performs conversion using `From`.",
+        "suggest": "`try!` 然后使用 `From` 执行转换。",
+        "translate": ""
+    },
+    {
+        "source": "This provides automatic conversion between specialized errors and more general ones.",
+        "suggest": "这样可以在特殊错误和更常见错误之间进行自动转换。",
+        "translate": ""
+    },
+    {
+        "source": "The resulting error is then immediately returned.",
+        "suggest": "然后立即返回产生的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Because of the early return, `try!` can only be used in functions that return [`Result`].",
+        "suggest": "由于提前返回，因此只能在返回 [`Result`] 的函数中使用 `try!`。",
+        "translate": ""
+    },
+    {
+        "source": "Writes formatted data into a buffer.",
+        "suggest": "将格式化的数据写入缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "This macro accepts a 'writer', a format string, and a list of arguments.",
+        "suggest": "该宏接受 'writer'，格式字符串和参数列表。",
+        "translate": ""
+    },
+    {
+        "source": "Arguments will be formatted according to the specified format string and the result will be passed to the writer.",
+        "suggest": "参数将根据指定的格式字符串进行格式化，并将结果传递到 writer。",
+        "translate": ""
+    },
+    {
+        "source": "The writer may be any value with a `write_fmt` method;",
+        "suggest": "使用 `write_fmt` 方法时，writer 可以是任何值;",
+        "translate": ""
+    },
+    {
+        "source": "generally this comes from an implementation of either the [`fmt::Write`] or the [`io::Write`] trait.",
+        "suggest": "通常，这来自 [`fmt::Write`] 或 [`io::Write`] trait 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "The macro returns whatever the `write_fmt` method returns;",
+        "suggest": "宏返回 `write_fmt` 方法返回的任何内容;",
+        "translate": ""
+    },
+    {
+        "source": "commonly a [`fmt::Result`], or an [`io::Result`].",
+        "suggest": "通常是 [`fmt::Result`] 或 [`io::Result`]。",
+        "translate": ""
+    },
+    {
+        "source": "See [`std::fmt`] for more information on the format string syntax.",
+        "suggest": "有关格式字符串语法的更多信息，请参见 [`std::fmt`]。",
+        "translate": ""
+    },
+    {
+        "source": "A module can import both `std::fmt::Write` and `std::io::Write` and call `write!` on objects implementing either, as objects do not typically implement both.",
+        "suggest": "模块可以同时在实现两者的对象上导入 `std::fmt::Write` 和 `std::io::Write` 以及调用 `write!`，因为对象通常不会同时实现两者。",
+        "translate": ""
+    },
+    {
+        "source": "However, the module must import the traits qualified so their names do not conflict:",
+        "suggest": "但是，该模块必须导入合格的 traits，以便其名称不会冲突:",
+        "translate": ""
+    },
+    {
+        "source": "This macro can be used in `no_std` setups as well.",
+        "suggest": "该宏也可以在 `no_std` 设置中使用。",
+        "translate": ""
+    },
+    {
+        "source": "In a `no_std` setup you are responsible for the implementation details of the components.",
+        "suggest": "在 `no_std` 设置中，您负责组件的实现细节。",
+        "translate": ""
+    },
+    {
+        "source": "Write formatted data into a buffer, with a newline appended.",
+        "suggest": "将格式化的数据写入缓冲区，并附加换行符。",
+        "translate": ""
+    },
+    {
+        "source": "On all platforms, the newline is the LINE FEED character (`\\n`/`U+000A`) alone (no additional CARRIAGE RETURN (`\\r`/`U+000D`).",
+        "suggest": "在所有平台上，换行符仅是 LINE FEED 字符 (`\\n`/`U+000A`) (没有其他的 CARRIAGE RETURN (`\\r`/`U+000D`)。",
+        "translate": ""
+    },
+    {
+        "source": "For more information, see [`write!`].",
+        "suggest": "有关更多信息，请参见 [`write!`]。",
+        "translate": ""
+    },
+    {
+        "source": "For information on the format string syntax, see [`std::fmt`].",
+        "suggest": "有关格式字符串语法的信息，请参见 [`std::fmt`]。",
+        "translate": ""
+    },
+    {
+        "source": "Indicates unreachable code.",
+        "suggest": "表示无法访问的代码。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful any time that the compiler can't determine that some code is unreachable.",
+        "suggest": "每当编译器无法确定某些代码不可访问时，此功能就很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Match arms with guard conditions.",
+        "suggest": "让分支与守卫条件匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Loops that dynamically terminate.",
+        "suggest": "动态终止的循环。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators that dynamically terminate.",
+        "suggest": "动态终止的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "If the determination that the code is unreachable proves incorrect, the program immediately terminates with a [`panic!`].",
+        "suggest": "如果确定代码不可访问不正确，则程序立即以 [`panic!`] 终止。",
+        "translate": ""
+    },
+    {
+        "source": "The unsafe counterpart of this macro is the [`unreachable_unchecked`] function, which will cause undefined behavior if the code is reached.",
+        "suggest": "[`unreachable_unchecked`] 函数是该宏中不安全的副本，如果到达代码，它将导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "This will always [`panic!`].",
+        "suggest": "这将始终为 [`panic!`]。",
+        "translate": ""
+    },
+    {
+        "source": "Match arms:",
+        "suggest": "match 分支:",
+        "translate": ""
+    },
+    {
+        "source": "Indicates unimplemented code by panicking with a message of \"not implemented\".",
+        "suggest": "通过恐慌并带有 \"not implemented\" 消息来指示未实现的代码。",
+        "translate": ""
+    },
+    {
+        "source": "This allows your code to type-check, which is useful if you are prototyping or implementing a trait that requires multiple methods which you don't plan of using all of.",
+        "suggest": "这允许您的代码进行类型检查，这在原型或实现 trait 时需要使用该方法，而您不打算使用全部方法，这很有用。",
+        "translate": ""
+    },
+    {
+        "source": "The difference between `unimplemented!` and [`todo!`] is that while `todo!` conveys an intent of implementing the functionality later and the message is \"not yet implemented\", `unimplemented!` makes no such claims.",
+        "suggest": "`unimplemented!` 和 [`todo!`] 之间的区别在于，尽管 `todo!` 传达了稍后实现该功能的意图，并且消息为 \"not yet implemented\"，但 `unimplemented!` 并未提出任何此类声明。",
+        "translate": ""
+    },
+    {
+        "source": "Its message is \"not implemented\".",
+        "suggest": "它的消息是 \"not implemented\"。",
+        "translate": ""
+    },
+    {
+        "source": "Also some IDEs will mark `todo!`s.",
+        "suggest": "还有一些 IDE 会标记 `todo!`。",
+        "translate": ""
+    },
+    {
+        "source": "This will always [`panic!`] because `unimplemented!` is just a shorthand for `panic!` with a fixed, specific message.",
+        "suggest": "这将始终是 [`panic!`]，因为 `unimplemented!` 只是 `panic!` 的简写，带有固定的特定消息。",
+        "translate": ""
+    },
+    {
+        "source": "Like `panic!`, this macro has a second form for displaying custom values.",
+        "suggest": "像 `panic!` 一样，此宏具有用于显示自定义值的第二种形式。",
+        "translate": ""
+    },
+    {
+        "source": "Say we have a trait `Foo`:",
+        "suggest": "假设我们有一个 trait `Foo`:",
+        "translate": ""
+    },
+    {
+        "source": "We want to implement `Foo` for 'MyStruct', but for some reason it only makes sense to implement the `bar()` function.",
+        "suggest": "我们想为 'MyStruct' 实现 `Foo`，但是由于某些原因，只有实现 `bar()` 函数才有意义。",
+        "translate": ""
+    },
+    {
+        "source": "and `qux()` will still need to be defined in our implementation of `Foo`, but we can use `unimplemented!` in their definitions to allow our code to compile.",
+        "suggest": "在我们的 `Foo` 实现中仍然需要定义 `qux()`，但是我们可以在其定义中使用 `unimplemented!` 来编译我们的代码。",
+        "translate": ""
+    },
+    {
+        "source": "We still want to have our program stop running if the unimplemented methods are reached.",
+        "suggest": "如果达到未实现的方法，我们仍然希望程序停止运行。",
+        "translate": ""
+    },
+    {
+        "source": "Indicates unfinished code.",
+        "suggest": "表示未完成的代码。",
+        "translate": ""
+    },
+    {
+        "source": "This can be useful if you are prototyping and are just looking to have your code typecheck.",
+        "suggest": "如果您要进行原型设计并且只是在检查代码类型，这可能会很有用。",
+        "translate": ""
+    },
+    {
+        "source": "The difference between [`unimplemented!`] and `todo!` is that while `todo!` conveys an intent of implementing the functionality later and the message is \"not yet implemented\", `unimplemented!` makes no such claims.",
+        "suggest": "[`unimplemented!`] 和 `todo!` 之间的区别在于，尽管 `todo!` 传达了稍后实现该功能的意图，并且消息为 \"not yet implemented\"，但 `unimplemented!` 并未提出任何此类声明。",
+        "translate": ""
+    },
+    {
+        "source": "Here's an example of some in-progress code.",
+        "suggest": "这是一些正在进行的代码的示例。",
+        "translate": ""
+    },
+    {
+        "source": "We have a trait `Foo`:",
+        "suggest": "我们有一个 trait `Foo`:",
+        "translate": ""
+    },
+    {
+        "source": "We want to implement `Foo` on one of our types, but we also want to work on just `bar()` first.",
+        "suggest": "我们想在其中一种类型上实现 `Foo`，但我们也想首先仅在 `bar()` 上工作。",
+        "translate": ""
+    },
+    {
+        "source": "In order for our code to compile, we need to implement `baz()`, so we can use `todo!`:",
+        "suggest": "为了编译我们的代码，我们需要实现 `baz()`，因此我们可以使用 `todo!`:",
+        "translate": ""
+    },
+    {
+        "source": "Definitions of built-in macros.",
+        "suggest": "内置宏的定义。",
+        "translate": ""
+    },
+    {
+        "source": "Most of the macro properties (stability, visibility, etc.) are taken from the source code here, with exception of expansion functions transforming macro inputs into outputs, those functions are provided by the compiler.",
+        "suggest": "宏的大多数属性 (稳定性，可见性等) 均来自此处的源代码，除了将宏输入转换为输出的扩展函数外，这些函数由编译器提供。",
+        "translate": ""
+    },
+    {
+        "source": "Causes compilation to fail with the given error message when encountered.",
+        "suggest": "导致编译失败，并遇到给定的错误消息。",
+        "translate": ""
+    },
+    {
+        "source": "This macro should be used when a crate uses a conditional compilation strategy to provide better error messages for erroneous conditions.",
+        "suggest": "当 crate 使用条件编译策略为错误条件提供更好的错误消息时，应使用此宏。",
+        "translate": ""
+    },
+    {
+        "source": "It's the compiler-level form of [`panic!`], but emits an error during *compilation* rather than at *runtime*.",
+        "suggest": "它是 [`panic!`] 的编译器级别的形式，但在 *编译* 而不是 *运行时* 会发出错误。",
+        "translate": ""
+    },
+    {
+        "source": "Two such examples are macros and `#[cfg]` environments.",
+        "suggest": "宏和 `#[cfg]` 环境就是两个这样的示例。",
+        "translate": ""
+    },
+    {
+        "source": "Emit better compiler error if a macro is passed invalid values.",
+        "suggest": "如果传递了无效值，则发出更好的编译器错误。",
+        "translate": ""
+    },
+    {
+        "source": "Without the final branch, the compiler would still emit an error, but the error's message would not mention the two valid values.",
+        "suggest": "没有最终分支，编译器仍然会发出错误，但是错误消息不会提及两个有效值。",
+        "translate": ""
+    },
+    {
+        "source": "Emit compiler error if one of a number of features isn't available.",
+        "suggest": "如果许多功能之一不可用，则发出编译器错误。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs parameters for the other string-formatting macros.",
+        "suggest": "构造其他字符串格式宏的参数。",
+        "translate": ""
+    },
+    {
+        "source": "This macro functions by taking a formatting string literal containing `{}` for each additional argument passed.",
+        "suggest": "此宏函数通过为每个传递的其他参数采用包含 `{}` 的格式字符串字面量来实现。",
+        "translate": ""
+    },
+    {
+        "source": "prepares the additional parameters to ensure the output can be interpreted as a string and canonicalizes the arguments into a single type.",
+        "suggest": "准备其他参数，以确保输出可以解释为字符串，并将参数规范化为单个类型。",
+        "translate": ""
+    },
+    {
+        "source": "Any value that implements the [`Display`] trait can be passed to `format_args!`, as can any [`Debug`] implementation be passed to a `{:?}` within the formatting string.",
+        "suggest": "可以将实现 [`Display`] trait 的任何值传递给 `format_args!`，也可以将任何 [`Debug`] 实现的形式传递给格式化字符串中的 `{:?}`。",
+        "translate": ""
+    },
+    {
+        "source": "This macro produces a value of type [`fmt::Arguments`].",
+        "suggest": "该宏产生 [`fmt::Arguments`] 类型的值。",
+        "translate": ""
+    },
+    {
+        "source": "This value can be passed to the macros within [`std::fmt`] for performing useful redirection.",
+        "suggest": "可以将该值传递到 [`std::fmt`] 中的宏，以执行有用的重定向。",
+        "translate": ""
+    },
+    {
+        "source": "All other formatting macros ([`format!`], [`write!`], [`println!`], etc) are proxied through this one.",
+        "suggest": "所有其他格式化宏 ([`format! `]，[`write!`]，[`println!`] 等) 都通过此代理。",
+        "translate": ""
+    },
+    {
+        "source": "unlike its derived macros, avoids heap allocations.",
+        "suggest": "与它的派生宏不同，它避免了堆分配。",
+        "translate": ""
+    },
+    {
+        "source": "You can use the [`fmt::Arguments`] value that `format_args!` returns in `Debug` and `Display` contexts as seen below.",
+        "suggest": "您可以使用 `format_args!` 在 `Debug` 和 `Display` 上下文中返回的 [`fmt::Arguments`] 值，如下所示。",
+        "translate": ""
+    },
+    {
+        "source": "For more information, see the documentation in [`std::fmt`].",
+        "suggest": "有关更多信息，请参见 [`std::fmt`] 中的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Same as `format_args`, but adds a newline in the end.",
+        "suggest": "与 `format_args` 相同，但最后添加一个换行符。",
+        "translate": ""
+    },
+    {
+        "source": "Inspects an environment variable at compile time.",
+        "suggest": "在编译时检查环境变量。",
+        "translate": ""
+    },
+    {
+        "source": "This macro will expand to the value of the named environment variable at compile time, yielding an expression of type `&'static str`.",
+        "suggest": "该宏将在编译时扩展为指定的环境变量的值，从而产生 `&'static str` 类型的表达式。",
+        "translate": ""
+    },
+    {
+        "source": "If the environment variable is not defined, then a compilation error will be emitted.",
+        "suggest": "如果未定义环境变量，则将发出编译错误。",
+        "translate": ""
+    },
+    {
+        "source": "To not emit a compile error, use the [`option_env!`] macro instead.",
+        "suggest": "为了不产生编译错误，请改用 [`option_env!`] 宏。",
+        "translate": ""
+    },
+    {
+        "source": "You can customize the error message by passing a string as the second parameter:",
+        "suggest": "您可以通过将字符串作为第二个参数传递来自定义错误消息:",
+        "translate": ""
+    },
+    {
+        "source": "If the `documentation` environment variable is not defined, you'll get the following error:",
+        "suggest": "如果未定义 `documentation` 环境变量，则会出现以下错误:",
+        "translate": ""
+    },
+    {
+        "source": "Optionally inspects an environment variable at compile time.",
+        "suggest": "(可选) 在编译时检查环境变量。",
+        "translate": ""
+    },
+    {
+        "source": "If the named environment variable is present at compile time, this will expand into an expression of type `Option<&'static str>` whose value is `Some` of the value of the environment variable.",
+        "suggest": "如果在编译时存在指定的环境变量，它将扩展为 `Option<&'static str>` 类型的表达式，其值是环境变量的值的 `Some`。",
+        "translate": ""
+    },
+    {
+        "source": "If the environment variable is not present, then this will expand to `None`.",
+        "suggest": "如果不存在环境变量，则它将扩展为 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "See [`Option<T>`][Option] for more information on this type.",
+        "suggest": "有关此类型的更多信息，请参见 [`Option<T>`][Option]。",
+        "translate": ""
+    },
+    {
+        "source": "A compile time error is never emitted when using this macro regardless of whether the environment variable is present or not.",
+        "suggest": "使用此宏时，无论是否存在环境变量，都不会发出编译时错误。",
+        "translate": ""
+    },
+    {
+        "source": "Concatenates identifiers into one identifier.",
+        "suggest": "将标识符串联为一个标识符。",
+        "translate": ""
+    },
+    {
+        "source": "This macro takes any number of comma-separated identifiers, and concatenates them all into one, yielding an expression which is a new identifier.",
+        "suggest": "该宏采用任意数量的逗号分隔的标识符，并将它们全部连接为一个，从而产生一个表达式，该表达式是一个新的标识符。",
+        "translate": ""
+    },
+    {
+        "source": "Note that hygiene makes it such that this macro cannot capture local variables.",
+        "suggest": "请注意，卫生使该宏无法捕获本地变量。",
+        "translate": ""
+    },
+    {
+        "source": "Also, as a general rule, macros are only allowed in item, statement or expression position.",
+        "suggest": "同样，作为一般规则，只允许在项，语句或表达式位置使用宏。",
+        "translate": ""
+    },
+    {
+        "source": "That means while you may use this macro for referring to existing variables, functions or modules etc, you cannot define a new one with it.",
+        "suggest": "这意味着尽管您可以使用此宏来引用现有的变量，函数或模块等，但是您无法使用它来定义一个新的宏。",
+        "translate": ""
+    },
+    {
+        "source": "Concatenates literals into a static string slice.",
+        "suggest": "将字面量串联成一个静态字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "This macro takes any number of comma-separated literals, yielding an expression of type `&'static str` which represents all of the literals concatenated left-to-right.",
+        "suggest": "该宏采用任意数量的逗号分隔的字面量，产生 `&'static str` 类型的表达式，该表达式表示所有从左到右串联的字面量。",
+        "translate": ""
+    },
+    {
+        "source": "Integer and floating point literals are stringified in order to be concatenated.",
+        "suggest": "将整数和浮点字面量进行字符串化以将其串联在一起。",
+        "translate": ""
+    },
+    {
+        "source": "Expands to the line number on which it was invoked.",
+        "suggest": "扩展为在其上被调用的行号。",
+        "translate": ""
+    },
+    {
+        "source": "With [`column!`] and [`file!`], these macros provide debugging information for developers about the location within the source.",
+        "suggest": "对于 [`column!`] 和 [`file!`]，这些宏为开发人员提供了有关源中位置的调试信息。",
+        "translate": ""
+    },
+    {
+        "source": "The expanded expression has type `u32` and is 1-based, so the first line in each file evaluates to 1, the second to 2, etc.",
+        "suggest": "扩展表达式的类型为 `u32`，基于 1，因此每个文件的第一行求值为 1，第二行求值为 2，依此类推。",
+        "translate": ""
+    },
+    {
+        "source": "This is consistent with error messages by common compilers or popular editors.",
+        "suggest": "这与常见编译器或常用编辑器的错误消息一致。",
+        "translate": ""
+    },
+    {
+        "source": "The returned line is *not necessarily* the line of the `line!` invocation itself, but rather the first macro invocation leading up to the invocation of the `line!` macro.",
+        "suggest": "返回的行必定是 *not*`line!` 调用本身的行，而是导致 `line!` 宏调用的第一个宏调用。",
+        "translate": ""
+    },
+    {
+        "source": "Expands to the column number at which it was invoked.",
+        "suggest": "扩展到调用它的列号。",
+        "translate": ""
+    },
+    {
+        "source": "With [`line!`] and [`file!`], these macros provide debugging information for developers about the location within the source.",
+        "suggest": "对于 [`line!`] 和 [`file!`]，这些宏为开发人员提供了有关源中位置的调试信息。",
+        "translate": ""
+    },
+    {
+        "source": "The expanded expression has type `u32` and is 1-based, so the first column in each line evaluates to 1, the second to 2, etc.",
+        "suggest": "扩展表达式的类型为 `u32`，并且基于 1，因此每行的第一列的值为 1，第二列的值为 2，依此类推。",
+        "translate": ""
+    },
+    {
+        "source": "The returned column is *not necessarily* the line of the `column!` invocation itself, but rather the first macro invocation leading up to the invocation of the `column!` macro.",
+        "suggest": "返回的列是 *not 必然*`column!` 调用本身的行，而是导致 `column!` 宏调用的第一个宏调用。",
+        "translate": ""
+    },
+    {
+        "source": "Expands to the file name in which it was invoked.",
+        "suggest": "扩展为调用该文件的文件名。",
+        "translate": ""
+    },
+    {
+        "source": "With [`line!`] and [`column!`], these macros provide debugging information for developers about the location within the source.",
+        "suggest": "对于 [`line!`] 和 [`column!`]，这些宏为开发人员提供了有关源中位置的调试信息。",
+        "translate": ""
+    },
+    {
+        "source": "The expanded expression has type `&'static str`, and the returned file is not the invocation of the `file!` macro itself, but rather the first macro invocation leading up to the invocation of the `file!` macro.",
+        "suggest": "扩展表达式的类型为 `&'static str`，返回的文件不是 `file!` 宏本身的调用，而是导致 `file!` 宏调用的第一个宏调用。",
+        "translate": ""
+    },
+    {
+        "source": "Stringifies its arguments.",
+        "suggest": "对其参数进行字符串化。",
+        "translate": ""
+    },
+    {
+        "source": "This macro will yield an expression of type `&'static str` which is the stringification of all the tokens passed to the macro.",
+        "suggest": "该宏将产生 `&'static str` 类型的表达式，该表达式是传递给该宏的所有 tokens 的字符串化。",
+        "translate": ""
+    },
+    {
+        "source": "No restrictions are placed on the syntax of the macro invocation itself.",
+        "suggest": "宏调用本身的语法没有任何限制。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the expanded results of the input tokens may change in the future.",
+        "suggest": "请注意，输入 tokens 的扩展结果可能会在 future 中发生变化。",
+        "translate": ""
+    },
+    {
+        "source": "You should be careful if you rely on the output.",
+        "suggest": "如果您依赖输出，则应格外小心。",
+        "translate": ""
+    },
+    {
+        "source": "Includes a UTF-8 encoded file as a string.",
+        "suggest": "包含 UTF-8 编码的文件作为字符串。",
+        "translate": ""
+    },
+    {
+        "source": "The file is located relative to the current file (similarly to how modules are found).",
+        "suggest": "该文件相对于当前文件位于 (类似于查找模块的方式)。",
+        "translate": ""
+    },
+    {
+        "source": "The provided path is interpreted in a platform-specific way at compile time.",
+        "suggest": "提供的路径在编译时以特定于平台的方式进行解释。",
+        "translate": ""
+    },
+    {
+        "source": "So, for instance, an invocation with a Windows path containing backslashes `\\` would not compile correctly on Unix.",
+        "suggest": "因此，例如，使用 Windows 路径包含反斜杠 `\\` 的调用将无法在 Unix 上正确编译。",
+        "translate": ""
+    },
+    {
+        "source": "This macro will yield an expression of type `&'static str` which is the contents of the file.",
+        "suggest": "该宏将产生 `&'static str` 类型的表达式，该表达式是文件的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Assume there are two files in the same directory with the following contents:",
+        "suggest": "假设在同一目录中有两个文件，其内容如下:",
+        "translate": ""
+    },
+    {
+        "source": "File 'spanish.in':",
+        "suggest": "文件 'spanish.in':",
+        "translate": ""
+    },
+    {
+        "source": "File 'main.rs':",
+        "suggest": "文件 'main.rs':",
+        "translate": ""
+    },
+    {
+        "source": "Compiling 'main.rs' and running the resulting binary will print \"adiós\".",
+        "suggest": "编译 'main.rs' 并运行生成的二进制文件将打印 \"adiós\"。",
+        "translate": ""
+    },
+    {
+        "source": "Includes a file as a reference to a byte array.",
+        "suggest": "包含一个文件作为对字节数组的引用。",
+        "translate": ""
+    },
+    {
+        "source": "This macro will yield an expression of type `&'static [u8; N]` which is the contents of the file.",
+        "suggest": "该宏将产生 `&'static [u8; N]` 类型的表达式，该表达式是文件的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Expands to a string that represents the current module path.",
+        "suggest": "扩展为代表当前模块路径的字符串。",
+        "translate": ""
+    },
+    {
+        "source": "The current module path can be thought of as the hierarchy of modules leading back up to the crate root.",
+        "suggest": "当前模块路径可以被认为是引回到 crate root 的模块层次结构。",
+        "translate": ""
+    },
+    {
+        "source": "The first component of the path returned is the name of the crate currently being compiled.",
+        "suggest": "返回路径的第一部分是当前正在编译的 crate 的名称。",
+        "translate": ""
+    },
+    {
+        "source": "Evaluates boolean combinations of configuration flags at compile-time.",
+        "suggest": "在编译时评估配置标志的布尔组合。",
+        "translate": ""
+    },
+    {
+        "source": "In addition to the `#[cfg]` attribute, this macro is provided to allow boolean expression evaluation of configuration flags.",
+        "suggest": "除了 `#[cfg]` 属性，还提供了此宏，以允许对配置标志进行布尔表达式评估。",
+        "translate": ""
+    },
+    {
+        "source": "This frequently leads to less duplicated code.",
+        "suggest": "这通常会减少重复的代码。",
+        "translate": ""
+    },
+    {
+        "source": "The syntax given to this macro is the same syntax as the [`cfg`] attribute.",
+        "suggest": "该宏的语法与 [`cfg`] 属性的语法相同。",
+        "translate": ""
+    },
+    {
+        "source": "unlike `#[cfg]`, does not remove any code and only evaluates to true or false.",
+        "suggest": "与 `#[cfg]` 不同，它不会删除任何代码，只会计算为 true 或 false。",
+        "translate": ""
+    },
+    {
+        "source": "For example, all blocks in an if/else expression need to be valid when `cfg!` is used for the condition, regardless of what `cfg!` is evaluating.",
+        "suggest": "例如，当将 `cfg!` 用作条件时，无论 `cfg!` 正在评估什么，if/else 表达式中的所有块都必须有效。",
+        "translate": ""
+    },
+    {
+        "source": "Parses a file as an expression or an item according to the context.",
+        "suggest": "根据上下文将文件解析为表达式或项。",
+        "translate": ""
+    },
+    {
+        "source": "Using this macro is often a bad idea, because if the file is parsed as an expression, it is going to be placed in the surrounding code unhygienically.",
+        "suggest": "使用此宏通常不是一个好主意，因为如果将文件解析为表达式，它将被不卫生地放在周围的代码中。",
+        "translate": ""
+    },
+    {
+        "source": "This could result in variables or functions being different from what the file expected if there are variables or functions that have the same name in the current file.",
+        "suggest": "如果当前文件中有同名的变量或函数，这可能导致变量或函数与文件预期的不同。",
+        "translate": ""
+    },
+    {
+        "source": "File 'monkeys.in':",
+        "suggest": "文件 'monkeys.in':",
+        "translate": ""
+    },
+    {
+        "source": "Compiling 'main.rs' and running the resulting binary will print \"🙈🙊🙉🙈🙊🙉\".",
+        "suggest": "编译 'main.rs' 并运行生成的二进制文件将打印 \"🙈🙊🙉🙈🙊🙉\"。",
+        "translate": ""
+    },
+    {
+        "source": "Assertions are always checked in both debug and release builds, and cannot be disabled.",
+        "suggest": "断言总是在调试和发行版本中被检查，并且不能被禁用。",
+        "translate": ""
+    },
+    {
+        "source": "See [`debug_assert!`] for assertions that are not enabled in release builds by default.",
+        "suggest": "有关默认情况下未在发行版中启用的断言，请参见 [`debug_assert!`]。",
+        "translate": ""
+    },
+    {
+        "source": "Unsafe code may rely on `assert!` to enforce run-time invariants that, if violated could lead to unsafety.",
+        "suggest": "不安全的代码可能依赖 `assert!` 来强制执行运行时不可变变量，如果违反该规定，可能会导致不安全。",
+        "translate": ""
+    },
+    {
+        "source": "Other use-cases of `assert!` include testing and enforcing run-time invariants in safe code (whose violation cannot result in unsafety).",
+        "suggest": "`assert!` 的其他用例包括测试和在安全代码中强制执行运行时不可变变量 (违反该规则不会导致不安全)。",
+        "translate": ""
+    },
+    {
+        "source": "Custom Messages",
+        "suggest": "自定义消息",
+        "translate": ""
+    },
+    {
+        "source": "This macro has a second form, where a custom panic message can be provided with or without arguments for formatting.",
+        "suggest": "此宏具有第二种形式，其中可以提供自定义 panic 消息 (带有或不带有用于格式化的参数)。",
+        "translate": ""
+    },
+    {
+        "source": "See [`std::fmt`] for syntax for this form.",
+        "suggest": "有关此格式的语法，请参见 [`std::fmt`]。",
+        "translate": ""
+    },
+    {
+        "source": "Expressions used as format arguments will only be evaluated if the assertion fails.",
+        "suggest": "仅当断言失败时，才对用作 format 参数的表达式求值。",
+        "translate": ""
+    },
+    {
+        "source": "Inline assembly.",
+        "suggest": "内联汇编。",
+        "translate": ""
+    },
+    {
+        "source": "Read the [unstable book] for the usage.",
+        "suggest": "请阅读 [unstable book] 的用法。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM-style inline assembly.",
+        "suggest": "LLVM 样式的内联汇编。",
+        "translate": ""
+    },
+    {
+        "source": "Module-level inline assembly.",
+        "suggest": "模块级内联汇编。",
+        "translate": ""
+    },
+    {
+        "source": "Prints passed tokens into the standard output.",
+        "suggest": "将传递的 tokens 打印到标准输出中。",
+        "translate": ""
+    },
+    {
+        "source": "Enables or disables tracing functionality used for debugging other macros.",
+        "suggest": "启用或禁用用于调试其他宏的跟踪功能。",
+        "translate": ""
+    },
+    {
+        "source": "Attribute macro used to apply derive macros.",
+        "suggest": "用于应用派生宏的属性宏。",
+        "translate": ""
+    },
+    {
+        "source": "Attribute macro applied to a function to turn it into a unit test.",
+        "suggest": "将属性宏应用于函数以将其转换为单元测试。",
+        "translate": ""
+    },
+    {
+        "source": "Attribute macro applied to a function to turn it into a benchmark test.",
+        "suggest": "属性宏应用于函数以将其转换为基准测试。",
+        "translate": ""
+    },
+    {
+        "source": "An implementation detail of the `#[test]` and `#[bench]` macros.",
+        "suggest": "`#[test]` 和 `#[bench]` 宏的实现细节。",
+        "translate": ""
+    }
+]

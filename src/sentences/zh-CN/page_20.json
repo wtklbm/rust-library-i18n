@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "Do not remove inline: will result in relocation failure",
+        "suggest": "不要删除内联: 将导致重定位失败",
+        "translate": ""
+    },
+    {
+        "source": "Returns the base memory address of the heap",
+        "suggest": "返回堆的基本内存地址",
+        "translate": ""
+    },
+    {
+        "source": "Returns the size of the heap",
+        "suggest": "返回堆的大小",
+        "translate": ""
+    },
+    {
+        "source": "Do not remove inline: will result in relocation failure For the same reason we use inline ASM here instead of an extern static to locate the base",
+        "suggest": "不要删除内联: 将导致重定位失败出于同样的原因，我们在这里使用内联 ASM 而不是外部静态变量来定位基址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns address at which current enclave is loaded.",
+        "suggest": "返回加载当前飞地的地址。",
+        "translate": ""
+    },
+    {
+        "source": "ATT syntax is used to support LLVM 8 and 9.",
+        "suggest": "ATT 语法用于支持 LLVM 8 和 9。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the specified memory range is in the enclave.",
+        "suggest": "如果指定的内存范围在安全区内，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "For safety, this function also checks whether the range given overflows, returning `false` if so.",
+        "suggest": "为了安全起见，此函数还检查给定的范围是否溢出，如果是，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Subtract one from `len` when calculating `end` in case `p + len` is exactly at the end of addressable memory (`p + len` would overflow, but the range is still valid).",
+        "suggest": "如果 `p + len` 恰好位于可寻址存储器的末尾 (`p + len` 会溢出，但范围仍然有效)，则在计算 `end` 时应从 `len` 中减去一个。",
+        "translate": ""
+    },
+    {
+        "source": "unsafe ok: link-time constant",
+        "suggest": "不安全 ok: 链接时间常量",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the specified memory range is in userspace.",
+        "suggest": "如果指定的内存范围在用户空间中，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "RT initialization logic is not compiled for test",
+        "suggest": "RT 初始化逻辑未编译以进行测试",
+        "translate": ""
+    },
+    {
+        "source": "runtime features",
+        "suggest": "运行时功能",
+        "translate": ""
+    },
+    {
+        "source": "library features",
+        "suggest": "library 特性",
+        "translate": ""
+    },
+    {
+        "source": "Be very careful when changing this code: it runs before the binary has been relocated.",
+        "suggest": "更改此代码时要非常小心: 它在二进制文件重定位之前运行。",
+        "translate": ""
+    },
+    {
+        "source": "Any indirect accesses to symbols will likely fail.",
+        "suggest": "对符号的任何间接访问都可能会失败。",
+        "translate": ""
+    },
+    {
+        "source": "Three-state spin-lock",
+        "suggest": "三态自旋锁",
+        "translate": ""
+    },
+    {
+        "source": "Try to atomically swap UNINIT with BUSY.",
+        "suggest": "尝试自动将 UNINIT 与 BUSY 交换。",
+        "translate": ""
+    },
+    {
+        "source": "The returned state can be:",
+        "suggest": "返回的状态可以是:",
+        "translate": ""
+    },
+    {
+        "source": "This thread just obtained the lock and other threads will observe BUSY",
+        "suggest": "这个线程刚刚获得了锁，其他线程将观察到忙",
+        "translate": ""
+    },
+    {
+        "source": "We need to wait until the initialization is done.",
+        "suggest": "我们需要等到初始化完成。",
+        "translate": ""
+    },
+    {
+        "source": "Initialization is done.",
+        "suggest": "初始化完成。",
+        "translate": ""
+    },
+    {
+        "source": "this item should only exist if this is linked into an executable (main function exists).",
+        "suggest": "仅当此项目链接到可执行文件时 (主函数存在)，该项目才应该存在。",
+        "translate": ""
+    },
+    {
+        "source": "If this is a library, the crate author should be able to specify this",
+        "suggest": "如果这是一个库，则 crate 作者应该可以指定此库",
+        "translate": ""
+    },
+    {
+        "source": "how to support TLS in library mode?",
+        "suggest": "如何在库模式下支持 TLS?",
+        "translate": ""
+    },
+    {
+        "source": "check entry is being called according to ABI",
+        "suggest": "根据 ABI 调用检查条目",
+        "translate": ""
+    },
+    {
+        "source": "The actual types of these arguments are `p1: *const Arg,",
+        "suggest": "这些参数的实际类型是 `p1: *const Arg，",
+        "translate": ""
+    },
+    {
+        "source": "We can't currently customize the argument list of Rust's main function, so we pass these in as the standard pointer-sized values in `argc` and `argv`.",
+        "suggest": "我们目前无法自定义 Rust 主函数的参数列表，因此我们将它们作为 `argc` 和 `argv` 中标准指针大小的值传入。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the ID for the current thread.",
+        "suggest": "获取当前线程的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "The ID is guaranteed to be unique among all currently running threads in the enclave, and it is guaranteed to be constant for the lifetime of the thread.",
+        "suggest": "该 ID 在安全区内所有当前正在运行的线程中保证是唯一的，并且对于该线程的生命周期保证是恒定的。",
+        "translate": ""
+    },
+    {
+        "source": "More specifically for SGX, there is a one-to-one correspondence of the ID to the address of the TCS.",
+        "suggest": "更具体地说，对于 SGX，ID 与 TCS 的地址一一对应。",
+        "translate": ""
+    },
+    {
+        "source": "A bitset that can be used synchronously.",
+        "suggest": "可以同步使用的位集。",
+        "translate": ""
+    },
+    {
+        "source": "Not atomic.",
+        "suggest": "不是原子的。",
+        "translate": ""
+    },
+    {
+        "source": "Sets any unset bit.",
+        "suggest": "设置任何未设置的位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if all bits were observed to be set.",
+        "suggest": "如果观察到所有位均已设置，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Same as POSIX minimum",
+        "suggest": "与最低 POSIX 相同",
+        "translate": ""
+    },
+    {
+        "source": "Needs safety information.",
+        "suggest": "需要安全信息。",
+        "translate": ""
+    },
+    {
+        "source": "See entry.S for `set_tls_ptr` definition.",
+        "suggest": "有关 `set_tls_ptr` 的定义，请参见 entry.S。",
+        "translate": ""
+    },
+    {
+        "source": "A type that can be safely read from or written to userspace.",
+        "suggest": "可以安全地从用户空间读取或写入用户空间的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Non-exhaustive list of specific requirements for reading and writing:",
+        "suggest": "reading 和 writing 的具体要求的非详尽清单:",
+        "translate": ""
+    },
+    {
+        "source": "**Type is `Copy`** (and therefore also not `Drop`).",
+        "suggest": "**类型为 `Copy`**(因此也不是 `Drop`)。",
+        "translate": ""
+    },
+    {
+        "source": "Copies will be created when copying from/to userspace.",
+        "suggest": "复制 from/to 用户空间时将创建副本。",
+        "translate": ""
+    },
+    {
+        "source": "Destructors will not be called.",
+        "suggest": "析构函数将不会被调用。",
+        "translate": ""
+    },
+    {
+        "source": "**No references or Rust-style owned pointers** (`Vec`, `Arc`, etc.).",
+        "suggest": "**没有引用或 Rust 风格的指针**(`Vec`，`Arc` 等)。",
+        "translate": ""
+    },
+    {
+        "source": "When reading from userspace, references into enclave memory must not be created.",
+        "suggest": "从用户空间读取时，不得创建对安全区内存的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Also, only enclave memory is considered managed by the Rust compiler's static analysis.",
+        "suggest": "同样，Rust 编译器的静态分析仅考虑飞地内存。",
+        "translate": ""
+    },
+    {
+        "source": "When reading from userspace, there can be no guarantee that the value correctly adheres to the expectations of the type.",
+        "suggest": "从用户空间读取时，不能保证该值正确符合该类型的期望。",
+        "translate": ""
+    },
+    {
+        "source": "When writing to userspace, memory addresses of data in enclave memory must not be leaked for confidentiality reasons.",
+        "suggest": "写入用户空间时，出于机密原因，绝不能泄漏安全区内存储器中数据的存储器地址。",
+        "translate": ""
+    },
+    {
+        "source": "and `UserRef` are also not allowed for the same reasons.",
+        "suggest": "出于相同的原因，也不允许使用 `UserRef` 和 `UserRef`。",
+        "translate": ""
+    },
+    {
+        "source": "**No fat pointers.** When reading from userspace, the size or vtable pointer could be automatically interpreted and used by the code.",
+        "suggest": "**没有胖指针。** 从用户空间读取时，代码可以自动解释和使用 size 或 vtable 指针。",
+        "translate": ""
+    },
+    {
+        "source": "When writing to userspace, memory addresses of data in enclave memory (such as vtable pointers) must not be leaked for confidentiality reasons.",
+        "suggest": "写入用户空间时，出于机密性原因，一定不要泄漏安全区内存中数据的内存地址 (例如 vtable 指针)。",
+        "translate": ""
+    },
+    {
+        "source": "Non-exhaustive list of specific requirements for reading from userspace:",
+        "suggest": "从用户空间读取的特定要求的非详尽清单:",
+        "translate": ""
+    },
+    {
+        "source": "**Any bit pattern is valid** for this type (no `enum`s).",
+        "suggest": "**任何位模式对于此类型均有效**(没有枚举)。",
+        "translate": ""
+    },
+    {
+        "source": "There can be no guarantee that the value correctly adheres to the expectations of the type, so any value must be valid for this type.",
+        "suggest": "不能保证该值正确符合该类型的期望，因此任何值都必须对该类型有效。",
+        "translate": ""
+    },
+    {
+        "source": "Non-exhaustive list of specific requirements for writing to userspace:",
+        "suggest": "写入用户空间的特定要求的非详尽清单:",
+        "translate": ""
+    },
+    {
+        "source": "**No pointers to enclave memory.** Memory addresses of data in enclave memory must not be leaked for confidentiality reasons.",
+        "suggest": "**没有指向飞地存储器的指针。** 出于机密原因，一定不能泄漏飞地存储器中数据的存储器地址。",
+        "translate": ""
+    },
+    {
+        "source": "**No internal padding.** Padding might contain previously-initialized secret data stored at that memory location and must not be leaked for confidentiality reasons.",
+        "suggest": "**没有内部填充。** 填充可能包含存储在该内存位置的先前初始化的机密数据，并且出于机密原因，不得泄漏。",
+        "translate": ""
+    },
+    {
+        "source": "A type that can be represented in memory as one or more `UserSafeSized`s.",
+        "suggest": "一种可以在内存中表示为一个或多个 UserSafeSized 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `mem::align_of::<Self>`.",
+        "suggest": "等效于 `mem::align_of::<Self>`。",
+        "translate": ""
+    },
+    {
+        "source": "Construct a pointer to `Self` given a memory range in user space.",
+        "suggest": "给定用户空间中的内存范围，构造指向 `Self` 的指针。",
+        "translate": ""
+    },
+    {
+        "source": "N.B., this takes a size, not a length!",
+        "suggest": "N.B.，这需要一个大小，而不是一个长度!",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure the memory range is in user memory, is the correct size and is correctly aligned and points to the right type.",
+        "suggest": "调用方必须确保存储范围在用户存储区中，并且大小正确，对齐正确并指向正确的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Construct a pointer to `Self` given a memory range.",
+        "suggest": "给定一个内存范围，创建一个指向 `Self` 的指针。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure the memory range points to the correct type.",
+        "suggest": "调用者必须确保内存范围指向正确的类型。",
+        "translate": ""
+    },
+    {
+        "source": "This function panics if:",
+        "suggest": "如果满足以下条件，则此函数 panics:",
+        "translate": ""
+    },
+    {
+        "source": "the pointer is not aligned.",
+        "suggest": "指针未对齐。",
+        "translate": ""
+    },
+    {
+        "source": "the pointer is null.",
+        "suggest": "指针为空。",
+        "translate": ""
+    },
+    {
+        "source": "the pointed-to range does not fit in the address space.",
+        "suggest": "指向范围不适合地址空间。",
+        "translate": ""
+    },
+    {
+        "source": "the pointed-to range is not in user memory.",
+        "suggest": "指向范围不在用户内存中。",
+        "translate": ""
+    },
+    {
+        "source": "The caller has guaranteed the pointer is valid",
+        "suggest": "调用方已保证指针有效",
+        "translate": ""
+    },
+    {
+        "source": "Checks if a pointer may point to `Self` in user memory.",
+        "suggest": "检查指针是否可以指向用户存储器中的 `Self`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure the memory range points to the correct type and length (if this is a slice).",
+        "suggest": "调用者必须确保内存范围指向正确的类型和长度 (如果这是切片)。",
+        "translate": ""
+    },
+    {
+        "source": "Behavior is undefined if any of these conditions are violated:",
+        "suggest": "如果违反以下任何条件，则行为是不确定的:",
+        "translate": ""
+    },
+    {
+        "source": "must be [valid] for writes of `size` many bytes, and it must be properly aligned.",
+        "suggest": "必须为 [valid] 才能写入许多字节的 `size`，并且必须正确对齐。",
+        "translate": ""
+    },
+    {
+        "source": "the element size is not a factor of the size",
+        "suggest": "元素大小不是大小的因素",
+        "translate": ""
+    },
+    {
+        "source": "The caller must uphold the safety contract for `from_raw_sized_unchecked`",
+        "suggest": "调用者必须坚持 `from_raw_sized_unchecked` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "A reference to some type in userspace memory.",
+        "suggest": "对用户空间内存中某种类型的引用。",
+        "translate": ""
+    },
+    {
+        "source": "`&UserRef<T>` is equivalent to `&T` in enclave memory.",
+        "suggest": "`&UserRef<T>` 等同于安全区内存中的 `&T`。",
+        "translate": ""
+    },
+    {
+        "source": "Access to the memory is only allowed by copying to avoid TOCTTOU issues.",
+        "suggest": "只有通过复制才能访问内存，以避免 TOCTTOU 问题。",
+        "translate": ""
+    },
+    {
+        "source": "After copying, code should make sure to completely check the value before use.",
+        "suggest": "复制后，代码应确保在使用前完全检查该值。",
+        "translate": ""
+    },
+    {
+        "source": "It is also possible to obtain a mutable reference `&mut UserRef<T>`.",
+        "suggest": "也有可能获得一个可变引用 `&mut UserRef<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike regular mutable references, these are not exclusive.",
+        "suggest": "与常规可变引用不同，它们不是排他性的。",
+        "translate": ""
+    },
+    {
+        "source": "Userspace may always write to the backing memory at any time, so it can't be assumed that there the pointed-to memory is uniquely borrowed.",
+        "suggest": "用户空间可以随时随时写入后备存储器，因此不能假定指向的存储器是唯一借用的。",
+        "translate": ""
+    },
+    {
+        "source": "The two different reference types are used solely to indicate intent: a mutable reference is for writing to user memory, an immutable reference for reading from user memory.",
+        "suggest": "两种不同的引用类型仅用于表示意图: 可变引用用于写入用户存储器，不可变引用用于从用户存储器读取。",
+        "translate": ""
+    },
+    {
+        "source": "An owned type in userspace memory.",
+        "suggest": "用户空间内存中的所有类型。",
+        "translate": ""
+    },
+    {
+        "source": "is equivalent to `Box<T>` in enclave memory.",
+        "suggest": "等同于安全区内存中的 `Box<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "The user memory will be freed when the value is dropped.",
+        "suggest": "丢弃该值后，将释放用户内存。",
+        "translate": ""
+    },
+    {
+        "source": "This function returns memory that is practically uninitialized, but is not considered \"unspecified\" or \"undefined\" for purposes of an optimizing compiler.",
+        "suggest": "该函数返回实际上未初始化的内存，但出于优化编译器的目的，不将其视为 \"unspecified\" 或 \"undefined\"。",
+        "translate": ""
+    },
+    {
+        "source": "This is achieved by returning a pointer from from outside as obtained by `super::alloc`.",
+        "suggest": "这是通过从外部返回由 `super::alloc` 获得的指针来实现的。",
+        "translate": ""
+    },
+    {
+        "source": "Mustn't call alloc with size 0.",
+        "suggest": "不得调用大小为 0 的 alloc。",
+        "translate": ""
+    },
+    {
+        "source": "dangling pointer ok for size 0",
+        "suggest": "大小为 0 的悬垂指针正常",
+        "translate": ""
+    },
+    {
+        "source": "Copies `val` into freshly allocated space in user memory.",
+        "suggest": "将 `val` 复制到用户内存中新分配的空间中。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an owned `User<T>` from a raw pointer.",
+        "suggest": "从裸指针创建一个拥有的 `User<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure `ptr` points to `T`, is freeable with the `free` usercall and the alignment of `T`, and is uniquely owned.",
+        "suggest": "调用者必须确保 `ptr` 指向 `T`，可以通过 `free` 用户调用和 `T` 的对齐释放，并且是唯一的。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer is not aligned",
+        "suggest": "指针未对齐",
+        "translate": ""
+    },
+    {
+        "source": "The pointer is null",
+        "suggest": "指针为空",
+        "translate": ""
+    },
+    {
+        "source": "The pointed-to range is not in user memory",
+        "suggest": "指向范围不在用户内存中",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `from_raw`.",
+        "suggest": "调用者必须坚持 `from_raw` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this value into a raw pointer.",
+        "suggest": "将此值转换为裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "The value will no longer be automatically freed.",
+        "suggest": "该值将不再自动释放。",
+        "translate": ""
+    },
+    {
+        "source": "Allocate space for `T` in user memory.",
+        "suggest": "在用户内存中为 `T` 分配空间。",
+        "translate": ""
+    },
+    {
+        "source": "Allocate space for a `[T]` of `n` elements in user memory.",
+        "suggest": "在用户存储器中为 `n` 元素的 `[T]` 分配空间。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an owned `User<[T]>` from a raw thin pointer and a slice length.",
+        "suggest": "从原始的薄指针和切片长度创建一个拥有的 `User<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure `ptr` points to `len` elements of `T`, is freeable with the `free` usercall and the alignment of `T`, and is uniquely owned.",
+        "suggest": "调用者必须确保 `ptr` 指向 `T` 的 `len` 元素，并且可以通过 `free` 用户调用和 `T` 的对齐释放，并且是唯一的。",
+        "translate": ""
+    },
+    {
+        "source": "The pointed-to range does not fit in the address space",
+        "suggest": "指向范围不适合地址空间",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `&UserRef<[T]>` from a raw pointer.",
+        "suggest": "从裸指针创建 `&UserRef<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure `ptr` points to `T`.",
+        "suggest": "调用者必须确保 `ptr` 指向 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must uphold the safety contract for `from_ptr`.",
+        "suggest": "调用者必须坚持 `from_ptr` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `&mut UserRef<[T]>` from a raw pointer.",
+        "suggest": "从裸指针创建 `&mut UserRef<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "See the struct documentation for the nuances regarding a `&mut UserRef<T>`.",
+        "suggest": "有关 `&mut UserRef<T>` 的细微差别，请参见结构体文档。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must uphold the safety contract for `from_mut_ptr`.",
+        "suggest": "调用者必须坚持 `from_mut_ptr` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Copies `val` into user memory.",
+        "suggest": "将 `val` 复制到用户内存中。",
+        "translate": ""
+    },
+    {
+        "source": "This function panics if the destination doesn't have the same size as the source.",
+        "suggest": "如果目标的大小与源的大小不同，则此函数 panics。",
+        "translate": ""
+    },
+    {
+        "source": "This can happen for dynamically-sized types such as slices.",
+        "suggest": "对于切片等动态大小的类型，可能会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the value from user memory and place it into `dest`.",
+        "suggest": "从用户存储器中复制值并将其放入 `dest`。",
+        "translate": ""
+    },
+    {
+        "source": "Obtain a raw pointer from this reference.",
+        "suggest": "从此引用中获取一个裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the value from user memory into enclave memory.",
+        "suggest": "将值从用户存储器复制到安全区存储器。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `&UserRef<[T]>` from a raw thin pointer and a slice length.",
+        "suggest": "从原始的薄指针和切片长度创建 `&UserRef<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure `ptr` points to `n` elements of `T`.",
+        "suggest": "调用者必须确保 `ptr` 指向 `T` 的 `n` 元素。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must uphold the safety contract for `from_raw_parts`.",
+        "suggest": "调用者必须坚持 `from_raw_parts` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `&mut UserRef<[T]>` from a raw thin pointer and a slice length.",
+        "suggest": "从原始的薄指针和切片长度创建 `&mut UserRef<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must uphold the safety contract for `from_raw_parts_mut`.",
+        "suggest": "调用者必须坚持 `from_raw_parts_mut` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Obtain a raw pointer to the first element of this user slice.",
+        "suggest": "获取对此用户切片的第一个元素的裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "Obtain the number of elements in this user slice.",
+        "suggest": "获取此用户切片中的元素数量。",
+        "translate": ""
+    },
+    {
+        "source": "Afterwards, `dest` will contain exactly `self.len()` elements.",
+        "suggest": "之后，`dest` 将完全包含 `self.len()` 元素。",
+        "translate": ""
+    },
+    {
+        "source": "We reserve enough space above.",
+        "suggest": "我们在上面预留了足够的空间。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the value from user memory into a vector in enclave memory.",
+        "suggest": "将用户存储器中的值复制到安全区存储器中的 vector 中。",
+        "translate": ""
+    },
+    {
+        "source": "should be implied by [T]: UserSafe?",
+        "suggest": "[T]: UserSafe 应该暗示什么?",
+        "translate": ""
+    },
+    {
+        "source": "Immutable user slice iterator",
+        "suggest": "不可变的用户切片迭代器",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the `iter` method on `UserRef<[T]>`.",
+        "suggest": "该结构体是通过 `UserRef<[T]>` 上的 `iter` 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Mutable user slice iterator",
+        "suggest": "可变用户切片迭代器",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the `iter_mut` method on `UserRef<[T]>`.",
+        "suggest": "该结构体是通过 `UserRef<[T]>` 上的 `iter_mut` 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the user memory range pointed to by the user `ByteBuffer` to enclave memory.",
+        "suggest": "将用户 `ByteBuffer` 指向的用户内存范围复制到安全区内存中。",
+        "translate": ""
+    },
+    {
+        "source": "This function panics if, in the user `ByteBuffer`:",
+        "suggest": "如果在用户 `ByteBuffer` 中，此函数 panics 如果:",
+        "translate": ""
+    },
+    {
+        "source": "Mustn't look at `data` or call `free` if `len` is `0`.",
+        "suggest": "如果 `len` 是 `0`，则不得查看 `data` 或调用 `free`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `read`.",
+        "suggest": "用户调用 `read`。",
+        "translate": ""
+    },
+    {
+        "source": "See the ABI documentation for more information.",
+        "suggest": "有关更多信息，请参见 ABI 文档。",
+        "translate": ""
+    },
+    {
+        "source": "This will do a single `read` usercall and scatter the read data among `bufs`.",
+        "suggest": "这将执行一个 `read` 用户调用，并将读取的数据分散到 `bufs` 之间。",
+        "translate": ""
+    },
+    {
+        "source": "To read to a single buffer, just pass a slice of length one.",
+        "suggest": "要读取单个缓冲区，只需传递长度为 1 的切片即可。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `read_alloc`.",
+        "suggest": "用户调用 `read_alloc`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `write`.",
+        "suggest": "用户调用 `write`。",
+        "translate": ""
+    },
+    {
+        "source": "This will do a single `write` usercall and gather the written data from `bufs`.",
+        "suggest": "这将执行一个 `write` 用户调用，并从 `bufs` 收集写入的数据。",
+        "translate": ""
+    },
+    {
+        "source": "To write from a single buffer, just pass a slice of length one.",
+        "suggest": "要从单个缓冲区写入数据，只需传递一个长度为 1 的切片即可。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `flush`.",
+        "suggest": "用户调用 `flush`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `close`.",
+        "suggest": "用户调用 `close`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `bind_stream`.",
+        "suggest": "用户调用 `bind_stream`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `accept_stream`.",
+        "suggest": "用户调用 `accept_stream`。",
+        "translate": ""
+    },
+    {
+        "source": "can this be done",
+        "suggest": "能做到吗",
+        "translate": ""
+    },
+    {
+        "source": "without forcing coercion?",
+        "suggest": "没有强迫?",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `connect_stream`.",
+        "suggest": "用户调用 `connect_stream`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `launch_thread`.",
+        "suggest": "用户调用 `launch_thread`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must uphold the safety contract for `launch_thread`.",
+        "suggest": "调用者必须坚持 `launch_thread` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `exit`.",
+        "suggest": "用户调用 `exit`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `wait`.",
+        "suggest": "用户调用 `wait`。",
+        "translate": ""
+    },
+    {
+        "source": "We don't want people to rely on accuracy of timeouts to make security decisions in an SGX enclave.",
+        "suggest": "我们不希望人们依靠超时的准确性来在 SGX 飞地中做出安全决策。",
+        "translate": ""
+    },
+    {
+        "source": "That's why we add a random amount not exceeding +/- 10% to the timeout value to discourage people from relying on accuracy of timeouts while providing a way to make things work in other cases.",
+        "suggest": "这就是为什么我们在超时值上添加不超过 +/-10% 的随机数，以阻止人们依赖超时的准确性，同时提供一种使事情在其他情况下可以正常工作的方式。",
+        "translate": ""
+    },
+    {
+        "source": "Note that in the SGX threat model the enclave runner which is serving the wait usercall is not trusted to ensure accurate timeouts.",
+        "suggest": "请注意，在 SGX 威胁模型中，为等待用户调用服务的飞地赛跑者不受信任以确保准确的超时。",
+        "translate": ""
+    },
+    {
+        "source": "This function makes an effort to wait for a non-spurious event at least as long as `duration`.",
+        "suggest": "该函数会努力等待至少至 `duration` 的非虚假事件。",
+        "translate": ""
+    },
+    {
+        "source": "Note that in general there is no guarantee about accuracy of time and timeouts in SGX model.",
+        "suggest": "请注意，一般而言，无法保证 SGX 模型中时间和超时的准确性。",
+        "translate": ""
+    },
+    {
+        "source": "The enclave runner serving usercalls may lie about current time and/or ignore timeout values.",
+        "suggest": "服务用户调用的飞地赛跑者可能在当前时间撒谎或者忽略超时值。",
+        "translate": ""
+    },
+    {
+        "source": "Once the event is observed, `should_wake_up` will be used to determine whether or not the event was spurious.",
+        "suggest": "观察到事件后，将使用 `should_wake_up` 来确定事件是否是虚假的。",
+        "translate": ""
+    },
+    {
+        "source": "Calls the wait usercall and checks the result.",
+        "suggest": "调用等待用户调用并检查结果。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if event was returned, and false if WouldBlock/TimedOut was returned.",
+        "suggest": "如果返回事件，则返回 true; 如果返回 WouldBlock/TimedOut，则返回 false。",
+        "translate": ""
+    },
+    {
+        "source": "If duration is None, it will use WAIT_NO.",
+        "suggest": "如果 duration 为 None，它将使用 WAIT_NO。",
+        "translate": ""
+    },
+    {
+        "source": "timed out",
+        "suggest": "时间到",
+        "translate": ""
+    },
+    {
+        "source": "woken up",
+        "suggest": "醒了",
+        "translate": ""
+    },
+    {
+        "source": "spurious event",
+        "suggest": "虚假事件",
+        "translate": ""
+    },
+    {
+        "source": "Drain all cached events.",
+        "suggest": "Drain 所有缓存的事件。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `event_mask != 0` is implied if we get here.",
+        "suggest": "请注意，如果我们到达此处，则暗示 `event_mask != 0`。",
+        "translate": ""
+    },
+    {
+        "source": "no more cached events",
+        "suggest": "不再缓存事件",
+        "translate": ""
+    },
+    {
+        "source": "Continue waiting, but take note of time spent waiting so we don't wait forever.",
+        "suggest": "继续等待，但要注意等待所花费的时间，以免我们永远等待。",
+        "translate": ""
+    },
+    {
+        "source": "We intentionally don't call `Instant::now()` before this point to avoid the cost of the `insecure_time` usercall in case there are no spurious wakeups.",
+        "suggest": "在此之前，我们故意不调用 `Instant::now()`，以避免在没有虚假唤醒的情况下 `insecure_time` 用户调用的费用。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `send`.",
+        "suggest": "用户调用 `send`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `insecure_time`.",
+        "suggest": "用户调用 `insecure_time`。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall `alloc`.",
+        "suggest": "用户调用 `alloc`。",
+        "translate": ""
+    },
+    {
+        "source": "not sure how to make sure all variants of Error are covered",
+        "suggest": "不知道如何确定所有错误成员",
+        "translate": ""
+    },
+    {
+        "source": "Performs the raw usercall operation as defined in the ABI calling convention.",
+        "suggest": "执行 ABI 调用约定中定义的原始用户调用操作。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure to pass parameters appropriate for the usercall `nr` and to observe all requirements specified in the ABI.",
+        "suggest": "调用者必须确保传递适合于用户调用 `nr` 的参数，并遵守 ABI 中指定的所有要求。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `nr` is `0`.",
+        "suggest": "如果 `nr` 为 `0`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Usercall numbers as per the ABI.",
+        "suggest": "根据 ABI 的用户电话号码。",
+        "translate": ""
+    },
+    {
+        "source": "In this macro: using `$r:tt` because `$r:ty` doesn't match ! in `return_type_is_abort`",
+        "suggest": "在此宏中: 使用 `$r:tt`，因为 `$r:ty` 不匹配! 在 `return_type_is_abort` 中",
+        "translate": ""
+    },
+    {
+        "source": "This is the raw function definition, see the ABI documentation for more information.",
+        "suggest": "这是原始函数定义，有关更多信息，请参见 ABI 文档。",
+        "translate": ""
+    },
+    {
+        "source": "Using a SpinMutex because we never want to exit the enclave waiting for the allocator.",
+        "suggest": "之所以使用 SpinMutex，是因为我们永远不想退出等待分配器的区域。",
+        "translate": ""
+    },
+    {
+        "source": "The current allocator here is the `dlmalloc` crate which we've got included in the rust-lang/rust repository as a submodule.",
+        "suggest": "这里的当前分配器是 `dlmalloc` crate，我们将其作为子模块包含在 rust-lang/rust 仓库中。",
+        "translate": ""
+    },
+    {
+        "source": "The crate is a port of dlmalloc.c from C to Rust.",
+        "suggest": "crate 是 dlmalloc.c 从 C 到 Rust 的端口。",
+        "translate": ""
+    },
+    {
+        "source": "Allocs system resources",
+        "suggest": "Allocs 系统资源",
+        "translate": ""
+    },
+    {
+        "source": "No ordering requirement since this function is protected by the global lock.",
+        "suggest": "无需订购，因为此函数受 γ 锁保护。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `malloc`",
+        "suggest": "调用者必须坚持 `malloc` 的安全保证",
+        "translate": ""
+    },
+    {
+        "source": "The following functions are needed by libunwind.",
+        "suggest": "libunwind 需要以下函数。",
+        "translate": ""
+    },
+    {
+        "source": "These symbols are named in pre-link args for the target specification, so keep that in sync.",
+        "suggest": "这些符号在目标规范的预链接参数中命名，因此请使其保持同步。",
+        "translate": ""
+    },
+    {
+        "source": "SGX-specific access to architectural features.",
+        "suggest": "SGX 特定的对体系结构功能的访问。",
+        "translate": ""
+    },
+    {
+        "source": "The functionality in this module is further documented in the Intel Software Developer's Manual, Volume 3, Chapter 40.",
+        "suggest": "英特尔软件开发人员手册，第 3 卷，第 40 章中进一步记录了此模块中的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapper struct to force 16-byte alignment.",
+        "suggest": "包装器结构体强制 16 字节对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapper struct to force 128-byte alignment.",
+        "suggest": "包装器结构体强制执行 128 字节对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapper struct to force 512-byte alignment.",
+        "suggest": "包装器结构体强制 512 字节对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Call the `EGETKEY` instruction to obtain a 128-bit secret key.",
+        "suggest": "调用 `EGETKEY` 指令以获得 128 位密钥。",
+        "translate": ""
+    },
+    {
+        "source": "Call the `EREPORT` instruction.",
+        "suggest": "调用 `EREPORT` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "This creates a cryptographic report describing the contents of the current enclave.",
+        "suggest": "这将创建一个描述当前飞地内容的加密报告。",
+        "translate": ""
+    },
+    {
+        "source": "The report may be verified by the enclave described in `targetinfo`.",
+        "suggest": "该报告可以通过 `targetinfo` 中描述的区域进行验证。",
+        "translate": ""
+    },
+    {
+        "source": "SGX-specific extension to the primitives in the `std::ffi` module",
+        "suggest": "SGX 特定于 `std::ffi` 模块中原语的扩展",
+        "translate": ""
+    },
+    {
+        "source": "SGX-specific extensions to general I/O primitives",
+        "suggest": "通用 I/O 原语的 SGX 特定扩展",
+        "translate": ""
+    },
+    {
+        "source": "SGX file descriptors behave differently from Unix file descriptors.",
+        "suggest": "SGX 文件描述符的行为与 Unix 文件描述符不同。",
+        "translate": ""
+    },
+    {
+        "source": "See the description of [`TryIntoRawFd`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`TryIntoRawFd`] 的描述。",
+        "translate": ""
+    },
+    {
+        "source": "A trait to extract the raw SGX file descriptor from an underlying object.",
+        "suggest": "trait，用于从基础 object 提取原始 SGX 文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the raw file descriptor.",
+        "suggest": "提取原始文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "This method does **not** pass ownership of the raw file descriptor to the caller.",
+        "suggest": "此方法不会将原始文件描述符的所有权传递给调用方。",
+        "translate": ""
+    },
+    {
+        "source": "The descriptor is only guaranteed to be valid while the original object has not yet been destroyed.",
+        "suggest": "仅当原始 object 尚未销毁时，才保证描述符是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "A trait to express the ability to construct an object from a raw file descriptor.",
+        "suggest": "trait 表示从原始文件描述符构造 object 的能力。",
+        "translate": ""
+    },
+    {
+        "source": "An associated type that contains relevant metadata for `Self`.",
+        "suggest": "关联类型，其中包含 `Self` 的相关元数据。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new instance of `Self` from the given raw file descriptor and metadata.",
+        "suggest": "根据给定的原始文件描述符和元数据构造 `Self` 的新实例。",
+        "translate": ""
+    },
+    {
+        "source": "This function **consumes ownership** of the specified file descriptor.",
+        "suggest": "此函数 **消耗指定文件描述符的所有权**。",
+        "translate": ""
+    },
+    {
+        "source": "The returned object will take responsibility for closing it when the object goes out of scope.",
+        "suggest": "当 object 离开作用域时，返回的 object 将负责关闭它。",
+        "translate": ""
+    },
+    {
+        "source": "This function is also unsafe as the primitives currently returned have the contract that they are the sole owner of the file descriptor they are wrapping.",
+        "suggest": "此函数也是不安全的，因为当前返回的原语具有它们是包装的文件描述符的唯一所有者的约定。",
+        "translate": ""
+    },
+    {
+        "source": "Usage of this function could accidentally allow violating this contract which can cause memory unsafety in code that relies on it being true.",
+        "suggest": "使用此函数可能会意外地违反该协定，这可能导致依赖于该协定为真的代码中的内存不安全。",
+        "translate": ""
+    },
+    {
+        "source": "A trait to express the ability to consume an object and acquire ownership of its raw file descriptor.",
+        "suggest": "trait 表示使用 object 并获取其原始文件描述符所有权的能力。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes this object, returning the raw underlying file descriptor, if this object is not cloned.",
+        "suggest": "如果未克隆此 object，则使用此 object，并返回原始基础文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "This function **transfers ownership** of the underlying file descriptor to the caller.",
+        "suggest": "此函数将基础文件描述符的所有权 ** 转让给调用者。",
+        "translate": ""
+    },
+    {
+        "source": "Callers are then the unique owners of the file descriptor and must close the descriptor once it's no longer needed.",
+        "suggest": "这样，调用者便是文件描述符的唯一所有者，一旦不再需要描述符，就必须关闭该描述符。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike other platforms, on SGX, the file descriptor is shared between all clones of an object.",
+        "suggest": "与其他平台不同，在 SGX 上，文件描述符在 object 的所有克隆之间共享。",
+        "translate": ""
+    },
+    {
+        "source": "To avoid race conditions, this function will only return `Ok` when called on the final clone.",
+        "suggest": "为了避免竞争状态，此函数仅在最终克隆上调用时才返回 `Ok`。",
+        "translate": ""
+    },
+    {
+        "source": "Metadata for `TcpStream`.",
+        "suggest": "`TcpStream` 的元数据。",
+        "translate": ""
+    },
+    {
+        "source": "Local address of the TCP stream",
+        "suggest": "TCP 流的本地地址",
+        "translate": ""
+    },
+    {
+        "source": "Peer address of the TCP stream",
+        "suggest": "TCP 流的对端地址",
+        "translate": ""
+    },
+    {
+        "source": "Metadata for `TcpListener`.",
+        "suggest": "`TcpListener` 的元数据。",
+        "translate": ""
+    },
+    {
+        "source": "Local address of the TCP listener",
+        "suggest": "TCP 侦听器的本地地址",
+        "translate": ""
+    },
+    {
+        "source": "System bindings for the Fortanix SGX platform",
+        "suggest": "Fortanix SGX 平台的系统绑定",
+        "translate": ""
+    },
+    {
+        "source": "This module contains the facade (aka platform-specific) implementations of OS level functionality for Fortanix SGX.",
+        "suggest": "该模块包含 Fortanix SGX 的 OS 级功能的外观 (又名平台特定) 实现。",
+        "translate": ""
+    },
+    {
+        "source": "This function is used to implement functionality that simply doesn't exist.",
+        "suggest": "该函数用于实现根本不存在的功能。",
+        "translate": ""
+    },
+    {
+        "source": "Programs relying on this functionality will need to deal with the error.",
+        "suggest": "依赖此功能的程序将需要处理该错误。",
+        "translate": ""
+    },
+    {
+        "source": "This function is used to implement various functions that doesn't exist, but the lack of which might not be reason for error.",
+        "suggest": "该函数用于实现各种不存在的函数，但是缺少这些函数可能不是错误的原因。",
+        "translate": ""
+    },
+    {
+        "source": "If no error is returned, the program might very well be able to function normally.",
+        "suggest": "如果未返回错误，则该程序很可能能够正常执行函数。",
+        "translate": ""
+    },
+    {
+        "source": "This is what happens when `SGX_INEFFECTIVE_ERROR` is set to `true`.",
+        "suggest": "当 `SGX_INEFFECTIVE_ERROR` 设置为 `true` 时，会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "If it is `false`, the behavior is the same as `unsupported`.",
+        "suggest": "如果是 `false`，则其行为与 `unsupported` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation according to “Operating Systems: Three Easy Pieces”, chapter 28",
+        "suggest": "根据 `操作系统: 三大要素` 的实现，第 28 章",
+        "translate": ""
+    },
+    {
+        "source": "Another thread has the lock, wait",
+        "suggest": "另一个线程有锁，等待",
+        "translate": ""
+    },
+    {
+        "source": "Another thread has passed the lock to us",
+        "suggest": "另一个线程将锁传递给了我们",
+        "translate": ""
+    },
+    {
+        "source": "We are just now obtaining the lock",
+        "suggest": "我们刚刚获得了锁",
+        "translate": ""
+    },
+    {
+        "source": "No other waiters, unlock",
+        "suggest": "没有其他等待者，请解锁",
+        "translate": ""
+    },
+    {
+        "source": "There was a thread waiting, just pass the lock",
+        "suggest": "有一个线程在等待，只是通过锁",
+        "translate": ""
+    },
+    {
+        "source": "Another thread has the lock",
+        "suggest": "另一个线程有锁",
+        "translate": ""
+    },
+    {
+        "source": "called notify_one",
+        "suggest": "称为 notify_one",
+        "translate": ""
+    },
+    {
+        "source": "need to downcast twice because io::Error::into_inner doesn't return the original value if the conversion fails",
+        "suggest": "需要转换两次，因为如果转换失败，io::Error::into_inner 不会返回原始值",
+        "translate": ""
+    },
+    {
+        "source": "unwrap OK: if an iterator is returned, we're guaranteed to get exactly one entry",
+        "suggest": "unwrap OK: 如果返回了迭代器，我们将确保只获得一个条目",
+        "translate": ""
+    },
+    {
+        "source": "ignoring timeout",
+        "suggest": "忽略超时",
+        "translate": ""
+    },
+    {
+        "source": "includes `peer_addr` so that a `TcpStream` maybe correctly reconstructed if `Socket::try_into_inner` fails.",
+        "suggest": "包括 `peer_addr`，因此如果 `Socket::try_into_inner` 失败，则可以正确地重建 `TcpStream`。",
+        "translate": ""
+    },
+    {
+        "source": "Verify that the byte pattern libunwind uses to initialize an RWLock is equivalent to the value of RWLock::new().",
+        "suggest": "验证 libunwind 用于初始化 RWLock 的字节模式是否等于 RWLock::new () 的值。",
+        "translate": ""
+    },
+    {
+        "source": "If the value changes, `src/UnwindRustSgx.h` in libunwind needs to be changed too.",
+        "suggest": "如果值更改，libunwind 中的 `src/UnwindRustSgx.h` 也需要更改。",
+        "translate": ""
+    },
+    {
+        "source": "For the test to work, we need the padding/unused bytes in RWLock to be initialized as 0.",
+        "suggest": "为了使测试正常进行，我们需要将 RWLock 中的 padding/unused 字节初始化为 0。",
+        "translate": ""
+    },
+    {
+        "source": "In practice, this is the case with statics.",
+        "suggest": "实际上，静力学就是这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "If the assertion fails, that not necessarily an issue with the value of C_RWLOCK_INIT.",
+        "suggest": "如果断言失败，则 C_RWLOCK_INIT 的值不一定是问题。",
+        "translate": ""
+    },
+    {
+        "source": "It might just be an issue with the way padding bytes are initialized in the test code.",
+        "suggest": "在测试代码中初始化填充字节的方式可能只是一个问题。",
+        "translate": ""
+    },
+    {
+        "source": "Check at compile time that RWLock size matches C definition (see test_c_rwlock_initializer below)",
+        "suggest": "在编译时检查 RWLock 大小是否与 C 定义匹配 (请参见下面的 test_c_rwlock_initializer)",
+        "translate": ""
+    },
+    {
+        "source": "Never called, as it is a compile time check.",
+        "suggest": "从未调用，因为它是编译时检查。",
+        "translate": ""
+    },
+    {
+        "source": "Another thread has or is waiting for the write lock, wait",
+        "suggest": "另一个线程具有或正在等待写锁，等待",
+        "translate": ""
+    },
+    {
+        "source": "No waiting writers, acquire the read lock",
+        "suggest": "没有等待的 writers，获取读锁",
+        "translate": ""
+    },
+    {
+        "source": "Another thread has or is waiting for the write lock",
+        "suggest": "另一个线程具有或正在等待写锁定",
+        "translate": ""
+    },
+    {
+        "source": "There are other active readers",
+        "suggest": "还有其他活动的 readers",
+        "translate": ""
+    },
+    {
+        "source": "A writer was waiting, pass the lock",
+        "suggest": "writer 正在等待，请通过锁",
+        "translate": ""
+    },
+    {
+        "source": "No writers were waiting, the lock is released",
+        "suggest": "没有 writers 在等待，锁被释放",
+        "translate": ""
+    },
+    {
+        "source": "No writers waiting, release the write lock",
+        "suggest": "没有 writers 等待，释放写锁定",
+        "translate": ""
+    },
+    {
+        "source": "One or more readers were waiting, pass the lock to them",
+        "suggest": "一个或多个 readers 正在等待，将锁传递给他们",
+        "translate": ""
+    },
+    {
+        "source": "called notify_all",
+        "suggest": "称为 notify_all",
+        "translate": ""
+    },
+    {
+        "source": "No readers waiting, the lock is released",
+        "suggest": "没有 readers 等待，锁定被释放",
+        "translate": ""
+    },
+    {
+        "source": "There was a thread waiting for write, just pass the lock",
+        "suggest": "有一个线程在等待写，只是传递了锁",
+        "translate": ""
+    },
+    {
+        "source": "only used by __rust_rwlock_unlock below",
+        "suggest": "仅由下面的 __rust_rwlock_unlock 使用",
+        "translate": ""
+    },
+    {
+        "source": "Rust normally maps Unix EBADF to `Other`",
+        "suggest": "Rust 通常为 maps Unix EBADF 到 `Other`",
+        "translate": ""
+    },
+    {
+        "source": "This function is needed by libunwind.",
+        "suggest": "libunwind 需要此函数。",
+        "translate": ""
+    },
+    {
+        "source": "why is this necessary?",
+        "suggest": "为什么这是必要的?",
+        "translate": ""
+    },
+    {
+        "source": "unsafe: see thread::Builder::spawn_unchecked for safety requirements",
+        "suggest": "不安全: 有关安全要求，请参见 thread::Builder::spawn_unchecked",
+        "translate": ""
+    },
+    {
+        "source": "make sure to not hold the task queue lock longer than necessary",
+        "suggest": "确保不要将任务队列锁定的保留时间超过必要的时间",
+        "translate": ""
+    },
+    {
+        "source": "could store this pointer in TLS somewhere",
+        "suggest": "可以将此指针存储在 TLS 中的某个位置",
+        "translate": ""
+    },
+    {
+        "source": "Lock the Mutex or return false.",
+        "suggest": "锁定互斥锁或返回 false。",
+        "translate": ""
+    },
+    {
+        "source": "if we obtain the lock, the main thread should be waiting",
+        "suggest": "如果我们获得了锁，则主线程应该正在等待",
+        "translate": ""
+    },
+    {
+        "source": "List must be valid.",
+        "suggest": "清单必须有效。",
+        "translate": ""
+    },
+    {
+        "source": "`head_tail_entry` must be non-null, which it is because we assign it above.",
+        "suggest": "`head_tail_entry` 必须为非 null，这是因为我们在上面分配了它。",
+        "translate": ""
+    },
+    {
+        "source": "`self.head_tail` must meet all requirements for a mutable reference.",
+        "suggest": "`self.head_tail` 必须满足可变引用的所有要求。",
+        "translate": ""
+    },
+    {
+        "source": "`self.head_tail` must meet all requirements for a reference.",
+        "suggest": "`self.head_tail` 必须满足引用的所有要求。",
+        "translate": ""
+    },
+    {
+        "source": "Pushes an entry onto the back of the list.",
+        "suggest": "将条目推到列表的背面。",
+        "translate": ""
+    },
+    {
+        "source": "The entry must remain allocated until the entry is removed from the list AND the caller who popped is done using the entry.",
+        "suggest": "该条目必须保持分配状态，直到将该条目从列表中删除，并且使用该条目完成了弹出的调用者。",
+        "translate": ""
+    },
+    {
+        "source": "Special care must be taken in the caller of `push` to ensure unwinding does not destroy the stack frame containing the entry.",
+        "suggest": "`push` 的调用者必须特别小心，以确保展开不会销毁包含入口的栈框架。",
+        "translate": ""
+    },
+    {
+        "source": "`entry` must meet all requirements for a mutable reference.",
+        "suggest": "`entry` 必须满足可变引用的所有要求。",
+        "translate": ""
+    },
+    {
+        "source": "`prev_tail` must meet all requirements for a mutable reference.",
+        "suggest": "`prev_tail` 必须满足可变引用的所有要求。",
+        "translate": ""
+    },
+    {
+        "source": "unwrap ok: always `Some` on non-dummy entries",
+        "suggest": "好的解包: 在非虚拟条目上总是 `Some`",
+        "translate": ""
+    },
+    {
+        "source": "Pops an entry from the front of the list.",
+        "suggest": "从列表的前面弹出一个条目。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must make sure to synchronize ending the borrow of the return value and deallocation of the containing entry.",
+        "suggest": "调用者必须确保将返回值的借用结尾与包含条目的释放进行同步。",
+        "translate": ""
+    },
+    {
+        "source": "Removes an entry from the list.",
+        "suggest": "从列表中删除一个条目。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure that `entry` has been pushed onto `self` prior to this call and has not moved since then.",
+        "suggest": "调用者必须确保在此调用之前已将 `entry` 推到 `self` 上，并且此后没有移动。",
+        "translate": ""
+    },
+    {
+        "source": "`prev` and `next` must meet all requirements for a mutable reference.entry",
+        "suggest": "`prev` 和 `next` 必须满足可变 reference.entry 的所有要求",
+        "translate": ""
+    },
+    {
+        "source": "A simple queue implementation for synchronization primitives.",
+        "suggest": "同步原语的简单队列实现。",
+        "translate": ""
+    },
+    {
+        "source": "This queue is used to implement condition variable and mutexes.",
+        "suggest": "该队列用于实现条件变量和互斥锁。",
+        "translate": ""
+    },
+    {
+        "source": "Users of this API are expected to use the `WaitVariable<T>` type.",
+        "suggest": "此 API 的用户应使用 `WaitVariable<T>` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Since that type is not `Sync`, it needs to be protected by e.g., a `SpinMutex` to allow shared access.",
+        "suggest": "由于该类型不是 `Sync`，因此需要使用 `SpinMutex` 进行保护以允许共享访问。",
+        "translate": ""
+    },
+    {
+        "source": "Since userspace may send spurious wake-ups, the wakeup event state is recorded in the enclave.",
+        "suggest": "由于用户空间可能发送虚假的唤醒，因此唤醒事件状态记录在安全区域中。",
+        "translate": ""
+    },
+    {
+        "source": "The wakeup event state is protected by a spinlock.",
+        "suggest": "唤醒事件状态受自旋锁保护。",
+        "translate": ""
+    },
+    {
+        "source": "The queue and associated wait state are stored in a `WaitVariable`.",
+        "suggest": "队列和相关的等待状态存储在 `WaitVariable` 中。",
+        "translate": ""
+    },
+    {
+        "source": "A doubly-linked list where callers are in charge of memory allocation of the nodes in the list.",
+        "suggest": "双链列表，其中调用者负责列表中节点的内存分配。",
+        "translate": ""
+    },
+    {
+        "source": "Trivial spinlock-based implementation of `sync::Mutex`.",
+        "suggest": "基于普通自旋锁的 `sync::Mutex` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "Perhaps use Intel TSX to avoid locking?",
+        "suggest": "也许使用 Intel TSX 避免锁定?",
+        "translate": ""
+    },
+    {
+        "source": "An queue entry in a `WaitQueue`.",
+        "suggest": "`WaitQueue` 中的队列条目。",
+        "translate": ""
+    },
+    {
+        "source": "TCS address of the thread that is waiting",
+        "suggest": "正在等待的线程的 TCS 地址",
+        "translate": ""
+    },
+    {
+        "source": "Whether this thread has been notified to be awoken",
+        "suggest": "此线程是否已被通知唤醒",
+        "translate": ""
+    },
+    {
+        "source": "Data stored with a `WaitQueue` alongside it.",
+        "suggest": "与 `WaitQueue` 一起存储的数据。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures accesses to the queue and the data are synchronized, since the type itself is not `Sync`.",
+        "suggest": "由于类型本身不是 `Sync`，因此可以确保对队列的访问和数据是同步的。",
+        "translate": ""
+    },
+    {
+        "source": "Consumers of this API should use a synchronization primitive for shared access, such as `SpinMutex`.",
+        "suggest": "此 API 的使用者应使用同步原语进行共享访问，例如 `SpinMutex`。",
+        "translate": ""
+    },
+    {
+        "source": "An RAII guard that will notify a set of target threads as well as unlock a mutex on drop.",
+        "suggest": "RAII 防护程序将通知一组目标线程，并在挂起时解锁互斥锁。",
+        "translate": ""
+    },
+    {
+        "source": "A queue of threads that are waiting on some synchronization primitive.",
+        "suggest": "正在等待某些同步原语的线程队列。",
+        "translate": ""
+    },
+    {
+        "source": "entries are allocated on the waiting thread's stack.",
+        "suggest": "条目在等待线程的栈上分配。",
+        "translate": ""
+    },
+    {
+        "source": "This avoids any global locking that might happen in the heap allocator.",
+        "suggest": "这样可以避免堆分配器中可能发生的任何锁定。",
+        "translate": ""
+    },
+    {
+        "source": "This is safe because the waiting thread will not return from that stack frame until after it is notified.",
+        "suggest": "这是安全的，因为等待的线程直到被通知后才从该栈帧返回。",
+        "translate": ""
+    },
+    {
+        "source": "The notifying thread ensures to clean up any references to the list entries before sending the wakeup event.",
+        "suggest": "通知线程可确保在发送唤醒事件之前清除对列表条目的所有引用。",
+        "translate": ""
+    },
+    {
+        "source": "We use an inner Mutex here to protect the data in the face of spurious wakeups.",
+        "suggest": "我们在此使用内部互斥锁来保护面对虚假唤醒的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Returns which TCSes will be notified when this guard drops.",
+        "suggest": "返回此守卫丢弃时将通知哪些 TCS。",
+        "translate": ""
+    },
+    {
+        "source": "Drop this `WaitGuard`, after dropping another `guard`.",
+        "suggest": "丢弃另一个 `guard` 之后，丢弃 `WaitGuard`。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the calling thread to the `WaitVariable`'s wait queue, then wait until a wakeup event.",
+        "suggest": "将调用线程添加到 `WaitVariable` 的等待队列中，然后等待直到唤醒事件。",
+        "translate": ""
+    },
+    {
+        "source": "This function does not return until this thread has been awoken.",
+        "suggest": "直到该线程被唤醒，该函数才返回。",
+        "translate": ""
+    },
+    {
+        "source": "very unsafe: check requirements of UnsafeList::push",
+        "suggest": "非常不安全: 检查 UnsafeList::push 的要求",
+        "translate": ""
+    },
+    {
+        "source": "don't panic, this would invalidate `entry` during unwinding",
+        "suggest": "请勿 panic，否则在展开期间会使 `entry` 失效",
+        "translate": ""
+    },
+    {
+        "source": "Adds the calling thread to the `WaitVariable`'s wait queue, then wait until a wakeup event or timeout.",
+        "suggest": "将调用线程添加到 `WaitVariable` 的等待队列中，然后等待直到唤醒事件或超时。",
+        "translate": ""
+    },
+    {
+        "source": "If event was observed, returns true.",
+        "suggest": "如果观察到事件，则返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "If not, it will remove the calling thread from the wait queue.",
+        "suggest": "如果没有，它将从等待队列中删除调用线程。",
+        "translate": ""
+    },
+    {
+        "source": "acquire the wait queue's lock first to avoid deadlock.",
+        "suggest": "首先获取等待队列的锁，以避免死锁。",
+        "translate": ""
+    },
+    {
+        "source": "nobody is waking us up, so remove our entry from the wait queue.",
+        "suggest": "没有人唤醒我们，因此从等待队列中删除我们的条目。",
+        "translate": ""
+    },
+    {
+        "source": "Either find the next waiter on the wait queue, or return the mutex guard unchanged.",
+        "suggest": "在等待队列中找到下一个等待者，或者不更改互斥锁守卫。",
+        "translate": ""
+    },
+    {
+        "source": "If a waiter is found, a `WaitGuard` is returned which will notify the waiter when it is dropped.",
+        "suggest": "如果找到等待者，则返回 `WaitGuard`，当 `WaitGuard` 丢弃时，它将通知等待者。",
+        "translate": ""
+    },
+    {
+        "source": "Either find any and all waiters on the wait queue, or return the mutex guard unchanged.",
+        "suggest": "在等待队列中找到所有等待者，或者不更改互斥锁守卫。",
+        "translate": ""
+    },
+    {
+        "source": "If at least one waiter is found, a `WaitGuard` is returned which will notify all waiters when it is dropped.",
+        "suggest": "如果找到至少一个等待者，则返回 `WaitGuard`，当 `WaitGuard` 被丢弃时，它将通知所有等待者。",
+        "translate": ""
+    },
+    {
+        "source": "jemalloc provides alignment less than MIN_ALIGN for small allocations.",
+        "suggest": "对于小分配，jemalloc 提供的对齐方式小于 MIN_ALIGN。",
+        "translate": ""
+    },
+    {
+        "source": "So only rely on MIN_ALIGN if size >= align.",
+        "suggest": "因此，如果 size>=align，则仅依赖 MIN_ALIGN。",
+        "translate": ""
+    },
+    {
+        "source": "Also see <https://github.com/rust-lang/rust/issues/45955> and <https://github.com/rust-lang/rust/issues/62251#issuecomment-507580914>.",
+        "suggest": "另请参见 <https://github.com/rust-lang/rust/issues/45955> 和 <https://github.com/rust-lang/rust/issues/62251#issuecomment-507580914>。",
+        "translate": ""
+    },
+    {
+        "source": "See the comment above in `alloc` for why this check looks the way it does.",
+        "suggest": "请参见 `alloc` 中的上面的注释，以了解此检查的外观。",
+        "translate": ""
+    },
+    {
+        "source": "On android we currently target API level 9 which unfortunately doesn't have the `posix_memalign` API used below.",
+        "suggest": "在 android 上，我们当前的目标是 API 级别 9，很遗憾，该级别没有在下面使用 `posix_memalign` API。",
+        "translate": ""
+    },
+    {
+        "source": "Instead we use `memalign`, but this unfortunately has the property on some systems where the memory returned cannot be deallocated by `free`!",
+        "suggest": "相反，我们使用 `memalign`，但是不幸的是，这在某些系统上具有 `free` 无法释放返回的内存的属性!",
+        "translate": ""
+    },
+    {
+        "source": "Upon closer inspection, however, this appears to work just fine with Android, so for this platform we should be fine to call `memalign` (which is present in API level 9).",
+        "suggest": "但是，仔细检查后，这似乎可以与 Android 一起使用，因此对于此平台，我们应该适合调用 `memalign` (API 级别 9 中提供)。",
+        "translate": ""
+    },
+    {
+        "source": "Some helpful references could possibly be chromium using memalign [1], attempts at documenting that memalign + free is ok [2] [3], or the current source of chromium which still uses memalign on android [4].",
+        "suggest": "一些有用的引用可能是使用 memalign [1] 的 chromium，尝试记录 memalign + free 的 [2] [3] 或当前的 chromium 来源 (仍在 android [4] 上使用 memalign)。",
+        "translate": ""
+    },
+    {
+        "source": "posix_memalign requires that the alignment be a multiple of `sizeof(void*)`.",
+        "suggest": "posix_memalign 要求对齐方式是 `sizeof(void*)` 的倍数。",
+        "translate": ""
+    },
+    {
+        "source": "Since these are all powers of 2, we can just use max.",
+        "suggest": "由于这些都是 2 的幂，我们只能使用 max。",
+        "translate": ""
+    },
+    {
+        "source": "ABI-compatibility module",
+        "suggest": "ABI 兼容模块",
+        "translate": ""
+    },
+    {
+        "source": "The ABI of Android has changed quite a bit over time, and libstd attempts to be both forwards and backwards compatible as much as possible.",
+        "suggest": "Android 的 ABI 随时间发生了很大变化，libstd 尝试尽可能地向前和向后兼容。",
+        "translate": ""
+    },
+    {
+        "source": "We want to always work with the most recent version of Android, but we also want to work with older versions of Android for whenever projects need to.",
+        "suggest": "我们希望始终使用最新版本的 Android，但也希望在需要项目时使用 Android 的较早版本。",
+        "translate": ""
+    },
+    {
+        "source": "Our current minimum supported Android version is `android-9`, e.g., Android with API level 9.",
+        "suggest": "我们当前支持的最低 Android 版本是 `android-9`，例如 API 级别为 9 的 Android。",
+        "translate": ""
+    },
+    {
+        "source": "We then in theory want to work on that and all future versions of Android!",
+        "suggest": "从理论上讲，我们接下来要研究所有 Android 的 future 版本!",
+        "translate": ""
+    },
+    {
+        "source": "Some of the detection here is done at runtime via `dlopen` and introspection.",
+        "suggest": "这里的某些检测是在运行时通过 `dlopen` 和自省进行的。",
+        "translate": ""
+    },
+    {
+        "source": "Other times no detection is performed at all and we just provide a fallback implementation as some versions of Android we support don't have the function.",
+        "suggest": "其他时候根本没有执行检测，我们只是提供了一个后备实现，因为我们支持的某些 Android 版本没有函数。",
+        "translate": ""
+    },
+    {
+        "source": "You'll find more details below about why each compatibility shim is needed.",
+        "suggest": "您将在下面找到有关为什么需要每个兼容性垫片的更多详细信息。",
+        "translate": ""
+    },
+    {
+        "source": "The `log2` and `log2f` functions apparently appeared in android-18, or at least you can see they're not present in the android-17 header [1] and they are present in android-18 [2].",
+        "suggest": "`log2` 和 `log2f` 函数显然出现在 android-18 中，或者至少您可以看到它们不在 android-17 标头 [1] 中，而在 android-18 [2] 中。",
+        "translate": ""
+    },
+    {
+        "source": "Note that these shims are likely less precise than directly calling `log2`, but hopefully that should be enough for now...",
+        "suggest": "请注意，这些垫片的精确度可能不如直接调用 `log2` 精确，但希望现在就足够了……",
+        "translate": ""
+    },
+    {
+        "source": "Note that mathematically, for any arbitrary `y`:",
+        "suggest": "请注意，在数学上，对于任意 `y`:",
+        "translate": ""
+    },
+    {
+        "source": "Hence because `ln` (log_e) is available on all Android we just choose `y = e` and get:",
+        "suggest": "因此，因为 `ln` (log_e) 在所有 Android 上都可用，所以我们只需选择 `y = e` 并获得:",
+        "translate": ""
+    },
+    {
+        "source": "Back in the day [1] the `signal` function was just an inline wrapper around `bsd_signal`, but starting in API level android-20 the `signal` symbols was introduced [2].",
+        "suggest": "早在 [1] 之前，`signal` 函数只是 `bsd_signal` 的内联包装，但是从 API 级别 android-20 开始，`signal` 符号被引入 [2]。",
+        "translate": ""
+    },
+    {
+        "source": "Finally, in android-21 the API `bsd_signal` was removed [3].",
+        "suggest": "最后，在 android-21 中，API `bsd_signal` 被删除。",
+        "translate": ""
+    },
+    {
+        "source": "Basically this means that if we want to be binary compatible with multiple Android releases (oldest being 9 and newest being 21) then we need to check for both symbols and not actually link against either.",
+        "suggest": "基本上，这意味着如果我们要与多个 Android 版本二进制兼容 (最旧的版本为 9，最新的版本为 21)，则需要检查两个符号，而实际上并未针对任何一个进行链接。",
+        "translate": ""
+    },
+    {
+        "source": "The `ftruncate64` symbol apparently appeared in android-12, so we do some dynamic detection to see if we can figure out whether `ftruncate64` exists.",
+        "suggest": "`ftruncate64` 符号显然出现在 android-12 中，因此我们进行了一些动态检测以查看是否可以确定 `ftruncate64` 是否存在。",
+        "translate": ""
+    },
+    {
+        "source": "If it doesn't we just fall back to `ftruncate`, generating an error for too-large values.",
+        "suggest": "如果不是，我们只是退回到 `ftruncate`，对于太大的值会产生错误。",
+        "translate": ""
+    },
+    {
+        "source": "Global initialization and retrieval of command line arguments.",
+        "suggest": "命令行参数的初始化和检索。",
+        "translate": ""
+    },
+    {
+        "source": "On some platforms these are stored during runtime startup, and on some they are retrieved from the system on demand.",
+        "suggest": "在某些平台上，这些是在运行时启动期间存储的，而在某些平台上，它们是根据需要从系统中检索的。",
+        "translate": ""
+    },
+    {
+        "source": "runtime init functions not used during testing",
+        "suggest": "测试期间未使用 runtime init 函数",
+        "translate": ""
+    },
+    {
+        "source": "We never call `ENV_LOCK.init()`, so it is UB to attempt to acquire this mutex reentrantly!",
+        "suggest": "我们从不调用 `ENV_LOCK.init()`，因此尝试重新获得此互斥锁是 UB!",
+        "translate": ""
+    },
+    {
+        "source": "On Linux-GNU, we rely on `ARGV_INIT_ARRAY` below to initialize `ARGC` and `ARGV`.",
+        "suggest": "在 Linux-GNU 上，我们依靠下面的 `ARGV_INIT_ARRAY` 初始化 `ARGC` 和 `ARGV`。",
+        "translate": ""
+    },
+    {
+        "source": "But in Miri that does not actually happen so we still initialize here.",
+        "suggest": "但是在 Miri 中实际上并没有发生，因此我们仍在此处进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "glibc passes argc, argv, and envp to functions in .init_array, as a non-standard extension.",
+        "suggest": "glibc 将 argc，argv 和 envp 作为非标准扩展传递给 .init_array 中的函数。",
+        "translate": ""
+    },
+    {
+        "source": "This allows `std::env::args` to work even in a `cdylib`, as it does on macOS and Windows.",
+        "suggest": "像 macOS 和 Windows 一样，这使 `std::env::args` 甚至可以在 `cdylib` 中工作。",
+        "translate": ""
+    },
+    {
+        "source": "These functions are in crt_externs.h.",
+        "suggest": "这些函数在 crt_externs.h 中。",
+        "translate": ""
+    },
+    {
+        "source": "As _NSGetArgc and _NSGetArgv aren't mentioned in iOS docs and use underscores in their names - they're most probably are considered private and therefore should be avoided Here is another way to get arguments using Objective C runtime",
+        "suggest": "由于 iOS 文档中未提及 _NSGetArgc 和 _NSGetArgv 并在其名称中使用下划线 - 它们很可能被视为私有的，因此应避免使用这是使用 Objective C 运行时获取参数的另一种方法",
+        "translate": ""
+    },
+    {
+        "source": "In general it looks like:",
+        "suggest": "总的来说，它看起来像:",
+        "translate": ""
+    },
+    {
+        "source": "for i in (0..[args count])",
+        "suggest": "对于 i in (0 .. [参数计数])",
+        "translate": ""
+    },
+    {
+        "source": "Might be moved and address is changing it is better to avoid initialization of potentially opaque OS data before it landed",
+        "suggest": "可能会移动并且地址正在更改，因此最好避免在登陆之前对潜在的不透明 OS 数据进行初始化",
+        "translate": ""
+    },
+    {
+        "source": "This implementation is used on systems that support pthread_condattr_setclock where we configure condition variable to use monotonic clock (instead of default system clock).",
+        "suggest": "此实现在支持 pthread_condattr_setclock 的系统上使用，在该系统上我们将条件变量配置为使用单调时钟 (而不是默认系统时钟)。",
+        "translate": ""
+    },
+    {
+        "source": "This approach avoids all problems that result from changes made to the system time.",
+        "suggest": "这种方法避免了由于更改系统时间而导致的所有问题。",
+        "translate": ""
+    },
+    {
+        "source": "Nanosecond calculations can't overflow because both values are below 1e9.",
+        "suggest": "纳秒级计算不会溢出，因为这两个值均低于 1e9。",
+        "translate": ""
+    },
+    {
+        "source": "This implementation is modeled after libcxx's condition_variable",
+        "suggest": "此实现是在 libcxx 的 condition_variable 之后建模的",
+        "translate": ""
+    },
+    {
+        "source": "1000 years",
+        "suggest": "1000 年",
+        "translate": ""
+    },
+    {
+        "source": "implementation of `pthread_cond_timedwait` is buggy with super long durations.",
+        "suggest": "`pthread_cond_timedwait` 的实现是 buggy，具有超长的持续时间。",
+        "translate": ""
+    },
+    {
+        "source": "When duration is greater than",
+        "suggest": "当持续时间大于",
+        "translate": ""
+    },
+    {
+        "source": "0x100_0000_0000_0000 seconds, `pthread_cond_timedwait` in macOS Sierra return error 316.",
+        "suggest": "0x100_0000_0000_0000 秒，macOS Sierra 中的 `pthread_cond_timedwait` 返回错误 316。",
+        "translate": ""
+    },
+    {
+        "source": "This program demonstrates the issue:",
+        "suggest": "该程序演示了该问题:",
+        "translate": ""
+    },
+    {
+        "source": "To work around this issue, and possible bugs of other OSes, timeout is clamped to 1000 years, which is allowable per the API of `wait_timeout` because of spurious wakeups.",
+        "suggest": "要变通解决此问题以及其他操作系统的可能的错误，超时被限制为 1000 年，这是 `wait_timeout` 的 API 允许的，因为虚假的唤醒。",
+        "translate": ""
+    },
+    {
+        "source": "First, figure out what time it currently is, in both system and stable time.",
+        "suggest": "首先，弄清当前时间是系统时间还是稳定时间。",
+        "translate": ""
+    },
+    {
+        "source": "pthread_cond_timedwait uses system time, but we want to report timeout based on stable time.",
+        "suggest": "pthread_cond_timedwait 使用系统时间，但是我们要基于稳定时间报告超时。",
+        "translate": ""
+    },
+    {
+        "source": "And wait!",
+        "suggest": "等一下",
+        "translate": ""
+    },
+    {
+        "source": "ETIMEDOUT is not a totally reliable method of determining timeout due to clock shifts, so do the check ourselves",
+        "suggest": "ETIMEDOUT 并不是完全可靠的确定由于时钟偏移而导致的超时的方法，因此请自己进行检查",
+        "translate": ""
+    },
+    {
+        "source": "On DragonFly pthread_cond_destroy() returns EINVAL if called on a condvar that was just initialized with libc::PTHREAD_COND_INITIALIZER.",
+        "suggest": "在 DragonFly 上，如果在刚刚用 libc::PTHREAD_COND_INITIALIZER 初始化的 condvar 上调用，则 pthread_cond_destroy() 返回 EINVAL。",
+        "translate": ""
+    },
+    {
+        "source": "Once it is used or pthread_cond_init() is called, this behaviour no longer occurs.",
+        "suggest": "一旦使用它或调用 pthread_cond_init()，就不会再出现此现象。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extension to the primitives in the `std::ffi` module.",
+        "suggest": "特定于 Unix 的 `std::ffi` 模块中的原语扩展。",
+        "translate": ""
+    },
+    {
+        "source": "We now read 8 bytes from the offset 10.",
+        "suggest": "现在，我们从偏移量 10 读取 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "We now read exactly 8 bytes from the offset 10.",
+        "suggest": "现在，我们从偏移量 10 中正好读取了 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "We now write at the offset 10.",
+        "suggest": "现在，我们在偏移量 10 处写入。",
+        "translate": ""
+    },
+    {
+        "source": "for owner and read for others.",
+        "suggest": "供所有者和其他人阅读。",
+        "translate": ""
+    },
+    {
+        "source": "Give read/write for owner and read for others.",
+        "suggest": "为所有者提供 read/write，为他人阅读。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the `std::fs` module.",
+        "suggest": "`std::fs` 模块中对原语的特定于 Unix 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Used for `File::read` on intra-doc links",
+        "suggest": "用于文档内链接上的 `File::read`",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`fs::File`].",
+        "suggest": "特定于 Unix 的 [`fs::File`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Reads a number of bytes starting from a given offset.",
+        "suggest": "从给定的偏移量开始读取多个字节。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of bytes read.",
+        "suggest": "返回读取的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "The offset is relative to the start of the file and thus independent from the current cursor.",
+        "suggest": "偏移量相对于文件的开始，因此独立于当前游标。",
+        "translate": ""
+    },
+    {
+        "source": "The current file cursor is not affected by this function.",
+        "suggest": "当前文件游标不受此函数影响。",
+        "translate": ""
+    },
+    {
+        "source": "Note that similar to [`File::read`], it is not an error to return with a short read.",
+        "suggest": "请注意，类似于 [`File::read`]，短读返回不会出错。",
+        "translate": ""
+    },
+    {
+        "source": "Reads the exact number of byte required to fill `buf` from the given offset.",
+        "suggest": "从给定的偏移量读取填充 `buf` 所需的确切字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to [`io::Read::read_exact`] but uses [`read_at`] instead of `read`.",
+        "suggest": "与 [`io::Read::read_exact`] 相似，但使用 [`read_at`] 代替 `read`。",
+        "translate": ""
+    },
+    {
+        "source": "If this function encounters an error of the kind [`io::ErrorKind::Interrupted`] then the error is ignored and the operation will continue.",
+        "suggest": "如果此函数遇到 [`io::ErrorKind::Interrupted`] 类型的错误，则该错误将被忽略，并且操作将继续。",
+        "translate": ""
+    },
+    {
+        "source": "If this function encounters an \"end of file\" before completely filling the buffer, it returns an error of the kind [`io::ErrorKind::UnexpectedEof`].",
+        "suggest": "如果此函数在完全填充缓冲区之前遇到 \"end of file\"，它将返回 [`io::ErrorKind::UnexpectedEof`] 类型的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Writes a number of bytes starting from a given offset.",
+        "suggest": "从给定的偏移量开始写入多个字节。",
+        "translate": ""
+    },
+    {
+        "source": "When writing beyond the end of the file, the file is appropriately extended and the intermediate bytes are initialized with the value 0.",
+        "suggest": "当写入超出文件末尾时，将适当扩展文件，并将中间字节初始化为值 0。",
+        "translate": ""
+    },
+    {
+        "source": "Note that similar to [`File::write`], it is not an error to return a short write.",
+        "suggest": "请注意，与 [`File::write`] 相似，返回短写也不是错误。",
+        "translate": ""
+    },
+    {
+        "source": "Attempts to write an entire buffer starting from a given offset.",
+        "suggest": "尝试从给定的偏移量开始写入整个缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "This method will continuously call [`write_at`] until there is no more data to be written or an error of non-[`io::ErrorKind::Interrupted`] kind is returned.",
+        "suggest": "此方法将连续调用 [`write_at`]，直到没有更多数据要写入或返回非 [`io::Interrupted`] 类型的错误为止。",
+        "translate": ""
+    },
+    {
+        "source": "The first error that is not of [`io::ErrorKind::Interrupted`] kind generated from this method will be returned.",
+        "suggest": "从此方法生成的不是 [`io::ErrorKind::Interrupted`] 类型的第一个错误将被返回。",
+        "translate": ""
+    },
+    {
+        "source": "This function will return the first error of non-[`io::ErrorKind::Interrupted`] kind that [`write_at`] returns.",
+        "suggest": "该函数将返回 [`write_at`] 返回的第一个非 [[io::Interrupted`] 类型的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`fs::Permissions`].",
+        "suggest": "特定于 Unix 的 [`fs::Permissions`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the underlying raw `st_mode` bits that contain the standard Unix permissions for this file.",
+        "suggest": "返回包含该文件的标准 Unix 权限的基础 `st_mode` 原始位。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the underlying raw bits for this set of permissions.",
+        "suggest": "设置此权限集的基础原始位。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new instance of `Permissions` from the given set of Unix permission bits.",
+        "suggest": "从给定的 Unix 权限位集中创建 `Permissions` 的新实例。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`fs::OpenOptions`].",
+        "suggest": "特定于 Unix 的 [`fs::OpenOptions`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the mode bits that a new file will be created with.",
+        "suggest": "设置将用于创建新文件的模式位。",
+        "translate": ""
+    },
+    {
+        "source": "If a new file is created as part of an `OpenOptions::open` call then this specified `mode` will be used as the permission bits for the new file.",
+        "suggest": "如果在 `OpenOptions::open` 调用中创建了一个新文件，则此指定的 `mode` 将用作新文件的权限位。",
+        "translate": ""
+    },
+    {
+        "source": "If no `mode` is set, the default of `0o666` will be used.",
+        "suggest": "如果未设置 `mode`，则将使用默认值 `0o666`。",
+        "translate": ""
+    },
+    {
+        "source": "The operating system masks out bits with the system's `umask`, to produce the final permissions.",
+        "suggest": "操作系统用系统的 `umask` 屏蔽掉某些位，以产生最终权限。",
+        "translate": ""
+    },
+    {
+        "source": "Pass custom flags to the `flags` argument of `open`.",
+        "suggest": "将自定义标志传递给 `open` 的 `flags` 参数。",
+        "translate": ""
+    },
+    {
+        "source": "The bits that define the access mode are masked out with `O_ACCMODE`, to ensure they do not interfere with the access mode set by Rusts options.",
+        "suggest": "定义访问模式的位被 `O_ACCMODE` 屏蔽，以确保它们不干扰 Rusts 选项设置的访问模式。",
+        "translate": ""
+    },
+    {
+        "source": "Custom flags can only set flags, not remove flags set by Rusts options.",
+        "suggest": "自定义标志只能设置标志，而不能删除 Rusts 选项设置的标志。",
+        "translate": ""
+    },
+    {
+        "source": "This options overwrites any previously set custom flags.",
+        "suggest": "此选项将覆盖以前设置的所有自定义标志。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`fs::Metadata`].",
+        "suggest": "特定于 Unix 的 [`fs::Metadata`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the ID of the device containing the file.",
+        "suggest": "返回包含文件的设备的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the rights applied to this file.",
+        "suggest": "返回应用于此文件的权限。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of hard links pointing to this file.",
+        "suggest": "返回指向该文件的硬链接数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the user ID of the owner of this file.",
+        "suggest": "返回此文件所有者的用户标识。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the group ID of the owner of this file.",
+        "suggest": "返回此文件所有者的组 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the device ID of this file (if it is a special one).",
+        "suggest": "返回此文件的设备 ID (如果是特殊文件)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the total size of this file in bytes.",
+        "suggest": "返回此文件的总大小 (以字节为单位)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last access time of the file, in nanoseconds since [`atime`].",
+        "suggest": "返回文件的最后访问时间，自 [`atime`] 起以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last modification time of the file, in nanoseconds since [`mtime`].",
+        "suggest": "返回文件的最后修改时间，自 [`mtime`] 起以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last status change time of the file, in nanoseconds since [`ctime`].",
+        "suggest": "返回文件的最后状态更改时间，自 [`ctime`] 起以纳秒为单位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the block size for filesystem I/O.",
+        "suggest": "返回文件系统 I/O 的块大小。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of blocks allocated to the file, in 512-byte units.",
+        "suggest": "返回以 512 字节为单位分配给文件的块数。",
+        "translate": ""
+    },
+    {
+        "source": "Please note that this may be smaller than `st_size / 512` when the file has holes.",
+        "suggest": "请注意，当文件有 holes 时，这个值可能小于 `st_size / 512`。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions for [`fs::FileType`].",
+        "suggest": "[`fs::FileType`] 的特定于 Unix 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Adds support for special Unix file types such as block/character devices, pipes, and sockets.",
+        "suggest": "增加了对特殊 Unix 文件类型的支持，例如 block/character 设备，管道和套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this file type is a block device.",
+        "suggest": "如果此文件类型是块设备，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this file type is a char device.",
+        "suggest": "如果此文件类型是 char 设备，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this file type is a fifo.",
+        "suggest": "如果此文件类型为 fifo，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this file type is a socket.",
+        "suggest": "如果此文件类型是套接字，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extension methods for [`fs::DirEntry`].",
+        "suggest": "[`fs::DirEntry`] 的特定于 Unix 的扩展方法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the underlying `d_ino` field in the contained `dirent` structure.",
+        "suggest": "返回所包含的 `dirent` 结构体中的基础 `d_ino` 字段。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`fs::DirBuilder`].",
+        "suggest": "特定于 Unix 的 [`fs::DirBuilder`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the mode to create new directories with.",
+        "suggest": "设置用于创建新目录的模式。",
+        "translate": ""
+    },
+    {
+        "source": "This option defaults to 0o777.",
+        "suggest": "此选项默认为 0o777。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `raw_fd` is only valid as long as `f` exists.",
+        "suggest": "注意，`raw_fd` 仅在存在 `f` 时才有效。",
+        "translate": ""
+    },
+    {
+        "source": "no other functions should call `from_raw_fd`, so there is only one owner for the file descriptor.",
+        "suggest": "没有其他函数可以调用 `from_raw_fd`，因此文件描述符只有一个所有者。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to general I/O primitives.",
+        "suggest": "通用 I/O 原语的特定于 Unix 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Raw file descriptors.",
+        "suggest": "原始文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "A trait to extract the raw unix file descriptor from an underlying object.",
+        "suggest": "trait，用于从基础 object 中提取原始 unix 文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "This is only available on unix platforms and must be imported in order to call the method.",
+        "suggest": "这仅在 unix 平台上可用，并且必须导入才能调用该方法。",
+        "translate": ""
+    },
+    {
+        "source": "platforms have a corresponding `AsRawHandle` and `AsRawSocket` set of traits.",
+        "suggest": "平台具有 traits 的相应 `AsRawHandle` 和 `AsRawSocket` 集。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new instance of `Self` from the given raw file descriptor.",
+        "suggest": "根据给定的原始文件描述符构造 `Self` 的新实例。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes this object, returning the raw underlying file descriptor.",
+        "suggest": "使用此 object，返回原始基础文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "use fd with native unix bindings",
+        "suggest": "将 fd 与原生 unix 绑定一起使用",
+        "translate": ""
+    },
+    {
+        "source": "Platform-specific extensions to `std` for Unix platforms.",
+        "suggest": "针对 Unix 平台的 `std` 的特定于平台的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Provides access to platform-level information on Unix platforms, and exposes Unix-specific functions that would otherwise be inappropriate as part of the core `std` library.",
+        "suggest": "提供对 Unix 平台上平台级信息的访问，并公开 Unix 特定的函数，否则这些函数不适合作为 core `std` 库的一部分。",
+        "translate": ""
+    },
+    {
+        "source": "It exposes more ways to deal with platform-specific strings (`OsStr`, `OsString`), allows to set permissions more granularly, extract low-level file descriptors from files and sockets, and has platform-specific helpers for spawning processes.",
+        "suggest": "它提供了更多方式来处理特定于平台的字符串 (`OsStr`，`OsString`)，允许更精细地设置权限，从文件和套接字中提取托管文件描述符，并具有用于生成程序的特定于平台的助手。",
+        "translate": ""
+    },
+    {
+        "source": "Make libc adapt #[doc(cfg(...))] so we don't need these fake definitions here?",
+        "suggest": "使 libc 适应 #[doc (cfg (...) ) ]，所以我们在这里不需要这些假的定义吗?",
+        "translate": ""
+    },
+    {
+        "source": "Work with an actual instance of the type since using a null pointer is UB",
+        "suggest": "使用类型的实际实例，因为使用空指针是 UB",
+        "translate": ""
+    },
+    {
+        "source": "null byte for pathname addresses is already there because we zeroed the struct",
+        "suggest": "路径名地址的空字节已经存在，因为我们将结构体清零了",
+        "translate": ""
+    },
+    {
+        "source": "An address associated with a Unix socket.",
+        "suggest": "与 Unix 套接字关联的地址。",
+        "translate": ""
+    },
+    {
+        "source": "When there is a datagram from unnamed unix socket linux returns zero bytes of address",
+        "suggest": "当有来自未命名的 unix 套接字的数据报时，linux 返回零字节的地址",
+        "translate": ""
+    },
+    {
+        "source": "i.e., zero-length address",
+        "suggest": "即零长度地址",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the address is unnamed.",
+        "suggest": "如果地址未命名，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "A named address:",
+        "suggest": "命名地址:",
+        "translate": ""
+    },
+    {
+        "source": "An unnamed address:",
+        "suggest": "一个未命名的地址:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the contents of this address if it is a `pathname` address.",
+        "suggest": "如果它是 `pathname` 地址，则返回该地址的内容。",
+        "translate": ""
+    },
+    {
+        "source": "With a pathname:",
+        "suggest": "带有路径名:",
+        "translate": ""
+    },
+    {
+        "source": "Without a pathname:",
+        "suggest": "没有路径名:",
+        "translate": ""
+    },
+    {
+        "source": "seems to return a len of 16 and a zeroed sun_path for unnamed addresses",
+        "suggest": "似乎返回 16 的 len 和未命名地址的清零 sun_path",
+        "translate": ""
+    },
+    {
+        "source": "return the same pointer if it is the last cmsg.",
+        "suggest": "如果是最后一个 cmsg，则返回相同的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, check it if the previous pointer is the same as the current one.",
+        "suggest": "因此，请检查它是否先前的指针与当前的指针相同。",
+        "translate": ""
+    },
+    {
+        "source": "Create `AncillaryDataIter` struct to iterate through the data unit in the control message.",
+        "suggest": "创建 `AncillaryDataIter` 结构体以遍历控制消息中的数据单元。",
+        "translate": ""
+    },
+    {
+        "source": "must contain a valid control message.",
+        "suggest": "必须包含有效的控制消息。",
+        "translate": ""
+    },
+    {
+        "source": "Create a Unix credential struct.",
+        "suggest": "创建 Unix 凭据结构体。",
+        "translate": ""
+    },
+    {
+        "source": "PID, UID and GID is set to 0.",
+        "suggest": "PID，UID 和 GID 设置为 0。",
+        "translate": ""
+    },
+    {
+        "source": "Set the PID.",
+        "suggest": "设置 PID。",
+        "translate": ""
+    },
+    {
+        "source": "Get the current PID.",
+        "suggest": "获取当前的 PID。",
+        "translate": ""
+    },
+    {
+        "source": "Set the UID.",
+        "suggest": "设置 UID。",
+        "translate": ""
+    },
+    {
+        "source": "Get the current UID.",
+        "suggest": "获取当前的 UID。",
+        "translate": ""
+    },
+    {
+        "source": "Set the GID.",
+        "suggest": "设置 GID。",
+        "translate": ""
+    },
+    {
+        "source": "Get the current GID.",
+        "suggest": "获取当前的 GID。",
+        "translate": ""
+    },
+    {
+        "source": "This control message contains file descriptors.",
+        "suggest": "该控制消息包含文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "The level is equal to `SOL_SOCKET` and the type is equal to `SCM_RIGHTS`.",
+        "suggest": "级别等于 `SOL_SOCKET`，类型等于 `SCM_RIGHTS`。",
+        "translate": ""
+    },
+    {
+        "source": "This control message contains unix credentials.",
+        "suggest": "此控制消息包含 unix 凭据。",
+        "translate": ""
+    },
+    {
+        "source": "The level is equal to `SOL_SOCKET` and the type is equal to `SCM_CREDENTIALS` or `SCM_CREDS`.",
+        "suggest": "级别等于 `SOL_SOCKET`，类型等于 `SCM_CREDENTIALS` 或 `SCM_CREDS`。",
+        "translate": ""
+    },
+    {
+        "source": "The error type which is returned from parsing the type a control message.",
+        "suggest": "从解析控制消息后返回的错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "This enum represent one control message of variable type.",
+        "suggest": "该枚举表示一个变量类型的控制消息。",
+        "translate": ""
+    },
+    {
+        "source": "Create a `AncillaryData::ScmRights` variant.",
+        "suggest": "创建一个 `AncillaryData::ScmRights` 成员。",
+        "translate": ""
+    },
+    {
+        "source": "must contain a valid control message and the control message must be type of `SOL_SOCKET` and level of `SCM_RIGHTS`.",
+        "suggest": "必须包含有效的控制消息，并且控制消息的类型必须为 `SOL_SOCKET`，级别为 `SCM_RIGHTS`。",
+        "translate": ""
+    },
+    {
+        "source": "Create a `AncillaryData::ScmCredentials` variant.",
+        "suggest": "创建一个 `AncillaryData::ScmCredentials` 成员。",
+        "translate": ""
+    },
+    {
+        "source": "must contain a valid control message and the control message must be type of `SOL_SOCKET` and level of `SCM_CREDENTIALS` or `SCM_CREDENTIALS`.",
+        "suggest": "必须包含有效的控制消息，并且控制消息的类型必须为 `SOL_SOCKET`，级别为 `SCM_CREDENTIALS` 或 `SCM_CREDENTIALS`。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is used to iterate through the control messages.",
+        "suggest": "该结构体用于遍历控制消息。",
+        "translate": ""
+    },
+    {
+        "source": "A Unix socket Ancillary data struct.",
+        "suggest": "Unix 套接字辅助数据结构体。",
+        "translate": ""
+    },
+    {
+        "source": "Create an ancillary data with the given buffer.",
+        "suggest": "使用给定的缓冲区创建辅助数据。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the capacity of the buffer.",
+        "suggest": "返回缓冲区的容量。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of used bytes.",
+        "suggest": "返回使用的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the iterator of the control messages.",
+        "suggest": "返回控制消息的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Is `true` if during a recv operation the ancillary was truncated.",
+        "suggest": "如果在 recv 操作期间辅助设备被截断，则为 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Add file descriptors to the ancillary data.",
+        "suggest": "将文件描述符添加到辅助数据。",
+        "translate": ""
+    },
+    {
+        "source": "The function returns `true` if there was enough space in the buffer.",
+        "suggest": "如果缓冲区中有足够的空间，函数将返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "If there was not enough space then no file descriptors was appended.",
+        "suggest": "如果没有足够的空间，则不会附加文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "Technically, that means this operation adds a control message with the level `SOL_SOCKET` and type `SCM_RIGHTS`.",
+        "suggest": "从技术上讲，这意味着此操作将添加级别为 `SOL_SOCKET` 和类型 `SCM_RIGHTS` 的控制消息。",
+        "translate": ""
+    },
+    {
+        "source": "Add credentials to the ancillary data.",
+        "suggest": "将凭证添加到辅助数据。",
+        "translate": ""
+    },
+    {
+        "source": "If there was not enough space then no credentials was appended.",
+        "suggest": "如果没有足够的空间，则不会附加凭据。",
+        "translate": ""
+    },
+    {
+        "source": "Technically, that means this operation adds a control message with the level `SOL_SOCKET` and type `SCM_CREDENTIALS` or `SCM_CREDS`.",
+        "suggest": "从技术上讲，这意味着此操作将添加级别为 `SOL_SOCKET` 且类型为 `SCM_CREDENTIALS` 或 `SCM_CREDS` 的控制消息。",
+        "translate": ""
+    },
+    {
+        "source": "Clears the ancillary data, removing all values.",
+        "suggest": "清除辅助数据，删除所有值。",
+        "translate": ""
+    },
+    {
+        "source": "A Unix datagram socket.",
+        "suggest": "Unix 数据报套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a Unix datagram socket bound to the given path.",
+        "suggest": "创建绑定到给定路径的 Unix 数据报套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a Unix Datagram socket which is not bound to any address.",
+        "suggest": "创建未绑定到任何地址的 Unix 数据报套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an unnamed pair of connected sockets.",
+        "suggest": "创建一对未命名的已连接套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Returns two `UnixDatagrams`s which are connected to each other.",
+        "suggest": "返回两个相互连接的 `UnixDatagrams`。",
+        "translate": ""
+    },
+    {
+        "source": "Connects the socket to the specified address.",
+        "suggest": "将套接字连接到指定地址。",
+        "translate": ""
+    },
+    {
+        "source": "The [`send`] method may be used to send data to the specified address.",
+        "suggest": "[`send`] 方法可用于将数据发送到指定的地址。",
+        "translate": ""
+    },
+    {
+        "source": "and [`recv_from`] will only receive data from that address.",
+        "suggest": "[`recv_from`] 将仅从该地址接收数据。",
+        "translate": ""
+    },
+    {
+        "source": "The returned `UnixDatagram` is a reference to the same socket that this object references.",
+        "suggest": "返回的 `UnixDatagram` 是与此 object 引用相同的套接字的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Both handles can be used to accept incoming connections and options set on one side will affect the other.",
+        "suggest": "两个句柄均可用于接受传入的连接，并且在一侧设置的选项会影响另一侧。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the address of this socket.",
+        "suggest": "返回此套接字的地址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the address of this socket's peer.",
+        "suggest": "返回此套接字的对等方的地址。",
+        "translate": ""
+    },
+    {
+        "source": "The [`connect`] method will connect the socket to a peer.",
+        "suggest": "[`connect`] 方法会将套接字连接到对等方。",
+        "translate": ""
+    },
+    {
+        "source": "Receives data from the socket.",
+        "suggest": "从套接字接收数据。",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes read and the address from whence the data came.",
+        "suggest": "成功后，返回读取的字节数和数据到达的地址。",
+        "translate": ""
+    },
+    {
+        "source": "Receives data and ancillary data from socket.",
+        "suggest": "从套接字接收数据和辅助数据。",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes read, if the data was truncated and the address from whence the msg came.",
+        "suggest": "成功时，如果数据被截断，并且返回 msg 的地址，则返回读取的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "On success, returns the number of bytes read and if the data was truncated.",
+        "suggest": "成功后，返回读取的字节数以及数据是否被截断。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data on the socket to the specified address.",
+        "suggest": "将套接字上的数据发送到指定地址。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data on the socket to the socket's peer.",
+        "suggest": "将套接字上的数据发送到套接字的对等方。",
+        "translate": ""
+    },
+    {
+        "source": "The peer address may be set by the `connect` method, and this method will return an error if the socket has not already been connected.",
+        "suggest": "可以通过 `connect` 方法设置对等地址，如果尚未连接套接字，则此方法将返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data and ancillary data on the socket to the specified address.",
+        "suggest": "将套接字上的数据和辅助数据发送到指定地址。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data and ancillary data on the socket.",
+        "suggest": "在套接字上发送数据和辅助数据。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the read timeout for the socket.",
+        "suggest": "设置套接字的读取超时。",
+        "translate": ""
+    },
+    {
+        "source": "If the provided value is [`None`], then [`recv`] and [`recv_from`] calls will block indefinitely.",
+        "suggest": "如果提供的值为 [`None`]，则 [`recv`] 和 [`recv_from`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the write timeout for the socket.",
+        "suggest": "设置套接字的写超时。",
+        "translate": ""
+    },
+    {
+        "source": "If the provided value is [`None`], then [`send`] and [`send_to`] calls will block indefinitely.",
+        "suggest": "如果提供的值为 [`None`]，则 [`send`] 和 [`send_to`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the socket into or out of nonblocking mode.",
+        "suggest": "将套接字移入或移出非阻塞模式。",
+        "translate": ""
+    },
+    {
+        "source": "Moves the socket to pass unix credentials as control message in [`SocketAncillary`].",
+        "suggest": "移动套接字以将 unix 凭据作为 [`SocketAncillary`] 中的控制消息传递。",
+        "translate": ""
+    },
+    {
+        "source": "Set the socket option `SO_PASSCRED`.",
+        "suggest": "设置套接字选项 `SO_PASSCRED`。",
+        "translate": ""
+    },
+    {
+        "source": "Get the current value of the socket for passing unix credentials in [`SocketAncillary`].",
+        "suggest": "获取用于在 [`SocketAncillary`] 中传递 unix 凭据的套接字的当前值。",
+        "translate": ""
+    },
+    {
+        "source": "This value can be change by [`set_passcred`].",
+        "suggest": "可以通过 [`set_passcred`] 更改此值。",
+        "translate": ""
+    },
+    {
+        "source": "Get the socket option `SO_PASSCRED`.",
+        "suggest": "获取套接字选项 `SO_PASSCRED`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the value of the `SO_ERROR` option.",
+        "suggest": "返回 `SO_ERROR` 选项的值。",
+        "translate": ""
+    },
+    {
+        "source": "Shut down the read, write, or both halves of this connection.",
+        "suggest": "关闭此连接的读取，写入或两半。",
+        "translate": ""
+    },
+    {
+        "source": "This function will cause all pending and future I/O calls on the specified portions to immediately return with an appropriate value (see the documentation of [`Shutdown`]).",
+        "suggest": "此函数将导致对指定部分的所有未决和 future I/O 调用立即返回适当的值 (请参见 [`Shutdown`] 的文档)。",
+        "translate": ""
+    },
+    {
+        "source": "accept connections and process them, spawning a new thread for each one",
+        "suggest": "接受连接并处理它们，为每个连接产生一个新线程",
+        "translate": ""
+    },
+    {
+        "source": "A structure representing a Unix domain socket server.",
+        "suggest": "表示 Unix 域套接字服务器的结构体。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `UnixListener` bound to the specified socket.",
+        "suggest": "创建绑定到指定套接字的新 `UnixListener`。",
+        "translate": ""
+    },
+    {
+        "source": "Accepts a new incoming connection to this listener.",
+        "suggest": "接受与此侦听器的新传入连接。",
+        "translate": ""
+    },
+    {
+        "source": "This function will block the calling thread until a new Unix connection is established.",
+        "suggest": "该函数将阻塞调用线程，直到建立新的 Unix 连接为止。",
+        "translate": ""
+    },
+    {
+        "source": "When established, the corresponding [`UnixStream`] and the remote peer's address will be returned.",
+        "suggest": "建立后，将返回相应的 [`UnixStream`] 和远程对等方的地址。",
+        "translate": ""
+    },
+    {
+        "source": "The returned `UnixListener` is a reference to the same socket that this object references.",
+        "suggest": "返回的 `UnixListener` 是与此 object 引用相同的套接字的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Platform specific",
+        "suggest": "特定于平台",
+        "translate": ""
+    },
+    {
+        "source": "On Redox this always returns `None`.",
+        "suggest": "在 Redox 上，它总是返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator over incoming connections.",
+        "suggest": "返回传入连接上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator will never return [`None`] and will also not yield the peer's [`SocketAddr`] structure.",
+        "suggest": "迭代器将永远不会返回 [`None`]，也不会产生对等方的 [`SocketAddr`] 结构体。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over incoming connections to a [`UnixListener`].",
+        "suggest": "在 [`UnixListener`] 的传入连接上进行迭代的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "It will never return [`None`].",
+        "suggest": "它将永远不会返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific networking functionality",
+        "suggest": "特定于 Unix 的网络功能",
+        "translate": ""
+    },
+    {
+        "source": "A Unix stream socket.",
+        "suggest": "Unix 流套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Connects to the socket named by `path`.",
+        "suggest": "连接到以 `path` 命名的套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Returns two `UnixStream`s which are connected to each other.",
+        "suggest": "返回两个相互连接的 `UnixStream`。",
+        "translate": ""
+    },
+    {
+        "source": "The returned `UnixStream` is a reference to the same stream that this object references.",
+        "suggest": "返回的 `UnixStream` 是与此 object 引用相同的流的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the socket address of the local half of this connection.",
+        "suggest": "返回此连接本地一半的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the socket address of the remote half of this connection.",
+        "suggest": "返回此连接的另一半的套接字地址。",
+        "translate": ""
+    },
+    {
+        "source": "Gets the peer credentials for this Unix domain socket.",
+        "suggest": "获取此 Unix 域套接字的对等凭据。",
+        "translate": ""
+    },
+    {
+        "source": "If the provided value is [`None`], then [`read`] calls will block indefinitely.",
+        "suggest": "如果提供的值为 [`None`]，则 [`read`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "If the provided value is [`None`], then [`write`] calls will block indefinitely.",
+        "suggest": "如果提供的值为 [`None`]，则 [`write`] 调用将无限期阻塞。",
+        "translate": ""
+    },
+    {
+        "source": "must be moved in or the test will hang!",
+        "suggest": "必须移入，否则测试将挂起!",
+        "translate": ""
+    },
+    {
+        "source": "Check send()",
+        "suggest": "检查 send()",
+        "translate": ""
+    },
+    {
+        "source": "Changing default socket works too",
+        "suggest": "更改默认套接字也可以",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the `std::process` module.",
+        "suggest": "`std::process` 模块中对原语的特定于 Unix 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to the [`process::Command`] builder.",
+        "suggest": "[`process::Command`] 构建器的特定于 Unix 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is sealed: it cannot be implemented outside the standard library.",
+        "suggest": "trait 是密封的: 不能在标准库之外实现。",
+        "translate": ""
+    },
+    {
+        "source": "This is so that future additional methods are not breaking changes.",
+        "suggest": "这是为了将来的附加方法不会破坏更改。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the child process's user ID.",
+        "suggest": "设置子进程的用户 ID。",
+        "translate": ""
+    },
+    {
+        "source": "This translates to a `setuid` call in the child process.",
+        "suggest": "这将转换为子进程中的 `setuid` 调用。",
+        "translate": ""
+    },
+    {
+        "source": "Failure in the `setuid` call will cause the spawn to fail.",
+        "suggest": "`setuid` 调用失败将导致 spawn 失败。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to `uid`, but sets the group ID of the child process.",
+        "suggest": "与 `uid` 相似，但是设置子进程的组 ID。",
+        "translate": ""
+    },
+    {
+        "source": "This has the same semantics as the `uid` field.",
+        "suggest": "这具有与 `uid` 字段相同的语义。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the supplementary group IDs for the calling process.",
+        "suggest": "设置调用进程的补充组 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Translates to a `setgroups` call in the child process.",
+        "suggest": "在子进程中转换为 `setgroups` 调用。",
+        "translate": ""
+    },
+    {
+        "source": "Schedules a closure to be run just before the `exec` function is invoked.",
+        "suggest": "计划在 `exec` 函数被调用之前运行一个闭包。",
+        "translate": ""
+    },
+    {
+        "source": "The closure is allowed to return an I/O error whose OS error code will be communicated back to the parent and returned as an error from when the spawn was requested.",
+        "suggest": "允许闭包返回 I/O 错误，该错误的 OS 错误代码将被传达回父级，并从请求 spawn 开始作为错误返回。",
+        "translate": ""
+    },
+    {
+        "source": "Multiple closures can be registered and they will be called in order of their registration.",
+        "suggest": "可以注册多个闭包，并且将按照注册顺序对其进行调用。",
+        "translate": ""
+    },
+    {
+        "source": "If a closure returns `Err` then no further closures will be called and the spawn operation will immediately return with a failure.",
+        "suggest": "如果闭包返回 `Err`，则不会再调用任何闭包，并且 spawn 操作将立即失败返回。",
+        "translate": ""
+    },
+    {
+        "source": "Notes and Safety",
+        "suggest": "注意和安全",
+        "translate": ""
+    },
+    {
+        "source": "This closure will be run in the context of the child process after a `fork`.",
+        "suggest": "`fork` 之后，此闭包将在子进程的上下文中运行。",
+        "translate": ""
+    },
+    {
+        "source": "This primarily means that any modifications made to memory on behalf of this closure will **not** be visible to the parent process.",
+        "suggest": "这主要意味着，代表此闭包对内存所做的任何修改对于父进程都是不可见的。",
+        "translate": ""
+    },
+    {
+        "source": "This is often a very constrained environment where normal operations like `malloc`, accessing environment variables through [`std::env`] or acquiring a mutex are not guaranteed to work (due to other threads perhaps still running when the `fork` was run).",
+        "suggest": "这通常是一个非常受限制的环境，无法保证正常操作 (如 `malloc`，通过 [`std::env`] 访问环境变量或获取互斥锁) (由于运行 `fork` 时可能仍在运行其他线程)。",
+        "translate": ""
+    },
+    {
+        "source": "For further details refer to the [POSIX fork() specification] and the equivalent documentation for any targeted platform, especially the requirements around *async-signal-safety*.",
+        "suggest": "有关更多详细信息，请参见 [POSIX fork() specification] 和任何目标平台的等效文档，尤其是有关 *async-signal-safety* 的要求。",
+        "translate": ""
+    },
+    {
+        "source": "This also means that all resources such as file descriptors and memory-mapped regions got duplicated.",
+        "suggest": "这也意味着所有资源 (例如文件描述符和内存映射的区域) 都被复制了。",
+        "translate": ""
+    },
+    {
+        "source": "It is your responsibility to make sure that the closure does not violate library invariants by making invalid use of these duplicates.",
+        "suggest": "您有责任通过无效使用这些重复项来确保闭包不违反库不变式。",
+        "translate": ""
+    },
+    {
+        "source": "When this closure is run, aspects such as the stdio file descriptors and working directory have successfully been changed, so output to these locations may not appear where intended.",
+        "suggest": "运行此闭包时，已成功更改了诸如标准输入输出文件描述符和工作目录之类的内容，因此在预期的位置可能不会显示输出到这些位置。",
+        "translate": ""
+    },
+    {
+        "source": "This method is stable and usable, but it should be unsafe.",
+        "suggest": "此方法稳定且可用，但不安全。",
+        "translate": ""
+    },
+    {
+        "source": "To fix that, it got deprecated in favor of the unsafe [`pre_exec`].",
+        "suggest": "为了解决这个问题，它不赞成使用不安全的 [`pre_exec`]。",
+        "translate": ""
+    },
+    {
+        "source": "Performs all the required setup by this `Command`, followed by calling the `execvp` syscall.",
+        "suggest": "通过此 `Command` 执行所有必需的设置，然后调用 `execvp` syscall。",
+        "translate": ""
+    },
+    {
+        "source": "On success this function will not return, and otherwise it will return an error indicating why the exec (or another part of the setup of the `Command`) failed.",
+        "suggest": "成功后，该函数将不会返回，否则它将返回错误，指示 exec (或 `Command` 的另一部分安装) 失败的原因。",
+        "translate": ""
+    },
+    {
+        "source": "not returning has the same implications as calling [`process::exit`] – no destructors on the current stack or any other thread’s stack will be run.",
+        "suggest": "不返回与调用 [`process::exit`] 具有相同的含义 - 当前栈或任何其他线程的栈上都不会运行析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, it is recommended to only call `exec` at a point where it is fine to not run any destructors.",
+        "suggest": "因此，建议仅在不运行任何析构函数的时候调用 `exec`。",
+        "translate": ""
+    },
+    {
+        "source": "Note, that the `execvp` syscall independently guarantees that all memory is freed and all file descriptors with the `CLOEXEC` option (set by default on all file descriptors opened by the standard library) are closed.",
+        "suggest": "请注意，`execvp` 系统调用独立保证释放所有内存，并关闭所有带有 `CLOEXEC` 选项的文件描述符 (默认情况下在标准库打开的所有文件描述符上设置)。",
+        "translate": ""
+    },
+    {
+        "source": "This function, unlike `spawn`, will **not** `fork` the process to create a new child.",
+        "suggest": "与 `spawn` 不同，此函数不会使用 `fork` 来创建一个新的子进程。",
+        "translate": ""
+    },
+    {
+        "source": "Like spawn, however, the default behavior for the stdio descriptors will be to inherited from the current process.",
+        "suggest": "但是，与 spawn 一样，标准输入输出描述符的默认行为将继承自当前进程。",
+        "translate": ""
+    },
+    {
+        "source": "The process may be in a \"broken state\" if this function returns in error.",
+        "suggest": "如果此函数返回错误，则该进程可能在 \"broken state\" 中。",
+        "translate": ""
+    },
+    {
+        "source": "For example the working directory, environment variables, signal handling settings, various user/group information, or aspects of stdio file descriptors may have changed.",
+        "suggest": "例如，工作目录，环境变量，信号处理设置，各种 user/group 信息或标准输入输出文件描述符的各个方面可能已更改。",
+        "translate": ""
+    },
+    {
+        "source": "If a \"transactional spawn\" is required to gracefully handle errors it is recommended to use the cross-platform `spawn` instead.",
+        "suggest": "如果需要 \"transactional spawn\" 来妥善处理错误，建议改用跨平台 `spawn`。",
+        "translate": ""
+    },
+    {
+        "source": "Set executable argument",
+        "suggest": "设置可执行参数",
+        "translate": ""
+    },
+    {
+        "source": "Set the first process argument, `argv[0]`, to something other than the default executable path.",
+        "suggest": "将第一个进程参数 `argv[0]` 设置为默认可执行路径以外的其他值。",
+        "translate": ""
+    },
+    {
+        "source": "This may *not* be safe to call after `libc::fork`, because it may allocate.",
+        "suggest": "在 `libc::fork` 之后调用此方法可能不是 * 安全的，因为它可能会分配。",
+        "translate": ""
+    },
+    {
+        "source": "That may be worth fixing at some point in the future.",
+        "suggest": "在 future 中的某个位置可能值得解决。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`process::ExitStatus`].",
+        "suggest": "特定于 Unix 的 [`process::ExitStatus`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "On Unix, `ExitStatus` **does not necessarily represent an exit status**, as passed to the `exit` system call or returned by [`ExitStatus::code()`](crate::process::ExitStatus::code).",
+        "suggest": "在 Unix 上，`ExitStatus`**不一定表示退出状态**，它已传递给 `exit` 系统调用或由 [`ExitStatus::code()`](crate::process::ExitStatus::code) 返回。",
+        "translate": ""
+    },
+    {
+        "source": "It represents **any wait status**, as returned by one of the `wait` family of system calls.",
+        "suggest": "它表示 **任何等待状态**，由 `wait` 系列系统调用之一返回。",
+        "translate": ""
+    },
+    {
+        "source": "This is because a Unix wait status (a Rust `ExitStatus`) can represent a Unix exit status, but can also represent other kinds of process event.",
+        "suggest": "这是因为 Unix 等待状态 (Rust `ExitStatus`) 可以表示 Unix 退出状态，但也可以表示其他类型的进程事件。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `ExitStatus` from the raw underlying integer status value from `wait`",
+        "suggest": "根据来自 `wait` 的原始基础整数状态值创建一个新的 `ExitStatus`",
+        "translate": ""
+    },
+    {
+        "source": "The value should be a **wait status, not an exit status**.",
+        "suggest": "该值应该是等待状态，而不是退出状态。",
+        "translate": ""
+    },
+    {
+        "source": "If the process was terminated by a signal, returns that signal.",
+        "suggest": "如果进程被一个信号终止，则返回该信号。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, if `WIFSIGNALED`, this returns `WTERMSIG`.",
+        "suggest": "换句话说，如果为 `WIFSIGNALED`，则返回 `WTERMSIG`。",
+        "translate": ""
+    },
+    {
+        "source": "If the process was terminated by a signal, says whether it dumped core.",
+        "suggest": "如果进程被一个信号终止，说明它是否丢弃了 core。",
+        "translate": ""
+    },
+    {
+        "source": "If the process was stopped by a signal, returns that signal.",
+        "suggest": "如果该进程被信号停止，则返回该信号。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, if `WIFSTOPPED`, this returns `WSTOPSIG`.",
+        "suggest": "换句话说，如果为 `WIFSTOPPED`，则返回 `WSTOPSIG`。",
+        "translate": ""
+    },
+    {
+        "source": "This is only possible if the status came from a `wait` system call which was passed `WUNTRACED`, was then converted into an `ExitStatus`.",
+        "suggest": "仅当状态来自传递给 `WUNTRACED` 的 `wait` 系统调用，然后将其转换为 `ExitStatus` 时，才有可能。",
+        "translate": ""
+    },
+    {
+        "source": "Whether the process was continued from a stopped status.",
+        "suggest": "进程是否从停止状态继续。",
+        "translate": ""
+    },
+    {
+        "source": "This is only possible if the status came from a `wait` system call which was passed `WCONTINUED`, was then converted into an `ExitStatus`.",
+        "suggest": "仅当状态来自 `wait` 系统调用，然后将其转换为 `ExitStatus` 时，才有可能。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the underlying raw `wait` status.",
+        "suggest": "返回基础的原始 `wait` 状态。",
+        "translate": ""
+    },
+    {
+        "source": "The returned integer is a **wait status, not an exit status**.",
+        "suggest": "返回的整数是等待状态，而不是退出状态。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the OS-assigned process identifier associated with this process's parent.",
+        "suggest": "返回与此进程的父级关联的操作系统分配的进程标识符。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific primitives available on all unix platforms.",
+        "suggest": "所有 unix 平台上都提供特定于 Unix 的原语。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the `std::thread` module.",
+        "suggest": "`std::thread` 模块中对原语的特定于 Unix 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to [`JoinHandle`].",
+        "suggest": "特定于 Unix 的 [`JoinHandle`] 扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the raw pthread_t without taking ownership",
+        "suggest": "提取原始 pthread_t 而不拥有所有权",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the thread, returning the raw pthread_t",
+        "suggest": "消耗线程，返回原始 pthread_t",
+        "translate": ""
+    },
+    {
+        "source": "This function **transfers ownership** of the underlying pthread_t to the caller.",
+        "suggest": "此函数将基础 pthread_t 的所有权 ** 转移给调用方。",
+        "translate": ""
+    },
+    {
+        "source": "Callers are then the unique owners of the pthread_t and must either detach or join the pthread_t once it's no longer needed.",
+        "suggest": "这样，调用方便是 pthread_t 的唯一所有者，一旦不再需要，则必须分离或加入 pthread_t。",
+        "translate": ""
+    },
+    {
+        "source": "Create two connected sockets and get their peer credentials.",
+        "suggest": "创建两个连接的套接字并获取其对等凭据。",
+        "translate": ""
+    },
+    {
+        "source": "They should be equal.",
+        "suggest": "他们应该是平等的。",
+        "translate": ""
+    },
+    {
+        "source": "Check that the UID and GIDs match up.",
+        "suggest": "检查 UID 和 GID 是否匹配。",
+        "translate": ""
+    },
+    {
+        "source": "On supported platforms (see the cfg above), the credentials should always include the PID.",
+        "suggest": "在受支持的平台上 (请参见上面的 cfg)，凭据应始终包含 PID。",
+        "translate": ""
+    },
+    {
+        "source": "peer credentials.",
+        "suggest": "对等凭据。",
+        "translate": ""
+    },
+    {
+        "source": "Code in this file is heavily based on work done in PR 13 from the tokio-uds repository on GitHub.",
+        "suggest": "该文件中的代码很大程度上基于 GitHub 上 tokio-uds 仓库在 PR 13 中所做的工作。",
+        "translate": ""
+    },
+    {
+        "source": "For reference, the link is here:",
+        "suggest": "对于引用，链接在这里:",
+        "translate": ""
+    },
+    {
+        "source": "Credit to Martin Habovštiak (GitHub username Kixunil) and contributors for this work.",
+        "suggest": "感谢 MartinHabovštiak (GitHub 用户名 Kixunil) 和这项工作的贡献者。",
+        "translate": ""
+    },
+    {
+        "source": "Credentials for a UNIX process for credentials passing.",
+        "suggest": "UNIX 进程的凭据以用于凭据传递。",
+        "translate": ""
+    },
+    {
+        "source": "The UID part of the peer credential.",
+        "suggest": "对等凭证的 UID 部分。",
+        "translate": ""
+    },
+    {
+        "source": "This is the effective UID of the process at the domain socket's endpoint.",
+        "suggest": "这是域套接字端点处进程的有效 UID。",
+        "translate": ""
+    },
+    {
+        "source": "The GID part of the peer credential.",
+        "suggest": "对等凭证的 GID 部分。",
+        "translate": ""
+    },
+    {
+        "source": "This is the effective GID of the process at the domain socket's endpoint.",
+        "suggest": "这是域套接字端点处进程的有效 GID。",
+        "translate": ""
+    },
+    {
+        "source": "The PID part of the peer credential.",
+        "suggest": "对等凭证的 PID 部分。",
+        "translate": ""
+    },
+    {
+        "source": "This field is optional because the PID part of the peer credentials is not supported on every platform.",
+        "suggest": "该字段是可选的，因为并非每个平台都支持对等凭据的 PID 部分。",
+        "translate": ""
+    },
+    {
+        "source": "On platforms where the mechanism to discover the PID exists, this field will be populated to the PID of the process at the domain socket's endpoint.",
+        "suggest": "在存在发现 PID 的机制的平台上，此字段将填充到域套接字端点处的进程的 PID。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, it will be set to None.",
+        "suggest": "否则，它将设置为 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Trivial sanity checks.",
+        "suggest": "微不足道的检查。",
+        "translate": ""
+    },
+    {
+        "source": "assures me that every libstd-supported platform has a",
+        "suggest": "向我保证，每个受 libstd 支持的平台都有一个",
+        "translate": ""
+    },
+    {
+        "source": "32-bit c_int.",
+        "suggest": "32 位 c_int。",
+        "translate": ""
+    },
+    {
+        "source": "Below is -2, in two's complement, but that only works out because c_int is 32 bits.",
+        "suggest": "下面是 -2，以 2 的补码形式出现，但这仅适用于 c_int 为 32 位的情况。",
+        "translate": ""
+    },
+    {
+        "source": "The maximum read limit on most POSIX-like systems is `SSIZE_MAX`, with the man page quoting that if the count of bytes to read is greater than `SSIZE_MAX` the result is \"unspecified\".",
+        "suggest": "在大多数类似 POSIX 的系统上，最大读取限制为 `SSIZE_MAX`，手册页中引用了以下内容: 如果要读取的字节数大于 `SSIZE_MAX`，则结果为 \"unspecified\"。",
+        "translate": ""
+    },
+    {
+        "source": "On macOS, however, apparently the 64-bit libc is either buggy or intentionally showing odd behavior by rejecting any read with a size larger than or equal to INT_MAX.",
+        "suggest": "但是，在 macOS 上，显然 64 位 libc 是 buggy 或通过拒绝任何大小大于或等于 INT_MAX 的读取而有意显示奇怪的行为。",
+        "translate": ""
+    },
+    {
+        "source": "To handle both of these the read size is capped on both platforms.",
+        "suggest": "为了处理这两种情况，在两个平台上都限制了读取大小。",
+        "translate": ""
+    },
+    {
+        "source": "The minimum value required by POSIX.",
+        "suggest": "POSIX 要求的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "we just asserted that the value is in the valid range and isn't `-1` (the only value bigger than `0xFF_FF_FF_FE` unsigned)",
+        "suggest": "我们只是断言该值在有效范围内，并且不是 `-1` (唯一大于 `0xFF_FF_FF_FE` 无符号的值)",
+        "translate": ""
+    },
+    {
+        "source": "We want to atomically duplicate this file descriptor and set the CLOEXEC flag, and currently that's done via F_DUPFD_CLOEXEC.",
+        "suggest": "我们要自动复制该文件描述符并设置 CLOEXEC 标志，当前是通过 F_DUPFD_CLOEXEC 完成的。",
+        "translate": ""
+    },
+    {
+        "source": "This is a POSIX flag that was added to Linux in 2.6.24.",
+        "suggest": "这是在 2.6.24 中添加到 Linux 的 POSIX 标志。",
+        "translate": ""
+    },
+    {
+        "source": "The reason for this is that if an error occurs we don't actually know if the file descriptor was closed or not, and if we retried (for something like EINTR), we might close another valid file descriptor opened after we closed ours.",
+        "suggest": "这样做的原因是，如果发生错误，我们实际上不知道文件描述符是否已关闭，并且如果我们重试 (针对 EINTR 之类的东西)，则可能会关闭另一个在关闭文件描述符后打开的有效文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "This should be available on Linux with all `target_env`.",
+        "suggest": "Linux 和所有 `target_env` 上都应该可用。",
+        "translate": ""
+    },
+    {
+        "source": "But currently only glibc exposes `statx` fn and structs.",
+        "suggest": "但是目前只有 glibc 公开 `statx` fn 和结构体。",
+        "translate": ""
+    },
+    {
+        "source": "We don't want to import unverified raw C structs here directly.",
+        "suggest": "我们不想在这里直接导入未经验证的原始 C 结构体。",
+        "translate": ""
+    },
+    {
+        "source": "This is needed to check if btime is supported by the filesystem.",
+        "suggest": "这是检查文件系统是否支持 btime 所必需的。",
+        "translate": ""
+    },
+    {
+        "source": "We prefer `statx` on Linux if available, which contains file creation time.",
+        "suggest": "如果可用，我们更喜欢 Linux 上的 `statx`，它包含文件创建时间。",
+        "translate": ""
+    },
+    {
+        "source": "Default `stat64` contains no creation time.",
+        "suggest": "默认 `stat64` 不包含创建时间。",
+        "translate": ""
+    },
+    {
+        "source": "kernel prior to 4.11 or glibc prior to glibc 2.28 don't support `statx` We store the availability in global to avoid unnecessary syscalls.",
+        "suggest": "4.11 之前的内核或 glibc 2.28 之前的 glibc 不支持 `statx`。为了避免不必要的系统调用，我们将可用性存储在 X 中。",
+        "translate": ""
+    },
+    {
+        "source": "Not available",
+        "suggest": "无法使用",
+        "translate": ""
+    },
+    {
+        "source": "It is a trick to call `statx` with NULL pointers to check if the syscall is available.",
+        "suggest": "这是使用 NULL 指针调用 `statx` 来检查系统调用是否可用的技巧。",
+        "translate": ""
+    },
+    {
+        "source": "According to the manual, it is expected to fail with EFAULT.",
+        "suggest": "根据手册，预期会因 EFAULT 而失败。",
+        "translate": ""
+    },
+    {
+        "source": "We do this mainly for performance, since it is nearly hundreds times faster than a normal successful call.",
+        "suggest": "我们这样做主要是为了提高性能，因为它比正常的成功调用快近数百倍。",
+        "translate": ""
+    },
+    {
+        "source": "We don't check `err == Some(libc::ENOSYS)` because the syscall may be limited and returns `EPERM`.",
+        "suggest": "我们不检查 `err == Some(libc::ENOSYS)`，因为系统调用可能受到限制并返回 `EPERM`。",
+        "translate": ""
+    },
+    {
+        "source": "Listing all possible errors seems not a good idea.",
+        "suggest": "列出所有可能的错误似乎不是一个好主意。",
+        "translate": ""
+    },
+    {
+        "source": "We cannot fill `stat64` exhaustively because of private padding fields.",
+        "suggest": "由于专用的填充字段，我们无法详尽地填充 `stat64`。",
+        "translate": ""
+    },
+    {
+        "source": "on gnu-mips, `dev_t` otherwise",
+        "suggest": "在 gnu-mips 上，否则为 `dev_t`",
+        "translate": ""
+    },
+    {
+        "source": "on gnu-x86_64-x32, `c_ulong` otherwise.",
+        "suggest": "在 gnu-x86_64-x32 上，否则在 `c_ulong` 上。",
+        "translate": ""
+    },
+    {
+        "source": "all DirEntry's will have a reference to this struct",
+        "suggest": "所有 DirEntry 都会对此结构体进行引用",
+        "translate": ""
+    },
+    {
+        "source": "We need to store an owned copy of the entry name on Solaris and Fuchsia because a) it uses a zero-length array to store the name, b) its lifetime between readdir calls is not guaranteed.",
+        "suggest": "我们需要在 Solaris 和 Fuchsia 上存储条目名称的拥有副本，因为 a) 它使用零长度数组存储名称，b) 不能保证 readdir 调用之间的生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "check if any class (owner, group, others) has write permission",
+        "suggest": "检查是否有任何类 (所有者，组，其他) 具有写权限",
+        "translate": ""
+    },
+    {
+        "source": "remove write permission for all classes;",
+        "suggest": "删除所有类的写权限;",
+        "translate": ""
+    },
+    {
+        "source": "equivalent to `chmod a-w <file>`",
+        "suggest": "相当于 `chmod a-w <file>`",
+        "translate": ""
+    },
+    {
+        "source": "add write permission for all classes;",
+        "suggest": "为所有类添加写权限;",
+        "translate": ""
+    },
+    {
+        "source": "equivalent to `chmod a+w <file>`",
+        "suggest": "相当于 `chmod a+w <file>`",
+        "translate": ""
+    },
+    {
+        "source": "This will only be called from std::fs::ReadDir, which will add a \"ReadDir()\" frame.",
+        "suggest": "这只能从 std::fs::ReadDir 调用，std::fs::ReadDir 将添加 \"ReadDir()\" 框架。",
+        "translate": ""
+    },
+    {
+        "source": "Thus the result will be e g 'ReadDir(\"/home\")'",
+        "suggest": "因此结果将是例如 'ReadDir(\"/home\")'",
+        "translate": ""
+    },
+    {
+        "source": "Although readdir_r(3) would be a correct function to use here because of the thread safety, on Illumos and Fuchsia the readdir(3C) function is safe to use in threaded applications and it is generally preferred over the readdir_r(3C) function.",
+        "suggest": "尽管 readdir_r(3) 由于线程安全而在此处使用是正确的函数，但在 Illumos 和 Fuchsia 上，readdir(3C) 函数在线程应用程序中可以安全使用，并且通常比 readdir_r(3C) 函数更可取。",
+        "translate": ""
+    },
+    {
+        "source": "NULL can mean either the end is reached or an error occurred.",
+        "suggest": "NULL 可能意味着到达终点或发生错误。",
+        "translate": ""
+    },
+    {
+        "source": "So we had to clear errno beforehand to check for an error now.",
+        "suggest": "因此，我们必须事先清除 errno 才能检查错误。",
+        "translate": ""
+    },
+    {
+        "source": "We encountered an error (which will be returned in this iteration), but we also reached the end of the directory stream.",
+        "suggest": "我们遇到了一个错误 (将在此迭代中返回)，但我们也到达了目录流的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "The `end_of_stream` flag is enabled to make sure that we return `None` in the next iteration (instead of looping forever)",
+        "suggest": "`end_of_stream` 标志已启用，以确保我们在下一次迭代中返回 `None` (而不是永远循环)",
+        "translate": ""
+    },
+    {
+        "source": "The third argument of `open64` is documented to have type `mode_t`.",
+        "suggest": "`open64` 的第三个参数记录为具有 `mode_t` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "On some platforms (like macOS, where `open64` is actually `open`), `mode_t` is `u16`.",
+        "suggest": "在某些平台上 (例如 macOS，其中 `open64` 实际上是 `open`)，`mode_t` 是 `u16`。",
+        "translate": ""
+    },
+    {
+        "source": "However, since this is a variadic function, C integer promotion rules mean that on the ABI level, this still gets passed as `c_int` (aka `u32` on Unix platforms).",
+        "suggest": "但是，由于这是一个可变参数，C 整数提升规则意味着在 ABI 级别上，它仍会作为 `c_int` (在 Unix 平台上称为 `u32`) 传递。",
+        "translate": ""
+    },
+    {
+        "source": "Casting to `i64` is fine, too large values will end up as negative which will cause an error in `lseek64`.",
+        "suggest": "强制转换为 `i64`，太大的值最终将变为负数，这将导致 `lseek64` 中的错误。",
+        "translate": ""
+    },
+    {
+        "source": "The use of PATH_MAX is generally not encouraged, but it is inevitable in this case because macOS defines `fcntl` with `F_GETPATH` in terms of `MAXPATHLEN`, and there are no alternatives.",
+        "suggest": "通常不鼓励使用 PATH_MAX，但是在这种情况下，这是不可避免的，因为 macOS 根据 `MAXPATHLEN` 定义了 `fcntl` 和 `F_GETPATH`，并且没有其他选择。",
+        "translate": ""
+    },
+    {
+        "source": "If a better method is invented, it should be used instead.",
+        "suggest": "如果发明了更好的方法，则应改用它。",
+        "translate": ""
+    },
+    {
+        "source": "implement this for other Unix platforms",
+        "suggest": "在其他 Unix 平台上实现此功能",
+        "translate": ""
+    },
+    {
+        "source": "Trigger the internal buffer resizing logic of `Vec` by requiring more space than the current capacity.",
+        "suggest": "通过需要比当前容量更多的空间来触发 `Vec` 的内部缓冲区大小调整逻辑。",
+        "translate": ""
+    },
+    {
+        "source": "The length is guaranteed to be the same as the capacity due to the if statement above.",
+        "suggest": "由于上面的 if 语句，长度保证与容量相同。",
+        "translate": ""
+    },
+    {
+        "source": "VxWorks, Redox, and old versions of Android lack `linkat`, so use `link` instead.",
+        "suggest": "VxWorks，Redox 和旧版本的 Android 缺少 `linkat`，因此请改用 `link`。",
+        "translate": ""
+    },
+    {
+        "source": "POSIX leaves it implementation-defined whether `link` follows symlinks, so rely on the `symlink_hard_link` test in library/std/src/fs/tests.rs to check the behavior.",
+        "suggest": "POSIX 保留 `link` 是否遵循符号链接的实现定义，因此依靠 library/std/src/fs/tests.rs 中的 `symlink_hard_link` 测试来检查行为。",
+        "translate": ""
+    },
+    {
+        "source": "Use `linkat` with `AT_FDCWD` instead of `link` as `linkat` gives us a flag to specify how symlinks should be handled.",
+        "suggest": "将 `linkat` 与 `AT_FDCWD` 而不是 `link` 一起使用，因为 `linkat` 为我们提供了一个标志，用于指定应如何处理符号链接。",
+        "translate": ""
+    },
+    {
+        "source": "Pass 0 as the flags argument, meaning don't follow symlinks.",
+        "suggest": "传递 0 作为标志参数，表示不要遵循符号链接。",
+        "translate": ""
+    },
+    {
+        "source": "create the file with the correct mode right away",
+        "suggest": "立即以正确的模式创建文件",
+        "translate": ""
+    },
+    {
+        "source": "Set the correct file permissions, in case the file already existed.",
+        "suggest": "如果文件已经存在，请设置正确的文件许可权。",
+        "translate": ""
+    },
+    {
+        "source": "Don't set the permissions on already existing non-files like pipes/FIFOs or device nodes.",
+        "suggest": "不要在已经存在的非文件 (例如 pipes/FIFOs 或设备节点) 上设置权限。",
+        "translate": ""
+    },
+    {
+        "source": "The code below ensures that `FreeOnDrop` is never a null pointer",
+        "suggest": "下面的代码确保 `FreeOnDrop` 永远不会为空指针",
+        "translate": ""
+    },
+    {
+        "source": "returns -1 if the `to` or `from` files cannot be closed.",
+        "suggest": "如果无法关闭 `to` 或 `from` 文件，则返回 -1。",
+        "translate": ""
+    },
+    {
+        "source": "However, this is not considered this an error.",
+        "suggest": "但是，这不被视为错误。",
+        "translate": ""
+    },
+    {
+        "source": "prior to 10.12 don't support `fclonefileat` We store the availability in a global to avoid unnecessary syscalls",
+        "suggest": "10.12 之前的版本不支持 `fclonefileat`，我们将可用性存储在一个目录中，以避免不必要的 syscalls",
+        "translate": ""
+    },
+    {
+        "source": "Opportunistically attempt to create a copy-on-write clone of `from` using `fclonefileat`.",
+        "suggest": "机会性地尝试使用 `fclonefileat` 创建 `from` 的写时复制副本。",
+        "translate": ""
+    },
+    {
+        "source": "will fail on non-APFS volumes, if the destination already exists, or if the source and destination are on different devices.",
+        "suggest": "如果目标已经存在，或者源和目标在不同的设备上，则在非 APFS 卷上将失败。",
+        "translate": ""
+    },
+    {
+        "source": "In all these cases `fcopyfile` should succeed.",
+        "suggest": "在所有这些情况下，`fcopyfile` 应该会成功。",
+        "translate": ""
+    },
+    {
+        "source": "Fall back to using `fcopyfile` if `fclonefileat` does not succeed.",
+        "suggest": "如果 `fclonefileat` 不成功，则退回到使用 `fcopyfile`。",
+        "translate": ""
+    },
+    {
+        "source": "We ensure that `FreeOnDrop` never contains a null pointer so it is always safe to call `copyfile_state_free`",
+        "suggest": "我们确保 `FreeOnDrop` 绝不包含空指针，因此调用 `copyfile_state_free` 始终是安全的",
+        "translate": ""
+    },
+    {
+        "source": "Sleep forever if the timeout is longer than fits in a timespec.",
+        "suggest": "如果超时时间超出了时间范围，请永久睡眠。",
+        "translate": ""
+    },
+    {
+        "source": "This conversion never truncates, as subsec_nanos is always <1e9.",
+        "suggest": "此转换不会截断，因为 subsec_nanos 始终为 < 1e9。",
+        "translate": ""
+    },
+    {
+        "source": "is declared unsigned to match the Emscripten headers, but since it's used as an opaque value, we can ignore the meaning of signed vs.",
+        "suggest": "声明为无符号以匹配 Emscripten 标头，但是由于将其用作不透明值，因此我们可以忽略带符号 vs. 的含义。",
+        "translate": ""
+    },
+    {
+        "source": "unsigned and cast here.",
+        "suggest": "没有签名和 cast。",
+        "translate": ""
+    },
+    {
+        "source": "the data flow in this benchmark:",
+        "suggest": "此基准测试中的数据流:",
+        "translate": ""
+    },
+    {
+        "source": "benchmark loop using io::copy",
+        "suggest": "使用 io::copy 的基准测试循环",
+        "translate": ""
+    },
+    {
+        "source": "check that splice works, otherwise the benchmark would hang",
+        "suggest": "检查接头是否有效，否则基准会挂起",
+        "translate": ""
+    },
+    {
+        "source": "splice works",
+        "suggest": "拼接工程",
+        "translate": ""
+    },
+    {
+        "source": "This module contains specializations that can offload `io::copy()` operations on file descriptor containing types (`File`, `TcpStream`, etc.) to more efficient syscalls than `read(2)` and `write(2)`.",
+        "suggest": "该模块包含一些专门知识，可以将包含类型 (`File`，`TcpStream` 等) 的文件描述符上的 `io::copy()` 操作卸载到比 `read(2)` 和 `write(2)` 更有效的系统调用中。",
+        "translate": ""
+    },
+    {
+        "source": "Specialization is only applied to wholly std-owned types so that user code can't observe that the `Read` and `Write` traits are not used.",
+        "suggest": "专业化仅适用于 std 完全拥有的类型，因此用户代码无法观察到未使用 `Read` 和 `Write` traits。",
+        "translate": ""
+    },
+    {
+        "source": "Since a copy operation involves a reader and writer side where each can consist of different types and also involve generic wrappers (e.g. `Take`, `BufReader`) it is not practical to specialize a single method on all possible combinations.",
+        "suggest": "由于复制操作涉及 reader 和 writer 端，其中每个端可以由不同类型组成，并且还涉及泛型包装器 (例如 `Take`，`BufReader`)，因此在所有可能的组合上专门使用单个方法是不切实际的。",
+        "translate": ""
+    },
+    {
+        "source": "Instead readers and writers are handled separately by the `CopyRead` and `CopyWrite` specialization traits and then specialized on by the `Copier::copy` method.",
+        "suggest": "取而代之的是，由 `CopyRead` 和 `CopyWrite` 专业化 traits 分别处理 readers 和 writers，然后由 `Copier::copy` 方法进行专门化。",
+        "translate": ""
+    },
+    {
+        "source": "uses the specialization traits to unpack the underlying file descriptors and additional prerequisites and constraints imposed by the wrapper types.",
+        "suggest": "使用专业化 traits 来解包基础文件描述符以及包装类型施加的其他先决条件和约束。",
+        "translate": ""
+    },
+    {
+        "source": "Once it has obtained all necessary pieces and brought any wrapper types into a state where they can be safely bypassed it will attempt to use the `copy_file_range(2)`, `sendfile(2)` or `splice(2)` syscalls to move data directly between file descriptors.",
+        "suggest": "一旦获得了所有必需的片段并将所有包装器类型置于可以安全绕过它们的状态，它将尝试使用 `copy_file_range(2)`，`sendfile(2)` 或 `splice(2)` 系统调用在文件描述符之间直接移动数据。",
+        "translate": ""
+    },
+    {
+        "source": "Since those syscalls have requirements that cannot be fully checked in advance and gathering additional information about file descriptors would require additional syscalls anyway it simply attempts to use them one after another (guided by inaccurate hints) to figure out which one works and and falls back to the generic read-write copy loop if none of them does.",
+        "suggest": "由于这些系统调用具有无法事先进行全面检查的要求，并且收集有关文件描述符的其他信息将需要额外的系统调用，因此它只是简单地尝试一个接一个地使用它们 (以不正确的提示为指导)，以找出哪个起作用并且回退到如果它们都不做，则泛型读写复制循环。",
+        "translate": ""
+    },
+    {
+        "source": "Once a working syscall is found for a pair of file descriptors it will be called in a loop until the copy operation is completed.",
+        "suggest": "一旦找到了一对文件描述符的有效系统调用，它将在循环中被调用，直到复制操作完成为止。",
+        "translate": ""
+    },
+    {
+        "source": "Advantages of using these syscalls:",
+        "suggest": "使用这些系统调用的优点:",
+        "translate": ""
+    },
+    {
+        "source": "fewer context switches since reads and writes are coalesced into a single syscall and more bytes are transferred per syscall.",
+        "suggest": "更少的上下文切换，因为将读和写合并为一个系统调用，并且每个系统调用传输更多的字节。",
+        "translate": ""
+    },
+    {
+        "source": "This translates to higher throughput and fewer CPU cycles, at least for sufficiently large transfers to amortize the initial probing.",
+        "suggest": "至少对于足够大的传输以摊销初始探测，这意味着更高的吞吐量和更少的 CPU 周期。",
+        "translate": ""
+    },
+    {
+        "source": "creates reflink copies on CoW filesystems, thus moving less data and consuming less disk space",
+        "suggest": "在 CoW 文件系统上创建 reflink 副本，从而减少了数据移动量并减少了磁盘空间",
+        "translate": ""
+    },
+    {
+        "source": "and `splice` can perform zero-copy IO under some circumstances while a naive copy loop would move every byte through the CPU.",
+        "suggest": "在某些情况下，`splice` 和 `splice` 可以执行零复制 IO，而朴素的复制循环会将每个字节移动通过 CPU。",
+        "translate": ""
+    },
+    {
+        "source": "copy operations smaller than the default buffer size can under some circumstances, especially on older kernels, incur more syscalls than the naive approach would.",
+        "suggest": "在某些情况下 (特别是在较早的内核上)，小于默认缓冲区大小的复制操作可能会比幼稚的方法引起更多的系统调用。",
+        "translate": ""
+    },
+    {
+        "source": "As mentioned above the syscall selection is guided by hints to minimize this possibility but they are not perfect.",
+        "suggest": "如上所述，系统调用选择受提示的指导，以最大程度地减少这种可能性，但它们并不完美。",
+        "translate": ""
+    },
+    {
+        "source": "optimizations only apply to std types.",
+        "suggest": "优化仅适用于 std 类型。",
+        "translate": ""
+    },
+    {
+        "source": "If a user adds a custom wrapper type, e.g. to report progress, they can hit a performance cliff.",
+        "suggest": "如果用户添加自定义包装器类型 (例如，以报告进度)，则他们可能会遇到性能问题。",
+        "translate": ""
+    },
+    {
+        "source": "This type represents either the inferred `FileType` of a `RawFd` based on the source type from which it was extracted or the actual metadata",
+        "suggest": "此类型表示根据提取来源的类型推断的 `RawFd` 的 `FileType` 或实际的元数据",
+        "translate": ""
+    },
+    {
+        "source": "The methods on this type only provide hints, due to `AsRawFd` and `FromRawFd` the inferred type may be wrong.",
+        "suggest": "此类型的方法仅提供提示，由于 `AsRawFd` 和 `FromRawFd` 推断的类型可能是错误的。",
+        "translate": ""
+    },
+    {
+        "source": "We obtained the FD from a type that can contain any type of `FileType` and queried the metadata because it is cheaper than probing all possible syscalls (reader side)",
+        "suggest": "我们从可以包含任何 `FileType` 类型的类型获得 FD，并查询元数据，因为它比探测所有可能的系统调用 (reader 端) 方便",
+        "translate": ""
+    },
+    {
+        "source": "We don't have any metadata, e.g.",
+        "suggest": "我们没有任何元数据，例如",
+        "translate": ""
+    },
+    {
+        "source": "because the original type was `File` which can represent any `FileType` and we did not query the metadata either since it did not seem beneficial (writer side)",
+        "suggest": "因为原始类型是 `File`，它可以表示任何 `FileType`，并且我们也没有查询元数据，因为它似乎没有用 (writer 端)",
+        "translate": ""
+    },
+    {
+        "source": "procfs erronously shows 0 length on non-empty readable files.",
+        "suggest": "procfs 错误地在非空可读文件上显示 0 长度。",
+        "translate": ""
+    },
+    {
+        "source": "and if a file is truly empty then a `read` syscall will determine that and skip the write syscall thus there would be benefit from attempting sendfile",
+        "suggest": "如果文件确实为空，则 `read` syscall 将确定该文件并跳过写 syscall，因此尝试发送 sendfile 将有好处",
+        "translate": ""
+    },
+    {
+        "source": "copy_file_range will fail on empty procfs files.",
+        "suggest": "对于空的 procfs 文件，copy_file_range 将失败。",
+        "translate": ""
+    },
+    {
+        "source": "can determine whether EOF has been reached without extra cost and skip the write, thus there is no benefit in attempting copy_file_range",
+        "suggest": "可以确定是否已达到 EOF 而无须额外花费，并跳过写入操作，因此尝试使用 copy_file_range 没有任何好处",
+        "translate": ""
+    },
+    {
+        "source": "before direct operations on file descriptors ensure that all source and sink buffers are empty",
+        "suggest": "在对文件描述符进行直接操作之前，请确保所有源缓冲区和 sink 缓冲区为空",
+        "translate": ""
+    },
+    {
+        "source": "BufWriter buffered bytes have already been accounted for in earlier write() calls",
+        "suggest": "在较早的 write() 调用中已经考虑了 BufWriter 缓冲的字节",
+        "translate": ""
+    },
+    {
+        "source": "on modern kernels sendfile can copy from any mmapable type (some but not all regular files and block devices) to any writable file descriptor.",
+        "suggest": "在现代内核上，sendfile 可以从任何可映射类型 (某些但不是全部常规文件和块设备) 复制到任何可写文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "On older kernels the writer side can only be a socket.",
+        "suggest": "在较早的内核上，writer 端只能是一个套接字。",
+        "translate": ""
+    },
+    {
+        "source": "So we just try and fallback if needed.",
+        "suggest": "因此，我们只是在需要时尝试回退。",
+        "translate": ""
+    },
+    {
+        "source": "If current file offsets + write sizes overflow it may also fail, we do not try to fix that and instead fall back to the generic copy loop.",
+        "suggest": "如果当前文件偏移量 + 写入大小溢出，它也可能会失败，我们不会尝试解决此问题，而是会退回到泛型复制循环。",
+        "translate": ""
+    },
+    {
+        "source": "fallback if none of the more specialized syscalls wants to work with these file descriptors",
+        "suggest": "如果没有更专业的 syscall 想要使用这些文件描述符，则回退",
+        "translate": ""
+    },
+    {
+        "source": "Implementations that contain buffers (i.e.",
+        "suggest": "包含缓冲区的实现 (即",
+        "translate": ""
+    },
+    {
+        "source": "`BufReader`) must transfer data from their internal buffers into `writer` until either the buffers are emptied or `limit` bytes have been transferred, whichever occurs sooner.",
+        "suggest": "`BufReader`) 必须将数据从其内部缓冲区传输到 `writer` 中，直到清空缓冲区或传输 `limit` 字节为止 (以较早发生者为准)。",
+        "translate": ""
+    },
+    {
+        "source": "If nested buffers are present the outer buffers must be drained first.",
+        "suggest": "如果存在嵌套缓冲区，则必须先清空外部缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "This is necessary to directly bypass the wrapper types while preserving the data order when operating directly on the underlying file descriptors.",
+        "suggest": "直接在基础文件描述符上操作时，在保留数据顺序的同时直接绕过包装器类型是必要的。",
+        "translate": ""
+    },
+    {
+        "source": "Updates `Take` wrappers to remove the number of bytes copied.",
+        "suggest": "更新 `Take` 包装器以删除复制的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "The minimum of the limit of all `Take<_>` wrappers, `u64::MAX` otherwise.",
+        "suggest": "所有 `Take<_>` 包装器的最小限制，否则为 `u64::MAX`。",
+        "translate": ""
+    },
+    {
+        "source": "This method does not account for data `BufReader` buffers and would underreport the limit of a `Take<BufReader<Take<_>>>` type.",
+        "suggest": "此方法不考虑数据 `BufReader` 缓冲区，并且会低估 `Take<BufReader<Take<_>>>` 类型的限制。",
+        "translate": ""
+    },
+    {
+        "source": "Thus its result is only valid after draining the buffers via `drain_to`.",
+        "suggest": "因此，其结果仅在通过 `drain_to` 对缓冲区进行 draining 之后才有效。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the file descriptor and hints/metadata, delegating through wrappers if necessary.",
+        "suggest": "提取文件描述符和 hints/metadata，必要时通过包装委派。",
+        "translate": ""
+    },
+    {
+        "source": "avoid the stat syscall since we can be fairly sure it's a socket",
+        "suggest": "避免 stat syscall，因为我们可以确定它是一个套接字",
+        "translate": ""
+    },
+    {
+        "source": "update limit since read() was bypassed",
+        "suggest": "由于 read() 被绕过而导致的更新限制",
+        "translate": ""
+    },
+    {
+        "source": "in case of nested bufreaders we also need to drain the ones closer to the source",
+        "suggest": "如果是嵌套的 bufreader，我们还需要 drain 靠近源",
+        "translate": ""
+    },
+    {
+        "source": "Invalid file descriptor.",
+        "suggest": "无效的文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "Valid file descriptors are guaranteed to be positive numbers (see `open()` manpage) while negative values are used to indicate errors.",
+        "suggest": "有效的文件描述符保证为正数 (请参见 `open()` 联机帮助页)，而负值用于指示错误。",
+        "translate": ""
+    },
+    {
+        "source": "Thus -1 will never be overlap with a valid open file.",
+        "suggest": "因此，-1 永远不会与有效的打开文件重叠。",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific implementation that will attempt to use copy_file_range for copy offloading.",
+        "suggest": "特定于 Linux 的实现，将尝试使用 copy_file_range 进行副本分载。",
+        "translate": ""
+    },
+    {
+        "source": "As the name says, it only works on regular files.",
+        "suggest": "顾名思义，它仅适用于常规文件。",
+        "translate": ""
+    },
+    {
+        "source": "Callers must handle fallback to a generic copy loop.",
+        "suggest": "调用者必须处理回退到泛型复制循环的操作。",
+        "translate": ""
+    },
+    {
+        "source": "may indicate non-zero number of bytes already written if one of the files' cursor +`max_len` would exceed u64::MAX (`EOVERFLOW`).",
+        "suggest": "如果文件的游标 + 'max_len' 之一超过 u64::MAX (`EOVERFLOW`)，则可能表示已写入的字节数不为零。",
+        "translate": ""
+    },
+    {
+        "source": "Kernel prior to 4.5 don't have copy_file_range We store the availability in a global to avoid unnecessary syscalls",
+        "suggest": "4.5 之前的内核没有 copy_file_range 我们将可用性存储在一个以避免不必要的 syscalls",
+        "translate": ""
+    },
+    {
+        "source": "EPERM can indicate seccomp filters or an immutable file.",
+        "suggest": "EPERM 可以指示 seccomp 过滤器或不可变文件。",
+        "translate": ""
+    },
+    {
+        "source": "To distinguish these cases we probe with invalid file descriptors which should result in EBADF if the syscall is supported and some other error (ENOSYS or EPERM) if it's not available",
+        "suggest": "为了区分这些情况，我们使用无效的文件描述符进行探测，如果系统调用受支持，则文件描述符将导致 EBADF; 如果不可用，则将导致其他错误 (ENOSYS 或 EPERM)",
+        "translate": ""
+    },
+    {
+        "source": "cap to 1GB chunks in case u64::MAX is passed as max_len and the file has a non-zero seek position this allows us to copy large chunks without hitting EOVERFLOW, unless someone sets a file offset close to u64::MAX - 1GB, in which case a fallback would be required",
+        "suggest": "如果将 u64::MAX 作为 max_len 传递，并且文件具有非零查找位置，则上限为 1GB 块，这使我们能够复制大块而不会达到 EOVERFLOW，除非有人将文件偏移量设置为接近 u64::MAX-1GB，在这种情况下回退需要",
+        "translate": ""
+    },
+    {
+        "source": "We actually don't have to adjust the offsets, because copy_file_range adjusts the file offset automatically",
+        "suggest": "实际上，我们不必调整偏移量，因为 copy_file_range 会自动调整文件偏移量",
+        "translate": ""
+    },
+    {
+        "source": "fallback to work around several kernel bugs where copy_file_range will fail to copy any bytes and return 0 instead of an error if",
+        "suggest": "回退以解决几个内核错误，其中 copy_file_range 将无法复制任何字节并返回 0 而不是错误，如果",
+        "translate": ""
+    },
+    {
+        "source": "reading virtual files from the proc filesystem which appear to have 0 size but are not empty.",
+        "suggest": "从 proc 文件系统中读取虚拟文件，这些虚拟文件的大小似乎为 0，但不为空。",
+        "translate": ""
+    },
+    {
+        "source": "noted in coreutils to affect kernels at least up to 5.6.19.",
+        "suggest": "在 coreutils 中指出，至少会影响 5.6.19 的内核。",
+        "translate": ""
+    },
+    {
+        "source": "copying from an overlay filesystem in docker.",
+        "suggest": "从 docker 中的覆盖文件系统复制。",
+        "translate": ""
+    },
+    {
+        "source": "reported to occur on fedora 32.",
+        "suggest": "据报道发生在 fedora 32 上。",
+        "translate": ""
+    },
+    {
+        "source": "reached EOF",
+        "suggest": "达到了 EOF",
+        "translate": ""
+    },
+    {
+        "source": "when file offset + max_length > u64::MAX",
+        "suggest": "当文件 `offset + max_length > u64::MAX` 时",
+        "translate": ""
+    },
+    {
+        "source": "Try fallback io::copy if either:",
+        "suggest": "如果出现以下情况，请尝试使用备用 io::copy:",
+        "translate": ""
+    },
+    {
+        "source": "Kernel version is < 4.5 (ENOSYS¹)",
+        "suggest": "内核版本 < 4.5 (ENOSYS¹)",
+        "translate": ""
+    },
+    {
+        "source": "Files are mounted on different fs (EXDEV)",
+        "suggest": "文件安装在不同的 fs (EXDEV) 上",
+        "translate": ""
+    },
+    {
+        "source": "copy_file_range is broken in various ways on RHEL/CentOS 7 (EOPNOTSUPP)",
+        "suggest": "RHEL/CentOS 7 (EOPNOTSUPP) 上的 copy_file_range 被各种方式破坏",
+        "translate": ""
+    },
+    {
+        "source": "copy_file_range file is immutable or syscall is blocked by seccomp¹ (EPERM)",
+        "suggest": "seccomp¹ (EPERM) 的 copy_file_range 文件不可变或 syscall 被阻止",
+        "translate": ""
+    },
+    {
+        "source": "copy_file_range cannot be used with pipes or device nodes (EINVAL)",
+        "suggest": "copy_file_range 不能与管道或设备节点 (EINVAL) 一起使用",
+        "translate": ""
+    },
+    {
+        "source": "the writer fd was opened with O_APPEND (EBADF²)",
+        "suggest": "writer fd 用 O_APPEND (EBADF²) 打开",
+        "translate": ""
+    },
+    {
+        "source": "¹ these cases should be detected by the initial probe but we handle them here anyway in case syscall interception changes during runtime ² actually invalid file descriptors would cause this too, but in that case the fallback code path is expected to encounter the same error again",
+        "suggest": "¹ 这些情况应该由初始探针检测到，但是无论如何我们还是在这里处理它们，以防在运行时发生系统调用拦截变化 ² 实际上无效的文件描述符也会导致这种情况，但是在这种情况下，后备代码路径有望再次遇到相同的错误",
+        "translate": ""
+    },
+    {
+        "source": "performs splice or sendfile between file descriptors Does _not_ fall back to a generic copy loop.",
+        "suggest": "在文件描述符之间执行拼接或 sendfile _not_ 是否回退到泛型复制循环。",
+        "translate": ""
+    },
+    {
+        "source": "according to its manpage that's the maximum size sendfile() will copy per invocation",
+        "suggest": "根据其手册，这是每次调用 sendfile() 将复制的最大大小",
+        "translate": ""
+    },
+    {
+        "source": "syscall not supported (ENOSYS) syscall is disallowed, e.g.",
+        "suggest": "不支持 syscall (ENOSYS) 不允许进行 syscall，例如",
+        "translate": ""
+    },
+    {
+        "source": "by seccomp (EPERM)",
+        "suggest": "通过 seccomp (EPERM)",
+        "translate": ""
+    },
+    {
+        "source": "do not support this particular file descriptor (EINVAL)",
+        "suggest": "不支持此特定的文件描述符 (EINVAL)",
+        "translate": ""
+    },
+    {
+        "source": "GNU's memrchr() will - unlike memchr() - error if haystack is empty.",
+        "suggest": "如果 haystack 为空，则 GNU 的 memrchr() (与 memchr() 不同) 将出错。",
+        "translate": ""
+    },
+    {
+        "source": "The standard streams might be closed on application startup.",
+        "suggest": "标准流可能会在应用程序启动时关闭。",
+        "translate": ""
+    },
+    {
+        "source": "To prevent std::io::{stdin, stdout,stderr} objects from using other unrelated file resources opened later, we reopen standards streams when they are closed.",
+        "suggest": "为防止 `std::io::{stdin，stdout，stderr}` 对象使用稍后打开的其他不相关文件资源，我们在关闭标准流后会重新打开它们。",
+        "translate": ""
+    },
+    {
+        "source": "By default, some platforms will send a *signal* when an EPIPE error would otherwise be delivered.",
+        "suggest": "默认情况下，某些平台会在否则会传递 EPIPE 错误的情况下发送 *信号*。",
+        "translate": ""
+    },
+    {
+        "source": "This runtime doesn't install a SIGPIPE handler, causing it to kill the program, which isn't exactly what we want!",
+        "suggest": "此运行时未安装 SIGPIPE 处理程序，导致它终止了程序，这不正是我们想要的!",
+        "translate": ""
+    },
+    {
+        "source": "Hence, we set SIGPIPE to ignore when the program starts up in order to prevent this problem.",
+        "suggest": "因此，为了防止出现此问题，我们将 SIGPIPE 设置为在程序启动时忽略。",
+        "translate": ""
+    },
+    {
+        "source": "The standard fds are always available in Miri.",
+        "suggest": "标准 fds 始终在 Miri 中可用。",
+        "translate": ""
+    },
+    {
+        "source": "The poll on Darwin doesn't set POLLNVAL for closed fds.",
+        "suggest": "达尔文 (Darwin) 的民意调查并未为封闭的 fds 设置 POLLNVAL。",
+        "translate": ""
+    },
+    {
+        "source": "In the case when all file descriptors are open, the poll has been observed to perform better than fcntl (on GNU/Linux).",
+        "suggest": "在打开所有文件描述符的情况下，已观察到轮询的性能优于 fcntl (在 GNU/Linux 上)。",
+        "translate": ""
+    },
+    {
+        "source": "If the stream is closed but we failed to reopen it, abort the process.",
+        "suggest": "如果流已关闭，但未能重新打开它，则中止该进程。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise we wouldn't preserve the safety of operations on the corresponding Rust object Stdin, Stdout, or Stderr.",
+        "suggest": "否则，我们不会在相应的 Rust 对象 Stdin、Stdout 或 Stderr 上保持操作的安全性。",
+        "translate": ""
+    },
+    {
+        "source": "These two constants can have the same value on some systems, but different values on others, so we can't use a match clause",
+        "suggest": "这两个常量在某些系统上可以具有相同的值，但在其他系统上可以具有不同的值，因此我们不能使用 match 子句",
+        "translate": ""
+    },
+    {
+        "source": "On Unix-like platforms, libc::abort will unregister signal handlers including the SIGABRT handler, preventing the abort from being blocked, and fclose streams, with the side effect of flushing them so libc buffered output will be printed.",
+        "suggest": "在类似 Unix 的平台上，libc::abort 将注销包括 SIGABRT 处理程序在内的信号处理程序，从而防止终止被阻塞，并关闭流，并刷新它们的副作用，以便将 libc 缓冲的输出打印出来。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally the shell will generally print a more understandable error message like \"Abort trap\" rather than \"Illegal instruction\" that intrinsics::abort would cause, as intrinsics::abort is implemented as an illegal instruction.",
+        "suggest": "另外，由于 intrinsics::abort 被实现为非法指令，因此 shell 通常会打印出更易于理解的错误消息，例如 \"Abort trap\"，而不是 intrinsics::abort 会引起的 \"Illegal instruction\"。",
+        "translate": ""
+    },
+    {
+        "source": "Use libumem for the (malloc-compatible) allocator",
+        "suggest": "对 (malloc-compatible) 分配器使用 libumem",
+        "translate": ""
+    },
+    {
+        "source": "res_init and friends require -lresolv on macOS/iOS.",
+        "suggest": "res_init 和朋友需要在 macOS/iOS 上使用 -lresolv。",
+        "translate": ""
+    },
+    {
+        "source": "See #41582 and http://blog.achernya.com/2013/03/os-x-has-silly-libsystem.html",
+        "suggest": "请参见 #41582 和 http://blog.achernya.com/2013/03/os-x-has-silly-libsystem.html",
+        "translate": ""
+    },
+    {
+        "source": "sys isn't exported yet",
+        "suggest": "sys 尚未导出",
+        "translate": ""
+    },
+    {
+        "source": "Might be moved to a different address, so it is better to avoid initialization of potentially opaque OS data before it landed.",
+        "suggest": "可能将其移动到其他地址，因此最好避免在登陆之前可能不透明的 OS 数据进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "Be very careful using this newly constructed `Mutex`, reentrant locking is undefined behavior until `init` is called!",
+        "suggest": "使用此新构造的 `Mutex` 时要格外小心，在调用 `init` 之前，可重入锁定是未定义的行为!",
+        "translate": ""
+    },
+    {
+        "source": "A pthread mutex initialized with PTHREAD_MUTEX_INITIALIZER will have a type of PTHREAD_MUTEX_DEFAULT, which has undefined behavior if you try to re-lock it from the same thread when you already hold a lock (https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_init.html).",
+        "suggest": "使用 PTHREAD_MUTEX_INITIALIZER 初始化的 pthread 互斥锁将具有 PTHREAD_MUTEX_DEFAULT 类型，如果您在已经持有锁 (https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_mutex_init.html) 的情况下尝试从同一线程重新锁定它，则该类型的行为不确定。",
+        "translate": ""
+    },
+    {
+        "source": "This is the case even if PTHREAD_MUTEX_DEFAULT == PTHREAD_MUTEX_NORMAL (https://github.com/rust-lang/rust/issues/33770#issuecomment-220847521) -- in that case, `pthread_mutexattr_settype(PTHREAD_MUTEX_DEFAULT)` will of course be the same as setting it to `PTHREAD_MUTEX_NORMAL`, but not setting any mode will result in a Mutex where re-locking is UB.",
+        "suggest": "即使 PTHREAD_MUTEX_DEFAULT == PTHREAD_MUTEX_NORMAL (https://github.com/rust-lang/rust/issues/33770#issuecomment-220847521) 也是这种情况 - 在这种情况下，`pthread_mutexattr_settype(PTHREAD_MUTEX_DEFAULT)` 当然与将其设置为 `PTHREAD_MUTEX_NORMAL` 相同，但是不设置任何模式都会导致互锁锁，其中重新锁定为 UB。",
+        "translate": ""
+    },
+    {
+        "source": "In practice, glibc takes advantage of this undefined behavior to implement hardware lock elision, which uses hardware transactional memory to avoid acquiring the lock.",
+        "suggest": "实际上，glibc 利用这种未定义的行为来实现硬件锁清除，该操作使用硬件事务性内存来避免获取锁。",
+        "translate": ""
+    },
+    {
+        "source": "While a transaction is in progress, the lock appears to be unlocked.",
+        "suggest": "在进行事务时，锁似乎已解锁。",
+        "translate": ""
+    },
+    {
+        "source": "This isn't a problem for other threads since the transactional memory will abort if a conflict is detected, however no abort is generated when re-locking from the same thread.",
+        "suggest": "对于其他线程而言，这不是问题，因为如果检测到冲突，事务内存将终止，但是从同一线程重新锁定时，不会生成终止。",
+        "translate": ""
+    },
+    {
+        "source": "Since locking the same mutex twice will result in two aliasing &mut references, we instead create the mutex with type PTHREAD_MUTEX_NORMAL which is guaranteed to deadlock if we try to re-lock it from the same thread, thus avoiding undefined behavior.",
+        "suggest": "由于两次锁定相同的互斥锁将导致两个别名 &mut references，因此，我们创建类型为 PTHREAD_MUTEX_NORMAL 的互斥锁，如果尝试从同一线程重新锁定它，则可以确保死锁，从而避免了未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "On DragonFly pthread_mutex_destroy() returns EINVAL if called on a mutex that was just initialized with libc::PTHREAD_MUTEX_INITIALIZER.",
+        "suggest": "在 DragonFly 上，如果在刚刚用 libc::PTHREAD_MUTEX_INITIALIZER 初始化的互斥锁上调用 pthread_mutex_destroy()，则返回 EINVAL。",
+        "translate": ""
+    },
+    {
+        "source": "Once it is used (locked/unlocked) or pthread_mutex_init() is called, this behaviour no longer occurs.",
+        "suggest": "一旦使用了 (locked/unlocked) 或 pthread_mutex_init()，将不再发生此行为。",
+        "translate": ""
+    },
+    {
+        "source": "We may need to trigger a glibc workaround.",
+        "suggest": "我们可能需要触发 glibc 解决方法。",
+        "translate": ""
+    },
+    {
+        "source": "See on_resolver_failure() for details.",
+        "suggest": "有关详细信息，请参见 on_resolver_failure()。",
+        "translate": ""
+    },
+    {
+        "source": "On platforms that support it we pass the SOCK_CLOEXEC flag to atomically create the socket and set it as CLOEXEC.",
+        "suggest": "在支持它的平台上，我们传递 SOCK_CLOEXEC 标志以原子方式创建套接字并将其设置为 CLOEXEC。",
+        "translate": ""
+    },
+    {
+        "source": "On Linux this was added in 2.6.27.",
+        "suggest": "在 Linux 上，它已添加到 2.6.27 中。",
+        "translate": ""
+    },
+    {
+        "source": "and iOS use `SO_NOSIGPIPE` as a `setsockopt` flag to disable `SIGPIPE` emission on socket.",
+        "suggest": "和 iOS 使用 `SO_NOSIGPIPE` 作为 `setsockopt` 标志来禁用套接字上的 `SIGPIPE` 发射。",
+        "translate": ""
+    },
+    {
+        "source": "Like above, set cloexec atomically",
+        "suggest": "像上面一样，原子地设置 cloexec",
+        "translate": ""
+    },
+    {
+        "source": "there's no ErrorKind for EINPROGRESS :(",
+        "suggest": "EINPROGRESS 没有 ErrorKind :(",
+        "translate": ""
+    },
+    {
+        "source": "returns POLLOUT|POLLERR|POLLHUP for refused connections (!), so look for POLLHUP rather than read readiness",
+        "suggest": "对于拒绝的连接 (!)，返回 POLLOUT | POLLERR | POLLHUP，因此查找 POLLHUP 而不是准备就绪",
+        "translate": ""
+    },
+    {
+        "source": "Unfortunately the only known way right now to accept a socket and atomically set the CLOEXEC flag is to use the `accept4` syscall on platforms that support it.",
+        "suggest": "不幸的是，目前唯一已知的接受套接字并自动设置 CLOEXEC 标志的方法是在支持该套接字的平台上使用 `accept4` syscall。",
+        "translate": ""
+    },
+    {
+        "source": "On Linux, this was added in 2.6.28, glibc 2.10 and musl 0.9.5.",
+        "suggest": "在 Linux 上，它已添加到 2.6.28，glibc 2.10 和 musl 0.9.5 中。",
+        "translate": ""
+    },
+    {
+        "source": "FIONBIO is inadequate for sockets on illumos/Solaris, so use the fcntl(F_[GS]ETFL)-based method provided by FileDesc instead.",
+        "suggest": "FIONBIO 不适合 illumos/Solaris 上的套接字，因此请使用 FileDesc 提供的基于 fcntl (F_ [GS] ETFL) 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "In versions of glibc prior to 2.26, there's a bug where the DNS resolver will cache the contents of /etc/resolv.conf, so changes to that file on disk can be ignored by a long-running program.",
+        "suggest": "在 2.26 之前的 glibc 版本中，存在一个错误，DNS 解析器将缓存 /etc/resolv.conf 的内容，因此长时间运行的程序可以忽略对该磁盘上文件的更改。",
+        "translate": ""
+    },
+    {
+        "source": "That can break DNS lookups on e.g.",
+        "suggest": "这可能会破坏 DNS 查询，例如",
+        "translate": ""
+    },
+    {
+        "source": "laptops where the network comes and goes.",
+        "suggest": "随处可见的笔记本电脑。",
+        "translate": ""
+    },
+    {
+        "source": "A workaround for this bug is to call the res_init libc function, to clear the cached configs.",
+        "suggest": "该错误的一种解决方法是调用 res_init libc 函数，以清除缓存的配置。",
+        "translate": ""
+    },
+    {
+        "source": "Unfortunately, while we believe glibc's implementation of res_init is thread-safe, we know that other implementations are not (https://github.com/rust-lang/rust/issues/43592).",
+        "suggest": "不幸的是，尽管我们认为 glibc 的 res_init 实现是线程安全的，但我们知道其他实现不是 (https://github.com/rust-lang/rust/issues/43592)。",
+        "translate": ""
+    },
+    {
+        "source": "Code here in libstd could try to synchronize its res_init calls with a Mutex, but that wouldn't protect programs that call into libc in other ways.",
+        "suggest": "libstd 中的代码可以尝试将其 res_init 调用与互斥锁进行同步，但这不会保护以其他方式调用 libc 的程序。",
+        "translate": ""
+    },
+    {
+        "source": "So instead of calling res_init unconditionally, we call it only when we detect we're linking against glibc version < 2.26.",
+        "suggest": "因此，不是无条件调用 res_init，而是仅当我们检测到要针对 glibc 版本 < 2.26 进行链接时，才调用它。",
+        "translate": ""
+    },
+    {
+        "source": "(That is, when we both know its needed and believe it's thread-safe).",
+        "suggest": "(也就是说，当我们都知道它的需要并且认为它是线程安全的时)。",
+        "translate": ""
+    },
+    {
+        "source": "If the version fails to parse, we treat it the same as \"not glibc\".",
+        "suggest": "如果版本解析失败，我们将其与 \"not glibc\" 相同。",
+        "translate": ""
+    },
+    {
+        "source": "This mostly just tests that the weak linkage doesn't panic wildly...",
+        "suggest": "这主要只是测试弱链接不会疯狂地 panic ...",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of `std::os` functionality for unix systems",
+        "suggest": "unix 系统的 `std::os` 功能的实现",
+        "translate": ""
+    },
+    {
+        "source": "lots of cfg code here",
+        "suggest": "许多 cfg 代码在这里",
+        "translate": ""
+    },
+    {
+        "source": "Returns the platform-specific value of errno",
+        "suggest": "返回特定于平台的 errno 值",
+        "translate": ""
+    },
+    {
+        "source": "Sets the platform-specific value of errno",
+        "suggest": "设置特定于平台的 errno 值",
+        "translate": ""
+    },
+    {
+        "source": "needed for readdir and syscall!",
+        "suggest": "readdir 和 syscall 所需!",
+        "translate": ""
+    },
+    {
+        "source": "but not all target cfgs actually end up using it",
+        "suggest": "但并非所有目标 cfg 最终都会使用它",
+        "translate": ""
+    },
+    {
+        "source": "Gets a detailed string description for the given error number.",
+        "suggest": "获取给定错误号的详细字符串描述。",
+        "translate": ""
+    },
+    {
+        "source": "chop off trailing NUL",
+        "suggest": "删除尾随的 NUL",
+        "translate": ""
+    },
+    {
+        "source": "chop off NUL",
+        "suggest": "删除 NUL",
+        "translate": ""
+    },
+    {
+        "source": "Prepend a current working directory to the path if it doesn't contain an absolute pathname.",
+        "suggest": "如果当前工作目录不包含绝对路径名，则在该目录前添加路径。",
+        "translate": ""
+    },
+    {
+        "source": "Use Haiku's image info functions",
+        "suggest": "使用 Haiku 的图像信息函数",
+        "translate": ""
+    },
+    {
+        "source": "function pointer",
+        "suggest": "函数指针",
+        "translate": ""
+    },
+    {
+        "source": "the executable can be found at team id 0",
+        "suggest": "可执行文件可以在团队 ID 0 中找到",
+        "translate": ""
+    },
+    {
+        "source": "environment variables with a nul byte can't be set, so their value is always None as well",
+        "suggest": "无法设置具有 nul 字节的环境变量，因此它们的值也始终为 None",
+        "translate": ""
+    },
+    {
+        "source": "Returns Some((major, minor)) if the string is a valid \"x.y\" version, ignoring any extra dot-separated parts.",
+        "suggest": "如果字符串是有效的 \"x.y\" 版本，则返回 Some((major, minor))，忽略任何多余的以点分隔的部分。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise return None.",
+        "suggest": "否则返回 None。",
+        "translate": ""
+    },
+    {
+        "source": "Anonymous pipes",
+        "suggest": "匿名管道",
+        "translate": ""
+    },
+    {
+        "source": "The only known way right now to create atomically set the CLOEXEC flag is to use the `pipe2` syscall.",
+        "suggest": "现在唯一已知的自动创建 CLOEXEC 标志的方法是使用 `pipe2` syscall。",
+        "translate": ""
+    },
+    {
+        "source": "This was added to Linux in 2.6.27, glibc 2.9 and musl 0.9.3, and some other targets also have it.",
+        "suggest": "它已添加到 2.6.27 中的 Linux，glibc 2.9 和 musl 0.9.3 中，并且其他一些目标也有它。",
+        "translate": ""
+    },
+    {
+        "source": "Set both pipes into nonblocking mode as we're gonna be reading from both in the `select` loop below, and we wouldn't want one to block the other!",
+        "suggest": "将两个管道都设置为非阻塞模式，因为我们将在下面的 `select` 循环中读取这两个管道，并且我们不希望其中一个阻塞另一个!",
+        "translate": ""
+    },
+    {
+        "source": "wait for either pipe to become readable using `poll`",
+        "suggest": "等待使用 `poll` 读取任何一个管道",
+        "translate": ""
+    },
+    {
+        "source": "Read as much as we can from each pipe, ignoring EWOULDBLOCK or EAGAIN.",
+        "suggest": "从每个管道中读取尽可能多的内容，而忽略 EWOULDBLOCK 或 EAGAIN。",
+        "translate": ""
+    },
+    {
+        "source": "If we hit EOF, then this will happen because the underlying reader will return Ok(0), in which case we'll see `Ok` ourselves.",
+        "suggest": "如果我们命中 EOF，则会发生这种情况，因为基础 reader 将返回 Ok(0)，在这种情况下，我们将自己看到 `Ok`。",
+        "translate": ""
+    },
+    {
+        "source": "In this case we flip the other fd back into blocking mode and read whatever's leftover on that file descriptor.",
+        "suggest": "在这种情况下，我们将另一个 fd 切换回阻止模式，并读取该文件描述符上的剩余内容。",
+        "translate": ""
+    },
+    {
+        "source": "See #14232 for more information, but it appears that signal delivery to a newly spawned process may just be raced in the macOS, so to prevent this test from being flaky we ignore it on macOS.",
+        "suggest": "有关更多信息，请参见 #14232。但是似乎可以在 macOS 中竞争向新生成的进程的信号传递，因此，为防止此测试不稳定，我们在 macOS 上将其忽略。",
+        "translate": ""
+    },
+    {
+        "source": "When run under our current QEMU emulation test suite this test fails, although the reason isn't very clear as to why.",
+        "suggest": "当在我们当前的 QEMU 仿真测试套件下运行时，该测试失败，尽管原因尚不清楚。",
+        "translate": ""
+    },
+    {
+        "source": "For now this test is ignored there.",
+        "suggest": "目前，此测试在那里被忽略。",
+        "translate": ""
+    },
+    {
+        "source": "Test to make sure that a signal mask does not get inherited.",
+        "suggest": "测试以确保信号掩码不会被继承。",
+        "translate": ""
+    },
+    {
+        "source": "We need to wait until SIGINT is definitely delivered.",
+        "suggest": "我们需要等到 SIGINT 正式交付为止。",
+        "translate": ""
+    },
+    {
+        "source": "The easiest way is to write something to cat, and try to read it back: if SIGINT is unmasked, it'll get delivered when cat is next scheduled.",
+        "suggest": "最简单的方法是写一些东西给 cat，然后试着读回去: 如果 SIGINT 被取消屏蔽，它将在下次安排 cat 时交付。",
+        "translate": ""
+    },
+    {
+        "source": "Either EOF or failure (EPIPE) is okay.",
+        "suggest": "EOF 或 (EPIPE) 故障都可以。",
+        "translate": ""
+    },
+    {
+        "source": "fuchsia doesn't have /dev/null",
+        "suggest": "Fuchsia 没有 /dev/null",
+        "translate": ""
+    },
+    {
+        "source": "with api less than 21 define sig* functions inline, so it is not available for dynamic link.",
+        "suggest": "api 小于 21 的 inline 定义 sig * 函数，因此不适用于动态链接。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing sigemptyset and sigaddset allow us to support older Android version (independent of libc version).",
+        "suggest": "实现 sigemptyset 和 sigaddset 可以支持较旧的 Android 版本 (独立于 libc 版本)。",
+        "translate": ""
+    },
+    {
+        "source": "Exactly what will be passed to `execvp`.",
+        "suggest": "确切地说，将传递给 `execvp`。",
+        "translate": ""
+    },
+    {
+        "source": "First element is a pointer to `program`, followed by pointers to `args`, followed by a `null`.",
+        "suggest": "第一个元素是指向 `program` 的指针，其次是指向 `args` 的指针，然后是 `null`。",
+        "translate": ""
+    },
+    {
+        "source": "Be careful when modifying `program` or `args` to properly update this as well.",
+        "suggest": "修改 `program` 或 `args` 时也要小心以正确更新它。",
+        "translate": ""
+    },
+    {
+        "source": "Create a new type for argv, so that we can make it `Send` and `Sync`",
+        "suggest": "为 argv 创建一个新类型，以便我们将其命名为 `Send` 和 `Sync`",
+        "translate": ""
+    },
+    {
+        "source": "It is safe to make `Argv` `Send` and `Sync`, because it contains pointers to memory owned by `Command.args`",
+        "suggest": "制作 `Argv` `Send` 和 `Sync` 是安全的，因为它包含指向 `Command.args` 拥有的内存的指针",
+        "translate": ""
+    },
+    {
+        "source": "passed back to std::process with the pipes connected to the child, if any were requested",
+        "suggest": "如果有任何要求，则将管道传回 std::process，并将管道连接到子管道",
+        "translate": ""
+    },
+    {
+        "source": "passed to do_exec() with configuration of what the child stdio should look like",
+        "suggest": "传递给 do_exec() 并带有子标准输入输出的配置",
+        "translate": ""
+    },
+    {
+        "source": "On Fuchsia, null stdio is the default, so we simply don't specify any actions at the time of spawning.",
+        "suggest": "在 Fuchsia 上，默认值为 null 标准输入输出，因此我们仅在生成时不指定任何操作。",
+        "translate": ""
+    },
+    {
+        "source": "Set a new arg0",
+        "suggest": "设置一个新的 arg0",
+        "translate": ""
+    },
+    {
+        "source": "Overwrite the trailing NULL pointer in `argv` and then add a new null pointer.",
+        "suggest": "覆盖 `argv` 中的尾随 NULL 指针，然后添加一个新的空指针。",
+        "translate": ""
+    },
+    {
+        "source": "Also make sure we keep track of the owned value to schedule a destructor for this memory.",
+        "suggest": "还要确保我们跟踪拥有的值，以便为此内存安排一个析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "Helper type to manage ownership of the strings within a C-style array.",
+        "suggest": "Helper 类型，用于管理 C 样式数组中的字符串的所有权。",
+        "translate": ""
+    },
+    {
+        "source": "Reserve additional space for '=' and null terminator",
+        "suggest": "为 '=' 和空终止符保留额外的空间",
+        "translate": ""
+    },
+    {
+        "source": "Add the new entry into the array",
+        "suggest": "将新条目添加到数组中",
+        "translate": ""
+    },
+    {
+        "source": "Make sure that the source descriptors are not an stdio descriptor, otherwise the order which we set the child's descriptors may blow away a descriptor which we are hoping to save.",
+        "suggest": "确保源描述符不是标准输入输出描述符，否则我们设置子级描述符的顺序可能会破坏我们希望保存的描述符。",
+        "translate": ""
+    },
+    {
+        "source": "For example, suppose we want the child's stderr to be the parent's stdout, and the child's stdout to be the parent's stderr.",
+        "suggest": "例如，假设我们希望子节点的 stderr 是父节点的 stdout，子节点的 stdout 是父节点的 stderr 。",
+        "translate": ""
+    },
+    {
+        "source": "No matter which we dup first, the second will get overwritten prematurely.",
+        "suggest": "不管我们先复制哪个，第二个都会被过早覆盖。",
+        "translate": ""
+    },
+    {
+        "source": "This is tough because we don't support the exec syscalls",
+        "suggest": "这很困难，因为我们不支持 exec syscalls",
+        "translate": ""
+    },
+    {
+        "source": "None means to clone the current environment, which is done in the flags below.",
+        "suggest": "None 表示克隆当前环境，这在下面的标志中完成。",
+        "translate": ""
+    },
+    {
+        "source": "acts as no-op",
+        "suggest": "充当无操作者",
+        "translate": ""
+    },
+    {
+        "source": "This descriptor is closed;",
+        "suggest": "该描述符已关闭;",
+        "translate": ""
+    },
+    {
+        "source": "skip it rather than generating an error.",
+        "suggest": "跳过它而不是生成错误。",
+        "translate": ""
+    },
+    {
+        "source": "Clone stdin, stdout, and stderr",
+        "suggest": "克隆 stdin，stdout 和 stderr",
+        "translate": ""
+    },
+    {
+        "source": "We don't want FileDesc::drop to be called on any stdio.",
+        "suggest": "我们不希望在任何标准输入输出上调用 FileDesc::drop。",
+        "translate": ""
+    },
+    {
+        "source": "fdio_spawn_etc always consumes transferred file descriptors.",
+        "suggest": "fdio_spawn_etc 始终使用传输的文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "this is ignored when envp is non-null",
+        "suggest": "当 envp 为非 null 时，将忽略此设置",
+        "translate": ""
+    },
+    {
+        "source": "See if we want to do something with that err_msg",
+        "suggest": "看看我们是否想对那个 err_msg 做些什么",
+        "translate": ""
+    },
+    {
+        "source": "support extracting return code as an i64",
+        "suggest": "支持提取返回码作为 i64",
+        "translate": ""
+    },
+    {
+        "source": "The actually-Unix implementation in process_unix.rs uses WSTOPSIG, WCOREDUMP et al.",
+        "suggest": "process_unix.rs 中的实际 Unix 实现使用 WSTOPSIG，WCOREDUMP 等。",
+        "translate": ""
+    },
+    {
+        "source": "I infer from the implementation of `success`, `code` and `signal` above that these are not available on Fuchsia.",
+        "suggest": "从上面的 `success`，`code` 和 `signal` 的实现中可以推断出，Fuchsia 没有这些功能。",
+        "translate": ""
+    },
+    {
+        "source": "It does not appear that Fuchsia is Unix-like enough to implement ExitStatus (or indeed many other things from std::os::unix) properly.",
+        "suggest": "看起来 Fuchsia 似乎不像 Unix 那样足以正确实现 ExitStatus (或者实际上来自 std::os::unix 的许多其他事情)。",
+        "translate": ""
+    },
+    {
+        "source": "This veneer is always going to be a bodge.",
+        "suggest": "这种贴面总是会成为一个庞然大物。",
+        "translate": ""
+    },
+    {
+        "source": "So while I don't know if these implementations are actually correct, I think they will do for now at least.",
+        "suggest": "因此，虽然我不知道这些实现是否真的正确，但我认为至少现在可以做到。",
+        "translate": ""
+    },
+    {
+        "source": "We don't know what someone who calls into_raw() will do with this value, but it should have the conventional Unix representation.",
+        "suggest": "我们不知道调用 into_raw() 的人会用这个值做什么，但是它应该具有常规的 Unix 表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "Despite the fact that this is not standardised in SuS or POSIX, all Unix systems encode the signal and exit status the same way.",
+        "suggest": "尽管在 SuS 或 POSIX 中未对此进行标准化，但所有 Unix 系统均以相同的方式对信号和退出状态进行编码。",
+        "translate": ""
+    },
+    {
+        "source": "(Ie the WIFEXITED, WEXITSTATUS etc.",
+        "suggest": "(即 WIFEXITED，WEXITSTATUS 等。",
+        "translate": ""
+    },
+    {
+        "source": "macros have identical behaviour on every Unix.)",
+        "suggest": "宏在每个 Unix 上的行为都相同。)",
+        "translate": ""
+    },
+    {
+        "source": "The caller of `std::os::unix::into_raw` is probably wanting a Unix exit status, and may do their own shifting and masking, or even pass the status to another computer running a different Unix variant.",
+        "suggest": "`std::os::unix::into_raw` 的调用者可能想要 Unix 退出状态，并且可能会进行自己的移动和屏蔽，甚至将状态传递给运行其他 Unix 成员的另一台计算机。",
+        "translate": ""
+    },
+    {
+        "source": "The other view would be to say that the caller on Fuchsia ought to know that `into_raw` will give a raw Fuchsia status (whatever that is - I don't know, personally).",
+        "suggest": "另一种观点是说， Fuchsia 的调用者应该知道 `into_raw` 会赋予原始的 Fuchsia 状态 (无论如何 - 我个人都不知道)。",
+        "translate": ""
+    },
+    {
+        "source": "That is not possible here becaause we must return a c_int because that's what Unix (including SuS and POSIX) say a wait status is, but Fuchsia apparently uses a u64, so it won't necessarily fit.",
+        "suggest": "这是不可能的，因为我们必须返回一个 c_int，因为这就是 Unix (包括 SuS 和 POSIX) 所说的等待状态，但是 Fuchsia 显然使用了 u64，因此不一定适合。",
+        "translate": ""
+    },
+    {
+        "source": "It seems to me that that the right answer would be to provide std::os::fuchsia with its own ExitStatusExt, rather that trying to provide a not very convincing imitation of Unix.",
+        "suggest": "在我看来，正确的答案是为 std::os::fuchsia 提供其自己的 ExitStatusExt，而不是试图提供对 Unix 不太令人信服的模仿。",
+        "translate": ""
+    },
+    {
+        "source": "Ie, std::os::unix::process:ExitStatusExt ought not to exist on Fuchsia.",
+        "suggest": "即，std::process: ExitStatusExt 不应该在 Fuchsia 上存在。",
+        "translate": ""
+    },
+    {
+        "source": "But fixing this up that is beyond the scope of my efforts now.",
+        "suggest": "但是解决此问题超出了我现在的努力范围。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a raw `c_int` to a type-safe `ExitStatus` by wrapping it without copying.",
+        "suggest": "通过包装原始 `c_int` 而无需复制将其转换为类型安全的 `ExitStatus`。",
+        "translate": ""
+    },
+    {
+        "source": "In practice this is the same on every Unix.",
+        "suggest": "实际上，每个 Unix 上都是相同的。",
+        "translate": ""
+    },
+    {
+        "source": "If some weird platform turns out to be different, and this test fails, use #[cfg].",
+        "suggest": "如果发现某些奇怪的平台不同，并且此测试失败，请使用 #[cfg]。",
+        "translate": ""
+    },
+    {
+        "source": "On MacOS, 0x0137f is WIFCONTINUED, not WIFSTOPPED.",
+        "suggest": "在 MacOS 上，0x0137f 处于 WIFCONTINUED，而不是 WIFSTOPPED。",
+        "translate": ""
+    },
+    {
+        "source": "Probably *BSD is similar.",
+        "suggest": "大概与 *BSD is 类似。",
+        "translate": ""
+    },
+    {
+        "source": "The purpose of this test is to test our string formatting, not our understanding of the wait status magic numbers.",
+        "suggest": "该测试的目的是测试我们的字符串格式，而不是我们对等待状态魔术数字的理解。",
+        "translate": ""
+    },
+    {
+        "source": "So restrict these to Linux.",
+        "suggest": "因此，将它们限制为 Linux。",
+        "translate": ""
+    },
+    {
+        "source": "Testing \"unrecognised wait status\" is hard because the wait.h macros typically assume that the value came from wait and isn't mad.",
+        "suggest": "测试 \"无法识别的等待状态\" 很难，因为 wait.h 宏通常假定该值来自等待，并且没有异常。",
+        "translate": ""
+    },
+    {
+        "source": "With the glibc I have here this works:",
+        "suggest": "使用 glibc 我可以在这里工作:",
+        "translate": ""
+    },
+    {
+        "source": "Whatever happens after the fork is almost for sure going to touch or look at the environment in one way or another (PATH in `execvp` or accessing the `environ` pointer ourselves).",
+        "suggest": "fork 之后发生的任何事情几乎都可以肯定地以一种或另一种方式接触或观察环境 (`execvp` 中的 PATH 或我们自己访问 `environ` 指针)。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure no other thread is accessing the environment when we do the fork itself.",
+        "suggest": "当我们自己做 fork 时，请确保没有其他线程正在访问环境。",
+        "translate": ""
+    },
+    {
+        "source": "Note that as soon as we're done with the fork there's no need to hold a lock any more because the parent won't do anything and the child is in its own process.",
+        "suggest": "请注意，一旦完成 fork，就不再需要持有锁，因为父级不会做任何事情，而子级则在自己的进程中。",
+        "translate": ""
+    },
+    {
+        "source": "Thus the parent drops the lock guard while the child forgets it to avoid unlocking it on a new thread, which would be invalid.",
+        "suggest": "因此，当子进程忘记它时，父进程丢弃了锁保护，以避免在新线程上解锁它，这将是无效的。",
+        "translate": ""
+    },
+    {
+        "source": "pipe I/O up to PIPE_BUF bytes should be atomic, and then we want to be sure we *don't* run at_exit destructors as we're being torn down regardless",
+        "suggest": "管道 I/O 到 PIPE_BUF 字节的大小应该是原子的，然后我们要确保不要因为正在被拆除而不要运行 at_exit 析构函数",
+        "translate": ""
+    },
+    {
+        "source": "loop to handle EINTR",
+        "suggest": "循环处理 EINTR",
+        "translate": ""
+    },
+    {
+        "source": "pipe I/O up to PIPE_BUF bytes should be atomic",
+        "suggest": "管道 I/O (最多 PIPE_BUF 个字节) 应该是原子的",
+        "translate": ""
+    },
+    {
+        "source": "Similar to when forking, we want to ensure that access to the environment is synchronized, so make sure to grab the environment lock before we try to exec.",
+        "suggest": "与分叉时类似，我们要确保对环境的访问是同步的，因此在尝试执行之前，请确保获取环境锁。",
+        "translate": ""
+    },
+    {
+        "source": "And at this point we've reached a special time in the life of the child.",
+        "suggest": "至此，我们到达了子节点生命中的一个特殊时期。",
+        "translate": ""
+    },
+    {
+        "source": "The child must now be considered hamstrung and unable to do anything other than syscalls really.",
+        "suggest": "现在必须认为该子节点受了伤害，除了真正的 syscalls 之外，无能为力。",
+        "translate": ""
+    },
+    {
+        "source": "Consider the following scenario:",
+        "suggest": "请考虑以下情形:",
+        "translate": ""
+    },
+    {
+        "source": "Thread A of process 1 grabs the malloc() mutex",
+        "suggest": "进程 1 的线程 A 抢夺 malloc() 互斥锁",
+        "translate": ""
+    },
+    {
+        "source": "Thread B of process 1 forks(), creating thread C",
+        "suggest": "进程 1 forks() 的线程 B，创建线程 C",
+        "translate": ""
+    },
+    {
+        "source": "Thread C of process 2 then attempts to malloc()",
+        "suggest": "然后，进程 2 的线程 C 尝试 malloc()",
+        "translate": ""
+    },
+    {
+        "source": "The memory of process 2 is the same as the memory of process 1, so the mutex is locked.",
+        "suggest": "进程 2 的内存与进程 1 的内存相同，因此互斥锁被锁定。",
+        "translate": ""
+    },
+    {
+        "source": "This situation looks a lot like deadlock, right?",
+        "suggest": "这种情况看起来很像僵局，对吗?",
+        "translate": ""
+    },
+    {
+        "source": "It turns out that this is what pthread_atfork() takes care of, which is presumably implemented across platforms.",
+        "suggest": "事实证明，这就是 pthread_atfork() 所负责的，它大概是跨平台实现的。",
+        "translate": ""
+    },
+    {
+        "source": "The first thing that threads to *before* forking is to do things like grab the malloc mutex, and then after the fork they unlock it.",
+        "suggest": "进行 *之前* 分叉的第一件事是执行诸如抓取 malloc 互斥锁之类的操作，然后在 fork 之后对其进行解锁。",
+        "translate": ""
+    },
+    {
+        "source": "Despite this information, libnative's spawn has been witnessed to deadlock on both macOS and FreeBSD.",
+        "suggest": "尽管有这些信息，但目睹 libnative 的 spawn 在 macOS 和 FreeBSD 上都死锁。",
+        "translate": ""
+    },
+    {
+        "source": "I'm not entirely sure why, but all collected backtraces point at malloc/free traffic in the child spawned process.",
+        "suggest": "我不完全确定为什么，但是所有收集的回溯都指向子衍生进程中的 malloc/free 流量。",
+        "translate": ""
+    },
+    {
+        "source": "For this reason, the block of code below should contain 0 invocations of either malloc of free (or their related friends).",
+        "suggest": "出于这个原因，下面的代码块应包含对 free 的 malloc (或其相关朋友) 的 0 次调用。",
+        "translate": ""
+    },
+    {
+        "source": "As an example of not having malloc/free traffic, we don't close this file descriptor by dropping the FileDesc (which contains an allocation).",
+        "suggest": "作为不具有 malloc/free 流量的示例，我们不通过丢弃 FileDesc (包含分配) 来关闭此文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "Instead we just close it manually.",
+        "suggest": "相反，我们只是手动将其关闭。",
+        "translate": ""
+    },
+    {
+        "source": "This will never have the drop glue anyway because this code never returns (the child will either exec() or invoke libc::exit)",
+        "suggest": "无论如何这将永远不会有 drop glue，因为此代码永远不会返回 (子代码将调用 exec() 或调用 libc::exit)",
+        "translate": ""
+    },
+    {
+        "source": "Redox kernel does not support setgroups yet",
+        "suggest": "`Redox` 内核尚不支持 setgroups",
+        "translate": ""
+    },
+    {
+        "source": "When dropping privileges from root, the `setgroups` call will remove any extraneous groups.",
+        "suggest": "从根目录丢弃权限时，`setgroups` 调用将丢弃所有无关的组。",
+        "translate": ""
+    },
+    {
+        "source": "We only drop groups if the current uid is 0 and we weren't given an explicit set of groups.",
+        "suggest": "仅当当前 uid 为 0 且没有给我们明确的组组时，我们才丢弃组。",
+        "translate": ""
+    },
+    {
+        "source": "If we don't call this, then even though our uid has dropped, we may still have groups that enable us to do super-user things.",
+        "suggest": "如果我们不调用它，那么即使我们的 uid 丢弃，我们仍然可能拥有使我们能够执行超级用户操作的组。",
+        "translate": ""
+    },
+    {
+        "source": "emscripten has no signal support.",
+        "suggest": "emscripten 没有信号支持。",
+        "translate": ""
+    },
+    {
+        "source": "Reset signal handling so the child process starts in a standardized state.",
+        "suggest": "重置信号处理，以便子进程以标准化状态开始。",
+        "translate": ""
+    },
+    {
+        "source": "libstd ignores SIGPIPE, and signal-handling libraries often set a mask.",
+        "suggest": "libstd 会忽略 SIGPIPE，并且信号处理库通常会设置掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Child processes inherit ignored signals and the signal mask from their parent, but most UNIX programs do not reset these things on their own, so we need to clean things up now to avoid confusing the program we're about to run.",
+        "suggest": "子进程从其父进程继承被忽略的信号和信号掩码，但是大多数 UNIX 程序不会自行重置这些内容，因此，我们现在需要清除这些内容，以免使我们将要运行的程序感到困惑。",
+        "translate": ""
+    },
+    {
+        "source": "Although we're performing an exec here we may also return with an error from this function (without actually exec'ing) in which case we want to be sure to restore the global environment back to what it once was, ensuring that our temporary override, when free'd, doesn't corrupt our process's environment.",
+        "suggest": "尽管我们在这里执行一个 exec，我们也可能会从该函数返回一个错误 (没有实际执行)，在这种情况下，我们希望确保将环境还原到以前的状态，以确保我们的临时覆盖，释放后，不会破坏我们进程的环境。",
+        "translate": ""
+    },
+    {
+        "source": "Only support platforms for which posix_spawn() can return ENOENT directly.",
+        "suggest": "仅支持 posix_spawn() 可以直接返回 ENOENT 的平台。",
+        "translate": ""
+    },
+    {
+        "source": "Only glibc 2.24+ posix_spawn() supports returning ENOENT directly.",
+        "suggest": "仅 glibc 2.24+ posix_spawn() 支持直接返回 ENOENT。",
+        "translate": ""
+    },
+    {
+        "source": "glibc 2.29+, and musl 1.24+ can set a new working directory, and maybe others will gain this non-POSIX function too.",
+        "suggest": "glibc 2.29 + 和 musl 1.24 + 可以设置一个新的工作目录，也许其他人也会获得此非 POSIX 函数。",
+        "translate": ""
+    },
+    {
+        "source": "We'll check for this weak symbol as soon as it's needed, so we can return early otherwise to do a manual chdir before exec.",
+        "suggest": "我们将在需要时立即检查该弱符号，因此我们可以提早返回，否则在执行 exec 之前先进行手动 chdir。",
+        "translate": ""
+    },
+    {
+        "source": "There is a bug in macOS where a relative executable path like \"../myprogram\" will cause `posix_spawn` to successfully launch the program, but erroneously return ENOENT when used with posix_spawn_file_actions_addchdir_np which was introduced in macOS 10.15.",
+        "suggest": "macOS 中存在一个错误，其中一个相对可执行路径 (如 \"../myprogram\") 将导致 `posix_spawn` 成功启动该程序，但与 macOS 10.15 中引入的 posix_spawn_file_actions_addchdir_np 一起使用时，会错误地返回 ENOENT。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure we synchronize access to the global `environ` resource",
+        "suggest": "确保我们同步对 `environ` 资源的访问",
+        "translate": ""
+    },
+    {
+        "source": "The unique ID of the process (this should never be negative).",
+        "suggest": "进程的唯一 ID (永远不能为负)。",
+        "translate": ""
+    },
+    {
+        "source": "If we've already waited on this process then the pid can be recycled and used for another process, and we probably shouldn't be killing random processes, so just return an error.",
+        "suggest": "如果我们已经在等待该进程，则可以将 pid 回收并用于另一个进程，并且我们可能不应该杀死随机进程，因此只需返回一个错误即可。",
+        "translate": ""
+    },
+    {
+        "source": "exit statuses",
+        "suggest": "退出状态",
+        "translate": ""
+    },
+    {
+        "source": "Safe wrapper around zx_handle_t",
+        "suggest": "zx_handle_t 的安全包装",
+        "translate": ""
+    },
+    {
+        "source": "Returned for topic ZX_INFO_PROCESS",
+        "suggest": "返回主题 ZX_INFO_PROCESS",
+        "translate": ""
+    },
+    {
+        "source": "fdio_spawn_etc flags",
+        "suggest": "fdio_spawn_etc 标志",
+        "translate": ""
+    },
+    {
+        "source": "fdio_spawn_etc actions",
+        "suggest": "fdio_spawn_etc 操作",
+        "translate": ""
+    },
+    {
+        "source": "ERR_NOT_SUPPORTED: The operation is not implemented, supported, or enabled.",
+        "suggest": "ERR_NOT_SUPPORTED: 未实现，不支持或未启用该操作。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_NO_RESOURCES: The system was not able to allocate some resource needed for the operation.",
+        "suggest": "ERR_NO_RESOURCES: 系统无法分配该操作所需的某些资源。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_NO_MEMORY: The system was not able to allocate memory needed for the operation.",
+        "suggest": "ERR_NO_MEMORY: 系统无法分配该操作所需的内存。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_CALL_FAILED: The second phase of zx_channel_call(; did not complete successfully.",
+        "suggest": "ERR_CALL_FAILED: zx_channel_call (; 的第二阶段未成功完成。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_INTERRUPTED_RETRY: The system call was interrupted, but should be retried.",
+        "suggest": "ERR_INTERRUPTED_RETRY: 系统调用被中断，但是应该重试。",
+        "translate": ""
+    },
+    {
+        "source": "This should not be seen outside of the VDSO.",
+        "suggest": "这不应在 VDSO 之外看到。",
+        "translate": ""
+    },
+    {
+        "source": "Parameter errors",
+        "suggest": "参数错误",
+        "translate": ""
+    },
+    {
+        "source": "ERR_INVALID_ARGS: an argument is invalid, ex.",
+        "suggest": "ERR_INVALID_ARGS: 参数无效，例如。",
+        "translate": ""
+    },
+    {
+        "source": "null pointer",
+        "suggest": "空指针",
+        "translate": ""
+    },
+    {
+        "source": "ERR_BAD_HANDLE: A specified handle value does not refer to a handle.",
+        "suggest": "ERR_BAD_HANDLE: 指定的句柄值未引用句柄。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_WRONG_TYPE: The subject of the operation is the wrong type to perform the operation.",
+        "suggest": "ERR_WRONG_TYPE: 操作的主题是执行该操作的错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "Example: Attempting a message_read on a thread handle.",
+        "suggest": "示例: 尝试在线程句柄上进行 message_read。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_BAD_SYSCALL: The specified syscall number is invalid.",
+        "suggest": "ERR_BAD_SYSCALL: 指定的系统调用号无效。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_OUT_OF_RANGE: An argument is outside the valid range for this operation.",
+        "suggest": "ERR_OUT_OF_RANGE: 参数超出此操作的有效范围。",
+        "translate": ""
+    },
+    {
+        "source": "ERR_BUFFER_TOO_SMALL: A caller provided buffer is too small for this operation.",
+        "suggest": "ERR_BUFFER_TOO_SMALL: 调用者提供的缓冲区对于此操作而言太小。",
+        "translate": ""
+    },
+    {
+        "source": "Precondition or state errors",
+        "suggest": "前提条件或状态错误",
+        "translate": ""
+    },
+    {
+        "source": "ERR_BAD_STATE: operation failed because the current state of the object does not allow it, or a precondition of the operation is not satisfied",
+        "suggest": "ERR_BAD_STATE: 操作失败，因为 object 的当前状态不允许它，或者不满足该操作的前提条件",
+        "translate": ""
+    }
+]

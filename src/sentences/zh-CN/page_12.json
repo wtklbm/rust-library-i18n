@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "Panics when `index >= len()`, meaning it always panics on empty slices.",
+        "suggest": "`index >= len()` 时为 Panics，这意味着在空片上始终为 panics。",
+        "translate": ""
+    },
+    {
+        "source": "This reordering has the additional property that any value at position `i < index` will be less than or equal to any value at a position `j > index` using the comparator function.",
+        "suggest": "此重排序具有附加属性，即使用比较器函数，位置 `i < index` 处的任何值将小于或等于位置 `j > index` 处的任何值。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, this reordering is unstable (i.e. any number of equal elements may end up at position `index`), in-place (i.e. does not allocate), and *O*(*n*) worst-case.",
+        "suggest": "另外，这种重新排序是不稳定的 (即，任意数量的相等元素可能会在位置 `index` 处结束)，就地 (即，未分配) 和 *O*(*n*) 最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "This function is also known as \"kth element\" in other libraries.",
+        "suggest": "此函数在其他库中也称为 \"kth element\"。",
+        "translate": ""
+    },
+    {
+        "source": "It returns a triplet of the following values: all elements less than the one at the given index, the value at the given index, and all elements greater than the one at the given index, using the provided comparator function.",
+        "suggest": "它使用提供的比较器函数返回以下值的三元组: 所有元素小于给定索引处的元素，给定索引处的值以及所有元素大于给定索引处的元素。",
+        "translate": ""
+    },
+    {
+        "source": "This reordering has the additional property that any value at position `i < index` will be less than or equal to any value at a position `j > index` using the key extraction function.",
+        "suggest": "此重新排序具有附加属性，即使用键提取函数，位置 `i < index` 处的任何值将小于或等于位置 `j > index` 处的任何值。",
+        "translate": ""
+    },
+    {
+        "source": "It returns a triplet of the following values: all elements less than the one at the given index, the value at the given index, and all elements greater than the one at the given index, using the provided key extraction function.",
+        "suggest": "它使用提供的键提取函数返回以下值的三元组: 所有元素小于给定索引处的元素，给定索引处的值以及所有元素大于给定索引处的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Moves all consecutive repeated elements to the end of the slice according to the [`PartialEq`] trait implementation.",
+        "suggest": "根据 [`PartialEq`] trait 实现，将所有连续的重复元素移动到切片的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Returns two slices.",
+        "suggest": "返回两个切片。",
+        "translate": ""
+    },
+    {
+        "source": "The first contains no consecutive repeated elements.",
+        "suggest": "第一个不包含连续的重复元素。",
+        "translate": ""
+    },
+    {
+        "source": "The second contains all the duplicates in no specified order.",
+        "suggest": "第二个包含没有指定顺序的所有重复项。",
+        "translate": ""
+    },
+    {
+        "source": "If the slice is sorted, the first returned slice contains no duplicates.",
+        "suggest": "如果对切片进行排序，则第一个返回的切片不包含重复项。",
+        "translate": ""
+    },
+    {
+        "source": "Moves all but the first of consecutive elements to the end of the slice satisfying a given equality relation.",
+        "suggest": "将除第一个连续元素之外的所有元素移动到满足给定相等关系的切片的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "The `same_bucket` function is passed references to two elements from the slice and must determine if the elements compare equal.",
+        "suggest": "`same_bucket` 函数被引用传递给切片中的两个元素，并且必须确定这些元素是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "The elements are passed in opposite order from their order in the slice, so if `same_bucket(a, b)` returns `true`, `a` is moved at the end of the slice.",
+        "suggest": "元素以与它们在切片中的顺序相反的顺序传递，因此，如果 `same_bucket(a, b)` 返回 `true`，则 `a` 将在切片的末尾移动。",
+        "translate": ""
+    },
+    {
+        "source": "Although we have a mutable reference to `self`, we cannot make *arbitrary* changes.",
+        "suggest": "尽管我们对 `self` 有一个可变的引用，但是我们不能进行 *任意* 的更改。",
+        "translate": ""
+    },
+    {
+        "source": "The `same_bucket` calls could panic, so we must ensure that the slice is in a valid state at all times.",
+        "suggest": "`same_bucket` 调用可能为 panic，因此我们必须确保切片始终处于有效状态。",
+        "translate": ""
+    },
+    {
+        "source": "The way that we handle this is by using swaps;",
+        "suggest": "我们处理此问题的方法是使用交换。",
+        "translate": ""
+    },
+    {
+        "source": "we iterate over all the elements, swapping as we go so that at the end the elements we wish to keep are in the front, and those we wish to reject are at the back.",
+        "suggest": "我们遍历所有元素，并随即交换，以使最后我们希望保留的元素在最前面，而我们希望拒绝的元素在后面。",
+        "translate": ""
+    },
+    {
+        "source": "We can then split the slice.",
+        "suggest": "然后我们可以分割切片。",
+        "translate": ""
+    },
+    {
+        "source": "This operation is still `O(n)`.",
+        "suggest": "此操作仍为 `O(n)`。",
+        "translate": ""
+    },
+    {
+        "source": "Example: We start in this state, where `r` represents \"next read\" and `w` represents \"next_write`.",
+        "suggest": "示例: 我们从这种状态开始，其中 `r` 代表 \"next read\"，`w` 代表 `next_write`。",
+        "translate": ""
+    },
+    {
+        "source": "Comparing self[r] against self[w-1], this is not a duplicate, so we swap self[r] and self[w] (no effect as r==w) and then increment both r and w, leaving us with:",
+        "suggest": "将 self[r] 与 self [w-1] 进行比较，这不是重复项，因此我们交换 self[r] 和 self[w] (因为 r == w 无效)，然后将 r 和 w 都递增，所以我们得到:",
+        "translate": ""
+    },
+    {
+        "source": "Comparing self[r] against self[w-1], this value is a duplicate, so we increment `r` but leave everything else unchanged:",
+        "suggest": "将 self[r] 与 self [w-1] 进行比较，该值是重复的，因此我们增加 `r`，但其他所有内容保持不变:",
+        "translate": ""
+    },
+    {
+        "source": "Comparing self[r] against self[w-1], this is not a duplicate, so swap self[r] and self[w] and advance r and w:",
+        "suggest": "比较 self[r] 与 self [w-1]，这不是重复项，因此交换 self[r] 和 self[w] 并前进 r 和 w:",
+        "translate": ""
+    },
+    {
+        "source": "Not a duplicate, repeat:",
+        "suggest": "不能重复，请重复:",
+        "translate": ""
+    },
+    {
+        "source": "Duplicate, advance r.",
+        "suggest": "重复，前进 r。",
+        "translate": ""
+    },
+    {
+        "source": "End of slice.",
+        "suggest": "切片的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Split at w.",
+        "suggest": "在 w 处分割。",
+        "translate": ""
+    },
+    {
+        "source": "the `while` condition guarantees `next_read` and `next_write` are less than `len`, thus are inside `self`.",
+        "suggest": "`while` 条件确保 `next_read` 和 `next_write` 小于 `len`，因此在 `self` 内部。",
+        "translate": ""
+    },
+    {
+        "source": "points to one element before `ptr_write`, but `next_write` starts at 1, so `prev_ptr_write` is never less than 0 and is inside the slice.",
+        "suggest": "指向 `ptr_write` 之前的一个元素，但是 `next_write` 从 1 开始，因此 `prev_ptr_write` 永远不会小于 0 且位于切片内。",
+        "translate": ""
+    },
+    {
+        "source": "This fulfils the requirements for dereferencing `ptr_read`, `prev_ptr_write` and `ptr_write`, and for using `ptr.add(next_read)`, `ptr.add(next_write - 1)` and `prev_ptr_write.offset(1)`.",
+        "suggest": "这满足了解引用 `ptr_read`，`prev_ptr_write` 和 `ptr_write` 以及使用 `ptr.add(next_read)`，`ptr.add(next_write - 1)` 和 `prev_ptr_write.offset(1)` 的要求。",
+        "translate": ""
+    },
+    {
+        "source": "is also incremented at most once per loop at most meaning no element is skipped when it may need to be swapped.",
+        "suggest": "每个循环最多也增加一次，这意味着在可能需要交换元素时不会跳过任何元素。",
+        "translate": ""
+    },
+    {
+        "source": "and `prev_ptr_write` never point to the same element.",
+        "suggest": "和 `prev_ptr_write` 永远不要指向同一元素。",
+        "translate": ""
+    },
+    {
+        "source": "This is required for `&mut *ptr_read`, `&mut *prev_ptr_write` to be safe.",
+        "suggest": "为了确保 `&mut *ptr_read`，`&mut* prev_ptr_write` 的安全，这是必需的。",
+        "translate": ""
+    },
+    {
+        "source": "The explanation is simply that `next_read >= next_write` is always true, thus `next_read > next_write - 1` is too.",
+        "suggest": "简单的解释是 `next_read >= next_write` 始终为真，因此 `next_read > next_write - 1` 也是如此。",
+        "translate": ""
+    },
+    {
+        "source": "Avoid bounds checks by using raw pointers.",
+        "suggest": "通过使用裸指针避免边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "Moves all but the first of consecutive elements to the end of the slice that resolve to the same key.",
+        "suggest": "将除了第一个连续元素之外的所有元素移动到解析为相同键的切片的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Rotates the slice in-place such that the first `mid` elements of the slice move to the end while the last `self.len() - mid` elements move to the front.",
+        "suggest": "就地旋转切片，以使切片的第一个 `mid` 元素移至末尾，而最后一个 `self.len() - mid` 元素移至前端。",
+        "translate": ""
+    },
+    {
+        "source": "After calling `rotate_left`, the element previously at index `mid` will become the first element in the slice.",
+        "suggest": "调用 `rotate_left` 后，先前在索引 `mid` 处的元素将成为切片中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This function will panic if `mid` is greater than the length of the slice.",
+        "suggest": "如果 `mid` 大于切片的长度，则此函数将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `mid == self.len()` does _not_ panic and is a no-op rotation.",
+        "suggest": "请注意，`mid == self.len()` 执行 _not_ panic，并且是无操作旋转。",
+        "translate": ""
+    },
+    {
+        "source": "Takes linear (in `self.len()`) time.",
+        "suggest": "花费线性时间 (以 `self.len()` 为单位)。",
+        "translate": ""
+    },
+    {
+        "source": "Rotating a subslice:",
+        "suggest": "旋转子切片:",
+        "translate": ""
+    },
+    {
+        "source": "The range `[p.add(mid) - mid, p.add(mid) + k)` is trivially valid for reading and writing, as required by `ptr_rotate`.",
+        "suggest": "根据 `ptr_rotate` 的要求，范围 `[p.add(mid) - mid, p.add(mid) + k)` 对于读取和写入非常有效。",
+        "translate": ""
+    },
+    {
+        "source": "Rotates the slice in-place such that the first `self.len() - k` elements of the slice move to the end while the last `k` elements move to the front.",
+        "suggest": "就地旋转切片，以使切片的第一个 `self.len() - k` 元素移至末尾，而最后一个 `k` 元素移至前端。",
+        "translate": ""
+    },
+    {
+        "source": "After calling `rotate_right`, the element previously at index `self.len() - k` will become the first element in the slice.",
+        "suggest": "调用 `rotate_right` 后，先前在索引 `self.len() - k` 处的元素将成为切片中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This function will panic if `k` is greater than the length of the slice.",
+        "suggest": "如果 `k` 大于切片的长度，则此函数将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Note that `k == self.len()` does _not_ panic and is a no-op rotation.",
+        "suggest": "请注意，`k == self.len()` 执行 _not_ panic，并且是无操作旋转。",
+        "translate": ""
+    },
+    {
+        "source": "Rotate a subslice:",
+        "suggest": "旋转子切片:",
+        "translate": ""
+    },
+    {
+        "source": "Fills `self` with elements by cloning `value`.",
+        "suggest": "通过克隆 `value`，用元素填充 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "Fills `self` with elements returned by calling a closure repeatedly.",
+        "suggest": "用重复调用闭包返回的元素填充 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "This method uses a closure to create new values.",
+        "suggest": "此方法使用闭包创建新值。",
+        "translate": ""
+    },
+    {
+        "source": "If you'd rather [`Clone`] a given value, use [`fill`].",
+        "suggest": "如果您希望给定值 [`Clone`]，请使用 [`fill`]。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to use the [`Default`] trait to generate values, you can pass [`Default::default`] as the argument.",
+        "suggest": "如果要使用 [`Default`] trait 生成值，则可以传递 [`Default::default`] 作为参数。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the elements from `src` into `self`.",
+        "suggest": "将元素从 `src` 复制到 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "The length of `src` must be the same as `self`.",
+        "suggest": "`src` 的长度必须与 `self` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` implements `Copy`, it can be more performant to use [`copy_from_slice`].",
+        "suggest": "如果 `T` 实现 `Copy`，则使用 [`copy_from_slice`] 的性能可能更高。",
+        "translate": ""
+    },
+    {
+        "source": "Cloning two elements from a slice into another:",
+        "suggest": "将一个切片中的两个元素克隆到另一个中:",
+        "translate": ""
+    },
+    {
+        "source": "Rust enforces that there can only be one mutable reference with no immutable references to a particular piece of data in a particular scope.",
+        "suggest": "Rust 强制只对一个特定作用域中的特定数据进行一个变量引用，而没有不可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Because of this, attempting to use `clone_from_slice` on a single slice will result in a compile failure:",
+        "suggest": "因此，尝试在单个切片上使用 `clone_from_slice` 将导致编译失败:",
+        "translate": ""
+    },
+    {
+        "source": "To work around this, we can use [`split_at_mut`] to create two distinct sub-slices from a slice:",
+        "suggest": "要解决此问题，我们可以使用 [`split_at_mut`] 从切片创建两个不同的子切片:",
+        "translate": ""
+    },
+    {
+        "source": "Copies all elements from `src` into `self`, using a memcpy.",
+        "suggest": "使用 memcpy 将所有元素从 `src` 复制到 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` does not implement `Copy`, use [`clone_from_slice`].",
+        "suggest": "如果 `T` 未实现 `Copy`，请使用 [`clone_from_slice`]。",
+        "translate": ""
+    },
+    {
+        "source": "Copying two elements from a slice into another:",
+        "suggest": "将切片中的两个元素复制到另一个中:",
+        "translate": ""
+    },
+    {
+        "source": "Because of this, attempting to use `copy_from_slice` on a single slice will result in a compile failure:",
+        "suggest": "因此，尝试在单个切片上使用 `copy_from_slice` 将导致编译失败:",
+        "translate": ""
+    },
+    {
+        "source": "The panic code path was put into a cold function to not bloat the call site.",
+        "suggest": "panic 代码路径已放入冷函数中，以免膨胀调用站点。",
+        "translate": ""
+    },
+    {
+        "source": "`self` is valid for `self.len()` elements by definition, and `src` was checked to have the same length.",
+        "suggest": "根据定义，`self` 对 `self.len()` 元素有效，并且检查 `src` 具有相同的长度。",
+        "translate": ""
+    },
+    {
+        "source": "The slices cannot overlap because mutable references are exclusive.",
+        "suggest": "切片不能重叠，因为可变引用是排他的。",
+        "translate": ""
+    },
+    {
+        "source": "Copies elements from one part of the slice to another part of itself, using a memmove.",
+        "suggest": "使用记忆膜将元素从切片的一部分复制到自身的另一部分。",
+        "translate": ""
+    },
+    {
+        "source": "is the range within `self` to copy from.",
+        "suggest": "是 `self` 内要复制的范围。",
+        "translate": ""
+    },
+    {
+        "source": "is the starting index of the range within `self` to copy to, which will have the same length as `src`.",
+        "suggest": "是要复制到的 `self` 内范围的起始索引，该长度将与 `src` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "The two ranges may overlap.",
+        "suggest": "这两个范围可能会重叠。",
+        "translate": ""
+    },
+    {
+        "source": "The ends of the two ranges must be less than or equal to `self.len()`.",
+        "suggest": "两个范围的末端必须小于或等于 `self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "This function will panic if either range exceeds the end of the slice, or if the end of `src` is before the start.",
+        "suggest": "如果任一范围超出了切片的末尾，或者 `src` 的末尾在开始点之前，则此函数将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Copying four bytes within a slice:",
+        "suggest": "在切片中复制四个字节:",
+        "translate": ""
+    },
+    {
+        "source": "the conditions for `ptr::copy` have all been checked above, as have those for `ptr::add`.",
+        "suggest": "`ptr::copy` 的条件以及 `ptr::add` 的条件均已在上面进行了检查。",
+        "translate": ""
+    },
+    {
+        "source": "Swaps all elements in `self` with those in `other`.",
+        "suggest": "交换 `self` 中的所有元素和 `other` 中的所有元素。",
+        "translate": ""
+    },
+    {
+        "source": "The length of `other` must be the same as `self`.",
+        "suggest": "`other` 的长度必须与 `self` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "Swapping two elements across slices:",
+        "suggest": "在切片之间交换两个元素:",
+        "translate": ""
+    },
+    {
+        "source": "Rust enforces that there can only be one mutable reference to a particular piece of data in a particular scope.",
+        "suggest": "Rust 强制要求特定作用域中的特定数据只能有一个可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Because of this, attempting to use `swap_with_slice` on a single slice will result in a compile failure:",
+        "suggest": "因此，尝试在单个切片上使用 `swap_with_slice` 将导致编译失败:",
+        "translate": ""
+    },
+    {
+        "source": "To work around this, we can use [`split_at_mut`] to create two distinct mutable sub-slices from a slice:",
+        "suggest": "要解决此问题，我们可以使用 [`split_at_mut`] 从切片创建两个不同的可变子切片:",
+        "translate": ""
+    },
+    {
+        "source": "Function to calculate lengths of the middle and trailing slice for `align_to{,_mut}`.",
+        "suggest": "该函数可计算 `align_to{,_mut}` 的中间和尾随切片的长度。",
+        "translate": ""
+    },
+    {
+        "source": "What we gonna do about `rest` is figure out what multiple of `U`s we can put in a lowest number of `T`s.",
+        "suggest": "我们要对 `rest` 采取的措施是弄清楚我们可以在最低数量的 T 中放入 U 的倍数。",
+        "translate": ""
+    },
+    {
+        "source": "And how many `T`s we need for each such \"multiple\".",
+        "suggest": "对于每个这样的 \"multiple\"，我们需要多少个 T。",
+        "translate": ""
+    },
+    {
+        "source": "Consider for example T=u8 U=u16.",
+        "suggest": "考虑例如 T = u8 U = u16。",
+        "translate": ""
+    },
+    {
+        "source": "Then we can put 1 U in 2 Ts.",
+        "suggest": "然后我们可以在 2 Ts 中放入 1U。",
+        "translate": ""
+    },
+    {
+        "source": "Simple.",
+        "suggest": "简单的。",
+        "translate": ""
+    },
+    {
+        "source": "Now, consider for example a case where size_of::<T> = 16, size_of::<U> = 24.",
+        "suggest": "现在，考虑一个例子，其中 size_of::<T>=16，size_of::<U>=24。</u>",
+        "translate": ""
+    },
+    {
+        "source": "We can put 2 Us in place of every 3 Ts in the `rest` slice.",
+        "suggest": "我们可以在 `rest` 切片中每 3 个 T 放 2 个 Us。",
+        "translate": ""
+    },
+    {
+        "source": "A bit more complicated.",
+        "suggest": "有点复杂。",
+        "translate": ""
+    },
+    {
+        "source": "Formula to calculate this is:",
+        "suggest": "计算公式为:",
+        "translate": ""
+    },
+    {
+        "source": "Expanded and simplified:",
+        "suggest": "扩展和简化:",
+        "translate": ""
+    },
+    {
+        "source": "Luckily since all this is constant-evaluated...",
+        "suggest": "幸运的是，由于所有这些都是经过常量评估的...",
+        "translate": ""
+    },
+    {
+        "source": "performance here matters not!",
+        "suggest": "这里的表现无关紧要!",
+        "translate": ""
+    },
+    {
+        "source": "iterative stein’s algorithm We should still make this `const fn` (and revert to recursive algorithm if we do) because relying on llvm to consteval all this is… well, it makes me uncomfortable.",
+        "suggest": "迭代施泰因算法我们仍然应该使这个 `const fn` (如果需要的话，请还原为递归算法)，因为依靠 llvm 来约束所有这些都是……好吧，这让我感到不舒服。",
+        "translate": ""
+    },
+    {
+        "source": "`a` and `b` are checked to be non-zero values.",
+        "suggest": "`a` 和 `b` 被检查为非零值。",
+        "translate": ""
+    },
+    {
+        "source": "remove all factors of 2 from b",
+        "suggest": "从 b 删除 2 的所有因子",
+        "translate": ""
+    },
+    {
+        "source": "`b` is checked to be non-zero.",
+        "suggest": "`b` 被检查为非零。",
+        "translate": ""
+    },
+    {
+        "source": "Armed with this knowledge, we can find how many `U`s we can fit!",
+        "suggest": "有了这些知识，我们就能找到可以容纳多少个 `U`s!",
+        "translate": ""
+    },
+    {
+        "source": "And how many `T`s will be in the trailing slice!",
+        "suggest": "以及后面的切片中将有多少个 T`s!",
+        "translate": ""
+    },
+    {
+        "source": "Transmute the slice to a slice of another type, ensuring alignment of the types is maintained.",
+        "suggest": "将切片转换为其他类型的切片，以确保保持类型的对齐。",
+        "translate": ""
+    },
+    {
+        "source": "This method splits the slice into three distinct slices: prefix, correctly aligned middle slice of a new type, and the suffix slice.",
+        "suggest": "此方法将切片分为三个不同的切片: 前缀，正确对齐的新类型的中间切片和后缀切片。",
+        "translate": ""
+    },
+    {
+        "source": "The method may make the middle slice the greatest length possible for a given type and input slice, but only your algorithm's performance should depend on that, not its correctness.",
+        "suggest": "该方法可以使中间切片对于给定类型和输入切片的最大长度成为可能，但是仅算法的性能应取决于此，而不取决于其正确性。",
+        "translate": ""
+    },
+    {
+        "source": "It is permissible for all of the input data to be returned as the prefix or suffix slice.",
+        "suggest": "允许所有输入数据作为前缀或后缀切片返回。",
+        "translate": ""
+    },
+    {
+        "source": "This method has no purpose when either input element `T` or output element `U` are zero-sized and will return the original slice without splitting anything.",
+        "suggest": "当输入元素 `T` 或输出元素 `U` 的大小为零时，此方法无用，并且将返回原始切片而不拆分任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "This method is essentially a `transmute` with respect to the elements in the returned middle slice, so all the usual caveats pertaining to `transmute::<T, U>` also apply here.",
+        "suggest": "对于返回的中间切片中的元素，此方法本质上是 `transmute`，因此，与 `transmute::<T, U>` 有关的所有常见警告也适用于此。",
+        "translate": ""
+    },
+    {
+        "source": "Note that most of this function will be constant-evaluated,",
+        "suggest": "请注意，大多数此函数将进行常量评估，",
+        "translate": ""
+    },
+    {
+        "source": "handle ZSTs specially, which is – don't handle them at all.",
+        "suggest": "专门处理 ZST，这是-根本不处理它们。",
+        "translate": ""
+    },
+    {
+        "source": "First, find at what point do we split between the first and 2nd slice.",
+        "suggest": "首先，找出我们在第一和第二切片之间分割的时间。",
+        "translate": ""
+    },
+    {
+        "source": "Easy with ptr.align_offset.",
+        "suggest": "ptr.align_offset 轻松实现。",
+        "translate": ""
+    },
+    {
+        "source": "See the `align_to_mut` method for the detailed safety comment.",
+        "suggest": "有关详细的安全说明，请参见 `align_to_mut` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "now `rest` is definitely aligned, so `from_raw_parts` below is okay, since the caller guarantees that we can transmute `T` to `U` safely.",
+        "suggest": "现在 `rest` 绝对对齐，因此下面的 `from_raw_parts` 没问题，因为调用方保证我们可以安全地将 `T` 转换为 `U`。",
+        "translate": ""
+    },
+    {
+        "source": "Here we are ensuring we will use aligned pointers for U for the rest of the method.",
+        "suggest": "在这里，我们确保在方法的其余部分中将对 U 使用对齐的指针。",
+        "translate": ""
+    },
+    {
+        "source": "This is done by passing a pointer to &[T] with an alignment targeted for U.",
+        "suggest": "这是通过向 &[T] with 传递一个指向 U 的对齐方式来完成的。",
+        "translate": ""
+    },
+    {
+        "source": "is called with a correctly aligned and valid pointer `ptr` (it comes from a reference to `self`) and with a size that is a power of two (since it comes from the alignement for U), satisfying its safety constraints.",
+        "suggest": "使用正确对齐且有效的指针 `ptr` (来自 `self` 的引用) 调用该指针，并且其大小为 2 的幂 (因为它来自 U 的对齐)，从而满足其安全性约束。",
+        "translate": ""
+    },
+    {
+        "source": "We can't use `rest` again after this, that would invalidate its alias `mut_ptr`!",
+        "suggest": "此后我们将无法再次使用 `rest`，这将使其别名 `mut_ptr` 失效!",
+        "translate": ""
+    },
+    {
+        "source": "see comments for `align_to`.",
+        "suggest": "请参见 `align_to` 的注释。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this slice are sorted.",
+        "suggest": "检查此切片的元素是否已排序。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this slice are sorted using the given comparator function.",
+        "suggest": "检查此切片的元素是否使用给定的比较器函数进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the elements of this slice are sorted using the given key extraction function.",
+        "suggest": "检查此切片的元素是否使用给定的键提取函数进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of comparing the slice's elements directly, this function compares the keys of the elements, as determined by `f`.",
+        "suggest": "该函数将直接比较由 `f` 确定的元素的键，而不是直接比较切片的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the index of the partition point according to the given predicate (the index of the first element of the second partition).",
+        "suggest": "根据给定的谓词返回分区点的索引 (第二个分区的第一个元素的索引)。",
+        "translate": ""
+    },
+    {
+        "source": "The slice is assumed to be partitioned according to the given predicate.",
+        "suggest": "假定切片根据给定的谓词进行了分区。",
+        "translate": ""
+    },
+    {
+        "source": "This means that all elements for which the predicate returns true are at the start of the slice and all elements for which the predicate returns false are at the end.",
+        "suggest": "这意味着谓词返回 true 的所有元素都在切片的开头，谓词返回 false 的所有元素都在切片的结尾。",
+        "translate": ""
+    },
+    {
+        "source": "For example, [7, 15, 3, 5, 4, 12, 6] is a partitioned under the predicate x % 2 != 0 (all odd numbers are at the start, all even at the end).",
+        "suggest": "例如，[7, 15, 3, 5, 4, 12, 6] 在谓词 `x % 2 != 0` 下进行了分区 (所有的奇数都在开头，所有的偶数都在结尾)。",
+        "translate": ""
+    },
+    {
+        "source": "If this slice is not partitioned, the returned result is unspecified and meaningless, as this method performs a kind of binary search.",
+        "suggest": "如果未对该切片进行分区，则返回的结果是不确定的且无意义的，因为此方法执行一种二进制搜索。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`binary_search`], [`binary_search_by`], and [`binary_search_by_key`].",
+        "suggest": "另请参见 [`binary_search`]，[`binary_search_by`] 和 [`binary_search_by_key`]。",
+        "translate": ""
+    },
+    {
+        "source": "When `left < right`,",
+        "suggest": "当 `left < right` 时，",
+        "translate": ""
+    },
+    {
+        "source": "Therefore `left` always increases and `right` always decreases, and either of them is selected.",
+        "suggest": "因此，`left` 总是增加而 `right` 总是减少，并且选择了其中一个。",
+        "translate": ""
+    },
+    {
+        "source": "In both cases `left <= right` is satisfied.",
+        "suggest": "在两种情况下，都满足 `left <= right`。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore if `left < right` in a step, `left <= right` is satisfied in the next step.",
+        "suggest": "因此，如果在步骤中使用 `left < right`，则在下一步中满足 `left <= right`。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore as long as `left != right`, `0 <= left < right <= len` is satisfied and if this case `0 <= mid < len` is satisfied too.",
+        "suggest": "因此，只要满足 `left != right`，`0 <= left < right <= len`，并且如果满足这种情况，也满足 `0 <= mid < len`。",
+        "translate": ""
+    },
+    {
+        "source": "We need to explicitly slice them to the same length to make it easier for the optimizer to elide bounds checking.",
+        "suggest": "我们需要显式地将它们切片为相同的长度，以使优化程序更容易忽略边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "But since it can't be relied on we also have an explicit specialization for T: Copy.",
+        "suggest": "但是由于不能依靠它，我们还对 T: Copy 有一个明确的专长。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty slice.",
+        "suggest": "创建一个空的切片。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a mutable empty slice.",
+        "suggest": "创建一个可变的空切片。",
+        "translate": ""
+    },
+    {
+        "source": "Patterns in slices - currently, only used by `strip_prefix` and `strip_suffix`.",
+        "suggest": "切片中的模式 - 当前，仅由 `strip_prefix` 和 `strip_suffix` 使用。",
+        "translate": ""
+    },
+    {
+        "source": "At a future point, we hope to generalise `core::str::Pattern` (which at the time of writing is limited to `str`) to slices, and then this trait will be replaced or abolished.",
+        "suggest": "在 future 指针上，我们希望将 `core::str::Pattern` (在撰写本文时仅限于 `str`) 推广到切片，然后将替换或废除此 trait。",
+        "translate": ""
+    },
+    {
+        "source": "The element type of the slice being matched on.",
+        "suggest": "匹配的切片的元素类型。",
+        "translate": ""
+    },
+    {
+        "source": "Currently, the consumers of `SlicePattern` need a slice.",
+        "suggest": "当前，`SlicePattern` 的消费者需要切片。",
+        "translate": ""
+    },
+    {
+        "source": "manifest a slice for a single element",
+        "suggest": "显示单个元素的切片",
+        "translate": ""
+    },
+    {
+        "source": "The assertion above ensures `fst` and `snd` are contiguous, but they might still be contained within _different allocated objects_, in which case creating this slice is undefined behavior.",
+        "suggest": "上面的断言确保 `fst` 和 `snd` 是连续的，但是它们仍可能包含在 _different allocated objects_ 中，在这种情况下，创建此切片是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "and `b` are different allocated objects...",
+        "suggest": "和 `b` 是不同的分配对象...",
+        "translate": ""
+    },
+    {
+        "source": "which may nevertheless be laid out contiguously in memory: | a | b |",
+        "suggest": "但这可能会连续地放在内存中: 一个 | b |",
+        "translate": ""
+    },
+    {
+        "source": "Free functions to create `&[T]` and `&mut [T]`.",
+        "suggest": "自由函数来创建 `&[T]` 和 `&mut [T]`。",
+        "translate": ""
+    },
+    {
+        "source": "Forms a slice from a pointer and a length.",
+        "suggest": "根据指针和长度形成切片。",
+        "translate": ""
+    },
+    {
+        "source": "must be [valid] for reads for `len * mem::size_of::<T>()` many bytes, and it must be properly aligned.",
+        "suggest": "必须为 [valid]，才能读取许多字节的 `len * mem::size_of::<T>()`，并且必须正确对齐。",
+        "translate": ""
+    },
+    {
+        "source": "must be non-null and aligned even for zero-length slices.",
+        "suggest": "必须为非 null，并且即使对于零长度的切片也必须对齐。",
+        "translate": ""
+    },
+    {
+        "source": "must point to `len` consecutive properly initialized values of type `T`.",
+        "suggest": "必须指向 `len` 类型正确的连续 `T` 初始化值。",
+        "translate": ""
+    },
+    {
+        "source": "The memory referenced by the returned slice must not be mutated for the duration of lifetime `'a`, except inside an `UnsafeCell`.",
+        "suggest": "返回的切片引用的内存在生命周期 `'a` 期间不得更改，除非在 `UnsafeCell` 内部。",
+        "translate": ""
+    },
+    {
+        "source": "The total size `len * mem::size_of::<T>()` of the slice must be no larger than `isize::MAX`.",
+        "suggest": "切片的总大小 `len * mem::size_of::<T>()` 必须不大于 `isize::MAX`。",
+        "translate": ""
+    },
+    {
+        "source": "The lifetime for the returned slice is inferred from its usage.",
+        "suggest": "从使用中可以推断出返回切片的生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "To prevent accidental misuse, it's suggested to tie the lifetime to whichever source lifetime is safe in the context, such as by providing a helper function taking the lifetime of a host value for the slice, or by explicit annotation.",
+        "suggest": "为防止意外滥用，建议将生命周期与生命周期中任何安全的来源联系起来，例如通过提供一个辅助函数，获取切片的宿主值的生命周期，或通过明确的注解法。",
+        "translate": ""
+    },
+    {
+        "source": "Incorrect usage",
+        "suggest": "用法不正确",
+        "translate": ""
+    },
+    {
+        "source": "The following `join_slices` function is **unsound** ⚠️",
+        "suggest": "以下 `join_slices` 函数是 **unsound** ⚠️",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `from_raw_parts`.",
+        "suggest": "调用者必须坚持 `from_raw_parts` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the same functionality as [`from_raw_parts`], except that a mutable slice is returned.",
+        "suggest": "执行与 [`from_raw_parts`] 相同的功能，除了返回可变切片。",
+        "translate": ""
+    },
+    {
+        "source": "must be [valid] for both reads and writes for `len * mem::size_of::<T>()` many bytes, and it must be properly aligned.",
+        "suggest": "`len * mem::size_of::<T>()` 的多个字节的读取和写入必须为 [valid]，并且必须正确对齐。",
+        "translate": ""
+    },
+    {
+        "source": "The memory referenced by the returned slice must not be accessed through any other pointer (not derived from the return value) for the duration of lifetime `'a`.",
+        "suggest": "在生命周期 `'a` 的持续时间内，不得通过任何其他指针 (不是从返回值派生) 访问返回的切片引用的内存。",
+        "translate": ""
+    },
+    {
+        "source": "Both read and write accesses are forbidden.",
+        "suggest": "读取和写入访问均被禁止。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `from_raw_parts_mut`.",
+        "suggest": "调用者必须坚持 `from_raw_parts_mut` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a reference to T into a slice of length 1 (without copying).",
+        "suggest": "将引用转换为 T 转换为长度为 1 的切片 (不进行复制)。",
+        "translate": ""
+    },
+    {
+        "source": "Rotates the range `[mid-left, mid+right)` such that the element at `mid` becomes the first element.",
+        "suggest": "旋转范围 `[mid-left, mid+right)`，以使 `mid` 处的元素成为第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalently, rotates the range `left` elements to the left or `right` elements to the right.",
+        "suggest": "等效地，将范围 `left` 元素向左旋转或将 `right` 元素向右旋转。",
+        "translate": ""
+    },
+    {
+        "source": "The specified range must be valid for reading and writing.",
+        "suggest": "指定的范围必须对读写有效。",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 1 is used for small values of `left + right` or for large `T`.",
+        "suggest": "算法 1 用于较小的 `left + right` 或较大的 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "The elements are moved into their final positions one at a time starting at `mid - left` and advancing by `right` steps modulo `left + right`, such that only one temporary is needed.",
+        "suggest": "元素从 `mid - left` 开始一次移动到它们的最终位置，并以 `left + right` 为模以 `right` 步长前进，因此只需要一个临时位置。",
+        "translate": ""
+    },
+    {
+        "source": "Eventually, we arrive back at `mid - left`.",
+        "suggest": "最终，我们回到 `mid - left`。",
+        "translate": ""
+    },
+    {
+        "source": "However, if `gcd(left + right, right)` is not 1, the above steps skipped over elements.",
+        "suggest": "但是，如果 `gcd(left + right, right)` 不为 1，则上述步骤将跳过元素。",
+        "translate": ""
+    },
+    {
+        "source": "Fortunately, the number of skipped over elements between finalized elements is always equal, so we can just offset our starting position and do more rounds (the total number of rounds is the `gcd(left + right, right)` value).",
+        "suggest": "幸运的是，最终元素之间被跳过的元素的数量始终相等，因此我们可以偏移起始位置并进行更多的回合 (总回合数为 `gcd(left + right, right)` 值)。",
+        "translate": ""
+    },
+    {
+        "source": "The end result is that all elements are finalized once and only once.",
+        "suggest": "最终结果是所有元素只能一次完成。",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 2 is used if `left + right` is large but `min(left, right)` is small enough to fit onto a stack buffer.",
+        "suggest": "如果 `left + right` 大但 `min(left, right)` 小到足以适合栈缓冲区，则使用算法 2。",
+        "translate": ""
+    },
+    {
+        "source": "The `min(left, right)` elements are copied onto the buffer, `memmove` is applied to the others, and the ones on the buffer are moved back into the hole on the opposite side of where they originated.",
+        "suggest": "将 `min(left, right)` 元素复制到缓冲区，将 `memmove` 应用于其他元素，然后将缓冲区中的元素移回它们起源的另一侧的 hole 中。",
+        "translate": ""
+    },
+    {
+        "source": "Algorithms that can be vectorized outperform the above once `left + right` becomes large enough.",
+        "suggest": "一旦 `left + right` 变得足够大，可以向量化的算法就会胜过上面的算法。",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 1 can be vectorized by chunking and performing many rounds at once, but there are too few rounds on average until `left + right` is enormous, and the worst case of a single round is always there.",
+        "suggest": "可以通过分块并一次执行多个回合来对算法 1 进行矢量化，但是在 `left + right` 变得巨大之前，平均回合数量太少，而且单回合的最坏情况始终存在。",
+        "translate": ""
+    },
+    {
+        "source": "Instead, algorithm 3 utilizes repeated swapping of `min(left, right)` elements until a smaller rotate problem is left.",
+        "suggest": "相反，算法 3 利用 `min(left, right)` 元素的重复交换，直到剩下较小的旋转问题为止。",
+        "translate": ""
+    },
+    {
+        "source": "when `left < right` the swapping happens from the left instead.",
+        "suggest": "`left < right` 时，交换发生在左侧。",
+        "translate": ""
+    },
+    {
+        "source": "the below algorithms can fail if these cases are not checked",
+        "suggest": "如果不检查这些情况，以下算法可能会失败",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 1 Microbenchmarks indicate that the average performance for random shifts is better all the way until about `left + right == 32`, but the worst case performance breaks even around 16.",
+        "suggest": "算法 1 的微基准测试表明，直到 `left + right == 32` 左右，随机移位的平均性能一直都比较好，但是最坏的情况甚至会达到 16。",
+        "translate": ""
+    },
+    {
+        "source": "24 was chosen as middle ground.",
+        "suggest": "24 被选为中间立场。",
+        "translate": ""
+    },
+    {
+        "source": "If the size of `T` is larger than 4 `usize`s, this algorithm also outperforms other algorithms.",
+        "suggest": "如果 `T` 的大小大于 4 个 `usize`，则该算法也将优于其他算法。",
+        "translate": ""
+    },
+    {
+        "source": "beginning of first round",
+        "suggest": "第一轮开始",
+        "translate": ""
+    },
+    {
+        "source": "can be found before hand by calculating `gcd(left + right, right)`, but it is faster to do one loop which calculates the gcd as a side effect, then doing the rest of the chunk",
+        "suggest": "可以通过计算 `gcd(left + right, right)` 预先找到，但是执行一个循环将 gcd 计算为副作用的循环更快，然后执行其余的块",
+        "translate": ""
+    },
+    {
+        "source": "benchmarks reveal that it is faster to swap temporaries all the way through instead of reading one temporary once, copying backwards, and then writing that temporary at the very end.",
+        "suggest": "基准测试表明，与一遍交换临时文件相比，一次读取一个临时文件，向后复制，然后在最后写入该临时文件要快得多。",
+        "translate": ""
+    },
+    {
+        "source": "This is possibly due to the fact that swapping or replacing temporaries uses only one memory address in the loop instead of needing to manage two.",
+        "suggest": "这可能是由于以下事实: 交换或替换临时节点在循环中仅使用一个内存地址，而不需要管理两个。",
+        "translate": ""
+    },
+    {
+        "source": "instead of incrementing `i` and then checking if it is outside the bounds, we check if `i` will go outside the bounds on the next increment.",
+        "suggest": "而不是递增 `i`，然后检查它是否在范围之内，我们检查 `i` 是否在下一次递增时越界。",
+        "translate": ""
+    },
+    {
+        "source": "This prevents any wrapping of pointers or `usize`.",
+        "suggest": "这样可以防止指针或 `usize` 的任何换行。",
+        "translate": ""
+    },
+    {
+        "source": "end of first round",
+        "suggest": "第一轮结束",
+        "translate": ""
+    },
+    {
+        "source": "this conditional must be here if `left + right >= 15`",
+        "suggest": "如果 `left + right >= 15`，则此条件必须在此处",
+        "translate": ""
+    },
+    {
+        "source": "finish the chunk with more rounds",
+        "suggest": "用更多的回合完成大块",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 2 The `[T; 0]` here is to ensure this is appropriately aligned for T",
+        "suggest": "算法 2 这里的 `[T; 0]` 是为了确保它与 T 正确对齐",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 3 There is an alternate way of swapping that involves finding where the last swap of this algorithm would be, and swapping using that last chunk instead of swapping adjacent chunks like this algorithm is doing, but this way is still faster.",
+        "suggest": "算法 3 有另一种交换方式，该方式涉及找到该算法的最后交换位置，然后使用该最后一个块进行交换，而不是像该算法那样交换相邻的块，但是这种方式仍然更快。",
+        "translate": ""
+    },
+    {
+        "source": "Algorithm 3,",
+        "suggest": "算法 3，",
+        "translate": ""
+    },
+    {
+        "source": "Slice sorting",
+        "suggest": "切片分类",
+        "translate": ""
+    },
+    {
+        "source": "This module contains a sorting algorithm based on Orson Peters' pattern-defeating quicksort, published at:",
+        "suggest": "此模块包含基于 Orson Peters 的模式失败快速排序的排序算法，该算法发布于:",
+        "translate": ""
+    },
+    {
+        "source": "Unstable sorting is compatible with libcore because it doesn't allocate memory, unlike our stable sorting implementation.",
+        "suggest": "不稳定排序与 libcore 兼容，因为它不分配内存，这与我们稳定的排序实现不同。",
+        "translate": ""
+    },
+    {
+        "source": "This is a helper class.",
+        "suggest": "这是一个帮助程序类。",
+        "translate": ""
+    },
+    {
+        "source": "Please refer to its usage for correctness.",
+        "suggest": "请参考其用法以确保正确性。",
+        "translate": ""
+    },
+    {
+        "source": "Namely, one must be sure that `src` and `dst` does not overlap as required by `ptr::copy_nonoverlapping`.",
+        "suggest": "即，必须确保 `src` 和 `dst` 不会按照 `ptr::copy_nonoverlapping` 的要求重叠。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts the first element to the right until it encounters a greater or equal element.",
+        "suggest": "将第一个元素向右移动，直到遇到一个更大或相等的元素。",
+        "translate": ""
+    },
+    {
+        "source": "The unsafe operations below involves indexing without a bound check (`get_unchecked` and `get_unchecked_mut`) and copying memory (`ptr::copy_nonoverlapping`).",
+        "suggest": "下面的不安全操作涉及没有绑定检查 (`get_unchecked` 和 `get_unchecked_mut`) 的索引以及复制存储器 (`ptr::copy_nonoverlapping`)。",
+        "translate": ""
+    },
+    {
+        "source": "a. Indexing:",
+        "suggest": "a. 索引:",
+        "translate": ""
+    },
+    {
+        "source": "We checked the size of the array to >=2.",
+        "suggest": "我们将数组的大小检查为 >= 2。",
+        "translate": ""
+    },
+    {
+        "source": "All the indexing that we will do is always between {0 <= index < len} at most.",
+        "suggest": "我们将要进行的所有索引编制最多始终在 {0 <= index < len} 之间。",
+        "translate": ""
+    },
+    {
+        "source": "b. Memory copying",
+        "suggest": "b. 记忆复制",
+        "translate": ""
+    },
+    {
+        "source": "We are obtaining pointers to references which are guaranteed to be valid.",
+        "suggest": "我们正在获得指向 quot 的指针，这些指针被保证是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "They cannot overlap because we obtain pointers to difference indices of the slice.",
+        "suggest": "它们不能重叠，因为我们获得了指向切片的不同索引的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Namely, `i` and `i-1`.",
+        "suggest": "即 `i` 和 `i-1`。",
+        "translate": ""
+    },
+    {
+        "source": "If the slice is properly aligned, the elements are properly aligned.",
+        "suggest": "如果切片正确对齐，则元素正确对齐。",
+        "translate": ""
+    },
+    {
+        "source": "It is the caller's responsibility to make sure the slice is properly aligned.",
+        "suggest": "确保切片正确对齐是调用者的责任。",
+        "translate": ""
+    },
+    {
+        "source": "See comments below for further detail.",
+        "suggest": "有关更多详细信息，请参见下面的评论。",
+        "translate": ""
+    },
+    {
+        "source": "If the first two elements are out-of-order...",
+        "suggest": "如果前两个元素乱序...",
+        "translate": ""
+    },
+    {
+        "source": "Read the first element into a stack-allocated variable.",
+        "suggest": "将第一个元素读取到栈分配的变量中。",
+        "translate": ""
+    },
+    {
+        "source": "If a following comparison operation panics, `hole` will get dropped and automatically write the element back into the slice.",
+        "suggest": "如果执行以下比较操作 panics，则 `hole` 将被丢弃并自动将元素写回到切片中。",
+        "translate": ""
+    },
+    {
+        "source": "Move `i`-th element one place to the left, thus shifting the hole to the right.",
+        "suggest": "将第 i 个元素向左移动一个位置，从而将 hole 向右移动。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts the last element to the left until it encounters a smaller or equal element.",
+        "suggest": "将最后一个元素向左移动，直到遇到一个较小或相等的元素。",
+        "translate": ""
+    },
+    {
+        "source": "We checked the size of the array to >= 2.",
+        "suggest": "我们将数组的大小检查为 >= 2。",
+        "translate": ""
+    },
+    {
+        "source": "All the indexing that we will do is always between `0 <= index < len-1` at most.",
+        "suggest": "我们将要进行的所有索引编制最多始终在 `0 <= index < len-1` 之间。",
+        "translate": ""
+    },
+    {
+        "source": "Namely, `i` and `i+1`.",
+        "suggest": "即 `i` 和 `i+1`。",
+        "translate": ""
+    },
+    {
+        "source": "If the last two elements are out-of-order...",
+        "suggest": "如果最后两个元素乱序...",
+        "translate": ""
+    },
+    {
+        "source": "Read the last element into a stack-allocated variable.",
+        "suggest": "将最后一个元素读取到栈分配的变量中。",
+        "translate": ""
+    },
+    {
+        "source": "Move `i`-th element one place to the right, thus shifting the hole to the left.",
+        "suggest": "将第 i 个元素向右移动一个位置，从而将 hole 向左移动。",
+        "translate": ""
+    },
+    {
+        "source": "Partially sorts a slice by shifting several out-of-order elements around.",
+        "suggest": "通过移动几个乱序的元素来对切片进行部分排序。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the slice is sorted at the end.",
+        "suggest": "如果切片末尾排序，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "This function is *O*(*n*) worst-case.",
+        "suggest": "该函数是 *O*(*n*) 最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "Maximum number of adjacent out-of-order pairs that will get shifted.",
+        "suggest": "将移位的相邻无序对的最大数量。",
+        "translate": ""
+    },
+    {
+        "source": "If the slice is shorter than this, don't shift any elements.",
+        "suggest": "如果切片短于此，请勿移动任何元素。",
+        "translate": ""
+    },
+    {
+        "source": "We already explicitly did the bound checking with `i < len`.",
+        "suggest": "我们已经用 `i < len` 明确地进行了边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "All our subsequent indexing is only in the range `0 <= index < len`",
+        "suggest": "我们所有的后续索引仅在 `0 <= index < len` 范围内",
+        "translate": ""
+    },
+    {
+        "source": "Find the next pair of adjacent out-of-order elements.",
+        "suggest": "查找下一对相邻的乱序元素。",
+        "translate": ""
+    },
+    {
+        "source": "Are we done?",
+        "suggest": "我们完了吗?",
+        "translate": ""
+    },
+    {
+        "source": "Don't shift elements on short arrays, that has a performance cost.",
+        "suggest": "不要在短数组上移动元素，这会降低性能。",
+        "translate": ""
+    },
+    {
+        "source": "Swap the found pair of elements.",
+        "suggest": "交换找到的一对元素。",
+        "translate": ""
+    },
+    {
+        "source": "This puts them in correct order.",
+        "suggest": "这使它们处于正确的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Shift the smaller element to the left.",
+        "suggest": "将较小的元素向左移动。",
+        "translate": ""
+    },
+    {
+        "source": "Shift the greater element to the right.",
+        "suggest": "将较大的元素向右移动。",
+        "translate": ""
+    },
+    {
+        "source": "Didn't manage to sort the slice in the limited number of steps.",
+        "suggest": "未能在有限的步骤中对切片进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Sorts a slice using insertion sort, which is *O*(*n*^2) worst-case.",
+        "suggest": "使用插入排序对切片进行排序，这是 *O*(*n*^ 2) 最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "Sorts `v` using heapsort, which guarantees *O*(*n* \\* log(*n*)) worst-case.",
+        "suggest": "使用堆排序对 `v` 进行排序，这保证了 *O*(*n*\\*log(* n*)) 最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "This binary heap respects the invariant `parent >= child`.",
+        "suggest": "该二进制堆遵守不变式 `parent >= child`。",
+        "translate": ""
+    },
+    {
+        "source": "Children of `node`:",
+        "suggest": "`node` 的子代:",
+        "translate": ""
+    },
+    {
+        "source": "Choose the greater child.",
+        "suggest": "选择更大的子节点。",
+        "translate": ""
+    },
+    {
+        "source": "Stop if the invariant holds at `node`.",
+        "suggest": "如果不可变变量位于 `node`，则停止。",
+        "translate": ""
+    },
+    {
+        "source": "Swap `node` with the greater child, move one step down, and continue sifting.",
+        "suggest": "与更大的子节点交换 `node`，向下移动一步，然后继续筛分。",
+        "translate": ""
+    },
+    {
+        "source": "Build the heap in linear time.",
+        "suggest": "在线性时间内构建堆。",
+        "translate": ""
+    },
+    {
+        "source": "Pop maximal elements from the heap.",
+        "suggest": "从堆中弹出最大元素。",
+        "translate": ""
+    },
+    {
+        "source": "Partitions `v` into elements smaller than `pivot`, followed by elements greater than or equal to `pivot`.",
+        "suggest": "将 `v` 划分为小于 `pivot` 的元素，然后划分为大于或等于 `pivot` 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements smaller than `pivot`.",
+        "suggest": "返回小于 `pivot` 的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Partitioning is performed block-by-block in order to minimize the cost of branching operations.",
+        "suggest": "为了最小化分支操作的成本，逐块执行分区。",
+        "translate": ""
+    },
+    {
+        "source": "This idea is presented in the [BlockQuicksort][pdf] paper.",
+        "suggest": "[块快速排序][pdf] 论文中提出了这个想法。",
+        "translate": ""
+    },
+    {
+        "source": "Number of elements in a typical block.",
+        "suggest": "典型块中的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "The partitioning algorithm repeats the following steps until completion:",
+        "suggest": "分区算法重复以下步骤，直到完成:",
+        "translate": ""
+    },
+    {
+        "source": "Trace a block from the left side to identify elements greater than or equal to the pivot.",
+        "suggest": "从左侧跟踪一个块，以识别大于或等于枢轴的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Trace a block from the right side to identify elements smaller than the pivot.",
+        "suggest": "从右侧跟踪一个块，以识别小于枢轴的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Exchange the identified elements between the left and right side.",
+        "suggest": "在左侧和右侧之间交换已标识的元素。",
+        "translate": ""
+    },
+    {
+        "source": "We keep the following variables for a block of elements:",
+        "suggest": "我们为元素块保留以下变量:",
+        "translate": ""
+    },
+    {
+        "source": "Number of elements in the block.",
+        "suggest": "块中元素的数量。",
+        "translate": ""
+    },
+    {
+        "source": "Start pointer into the `offsets` array.",
+        "suggest": "将指针启动到 `offsets` 数组中。",
+        "translate": ""
+    },
+    {
+        "source": "End pointer into the `offsets` array.",
+        "suggest": "将指针指向 `offsets` 数组。",
+        "translate": ""
+    },
+    {
+        "source": "`offsets - Indices of out-of-order elements within the block.",
+        "suggest": "偏移量 - 块内乱序元素的索引。",
+        "translate": ""
+    },
+    {
+        "source": "The current block on the left side (from `l` to `l.add(block_l)`).",
+        "suggest": "左侧的当前块 (从 `l` 到 `l.add(block_l)`)。",
+        "translate": ""
+    },
+    {
+        "source": "The current block on the right side (from `r.sub(block_r)` to `r`).",
+        "suggest": "右侧的当前块 (从 `r.sub(block_r)` 到 `r`)。",
+        "translate": ""
+    },
+    {
+        "source": "The documentation for .add() specifically mention that `vec.as_ptr().add(vec.len())` is always safe`",
+        "suggest": ".add() 的文档特别提到 `vec.as_ptr().add(vec.len())` 始终是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "When we get VLAs, try creating one array of length `min(v.len(), 2 * BLOCK)` rather than two fixed-size arrays of length `BLOCK`.",
+        "suggest": "当我们得到 VLA 时，请尝试创建一个长度为 `min(v.len(), 2 * BLOCK)` 的数组，而不是两个长度为 `BLOCK` 的固定大小的数组。",
+        "translate": ""
+    },
+    {
+        "source": "VLAs might be more cache-efficient.",
+        "suggest": "VLA 可能会提高缓存效率。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements between pointers `l` (inclusive) and `r` (exclusive).",
+        "suggest": "返回指针 `l` (inclusive) 和 `r` (exclusive) 之间的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "We are done with partitioning block-by-block when `l` and `r` get very close.",
+        "suggest": "当 `l` 和 `r` 非常接近时，我们将逐块进行分区。",
+        "translate": ""
+    },
+    {
+        "source": "Then we do some patch-up work in order to partition the remaining elements in between.",
+        "suggest": "然后，我们进行一些修补工作，以便在其余元素之间进行划分。",
+        "translate": ""
+    },
+    {
+        "source": "Number of remaining elements (still not compared to the pivot).",
+        "suggest": "剩余元素数 (仍未与枢轴进行比较)。",
+        "translate": ""
+    },
+    {
+        "source": "Adjust block sizes so that the left and right block don't overlap, but get perfectly aligned to cover the whole remaining gap.",
+        "suggest": "调整块大小，以使左右块不重叠，但要完全对齐以覆盖整个剩余间隙。",
+        "translate": ""
+    },
+    {
+        "source": "Trace `block_l` elements from the left side.",
+        "suggest": "从左侧跟踪 `block_l` 元素。",
+        "translate": ""
+    },
+    {
+        "source": "The unsafety operations below involve the usage of the `offset`.",
+        "suggest": "以下不安全操作涉及 `offset` 的使用。",
+        "translate": ""
+    },
+    {
+        "source": "According to the conditions required by the function, we satisfy them because:",
+        "suggest": "根据函数所需的条件，我们满足它们，因为:",
+        "translate": ""
+    },
+    {
+        "source": "is stack-allocated, and thus considered separate allocated object.",
+        "suggest": "是栈分配的，因此被认为是单独分配的对象。",
+        "translate": ""
+    },
+    {
+        "source": "The function `is_less` returns a `bool`.",
+        "suggest": "函数 `is_less` 返回 `bool`。",
+        "translate": ""
+    },
+    {
+        "source": "Casting a `bool` will never overflow `isize`.",
+        "suggest": "转换 `bool` 不会使 `isize` 溢出。",
+        "translate": ""
+    },
+    {
+        "source": "We have guaranteed that `block_l` will be `<= BLOCK`.",
+        "suggest": "我们保证 `block_l` 将是 `<= BLOCK`。",
+        "translate": ""
+    },
+    {
+        "source": "Plus, `end_l` was initially set to the begin pointer of `offsets_` which was declared on the stack.",
+        "suggest": "另外，`end_l` 最初设置为在栈上声明的 `offsets_` 的开始指针。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, we know that even in the worst case (all invocations of `is_less` returns false) we will only be at most 1 byte pass the end.",
+        "suggest": "因此，我们知道即使在最坏的情况下 (`is_less` 的所有调用都返回 false)，我们最多只能有 1 个字节通过结尾。",
+        "translate": ""
+    },
+    {
+        "source": "Another unsafety operation here is dereferencing `elem`.",
+        "suggest": "这里的另一个不安全操作是解引用 `elem`。",
+        "translate": ""
+    },
+    {
+        "source": "However, `elem` was initially the begin pointer to the slice which is always valid.",
+        "suggest": "但是，`elem` 最初是指向切片的 begin 指针，始终有效。",
+        "translate": ""
+    },
+    {
+        "source": "Branchless comparison.",
+        "suggest": "无分支比较。",
+        "translate": ""
+    },
+    {
+        "source": "Trace `block_r` elements from the right side.",
+        "suggest": "从右侧跟踪 `block_r` 元素。",
+        "translate": ""
+    },
+    {
+        "source": "We have guaranteed that `block_r` will be `<= BLOCK`.",
+        "suggest": "我们保证 `block_r` 将是 `<= BLOCK`。",
+        "translate": ""
+    },
+    {
+        "source": "Plus, `end_r` was initially set to the begin pointer of `offsets_` which was declared on the stack.",
+        "suggest": "另外，`end_r` 最初设置为在栈上声明的 `offsets_` 的开始指针。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, we know that even in the worst case (all invocations of `is_less` returns true) we will only be at most 1 byte pass the end.",
+        "suggest": "因此，我们知道即使在最坏的情况下 (`is_less` 的所有调用都返回 true)，我们最多只能将 1 个字节传递到末尾。",
+        "translate": ""
+    },
+    {
+        "source": "However, `elem` was initially `1 * sizeof(T)` past the end and we decrement it by `1 * sizeof(T)` before accessing it.",
+        "suggest": "但是，`elem` 最初是末尾的 `1 *sizeof(T)`，在访问它之前，我们先将其递减 `1* sizeof(T)`。",
+        "translate": ""
+    },
+    {
+        "source": "Plus, `block_r` was asserted to be less than `BLOCK` and `elem` will therefore at most be pointing to the beginning of the slice.",
+        "suggest": "另外，断言 `block_r` 小于 `BLOCK`，因此 `elem` 至多将指向切片的开头。",
+        "translate": ""
+    },
+    {
+        "source": "Number of out-of-order elements to swap between the left and right side.",
+        "suggest": "要在左侧和右侧之间交换的乱序元素的数量。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of swapping one pair at the time, it is more efficient to perform a cyclic permutation.",
+        "suggest": "与一次交换一对相比，执行循环置换更为有效。",
+        "translate": ""
+    },
+    {
+        "source": "This is not strictly equivalent to swapping, but produces a similar result using fewer memory operations.",
+        "suggest": "这并不严格等同于交换，但是使用较少的内存操作即可产生类似的结果。",
+        "translate": ""
+    },
+    {
+        "source": "All out-of-order elements in the left block were moved.",
+        "suggest": "左侧块中的所有乱序元素均已移动。",
+        "translate": ""
+    },
+    {
+        "source": "Move to the next block.",
+        "suggest": "移至下一个块。",
+        "translate": ""
+    },
+    {
+        "source": "All out-of-order elements in the right block were moved.",
+        "suggest": "右侧块中的所有乱序元素均已移动。",
+        "translate": ""
+    },
+    {
+        "source": "Move to the previous block.",
+        "suggest": "移至上一个块。",
+        "translate": ""
+    },
+    {
+        "source": "All that remains now is at most one block (either the left or the right) with out-of-order elements that need to be moved.",
+        "suggest": "现在剩下的全部是至多一个块 (左侧或右侧)，其中需要移动的乱序元素。",
+        "translate": ""
+    },
+    {
+        "source": "Such remaining elements can be simply shifted to the end within their block.",
+        "suggest": "这些剩余的元素可以简单地移到其块内的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "The left block remains.",
+        "suggest": "剩下的方块仍然保留。",
+        "translate": ""
+    },
+    {
+        "source": "Move its remaining out-of-order elements to the far right.",
+        "suggest": "将其剩余的乱序元素移到最右边。",
+        "translate": ""
+    },
+    {
+        "source": "The right block remains.",
+        "suggest": "右边的块仍然存在。",
+        "translate": ""
+    },
+    {
+        "source": "Move its remaining out-of-order elements to the far left.",
+        "suggest": "将其剩余的乱序元素移到最左边。",
+        "translate": ""
+    },
+    {
+        "source": "Nothing else to do, we're done.",
+        "suggest": "没什么可做的，我们已经完成。",
+        "translate": ""
+    },
+    {
+        "source": "Partitions `v` into elements smaller than `v[pivot]`, followed by elements greater than or equal to `v[pivot]`.",
+        "suggest": "将 `v` 划分为小于 `v[pivot]` 的元素，然后划分为大于或等于 `v[pivot]` 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a tuple of:",
+        "suggest": "返回一个元组:",
+        "translate": ""
+    },
+    {
+        "source": "Number of elements smaller than `v[pivot]`.",
+        "suggest": "小于 `v[pivot]` 的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "True if `v` was already partitioned.",
+        "suggest": "如果 `v` 已经分区，则为 True。",
+        "translate": ""
+    },
+    {
+        "source": "Place the pivot at the beginning of slice.",
+        "suggest": "将枢轴放置在切片的开头。",
+        "translate": ""
+    },
+    {
+        "source": "Read the pivot into a stack-allocated variable for efficiency.",
+        "suggest": "将枢轴读取到栈分配的变量中以提高效率。",
+        "translate": ""
+    },
+    {
+        "source": "If a following comparison operation panics, the pivot will be automatically written back into the slice.",
+        "suggest": "如果执行以下比较操作 panics，则枢轴将自动写回到切片中。",
+        "translate": ""
+    },
+    {
+        "source": "Find the first pair of out-of-order elements.",
+        "suggest": "查找第一对乱序元素。",
+        "translate": ""
+    },
+    {
+        "source": "The unsafety below involves indexing an array.",
+        "suggest": "下面的不安全性涉及对数组进行索引。",
+        "translate": ""
+    },
+    {
+        "source": "For the first one: We already do the bounds checking here with `l < r`.",
+        "suggest": "对于第一个: 我们已经在这里使用 `l < r` 进行了边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "For the second one: We initially have `l == 0` and `r == v.len()` and we checked that `l < r` at every indexing operation.",
+        "suggest": "对于第二个: 我们最初有 `l == 0` 和 `r == v.len()`，我们在每次索引操作中都检查了 `l < r`。",
+        "translate": ""
+    },
+    {
+        "source": "From here we know that `r` must be at least `r == l` which was shown to be valid from the first one.",
+        "suggest": "从这里我们知道 `r` 必须至少是 `r == l`，这从第一个开始就被证明是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "Find the first element greater than or equal to the pivot.",
+        "suggest": "找到大于或等于枢轴的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Find the last element smaller that the pivot.",
+        "suggest": "找到比枢轴更小的最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "goes out of scope and writes the pivot (which is a stack-allocated variable) back into the slice where it originally was.",
+        "suggest": "离开作用域，并将枢轴 (这是一个栈分配的变量) 写回到其原始位置的切片中。",
+        "translate": ""
+    },
+    {
+        "source": "This step is critical in ensuring safety!",
+        "suggest": "这一步对于确保安全至关重要!",
+        "translate": ""
+    },
+    {
+        "source": "Place the pivot between the two partitions.",
+        "suggest": "将枢轴放置在两个分区之间。",
+        "translate": ""
+    },
+    {
+        "source": "Partitions `v` into elements equal to `v[pivot]` followed by elements greater than `v[pivot]`.",
+        "suggest": "将 `v` 划分为等于 `v[pivot]` 的元素，后跟大于 `v[pivot]` 的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of elements equal to the pivot.",
+        "suggest": "返回等于枢轴的元素数。",
+        "translate": ""
+    },
+    {
+        "source": "It is assumed that `v` does not contain elements smaller than the pivot.",
+        "suggest": "假定 `v` 不包含小于枢轴的元素。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer here is valid because it is obtained from a reference to a slice.",
+        "suggest": "此处的指针是有效的，因为它是从引用到切片获得的。",
+        "translate": ""
+    },
+    {
+        "source": "Now partition the slice.",
+        "suggest": "现在对切片进行分区。",
+        "translate": ""
+    },
+    {
+        "source": "Find the first element greater than the pivot.",
+        "suggest": "找到第一个大于枢轴的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Find the last element equal to the pivot.",
+        "suggest": "找到等于枢轴的最后一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Swap the found pair of out-of-order elements.",
+        "suggest": "交换找到的一对乱序元素。",
+        "translate": ""
+    },
+    {
+        "source": "We found `l` elements equal to the pivot.",
+        "suggest": "我们发现 `l` 元素等于 pivot。",
+        "translate": ""
+    },
+    {
+        "source": "Add 1 to account for the pivot itself.",
+        "suggest": "为 pivot 本身加 1。",
+        "translate": ""
+    },
+    {
+        "source": "Scatters some elements around in an attempt to break patterns that might cause imbalanced partitions in quicksort.",
+        "suggest": "散布一些元素，以尝试破坏可能导致快速排序中的分区不平衡的模式。",
+        "translate": ""
+    },
+    {
+        "source": "Pseudorandom number generator from the \"Xorshift RNGs\" paper by George Marsaglia.",
+        "suggest": "George Marsaglia 撰写的 \"Xorshift RNGs\" 论文中的伪随机数生成器。",
+        "translate": ""
+    },
+    {
+        "source": "Take random numbers modulo this number.",
+        "suggest": "取该数字取模的随机数。",
+        "translate": ""
+    },
+    {
+        "source": "The number fits into `usize` because `len` is not greater than `isize::MAX`.",
+        "suggest": "该数字适合 `usize`，因为 `len` 不大于 `isize::MAX`。",
+        "translate": ""
+    },
+    {
+        "source": "Some pivot candidates will be in the nearby of this index.",
+        "suggest": "一些关键候选人将在该指数附近。",
+        "translate": ""
+    },
+    {
+        "source": "Let's randomize them.",
+        "suggest": "让我们随机化它们。",
+        "translate": ""
+    },
+    {
+        "source": "Generate a random number modulo `len`.",
+        "suggest": "生成一个以 `len` 为模的随机数。",
+        "translate": ""
+    },
+    {
+        "source": "However, in order to avoid costly operations we first take it modulo a power of two, and then decrease by `len` until it fits into the range `[0, len - 1]`.",
+        "suggest": "但是，为了避免昂贵的操作，我们首先将其取模为 2 的幂，然后减小 `len` 直到它适合 `[0, len - 1]` 范围。",
+        "translate": ""
+    },
+    {
+        "source": "is guaranteed to be less than `2 * len`.",
+        "suggest": "保证小于 `2 * len`。",
+        "translate": ""
+    },
+    {
+        "source": "Chooses a pivot in `v` and returns the index and `true` if the slice is likely already sorted.",
+        "suggest": "在 `v` 中选择一个枢轴，如果切片可能已经排序，则返回索引和 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Elements in `v` might be reordered in the process.",
+        "suggest": "`v` 中的元素可能会在此过程中重新排序。",
+        "translate": ""
+    },
+    {
+        "source": "Minimum length to choose the median-of-medians method.",
+        "suggest": "选择中位数中位数方法的最小长度。",
+        "translate": ""
+    },
+    {
+        "source": "Shorter slices use the simple median-of-three method.",
+        "suggest": "较短的切片使用简单的三位数中位数方法。",
+        "translate": ""
+    },
+    {
+        "source": "Maximum number of swaps that can be performed in this function.",
+        "suggest": "在此函数中可以执行的最大交换次数。",
+        "translate": ""
+    },
+    {
+        "source": "Three indices near which we are going to choose a pivot.",
+        "suggest": "我们将在附近选择一个枢轴的三个指数。",
+        "translate": ""
+    },
+    {
+        "source": "Counts the total number of swaps we are about to perform while sorting indices.",
+        "suggest": "计算在对索引进行排序时我们将要执行的交换总数。",
+        "translate": ""
+    },
+    {
+        "source": "Swaps indices so that `v[a] <= v[b]`.",
+        "suggest": "交换索引，以便 `v[a] <= v[b]`。",
+        "translate": ""
+    },
+    {
+        "source": "Swaps indices so that `v[a] <= v[b] <= v[c]`.",
+        "suggest": "交换索引，以便 `v[a] <= v[b] <= v[c]`。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the median of `v[a - 1], v[a], v[a + 1]` and stores the index into `a`.",
+        "suggest": "查找 `v[a - 1], v[a], v[a + 1]` 的中位数，并将索引存储到 `a` 中。",
+        "translate": ""
+    },
+    {
+        "source": "Find medians in the neighborhoods of `a`, `b`, and `c`.",
+        "suggest": "查找 `a`，`b` 和 `c` 附近的中位数。",
+        "translate": ""
+    },
+    {
+        "source": "Find the median among `a`, `b`, and `c`.",
+        "suggest": "在 `a`，`b` 和 `c` 中找到中位数。",
+        "translate": ""
+    },
+    {
+        "source": "The maximum number of swaps was performed.",
+        "suggest": "已执行最大交换次数。",
+        "translate": ""
+    },
+    {
+        "source": "Chances are the slice is descending or mostly descending, so reversing will probably help sort it faster.",
+        "suggest": "切片可能是降序的，或者大多是降序的，因此反转可能有助于更快地对其进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Sorts `v` recursively.",
+        "suggest": "递归排序 `v`。",
+        "translate": ""
+    },
+    {
+        "source": "If the slice had a predecessor in the original array, it is specified as `pred`.",
+        "suggest": "如果切片在原始数组中具有前身，则将其指定为 `pred`。",
+        "translate": ""
+    },
+    {
+        "source": "is the number of allowed imbalanced partitions before switching to `heapsort`.",
+        "suggest": "是切换到 `heapsort` 之前允许的不平衡分区的数量。",
+        "translate": ""
+    },
+    {
+        "source": "If zero, this function will immediately switch to heapsort.",
+        "suggest": "如果为零，则此函数将立即切换到 heapsort。",
+        "translate": ""
+    },
+    {
+        "source": "True if the last partitioning was reasonably balanced.",
+        "suggest": "如果最后一个分区合理平衡，则为 true。",
+        "translate": ""
+    },
+    {
+        "source": "True if the last partitioning didn't shuffle elements (the slice was already partitioned).",
+        "suggest": "如果最后一个分区没有重排元素 (切片已分区)，则为 true。",
+        "translate": ""
+    },
+    {
+        "source": "Very short slices get sorted using insertion sort.",
+        "suggest": "非常短的切片使用插入排序进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "If too many bad pivot choices were made, simply fall back to heapsort in order to guarantee `O(n * log(n))` worst-case.",
+        "suggest": "如果做出了太多错误的枢轴选择，则只需退回到 heapsort 以确保 `O(n * log(n))` 最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "If the last partitioning was imbalanced, try breaking patterns in the slice by shuffling some elements around.",
+        "suggest": "如果最后一个分区不平衡，请尝试通过改组一些元素来破坏切片中的模式。",
+        "translate": ""
+    },
+    {
+        "source": "Hopefully we'll choose a better pivot this time.",
+        "suggest": "希望这次我们选择一个更好的支点。",
+        "translate": ""
+    },
+    {
+        "source": "Choose a pivot and try guessing whether the slice is already sorted.",
+        "suggest": "选择一个枢轴，然后尝试猜测切片是否已排序。",
+        "translate": ""
+    },
+    {
+        "source": "If the last partitioning was decently balanced and didn't shuffle elements, and if pivot selection predicts the slice is likely already sorted...",
+        "suggest": "如果最后一个分区达到了合理的平衡并且没有使元素混洗，并且如果枢轴选择预测了切片，则该切片可能已经被排序了...",
+        "translate": ""
+    },
+    {
+        "source": "Try identifying several out-of-order elements and shifting them to correct positions.",
+        "suggest": "尝试识别几个乱序的元素，然后将它们移到正确的位置。",
+        "translate": ""
+    },
+    {
+        "source": "If the slice ends up being completely sorted, we're done.",
+        "suggest": "如果切片最终被完全排序，那么我们就完成了。",
+        "translate": ""
+    },
+    {
+        "source": "If the chosen pivot is equal to the predecessor, then it's the smallest element in the slice.",
+        "suggest": "如果选择的枢轴等于前一个枢轴，则它是切片中的最小元素。",
+        "translate": ""
+    },
+    {
+        "source": "Partition the slice into elements equal to and elements greater than the pivot.",
+        "suggest": "将切片划分为等于和大于枢轴的元素。",
+        "translate": ""
+    },
+    {
+        "source": "This case is usually hit when the slice contains many duplicate elements.",
+        "suggest": "当切片包含许多重复元素时，通常会遇到这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Continue sorting elements greater than the pivot.",
+        "suggest": "继续对大于枢轴的元素进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Partition the slice.",
+        "suggest": "对切片进行分区。",
+        "translate": ""
+    },
+    {
+        "source": "Split the slice into `left`, `pivot`, and `right`.",
+        "suggest": "将切片分为 `left`，`pivot` 和 `right`。",
+        "translate": ""
+    },
+    {
+        "source": "Recurse into the shorter side only in order to minimize the total number of recursive calls and consume less stack space.",
+        "suggest": "递归到较短的一侧只是为了最大程度地减少递归调用的总数并占用较少的栈空间。",
+        "translate": ""
+    },
+    {
+        "source": "Then just continue with the longer side (this is akin to tail recursion).",
+        "suggest": "然后，继续较长的那一面 (这类似于尾部递归)。",
+        "translate": ""
+    },
+    {
+        "source": "Sorts `v` using pattern-defeating quicksort, which is *O*(*n* \\* log(*n*)) worst-case.",
+        "suggest": "使用模式破坏快速排序对 `v` 进行排序，这是 *O*(*n*\\*log(* n*)) 最坏的情况。",
+        "translate": ""
+    },
+    {
+        "source": "Limit the number of imbalanced partitions to `floor(log2(len)) + 1`.",
+        "suggest": "将不平衡分区的数量限制为 `floor(log2(len)) + 1`。",
+        "translate": ""
+    },
+    {
+        "source": "For slices of up to this length it's probably faster to simply sort them.",
+        "suggest": "对于不超过此长度的切片，将其简单排序可能会更快。",
+        "translate": ""
+    },
+    {
+        "source": "Choose a pivot",
+        "suggest": "选择一个 pivot",
+        "translate": ""
+    },
+    {
+        "source": "If we've passed our index, then we're good.",
+        "suggest": "如果我们通过了索引，那么我们就很好。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, continue sorting elements greater than the pivot.",
+        "suggest": "否则，继续对大于枢轴的元素进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "If mid == index, then we're done, since partition() guaranteed that all elements after mid are greater than or equal to mid.",
+        "suggest": "如果 mid == index，那么我们就完成了，因为 partition() 保证 mid 之后的所有元素都大于或等于 mid。",
+        "translate": ""
+    },
+    {
+        "source": "Find max element and place it in the last position of the array.",
+        "suggest": "查找最大元素并将其放置在数组的最后一个位置。",
+        "translate": ""
+    },
+    {
+        "source": "We're free to use `unwrap()` here because we know v must not be empty.",
+        "suggest": "我们可以在这里自由使用 `unwrap()`，因为我们知道 v 不能为空。",
+        "translate": ""
+    },
+    {
+        "source": "Find min element and place it in the first position of the array.",
+        "suggest": "查找 min 元素并将其放置在数组的第一个位置。",
+        "translate": ""
+    },
+    {
+        "source": "this is slice of u8",
+        "suggest": "这是 u8 的切片",
+        "translate": ""
+    },
+    {
+        "source": "this is slice of i8",
+        "suggest": "这是 i8 的切片",
+        "translate": ""
+    },
+    {
+        "source": "this is slice of bool",
+        "suggest": "这是 bool 的切片",
+        "translate": ""
+    },
+    {
+        "source": "We know these bytes are valid, so just use `unwrap()`.",
+        "suggest": "我们知道这些字节是有效的，因此只需使用 `unwrap()`。",
+        "translate": ""
+    },
+    {
+        "source": "some bytes, in a stack-allocated array",
+        "suggest": "栈分配的数组中的一些字节",
+        "translate": ""
+    },
+    {
+        "source": "as a mutable vector",
+        "suggest": "作为可变 vector",
+        "translate": ""
+    },
+    {
+        "source": "As we know these bytes are valid, we can use `unwrap()`",
+        "suggest": "我们知道这些字节是有效的，因此我们可以使用 `unwrap()`",
+        "translate": ""
+    },
+    {
+        "source": "Some invalid bytes in a mutable vector",
+        "suggest": "可变 vector 中的一些无效字节",
+        "translate": ""
+    },
+    {
+        "source": "Ways to create a `str` from bytes slice.",
+        "suggest": "从字节切片创建 `str` 的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a slice of bytes to a string slice.",
+        "suggest": "将字节的片段转换为字符串片段。",
+        "translate": ""
+    },
+    {
+        "source": "A string slice ([`&str`]) is made of bytes ([`u8`]), and a byte slice ([`&[u8]`][byteslice]) is made of bytes, so this function converts between the two.",
+        "suggest": "字符串 ([`&str`]) 由字节 ([`u8`]) 组成，字节 ([`&[u8]`][byteslice]) 由字节组成，因此此函数在两者之间进行转换。",
+        "translate": ""
+    },
+    {
+        "source": "Not all byte slices are valid string slices, however: [`&str`] requires that it is valid UTF-8.",
+        "suggest": "并非所有的字节片都是有效的字符串片，但是: [`&str`] 要求它是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "If you need a `String` instead of a `&str`, consider [`String::from_utf8`][string].",
+        "suggest": "如果需要 `String` 而不是 `&str`，请考虑使用 [`String::from_utf8`][string]。",
+        "translate": ""
+    },
+    {
+        "source": "Because you can stack-allocate a `[u8; N]`, and you can take a [`&[u8]`][byteslice] of it, this function is one way to have a stack-allocated string.",
+        "suggest": "因为您可以栈分配 `[u8; N]`，也可以使用它的 [`&[u8]`][byteslice]，所以此函数是具有栈分配的字符串的一种方法。",
+        "translate": ""
+    },
+    {
+        "source": "There is an example of this in the examples section below.",
+        "suggest": "在下面的示例部分中有一个示例。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Err` if the slice is not UTF-8 with a description as to why the provided slice is not UTF-8.",
+        "suggest": "如果切片不是 UTF-8，则返回 `Err`，并说明为什么提供的切片不是 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "See the docs for [`Utf8Error`] for more details on the kinds of errors that can be returned.",
+        "suggest": "有关可以返回的错误类型的更多详细信息，请参见 [`Utf8Error`] 文档。",
+        "translate": ""
+    },
+    {
+        "source": "A \"stack allocated string\":",
+        "suggest": "一个栈分配的字符串:",
+        "translate": ""
+    },
+    {
+        "source": "Just ran validation.",
+        "suggest": "刚运行验证。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a mutable slice of bytes to a mutable string slice.",
+        "suggest": "将字节的可变切片转换为可变字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a slice of bytes to a string slice without checking that the string contains valid UTF-8.",
+        "suggest": "将字节的片段转换为字符串片段，而无需检查字符串是否包含有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "See the safe version, [`from_utf8`], for more information.",
+        "suggest": "有关更多信息，请参见安全版本 [`from_utf8`]。",
+        "translate": ""
+    },
+    {
+        "source": "If this constraint is violated, undefined behavior results, as the rest of Rust assumes that [`&str`]s are valid UTF-8.",
+        "suggest": "如果违反了此约束，则将导致未定义的行为，因为 Rust 的其余部分都假定 [`&str`] 是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must guarantee that the bytes `v` are valid UTF-8.",
+        "suggest": "调用者必须保证字节 `v` 是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "Also relies on `&str` and `&[u8]` having the same layout.",
+        "suggest": "还依赖于 `&str` 和 `&[u8]` 具有相同的布局。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a slice of bytes to a string slice without checking that the string contains valid UTF-8;",
+        "suggest": "将字节的片段转换为字符串片段，而无需检查字符串是否包含有效的 UTF-8;",
+        "translate": ""
+    },
+    {
+        "source": "mutable version.",
+        "suggest": "可变版本。",
+        "translate": ""
+    },
+    {
+        "source": "See the immutable version, [`from_utf8_unchecked()`] for more information.",
+        "suggest": "有关更多信息，请参见不可变版本 [`from_utf8_unchecked()`]。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must guarantee that the bytes `v` are valid UTF-8, thus the cast to `*mut str` is safe.",
+        "suggest": "调用者必须保证字节 `v` 是有效的 UTF-8，因此将其强制转换为 `*mut str` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Also, the pointer dereference is safe because that pointer comes from a reference which is guaranteed to be valid for writes.",
+        "suggest": "而且，指针解引用是安全的，因为该指针来自引用，保证对写有效。",
+        "translate": ""
+    },
+    {
+        "source": "returns a Utf8Error",
+        "suggest": "返回 Utf8Error",
+        "translate": ""
+    },
+    {
+        "source": "the second byte is invalid here",
+        "suggest": "第二个字节在这里无效",
+        "translate": ""
+    },
+    {
+        "source": "Defines utf8 error type.",
+        "suggest": "定义 utf8 错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "Errors which can occur when attempting to interpret a sequence of [`u8`] as a string.",
+        "suggest": "尝试将 [`u8`] 的序列解释为字符串时可能发生的错误。",
+        "translate": ""
+    },
+    {
+        "source": "As such, the `from_utf8` family of functions and methods for both [`String`]s and [`&str`]s make use of this error, for example.",
+        "suggest": "这样，例如 [`String`] 和 [`&str`] 的 `from_utf8` 系列函数和方法都利用了此错误。",
+        "translate": ""
+    },
+    {
+        "source": "This error type’s methods can be used to create functionality similar to `String::from_utf8_lossy` without allocating heap memory:",
+        "suggest": "此错误类型的方法可用于创建类似于 `String::from_utf8_lossy` 的功能，而无需分配堆内存:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the index in the given string up to which valid UTF-8 was verified.",
+        "suggest": "返回给定字符串中的索引，直到对其进行有效 UTF-8 验证为止。",
+        "translate": ""
+    },
+    {
+        "source": "It is the maximum index such that `from_utf8(&input[..index])` would return `Ok(_)`.",
+        "suggest": "它是使 `from_utf8(&input[..index])` 返回 `Ok(_)` 的最大索引。",
+        "translate": ""
+    },
+    {
+        "source": "Provides more information about the failure:",
+        "suggest": "提供有关失败的更多信息:",
+        "translate": ""
+    },
+    {
+        "source": "the end of the input was reached unexpectedly.",
+        "suggest": "输入的末尾意外到达。",
+        "translate": ""
+    },
+    {
+        "source": "is 1 to 3 bytes from the end of the input.",
+        "suggest": "从输入末尾开始是 1 到 3 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "If a byte stream (such as a file or a network socket) is being decoded incrementally, this could be a valid `char` whose UTF-8 byte sequence is spanning multiple chunks.",
+        "suggest": "如果字节流 (例如文件或网络套接字) 正在以增量方式进行解码，则这可能是有效的 `char`，其 UTF-8 字节序列跨越了多个块。",
+        "translate": ""
+    },
+    {
+        "source": "an unexpected byte was encountered.",
+        "suggest": "遇到意外的字节。",
+        "translate": ""
+    },
+    {
+        "source": "The length provided is that of the invalid byte sequence that starts at the index given by `valid_up_to()`.",
+        "suggest": "提供的长度是从 `valid_up_to()` 给定的索引处开始的无效字节序列的长度。",
+        "translate": ""
+    },
+    {
+        "source": "Decoding should resume after that sequence (after inserting a [`U+FFFD REPLACEMENT CHARACTER`][U+FFFD]) in case of lossy decoding.",
+        "suggest": "如果有损解码，则应在该序列之后 (插入 [`U+FFFD REPLACEMENT CHARACTER`][U+FFFD] 之后) 恢复解码。",
+        "translate": ""
+    },
+    {
+        "source": "An error returned when parsing a `bool` using [`from_str`] fails",
+        "suggest": "使用 [`from_str`] 解析 `bool` 失败时返回错误",
+        "translate": ""
+    },
+    {
+        "source": "Iterators for `str` methods.",
+        "suggest": "`str` 方法的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the [`char`]s of a string slice.",
+        "suggest": "字符串切片的 [`char`] s 上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`chars`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`chars`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "`str` invariant says `ch` is a valid Unicode Scalar Value.",
+        "suggest": "`str` 不变表示 `ch` 是有效的 Unicode 标量值。",
+        "translate": ""
+    },
+    {
+        "source": "length in `char` is equal to the number of non-continuation bytes",
+        "suggest": "`char` 中的长度等于非连续字节数",
+        "translate": ""
+    },
+    {
+        "source": "can't overflow, because we know that the `slice::Iter` belongs to a slice in memory which has a maximum length of `isize::MAX` (that's well below `usize::MAX`).",
+        "suggest": "不会溢出，因为我们知道 `slice::Iter` 属于内存中的切片，该切片的最大长度为 `isize::MAX` (远低于 `usize::MAX`)。",
+        "translate": ""
+    },
+    {
+        "source": "No need to go through the entire string.",
+        "suggest": "无需遍历整个字符串。",
+        "translate": ""
+    },
+    {
+        "source": "`Chars` is only made from a str, which guarantees the iter is valid UTF-8.",
+        "suggest": "`Chars` 仅由 str 制成，这可以确保迭代器是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the [`char`]s of a string slice, and their positions.",
+        "suggest": "字符串切片的 ['char`] s 及其位置上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`char_indices`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`char_indices`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the bytes of a string slice.",
+        "suggest": "在字符串切片的字节上进行迭代的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`bytes`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`bytes`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `Iterator::__iterator_get_unchecked`.",
+        "suggest": "调用者必须坚持 `Iterator::__iterator_get_unchecked` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "This macro generates a Clone impl for string pattern API wrapper types of the form X<'a, P>",
+        "suggest": "此宏为形式为 X <'a，P> 的字符串模式 API 包装类型生成 Clone impl",
+        "translate": ""
+    },
+    {
+        "source": "This macro generates two public iterator structs wrapping a private internal one that makes use of the `Pattern` API.",
+        "suggest": "此宏生成两个公共迭代器，结构体包装使用 `Pattern` API 的私有内部迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "For all patterns `P: Pattern<'a>` the following items will be generated (generics omitted):",
+        "suggest": "对于所有模式 `P: Pattern<'a>`，将生成以下项 (忽略泛型) :",
+        "translate": ""
+    },
+    {
+        "source": "impl Iterator for $forward_iterator",
+        "suggest": "$forward_iterator 的 impl 迭代器",
+        "translate": ""
+    },
+    {
+        "source": "The internal one is defined outside the macro, and has almost the same semantic as a DoubleEndedIterator by delegating to `pattern::Searcher` and `pattern::ReverseSearcher` for both forward and reverse iteration.",
+        "suggest": "内部宏在宏外部定义，并且通过委派 `pattern::Searcher` 和 `pattern::ReverseSearcher` 进行正向和反向迭代，其语义几乎与 DoubleEndedIterator 相同。",
+        "translate": ""
+    },
+    {
+        "source": "because a `Searcher` and a `ReverseSearcher` for a given `Pattern` might not return the same elements, so actually implementing `DoubleEndedIterator` for it would be incorrect.",
+        "suggest": "因为给定 `Pattern` 的 `Searcher` 和 `ReverseSearcher` 可能不会返回相同的元素，所以实际上为其实现 `DoubleEndedIterator` 是不正确的。",
+        "translate": ""
+    },
+    {
+        "source": "(See the docs in `str::pattern` for more details)",
+        "suggest": "(有关更多详细信息，请参见 `str::pattern` 中的文档)",
+        "translate": ""
+    },
+    {
+        "source": "However, the internal struct still represents a single ended iterator from either end, and depending on pattern is also a valid double ended iterator, so the two wrapper structs implement `Iterator` and `DoubleEndedIterator` depending on the concrete pattern type, leading to the complex impls seen above.",
+        "suggest": "但是，内部结构体仍然从任一端代表一个单端迭代器，并且取决于模式也是一个有效的双端迭代器，因此两个包装器结构体根据具体的模式类型实现 `Iterator` 和 `DoubleEndedIterator`，从而导致复杂的隐含如上所示。",
+        "translate": ""
+    },
+    {
+        "source": "Forward iterator",
+        "suggest": "转发迭代器",
+        "translate": ""
+    },
+    {
+        "source": "Reverse iterator",
+        "suggest": "反向迭代器",
+        "translate": ""
+    },
+    {
+        "source": "Stability of all generated items",
+        "suggest": "所有生成项的稳定性",
+        "translate": ""
+    },
+    {
+        "source": "Internal almost-iterator that is being delegated to",
+        "suggest": "内部的几乎迭代器被委派给",
+        "translate": ""
+    },
+    {
+        "source": "Kind of delegation - either single ended or double ended",
+        "suggest": "委托类型 - 单端或双端",
+        "translate": ""
+    },
+    {
+        "source": "`self.start` and `self.end` always lie on unicode boundaries.",
+        "suggest": "`self.start` 和 `self.end` 始终位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "`Searcher` guarantees that `a` and `b` lie on unicode boundaries.",
+        "suggest": "`Searcher` 保证 `a` 和 `b` 位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "`Searcher` guarantees that `b` lies on unicode boundary, and self.start is either the start of the original string, or `b` was assigned to it, so it also lies on unicode boundary.",
+        "suggest": "`Searcher` 保证 `b` 位于 unicode 边界上，而 self.start 是原始字符串的开头，或者已为其分配 `b`，因此它也位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "`Searcher` guarantees that `b` lies on unicode boundary, and self.end is either the end of the original string, or `b` was assigned to it, so it also lies on unicode boundary.",
+        "suggest": "`Searcher` 保证 `b` 位于 unicode 边界上，并且 self.end 是原始字符串的末尾，或者 `b` 被分配给它，因此它也位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "self.start is either the start of the original string, or start of a substring that represents the part of the string that hasn't iterated yet.",
+        "suggest": "self.start 是原始字符串的开头，或者是表示字符串中尚未迭代的部分的子字符串的开头。",
+        "translate": ""
+    },
+    {
+        "source": "Either way, it is guaranteed to lie on unicode boundary.",
+        "suggest": "无论哪种方式，都可以保证它位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "is either the end of the original string, or `b` was assigned to it, so it also lies on unicode boundary.",
+        "suggest": "是原始字符串的末尾，或者已将 `b` 分配给它，因此它也位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "doesn't change `self.start`",
+        "suggest": "不会改变 `self.start`",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`split`].",
+        "suggest": "使用方法 [`split`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`rsplit`].",
+        "suggest": "使用方法 [`rsplit`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Returns remainder of the splitted string",
+        "suggest": "返回分割后的字符串的其余部分",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`split_terminator`].",
+        "suggest": "使用方法 [`split_terminator`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`rsplit_terminator`].",
+        "suggest": "使用方法 [`rsplit_terminator`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "The number of splits remaining",
+        "suggest": "剩余分割数",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`splitn`].",
+        "suggest": "使用方法 [`splitn`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`rsplitn`].",
+        "suggest": "使用方法 [`rsplitn`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "`Searcher` guarantees that `start` and `end` lie on unicode boundaries.",
+        "suggest": "`Searcher` 保证 `start` 和 `end` 位于 unicode 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`match_indices`].",
+        "suggest": "使用方法 [`match_indices`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`rmatch_indices`].",
+        "suggest": "使用方法 [`rmatch_indices`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Indices are known to be on utf8 boundaries",
+        "suggest": "已知索引位于 utf8 边界上",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`matches`].",
+        "suggest": "使用方法 [`matches`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`rmatches`].",
+        "suggest": "使用方法 [`rmatches`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the lines of a string, as string slices.",
+        "suggest": "在字符串的各行上进行迭代的迭代器，作为字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created with the [`lines`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`lines`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Created with the method [`lines_any`].",
+        "suggest": "使用方法 [`lines_any`] 创建。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the non-whitespace substrings of a string, separated by any amount of whitespace.",
+        "suggest": "字符串的非空白子字符串上的迭代器，以任意数量的空格分隔。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`split_whitespace`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`split_whitespace`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the non-ASCII-whitespace substrings of a string, separated by any amount of ASCII whitespace.",
+        "suggest": "字符串的非 ASCII 空格子字符串上的迭代器，以任意数量的 ASCII 空格分隔。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`split_ascii_whitespace`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`split_ascii_whitespace`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the substrings of a string, terminated by a substring matching to a predicate function Unlike `Split`, it contains the matched part as a terminator of the subslice.",
+        "suggest": "字符串子字符串上的迭代器，由与谓词函数匹配的子字符串终止，与 `Split` 不同，它包含匹配的部分作为子片段的终止符。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`split_inclusive`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`split_inclusive`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Slice is created from str.",
+        "suggest": "切片是从 str 创建的。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator of [`u16`] over the string encoded as UTF-16.",
+        "suggest": "[`u16`] 的迭代器，编码为 UTF-16 的字符串。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is created by the [`encode_utf16`] method on [`str`].",
+        "suggest": "该结构体是通过 [`str`] 上的 [`encode_utf16`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "every char gets either one u16 or two u16, so this iterator is between 1 or 2 times as long as the underlying iterator.",
+        "suggest": "每个字符获得一个 u16 或两个 u16，因此此迭代器的长度是基础迭代器的 1 到 2 倍。",
+        "translate": ""
+    },
+    {
+        "source": "The return type of [`str::escape_debug`].",
+        "suggest": "[`str::escape_debug`] 的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "The return type of [`str::escape_default`].",
+        "suggest": "[`str::escape_default`] 的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "The return type of [`str::escape_unicode`].",
+        "suggest": "[`str::escape_unicode`] 的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "Lossy UTF-8 string.",
+        "suggest": "有损 UTF-8 字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Both use the same memory layout, and UTF-8 correctness isn't required.",
+        "suggest": "两者都使用相同的内存布局，并且不需要 UTF-8 正确性。",
+        "translate": ""
+    },
+    {
+        "source": "Iterator over lossy UTF-8 string",
+        "suggest": "有损 UTF-8 字符串上的迭代器",
+        "translate": ""
+    },
+    {
+        "source": "Sequence of valid chars.",
+        "suggest": "有效字符的序列。",
+        "translate": ""
+    },
+    {
+        "source": "Can be empty between broken UTF-8 chars.",
+        "suggest": "在损坏的 UTF-8 字符之间可以为空。",
+        "translate": ""
+    },
+    {
+        "source": "Single broken char, empty if none.",
+        "suggest": "单个破损字符，如果没有则为空。",
+        "translate": ""
+    },
+    {
+        "source": "Empty iff iterator item is last.",
+        "suggest": "空的 iff 迭代器项是最后一个。",
+        "translate": ""
+    },
+    {
+        "source": "`i` starts at `0`, is less than `self.source.len()`, and only increases, so `0 <= i < self.source.len()`.",
+        "suggest": "`i` 从 `0` 开始，小于 `self.source.len()`，仅增加，所以 `0 <= i < self.source.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "We have checked up to `i` that source is valid UTF-8.",
+        "suggest": "我们已经检查了 `i` 源是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "We have checked that the entire source is valid UTF-8.",
+        "suggest": "我们已经检查了整个源都是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "If we're the empty string then our iterator won't actually yield anything, so perform the formatting manually",
+        "suggest": "如果我们是空字符串，那么我们的迭代器实际上不会产生任何结果，因此请手动执行格式化",
+        "translate": ""
+    },
+    {
+        "source": "If we successfully decoded the whole chunk as a valid string then we can return a direct formatting of the string which will also respect various formatting flags if possible.",
+        "suggest": "如果我们成功地将整个块解码为有效字符串，那么我们可以返回字符串的直接格式，如果可能的话，该格式也将遵循各种格式标志。",
+        "translate": ""
+    },
+    {
+        "source": "Valid part.",
+        "suggest": "有效部分。",
+        "translate": ""
+    },
+    {
+        "source": "Here we partially parse UTF-8 again which is suboptimal.",
+        "suggest": "在这里，我们再次部分解析次优 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "Broken parts of string as hex escape.",
+        "suggest": "十六进制转义时，字符串的折断部分。",
+        "translate": ""
+    },
+    {
+        "source": "fancy f!",
+        "suggest": "fancy f!",
+        "translate": ""
+    },
+    {
+        "source": "second byte of `ö`",
+        "suggest": "`ö` 的第二个字节",
+        "translate": ""
+    },
+    {
+        "source": "indices not on UTF-8 sequence boundaries",
+        "suggest": "索引不在 UTF-8 序列边界上",
+        "translate": ""
+    },
+    {
+        "source": "out of bounds",
+        "suggest": "越界",
+        "translate": ""
+    },
+    {
+        "source": "correct length",
+        "suggest": "正确的长度",
+        "translate": ""
+    },
+    {
+        "source": "not 'y̆'",
+        "suggest": "不是 'y̆'",
+        "translate": ""
+    },
+    {
+        "source": "not (0, 'y̆')",
+        "suggest": "不是 (0，'y̆')",
+        "translate": ""
+    },
+    {
+        "source": "note the 3 here - the last character took up two bytes",
+        "suggest": "注意这里的 3 - 最后一个字符占用了两个字节",
+        "translate": ""
+    },
+    {
+        "source": "only the first `aba`",
+        "suggest": "只有第一个 `aba`",
+        "translate": ""
+    },
+    {
+        "source": "only the last `aba`",
+        "suggest": "只有最后的 `aba`",
+        "translate": ""
+    },
+    {
+        "source": "String manipulation.",
+        "suggest": "字符串操作。",
+        "translate": ""
+    },
+    {
+        "source": "For more details, see the [`std::str`] module.",
+        "suggest": "有关更多详细信息，请参见 [`std::str`] 模块。",
+        "translate": ""
+    },
+    {
+        "source": "character boundary",
+        "suggest": "角色边界",
+        "translate": ""
+    },
+    {
+        "source": "find the character",
+        "suggest": "找到角色",
+        "translate": ""
+    },
+    {
+        "source": "must be less than len and a char boundary",
+        "suggest": "必须小于 len 和 char 边界",
+        "translate": ""
+    },
+    {
+        "source": "Returns the length of `self`.",
+        "suggest": "返回 `self` 的长度。",
+        "translate": ""
+    },
+    {
+        "source": "This length is in bytes, not [`char`]s or graphemes.",
+        "suggest": "该长度以字节为单位，而不是 [`char`] 或字素。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if `self` has a length of zero bytes.",
+        "suggest": "如果 `self` 的长度为零字节，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Checks that `index`-th byte is the first byte in a UTF-8 code point sequence or the end of the string.",
+        "suggest": "检查第 index 个字节是 UTF-8 代码点序列中的第一个字节还是字符串的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "The start and end of the string (when `index == self.len()`) are considered to be boundaries.",
+        "suggest": "字符串的开头和结尾 (当 `index == self.len()`) 被视为边界时。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `false` if `index` is greater than `self.len()`.",
+        "suggest": "如果 `index` 大于 `self.len()`，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "0 and len are always ok.",
+        "suggest": "0 和 len 总是可以的。",
+        "translate": ""
+    },
+    {
+        "source": "Test for 0 explicitly so that it can optimize out the check easily and skip reading string data for that case.",
+        "suggest": "显式测试 0，以便可以轻松优化检查，并在这种情况下跳过读取字符串数据。",
+        "translate": ""
+    },
+    {
+        "source": "This is bit magic equivalent to: b < 128 || b >= 192",
+        "suggest": "这有点神奇，等于: b <128 ||b>=192",
+        "translate": ""
+    },
+    {
+        "source": "Converts a string slice to a byte slice.",
+        "suggest": "将字符串切片转换为字节切片。",
+        "translate": ""
+    },
+    {
+        "source": "To convert the byte slice back into a string slice, use the [`from_utf8`] function.",
+        "suggest": "要将字节切片切回为字符串切片，请使用 [`from_utf8`] 函数。",
+        "translate": ""
+    },
+    {
+        "source": "const sound because we transmute two types with the same layout",
+        "suggest": "常量声音，因为我们转换了两种具有相同布局的类型",
+        "translate": ""
+    },
+    {
+        "source": "Converts a mutable string slice to a mutable byte slice.",
+        "suggest": "将可变字符串片段转换为可变字节片段。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure that the content of the slice is valid UTF-8 before the borrow ends and the underlying `str` is used.",
+        "suggest": "调用者必须确保在借用结束并使用基础 `str` 之前，切片的内容是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "Use of a `str` whose contents are not valid UTF-8 is undefined behavior.",
+        "suggest": "使用内容无效的 `str` UTF-8 是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "the cast from `&str` to `&[u8]` is safe since `str` has the same layout as `&[u8]` (only libstd can make this guarantee).",
+        "suggest": "从 `&str` 到 `&[u8]` 的转换是安全的，因为 `str` 具有与 `&[u8]` 相同的布局 (只有 libstd 可以提供此保证)。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer dereference is safe since it comes from a mutable reference which is guaranteed to be valid for writes.",
+        "suggest": "指针解引用是安全的，因为它来自变量引用，该变量对写操作有效。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a string slice to a raw pointer.",
+        "suggest": "将字符串切片转换为裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "As string slices are a slice of bytes, the raw pointer points to a [`u8`].",
+        "suggest": "由于字符串切片是字节的切片，所以裸指针指向 [`u8`]。",
+        "translate": ""
+    },
+    {
+        "source": "This pointer will be pointing to the first byte of the string slice.",
+        "suggest": "该指针将指向字符串切片的第一个字节。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must ensure that the returned pointer is never written to.",
+        "suggest": "调用者必须确保返回的指针永远不会被写入。",
+        "translate": ""
+    },
+    {
+        "source": "If you need to mutate the contents of the string slice, use [`as_mut_ptr`].",
+        "suggest": "如果需要更改字符串切片的内容，请使用 [`as_mut_ptr`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a mutable string slice to a raw pointer.",
+        "suggest": "将可变字符串切片转换为裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "It is your responsibility to make sure that the string slice only gets modified in a way that it remains valid UTF-8.",
+        "suggest": "您有责任确保仅以有效的 UTF-8 方式修改字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a subslice of `str`.",
+        "suggest": "返回 `str` 的子切片。",
+        "translate": ""
+    },
+    {
+        "source": "This is the non-panicking alternative to indexing the `str`.",
+        "suggest": "这是索引 `str` 的非紧急选择。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`None`] whenever equivalent indexing operation would panic.",
+        "suggest": "每当等效的索引操作将为 panic 时，将返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable subslice of `str`.",
+        "suggest": "返回 `str` 的可变子切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an unchecked subslice of `str`.",
+        "suggest": "返回未经检查的 `str` 子切片。",
+        "translate": ""
+    },
+    {
+        "source": "This is the unchecked alternative to indexing the `str`.",
+        "suggest": "这是索引 `str` 的未经检查的替代方法。",
+        "translate": ""
+    },
+    {
+        "source": "Callers of this function are responsible that these preconditions are satisfied:",
+        "suggest": "此函数的调用者有责任满足以下先决条件:",
+        "translate": ""
+    },
+    {
+        "source": "The starting index must not exceed the ending index;",
+        "suggest": "起始索引不得超过结束索引;",
+        "translate": ""
+    },
+    {
+        "source": "Indexes must be within bounds of the original slice;",
+        "suggest": "索引必须在原始切片的范围内;",
+        "translate": ""
+    },
+    {
+        "source": "Indexes must lie on UTF-8 sequence boundaries.",
+        "suggest": "索引必须位于 UTF-8 序列边界上。",
+        "translate": ""
+    },
+    {
+        "source": "Failing that, the returned string slice may reference invalid memory or violate the invariants communicated by the `str` type.",
+        "suggest": "否则，返回的字符串切片可能会引用无效的内存或违反 `str` 类型传达的不变式。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `get_unchecked`;",
+        "suggest": "调用者必须维护 `get_unchecked` 的安全保证;",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable, unchecked subslice of `str`.",
+        "suggest": "返回 `str` 的可变，未经检查的子切片。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `get_unchecked_mut`;",
+        "suggest": "调用者必须维护 `get_unchecked_mut` 的安全保证;",
+        "translate": ""
+    },
+    {
+        "source": "Creates a string slice from another string slice, bypassing safety checks.",
+        "suggest": "从另一个字符串切片中创建一个字符串切片，从而绕过安全检查。",
+        "translate": ""
+    },
+    {
+        "source": "This is generally not recommended, use with caution!",
+        "suggest": "通常不建议这样做，请谨慎使用!",
+        "translate": ""
+    },
+    {
+        "source": "For a safe alternative see [`str`] and [`Index`].",
+        "suggest": "有关安全的替代方法，请参见 [`str`] 和 [`Index`]。",
+        "translate": ""
+    },
+    {
+        "source": "This new slice goes from `begin` to `end`, including `begin` but excluding `end`.",
+        "suggest": "此新切片从 `begin` 到 `end`，包括 `begin` 但不包括 `end`。",
+        "translate": ""
+    },
+    {
+        "source": "To get a mutable string slice instead, see the [`slice_mut_unchecked`] method.",
+        "suggest": "要获取可变字符串切片，请参见 [`slice_mut_unchecked`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Callers of this function are responsible that three preconditions are satisfied:",
+        "suggest": "此函数的调用者有责任满足三个先决条件:",
+        "translate": ""
+    },
+    {
+        "source": "must not exceed `end`.",
+        "suggest": "不得超过 `end`。",
+        "translate": ""
+    },
+    {
+        "source": "and `end` must be byte positions within the string slice.",
+        "suggest": "`end` 和 `end` 必须在字符串 `Slice` 中的字节位置。",
+        "translate": ""
+    },
+    {
+        "source": "and `end` must lie on UTF-8 sequence boundaries.",
+        "suggest": "和 `end` 必须位于 UTF-8 序列边界上。",
+        "translate": ""
+    },
+    {
+        "source": "To get an immutable string slice instead, see the [`slice_unchecked`] method.",
+        "suggest": "要获取不可变的字符串切片，请参见 [`slice_unchecked`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Divide one string slice into two at an index.",
+        "suggest": "在索引处将一个字符串切片分成两个。",
+        "translate": ""
+    },
+    {
+        "source": "The argument, `mid`, should be a byte offset from the start of the string.",
+        "suggest": "参数 `mid` 应该是字符串开头的字节偏移量。",
+        "translate": ""
+    },
+    {
+        "source": "It must also be on the boundary of a UTF-8 code point.",
+        "suggest": "它也必须在 UTF-8 代码点的边界上。",
+        "translate": ""
+    },
+    {
+        "source": "The two slices returned go from the start of the string slice to `mid`, and from `mid` to the end of the string slice.",
+        "suggest": "返回的两个切片从字符串切片的开头到 `mid`，从 `mid` 到字符串切片的结尾。",
+        "translate": ""
+    },
+    {
+        "source": "To get mutable string slices instead, see the [`split_at_mut`] method.",
+        "suggest": "要获取可变字符串切片，请参见 [`split_at_mut`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `mid` is not on a UTF-8 code point boundary, or if it is past the end of the last code point of the string slice.",
+        "suggest": "Panics，如果 `mid` 不在 UTF-8 代码点边界上，或者超过字符串切片的最后一个代码点的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "is_char_boundary checks that the index is in [0, .len()]",
+        "suggest": "is_char_boundary 检查索引是否在 [0, .len()] 中",
+        "translate": ""
+    },
+    {
+        "source": "just checked that `mid` is on a char boundary.",
+        "suggest": "刚刚检查 `mid` 是否在 char 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "Divide one mutable string slice into two at an index.",
+        "suggest": "在索引处将一个可变字符串切片切成两部分。",
+        "translate": ""
+    },
+    {
+        "source": "To get immutable string slices instead, see the [`split_at`] method.",
+        "suggest": "要获取不可变的字符串切片，请参见 [`split_at`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator over the [`char`]s of a string slice.",
+        "suggest": "返回字符串切片的 [`char`] 上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "As a string slice consists of valid UTF-8, we can iterate through a string slice by [`char`].",
+        "suggest": "由于字符串片段由有效的 UTF-8 组成，因此我们可以通过 [`char`] 遍历字符串片段。",
+        "translate": ""
+    },
+    {
+        "source": "This method returns such an iterator.",
+        "suggest": "此方法返回这样的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "It's important to remember that [`char`] represents a Unicode Scalar Value, and may not match your idea of what a 'character' is.",
+        "suggest": "重要的是要记住，[`char`] 代表 Unicode 标量值，可能与您对 'character' 的理解不符。",
+        "translate": ""
+    },
+    {
+        "source": "Iteration over grapheme clusters may be what you actually want.",
+        "suggest": "实际需要的是在字形簇上进行迭代。",
+        "translate": ""
+    },
+    {
+        "source": "This functionality is not provided by Rust's standard library, check crates.io instead.",
+        "suggest": "Rust 的标准库未提供此功能，请检查 crates.io。",
+        "translate": ""
+    },
+    {
+        "source": "Remember, [`char`]s may not match your intuition about characters:",
+        "suggest": "请记住，[`char`] 可能与您对字符的直觉不符:",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator over the [`char`]s of a string slice, and their positions.",
+        "suggest": "返回字符串切片的 ['char`] s 及其位置上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This method returns an iterator of both these [`char`]s, as well as their byte positions.",
+        "suggest": "这个方法返回这两个 [`char`] 以及它们的字节位置的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator yields tuples.",
+        "suggest": "迭代器产生元组。",
+        "translate": ""
+    },
+    {
+        "source": "The position is first, the [`char`] is second.",
+        "suggest": "位置是第一，[`char`] 是第二。",
+        "translate": ""
+    },
+    {
+        "source": "As a string slice consists of a sequence of bytes, we can iterate through a string slice by byte.",
+        "suggest": "由于字符串切片由字节序列组成，因此我们可以逐字节遍历字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Splits a string slice by whitespace.",
+        "suggest": "用空格分割字符串片段。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator returned will return string slices that are sub-slices of the original string slice, separated by any amount of whitespace.",
+        "suggest": "返回的迭代器将返回作为原始字符串切片的子切片的字符串切片，并以任意数量的空格分隔。",
+        "translate": ""
+    },
+    {
+        "source": "is defined according to the terms of the Unicode Derived Core Property `White_Space`.",
+        "suggest": "根据 Unicode 派生核心属性 `White_Space` 的术语定义。",
+        "translate": ""
+    },
+    {
+        "source": "If you only want to split on ASCII whitespace instead, use [`split_ascii_whitespace`].",
+        "suggest": "如果只想在 ASCII 空格上分割，请使用 [`split_ascii_whitespace`]。",
+        "translate": ""
+    },
+    {
+        "source": "All kinds of whitespace are considered:",
+        "suggest": "考虑各种空白:",
+        "translate": ""
+    },
+    {
+        "source": "Splits a string slice by ASCII whitespace.",
+        "suggest": "用 ASCII 空格分割字符串片段。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator returned will return string slices that are sub-slices of the original string slice, separated by any amount of ASCII whitespace.",
+        "suggest": "返回的迭代器将返回作为原始字符串切片的子切片的字符串切片，并以任意数量的 ASCII 空格分隔。",
+        "translate": ""
+    },
+    {
+        "source": "To split by Unicode `Whitespace` instead, use [`split_whitespace`].",
+        "suggest": "要改为按 Unicode `Whitespace` 进行拆分，请使用 [`split_whitespace`]。",
+        "translate": ""
+    },
+    {
+        "source": "All kinds of ASCII whitespace are considered:",
+        "suggest": "考虑各种 ASCII 空格:",
+        "translate": ""
+    },
+    {
+        "source": "Lines are ended with either a newline (`\\n`) or a carriage return with a line feed (`\\r\\n`).",
+        "suggest": "行以换行符 (`\\n`) 结束，或者以换行符 (`\\r\\n`) 返回回车符。",
+        "translate": ""
+    },
+    {
+        "source": "The final line ending is optional.",
+        "suggest": "最后一行的结尾是可选的。",
+        "translate": ""
+    },
+    {
+        "source": "A string that ends with a final line ending will return the same lines as an otherwise identical string without a final line ending.",
+        "suggest": "以最后一行结尾的字符串将返回与没有其他最后一行结尾的相同字符串相同的行。",
+        "translate": ""
+    },
+    {
+        "source": "The final line ending isn't required:",
+        "suggest": "不需要最后一行:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the lines of a string.",
+        "suggest": "字符串行上的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator of `u16` over the string encoded as UTF-16.",
+        "suggest": "在编码为 UTF-16 的字符串上返回 `u16` 的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the given pattern matches a sub-slice of this string slice.",
+        "suggest": "如果给定的模式与该字符串切片的子切片匹配，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `false` if it does not.",
+        "suggest": "如果不是，则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "The [pattern] can be a `&str`, [`char`], a slice of [`char`]s, or a function or closure that determines if a character matches.",
+        "suggest": "[pattern] 可以是 `&str`，[`char`]，[`char`] 的切片，也可以是确定字符是否匹配的函数或闭包。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the given pattern matches a prefix of this string slice.",
+        "suggest": "如果给定的模式与此字符串切片的前缀匹配，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the given pattern matches a suffix of this string slice.",
+        "suggest": "如果给定的模式与该字符串切片的后缀匹配，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the byte index of the first character of this string slice that matches the pattern.",
+        "suggest": "返回此字符串片段中与模式匹配的第一个字符的字节索引。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`None`] if the pattern doesn't match.",
+        "suggest": "如果模式不匹配，则返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "Simple patterns:",
+        "suggest": "简单模式:",
+        "translate": ""
+    },
+    {
+        "source": "More complex patterns using point-free style and closures:",
+        "suggest": "使用无点样式和闭包的更复杂的模式:",
+        "translate": ""
+    },
+    {
+        "source": "Not finding the pattern:",
+        "suggest": "找不到模式:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the byte index for the first character of the rightmost match of the pattern in this string slice.",
+        "suggest": "返回此字符串片段中模式最右边匹配的第一个字符的字节索引。",
+        "translate": ""
+    },
+    {
+        "source": "More complex patterns with closures:",
+        "suggest": "闭包的更复杂模式:",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over substrings of this string slice, separated by characters matched by a pattern.",
+        "suggest": "在此字符串片段的子字符串上进行迭代的迭代器，该子字符串由模式匹配的字符分隔。",
+        "translate": ""
+    },
+    {
+        "source": "Iterator behavior",
+        "suggest": "迭代器行为",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator will be a [`DoubleEndedIterator`] if the pattern allows a reverse search and forward/reverse search yields the same elements.",
+        "suggest": "如果模式允许反向搜索且 forward/reverse 搜索产生相同的元素，则返回的迭代器将为 [`DoubleEndedIterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "This is true for, e.g., [`char`], but not for `&str`.",
+        "suggest": "例如，对于 [`char`]，这是正确的，但对于 `&str`，则不是。",
+        "translate": ""
+    },
+    {
+        "source": "If the pattern allows a reverse search but its results might differ from a forward search, the [`rsplit`] method can be used.",
+        "suggest": "如果模式允许反向搜索，但其结果可能与正向搜索不同，则可以使用 [`rsplit`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "If the pattern is a slice of chars, split on each occurrence of any of the characters:",
+        "suggest": "如果模式是一片字符，请在每次出现任何字符时进行分割:",
+        "translate": ""
+    },
+    {
+        "source": "A more complex pattern, using a closure:",
+        "suggest": "使用闭包的更复杂的模式:",
+        "translate": ""
+    },
+    {
+        "source": "If a string contains multiple contiguous separators, you will end up with empty strings in the output:",
+        "suggest": "如果一个字符串包含多个连续的分隔符，您将在输出中得到空字符串:",
+        "translate": ""
+    },
+    {
+        "source": "Contiguous separators are separated by the empty string.",
+        "suggest": "连续的分隔符由空字符串分隔。",
+        "translate": ""
+    },
+    {
+        "source": "Separators at the start or end of a string are neighbored by empty strings.",
+        "suggest": "字符串开头或结尾的分隔符与空字符串相邻。",
+        "translate": ""
+    },
+    {
+        "source": "When the empty string is used as a separator, it separates every character in the string, along with the beginning and end of the string.",
+        "suggest": "当空字符串用作分隔符时，它将字符串中的每个字符以及字符串的开头和结尾分隔开。",
+        "translate": ""
+    },
+    {
+        "source": "Contiguous separators can lead to possibly surprising behavior when whitespace is used as the separator.",
+        "suggest": "当使用空格作为分隔符时，连续的分隔符可能会导致令人惊讶的行为。",
+        "translate": ""
+    },
+    {
+        "source": "This code is correct:",
+        "suggest": "这段代码是正确的:",
+        "translate": ""
+    },
+    {
+        "source": "It does _not_ give you:",
+        "suggest": "它确实不会给您:",
+        "translate": ""
+    },
+    {
+        "source": "Use [`split_whitespace`] for this behavior.",
+        "suggest": "为此行为使用 [`split_whitespace`]。",
+        "translate": ""
+    },
+    {
+        "source": "Differs from the iterator produced by `split` in that `split_inclusive` leaves the matched part as the terminator of the substring.",
+        "suggest": "与 `split` 产生的迭代器的不同之处在于 `split_inclusive` 将匹配的部分保留为子字符串的终止符。",
+        "translate": ""
+    },
+    {
+        "source": "If the last element of the string is matched, that element will be considered the terminator of the preceding substring.",
+        "suggest": "如果字符串的最后一个元素匹配，则该元素将被视为前一个子字符串的终止符。",
+        "translate": ""
+    },
+    {
+        "source": "That substring will be the last item returned by the iterator.",
+        "suggest": "该子字符串将是迭代器返回的最后一个项。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over substrings of the given string slice, separated by characters matched by a pattern and yielded in reverse order.",
+        "suggest": "给定字符串切片的子字符串上的迭代器，该迭代器由与模式匹配的字符分隔，并以相反的顺序产生。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator requires that the pattern supports a reverse search, and it will be a [`DoubleEndedIterator`] if a forward/reverse search yields the same elements.",
+        "suggest": "返回的迭代器要求模式支持反向搜索，如果 forward/reverse 搜索产生相同的元素，它将是 [`DoubleEndedIterator`]。",
+        "translate": ""
+    },
+    {
+        "source": "For iterating from the front, the [`split`] method can be used.",
+        "suggest": "为了从正面进行迭代，可以使用 [`split`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over substrings of the given string slice, separated by characters matched by a pattern.",
+        "suggest": "给定字符串切片的子字符串上的迭代器，该子字符串由模式匹配的字符分隔。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to [`split`], except that the trailing substring is skipped if empty.",
+        "suggest": "等效于 [`split`]，不同之处在于尾随的子字符串为空时将被跳过。",
+        "translate": ""
+    },
+    {
+        "source": "This method can be used for string data that is _terminated_, rather than _separated_ by a pattern.",
+        "suggest": "此方法可用于 _terminated_ 的字符串数据，而不是用于模式的 _separated_ 的字符串数据。",
+        "translate": ""
+    },
+    {
+        "source": "If the pattern allows a reverse search but its results might differ from a forward search, the [`rsplit_terminator`] method can be used.",
+        "suggest": "如果模式允许反向搜索，但其结果可能与正向搜索不同，则可以使用 [`rsplit_terminator`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over substrings of `self`, separated by characters matched by a pattern and yielded in reverse order.",
+        "suggest": "`self` 子字符串上的迭代器，该迭代器由与模式匹配的字符分隔，并以相反的顺序产生。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator requires that the pattern supports a reverse search, and it will be double ended if a forward/reverse search yields the same elements.",
+        "suggest": "返回的迭代器要求模式支持反向搜索，如果 forward/reverse 搜索产生相同的元素，则它将是双头模式。",
+        "translate": ""
+    },
+    {
+        "source": "For iterating from the front, the [`split_terminator`] method can be used.",
+        "suggest": "为了从正面进行迭代，可以使用 [`split_terminator`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over substrings of the given string slice, separated by a pattern, restricted to returning at most `n` items.",
+        "suggest": "给定字符串片段的子字符串上的迭代器 (由模式分隔)，仅限于返回最多 `n` 项。",
+        "translate": ""
+    },
+    {
+        "source": "If `n` substrings are returned, the last substring (the `n`th substring) will contain the remainder of the string.",
+        "suggest": "如果返回 `n` 子字符串，则最后一个子字符串 (第 n 个子字符串) 将包含字符串的其余部分。",
+        "translate": ""
+    },
+    {
+        "source": "The returned iterator will not be double ended, because it is not efficient to support.",
+        "suggest": "返回的迭代器不会是双头的，因为支持效率不高。",
+        "translate": ""
+    },
+    {
+        "source": "If the pattern allows a reverse search, the [`rsplitn`] method can be used.",
+        "suggest": "如果模式允许反向搜索，则可以使用 [`rsplitn`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over substrings of this string slice, separated by a pattern, starting from the end of the string, restricted to returning at most `n` items.",
+        "suggest": "从字符串的末尾开始，在此字符串切片的子字符串上进行迭代的迭代器，由模式分隔，限制为最多返回 `n` 项。",
+        "translate": ""
+    },
+    {
+        "source": "For splitting from the front, the [`splitn`] method can be used.",
+        "suggest": "要从正面拆分，可以使用 [`splitn`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Splits the string on the first occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.",
+        "suggest": "在第一次出现指定分隔符时拆分字符串，并在分隔符之前返回前缀，在分隔符之后返回后缀。",
+        "translate": ""
+    },
+    {
+        "source": "Splits the string on the last occurrence of the specified delimiter and returns prefix before delimiter and suffix after delimiter.",
+        "suggest": "在最后一次出现指定分隔符时分割字符串，并在分隔符之前返回前缀，在分隔符之后返回后缀。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the disjoint matches of a pattern within the given string slice.",
+        "suggest": "给定字符串切片中某个模式的不相交匹配的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "If the pattern allows a reverse search but its results might differ from a forward search, the [`rmatches`] method can be used.",
+        "suggest": "如果模式允许反向搜索，但其结果可能与正向搜索不同，则可以使用 [`rmatches`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the disjoint matches of a pattern within this string slice, yielded in reverse order.",
+        "suggest": "在此字符串切片中某个模式的不相交匹配项上进行迭代的迭代器，其生成顺序相反。",
+        "translate": ""
+    },
+    {
+        "source": "For iterating from the front, the [`matches`] method can be used.",
+        "suggest": "为了从正面进行迭代，可以使用 [`matches`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the disjoint matches of a pattern within this string slice as well as the index that the match starts at.",
+        "suggest": "对该字符串切片中某个模式的不相交匹配以及该匹配开始处的索引的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "For matches of `pat` within `self` that overlap, only the indices corresponding to the first match are returned.",
+        "suggest": "对于 `self` 中重叠的 `pat` 匹配项，仅返回与第一个匹配项对应的索引。",
+        "translate": ""
+    },
+    {
+        "source": "If the pattern allows a reverse search but its results might differ from a forward search, the [`rmatch_indices`] method can be used.",
+        "suggest": "如果模式允许反向搜索，但其结果可能与正向搜索不同，则可以使用 [`rmatch_indices`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over the disjoint matches of a pattern within `self`, yielded in reverse order along with the index of the match.",
+        "suggest": "`self` 中某个模式的不相交匹配项上的迭代器，以与匹配项索引相反的顺序产生。",
+        "translate": ""
+    },
+    {
+        "source": "For matches of `pat` within `self` that overlap, only the indices corresponding to the last match are returned.",
+        "suggest": "对于 `self` 中的 `pat` 重叠的匹配项，仅返回与最后一个匹配项对应的索引。",
+        "translate": ""
+    },
+    {
+        "source": "For iterating from the front, the [`match_indices`] method can be used.",
+        "suggest": "为了从正面进行迭代，可以使用 [`match_indices`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with leading and trailing whitespace removed.",
+        "suggest": "返回除去前导和尾随空格的字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with leading whitespace removed.",
+        "suggest": "返回除去前导空格的字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Text directionality",
+        "suggest": "文字方向性",
+        "translate": ""
+    },
+    {
+        "source": "A string is a sequence of bytes.",
+        "suggest": "字符串是字节序列。",
+        "translate": ""
+    },
+    {
+        "source": "in this context means the first position of that byte string;",
+        "suggest": "在本文中，是指该字节字符串的第一个位置;",
+        "translate": ""
+    },
+    {
+        "source": "for a left-to-right language like English or Russian, this will be left side, and for right-to-left languages like Arabic or Hebrew, this will be the right side.",
+        "suggest": "对于从左到右的语言 (例如英语或俄语)，这将是左侧; 对于从右到左的语言 (例如阿拉伯语或希伯来语)，这将是右侧。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with trailing whitespace removed.",
+        "suggest": "返回除去尾随空格的字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "in this context means the last position of that byte string;",
+        "suggest": "在本文中，是指该字节字符串的最后一个位置;",
+        "translate": ""
+    },
+    {
+        "source": "for a left-to-right language like English or Russian, this will be right side, and for right-to-left languages like Arabic or Hebrew, this will be the left side.",
+        "suggest": "对于从左到右的语言 (例如英语或俄语)，这将在右侧; 对于从右到左的语言 (例如阿拉伯语或希伯来语)，将在左侧。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with all prefixes and suffixes that match a pattern repeatedly removed.",
+        "suggest": "返回具有与重复删除的模式匹配的所有前缀和后缀的字符串片段。",
+        "translate": ""
+    },
+    {
+        "source": "The [pattern] can be a [`char`], a slice of [`char`]s, or a function or closure that determines if a character matches.",
+        "suggest": "[pattern] 可以是 [`char`]，可以是 [`char`s] 的切片，也可以是确定字符是否匹配的函数或闭包。",
+        "translate": ""
+    },
+    {
+        "source": "Remember earliest known match, correct it below if",
+        "suggest": "记住最早的已知比匹配，如果出现以下情况，请更正",
+        "translate": ""
+    },
+    {
+        "source": "last match is different",
+        "suggest": "最后一个匹配不一样",
+        "translate": ""
+    },
+    {
+        "source": "`Searcher` is known to return valid indices.",
+        "suggest": "已知 `Searcher` 返回有效索引。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with all prefixes that match a pattern repeatedly removed.",
+        "suggest": "返回字符串切片，该字符串切片的所有前缀都与重复删除的模式匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with the prefix removed.",
+        "suggest": "返回删除了前缀的字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "If the string starts with the pattern `prefix`, returns substring after the prefix, wrapped in `Some`.",
+        "suggest": "如果字符串以模式 `prefix` 开头，则返回前缀在 `Some` 中的子字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `trim_start_matches`, this method removes the prefix exactly once.",
+        "suggest": "与 `trim_start_matches` 不同，此方法只删除一次前缀。",
+        "translate": ""
+    },
+    {
+        "source": "If the string does not start with `prefix`, returns `None`.",
+        "suggest": "如果字符串不是以 `prefix` 开头，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with the suffix removed.",
+        "suggest": "返回删除了后缀的字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "If the string ends with the pattern `suffix`, returns the substring before the suffix, wrapped in `Some`.",
+        "suggest": "如果字符串以模式 `suffix` 结尾，则返回用 `Some` 包装的后缀之前的子字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `trim_end_matches`, this method removes the suffix exactly once.",
+        "suggest": "与 `trim_end_matches` 不同，此方法仅将后缀删除一次。",
+        "translate": ""
+    },
+    {
+        "source": "If the string does not end with `suffix`, returns `None`.",
+        "suggest": "如果字符串不以 `suffix` 结尾，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string slice with all suffixes that match a pattern repeatedly removed.",
+        "suggest": "返回一个字符串切片，该字符串具有与重复删除的模式匹配的所有后缀。",
+        "translate": ""
+    },
+    {
+        "source": "Parses this string slice into another type.",
+        "suggest": "将此字符串切片解析为另一种类型。",
+        "translate": ""
+    },
+    {
+        "source": "Because `parse` is so general, it can cause problems with type inference.",
+        "suggest": "由于 `parse` 非常通用，因此可能导致类型推断问题。",
+        "translate": ""
+    },
+    {
+        "source": "As such, `parse` is one of the few times you'll see the syntax affectionately known as the 'turbofish':",
+        "suggest": "因此，`parse` 是为数不多的被亲切地称为 'turbofish' 的语法之一:",
+        "translate": ""
+    },
+    {
+        "source": "This helps the inference algorithm understand specifically which type you're trying to parse into.",
+        "suggest": "这可以帮助推理算法特别了解您要解析为哪种类型。",
+        "translate": ""
+    },
+    {
+        "source": "can parse into any type that implements the [`FromStr`] trait.",
+        "suggest": "可以解析为实现 [`FromStr`] trait 的任何类型。",
+        "translate": ""
+    },
+    {
+        "source": "Will return [`Err`] if it's not possible to parse this string slice into the desired type.",
+        "suggest": "如果无法将此字符串切片解析为所需的类型，则将返回 [`Err`]。",
+        "translate": ""
+    },
+    {
+        "source": "Using the 'turbofish' instead of annotating `four`:",
+        "suggest": "使用 'turbofish' 而不是注解 `four`:",
+        "translate": ""
+    },
+    {
+        "source": "Failing to parse:",
+        "suggest": "无法解析:",
+        "translate": ""
+    },
+    {
+        "source": "Checks if all characters in this string are within the ASCII range.",
+        "suggest": "检查此字符串中的所有字符是否都在 ASCII 范围内。",
+        "translate": ""
+    },
+    {
+        "source": "We can treat each byte as character here: all multibyte characters start with a byte that is not in the ascii range, so we will stop there already.",
+        "suggest": "我们可以在这里将每个字节视为字符: 所有多字节字符都以一个不在 ascii 范围内的字节开头，因此我们将在此停止。",
+        "translate": ""
+    },
+    {
+        "source": "Checks that two strings are an ASCII case-insensitive match.",
+        "suggest": "检查两个字符串是否为 ASCII 不区分大小写的匹配项。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this string to its ASCII upper case equivalent in-place.",
+        "suggest": "将此字符串就地转换为其 ASCII 大写等效项。",
+        "translate": ""
+    },
+    {
+        "source": "safe because we transmute two types with the same layout.",
+        "suggest": "之所以安全，是因为我们用相同的布局转换了两种类型。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this string to its ASCII lower case equivalent in-place.",
+        "suggest": "将此字符串就地转换为其 ASCII 小写等效项。",
+        "translate": ""
+    },
+    {
+        "source": "Return an iterator that escapes each char in `self` with [`char::escape_debug`].",
+        "suggest": "返回一个迭代器，该迭代器使用 [`char::escape_debug`] 对 `self` 中的每个字符进行转义。",
+        "translate": ""
+    },
+    {
+        "source": "only extended grapheme codepoints that begin the string will be escaped.",
+        "suggest": "只有以字符串开头的扩展字素代码点将被转义。",
+        "translate": ""
+    },
+    {
+        "source": "Return an iterator that escapes each char in `self` with [`char::escape_default`].",
+        "suggest": "返回一个迭代器，该迭代器使用 [`char::escape_default`] 对 `self` 中的每个字符进行转义。",
+        "translate": ""
+    },
+    {
+        "source": "Return an iterator that escapes each char in `self` with [`char::escape_unicode`].",
+        "suggest": "返回一个迭代器，该迭代器使用 [`char::escape_unicode`] 对 `self` 中的每个字符进行转义。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty str",
+        "suggest": "创建一个空的 str",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty mutable str",
+        "suggest": "创建一个空的可变 str",
+        "translate": ""
+    },
+    {
+        "source": "The empty string is valid UTF-8.",
+        "suggest": "空字符串是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "A nameable, cloneable fn type",
+        "suggest": "可命名，可克隆的 fn 类型",
+        "translate": ""
+    },
+    {
+        "source": "not safe",
+        "suggest": "不安全",
+        "translate": ""
+    },
+    {
+        "source": "char pattern",
+        "suggest": "字符模式",
+        "translate": ""
+    },
+    {
+        "source": "slice of chars pattern",
+        "suggest": "切片的字符模式",
+        "translate": ""
+    },
+    {
+        "source": "closure pattern",
+        "suggest": "闭包模式",
+        "translate": ""
+    },
+    {
+        "source": "The string Pattern API.",
+        "suggest": "字符串模式 API。",
+        "translate": ""
+    },
+    {
+        "source": "The Pattern API provides a generic mechanism for using different pattern types when searching through a string.",
+        "suggest": "Pattern API 提供了泛型机制，用于在搜索字符串时使用不同的模式类型。",
+        "translate": ""
+    },
+    {
+        "source": "For more details, see the traits [`Pattern`], [`Searcher`], [`ReverseSearcher`], and [`DoubleEndedSearcher`].",
+        "suggest": "有关更多详细信息，请参见 traits [`Pattern`]，[`Searcher`]，[`ReverseSearcher`] 和 [`DoubleEndedSearcher`]。",
+        "translate": ""
+    },
+    {
+        "source": "Although this API is unstable, it is exposed via stable APIs on the [`str`] type.",
+        "suggest": "尽管此 API 不稳定，但是它通过 [`str`] 类型的稳定 API 公开。",
+        "translate": ""
+    },
+    {
+        "source": "is [implemented][pattern-impls] in the stable API for [`&str`][`str`], [`char`], slices of [`char`], and functions and closures implementing `FnMut(char) -> bool`.",
+        "suggest": "[`&str`][`str`]，[`char`]，[`char`] 的片段以及实现 `FnMut(char) -> bool` 的函数和闭包的稳定 API 中的 [implemented][pattern-impls]。",
+        "translate": ""
+    },
+    {
+        "source": "A string pattern.",
+        "suggest": "字符串模式。",
+        "translate": ""
+    },
+    {
+        "source": "A `Pattern<'a>` expresses that the implementing type can be used as a string pattern for searching in a [`&'a str`][str].",
+        "suggest": "`Pattern<'a>` 表示实现类型可以用作在 [`&'a str`][str] 中搜索的字符串模式。",
+        "translate": ""
+    },
+    {
+        "source": "For example, both `'a'` and `\"aa\"` are patterns that would match at index `1` in the string `\"baaaab\"`.",
+        "suggest": "例如，`'a'` 和 `\"aa\"` 都是在字符串 `\"baaaab\"` 中的索引 `1` 处匹配的模式。",
+        "translate": ""
+    },
+    {
+        "source": "The trait itself acts as a builder for an associated [`Searcher`] type, which does the actual work of finding occurrences of the pattern in a string.",
+        "suggest": "trait 本身充当关联的 [`Searcher`] 类型的构建器，该类型实际执行查找字符串中模式出现的实际工作。",
+        "translate": ""
+    },
+    {
+        "source": "Depending on the type of the pattern, the behaviour of methods like [`str::find`] and [`str::contains`] can change.",
+        "suggest": "根据模式的类型，诸如 [`str::find`] 和 [`str::contains`] 之类的方法的行为可能会改变。",
+        "translate": ""
+    },
+    {
+        "source": "The table below describes some of those behaviours.",
+        "suggest": "下表描述了其中一些行为。",
+        "translate": ""
+    },
+    {
+        "source": "Associated searcher for this pattern",
+        "suggest": "此模式的关联搜索者",
+        "translate": ""
+    },
+    {
+        "source": "Constructs the associated searcher from `self` and the `haystack` to search in.",
+        "suggest": "从 `self` 和 `haystack` 构造关联的搜索器以进行搜索。",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the pattern matches anywhere in the haystack",
+        "suggest": "检查模式是否与 haystack 中的任何位置匹配",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the pattern matches at the front of the haystack",
+        "suggest": "检查模式是否在 haystack 的前面匹配",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the pattern matches at the back of the haystack",
+        "suggest": "检查模式是否与 haystack 的背面匹配",
+        "translate": ""
+    },
+    {
+        "source": "Removes the pattern from the front of haystack, if it matches.",
+        "suggest": "如果匹配，则从 haystack 的正面删除图案。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the pattern from the back of haystack, if it matches.",
+        "suggest": "如果匹配，则从 haystack 的背面删除图案。",
+        "translate": ""
+    },
+    {
+        "source": "Result of calling [`Searcher::next()`] or [`ReverseSearcher::next_back()`].",
+        "suggest": "调用 [`Searcher::next()`] 或 [`ReverseSearcher::next_back()`] 的结果。",
+        "translate": ""
+    },
+    {
+        "source": "Expresses that a match of the pattern has been found at `haystack[a..b]`.",
+        "suggest": "表示已在 `haystack[a..b]` 找到匹配的模式。",
+        "translate": ""
+    },
+    {
+        "source": "Expresses that `haystack[a..b]` has been rejected as a possible match of the pattern.",
+        "suggest": "表示已拒绝 `haystack[a..b]` 作为该模式的可能匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Note that there might be more than one `Reject` between two `Match`es, there is no requirement for them to be combined into one.",
+        "suggest": "注意，两个 `Match` 之间可能有多个 `Reject`，不需要将它们组合为一个。",
+        "translate": ""
+    },
+    {
+        "source": "Expresses that every byte of the haystack has been visited, ending the iteration.",
+        "suggest": "表示已访问 haystack 的每个字节，从而结束了迭代。",
+        "translate": ""
+    },
+    {
+        "source": "A searcher for a string pattern.",
+        "suggest": "字符串模式的搜索者。",
+        "translate": ""
+    },
+    {
+        "source": "This trait provides methods for searching for non-overlapping matches of a pattern starting from the front (left) of a string.",
+        "suggest": "trait 提供了从字符串的开头 (left) 开始搜索模式的非重叠匹配的方法。",
+        "translate": ""
+    },
+    {
+        "source": "It will be implemented by associated `Searcher` types of the [`Pattern`] trait.",
+        "suggest": "将通过 [`Pattern`] trait 的关联 `Searcher` 类型实现。",
+        "translate": ""
+    },
+    {
+        "source": "The trait is marked unsafe because the indices returned by the [`next()`][Searcher::next] methods are required to lie on valid utf8 boundaries in the haystack.",
+        "suggest": "trait 被标记为不安全，因为 [`next()`][Searcher::next] 方法返回的索引必须位于 haystack 中的有效 utf8 边界上。",
+        "translate": ""
+    },
+    {
+        "source": "This enables consumers of this trait to slice the haystack without additional runtime checks.",
+        "suggest": "这使 trait 的使用者可以对 haystack 进行切片，而无需进行其他运行时检查。",
+        "translate": ""
+    },
+    {
+        "source": "Getter for the underlying string to be searched in",
+        "suggest": "Getter 查找要在其中搜索的基础字符串",
+        "translate": ""
+    },
+    {
+        "source": "Will always return the same [`&str`][str].",
+        "suggest": "总是返回相同的 [`&str`][str]。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the next search step starting from the front.",
+        "suggest": "从头开始执行下一个搜索步骤。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`Match(a, b)`][SearchStep::Match] if `haystack[a..b]` matches the pattern.",
+        "suggest": "如果 `haystack[a..b]` 与模式匹配，则返回 [`Match(a, b)`][SearchStep::Match]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`Reject(a, b)`][SearchStep::Reject] if `haystack[a..b]` can not match the pattern, even partially.",
+        "suggest": "如果 `haystack[a..b]` 甚至部分不匹配，则返回 [`Reject(a, b)`][SearchStep::Reject]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`Done`][SearchStep::Done] if every byte of the haystack has been visited.",
+        "suggest": "如果已访问 haystack 的每个字节，则返回 [`Done`][SearchStep::Done]。",
+        "translate": ""
+    },
+    {
+        "source": "The stream of [`Match`][SearchStep::Match] and [`Reject`][SearchStep::Reject] values up to a [`Done`][SearchStep::Done] will contain index ranges that are adjacent, non-overlapping, covering the whole haystack, and laying on utf8 boundaries.",
+        "suggest": "直到 [`Done`][SearchStep::Done] 的 [`Match`][SearchStep::Match] 和 [`Reject`][SearchStep::Reject] 值流将包含相邻，不重叠，覆盖整个 haystack 并位于 utf8 边界上的索引范围。",
+        "translate": ""
+    },
+    {
+        "source": "A [`Match`][SearchStep::Match] result needs to contain the whole matched pattern, however [`Reject`][SearchStep::Reject] results may be split up into arbitrary many adjacent fragments.",
+        "suggest": "[`Match`][SearchStep::Match] 结果需要包含整个匹配的模式，但是 [`Reject`][SearchStep::Reject] 结果可以分为任意多个相邻的片段。",
+        "translate": ""
+    },
+    {
+        "source": "Both ranges may have zero length.",
+        "suggest": "两个范围的长度都可以为零。",
+        "translate": ""
+    },
+    {
+        "source": "As an example, the pattern `\"aaa\"` and the haystack `\"cbaaaaab\"` might produce the stream",
+        "suggest": "例如，模式 `\"aaa\"` 和 haystack `\"cbaaaaab\"` 可能会产生流",
+        "translate": ""
+    },
+    {
+        "source": "Finds the next [`Match`][SearchStep::Match] result.",
+        "suggest": "查找下一个 [`Match`][SearchStep::Match] 结果。",
+        "translate": ""
+    },
+    {
+        "source": "See [`next()`][Searcher::next].",
+        "suggest": "请参见 [`next()`][Searcher::next]。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`next()`][Searcher::next], there is no guarantee that the returned ranges of this and [`next_reject`][Searcher::next_reject] will overlap.",
+        "suggest": "与 [`next()`][Searcher::next] 不同，不能保证此和 [`next_reject`][Searcher::next_reject] 的返回范围会重叠。",
+        "translate": ""
+    },
+    {
+        "source": "This will return `(start_match, end_match)`, where start_match is the index of where the match begins, and end_match is the index after the end of the match.",
+        "suggest": "这将返回 `(start_match, end_match)`，其中 start_match 是匹配开始的索引，end_match 是匹配结束后的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Finds the next [`Reject`][SearchStep::Reject] result.",
+        "suggest": "查找下一个 [`Reject`][SearchStep::Reject] 结果。",
+        "translate": ""
+    },
+    {
+        "source": "See [`next()`][Searcher::next] and [`next_match()`][Searcher::next_match].",
+        "suggest": "请参见 [`next()`][Searcher::next] 和 [`next_match()`][Searcher::next_match]。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`next()`][Searcher::next], there is no guarantee that the returned ranges of this and [`next_match`][Searcher::next_match] will overlap.",
+        "suggest": "与 [`next()`][Searcher::next] 不同，不能保证此和 [`next_match`][Searcher::next_match] 的返回范围会重叠。",
+        "translate": ""
+    },
+    {
+        "source": "A reverse searcher for a string pattern.",
+        "suggest": "反向搜索字符串模式。",
+        "translate": ""
+    },
+    {
+        "source": "This trait provides methods for searching for non-overlapping matches of a pattern starting from the back (right) of a string.",
+        "suggest": "trait 提供了从字符串的后 (right) 开始搜索模式的非重叠匹配的方法。",
+        "translate": ""
+    },
+    {
+        "source": "It will be implemented by associated [`Searcher`] types of the [`Pattern`] trait if the pattern supports searching for it from the back.",
+        "suggest": "如果该模式支持从背面搜索它，则将通过 [`Pattern`] trait 的关联 [`Searcher`] 类型实现。",
+        "translate": ""
+    },
+    {
+        "source": "The index ranges returned by this trait are not required to exactly match those of the forward search in reverse.",
+        "suggest": "trait 返回的索引范围不需要与反向搜索的正向搜索完全匹配。",
+        "translate": ""
+    },
+    {
+        "source": "For the reason why this trait is marked unsafe, see them parent trait [`Searcher`].",
+        "suggest": "由于该 trait 被标记为不安全的原因，请参见其父级 trait [`Searcher`]。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the next search step starting from the back.",
+        "suggest": "从背面开始执行下一个搜索步骤。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`Done`][SearchStep::Done] if every byte of the haystack has been visited",
+        "suggest": "如果已访问 haystack 的每个字节，则返回 [`Done`][SearchStep::Done]",
+        "translate": ""
+    },
+    {
+        "source": "As an example, the pattern `\"aaa\"` and the haystack `\"cbaaaaab\"` might produce the stream `[Reject(7, 8), Match(4, 7), Reject(1, 4), Reject(0, 1)]`.",
+        "suggest": "例如，模式 `\"aaa\"` 和 haystack `\"cbaaaaab\"` 可能会产生流 `[Reject(7, 8), Match(4, 7), Reject(1, 4), Reject(0, 1)]`。",
+        "translate": ""
+    },
+    {
+        "source": "See [`next_back()`][ReverseSearcher::next_back].",
+        "suggest": "请参见 [`next_back()`][ReverseSearcher::next_back]。",
+        "translate": ""
+    },
+    {
+        "source": "A marker trait to express that a [`ReverseSearcher`] can be used for a [`DoubleEndedIterator`] implementation.",
+        "suggest": "标记 trait 表示 [`ReverseSearcher`] 可用于 [`DoubleEndedIterator`] 实现。",
+        "translate": ""
+    },
+    {
+        "source": "For this, the impl of [`Searcher`] and [`ReverseSearcher`] need to follow these conditions:",
+        "suggest": "为此，[`Searcher`] 和 [`ReverseSearcher`] 的暗示需要遵循以下条件:",
+        "translate": ""
+    },
+    {
+        "source": "All results of `next()` need to be identical to the results of `next_back()` in reverse order.",
+        "suggest": "`next()` 的所有结果必须与 `next_back()` 的结果相反 (顺序相反)。",
+        "translate": ""
+    },
+    {
+        "source": "and `next_back()` need to behave as the two ends of a range of values, that is they can not \"walk past each other\".",
+        "suggest": "和 `next_back()` 需要表现为一个值范围的两端，也就是说它们不能 \"walk past each other\"。",
+        "translate": ""
+    },
+    {
+        "source": "is a `DoubleEndedSearcher` because searching for a [`char`] only requires looking at one at a time, which behaves the same from both ends.",
+        "suggest": "是 `DoubleEndedSearcher`，因为搜索 [`char`] 只需要一次查看一次，因此两端的行为相同。",
+        "translate": ""
+    },
+    {
+        "source": "is not a `DoubleEndedSearcher` because the pattern `\"aa\"` in the haystack `\"aaa\"` matches as either `\"[aa]a\"` or `\"a[aa]\"`, depending from which side it is searched.",
+        "suggest": "不是 `DoubleEndedSearcher`，因为 haystack `\"aaa\"` 中的模式 `\"aa\"` 匹配为 `\"[aa]a\"` 或 `\"a[aa]\"`，具体取决于从哪一侧搜索。",
+        "translate": ""
+    },
+    {
+        "source": "Impl for char",
+        "suggest": "字符的 Impl",
+        "translate": ""
+    },
+    {
+        "source": "Associated type for `<char as Pattern<'a>>::Searcher`.",
+        "suggest": "`<char as Pattern<'a>>::Searcher` 的关联类型。",
+        "translate": ""
+    },
+    {
+        "source": "safety invariant: `finger`/`finger_back` must be a valid utf8 byte index of `haystack` This invariant can be broken *within* next_match and next_match_back, however they must exit with fingers on valid code point boundaries.",
+        "suggest": "安全不可变变量: `finger`/`finger_back` 必须是 `haystack` 的有效 utf8 字节索引。可以在 *next_match 和 next_match_back 之内* 破坏该不可变变量，但是它们必须在有效的代码点边界上用手指退出。",
+        "translate": ""
+    },
+    {
+        "source": "is the current byte index of the forward search.",
+        "suggest": "是正向搜索的当前字节索引。",
+        "translate": ""
+    },
+    {
+        "source": "Imagine that it exists before the byte at its index, i.e.",
+        "suggest": "想象一下，它存在于其索引的字节之前，即",
+        "translate": ""
+    },
+    {
+        "source": "is the first byte of the slice we must inspect during forward searching",
+        "suggest": "是在向前搜索期间必须检查的切片的第一个字节",
+        "translate": ""
+    },
+    {
+        "source": "is the current byte index of the reverse search.",
+        "suggest": "是反向搜索的当前字节索引。",
+        "translate": ""
+    },
+    {
+        "source": "Imagine that it exists after the byte at its index, i.e.",
+        "suggest": "想象一下，它存在于其索引的字节之后，即",
+        "translate": ""
+    },
+    {
+        "source": "haystack[finger_back - 1] is the last byte of the slice we must inspect during forward searching (and thus the first byte to be inspected when calling next_back()).",
+        "suggest": "haystack [finger_back-1] 是在向前搜索期间必须检查的片的最后一个字节 (因此，在调用 next_back()) 时要检查的第一个字节)。",
+        "translate": ""
+    },
+    {
+        "source": "The character being searched for",
+        "suggest": "要搜索的字符",
+        "translate": ""
+    },
+    {
+        "source": "safety invariant: `utf8_size` must be less than 5",
+        "suggest": "安全不变式: `utf8_size` 必须小于 5",
+        "translate": ""
+    },
+    {
+        "source": "The number of bytes `needle` takes up when encoded in utf8.",
+        "suggest": "当用 utf8 编码时，`needle` 占用的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "A utf8 encoded copy of the `needle`",
+        "suggest": "`needle` 的 utf8 编码副本",
+        "translate": ""
+    },
+    {
+        "source": "1-4 guarantee safety of `get_unchecked`",
+        "suggest": "1-4 保证 `get_unchecked` 的安全",
+        "translate": ""
+    },
+    {
+        "source": "and `self.finger_back` are kept on unicode boundaries (this is invariant)",
+        "suggest": "和 `self.finger_back` 保持在 unicode 边界上 (这是不变的)",
+        "translate": ""
+    },
+    {
+        "source": "since it starts at 0 and only increases",
+        "suggest": "因为它从 0 开始并且仅增加",
+        "translate": ""
+    },
+    {
+        "source": "because otherwise the char `iter` would return `SearchStep::Done`",
+        "suggest": "因为否则 char `iter` 将返回 `SearchStep::Done`",
+        "translate": ""
+    },
+    {
+        "source": "comes before the end of the haystack because `self.finger_back` starts at the end and only decreases",
+        "suggest": "在 haystack 的末尾之前出现，因为 `self.finger_back` 在结尾处开始并且仅减少",
+        "translate": ""
+    },
+    {
+        "source": "add byte offset of current character without re-encoding as utf-8",
+        "suggest": "添加当前字符的字节偏移，而无需重新编码为 utf-8",
+        "translate": ""
+    },
+    {
+        "source": "get the haystack after the last character found",
+        "suggest": "找到最后一个字符后得到 haystack",
+        "translate": ""
+    },
+    {
+        "source": "the last byte of the utf8 encoded needle",
+        "suggest": "utf8 编码的指针的最后一个字节",
+        "translate": ""
+    },
+    {
+        "source": "we have an invariant that `utf8_size < 5`",
+        "suggest": "我们有一个不变的 `utf8_size < 5`",
+        "translate": ""
+    },
+    {
+        "source": "The new finger is the index of the byte we found, plus one, since we memchr'd for the last byte of the character.",
+        "suggest": "新手指是我们找到的字节的索引加一个，因为我们对字符的最后一个字节进行了记忆。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this doesn't always give us a finger on a UTF8 boundary.",
+        "suggest": "请注意，这并不总是使我们能够了解 UTF8 的边界。",
+        "translate": ""
+    },
+    {
+        "source": "If we *didn't* find our character we may have indexed to the non-last byte of a 3-byte or 4-byte character.",
+        "suggest": "如果没有找到我们的字符，我们可能已经索引到 3 字节或 4 字节字符的非最后一个字节。",
+        "translate": ""
+    },
+    {
+        "source": "We can't just skip to the next valid starting byte because a character like ꁁ (U+A041 YI SYLLABLE PA), utf-8 `EA 81 81` will have us always find the second byte when searching for the third.",
+        "suggest": "我们不能只跳到下一个有效的起始字节，因为像ꁁ (U+A041 YI SYLLABLE PA)，utf-8 `EA 81 81` 这样的字符将使我们在搜索第三个字节时总是找到第二个字节。",
+        "translate": ""
+    },
+    {
+        "source": "However, this is totally okay.",
+        "suggest": "但是，这完全可以。",
+        "translate": ""
+    },
+    {
+        "source": "While we have the invariant that self.finger is on a UTF8 boundary, this invariant is not relied upon within this method (it is relied upon in CharSearcher::next()).",
+        "suggest": "尽管我们拥有 self.finger 在 UTF8 边界上的不变式，但此方法不依赖该不变式 (在 CharSearcher::next () 中依赖该不变式)。",
+        "translate": ""
+    },
+    {
+        "source": "We only exit this method when we reach the end of the string, or if we find something.",
+        "suggest": "仅当到达字符串末尾或找到某些内容时，才退出此方法。",
+        "translate": ""
+    },
+    {
+        "source": "When we find something the `finger` will be set to a UTF8 boundary.",
+        "suggest": "当我们发现某些东西时，`finger` 将被设置为 UTF8 边界。",
+        "translate": ""
+    },
+    {
+        "source": "found nothing, exit",
+        "suggest": "一无所获，退出",
+        "translate": ""
+    },
+    {
+        "source": "let next_reject use the default implementation from the Searcher trait",
+        "suggest": "让 next_reject 使用搜索器 trait 的默认实现",
+        "translate": ""
+    },
+    {
+        "source": "see the comment for next() above",
+        "suggest": "请参见上面的 next() 注释",
+        "translate": ""
+    },
+    {
+        "source": "subtract byte offset of current character without re-encoding as utf-8",
+        "suggest": "减去当前字符的字节偏移，而无需重新编码为 utf-8",
+        "translate": ""
+    },
+    {
+        "source": "get the haystack up to but not including the last character searched",
+        "suggest": "使 haystack 达到但不包括搜索到的最后一个字符",
+        "translate": ""
+    },
+    {
+        "source": "we searched a slice that was offset by self.finger, add self.finger to recoup the original index",
+        "suggest": "我们搜索了被 self.finger 偏移的切片，添加 self.finger 以补偿原始索引",
+        "translate": ""
+    },
+    {
+        "source": "memrchr will return the index of the byte we wish to find.",
+        "suggest": "memrchr 将返回我们希望找到的字节的索引。",
+        "translate": ""
+    },
+    {
+        "source": "In case of an ASCII character, this is indeed were we wish our new finger to be (\"after\" the found char in the paradigm of reverse iteration).",
+        "suggest": "如果是 ASCII 字符，这确实是我们希望的新手指 (\"after\" 是反向迭代范式中找到的 char)。",
+        "translate": ""
+    },
+    {
+        "source": "For multibyte chars we need to skip down by the number of more bytes they have than ASCII",
+        "suggest": "对于多字节字符，我们需要跳过的字节数比 ASCII 多",
+        "translate": ""
+    },
+    {
+        "source": "move finger to before the character found (i.e., at its start index)",
+        "suggest": "将手指移到找到的字符之前 (即，在其起始索引处)",
+        "translate": ""
+    },
+    {
+        "source": "We can't use finger_back = index - size + 1 here.",
+        "suggest": "我们不能在这里使用 finger_back=index-size + 1。",
+        "translate": ""
+    },
+    {
+        "source": "If we found the last char of a different-sized character (or the middle byte of a different character) we need to bump the finger_back down to `index`.",
+        "suggest": "如果找到不同大小字符的最后一个字符 (或不同字符的中间字节)，则需要将 finger_back 降低到 `index`。",
+        "translate": ""
+    },
+    {
+        "source": "This similarly makes `finger_back` have the potential to no longer be on a boundary, but this is OK since we only exit this function on a boundary or when the haystack has been searched completely.",
+        "suggest": "同样，这使 `finger_back` 不再有可能位于边界上，但这是可以的，因为我们仅在边界上或在完全搜索 haystack 时退出此函数。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike next_match this does not have the problem of repeated bytes in utf-8 because we're searching for the last byte, and we can only have found the last byte when searching in reverse.",
+        "suggest": "与 next_match 不同，这不存在 utf-8 中重复字节的问题，因为我们正在搜索最后一个字节，并且仅当反向搜索时才可以找到最后一个字节。",
+        "translate": ""
+    },
+    {
+        "source": "let next_reject_back use the default implementation from the Searcher trait",
+        "suggest": "让 next_reject_back 使用 Searcher trait 中的默认实现",
+        "translate": ""
+    },
+    {
+        "source": "Searches for chars that are equal to a given [`char`].",
+        "suggest": "搜索等于给定 [`char`] 的字符。",
+        "translate": ""
+    },
+    {
+        "source": "Impl for a MultiCharEq wrapper",
+        "suggest": "用于 MultiCharEq 包装器的 Impl",
+        "translate": ""
+    },
+    {
+        "source": "Compare lengths of the internal byte slice iterator to find length of current char",
+        "suggest": "比较内部字节切片迭代器的长度以找到当前 char 的长度",
+        "translate": ""
+    },
+    {
+        "source": "Impl for &[char]",
+        "suggest": "&[char] 的 Impl",
+        "translate": ""
+    },
+    {
+        "source": "Change / Remove due to ambiguity in meaning.",
+        "suggest": "由于含糊不清，请更改 / 删除。",
+        "translate": ""
+    },
+    {
+        "source": "Associated type for `<&[char] as Pattern<'a>>::Searcher`.",
+        "suggest": "`<&[char] as Pattern<'a>>::Searcher` 的关联类型。",
+        "translate": ""
+    },
+    {
+        "source": "Searches for chars that are equal to any of the [`char`]s in the slice.",
+        "suggest": "搜索等于切片中任何 [`char`] s 的字符。",
+        "translate": ""
+    },
+    {
+        "source": "Associated type for `<F as Pattern<'a>>::Searcher`.",
+        "suggest": "`<F as Pattern<'a>>::Searcher` 的关联类型。",
+        "translate": ""
+    },
+    {
+        "source": "Searches for [`char`]s that match the given predicate.",
+        "suggest": "搜索与给定谓词匹配的 [`char`]。",
+        "translate": ""
+    },
+    {
+        "source": "Delegates to the `&str` impl.",
+        "suggest": "委托给 `&str` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "Impl for &str",
+        "suggest": "&str 的 Impl",
+        "translate": ""
+    },
+    {
+        "source": "Non-allocating substring search.",
+        "suggest": "非分配子字符串搜索。",
+        "translate": ""
+    },
+    {
+        "source": "Will handle the pattern `\"\"` as returning empty matches at each character boundary.",
+        "suggest": "将模式 `\"\"` 处理为在每个字符边界处返回空匹配项。",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the pattern matches at the front of the haystack.",
+        "suggest": "检查模式在 haystack 的前面是否匹配。",
+        "translate": ""
+    },
+    {
+        "source": "prefix was just verified to exist.",
+        "suggest": "前缀刚刚被验证为存在。",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the pattern matches at the back of the haystack.",
+        "suggest": "检查模式是否与 haystack 的背面匹配。",
+        "translate": ""
+    },
+    {
+        "source": "suffix was just verified to exist.",
+        "suggest": "后缀刚刚被验证为存在。",
+        "translate": ""
+    },
+    {
+        "source": "Two Way substring searcher",
+        "suggest": "两路子串搜索器",
+        "translate": ""
+    },
+    {
+        "source": "Associated type for `<&str as Pattern<'a>>::Searcher`.",
+        "suggest": "`<&str as Pattern<'a>>::Searcher` 的关联类型。",
+        "translate": ""
+    },
+    {
+        "source": "empty needle rejects every char and matches every empty string between them",
+        "suggest": "空针拒绝每个字符并匹配它们之间的每个空字符串",
+        "translate": ""
+    },
+    {
+        "source": "TwoWaySearcher produces valid *Match* indices that split at char boundaries as long as it does correct matching and that haystack and needle are valid UTF-8 *Rejects* from the algorithm can fall on any indices, but we will walk them manually to the next character boundary, so that they are utf-8 safe.",
+        "suggest": "TwoWaySearcher 会产生有效的 *Match* 索引，只要它能够正确匹配，并且在 char 边界处分割，并且 haystack 和 needle 是有效的 UTF-8 *Rejects* 可以落入任何索引，但是我们将手动将它们移至下一个字符边界，以便它们是 utf-8 安全的。",
+        "translate": ""
+    },
+    {
+        "source": "skip to next char boundary",
+        "suggest": "跳到下一个字符边界",
+        "translate": ""
+    },
+    {
+        "source": "write out `true` and `false` cases to encourage the compiler to specialize the two cases separately.",
+        "suggest": "写出 `true` 和 `false` 的情况，以鼓励编译器分别专门处理这两种情况。",
+        "translate": ""
+    },
+    {
+        "source": "write out `true` and `false`, like `next_match`",
+        "suggest": "写出 `true` 和 `false`，例如 `next_match`",
+        "translate": ""
+    },
+    {
+        "source": "The internal state of the two-way substring search algorithm.",
+        "suggest": "双向子字符串搜索算法的内部状态。",
+        "translate": ""
+    },
+    {
+        "source": "critical factorization index",
+        "suggest": "临界分解指数",
+        "translate": ""
+    },
+    {
+        "source": "critical factorization index for reversed needle",
+        "suggest": "倒针的临界分解指数",
+        "translate": ""
+    },
+    {
+        "source": "is an extension (not part of the two way algorithm);",
+        "suggest": "是扩展 (不是双向算法的一部分) ;",
+        "translate": ""
+    },
+    {
+        "source": "it's a 64-bit \"fingerprint\" where each set bit `j` corresponds to a (byte & 63) == j present in the needle.",
+        "suggest": "它是一个 64 位 \"fingerprint\"，其中每个设置位 `j` 对应于针中存在的 (字节 & 63) == j。",
+        "translate": ""
+    },
+    {
+        "source": "index into needle before which we have already matched",
+        "suggest": "索引到我们已经匹配过的针",
+        "translate": ""
+    },
+    {
+        "source": "index into needle after which we have already matched",
+        "suggest": "索引到针之后，我们已经匹配了",
+        "translate": ""
+    },
+    {
+        "source": "A particularly readable explanation of what's going on here can be found in Crochemore and Rytter's book \"Text Algorithms\", ch 13.",
+        "suggest": "关于发生的事情的特别可读的解释可以在 Crochemore 和 Rytter 的书 \"Text Algorithms\"，第 13 章中找到。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically see the code for \"Algorithm CP\" on p.",
+        "suggest": "具体请参见第 40 页的 \"Algorithm CP\" 的代码。",
+        "translate": ""
+    },
+    {
+        "source": "What's going on is we have some critical factorization (u, v) of the needle, and we want to determine whether u is a suffix of &v[..period].",
+        "suggest": "这是怎么回事，我们有一些关键的因数分解 (u，v)，我们想确定 u 是否为 & v [.. period] 的后缀。",
+        "translate": ""
+    },
+    {
+        "source": "If it is, we use \"Algorithm CP1\".",
+        "suggest": "如果是这样，我们使用 \"Algorithm CP1\"。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise we use \"Algorithm CP2\", which is optimized for when the period of the needle is large.",
+        "suggest": "否则，我们将使用 \"Algorithm CP2\"，这是针对针的周期较大而优化的。",
+        "translate": ""
+    },
+    {
+        "source": "short period case -- the period is exact compute a separate critical factorization for the reversed needle x = u' v' where |v'| < period(x).",
+        "suggest": "短期情况下-周期是精确的，需要为倒针 x=u'v' 计算一个单独的临界分解，其中 | v'|<period(x)。",
+        "translate": ""
+    },
+    {
+        "source": "This is sped up by the period being known already.",
+        "suggest": "已知时期加快了这一进程。",
+        "translate": ""
+    },
+    {
+        "source": "Note that a case like x = \"acba\" may be factored exactly forwards (crit_pos = 1, period = 3) while being factored with approximate period in reverse (crit_pos = 2, period = 2).",
+        "suggest": "请注意，x= \"acba\" 之类的情况可以正好分解为因数 (crit_pos=1，期间 = 3)，而可以由近似的逆向因数 (crit_pos=2，期间 = 2) 进行分解。",
+        "translate": ""
+    },
+    {
+        "source": "We use the given reverse factorization but keep the exact period.",
+        "suggest": "我们使用给定的逆因式分解，但要保留精确的周期。",
+        "translate": ""
+    },
+    {
+        "source": "long period case -- we have an approximation to the actual period, and don't use memorization.",
+        "suggest": "长期情况 - 我们近似于实际时间，请勿使用记忆。",
+        "translate": ""
+    },
+    {
+        "source": "Approximate the period by lower bound max(|u|, |v|) + 1.",
+        "suggest": "用下限 `max(|u|, |v|) + 1` 估算周期。",
+        "translate": ""
+    },
+    {
+        "source": "The critical factorization is efficient to use for both forward and reverse search.",
+        "suggest": "临界分解有效地用于正向搜索和反向搜索。",
+        "translate": ""
+    },
+    {
+        "source": "Dummy value to signify that the period is long",
+        "suggest": "虚拟值表示周期长",
+        "translate": ""
+    },
+    {
+        "source": "One of the main ideas of Two-Way is that we factorize the needle into two halves, (u, v), and begin trying to find v in the haystack by scanning left to right.",
+        "suggest": "`Two-Way` 的主要思想之一是，我们将针分解成两半 (u，v)，然后开始尝试通过从左到右扫描在 haystack 中查找 v。",
+        "translate": ""
+    },
+    {
+        "source": "If v matches, we try to match u by scanning right to left.",
+        "suggest": "如果 v 匹配，我们尝试通过从右到左扫描来匹配 u。",
+        "translate": ""
+    },
+    {
+        "source": "How far we can jump when we encounter a mismatch is all based on the fact that (u, v) is a critical factorization for the needle.",
+        "suggest": "当我们遇到不匹配时，我们可以跳多远，这全都基于以下事实: (u，v) 是针的关键分解因数。",
+        "translate": ""
+    },
+    {
+        "source": "uses `self.position` as its cursor",
+        "suggest": "使用 `self.position` 作为它的游标",
+        "translate": ""
+    },
+    {
+        "source": "Check that we have room to search in position + needle_last can not overflow if we assume slices are bounded by isize's range.",
+        "suggest": "如果我们假设切片以 isize 的范围为边界，请检查我们在位置上是否有空间可以搜索 + needle_last 不会溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Quickly skip by large portions unrelated to our substring",
+        "suggest": "快速跳过与子字符串无关的大部分内容",
+        "translate": ""
+    },
+    {
+        "source": "See if the right part of the needle matches",
+        "suggest": "看看针的右边是否匹配",
+        "translate": ""
+    },
+    {
+        "source": "See if the left part of the needle matches",
+        "suggest": "看看针头的左部分是否匹配",
+        "translate": ""
+    },
+    {
+        "source": "We have found a match!",
+        "suggest": "我们找到了一个匹配!",
+        "translate": ""
+    },
+    {
+        "source": "add self.period instead of needle.len() to have overlapping matches",
+        "suggest": "添加 `self.period` 而不是 `needle.len()` 以具有重叠的匹配项",
+        "translate": ""
+    },
+    {
+        "source": "set to needle.len() - self.period for overlapping matches",
+        "suggest": "设置为 `needle.len() - self.period` 进行重叠匹配",
+        "translate": ""
+    },
+    {
+        "source": "Follows the ideas in `next()`.",
+        "suggest": "遵循 `next()` 中的思想。",
+        "translate": ""
+    },
+    {
+        "source": "The definitions are symmetrical, with period(x) = period(reverse(x)) and local_period(u, v) = local_period(reverse(v), reverse(u)), so if (u, v) is a critical factorization, so is (reverse(v),",
+        "suggest": "这些定义是对称的，其中 period(x) = period(reverse(x)) 且 local_period(u, v) = local_period(reverse(v)，reverse(u))，因此，如果 (u，v) 是关键分解，则 (reverse(v) 也是，",
+        "translate": ""
+    },
+    {
+        "source": "For the reverse case we have computed a critical factorization x = u' v' (field `crit_pos_back`).",
+        "suggest": "对于相反的情况，我们已经计算出临界分解系数 x=u'v' (字段 `crit_pos_back`)。",
+        "translate": ""
+    },
+    {
+        "source": "We need |u| < period(x) for the forward case and thus |v'| < period(x) for the reverse.",
+        "suggest": "我们需要 `|u| < period(x)` 对于前移情况，因此 `|v'| < period(x)` 反之。",
+        "translate": ""
+    },
+    {
+        "source": "To search in reverse through the haystack, we search forward through a reversed haystack with a reversed needle, matching first u' and then v'.",
+        "suggest": "为了通过 haystack 反向搜索，我们通过带有反向针的反向 haystack 向前搜索，首先匹配 u'，然后匹配 v'。",
+        "translate": ""
+    },
+    {
+        "source": "uses `self.end` as its cursor -- so that `next()` and `next_back()` are independent.",
+        "suggest": "使用 `self.end` 作为它的游标 - `next()` 和 `next_back()` 是独立的。",
+        "translate": ""
+    },
+    {
+        "source": "Check that we have room to search in end - needle.len() will wrap around when there is no more room, but due to slice length limits it can never wrap all the way back into the length of haystack.",
+        "suggest": "检查我们是否有余地可以搜索 - needle.len() 在没有更多空间时会回绕，但是由于切片长度的限制，它永远无法回绕到 haystack 的长度。",
+        "translate": ""
+    },
+    {
+        "source": "sub self.period instead of needle.len() to have overlapping matches",
+        "suggest": "子 self.period 而不是 needle.len() 具有重叠的匹配项",
+        "translate": ""
+    },
+    {
+        "source": "Compute the maximal suffix of `arr`.",
+        "suggest": "计算 `arr` 的最大后缀。",
+        "translate": ""
+    },
+    {
+        "source": "The maximal suffix is a possible critical factorization (u, v) of `arr`.",
+        "suggest": "最大后缀是 `arr` 的可能的关键因式分解 (u，v)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns (`i`, `p`) where `i` is the starting index of v and `p` is the period of v.",
+        "suggest": "返回 (`i`，`p`) 其中 `i` 是 v 的起始索引，`p` 是 v 的周期。",
+        "translate": ""
+    },
+    {
+        "source": "determines if lexical order is `<` or `>`.",
+        "suggest": "确定词法顺序是 `<` 还是 `>`。",
+        "translate": ""
+    },
+    {
+        "source": "Both orders must be computed -- the ordering with the largest `i` gives a critical factorization.",
+        "suggest": "必须计算两个阶数 - `i` 最大的阶数给出了关键的因式分解。",
+        "translate": ""
+    },
+    {
+        "source": "For long period cases, the resulting period is not exact (it is too short).",
+        "suggest": "对于长时间的情况，结果周期不精确 (太短)。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to i in the paper",
+        "suggest": "对应论文中的 i",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to j in the paper",
+        "suggest": "对应论文 j",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to k in the paper, but starting at 0",
+        "suggest": "对应于论文中的 k，但从 0 开始",
+        "translate": ""
+    },
+    {
+        "source": "to match 0-based indexing.",
+        "suggest": "匹配基于 0 的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Corresponds to p in the paper",
+        "suggest": "对应于论文中的 p",
+        "translate": ""
+    },
+    {
+        "source": "will be inbounds when `right` is.",
+        "suggest": "当 `right` 是时，将入站。",
+        "translate": ""
+    },
+    {
+        "source": "Suffix is smaller, period is entire prefix so far.",
+        "suggest": "后缀较小，到目前为止是整个前缀。",
+        "translate": ""
+    },
+    {
+        "source": "Advance through repetition of the current period.",
+        "suggest": "通过重复当前期间前进。",
+        "translate": ""
+    },
+    {
+        "source": "Suffix is larger, start over from current location.",
+        "suggest": "后缀较大，请从当前位置重新开始。",
+        "translate": ""
+    },
+    {
+        "source": "Compute the maximal suffix of the reverse of `arr`.",
+        "suggest": "计算 `arr` 倒数的最大后缀。",
+        "translate": ""
+    },
+    {
+        "source": "The maximal suffix is a possible critical factorization (u', v') of `arr`.",
+        "suggest": "最大后缀是 `arr` 的可能的关键因式分解 (u'，v')。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `i` where `i` is the starting index of v', from the back;",
+        "suggest": "从后面返回 `i`，其中 `i` 是 v' 的起始索引;",
+        "translate": ""
+    },
+    {
+        "source": "returns immediately when a period of `known_period` is reached.",
+        "suggest": "到达 `known_period` 周期时立即返回。",
+        "translate": ""
+    },
+    {
+        "source": "TwoWayStrategy allows the algorithm to either skip non-matches as quickly as possible, or to work in a mode where it emits Rejects relatively quickly.",
+        "suggest": "TwoWayStrategy 允许该算法尽可能快地跳过不匹配项，或者以相对较快地发出 `reject` 的模式下工作。",
+        "translate": ""
+    },
+    {
+        "source": "Skip to match intervals as quickly as possible",
+        "suggest": "跳过以尽快匹配间隔",
+        "translate": ""
+    },
+    {
+        "source": "Emit Rejects regularly",
+        "suggest": "定期发出拒绝",
+        "translate": ""
+    },
+    {
+        "source": "these will panic:",
+        "suggest": "这些将是 panic:",
+        "translate": ""
+    },
+    {
+        "source": "byte 2 lies within `ö`:",
+        "suggest": "字节 2 位于 `ö` 内:",
+        "translate": ""
+    },
+    {
+        "source": "byte 100 is outside the string &s[3 ..",
+        "suggest": "字节 100 在字符串 &s[3 之外。",
+        "translate": ""
+    },
+    {
+        "source": "Trait implementations for `str`.",
+        "suggest": "`str` 的 Trait 实现。",
+        "translate": ""
+    },
+    {
+        "source": "Implements ordering of strings.",
+        "suggest": "实现字符串排序。",
+        "translate": ""
+    },
+    {
+        "source": "Strings are ordered  [lexicographically](Ord#lexicographical-comparison) by their byte values.",
+        "suggest": "字符串按字节值按 [lexicographically](Ord#lexicographical-comparison) 排序。",
+        "translate": ""
+    },
+    {
+        "source": "This orders Unicode code points based on their positions in the code charts.",
+        "suggest": "这将根据 Unicode 代码点在代码图中的位置进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "This is not necessarily the same as \"alphabetical\" order, which varies by language and locale.",
+        "suggest": "这不一定与 \"alphabetical\" 顺序相同，后者因语言和区域设置而异。",
+        "translate": ""
+    },
+    {
+        "source": "Sorting strings according to culturally-accepted standards requires locale-specific data that is outside the scope of the `str` type.",
+        "suggest": "根据文化认可的标准对字符串进行排序需要 `str` 类型的作用域之外的特定于语言环境的数据。",
+        "translate": ""
+    },
+    {
+        "source": "Implements comparison operations on strings.",
+        "suggest": "对字符串执行比较操作。",
+        "translate": ""
+    },
+    {
+        "source": "Strings are compared [lexicographically](Ord#lexicographical-comparison) by their byte values.",
+        "suggest": "[lexicographically](Ord#lexicographical-comparison) 通过字符串的字节值对字符串进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "This compares Unicode code points based on their positions in the code charts.",
+        "suggest": "这将根据 Unicode 代码点在代码表中的位置进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "Comparing strings according to culturally-accepted standards requires locale-specific data that is outside the scope of the `str` type.",
+        "suggest": "根据文化认可的标准比较字符串需要特定于语言环境的数据，该数据不在 `str` 类型的作用域之内。",
+        "translate": ""
+    },
+    {
+        "source": "Implements substring slicing with syntax `&self[..]` or `&mut self[..]`.",
+        "suggest": "使用语法 `&self[..]` 或 `&mut self[..]` 实现子字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the whole string, i.e., returns `&self` or `&mut self`.",
+        "suggest": "返回整个字符串的片段，即返回 `&self` 或 `&mut self`。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self[0 ..",
+        "suggest": "相当于 `&self[0 ..",
+        "translate": ""
+    },
+    {
+        "source": "len]` or `&mut self[0 ..",
+        "suggest": "len]` 或 `&mut self[0 ..",
+        "translate": ""
+    },
+    {
+        "source": "Unlike other indexing operations, this can never panic.",
+        "suggest": "与其他索引操作不同，此操作永远不能 panic。",
+        "translate": ""
+    },
+    {
+        "source": "This operation is *O*(1).",
+        "suggest": "此运算为 *O*(1)。",
+        "translate": ""
+    },
+    {
+        "source": "Prior to 1.20.0, these indexing operations were still supported by direct implementation of `Index` and `IndexMut`.",
+        "suggest": "在 1.20.0 之前，`Index` 和 `IndexMut` 的直接实现仍支持这些索引操作。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self[0 .. len]` or `&mut self[0 .. len]`.",
+        "suggest": "等效于 `&self[0 .. len]` 或 `&mut self[0 .. len]`。",
+        "translate": ""
+    },
+    {
+        "source": "Implements substring slicing with syntax `&self[begin .. end]` or `&mut self[begin .. end]`.",
+        "suggest": "使用语法 `&self[begin .. end]` 或 `&mut self[begin .. end]` 实现子字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range [`begin`, `end`).",
+        "suggest": "从字节范围 [`begin，`end`) 返回给定字符串的片段。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `begin` or `end` does not point to the starting byte offset of a character (as defined by `is_char_boundary`), if `begin > end`, or if `end > len`.",
+        "suggest": "如果 `begin` 或 `end` 未指向字符的起始字节偏移量 (由 `is_char_boundary` 定义)，`begin > end` 或 `end > len`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "just checked that `start` and `end` are on a char boundary, and we are passing in a safe reference, so the return value will also be one.",
+        "suggest": "刚刚检查了 `start` 和 `end` 是否在 char 边界上，并且我们传入了安全的引用，因此返回值也将为 1。",
+        "translate": ""
+    },
+    {
+        "source": "We also checked char boundaries, so this is valid UTF-8.",
+        "suggest": "我们还检查了字符边界，因此这是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "just checked that `start` and `end` are on a char boundary.",
+        "suggest": "刚刚检查 `start` 和 `end` 是否在字符边界上。",
+        "translate": ""
+    },
+    {
+        "source": "We know the pointer is unique because we got it from `slice`.",
+        "suggest": "我们知道指针是唯一的，因为我们是从 `slice` 获得的。",
+        "translate": ""
+    },
+    {
+        "source": "the caller guarantees that `self` is in bounds of `slice` which satisfies all the conditions for `add`.",
+        "suggest": "调用方保证 `self` 在 `slice` 的范围内，该范围满足 `add` 的所有条件。",
+        "translate": ""
+    },
+    {
+        "source": "see comments for `get_unchecked`.",
+        "suggest": "请参见 `get_unchecked` 的注释。",
+        "translate": ""
+    },
+    {
+        "source": "is_char_boundary checks that the index is in [0, .len()] cannot reuse `get` as above, because of NLL trouble",
+        "suggest": "is_char_boundary 由于 NLL 问题而无法检查索引是否位于 [0, .len()] 中，因此无法如上所述重用 `get`",
+        "translate": ""
+    },
+    {
+        "source": "Implements substring slicing with syntax `&self[.. end]` or `&mut self[.. end]`.",
+        "suggest": "使用语法 `&self[.. end]` 或 `&mut self[.. end]` 实现子字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range [`0`, `end`).",
+        "suggest": "从字节范围 [`0`，`end`) 返回给定字符串的片段。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self[0 .. end]` or `&mut self[0 .. end]`.",
+        "suggest": "等效于 `&self[0 .. end]` 或 `&mut self[0 .. end]`。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `end` does not point to the starting byte offset of a character (as defined by `is_char_boundary`), or if `end > len`.",
+        "suggest": "如果 `end` 没有指向字符的起始字节偏移量 (由 `is_char_boundary` 定义)，或者 `end > len`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "just checked that `end` is on a char boundary, and we are passing in a safe reference, so the return value will also be one.",
+        "suggest": "刚刚检查了 `end` 是否在 char 边界上，并且我们传递了一个安全的引用，因此返回值也将为 1。",
+        "translate": ""
+    },
+    {
+        "source": "Implements substring slicing with syntax `&self[begin ..]` or `&mut self[begin ..]`.",
+        "suggest": "使用语法 `&self[begin ..]` 或 `&mut self[begin ..]` 实现子字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range [`begin`, `len`).",
+        "suggest": "从字节范围 [`begin，`len`) 返回给定字符串的片段。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self[begin ..",
+        "suggest": "等同于 `&self[begin ..",
+        "translate": ""
+    },
+    {
+        "source": "len]` or `&mut self[begin ..",
+        "suggest": "len]` 或 `&mut self[begin ..",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `begin` does not point to the starting byte offset of a character (as defined by `is_char_boundary`), or if `begin > len`.",
+        "suggest": "如果 `begin` 没有指向字符的起始字节偏移量 (由 `is_char_boundary` 定义)，或者 `begin > len`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "just checked that `start` is on a char boundary, and we are passing in a safe reference, so the return value will also be one.",
+        "suggest": "刚刚检查了 `start` 是否在 char 边界上，并且我们传递了一个安全的引用，因此返回值也将为 1。",
+        "translate": ""
+    },
+    {
+        "source": "identical to `get_unchecked`.",
+        "suggest": "与 `get_unchecked` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "Implements substring slicing with syntax `&self[begin ..= end]` or `&mut self[begin ..= end]`.",
+        "suggest": "使用语法 `&self[begin ..= end]` 或 `&mut self[begin ..= end]` 实现子字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range [`begin`, `end`].",
+        "suggest": "从字节范围 [`begin`, `end`] 返回给定字符串的片段。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self [begin .. end + 1]` or `&mut self[begin .. end + 1]`, except if `end` has the maximum value for `usize`.",
+        "suggest": "等效于 `&self [begin .. end + 1]` 或 `&mut self[begin .. end + 1]`，除非 `end` 具有 `usize` 的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `begin` does not point to the starting byte offset of a character (as defined by `is_char_boundary`), if `end` does not point to the ending byte offset of a character (`end + 1` is either a starting byte offset or equal to `len`), if `begin > end`, or if `end >= len`.",
+        "suggest": "Panics，如果 `begin` 不指向字符的起始字节偏移 (由 `is_char_boundary` 定义)，如果 `end` 不指向字符的终止字节偏移 (`end + 1` 是起始字节偏移或等于 `len`)，如果 `begin > end`，如果是 `end >= len`。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `get_unchecked`.",
+        "suggest": "调用者必须坚持 `get_unchecked` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `get_unchecked_mut`.",
+        "suggest": "调用者必须坚持 `get_unchecked_mut` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Implements substring slicing with syntax `&self[..= end]` or `&mut self[..= end]`.",
+        "suggest": "使用语法 `&self[..= end]` 或 `&mut self[..= end]` 实现子字符串切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range [0, `end`].",
+        "suggest": "从字节范围 [0, `end`] 返回给定字符串的片段。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self [0 .. end + 1]`, except if `end` has the maximum value for `usize`.",
+        "suggest": "等效于 `&self [0 .. end + 1]`，除非 `end` 具有 `usize` 的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `end` does not point to the ending byte offset of a character (`end + 1` is either a starting byte offset as defined by `is_char_boundary`, or equal to `len`), or if `end >= len`.",
+        "suggest": "如果 `end` 没有指向字符的结束字节偏移量 (`end + 1` 是 `is_char_boundary` 定义的起始字节偏移量，或者等于 `len`)，或者如果 `end >= len`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Parse a value from a string",
+        "suggest": "解析字符串中的值",
+        "translate": ""
+    },
+    {
+        "source": "`FromStr`'s [`from_str`] method is often used implicitly, through [`str`]'s [`parse`] method.",
+        "suggest": "FromStr 的 [`from_str`] 方法通常通过 [`str`] 的 [`parse`] 方法隐式使用。",
+        "translate": ""
+    },
+    {
+        "source": "See [`parse`]'s documentation for examples.",
+        "suggest": "有关示例，请参见 [`parse`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "does not have a lifetime parameter, and so you can only parse types that do not contain a lifetime parameter themselves.",
+        "suggest": "没有生命周期参数，因此您只能解析本身不包含生命周期参数的类型。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, you can parse an `i32` with `FromStr`, but not a `&i32`.",
+        "suggest": "换句话说，您可以使用 `FromStr` 解析 `i32`，但是不能解析 `&i32`。",
+        "translate": ""
+    },
+    {
+        "source": "You can parse a struct that contains an `i32`, but not one that contains an `&i32`.",
+        "suggest": "您可以解析包含 `i32` 的结构体，但不能解析包含 `&i32` 的结构体。",
+        "translate": ""
+    },
+    {
+        "source": "Basic implementation of `FromStr` on an example `Point` type:",
+        "suggest": "`FromStr` 在示例 `Point` 类型上的基本实现:",
+        "translate": ""
+    },
+    {
+        "source": "The associated error which can be returned from parsing.",
+        "suggest": "可以从解析中返回的相关错误。",
+        "translate": ""
+    },
+    {
+        "source": "Parses a string `s` to return a value of this type.",
+        "suggest": "解析字符串 `s` 以返回此类型的值。",
+        "translate": ""
+    },
+    {
+        "source": "If parsing succeeds, return the value inside [`Ok`], otherwise when the string is ill-formatted return an error specific to the inside [`Err`].",
+        "suggest": "如果解析成功，则返回 [`Ok`] 内部的值，否则，当字符串格式错误时，返回特定于 [`Err`] 内部的错误。",
+        "translate": ""
+    },
+    {
+        "source": "The error type is specific to implementation of the trait.",
+        "suggest": "错误类型特定于 trait 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage with [`i32`], a type that implements `FromStr`:",
+        "suggest": "[`i32`] 的基本用法，一种实现 `FromStr` 的类型:",
+        "translate": ""
+    },
+    {
+        "source": "Parse a `bool` from a string.",
+        "suggest": "从字符串中解析 `bool`。",
+        "translate": ""
+    },
+    {
+        "source": "Yields a `Result<bool, ParseBoolError>`, because `s` may or may not actually be parseable.",
+        "suggest": "产生 `Result<bool, ParseBoolError>`，因为 `s` 实际上可以解析，也可以不解析。",
+        "translate": ""
+    },
+    {
+        "source": "Note, in many cases, the `.parse()` method on `str` is more proper.",
+        "suggest": "注意，在许多情况下，`str` 上的 `.parse()` 方法更合适。",
+        "translate": ""
+    },
+    {
+        "source": "Operations related to UTF-8 validation.",
+        "suggest": "与 UTF-8 验证有关的操作。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the initial codepoint accumulator for the first byte.",
+        "suggest": "返回第一个字节的初始代码点累加器。",
+        "translate": ""
+    },
+    {
+        "source": "The first byte is special, only want bottom 5 bits for width 2, 4 bits for width 3, and 3 bits for width 4.",
+        "suggest": "第一个字节是特殊的，宽度 2 的最低 5 位，宽度 3 的 4 位，宽度 4 的 3 位。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the value of `ch` updated with continuation byte `byte`.",
+        "suggest": "返回用连续字节 `byte` 更新的 `ch` 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the byte is a UTF-8 continuation byte (i.e., starts with the bits `10`).",
+        "suggest": "检查该字节是否是 UTF-8 连续字节 (即，从 `10` 位开始)。",
+        "translate": ""
+    },
+    {
+        "source": "Reads the next code point out of a byte iterator (assuming a UTF-8-like encoding).",
+        "suggest": "从字节迭代器中读取下一个代码点 (假定类似 UTF-8 的编码)。",
+        "translate": ""
+    },
+    {
+        "source": "Decode UTF-8",
+        "suggest": "解码 UTF-8",
+        "translate": ""
+    },
+    {
+        "source": "Multibyte case follows Decode from a byte combination out of: [[[x y] z] w]",
+        "suggest": "从以下字节组合中解码出多字节大小写: [[[x y] z] w]",
+        "translate": ""
+    },
+    {
+        "source": "Performance is sensitive to the exact formulation here",
+        "suggest": "性能对此处的确切公式很敏感",
+        "translate": ""
+    },
+    {
+        "source": "5th bit in 0xE0 ..",
+        "suggest": "0xE0 中的第 5 位..",
+        "translate": ""
+    },
+    {
+        "source": "0xEF is always clear, so `init` is still valid",
+        "suggest": "0xEF 始终是透明的，因此 `init` 仍然有效",
+        "translate": ""
+    },
+    {
+        "source": "case use only the lower 3 bits of `init`",
+        "suggest": "情况下仅使用 `init` 的低 3 位",
+        "translate": ""
+    },
+    {
+        "source": "Reads the last code point out of a byte iterator (assuming a UTF-8-like encoding).",
+        "suggest": "从字节迭代器中读取最后一个代码点 (假定类似 UTF-8 的编码)。",
+        "translate": ""
+    },
+    {
+        "source": "Multibyte case follows Decode from a byte combination out of:",
+        "suggest": "从以下字节组合解码出多字节大小写:",
+        "translate": ""
+    },
+    {
+        "source": "use truncation to fit u64 into usize",
+        "suggest": "使用截断以使 u64 适应 usize",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if any byte in the word `x` is nonascii (>= 128).",
+        "suggest": "如果单词 `x` 中的任何字节为 nonascii (>=128)，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Walks through `v` checking that it's a valid UTF-8 sequence, returning `Ok(())` in that case, or, if it is invalid,",
+        "suggest": "遍历 `v` 并检查其是否为有效的 UTF-8 序列，在这种情况下返回 `Ok(())`，或者如果无效，则返回 `Ok(())`",
+        "translate": ""
+    },
+    {
+        "source": "we needed data, but there was none: error!",
+        "suggest": "我们需要数据，但没有数据: 错误!",
+        "translate": ""
+    },
+    {
+        "source": "2-byte encoding is for codepoints  \\u{0080} to  \\u{07ff} first  C2 80        last DF BF",
+        "suggest": "2 字节编码用于代码点 \\u{0080} 至 \\u{07ff} 首先 C2 80 最后 DF BF",
+        "translate": ""
+    },
+    {
+        "source": "3-byte encoding is for codepoints  \\u{0800} to  \\u{ffff} first  E0 A0 80     last EF BF BF excluding surrogates codepoints  \\u{d800} to  \\u{dfff} ED A0 80 to       ED BF BF",
+        "suggest": "3 字节编码适用于 \\u {0800} 至 \\u {ffff} 的代码点，第一个 E0 A0 80 最后一个 EF BF BF，不包括替代代码点 \\u {d800} 至 \\u {dfff} ED A0 80 到 ED BF BF",
+        "translate": ""
+    },
+    {
+        "source": "4-byte encoding is for codepoints \\u{1000}0 to \\u{10ff}ff first  F0 90 80 80  last F4 8F BF BF",
+        "suggest": "4 字节编码用于 \\u {1000} 0 到 \\u {10ff} ff 的代码点第一个 F0 90 80 80 最后一个 F4 8F BF BF",
+        "translate": ""
+    },
+    {
+        "source": "Use the UTF-8 syntax from the RFC",
+        "suggest": "使用 RFC 中的 UTF-8 语法",
+        "translate": ""
+    },
+    {
+        "source": "Ascii case, try to skip forward quickly.",
+        "suggest": "ASCII 的情况下，请尝试快速跳过。",
+        "translate": ""
+    }
+]

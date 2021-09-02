@@ -1,0 +1,5002 @@
+[
+    {
+        "source": "In this example, you can see that `Cell<T>` enables mutation inside an immutable struct.",
+        "suggest": "在此示例中，您可以看到 `Cell<T>` 启用了不可变结构体内部的可变的。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, it enables \"interior mutability\".",
+        "suggest": "换句话说，它实现了内部可变性。",
+        "translate": ""
+    },
+    {
+        "source": "See the [module-level documentation](self) for more.",
+        "suggest": "有关更多信息，请参见 [module-level documentation](self)。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `Cell<T>`, with the `Default` value for T.",
+        "suggest": "创建一个 `Cell<T>`，其 T 值为 `Default`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `Cell` containing the given value.",
+        "suggest": "创建一个包含给定值的新 `Cell`。",
+        "translate": ""
+    },
+    {
+        "source": "Sets the contained value.",
+        "suggest": "设置包含的值。",
+        "translate": ""
+    },
+    {
+        "source": "Swaps the values of two Cells.",
+        "suggest": "交换两个 Cell 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Difference with `std::mem::swap` is that this function doesn't require `&mut` reference.",
+        "suggest": "与 `std::mem::swap` 的区别在于此函数不需要 `&mut` 引用。",
+        "translate": ""
+    },
+    {
+        "source": "This can be risky if called from separate threads, but `Cell` is `!Sync` so this won't happen.",
+        "suggest": "如果从单独的线程中调用，可能会有风险，但是 `Cell` 是 `!Sync`，因此不会发生。",
+        "translate": ""
+    },
+    {
+        "source": "This also won't invalidate any pointers since `Cell` makes sure nothing else will be pointing into either of these `Cell`s.",
+        "suggest": "这也不会使任何指针无效，因为 `Cell` 确保没有其他指针指向这些 `Cell` 中的任何一个。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces the contained value with `val`, and returns the old contained value.",
+        "suggest": "用 `val` 替换包含的值，并返回旧的包含值。",
+        "translate": ""
+    },
+    {
+        "source": "This can cause data races if called from a separate thread, but `Cell` is `!Sync` so this won't happen.",
+        "suggest": "如果从单独的线程中调用，则可能导致数据竞争，但是 `Cell` 是 `!Sync`，因此不会发生。",
+        "translate": ""
+    },
+    {
+        "source": "Unwraps the value.",
+        "suggest": "取消包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of the contained value.",
+        "suggest": "返回所包含值的副本。",
+        "translate": ""
+    },
+    {
+        "source": "Updates the contained value using a function and returns the new value.",
+        "suggest": "使用函数更新包含的值并返回新值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a raw pointer to the underlying data in this cell.",
+        "suggest": "返回此 cell 中基础数据的裸指针。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the underlying data.",
+        "suggest": "返回对基础数据的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "This call borrows `Cell` mutably (at compile-time) which guarantees that we possess the only reference.",
+        "suggest": "这个调用借用 `Cell` 是可变的 (在编译时)，这保证了我们拥有唯一的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a `&Cell<T>` from a `&mut T`",
+        "suggest": "从 `&mut T` 返回 `&Cell<T>`",
+        "translate": ""
+    },
+    {
+        "source": "`&mut` ensures unique access.",
+        "suggest": "`&mut` 确保唯一访问。",
+        "translate": ""
+    },
+    {
+        "source": "Takes the value of the cell, leaving `Default::default()` in its place.",
+        "suggest": "获取 cell 的值，将 `Default::default()` 保留在其位置。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a `&[Cell<T>]` from a `&Cell<[T]>`",
+        "suggest": "从 `&Cell<[T]>` 返回 `&[Cell<T>]`",
+        "translate": ""
+    },
+    {
+        "source": "`Cell<T>` has the same memory layout as `T`.",
+        "suggest": "`Cell<T>` 具有与 `T` 相同的内存布局。",
+        "translate": ""
+    },
+    {
+        "source": "A mutable memory location with dynamically checked borrow rules",
+        "suggest": "具有动态检查借用规则的可变内存位置",
+        "translate": ""
+    },
+    {
+        "source": "An error returned by [`RefCell::try_borrow`].",
+        "suggest": "[`RefCell::try_borrow`] 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "An error returned by [`RefCell::try_borrow_mut`].",
+        "suggest": "[`RefCell::try_borrow_mut`] 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Positive values represent the number of `Ref` active.",
+        "suggest": "正值表示 `Ref` 有效的数量。",
+        "translate": ""
+    },
+    {
+        "source": "Negative values represent the number of `RefMut` active.",
+        "suggest": "负值表示 `RefMut` 活动的数量。",
+        "translate": ""
+    },
+    {
+        "source": "Multiple `RefMut`s can only be active at a time if they refer to distinct, nonoverlapping components of a `RefCell` (e.g., different ranges of a slice).",
+        "suggest": "如果多个 `RefMut` 引用 `RefCell` 的不同，不重叠的组件 (例如，切片的不同范围)，则一次只能处于活动状态。",
+        "translate": ""
+    },
+    {
+        "source": "and `RefMut` are both two words in size, and so there will likely never be enough `Ref`s or `RefMut`s in existence to overflow half of the `usize` range.",
+        "suggest": "和 `RefMut` 都是两个字，因此可能不会有足够的 `Ref` 或 `RefMut` 来溢出 `usize` 范围的一半。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, a `BorrowFlag` will probably never overflow or underflow.",
+        "suggest": "因此，`BorrowFlag` 可能永远不会上溢或下溢。",
+        "translate": ""
+    },
+    {
+        "source": "However, this is not a guarantee, as a pathological program could repeatedly create and then mem::forget `Ref`s or `RefMut`s.",
+        "suggest": "但是，这并不是保证，因为 pathological 程序可能会反复创建，然后 mem::forget Ref 或 `RefMut`。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, all code must explicitly check for overflow and underflow in order to avoid unsafety, or at least behave correctly in the event that overflow or underflow happens (e.g., see BorrowRef::new).",
+        "suggest": "因此，所有代码都必须显式检查上溢和下溢，以避免不安全，或者至少在发生上溢或下溢的情况下正确运行 (例如，参见 BorrowRef::new)。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `RefCell` containing `value`.",
+        "suggest": "创建一个包含 `value` 的新 `RefCell`。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes the `RefCell`, returning the wrapped value.",
+        "suggest": "消耗 `RefCell`，返回包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "Since this function takes `self` (the `RefCell`) by value, the compiler statically verifies that it is not currently borrowed.",
+        "suggest": "由于此函数按值取 `self` (`RefCell`)，因此编译器将静态验证其当前未借用。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces the wrapped value with a new one, returning the old value, without deinitializing either one.",
+        "suggest": "将包装的值替换为新的值，并返回老的值，而无需对其中一个进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "This function corresponds to [`std::mem::replace`](../mem/fn.replace.html).",
+        "suggest": "该函数对应于 [`std::mem::replace`](../mem/fn.replace.html)。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the value is currently borrowed.",
+        "suggest": "如果当前的值是借来的，就会出现 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces the wrapped value with a new one computed from `f`, returning the old value, without deinitializing either one.",
+        "suggest": "用从 `f` 计算出的新值替换包装后的值，并返回旧值，而无需对这两个值进行任何初始化。",
+        "translate": ""
+    },
+    {
+        "source": "Swaps the wrapped value of `self` with the wrapped value of `other`, without deinitializing either one.",
+        "suggest": "将 `self` 的包装值与 `other` 的包装值交换，而无需对其中之一进行初始化。",
+        "translate": ""
+    },
+    {
+        "source": "This function corresponds to [`std::mem::swap`](../mem/fn.swap.html).",
+        "suggest": "该函数对应于 [`std::mem::swap`](../mem/fn.swap.html)。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the value in either `RefCell` is currently borrowed.",
+        "suggest": "如果当前借用了任一 `RefCell` 中的值，则会出现 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Immutably borrows the wrapped value.",
+        "suggest": "不变地借用包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "The borrow lasts until the returned `Ref` exits scope.",
+        "suggest": "借用一直持续到返回的 `Ref` 退出角色域为止。",
+        "translate": ""
+    },
+    {
+        "source": "Multiple immutable borrows can be taken out at the same time.",
+        "suggest": "可以同时取出多个不可变借用。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the value is currently mutably borrowed.",
+        "suggest": "如果值当前是可变借用的，则出现 panic。",
+        "translate": ""
+    },
+    {
+        "source": "For a non-panicking variant, use [`try_borrow`](#method.try_borrow).",
+        "suggest": "对于没有 panic 的成员，请使用 [`try_borrow`](#method.try_borrow)。",
+        "translate": ""
+    },
+    {
+        "source": "An example of panic:",
+        "suggest": "panic 的示例:",
+        "translate": ""
+    },
+    {
+        "source": "Immutably borrows the wrapped value, returning an error if the value is currently mutably borrowed.",
+        "suggest": "不可变地借用包装的值，如果当前可变地借用该值，则返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "This is the non-panicking variant of [`borrow`](#method.borrow).",
+        "suggest": "这是 [`borrow`](#method.borrow) 的没有 panic 的成员。",
+        "translate": ""
+    },
+    {
+        "source": "`BorrowRef` ensures that there is only immutable access to the value while borrowed.",
+        "suggest": "`BorrowRef` 确保借用时只能不可变地访问该值。",
+        "translate": ""
+    },
+    {
+        "source": "Mutably borrows the wrapped value.",
+        "suggest": "可以借用包装的值。",
+        "translate": ""
+    },
+    {
+        "source": "The borrow lasts until the returned `RefMut` or all `RefMut`s derived from it exit scope.",
+        "suggest": "借用一直持续到返回的 `RefMut` 或从中衍生的所有 `RefMut` 退出作用域为止。",
+        "translate": ""
+    },
+    {
+        "source": "The value cannot be borrowed while this borrow is active.",
+        "suggest": "该借用处于活动状态时，不能借用该值。",
+        "translate": ""
+    },
+    {
+        "source": "For a non-panicking variant, use [`try_borrow_mut`](#method.try_borrow_mut).",
+        "suggest": "对于没有 panic 的成员，请使用 [`try_borrow_mut`](#method.try_borrow_mut)。",
+        "translate": ""
+    },
+    {
+        "source": "Mutably borrows the wrapped value, returning an error if the value is currently borrowed.",
+        "suggest": "可变地借用包装的值，如果当前借用该值，则返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "This is the non-panicking variant of [`borrow_mut`](#method.borrow_mut).",
+        "suggest": "这是 [`borrow_mut`](#method.borrow_mut) 的没有 panic 的成员。",
+        "translate": ""
+    },
+    {
+        "source": "`BorrowRef` guarantees unique access.",
+        "suggest": "`BorrowRef` 保证唯一访问。",
+        "translate": ""
+    },
+    {
+        "source": "This call borrows `RefCell` mutably (at compile-time) so there is no need for dynamic checks.",
+        "suggest": "该调用借用 `RefCell` 是可变的 (在编译时)，因此不需要动态检查。",
+        "translate": ""
+    },
+    {
+        "source": "However be cautious: this method expects `self` to be mutable, which is generally not the case when using a `RefCell`.",
+        "suggest": "但是要小心: 此方法期望 `self` 是可变的，使用 `RefCell` 时通常不是这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Take a look at the [`borrow_mut`] method instead if `self` isn't mutable.",
+        "suggest": "如果 `self` 不是可变的，请查看 [`borrow_mut`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Also, please be aware that this method is only for special circumstances and is usually not what you want.",
+        "suggest": "另外，请注意，此方法仅适用于特殊情况，通常不是您想要的。",
+        "translate": ""
+    },
+    {
+        "source": "In case of doubt, use [`borrow_mut`] instead.",
+        "suggest": "如有疑问，请改用 [`borrow_mut`]。",
+        "translate": ""
+    },
+    {
+        "source": "Undo the effect of leaked guards on the borrow state of the `RefCell`.",
+        "suggest": "撤消泄漏的守卫对 `RefCell` 借用状态的影响。",
+        "translate": ""
+    },
+    {
+        "source": "This call is similar to [`get_mut`] but more specialized.",
+        "suggest": "该调用与 [`get_mut`] 相似，但更加专业。",
+        "translate": ""
+    },
+    {
+        "source": "It borrows `RefCell` mutably to ensure no borrows exist and then resets the state tracking shared borrows.",
+        "suggest": "它借用 `RefCell` 以确保不存在借用，然后重置状态跟踪共享借用。",
+        "translate": ""
+    },
+    {
+        "source": "This is relevant if some `Ref` or `RefMut` borrows have been leaked.",
+        "suggest": "如果某些 `Ref` 或 `RefMut` 借用已泄漏，则这是相关的。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `RefCell::borrow`, this method is unsafe because it does not return a `Ref`, thus leaving the borrow flag untouched.",
+        "suggest": "与 `RefCell::borrow` 不同，此方法是不安全的，因为它不返回 `Ref`，从而使借用标志保持不变。",
+        "translate": ""
+    },
+    {
+        "source": "Mutably borrowing the `RefCell` while the reference returned by this method is alive is undefined behaviour.",
+        "suggest": "当此方法返回的引用仍然有效时，借用 `RefCell` 是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "We check that nobody is actively writing now, but it is the caller's responsibility to ensure that nobody writes until the returned reference is no longer in use.",
+        "suggest": "我们检查现在没有人在主动写入，但是调用者有责任确保没有人写入，直到返回的引用不再使用。",
+        "translate": ""
+    },
+    {
+        "source": "Also, `self.value.get()` refers to the value owned by `self` and is thus guaranteed to be valid for the lifetime of `self`.",
+        "suggest": "同样，`self.value.get()` 是指 `self` 拥有的值，因此可以保证对于 `self` 的生命周期有效。",
+        "translate": ""
+    },
+    {
+        "source": "Takes the wrapped value, leaving `Default::default()` in its place.",
+        "suggest": "获取包装的值，将 `Default::default()` 留在其位置。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `RefCell<T>`, with the `Default` value for T.",
+        "suggest": "创建一个 `RefCell<T>`，其 T 值为 `Default`。",
+        "translate": ""
+    },
+    {
+        "source": "Incrementing borrow can result in a non-reading value (<= 0) in these cases:",
+        "suggest": "在以下情况下，增加借用可能会导致未读值 (<= 0):",
+        "translate": ""
+    },
+    {
+        "source": "It was < 0, i.e. there are writing borrows, so we can't allow a read borrow due to Rust's reference aliasing rules",
+        "suggest": "它小于 0，即正在写借用，因此由于 Rust 的引用别名规则，我们不允许读取借用",
+        "translate": ""
+    },
+    {
+        "source": "It was isize::MAX (the max amount of reading borrows) and it overflowed into isize::MIN (the max amount of writing borrows) so we can't allow an additional read borrow because isize can't represent so many read borrows (this can only happen if you mem::forget more than a small constant amount of `Ref`s, which is not good practice)",
+        "suggest": "它是 isize::MAX (最大读取借用量)，并且溢出到 isize::MIN (最大写入借用量) 中，因此我们不允许额外的读取借用，因为 isize 不能表示那么多读取借用 (这只能在以下情况下发生: 您的 mem::forget 大于常量的少量常量，这不是很好的做法)",
+        "translate": ""
+    },
+    {
+        "source": "Incrementing borrow can result in a reading value (> 0) in these cases:",
+        "suggest": "在以下情况下，增加借用可能会导致读取值 (> 0) :",
+        "translate": ""
+    },
+    {
+        "source": "It was = 0, i.e. it wasn't borrowed, and we are taking the first read borrow",
+        "suggest": "它是 = 0，即它不是借来的，我们正在获取第一个 read 借用",
+        "translate": ""
+    },
+    {
+        "source": "It was > 0 and < isize::MAX, i.e.",
+        "suggest": "它是 > 0 且 < isize::MAX，即",
+        "translate": ""
+    },
+    {
+        "source": "there were read borrows, and isize is large enough to represent having one more read borrow",
+        "suggest": "有 read 借用，并且 isize 足够大，可以代表再有一次 read 借用",
+        "translate": ""
+    },
+    {
+        "source": "Since this Ref exists, we know the borrow flag is a reading borrow.",
+        "suggest": "由于该 Ref 存在，因此我们知道借用标志是 reading 借用。",
+        "translate": ""
+    },
+    {
+        "source": "Prevent the borrow counter from overflowing into a writing borrow.",
+        "suggest": "防止借用计数器溢出到 writing 借用中。",
+        "translate": ""
+    },
+    {
+        "source": "Wraps a borrowed reference to a value in a `RefCell` box.",
+        "suggest": "在 `RefCell` box 中将借用的引用括起来。",
+        "translate": ""
+    },
+    {
+        "source": "A wrapper type for an immutably borrowed value from a `RefCell<T>`.",
+        "suggest": "从 `RefCell<T>` 不变借来的值的包装器类型。",
+        "translate": ""
+    },
+    {
+        "source": "Copies a `Ref`.",
+        "suggest": "复制 `Ref`。",
+        "translate": ""
+    },
+    {
+        "source": "The `RefCell` is already immutably borrowed, so this cannot fail.",
+        "suggest": "`RefCell` 已经被不可改变地借用了，因此这不会失败。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `Ref::clone(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `Ref::clone(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "A `Clone` implementation or a method would interfere with the widespread use of `r.borrow().clone()` to clone the contents of a `RefCell`.",
+        "suggest": "`Clone` 的实现或方法将干扰 `r.borrow().clone()` 的广泛使用，以克隆 `RefCell` 的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a new `Ref` for a component of the borrowed data.",
+        "suggest": "为借用数据的组件制作新的 `Ref`。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `Ref::map(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `Ref::map(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "A method would interfere with methods of the same name on the contents of a `RefCell` used through `Deref`.",
+        "suggest": "方法会干扰通过 `Deref` 使用的 `RefCell` 内容中的同名方法。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a new `Ref` for an optional component of the borrowed data.",
+        "suggest": "为借用数据的可选组件制作新的 `Ref`。",
+        "translate": ""
+    },
+    {
+        "source": "The original guard is returned as an `Err(..)` if the closure returns `None`.",
+        "suggest": "如果闭包返回 `None`，则原始守卫将作为 `Err(..)` 返回。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `Ref::filter_map(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `Ref::filter_map(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "Splits a `Ref` into multiple `Ref`s for different components of the borrowed data.",
+        "suggest": "将 `Ref` 拆分为多个 `Ref`，以用于借用数据的不同组成部分。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `Ref::map_split(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `Ref::map_split(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "Convert into a reference to the underlying data.",
+        "suggest": "转换为对基础数据的引用。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying `RefCell` can never be mutably borrowed from again and will always appear already immutably borrowed.",
+        "suggest": "底层的 `RefCell` 永远不会再被可变借用，并且总是看起来已经是不可更改的借用。",
+        "translate": ""
+    },
+    {
+        "source": "It is not a good idea to leak more than a constant number of references.",
+        "suggest": "泄漏超过一定数量的引用不是一个好主意。",
+        "translate": ""
+    },
+    {
+        "source": "The `RefCell` can be immutably borrowed again if only a smaller number of leaks have occurred in total.",
+        "suggest": "如果总共只发生了少量的泄漏，则可以再次借用 `RefCell`。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `Ref::leak(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `Ref::leak(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "By forgetting this Ref we ensure that the borrow counter in the RefCell can't go back to UNUSED within the lifetime `'b`.",
+        "suggest": "通过忘记此引用，我们确保 RefCell 中的借用计数器不会返回到生命周期 `'b` 中的未使用状态。",
+        "translate": ""
+    },
+    {
+        "source": "Resetting the reference tracking state would require a unique reference to the borrowed RefCell.",
+        "suggest": "重置引用跟踪状态将需要对借用的 RefCell 进行唯一引用。",
+        "translate": ""
+    },
+    {
+        "source": "No further mutable references can be created from the original cell.",
+        "suggest": "无法从原始 cell 创建更多的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a new `RefMut` for a component of the borrowed data, e.g., an enum variant.",
+        "suggest": "为借用数据的一部分 (例如枚举成员) 创建一个新的 `RefMut`。",
+        "translate": ""
+    },
+    {
+        "source": "The `RefCell` is already mutably borrowed, so this cannot fail.",
+        "suggest": "`RefCell` 已经是可变借用的，因此这不会失败。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `RefMut::map(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `RefMut::map(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "fix borrow-check",
+        "suggest": "修复借用检查",
+        "translate": ""
+    },
+    {
+        "source": "Makes a new `RefMut` for an optional component of the borrowed data.",
+        "suggest": "为借用数据的可选组件制作新的 `RefMut`。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `RefMut::filter_map(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `RefMut::filter_map(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "function holds onto an exclusive reference for the duration of its call through `orig`, and the pointer is only de-referenced inside of the function call never allowing the exclusive reference to escape.",
+        "suggest": "在通过 `orig` 进行调用的过程中，函数将保留排他引用，并且仅在函数调用内部取消对指针的引用，而永不允许对排他引用进行转义。",
+        "translate": ""
+    },
+    {
+        "source": "Splits a `RefMut` into multiple `RefMut`s for different components of the borrowed data.",
+        "suggest": "将 `RefMut` 拆分为多个 `RefMut`，以用于借用数据的不同组成部分。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying `RefCell` will remain mutably borrowed until both returned `RefMut`s go out of scope.",
+        "suggest": "底层 `RefCell` 将保持可变借用状态，直到两个返回的 RefMut 离开作用域。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `RefMut::map_split(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `RefMut::map_split(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "Convert into a mutable reference to the underlying data.",
+        "suggest": "转换为基础数据的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying `RefCell` can not be borrowed from again and will always appear already mutably borrowed, making the returned reference the only to the interior.",
+        "suggest": "基础 `RefCell` 不能再次借用，并且总是看起来已经可变地借用了，从而使返回的引用成为内部的唯一方法。",
+        "translate": ""
+    },
+    {
+        "source": "This is an associated function that needs to be used as `RefMut::leak(...)`.",
+        "suggest": "这是一个关联函数，需要用作 `RefMut::leak(...)`。",
+        "translate": ""
+    },
+    {
+        "source": "By forgetting this BorrowRefMut we ensure that the borrow counter in the RefCell can't go back to UNUSED within the lifetime `'b`.",
+        "suggest": "通过忘记此 BorrowRefMut，我们确保 RefCell 中的借用计数器不能在生命周期 `'b` 内返回未使用状态。",
+        "translate": ""
+    },
+    {
+        "source": "No further references can be created from the original cell within that lifetime, making the current borrow the only reference for the remaining lifetime.",
+        "suggest": "无法从该生命周期内的原始 cell 中创建更多引用，从而使当前借用成为剩余生命周期的唯一引用。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike BorrowRefMut::clone, new is called to create the initial mutable reference, and so there must currently be no existing references.",
+        "suggest": "与 BorrowRefMut::clone 不同，调用 new 来创建初始变量引用，因此当前必须不存在引用。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, while clone increments the mutable refcount, here we explicitly only allow going from UNUSED to UNUSED - 1.",
+        "suggest": "因此，尽管克隆增加了可变引用计数，但在这里我们明确只允许从 UNUSED 到 UNUSED-1。",
+        "translate": ""
+    },
+    {
+        "source": "Clones a `BorrowRefMut`.",
+        "suggest": "克隆 `BorrowRefMut`。",
+        "translate": ""
+    },
+    {
+        "source": "This is only valid if each `BorrowRefMut` is used to track a mutable reference to a distinct, nonoverlapping range of the original object.",
+        "suggest": "仅当每个 `BorrowRefMut` 用于跟踪变量引用到原始对象的不同的，不重叠的范围时，此方法才有效。",
+        "translate": ""
+    },
+    {
+        "source": "This isn't in a Clone impl so that code doesn't call this implicitly.",
+        "suggest": "这不在 Clone 隐含中，因此代码不会隐式调用此代码。",
+        "translate": ""
+    },
+    {
+        "source": "Prevent the borrow counter from underflowing.",
+        "suggest": "防止借用计数器下溢。",
+        "translate": ""
+    },
+    {
+        "source": "A wrapper type for a mutably borrowed value from a `RefCell<T>`.",
+        "suggest": "从 `RefCell<T>` 可变借来的值的包装器类型。",
+        "translate": ""
+    },
+    {
+        "source": "The core primitive for interior mutability in Rust.",
+        "suggest": "Rust 中内部可变性的核心原语。",
+        "translate": ""
+    },
+    {
+        "source": "If you have a reference `&T`, then normally in Rust the compiler performs optimizations based on the knowledge that `&T` points to immutable data.",
+        "suggest": "如果您使用的是 `&T`，则通常在 Rust 中，编译器基于 `&T` 指向不可变数据的知识来执行优化。",
+        "translate": ""
+    },
+    {
+        "source": "Mutating that data, for example through an alias or by transmuting an `&T` into an `&mut T`, is considered undefined behavior.",
+        "suggest": "例如通过别名或通过将 `&T` 转换为 `&mut T` 来可变的该数据，被认为是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "opts-out of the immutability guarantee for `&T`: a shared reference `&UnsafeCell<T>` may point to data that is being mutated.",
+        "suggest": "选择不使用 `&T` 的不可替代保证: 共享的 `&UnsafeCell<T>` 可能指向正在可变的的数据。",
+        "translate": ""
+    },
+    {
+        "source": "This is called \"interior mutability\".",
+        "suggest": "这称为内部可变性。",
+        "translate": ""
+    },
+    {
+        "source": "All other types that allow internal mutability, such as `Cell<T>` and `RefCell<T>`, internally use `UnsafeCell` to wrap their data.",
+        "suggest": "所有其他允许内部可变性的类型 (例如 `Cell<T>` 和 `RefCell<T>`) 在内部都使用 `UnsafeCell` 封装其数据。",
+        "translate": ""
+    },
+    {
+        "source": "Note that only the immutability guarantee for shared references is affected by `UnsafeCell`.",
+        "suggest": "请注意，仅 `UnsafeCell` 会影响共享引证的不可变性保证。",
+        "translate": ""
+    },
+    {
+        "source": "The uniqueness guarantee for mutable references is unaffected.",
+        "suggest": "可变引用的唯一性保证不受影响。",
+        "translate": ""
+    },
+    {
+        "source": "There is *no* legal way to obtain aliasing `&mut`, not even with `UnsafeCell<T>`.",
+        "suggest": "没有合法的方法来获得 `&mut` 的别名，即使使用 `UnsafeCell<T>` 也没有。",
+        "translate": ""
+    },
+    {
+        "source": "The `UnsafeCell` API itself is technically very simple: [`.get()`] gives you a raw pointer `*mut T` to its contents.",
+        "suggest": "`UnsafeCell` API 本身在技术上非常简单: [`.get()`] 为其内容提供了裸指针 `*mut T`。",
+        "translate": ""
+    },
+    {
+        "source": "It is up to _you_ as the abstraction designer to use that raw pointer correctly.",
+        "suggest": "正确使用该裸指针取决于您。",
+        "translate": ""
+    },
+    {
+        "source": "The precise Rust aliasing rules are somewhat in flux, but the main points are not contentious:",
+        "suggest": "精确的 Rust 别名规则有些变化，但是要点并不存在争议:",
+        "translate": ""
+    },
+    {
+        "source": "If you create a safe reference with lifetime `'a` (either a `&T` or `&mut T` reference) that is accessible by safe code (for example, because you returned it), then you must not access the data in any way that contradicts that reference for the remainder of `'a`.",
+        "suggest": "如果使用生命周期 `'a` (`&T` 或 `&mut T` 引用) 创建可以通过安全代码访问的安全引用 (例如，由于返回了它)，则不得以任何与该引用的引用相矛盾的方式访问数据 `'a` 的其余部分。",
+        "translate": ""
+    },
+    {
+        "source": "For example, this means that if you take the `*mut T` from an `UnsafeCell<T>` and cast it to an `&T`, then the data in `T` must remain immutable (modulo any `UnsafeCell` data found within `T`, of course) until that reference's lifetime expires.",
+        "suggest": "例如，这意味着如果您从 `UnsafeCell<T>` 中取出 `*mut T` 并将其转换为 `&T`，则 `T` 中的数据必须保持不可变 (当然，对 `T` 中找到的任何 `UnsafeCell` 数据取模)，直到引用的生命周期到期为止。",
+        "translate": ""
+    },
+    {
+        "source": "Similarly, if you create a `&mut T` reference that is released to safe code, then you must not access the data within the `UnsafeCell` until that reference expires.",
+        "suggest": "同样，如果您创建的 `&mut T` 引用已发布为安全代码，则在引用终止之前，您不得访问 `UnsafeCell` 中的数据。",
+        "translate": ""
+    },
+    {
+        "source": "At all times, you must avoid data races.",
+        "suggest": "在任何时候，您都必须避免数据竞争。",
+        "translate": ""
+    },
+    {
+        "source": "If multiple threads have access to the same `UnsafeCell`, then any writes must have a proper happens-before relation to all other accesses (or use atomics).",
+        "suggest": "如果多个线程可以访问同一个 `UnsafeCell`，那么任何写操作都必须在与所有其他访问 (或使用原子) 相关之前发生正确的事件。",
+        "translate": ""
+    },
+    {
+        "source": "To assist with proper design, the following scenarios are explicitly declared legal for single-threaded code:",
+        "suggest": "为了帮助进行正确的设计，以下情况明确声明为单线程代码合法:",
+        "translate": ""
+    },
+    {
+        "source": "A `&T` reference can be released to safe code and there it can co-exist with other `&T` references, but not with a `&mut T`",
+        "suggest": "`&T` 引用可以释放为安全代码，并且可以与其他 `&T` 引用共存，但不能与 `&mut T` 共存",
+        "translate": ""
+    },
+    {
+        "source": "A `&mut T` reference may be released to safe code provided neither other `&mut T` nor `&T` co-exist with it.",
+        "suggest": "`&mut T` 引用可以发布为安全代码，前提是其他 `&mut T` 和 `&T` 都不共存。",
+        "translate": ""
+    },
+    {
+        "source": "A `&mut T` must always be unique.",
+        "suggest": "`&mut T` 必须始终是唯一的。",
+        "translate": ""
+    },
+    {
+        "source": "Note that whilst mutating the contents of an `&UnsafeCell<T>` (even while other `&UnsafeCell<T>` references alias the cell) is ok (provided you enforce the above invariants some other way), it is still undefined behavior to have multiple `&mut UnsafeCell<T>` aliases.",
+        "suggest": "请注意，虽然可以更改 `&UnsafeCell<T>` 的内容 (即使其他 `&UnsafeCell<T>` 引用了该 cell 的别名) 也可以 (只要以其他方式实现上述不变式即可)，但是具有多个 `&mut UnsafeCell<T>` 别名仍然是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "That is, `UnsafeCell` is a wrapper designed to have a special interaction with _shared_ accesses (_i.e._, through an `&UnsafeCell<_>` reference);",
+        "suggest": "也就是说，`UnsafeCell` 是一个包装器，旨在通过 `&UnsafeCell<_>` 与 _shared_ accesses (_i.e._ 进行特殊交互 (引用) ;",
+        "translate": ""
+    },
+    {
+        "source": "there is no magic whatsoever when dealing with _exclusive_ accesses (_e.g._, through an `&mut UnsafeCell<_>`): neither the cell nor the wrapped value may be aliased for the duration of that `&mut` borrow.",
+        "suggest": "通过 `&mut UnsafeCell<_>` 处理 _exclusive_ accesses (_e.g._ 时没有任何魔术) : 在该 `&mut` 借用期间， cell 和包装值都不能被别名。",
+        "translate": ""
+    },
+    {
+        "source": "This is showcased by the [`.get_mut()`] accessor, which is a _safe_ getter that yields a `&mut T`.",
+        "suggest": "[`.get_mut()`] 访问器展示了这一点，该访问器是产生 `&mut T` 的 _safe_ getter。",
+        "translate": ""
+    },
+    {
+        "source": "Here is an example showcasing how to soundly mutate the contents of an `UnsafeCell<_>` despite there being multiple references aliasing the cell:",
+        "suggest": "这是一个示例，展示了如何对 `UnsafeCell<_>` 的内容进行合理的可变的，尽管该单元存在多个引用别名:",
+        "translate": ""
+    },
+    {
+        "source": "The following example showcases the fact that exclusive access to an `UnsafeCell<T>` implies exclusive access to its `T`:",
+        "suggest": "以下示例展示了对 `UnsafeCell<T>` 的独占访问意味着对其 `T` 的独占访问的事实:",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new instance of `UnsafeCell` which will wrap the specified value.",
+        "suggest": "创建 `UnsafeCell` 的新实例，该实例将包装指定的值。",
+        "translate": ""
+    },
+    {
+        "source": "All access to the inner value through methods is `unsafe`.",
+        "suggest": "通过方法对内部值的所有访问都是 `unsafe`。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a mutable pointer to the wrapped value.",
+        "suggest": "获取指向包装值的可变指针。",
+        "translate": ""
+    },
+    {
+        "source": "This can be cast to a pointer of any kind.",
+        "suggest": "可以将其强制转换为任何类型的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure that the access is unique (no active references, mutable or not) when casting to `&mut T`, and ensure that there are no mutations or mutable aliases going on when casting to `&T`",
+        "suggest": "强制转换为 `&mut T` 时，访问是唯一的 (无活动的引用，可变或不活动)，并确保转换为 `&T` 时没有发生任何可变的或可变别名。",
+        "translate": ""
+    },
+    {
+        "source": "We can just cast the pointer from `UnsafeCell<T>` to `T` because of #[repr(transparent)].",
+        "suggest": "由于 #[repr(transparent)]，我们只能将指针从 `UnsafeCell<T>` 转换为 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "This exploits libstd's special status, there is no guarantee for user code that this will work in future versions of the compiler!",
+        "suggest": "这利用了 libstd 的特殊状态，无法保证用户代码可以在 future 版本的编译器中正常工作!",
+        "translate": ""
+    },
+    {
+        "source": "This call borrows the `UnsafeCell` mutably (at compile-time) which guarantees that we possess the only reference.",
+        "suggest": "这个调用借用 `UnsafeCell` (在编译时) 是可变的，这保证了我们拥有唯一的引用。",
+        "translate": ""
+    },
+    {
+        "source": "The difference to [`get`] is that this function accepts a raw pointer, which is useful to avoid the creation of temporary references.",
+        "suggest": "与 [`get`] 的不同之处在于此函数接受裸指针，这对于避免创建临时引用很有用。",
+        "translate": ""
+    },
+    {
+        "source": "The result can be cast to a pointer of any kind.",
+        "suggest": "结果可以转换为任何类型的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure that the access is unique (no active references, mutable or not) when casting to `&mut T`, and ensure that there are no mutations or mutable aliases going on when casting to `&T`.",
+        "suggest": "强制转换为 `&mut T` 时，访问是唯一的 (无活动的引用，可变性或非活动性)，并确保转换为 `&T` 时没有发生任何可变的或可变别名。",
+        "translate": ""
+    },
+    {
+        "source": "Gradual initialization of an `UnsafeCell` requires `raw_get`, as calling `get` would require creating a reference to uninitialized data:",
+        "suggest": "`UnsafeCell` 的逐步初始化需要 `raw_get`，因为调用 `get` 需要对未初始化的数据创建引用:",
+        "translate": ""
+    },
+    {
+        "source": "Creates an `UnsafeCell`, with the `Default` value for T.",
+        "suggest": "创建一个 `UnsafeCell`，其 T 值为 `Default`。",
+        "translate": ""
+    },
+    {
+        "source": "Decimal 11 is a single digit in base 16",
+        "suggest": "十进制 11 是以 16 为底的一位数字",
+        "translate": ""
+    },
+    {
+        "source": "this panics",
+        "suggest": "这个 panics",
+        "translate": ""
+    },
+    {
+        "source": "Character conversions.",
+        "suggest": "字符转换。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `u32` to a `char`.",
+        "suggest": "将 `u32` 转换为 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that all [`char`]s are valid [`u32`]s, and can be cast to one with",
+        "suggest": "请注意，所有 [`char`] 都是有效的 [`u32`]，并且可以使用以下命令将其强制转换为一个",
+        "translate": ""
+    },
+    {
+        "source": "However, the reverse is not true: not all valid [`u32`]s are valid [`char`]s.",
+        "suggest": "但是，事实并非如此: 并非所有有效的 [u32] 都是有效的 [char]。",
+        "translate": ""
+    },
+    {
+        "source": "will return `None` if the input is not a valid value for a [`char`].",
+        "suggest": "如果输入的值不是 [`char`] 的有效值，则将返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "For an unsafe version of this function which ignores these checks, see [`from_u32_unchecked`].",
+        "suggest": "有关忽略这些检查的该函数的不安全版本，请参见 [`from_u32_unchecked`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returning `None` when the input is not a valid [`char`]:",
+        "suggest": "当输入不是有效的 [`char`] 时返回 `None`:",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `u32` to a `char`, ignoring validity.",
+        "suggest": "将 `u32` 转换为 `char`，而忽略有效性。",
+        "translate": ""
+    },
+    {
+        "source": "will ignore this, and blindly cast to [`char`], possibly creating an invalid one.",
+        "suggest": "会忽略这一点，并盲目地将其强制转换为 [`char`]，从而可能创建无效的 [`char`]。",
+        "translate": ""
+    },
+    {
+        "source": "This function is unsafe, as it may construct invalid `char` values.",
+        "suggest": "该函数是不安全的，因为它可能创建无效的 `char` 值。",
+        "translate": ""
+    },
+    {
+        "source": "For a safe version of this function, see the [`from_u32`] function.",
+        "suggest": "有关此函数的安全版本，请参见 [`from_u32`] 函数。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must guarantee that `i` is a valid char value.",
+        "suggest": "调用者必须保证 `i` 是有效的 char 值。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`char`] into a [`u32`].",
+        "suggest": "将 [`char`] 转换为 [`u32`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`char`] into a [`u64`].",
+        "suggest": "将 [`char`] 转换为 [`u64`]。",
+        "translate": ""
+    },
+    {
+        "source": "The char is casted to the value of the code point, then zero-extended to 64 bit.",
+        "suggest": "字符强制转换为代码点的值，然后零扩展为 64 位。",
+        "translate": ""
+    },
+    {
+        "source": "See [https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics]",
+        "suggest": "请参见 [https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics]",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`char`] into a [`u128`].",
+        "suggest": "将 [`char`] 转换为 [`u128`]。",
+        "translate": ""
+    },
+    {
+        "source": "The char is casted to the value of the code point, then zero-extended to 128 bit.",
+        "suggest": "字符强制转换为代码点的值，然后零扩展为 128 位。",
+        "translate": ""
+    },
+    {
+        "source": "Maps a byte in 0x00..=0xFF to a `char` whose code point has the same value, in U+0000..=U+00FF.",
+        "suggest": "将 0x00..=0xFF 中的字节映射到 `char`，该 `char` 的代码点具有相同的值，即 U+0000..=U+00FF。",
+        "translate": ""
+    },
+    {
+        "source": "Unicode is designed such that this effectively decodes bytes with the character encoding that IANA calls ISO-8859-1.",
+        "suggest": "Unicode 的设计使其可以使用 IANA 称为 ISO-8859-1 的字符编码有效地解码字节。",
+        "translate": ""
+    },
+    {
+        "source": "This encoding is compatible with ASCII.",
+        "suggest": "此编码与 ASCII 兼容。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is different from ISO/IEC 8859-1 a.k.a.",
+        "suggest": "请注意，这与 ISO/IEC 8859-1 又名不同",
+        "translate": ""
+    },
+    {
+        "source": "ISO 8859-1 (with one less hyphen), which leaves some \"blanks\", byte values that are not assigned to any character.",
+        "suggest": "ISO 8859-1 (连字符少一个)，它留下了一些 \"blanks\" 字节值，这些值未分配给任何字符。",
+        "translate": ""
+    },
+    {
+        "source": "ISO-8859-1 (the IANA one) assigns them to the C0 and C1 control codes.",
+        "suggest": "ISO-8859-1 (属于 IANA) 将它们分配给 C0 和 C1 控制代码。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is *also* different from Windows-1252 a.k.a.",
+        "suggest": "请注意，这也与 Windows-1252 也不同",
+        "translate": ""
+    },
+    {
+        "source": "code page 1252, which is a superset ISO/IEC 8859-1 that assigns some (not all!) blanks to punctuation and various Latin characters.",
+        "suggest": "代码页 1252，它是 ISO/IEC 8859-1 的超集，它为标点符号和各种拉丁字符分配了一些 (不是全部) 空格。",
+        "translate": ""
+    },
+    {
+        "source": "To confuse things further, [on the Web](https://encoding.spec.whatwg.org/) `ascii`, `iso-8859-1`, and `windows-1252` are all aliases for a superset of Windows-1252 that fills the remaining blanks with corresponding C0 and C1 control codes.",
+        "suggest": "为了进一步混淆，[在 Web 上](https://encoding.spec.whatwg.org/) `ascii`，`iso-8859-1` 和 `windows-1252` 都是 Windows-1252 超集的别名，该超集用相应的 C0 和 C1 控制代码填充了其余的空白。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`u8`] into a [`char`].",
+        "suggest": "将 [`u8`] 转换为 [`char`]。",
+        "translate": ""
+    },
+    {
+        "source": "An error which can be returned when parsing a char.",
+        "suggest": "解析 char 时可以返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "checked that it's a legal unicode value",
+        "suggest": "检查这是合法的 unicode 值",
+        "translate": ""
+    },
+    {
+        "source": "The error type returned when a conversion from u32 to char fails.",
+        "suggest": "从 u32 转换为 char 失败时返回的错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a digit in the given radix to a `char`.",
+        "suggest": "将给定基数中的数字转换为 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "A 'radix' here is sometimes also called a 'base'.",
+        "suggest": "这里的 'radix' 有时也称为 'base'。",
+        "translate": ""
+    },
+    {
+        "source": "A radix of two indicates a binary number, a radix of ten, decimal, and a radix of sixteen, hexadecimal, to give some common values.",
+        "suggest": "基数 2 表示二进制数，以十进制表示的十进制，以十六进制表示十六进制的基数，以给出一些公共值。",
+        "translate": ""
+    },
+    {
+        "source": "Arbitrary radices are supported.",
+        "suggest": "支持任意基数。",
+        "translate": ""
+    },
+    {
+        "source": "will return `None` if the input is not a digit in the given radix.",
+        "suggest": "如果输入不是给定基数中的数字，则将返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if given a radix larger than 36.",
+        "suggest": "Panics (如果基数大于 36)。",
+        "translate": ""
+    },
+    {
+        "source": "Returning `None` when the input is not a digit:",
+        "suggest": "当输入不是数字时返回 `None`:",
+        "translate": ""
+    },
+    {
+        "source": "Passing a large radix, causing a panic:",
+        "suggest": "传递较大的基数，导致 panic:",
+        "translate": ""
+    },
+    {
+        "source": "and UTF-16 decoding iterators",
+        "suggest": "和 UTF-16 解码迭代器",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that decodes UTF-16 encoded code points from an iterator of `u16`s.",
+        "suggest": "一个迭代器，用于解码来自 u16 迭代器的 UTF-16 编码的代码点。",
+        "translate": ""
+    },
+    {
+        "source": "An error that can be returned when decoding UTF-16 code points.",
+        "suggest": "解码 UTF-16 代码点时可以返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator over the UTF-16 encoded code points in `iter`, returning unpaired surrogates as `Err`s.",
+        "suggest": "在 `iter` 中的 UTF-16 编码的代码点上创建一个迭代器，将不成对的代理返回为 `Err`s。",
+        "translate": ""
+    },
+    {
+        "source": "A lossy decoder can be obtained by replacing `Err` results with the replacement character:",
+        "suggest": "通过用替换字符替换 `Err` 结果，可以获得有损解码器:",
+        "translate": ""
+    },
+    {
+        "source": "not a surrogate",
+        "suggest": "不是代理",
+        "translate": ""
+    },
+    {
+        "source": "a trailing surrogate",
+        "suggest": "尾随代理",
+        "translate": ""
+    },
+    {
+        "source": "not a trailing surrogate so we're not a valid surrogate pair, so rewind to redecode u2 next time.",
+        "suggest": "不是尾随的代理，因此我们不是有效的代理对，因此请回绕以在下一次重新编码 u2。",
+        "translate": ""
+    },
+    {
+        "source": "all ok, so lets decode it.",
+        "suggest": "一切正常，让我们对其进行解码。",
+        "translate": ""
+    },
+    {
+        "source": "we checked that it's a legal unicode value",
+        "suggest": "我们检查了这是合法的 unicode 值",
+        "translate": ""
+    },
+    {
+        "source": "we could be entirely valid surrogates (2 elements per char), or entirely non-surrogates (1 element per char)",
+        "suggest": "我们可以是完全有效的代理 (每个字符 2 个元素)，也可以是完全非代理 (每个字符 1 个元素)",
+        "translate": ""
+    },
+    {
+        "source": "Returns the unpaired surrogate which caused this error.",
+        "suggest": "返回导致此错误的未配对代理。",
+        "translate": ""
+    },
+    {
+        "source": "as chars",
+        "suggest": "作为字符",
+        "translate": ""
+    },
+    {
+        "source": "both can be represented as three bytes",
+        "suggest": "两者都可以表示为三个字节",
+        "translate": ""
+    },
+    {
+        "source": "as a &str, these two are encoded in UTF-8",
+        "suggest": "作为 &str，这两个编码为 UTF-8",
+        "translate": ""
+    },
+    {
+        "source": "we can see that they take six bytes total...",
+        "suggest": "我们可以看到它们总共占用了六个字节...",
+        "translate": ""
+    },
+    {
+        "source": "just like the &str",
+        "suggest": "就像 &str",
+        "translate": ""
+    },
+    {
+        "source": "love is many things, but it is not alphabetic",
+        "suggest": "love 有很多东西，但它不是按字母顺序排列的",
+        "translate": ""
+    },
+    {
+        "source": "The various Chinese scripts and punctuation do not have case, and so:",
+        "suggest": "各种中文脚本和标点符号没有大小写，因此:",
+        "translate": ""
+    },
+    {
+        "source": "a non-breaking space",
+        "suggest": "一个不间断空格",
+        "translate": ""
+    },
+    {
+        "source": "STRING TERMINATOR",
+        "suggest": "终止符",
+        "translate": ""
+    },
+    {
+        "source": "Sometimes the result is more than one character:",
+        "suggest": "有时结果是多个字符:",
+        "translate": ""
+    },
+    {
+        "source": "Characters that do not have both uppercase and lowercase convert into themselves.",
+        "suggest": "同时没有大写和小写字母的字符会转换成自己。",
+        "translate": ""
+    },
+    {
+        "source": "impl char {}",
+        "suggest": "展示字符 {}",
+        "translate": ""
+    },
+    {
+        "source": "The highest valid code point a `char` can have.",
+        "suggest": "`char` 可以具有的最高有效代码点。",
+        "translate": ""
+    },
+    {
+        "source": "A `char` is a [Unicode Scalar Value], which means that it is a [Code Point], but only ones within a certain range.",
+        "suggest": "`char` 是 [Unicode Scalar Value]，这意味着它是 [Code Point]，但仅在一定范围内。",
+        "translate": ""
+    },
+    {
+        "source": "is the highest valid code point that's a valid [Unicode Scalar Value].",
+        "suggest": "是有效 [Unicode Scalar Value] 的最高有效代码点。",
+        "translate": ""
+    },
+    {
+        "source": "() is used in Unicode to represent a decoding error.",
+        "suggest": "() 在 Unicode 中用于表示解码错误。",
+        "translate": ""
+    },
+    {
+        "source": "It can occur, for example, when giving ill-formed UTF-8 bytes to [`String::from_utf8_lossy`](string/struct.String.html#method.from_utf8_lossy).",
+        "suggest": "例如，当将格式错误的 UTF-8 字节提供给 [`String::from_utf8_lossy`](string/struct.String.html#method.from_utf8_lossy) 时，可能会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "The version of [Unicode](http://www.unicode.org/) that the Unicode parts of `char` and `str` methods are based on.",
+        "suggest": "`char` 和 `str` 方法的 Unicode 部分所基于的 [Unicode](http://www.unicode.org/) 版本。",
+        "translate": ""
+    },
+    {
+        "source": "New versions of Unicode are released regularly and subsequently all methods in the standard library depending on Unicode are updated.",
+        "suggest": "Unicode 的新版本会定期发布，随后会更新标准库中取决于 Unicode 的所有方法。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore the behavior of some `char` and `str` methods and the value of this constant changes over time.",
+        "suggest": "因此，某些 `char` 和 `str` 方法的行为以及该常量的值会随时间变化。",
+        "translate": ""
+    },
+    {
+        "source": "This is *not* considered to be a breaking change.",
+        "suggest": "这不是一个突破性的改变。",
+        "translate": ""
+    },
+    {
+        "source": "The version numbering scheme is explained in [Unicode 11.0 or later, Section 3.1 Versions of the Unicode Standard](https://www.unicode.org/versions/Unicode11.0.0/ch03.pdf#page=4).",
+        "suggest": "版本编号方案在 [Unicode 11.0 或更高版本，第 3.1 节 Unicode 标准版本](https://www.unicode.org/versions/Unicode11.0.0/ch03.pdf#page=4) 中进行了说明。",
+        "translate": ""
+    },
+    {
+        "source": "Note that all `char`s are valid [`u32`]s, and can be cast to one with",
+        "suggest": "请注意，所有的 `char`s 都是有效的 [`u32`]，并且可以使用以下命令将其强制转换为 1",
+        "translate": ""
+    },
+    {
+        "source": "However, the reverse is not true: not all valid [`u32`]s are valid `char`s.",
+        "suggest": "但是，相反的情况并非如此: 并非所有有效的 [u32] 都是有效的 char。",
+        "translate": ""
+    },
+    {
+        "source": "will return `None` if the input is not a valid value for a `char`.",
+        "suggest": "如果输入的值不是 `char` 的有效值，则将返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returning `None` when the input is not a valid `char`:",
+        "suggest": "当输入不是有效的 `char` 时返回 `None`:",
+        "translate": ""
+    },
+    {
+        "source": "will ignore this, and blindly cast to `char`, possibly creating an invalid one.",
+        "suggest": "会忽略这一点，并盲目地将其强制转换为 `char`，从而可能创建无效的 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "the safety contract must be upheld by the caller.",
+        "suggest": "调用者必须坚持安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if a `char` is a digit in the given radix.",
+        "suggest": "检查 `char` 是否为给定基数中的数字。",
+        "translate": ""
+    },
+    {
+        "source": "Compared to [`is_numeric()`], this function only recognizes the characters `0-9`, `a-z` and `A-Z`.",
+        "suggest": "与 [`is_numeric()`] 相比，此函数仅识别字符 `0-9`，`a-z` 和 `A-Z`。",
+        "translate": ""
+    },
+    {
+        "source": "is defined to be only the following characters:",
+        "suggest": "被定义为仅以下字符:",
+        "translate": ""
+    },
+    {
+        "source": "For a more comprehensive understanding of 'digit', see [`is_numeric()`].",
+        "suggest": "要更全面地了解 'digit'，请参见 [`is_numeric()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `char` to a digit in the given radix.",
+        "suggest": "将 `char` 转换为给定基数的数字。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the `char` does not refer to a digit in the given radix.",
+        "suggest": "如果 `char` 未引用给定基数中的数字，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Passing a non-digit results in failure:",
+        "suggest": "传递非数字会导致失败:",
+        "translate": ""
+    },
+    {
+        "source": "the code is split up here to improve execution speed for cases where the `radix` is constant and 10 or smaller",
+        "suggest": "在 `radix` 为常量且小于等于 10 的情况下，在此处拆分了代码以提高执行速度",
+        "translate": ""
+    },
+    {
+        "source": "If not a digit, a number greater than radix will be created.",
+        "suggest": "如果不是数字，则将创建一个大于基数的数字。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the hexadecimal Unicode escape of a character as `char`s.",
+        "suggest": "返回一个迭代器，该迭代器将字符的十六进制 Unicode 转义生成为 `char`s。",
+        "translate": ""
+    },
+    {
+        "source": "This will escape characters with the Rust syntax of the form `\\u{NNNNNN}` where `NNNNNN` is a hexadecimal representation.",
+        "suggest": "这将使用 `\\u{NNNNNN}` 格式的 Rust 语法对字符进行转义，其中 `NNNNNN` 是十六进制表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "As an iterator:",
+        "suggest": "作为迭代器:",
+        "translate": ""
+    },
+    {
+        "source": "Using `println!` directly:",
+        "suggest": "直接使用 `println!`:",
+        "translate": ""
+    },
+    {
+        "source": "Both are equivalent to:",
+        "suggest": "两者都等同于:",
+        "translate": ""
+    },
+    {
+        "source": "Using `to_string`:",
+        "suggest": "使用 `to_string`:",
+        "translate": ""
+    },
+    {
+        "source": "or-ing 1 ensures that for c==0 the code computes that one digit should be printed and (which is the same) avoids the (31 - 32) underflow",
+        "suggest": "or-ing 1 确保在 c == 0 时代码计算出应该打印一位，并且 (相同) 避免 (31-32) 下溢",
+        "translate": ""
+    },
+    {
+        "source": "the index of the most significant hex digit",
+        "suggest": "最高有效十六进制数字的索引",
+        "translate": ""
+    },
+    {
+        "source": "An extended version of `escape_debug` that optionally permits escaping Extended Grapheme codepoints.",
+        "suggest": "`escape_debug` 的扩展版本，可以选择转义扩展的 Grapheme 代码点。",
+        "translate": ""
+    },
+    {
+        "source": "This allows us to format characters like nonspacing marks better when they're at the start of a string.",
+        "suggest": "这样一来，当我们在字符串的开头时，就可以更好地设置非间距标记之类的字符格式。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the literal escape code of a character as `char`s.",
+        "suggest": "返回一个迭代器，该迭代器将字符的字面量转义码生成为 `char`s。",
+        "translate": ""
+    },
+    {
+        "source": "This will escape the characters similar to the `Debug` implementations of `str` or `char`.",
+        "suggest": "这将转义类似于 `str` 或 `char` 的 `Debug` 实现的字符。",
+        "translate": ""
+    },
+    {
+        "source": "All other characters are given hexadecimal Unicode escapes;",
+        "suggest": "所有其他字符均使用十六进制 Unicode 转义;",
+        "translate": ""
+    },
+    {
+        "source": "see [`escape_unicode`].",
+        "suggest": "请参见 [`escape_unicode`]。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of bytes this `char` would need if encoded in UTF-8.",
+        "suggest": "返回以 UTF-8 编码时此 `char` 所需的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "That number of bytes is always between 1 and 4, inclusive.",
+        "suggest": "该字节数始终在 1 到 4 之间 (含 1 和 4)。",
+        "translate": ""
+    },
+    {
+        "source": "The `&str` type guarantees that its contents are UTF-8, and so we can compare the length it would take if each code point was represented as a `char` vs in the `&str` itself:",
+        "suggest": "`&str` 类型保证其内容为 UTF-8，因此我们可以比较将每个代码点表示为 `char` 相对于 `&str` 本身所花费的长度:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of 16-bit code units this `char` would need if encoded in UTF-16.",
+        "suggest": "返回以 UTF-16 编码时 `char` 所需的 16 位代码单元的数量。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`len_utf8()`] for more explanation of this concept.",
+        "suggest": "有关此概念的更多说明，请参见 [`len_utf8()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "This function is a mirror, but for UTF-16 instead of UTF-8.",
+        "suggest": "该函数是一个镜像，但是用于 UTF-16 而不是 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "Encodes this character as UTF-8 into the provided byte buffer, and then returns the subslice of the buffer that contains the encoded character.",
+        "suggest": "将此字符编码为 UTF-8 到提供的字节缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if the buffer is not large enough.",
+        "suggest": "Panics (如果缓冲区不够大)。",
+        "translate": ""
+    },
+    {
+        "source": "A buffer of length four is large enough to encode any `char`.",
+        "suggest": "长度为四的缓冲区足够大，可以对任何 `char` 进行编码。",
+        "translate": ""
+    },
+    {
+        "source": "In both of these examples, 'ß' takes two bytes to encode.",
+        "suggest": "在这两个示例中，'ß' 占用两个字节进行编码。",
+        "translate": ""
+    },
+    {
+        "source": "A buffer that's too small:",
+        "suggest": "缓冲区太小:",
+        "translate": ""
+    },
+    {
+        "source": "`char` is not a surrogate, so this is valid UTF-8.",
+        "suggest": "`char` 不是代理，所以这是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "Encodes this character as UTF-16 into the provided `u16` buffer, and then returns the subslice of the buffer that contains the encoded character.",
+        "suggest": "将此字符编码为 UTF-16 到提供的 `u16` 缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "translate": ""
+    },
+    {
+        "source": "A buffer of length 2 is large enough to encode any `char`.",
+        "suggest": "长度为 2 的缓冲区足够大，可以对任何 `char` 进行编码。",
+        "translate": ""
+    },
+    {
+        "source": "In both of these examples, '𝕊' takes two `u16`s to encode.",
+        "suggest": "在这两个示例中，'𝕊' 都需要两个 u16 进行编码。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has the `Alphabetic` property.",
+        "suggest": "如果此 `char` 具有 `Alphabetic` 属性，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "is described in Chapter 4 (Character Properties) of the [Unicode Standard] and specified in the [Unicode Character Database][ucd] [`DerivedCoreProperties.txt`].",
+        "suggest": "在 [Unicode 标准] 的第 4 章 (字符属性) 中进行了说明，并在 [Unicode 字符数据库][ucd] [`DerivedCoreProperties.txt`] 中进行了指定。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has the `Lowercase` property.",
+        "suggest": "如果此 `char` 具有 `Lowercase` 属性，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has the `Uppercase` property.",
+        "suggest": "如果此 `char` 具有 `Uppercase` 属性，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has the `White_Space` property.",
+        "suggest": "如果此 `char` 具有 `White_Space` 属性，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "is specified in the [Unicode Character Database][ucd] [`PropList.txt`].",
+        "suggest": "在 [Unicode 字符数据库][ucd] [`PropList.txt`] 中指定。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` satisfies either [`is_alphabetic()`] or [`is_numeric()`].",
+        "suggest": "如果此 `char` 满足 [`is_alphabetic()`] 或 [`is_numeric()`]，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has the general category for control codes.",
+        "suggest": "如果此 `char` 具有控制代码的常规类别，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Control codes (code points with the general category of `Cc`) are described in Chapter 4 (Character Properties) of the [Unicode Standard] and specified in the [Unicode Character Database][ucd] [`UnicodeData.txt`].",
+        "suggest": "[Unicode 标准] 的第 4 章 (字符属性) 中描述了控制代码 (具有 `Cc` 的常规类别的代码点)，并在 [Unicode 字符数据库][ucd] [`UnicodeData.txt`] 中进行了指定。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has the `Grapheme_Extend` property.",
+        "suggest": "如果此 `char` 具有 `Grapheme_Extend` 属性，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "is described in [Unicode Standard Annex #29 (Unicode Text Segmentation)][uax29] and specified in the [Unicode Character Database][ucd] [`DerivedCoreProperties.txt`].",
+        "suggest": "在 [Unicode 标准附件 #29（Unicode 文本分割）][uax29] 中进行了说明，并在 [Unicode 字符数据库][ucd] [`DerivedCoreProperties.txt`] 中进行了指定。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this `char` has one of the general categories for numbers.",
+        "suggest": "如果此 `char` 具有数字的常规类别之一，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "The general categories for numbers (`Nd` for decimal digits, `Nl` for letter-like numeric characters, and `No` for other numeric characters) are specified in the [Unicode Character Database][ucd] [`UnicodeData.txt`].",
+        "suggest": "在 [Unicode 字符数据库][ucd] [`UnicodeData.txt`] 中指定了数字的常规类别 (`Nd` 表示十进制数字，`Nl` 表示类似字母的数字字符，`No` 表示其他数字字符)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the lowercase mapping of this `char` as one or more",
+        "suggest": "返回一个迭代器，该迭代器将这个 `char` 的小写字母映射为一个或多个",
+        "translate": ""
+    },
+    {
+        "source": "If this `char` does not have a lowercase mapping, the iterator yields the same `char`.",
+        "suggest": "如果此 `char` 没有小写映射，则迭代器将产生相同的 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "If this `char` has a one-to-one lowercase mapping given by the [Unicode Character Database][ucd] [`UnicodeData.txt`], the iterator yields that `char`.",
+        "suggest": "如果此 `char` 具有 [Unicode 字符数据库][ucd] [`UnicodeData.txt`] 给出的一对一小写映射，则迭代器将产生该 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "If this `char` requires special considerations (e.g. multiple `char`s) the iterator yields the `char`(s) given by [`SpecialCasing.txt`].",
+        "suggest": "如果此 `char` 需要特殊考虑 (例如，多个 char)，则迭代器将产生 [`SpecialCasing.txt`] 给定的 char。",
+        "translate": ""
+    },
+    {
+        "source": "This operation performs an unconditional mapping without tailoring.",
+        "suggest": "此操作无需裁剪即可执行无条件映射。",
+        "translate": ""
+    },
+    {
+        "source": "That is, the conversion is independent of context and language.",
+        "suggest": "即，转换独立于上下文和语言。",
+        "translate": ""
+    },
+    {
+        "source": "In the [Unicode Standard], Chapter 4 (Character Properties) discusses case mapping in general and Chapter 3 (Conformance) discusses the default algorithm for case conversion.",
+        "suggest": "在 [Unicode 标准] 中，第 4 章 (字符属性) 通常讨论大小写映射，而第 3 章 (一致性) 讨论大小写转换的默认算法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the uppercase mapping of this `char` as one or more",
+        "suggest": "返回一个迭代器，该迭代器将这个 `char` 的大写映射生成为一个或多个",
+        "translate": ""
+    },
+    {
+        "source": "If this `char` does not have a uppercase mapping, the iterator yields the same `char`.",
+        "suggest": "如果此 `char` 没有大写映射，则迭代器将产生相同的 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "If this `char` has a one-to-one uppercase mapping given by the [Unicode Character Database][ucd] [`UnicodeData.txt`], the iterator yields that `char`.",
+        "suggest": "如果此 `char` 具有 [Unicode 字符数据库][ucd] [`UnicodeData.txt`] 给出的一对一大写映射，则迭代器将产生该 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "Note on locale",
+        "suggest": "关于语言环境说明",
+        "translate": ""
+    },
+    {
+        "source": "In Turkish, the equivalent of 'i' in Latin has five forms instead of two:",
+        "suggest": "在土耳其语中，相当于 'i' 的拉丁语具有 5 种形式，而不是 2 种形式:",
+        "translate": ""
+    },
+    {
+        "source": "I / ı, sometimes written ï",
+        "suggest": "I / ı，有时写成 ï",
+        "translate": ""
+    },
+    {
+        "source": "Note that the lowercase dotted 'i' is the same as the Latin.",
+        "suggest": "注意，小写的点缀 'i' 与拉丁字母相同。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore:",
+        "suggest": "所以:",
+        "translate": ""
+    },
+    {
+        "source": "The value of `upper_i` here relies on the language of the text: if we're in `en-US`, it should be `\"I\"`, but if we're in `tr_TR`, it should be `\"İ\"`.",
+        "suggest": "`upper_i` 的值在此取决于文本的语言: 如果我们在 `en-US` 中，则应为 `\"I\"`，但如果我们在 `tr_TR` 中，则应为 `\"İ\"`。",
+        "translate": ""
+    },
+    {
+        "source": "does not take this into account, and so:",
+        "suggest": "没有考虑到这一点，因此:",
+        "translate": ""
+    },
+    {
+        "source": "holds across languages.",
+        "suggest": "适用于多种语言。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is within the ASCII range.",
+        "suggest": "检查该值是否在 ASCII 范围内。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a copy of the value in its ASCII upper case equivalent.",
+        "suggest": "使值的副本等效于其 ASCII 大写字母。",
+        "translate": ""
+    },
+    {
+        "source": "To uppercase the value in-place, use [`make_ascii_uppercase()`].",
+        "suggest": "要就地将值大写，请使用 [`make_ascii_uppercase()`]。",
+        "translate": ""
+    },
+    {
+        "source": "To uppercase ASCII characters in addition to non-ASCII characters, use [`to_uppercase()`].",
+        "suggest": "要除非 ASCII 字符外还使用大写 ASCII 字符，请使用 [`to_uppercase()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a copy of the value in its ASCII lower case equivalent.",
+        "suggest": "以等效的 ASCII 小写形式复制值。",
+        "translate": ""
+    },
+    {
+        "source": "To lowercase the value in-place, use [`make_ascii_lowercase()`].",
+        "suggest": "要就地小写该值，请使用 [`make_ascii_lowercase()`]。",
+        "translate": ""
+    },
+    {
+        "source": "To lowercase ASCII characters in addition to non-ASCII characters, use [`to_lowercase()`].",
+        "suggest": "要除非 ASCII 字符外还使用小写 ASCII 字符，请使用 [`to_lowercase()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Checks that two values are an ASCII case-insensitive match.",
+        "suggest": "检查两个值是否为 ASCII 不区分大小写的匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `to_ascii_lowercase(a) == to_ascii_lowercase(b)`.",
+        "suggest": "等效于 `to_ascii_lowercase(a) == to_ascii_lowercase(b)`。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this type to its ASCII upper case equivalent in-place.",
+        "suggest": "将此类型就地转换为其 ASCII 大写等效项。",
+        "translate": ""
+    },
+    {
+        "source": "To return a new uppercased value without modifying the existing one, use [`to_ascii_uppercase()`].",
+        "suggest": "要返回新的大写值而不修改现有值，请使用 [`to_ascii_uppercase()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this type to its ASCII lower case equivalent in-place.",
+        "suggest": "将此类型就地转换为其 ASCII 小写等效项。",
+        "translate": ""
+    },
+    {
+        "source": "To return a new lowercased value without modifying the existing one, use [`to_ascii_lowercase()`].",
+        "suggest": "要返回新的小写值而不修改现有值，请使用 [`to_ascii_lowercase()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII alphabetic character:",
+        "suggest": "检查值是否为 ASCII 字母字符:",
+        "translate": ""
+    },
+    {
+        "source": "'A' ..= U+005A 'Z', or",
+        "suggest": "'A' ..= U+005A 'Z'，或",
+        "translate": ""
+    },
+    {
+        "source": "'a' ..= U+007A 'z'.",
+        "suggest": "'a' ..= U+007A 'z'。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII uppercase character:",
+        "suggest": "检查值是否为 ASCII 大写字符:",
+        "translate": ""
+    },
+    {
+        "source": "'A' ..= U+005A 'Z'.",
+        "suggest": "'A' ..= U+005A 'Z'。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII lowercase character:",
+        "suggest": "检查值是否为 ASCII 小写字符:",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII alphanumeric character:",
+        "suggest": "检查值是否为 ASCII 字母数字字符:",
+        "translate": ""
+    },
+    {
+        "source": "'a' ..= U+007A 'z', or",
+        "suggest": "'a' ..= U+007A 'z'，或",
+        "translate": ""
+    },
+    {
+        "source": "'0' ..= U+0039 '9'.",
+        "suggest": "'0' ..= U+0039 '9'。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII decimal digit:",
+        "suggest": "检查值是否为 ASCII 十进制数字:",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII hexadecimal digit:",
+        "suggest": "检查值是否为 ASCII 十六进制数字:",
+        "translate": ""
+    },
+    {
+        "source": "'0' ..= U+0039 '9', or",
+        "suggest": "'0' ..= U+0039 '9'，或",
+        "translate": ""
+    },
+    {
+        "source": "'A' ..= U+0046 'F', or",
+        "suggest": "'A' ..= U+0046 'F'，或",
+        "translate": ""
+    },
+    {
+        "source": "'a' ..= U+0066 'f'.",
+        "suggest": "'a' ..= U+0066 'f'。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII punctuation character:",
+        "suggest": "检查值是否为 ASCII 标点符号:",
+        "translate": ""
+    },
+    {
+        "source": "..= U+002F `! \" # $ % & ' ( ) * + , - . /`, or",
+        "suggest": "..= U+002F `! \" # $ % & ' ( ) * + , - . /`，或",
+        "translate": ""
+    },
+    {
+        "source": "..= U+0040 `: ; < = > ? @`, or",
+        "suggest": "..= U+0040 `: ; < = > ? @`，或",
+        "translate": ""
+    },
+    {
+        "source": "..= U+0060 ``[ \\ ] ^ _ ` ``, or",
+        "suggest": "..= U+0060`[\\] ^ _```，或",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII graphic character:",
+        "suggest": "检查值是否为 ASCII 图形字符:",
+        "translate": ""
+    },
+    {
+        "source": "'!' ..= U+007E '~'.",
+        "suggest": "'!' ..= U+007E '~'。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII whitespace character:",
+        "suggest": "检查值是否为 ASCII 空格字符:",
+        "translate": ""
+    },
+    {
+        "source": "SPACE, U+0009 HORIZONTAL TAB, U+000A LINE FEED, U+000C FORM FEED, or U+000D CARRIAGE RETURN.",
+        "suggest": "空格，U+0009 水平制表符，U+000A 行进纸，U+000C 表格进纸或 U+000D 回车。",
+        "translate": ""
+    },
+    {
+        "source": "Rust uses the WhatWG Infra Standard's [definition of ASCII whitespace][infra-aw].",
+        "suggest": "Rust 使用 WhatWG 基础标准的 [ASCII 空格的定义][infra-aw]。",
+        "translate": ""
+    },
+    {
+        "source": "There are several other definitions in wide use.",
+        "suggest": "还有其他几种广泛使用的定义。",
+        "translate": ""
+    },
+    {
+        "source": "For instance, [the POSIX locale][pct] includes U+000B VERTICAL TAB as well as all the above characters, but—from the very same specification—[the default rule for \"field splitting\" in the Bourne shell][bfs] considers *only* SPACE, HORIZONTAL TAB, and LINE FEED as whitespace.",
+        "suggest": "例如，[POSIX 语言环境][pct] 包括 U+000B 垂直标签以及所有上述字符，但是 - 从相同的规格来看 -[Bourne shell 中 \"field splitting\" 的默认规则][bfs] 仅考虑空格，水平标签和 LINE FEED 作为空白。",
+        "translate": ""
+    },
+    {
+        "source": "If you are writing a program that will process an existing file format, check what that format's definition of whitespace is before using this function.",
+        "suggest": "如果要编写将处理现有文件格式的程序，请在使用此函数之前检查该格式的空格定义。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the value is an ASCII control character:",
+        "suggest": "检查值是否为 ASCII 控制字符:",
+        "translate": ""
+    },
+    {
+        "source": "NUL ..= U+001F UNIT SEPARATOR, or U+007F DELETE.",
+        "suggest": "NUL ..= U+001F 单元分隔符，或 U+007F DELETE。",
+        "translate": ""
+    },
+    {
+        "source": "Note that most ASCII whitespace characters are control characters, but SPACE is not.",
+        "suggest": "请注意，大多数 ASCII 空格字符是控制字符，而 SPACE 不是。",
+        "translate": ""
+    },
+    {
+        "source": "Encodes a raw u32 value as UTF-8 into the provided byte buffer, and then returns the subslice of the buffer that contains the encoded character.",
+        "suggest": "将原始 u32 值编码为 UTF-8 到提供的字节缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `char::encode_utf8`, this method also handles codepoints in the surrogate range.",
+        "suggest": "与 `char::encode_utf8` 不同，此方法还处理代理范围内的代码点。",
+        "translate": ""
+    },
+    {
+        "source": "(Creating a `char` in the surrogate range is UB.) The result is valid [generalized UTF-8] but not valid UTF-8.",
+        "suggest": "(在代理范围内创建 `char` 是 UB。) 结果是有效的 [广义的 UTF-8]，但无效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "Encodes a raw u32 value as UTF-16 into the provided `u16` buffer, and then returns the subslice of the buffer that contains the encoded character.",
+        "suggest": "将原始 u32 值编码为 UTF-16 到提供的 `u16` 缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `char::encode_utf16`, this method also handles codepoints in the surrogate range.",
+        "suggest": "与 `char::encode_utf16` 不同，此方法还处理代理范围内的代码点。",
+        "translate": ""
+    },
+    {
+        "source": "(Creating a `char` in the surrogate range is UB.)",
+        "suggest": "(在代理范围内创建 `char` 是 UB。)",
+        "translate": ""
+    },
+    {
+        "source": "each arm checks whether there are enough bits to write into",
+        "suggest": "每个 arm 检查是否有足够的位可写入",
+        "translate": ""
+    },
+    {
+        "source": "The BMP falls through",
+        "suggest": "BMP 失败了",
+        "translate": ""
+    },
+    {
+        "source": "Supplementary planes break into surrogates.",
+        "suggest": "辅助展开分解为代理。",
+        "translate": ""
+    },
+    {
+        "source": "A character type.",
+        "suggest": "一个字符类型。",
+        "translate": ""
+    },
+    {
+        "source": "The `char` type represents a single character.",
+        "suggest": "`char` 类型代表一个字符。",
+        "translate": ""
+    },
+    {
+        "source": "More specifically, since 'character' isn't a well-defined concept in Unicode, `char` is a '[Unicode scalar value]', which is similar to, but not the same as, a '[Unicode code point]'.",
+        "suggest": "更具体地说，由于 'character' 不是 Unicode 中定义明确的概念，因此 `char` 是 `[Unicode 标量值]`，与 `[Unicode 代码点]` 相似但不相同。",
+        "translate": ""
+    },
+    {
+        "source": "This module exists for technical reasons, the primary documentation for `char` is directly on [the `char` primitive type][char] itself.",
+        "suggest": "存在该模块是出于技术原因，`char` 的主要文档直接在 [`char` 原始类型][char] 本身上。",
+        "translate": ""
+    },
+    {
+        "source": "This module is the home of the iterator implementations for the iterators implemented on `char`, as well as some useful constants and conversion functions that convert various types to `char`.",
+        "suggest": "该模块是 `char` 上实现的迭代器的迭代器实现的宿主，以及一些有用的常量和将各种类型转换为 `char` 的转换函数。",
+        "translate": ""
+    },
+    {
+        "source": "stable re-exports",
+        "suggest": "稳定的重导出",
+        "translate": ""
+    },
+    {
+        "source": "perma-unstable re-exports",
+        "suggest": "永久不稳定的重导出",
+        "translate": ""
+    },
+    {
+        "source": "ranges and tags for encoding characters",
+        "suggest": "编码字符的范围和标签",
+        "translate": ""
+    },
+    {
+        "source": "A [`char`] is a [Unicode Scalar Value], which means that it is a [Code Point], but only ones within a certain range.",
+        "suggest": "[`char`] 是 [Unicode Scalar Value]，这意味着它是 [Code Point]，但仅在一定范围内。",
+        "translate": ""
+    },
+    {
+        "source": "It can occur, for example, when giving ill-formed UTF-8 bytes to [`String::from_utf8_lossy`](../../std/string/struct.String.html#method.from_utf8_lossy).",
+        "suggest": "例如，当将格式错误的 UTF-8 字节提供给 [`String::from_utf8_lossy`](../../std/string/struct.String.html#method.from_utf8_lossy) 时，可能会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the hexadecimal Unicode escape of a character, as `char`s.",
+        "suggest": "返回一个迭代器，该迭代器生成字符的十六进制 Unicode 转义符，如 `char`s。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`escape_unicode`] method on [`char`].",
+        "suggest": "该 `struct` 是通过 [`char`] 上的 [`escape_unicode`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "The index of the next hex digit to be printed (0 if none), i.e., the number of remaining hex digits to be printed;",
+        "suggest": "下一个要打印的十六进制数字的索引 (如果没有则为 0)，即要打印的剩余十六进制数字的数目;",
+        "translate": ""
+    },
+    {
+        "source": "increasing from the least significant digit:",
+        "suggest": "从最低有效数字增加:",
+        "translate": ""
+    },
+    {
+        "source": "The enum values are ordered so that their representation is the same as the remaining length (besides the hexadecimal digits).",
+        "suggest": "枚举值是有序的，以便它们的表示形式与剩余长度相同 (十六进制数字除外)。",
+        "translate": ""
+    },
+    {
+        "source": "This likely makes `len()` a single load from memory) and inline-worth.",
+        "suggest": "这很可能使 `len()` 成为内存中的单个负载) 和内联值。",
+        "translate": ""
+    },
+    {
+        "source": "The match is a single memory access with no branching",
+        "suggest": "匹配是没有分支的单个内存访问",
+        "translate": ""
+    },
+    {
+        "source": "An iterator that yields the literal escape code of a `char`.",
+        "suggest": "产生 `char` 的字面量转义码的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`escape_default`] method on [`char`].",
+        "suggest": "该 `struct` 是通过 [`char`] 上的 [`escape_default`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`escape_debug`] method on [`char`].",
+        "suggest": "该 `struct` 是通过 [`char`] 上的 [`escape_debug`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the lowercase equivalent of a `char`.",
+        "suggest": "返回一个迭代器，该迭代器产生与 `char` 相等的小写字母。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`to_lowercase`] method on [`char`].",
+        "suggest": "该 `struct` 是通过 [`char`] 上的 [`to_lowercase`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an iterator that yields the uppercase equivalent of a `char`.",
+        "suggest": "返回一个迭代器，该迭代器产生与 `char` 等效的大写字母。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`to_uppercase`] method on [`char`].",
+        "suggest": "该 `struct` 是通过 [`char`] 上的 [`to_uppercase`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Including if chars[0] == '\\0'",
+        "suggest": "包括 chars[0] == '\\0'",
+        "translate": ""
+    },
+    {
+        "source": "String type implements Clone",
+        "suggest": "字符串类型实现克隆",
+        "translate": ""
+    },
+    {
+        "source": "so we can clone it",
+        "suggest": "所以我们可以克隆它",
+        "translate": ""
+    },
+    {
+        "source": "we add the Clone trait to Morpheus struct",
+        "suggest": "我们将克隆 trait 添加到 Morpheus 结构体",
+        "translate": ""
+    },
+    {
+        "source": "and now we can clone it!",
+        "suggest": "现在我们可以克隆它了!",
+        "translate": ""
+    },
+    {
+        "source": "implements Clone for Reading<T> when T is Clone.",
+        "suggest": "T 为 Clone 时，为 Reading<T> 实现 Clone。",
+        "translate": ""
+    },
+    {
+        "source": "implements Clone",
+        "suggest": "实现克隆",
+        "translate": ""
+    },
+    {
+        "source": "The `Clone` trait for types that cannot be 'implicitly copied'.",
+        "suggest": "不能隐式复制的类型的 `Clone` trait。",
+        "translate": ""
+    },
+    {
+        "source": "In Rust, some simple types are \"implicitly copyable\" and when you assign them or pass them as arguments, the receiver will get a copy, leaving the original value in place.",
+        "suggest": "在 Rust 中，一些简单类型是 \"implicitly copyable\"，当您分配它们或将它们作为参数传递时，接收者将获得一个副本，而将原始值保留在原位。",
+        "translate": ""
+    },
+    {
+        "source": "These types do not require allocation to copy and do not have finalizers (i.e., they do not contain owned boxes or implement [`Drop`]), so the compiler considers them cheap and safe to copy.",
+        "suggest": "这些类型不需要分配就可以复制并且没有终结器 (即，它们不包含拥有的 boxes 或实现 [`Drop`])，因此编译器认为它们便宜且安全地进行复制。",
+        "translate": ""
+    },
+    {
+        "source": "For other types copies must be made explicitly, by convention implementing the [`Clone`] trait and calling the [`clone`] method.",
+        "suggest": "对于其他类型，必须通过约定实现 [`Clone`] trait 并调用 [`clone`] 方法来显式复制。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage example:",
+        "suggest": "基本用法示例:",
+        "translate": ""
+    },
+    {
+        "source": "To easily implement the Clone trait, you can also use `#[derive(Clone)]`.",
+        "suggest": "要轻松实现 Clone trait，还可以使用 `#[derive(Clone)]`。",
+        "translate": ""
+    },
+    {
+        "source": "A common trait for the ability to explicitly duplicate an object.",
+        "suggest": "通用的 trait，用于显式复制对象。",
+        "translate": ""
+    },
+    {
+        "source": "Differs from [`Copy`] in that [`Copy`] is implicit and extremely inexpensive, while `Clone` is always explicit and may or may not be expensive.",
+        "suggest": "与 [`Copy`] 的不同之处在于，[`Copy`] 是隐式的并且非常便宜，而 `Clone` 始终是显式的，可能昂贵也可能不昂贵。",
+        "translate": ""
+    },
+    {
+        "source": "In order to enforce these characteristics, Rust does not allow you to reimplement [`Copy`], but you may reimplement `Clone` and run arbitrary code.",
+        "suggest": "为了强制执行这些特性，Rust 不允许您重新实现 [`Copy`]，但是您可以重新实现 `Clone` 并运行任意代码。",
+        "translate": ""
+    },
+    {
+        "source": "Since `Clone` is more general than [`Copy`], you can automatically make anything [`Copy`] be `Clone` as well.",
+        "suggest": "由于 `Clone` 比 [`Copy`] 更通用，因此您可以自动将 [`Copy`] 设为 `Clone`。",
+        "translate": ""
+    },
+    {
+        "source": "This trait can be used with `#[derive]` if all fields are `Clone`.",
+        "suggest": "如果所有字段均为 `Clone`，则此 trait 可以与 `#[derive]` 一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "The `derive`d implementation of [`Clone`] calls [`clone`] on each field.",
+        "suggest": "[`Clone`] 的 `derive`d 实现在每个字段上调用 [`clone`]。",
+        "translate": ""
+    },
+    {
+        "source": "For a generic struct, `#[derive]` implements `Clone` conditionally by adding bound `Clone` on generic parameters.",
+        "suggest": "对于泛型结构体，`#[derive]` 通过在泛型参数上添加绑定的 `Clone` 有条件地实现 `Clone`。",
+        "translate": ""
+    },
+    {
+        "source": "How can I implement `Clone`?",
+        "suggest": "如何实现 `Clone`?",
+        "translate": ""
+    },
+    {
+        "source": "Types that are [`Copy`] should have a trivial implementation of `Clone`.",
+        "suggest": "[`Copy`] 类型应该实现 `Clone` 的简单实现。",
+        "translate": ""
+    },
+    {
+        "source": "More formally:",
+        "suggest": "更正式地:",
+        "translate": ""
+    },
+    {
+        "source": "if `T: Copy`, `x: T`, and `y: &T`, then `let x = y.clone();` is equivalent to `let x = *y;`.",
+        "suggest": "如果 `T: Copy`，`x: T` 和 `y: &T`，则 `let x = y.clone();` 等效于 `let x = *y;`。",
+        "translate": ""
+    },
+    {
+        "source": "Manual implementations should be careful to uphold this invariant;",
+        "suggest": "手动执行时应注意保持不变。",
+        "translate": ""
+    },
+    {
+        "source": "however, unsafe code must not rely on it to ensure memory safety.",
+        "suggest": "但是，不安全的代码一定不能依靠它来确保内存安全。",
+        "translate": ""
+    },
+    {
+        "source": "An example is a generic struct holding a function pointer.",
+        "suggest": "一个示例是持有函数指针的泛型结构体。",
+        "translate": ""
+    },
+    {
+        "source": "In this case, the implementation of `Clone` cannot be `derive`d, but can be implemented as:",
+        "suggest": "在这种情况下，不能对 `Clone` 的实现进行派生操作，而可以将其实现为:",
+        "translate": ""
+    },
+    {
+        "source": "Additional implementors",
+        "suggest": "其他实现者",
+        "translate": ""
+    },
+    {
+        "source": "In addition to the [implementors listed below][impls], the following types also implement `Clone`:",
+        "suggest": "除 [implementors listed below][impls] 之外，以下类型还实现 `Clone`:",
+        "translate": ""
+    },
+    {
+        "source": "Function item types (i.e., the distinct types defined for each function)",
+        "suggest": "函数项类型 (即，为每个函数定义的不同类型)",
+        "translate": ""
+    },
+    {
+        "source": "Function pointer types (e.g., `fn() -> i32`)",
+        "suggest": "函数指针类型 (例如 `fn() -> i32`)",
+        "translate": ""
+    },
+    {
+        "source": "Array types, for all sizes, if the item type also implements `Clone` (e.g., `[i32; 123456]`)",
+        "suggest": "如果项类型也实现 `Clone` (例如 `[i32; 123456]`)，则所有大小的数组类型",
+        "translate": ""
+    },
+    {
+        "source": "Tuple types, if each component also implements `Clone` (e.g., `()`, `(i32, bool)`)",
+        "suggest": "如果每个组件还实现 `Clone` (例如 `()`，`(i32, bool)`)，则为元组类型",
+        "translate": ""
+    },
+    {
+        "source": "Closure types, if they capture no value from the environment or if all such captured values implement `Clone` themselves.",
+        "suggest": "闭包类型，如果它们没有从环境中捕获任何值，或者所有此类捕获的值本身都实现了 `Clone`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that variables captured by shared reference always implement `Clone` (even if the referent doesn't), while variables captured by mutable reference never implement `Clone`.",
+        "suggest": "请注意，由共享引用捕获的变量始终实现 `Clone` (即使引用对象没有实现)，而由变量引用捕获的变量从不实现 `Clone`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of the value.",
+        "suggest": "返回值的副本。",
+        "translate": ""
+    },
+    {
+        "source": "Performs copy-assignment from `source`.",
+        "suggest": "从 `source` 执行复制分配。",
+        "translate": ""
+    },
+    {
+        "source": "is equivalent to `a = b.clone()` in functionality, but can be overridden to reuse the resources of `a` to avoid unnecessary allocations.",
+        "suggest": "在功能上等效于 `a = b.clone()`，但是可以重写以重用 `a` 的资源，以避免不必要的分配。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `Clone`.",
+        "suggest": "派生宏，生成 trait `Clone` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "these structs are used solely by #[derive] to assert that every component of a type implements Clone or Copy.",
+        "suggest": "#[derive] 仅使用这些结构体来断言类型的每个组件都实现 Clone 或 Copy。",
+        "translate": ""
+    },
+    {
+        "source": "These structs should never appear in user code.",
+        "suggest": "这些结构体永远不会出现在用户代码中。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations of `Clone` for primitive types.",
+        "suggest": "`Clone` 的基本类型的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations that cannot be described in Rust are implemented in `traits::SelectionContext::copy_clone_conditions()` in `rustc_trait_selection`.",
+        "suggest": "`rustc_trait_selection` 中的 `traits::SelectionContext::copy_clone_conditions()` 中实现了 Rust 中无法描述的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Shared references can be cloned, but mutable references *cannot*!",
+        "suggest": "共享的引用可以被克隆，但是可变引用 *不能*!",
+        "translate": ""
+    },
+    {
+        "source": "The derive implements <BookFormat> == <BookFormat> comparisons",
+        "suggest": "衍生工具 <BookFormat> == <BookFormat> 比较",
+        "translate": ""
+    },
+    {
+        "source": "Implement <Book> == <BookFormat> comparisons",
+        "suggest": "实现 <Book> == <BookFormat> 比较",
+        "translate": ""
+    },
+    {
+        "source": "Implement <BookFormat> == <Book> comparisons",
+        "suggest": "实现 <BookFormat> == <Book> 比较",
+        "translate": ""
+    },
+    {
+        "source": "The following should hold by transitivity but doesn't.",
+        "suggest": "以下应该通过传递性来保持，但不是。",
+        "translate": ""
+    },
+    {
+        "source": "sort the array from largest to smallest.",
+        "suggest": "从最大到最小对数组进行排序。",
+        "translate": ""
+    },
+    {
+        "source": "Functionality for ordering and comparison.",
+        "suggest": "排序和比较的功能。",
+        "translate": ""
+    },
+    {
+        "source": "This module contains various tools for ordering and comparing values.",
+        "suggest": "该模块包含用于排序和比较值的各种工具。",
+        "translate": ""
+    },
+    {
+        "source": "In summary:",
+        "suggest": "在总结中:",
+        "translate": ""
+    },
+    {
+        "source": "and [`PartialEq`] are traits that allow you to define total and partial equality between values, respectively.",
+        "suggest": "和 [`PartialEq`] 是 traits，它们允许您分别定义值之间的全部和部分相等。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing them overloads the `==` and `!=` operators.",
+        "suggest": "实现它们会使 `==` 和 `!=` 运算符过载。",
+        "translate": ""
+    },
+    {
+        "source": "and [`PartialOrd`] are traits that allow you to define total and partial orderings between values, respectively.",
+        "suggest": "[`PartialOrd`] 和 [`PartialOrd`] 是 traits，它们允许您分别定义值之间的全部和部分排序。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing them overloads the `<`, `<=`, `>`, and `>=` operators.",
+        "suggest": "实现它们会使 `<`，`<=`，`>` 和 `>=` 运算符过载。",
+        "translate": ""
+    },
+    {
+        "source": "is an enum returned by the main functions of [`Ord`] and [`PartialOrd`], and describes an ordering.",
+        "suggest": "是 [`Ord`] 和 [`PartialOrd`] 的主函数返回的枚举，并描述了顺序。",
+        "translate": ""
+    },
+    {
+        "source": "is a struct that allows you to easily reverse an ordering.",
+        "suggest": "是一种结构体，可让您轻松地颠倒顺序。",
+        "translate": ""
+    },
+    {
+        "source": "and [`min`] are functions that build off of [`Ord`] and allow you to find the maximum or minimum of two values.",
+        "suggest": "和 [`min`] 是在 [`Ord`] 的基础上构建的函数，可让您找到两个值的最大值或最小值。",
+        "translate": ""
+    },
+    {
+        "source": "For more details, see the respective documentation of each item in the list.",
+        "suggest": "有关更多详细信息，请参见列表中每个项目的相应文档。",
+        "translate": ""
+    },
+    {
+        "source": "Trait for equality comparisons which are [partial equivalence relations](https://en.wikipedia.org/wiki/Partial_equivalence_relation).",
+        "suggest": "等值比较器的 Trait 为 [部分等价关系](https://en.wikipedia.org/wiki/Partial_equivalence_relation)。",
+        "translate": ""
+    },
+    {
+        "source": "This trait allows for partial equality, for types that do not have a full equivalence relation.",
+        "suggest": "trait 允许部分相等，用于不具有完全等价关系的类型。",
+        "translate": ""
+    },
+    {
+        "source": "For example, in floating point numbers `NaN != NaN`, so floating point types implement `PartialEq` but not [`trait@Eq`].",
+        "suggest": "例如，在浮点数 `NaN != NaN` 中，因此浮点类型实现 `PartialEq`，但不实现 [`trait@Eq`]。",
+        "translate": ""
+    },
+    {
+        "source": "Formally, the equality must be (for all `a`, `b`, `c` of type `A`, `B`, `C`):",
+        "suggest": "形式上，相等必须为 (对于所有 `A`，`B`，`C` 类型的 `a`，`b`，`c`) :",
+        "translate": ""
+    },
+    {
+        "source": "**Symmetric**: if `A: PartialEq<B>` and `B: PartialEq<A>`, then **`a == b` implies `b == a`**; and",
+        "suggest": "**对称**: 如果 `A: PartialEq<B>` 和 `B: PartialEq<A>`，则 **a == b`意味着 'b == a`**; 和",
+        "translate": ""
+    },
+    {
+        "source": "**Transitive**: if `A: PartialEq<B>` and `B: PartialEq<C>` and `A:",
+        "suggest": "**可传递**: 如果 `A: PartialEq<B>` 和 `B: PartialEq<C>` 以及 `A:",
+        "translate": ""
+    },
+    {
+        "source": "PartialEq<C>`, then **`a == b` and `b == c` implies `a == c`**.",
+        "suggest": "偏等式 <C>`，然后 **`a == b`，而 `b == c` 表示`a == c`**。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the `B: PartialEq<A>` (symmetric) and `A: PartialEq<C>` (transitive) impls are not forced to exist, but these requirements apply whenever they do exist.",
+        "suggest": "请注意，`B: PartialEq<A>` (symmetric) 和 `A: PartialEq<C>` (transitive) 强制不是强制存在的，但是这些要求只要存在就适用。",
+        "translate": ""
+    },
+    {
+        "source": "This trait can be used with `#[derive]`.",
+        "suggest": "该 trait 可以与 `#[derive]` 一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d on structs, two instances are equal if all fields are equal, and not equal if any fields are not equal.",
+        "suggest": "在结构体上 `derive` d 时，如果所有字段都相等，则两个实例相等; 如果任何字段不相等，则两个实例不相等。",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d on enums, each variant is equal to itself and not equal to the other variants.",
+        "suggest": "对枚举进行派生时，每个成员都等于自己，而不等于另一个成员。",
+        "translate": ""
+    },
+    {
+        "source": "How can I implement `PartialEq`?",
+        "suggest": "如何实现 `PartialEq`?",
+        "translate": ""
+    },
+    {
+        "source": "only requires the [`eq`] method to be implemented;",
+        "suggest": "只需要实现 [`eq`] 方法;",
+        "translate": ""
+    },
+    {
+        "source": "[`ne`] is defined in terms of it by default.",
+        "suggest": "[`ne`] 默认情况下是根据它定义的。",
+        "translate": ""
+    },
+    {
+        "source": "Any manual implementation of [`ne`] *must* respect the rule that [`eq`] is a strict inverse of [`ne`];",
+        "suggest": "[`ne`] 的任何手动实现都必须遵循以下规则: [`eq`] 是 [`ne`] 的严格反向;",
+        "translate": ""
+    },
+    {
+        "source": "that is, `!(a == b)` if and only if `a != b`.",
+        "suggest": "也就是 `!(a == b)` 当且仅当 `a != b`。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations of `PartialEq`, [`PartialOrd`], and [`Ord`] *must* agree with each other.",
+        "suggest": "`PartialEq`，[`PartialOrd`] 和 [`Ord`] 的实现 *必须* 相互同意。",
+        "translate": ""
+    },
+    {
+        "source": "It's easy to accidentally make them disagree by deriving some of the traits and manually implementing others.",
+        "suggest": "通过派生一些 traits 并手动实现其他一些行为，很容易使它们不以为然。",
+        "translate": ""
+    },
+    {
+        "source": "An example implementation for a domain in which two books are considered the same book if their ISBN matches, even if the formats differ:",
+        "suggest": "一个域的示例实现，在该域中，即使两本书的 ISBN 匹配，即使格式不同，也将其视为同一本书:",
+        "translate": ""
+    },
+    {
+        "source": "How can I compare two different types?",
+        "suggest": "如何比较两种不同的类型?",
+        "translate": ""
+    },
+    {
+        "source": "The type you can compare with is controlled by `PartialEq`'s type parameter.",
+        "suggest": "您可以比较的类型由 `PartialEq` 的类型参数控制。",
+        "translate": ""
+    },
+    {
+        "source": "For example, let's tweak our previous code a bit:",
+        "suggest": "例如，让我们对之前的代码进行一些调整:",
+        "translate": ""
+    },
+    {
+        "source": "By changing `impl PartialEq for Book` to `impl PartialEq<BookFormat> for Book`, we allow `BookFormat`s to be compared with `Book`s.",
+        "suggest": "通过将 `impl PartialEq for Book` 更改为 `impl PartialEq<BookFormat> for Book`，我们可以将 BookFormat 和 Book 进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "A comparison like the one above, which ignores some fields of the struct, can be dangerous.",
+        "suggest": "像上面这样的比较 (它忽略了结构体的某些字段) 可能很危险。",
+        "translate": ""
+    },
+    {
+        "source": "It can easily lead to an unintended violation of the requirements for a partial equivalence relation.",
+        "suggest": "这很容易导致意外违反部分对等关系的要求。",
+        "translate": ""
+    },
+    {
+        "source": "For example, if we kept the above implementation of `PartialEq<Book>` for `BookFormat` and added an implementation of `PartialEq<Book>` for `Book` (either via a `#[derive]` or via the manual implementation from the first example) then the result would violate transitivity:",
+        "suggest": "例如，如果我们保留了以上针对 `BookFormat` 的 `PartialEq<Book>` 的实现，并为 `Book` 添加了 `PartialEq<Book>` 的实现 (通过 `#[derive]` 或第一个示例中的手动实现)，则结果将违反传递性:",
+        "translate": ""
+    },
+    {
+        "source": "This method tests for `self` and `other` values to be equal, and is used by `==`.",
+        "suggest": "此方法测试 `self` 和 `other` 值是否相等，并由 `==` 使用。",
+        "translate": ""
+    },
+    {
+        "source": "This method tests for `!=`.",
+        "suggest": "此方法测试 `!=`。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `PartialEq`.",
+        "suggest": "派生宏，生成 trait `PartialEq` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "Trait for equality comparisons which are [equivalence relations](https://en.wikipedia.org/wiki/Equivalence_relation).",
+        "suggest": "[等价关系](https://en.wikipedia.org/wiki/Equivalence_relation) 等式比较的 Trait。",
+        "translate": ""
+    },
+    {
+        "source": "This means, that in addition to `a == b` and `a != b` being strict inverses, the equality must be (for all `a`, `b` and `c`):",
+        "suggest": "这意味着，除了 `a == b` 和 `a != b` 是严格的逆之外，相等必须是 (对于所有 `a`，`b` 和 `c`) :",
+        "translate": ""
+    },
+    {
+        "source": "symmetric: `a == b` implies `b == a`;",
+        "suggest": "对称: `a == b` 表示 `b == a`;",
+        "translate": ""
+    },
+    {
+        "source": "and",
+        "suggest": "和",
+        "translate": ""
+    },
+    {
+        "source": "transitive: `a == b` and `b == c` implies `a == c`.",
+        "suggest": "可传递的: `a == b` 和 `b == c` 表示 `a == c`。",
+        "translate": ""
+    },
+    {
+        "source": "This property cannot be checked by the compiler, and therefore `Eq` implies [`PartialEq`], and has no extra methods.",
+        "suggest": "编译器无法检查此属性，因此 `Eq` 表示 [`PartialEq`]，并且没有其他方法。",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d, because `Eq` has no extra methods, it is only informing the compiler that this is an equivalence relation rather than a partial equivalence relation.",
+        "suggest": "当 `derived' 时，由于 `Eq` 没有额外的方法，它只是通知编译器这是一个等价关系，而不是部分等价关系。",
+        "translate": ""
+    },
+    {
+        "source": "Note that the `derive` strategy requires all fields are `Eq`, which isn't always desired.",
+        "suggest": "请注意，`derive` 策略要求所有字段均为 `Eq`，这并不总是需要的。",
+        "translate": ""
+    },
+    {
+        "source": "How can I implement `Eq`?",
+        "suggest": "如何实现 `Eq`?",
+        "translate": ""
+    },
+    {
+        "source": "If you cannot use the `derive` strategy, specify that your type implements `Eq`, which has no methods:",
+        "suggest": "如果您不能使用 `derive` 策略，请指定您的类型实现 `Eq`，它没有方法:",
+        "translate": ""
+    },
+    {
+        "source": "this method is used solely by #[deriving] to assert that every component of a type implements #[deriving] itself, the current deriving infrastructure means doing this assertion without using a method on this trait is nearly impossible.",
+        "suggest": "#[deriving] 只能单独使用此方法来断言类型的每个组件本身都实现 #[deriving]，当前派生基础结构意味着在此 trait 上不使用任何方法来进行断言几乎是不可能的。",
+        "translate": ""
+    },
+    {
+        "source": "This should never be implemented by hand.",
+        "suggest": "绝不能手工实现。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `Eq`.",
+        "suggest": "派生宏，生成 trait `Eq` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "this struct is used solely by #[derive] to assert that every component of a type implements Eq.",
+        "suggest": "#[derive] 单独使用此结构体来断言类型的每个组件都实现 Eq。",
+        "translate": ""
+    },
+    {
+        "source": "This struct should never appear in user code.",
+        "suggest": "该结构体永远不会出现在用户代码中。",
+        "translate": ""
+    },
+    {
+        "source": "An `Ordering` is the result of a comparison between two values.",
+        "suggest": "`Ordering` 是两个值之间比较的结果。",
+        "translate": ""
+    },
+    {
+        "source": "An ordering where a compared value is less than another.",
+        "suggest": "比较值小于另一个值的排序。",
+        "translate": ""
+    },
+    {
+        "source": "An ordering where a compared value is equal to another.",
+        "suggest": "比较值等于另一个的排序。",
+        "translate": ""
+    },
+    {
+        "source": "An ordering where a compared value is greater than another.",
+        "suggest": "比较值大于另一个值的排序。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the ordering is the `Equal` variant.",
+        "suggest": "如果排序的是 `Equal` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the ordering is not the `Equal` variant.",
+        "suggest": "如果排序的不是 `Equal` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the ordering is the `Less` variant.",
+        "suggest": "如果排序的是 `Less` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the ordering is the `Greater` variant.",
+        "suggest": "如果排序的是 `Greater` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the ordering is either the `Less` or `Equal` variant.",
+        "suggest": "如果排序的是 `Less` 或 `Equal` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the ordering is either the `Greater` or `Equal` variant.",
+        "suggest": "如果排序的是 `Greater` 或 `Equal` 成员，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Reverses the `Ordering`.",
+        "suggest": "反转 `Ordering`。",
+        "translate": ""
+    },
+    {
+        "source": "becomes `Greater`.",
+        "suggest": "变为 `Greater`。",
+        "translate": ""
+    },
+    {
+        "source": "becomes `Less`.",
+        "suggest": "变为 `Less`。",
+        "translate": ""
+    },
+    {
+        "source": "becomes `Equal`.",
+        "suggest": "变为 `Equal`。",
+        "translate": ""
+    },
+    {
+        "source": "Basic behavior:",
+        "suggest": "基本行为:",
+        "translate": ""
+    },
+    {
+        "source": "This method can be used to reverse a comparison:",
+        "suggest": "此方法可用于反转比较:",
+        "translate": ""
+    },
+    {
+        "source": "Chains two orderings.",
+        "suggest": "链接两个排序。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `self` when it's not `Equal`.",
+        "suggest": "如果不是 `Equal`，则返回 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise returns `other`.",
+        "suggest": "否则返回 `other`。",
+        "translate": ""
+    },
+    {
+        "source": "Chains the ordering with the given function.",
+        "suggest": "用给定的函数链接顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise calls `f` and returns the result.",
+        "suggest": "否则，调用 `f` 并返回结果。",
+        "translate": ""
+    },
+    {
+        "source": "A helper struct for reverse ordering.",
+        "suggest": "用于逆序排序的辅助结构体。",
+        "translate": ""
+    },
+    {
+        "source": "This struct is a helper to be used with functions like [`Vec::sort_by_key`] and can be used to reverse order a part of a key.",
+        "suggest": "该结构体是与 [`Vec::sort_by_key`] 等函数一起使用的助手，并且可以用于对键的一部分进行反向排序。",
+        "translate": ""
+    },
+    {
+        "source": "Trait for types that form a [total order](https://en.wikipedia.org/wiki/Total_order).",
+        "suggest": "Trait 用于形成 [total order](https://en.wikipedia.org/wiki/Total_order) 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "total and asymmetric: exactly one of `a < b`, `a == b` or `a > b` is true;",
+        "suggest": "完全不对称: `a < b`，`a == b` 或 `a > b` 之一正确;",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d on structs, it will produce a [lexicographic](https://en.wikipedia.org/wiki/Lexicographic_order) ordering based on the top-to-bottom declaration order of the struct's members.",
+        "suggest": "在结构体上 `derive` d 时，它将基于结构体成员的自上而下的声明顺序生成 [词典](https://en.wikipedia.org/wiki/Lexicographic_order) 顺序。",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d on enums, variants are ordered by their top-to-bottom discriminant order.",
+        "suggest": "对枚举进行派生时，成员按从上到下的判别顺序排序。",
+        "translate": ""
+    },
+    {
+        "source": "Lexicographical comparison",
+        "suggest": "词典比较",
+        "translate": ""
+    },
+    {
+        "source": "Lexicographical comparison is an operation with the following properties:",
+        "suggest": "词典比较是一种具有以下属性的操作:",
+        "translate": ""
+    },
+    {
+        "source": "Two sequences are compared element by element.",
+        "suggest": "逐个元素比较两个序列。",
+        "translate": ""
+    },
+    {
+        "source": "The first mismatching element defines which sequence is lexicographically less or greater than the other.",
+        "suggest": "在字典上，第一个错配元素定义哪个序列比另一个序列小或大。",
+        "translate": ""
+    },
+    {
+        "source": "If one sequence is a prefix of another, the shorter sequence is lexicographically less than the other.",
+        "suggest": "如果一个序列是另一个序列的前缀，则从字典上看，较短的序列比另一个序列小。",
+        "translate": ""
+    },
+    {
+        "source": "If two sequence have equivalent elements and are of the same length, then the sequences are lexicographically equal.",
+        "suggest": "如果两个序列具有相等的元素并且长度相同，则序列在字典上是相等的。",
+        "translate": ""
+    },
+    {
+        "source": "An empty sequence is lexicographically less than any non-empty sequence.",
+        "suggest": "在字典上，空序列比任何非空序列都少。",
+        "translate": ""
+    },
+    {
+        "source": "Two empty sequences are lexicographically equal.",
+        "suggest": "两个空序列在字典上是相等的。",
+        "translate": ""
+    },
+    {
+        "source": "How can I implement `Ord`?",
+        "suggest": "如何实现 `Ord`?",
+        "translate": ""
+    },
+    {
+        "source": "requires that the type also be [`PartialOrd`] and [`Eq`] (which requires [`PartialEq`]).",
+        "suggest": "要求类型也为 [`PartialOrd`] 和 [`Eq`] (需要 [`PartialEq`])。",
+        "translate": ""
+    },
+    {
+        "source": "Then you must define an implementation for [`cmp`].",
+        "suggest": "然后，您必须定义 [`cmp`] 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "You may find it useful to use [`cmp`] on your type's fields.",
+        "suggest": "您可能会发现在类型的字段上使用 [`cmp`] 很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations of [`PartialEq`], [`PartialOrd`], and `Ord` *must* agree with each other.",
+        "suggest": "[`PartialEq`]，[`PartialOrd`] 和 `Ord` 的实现 *必须* 相互同意。",
+        "translate": ""
+    },
+    {
+        "source": "That is, `a.cmp(b) == Ordering::Equal` if and only if `a == b` and `Some(a.cmp(b)) == a.partial_cmp(b)` for all `a` and `b`.",
+        "suggest": "也就是说，当且仅当对于所有 `a` 和 `b` 使用 `a == b` 和 `Some(a.cmp(b)) == a.partial_cmp(b)` 时，才使用 `a.cmp(b) == Ordering::Equal`。",
+        "translate": ""
+    },
+    {
+        "source": "Here's an example where you want to sort people by height only, disregarding `id` and `name`:",
+        "suggest": "这是一个示例，您只想按身高对人进行排序，而不考虑 `id` 和 `name`:",
+        "translate": ""
+    },
+    {
+        "source": "This method returns an [`Ordering`] between `self` and `other`.",
+        "suggest": "此方法返回 `self` 和 `other` 之间的 [`Ordering`]。",
+        "translate": ""
+    },
+    {
+        "source": "By convention, `self.cmp(&other)` returns the ordering matching the expression `self <operator> other` if true.",
+        "suggest": "按照惯例，如果为 true，则 `self.cmp(&other)` 返回与表达式 `self <operator> other` 匹配的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Compares and returns the maximum of two values.",
+        "suggest": "比较并返回两个值中的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the second argument if the comparison determines them to be equal.",
+        "suggest": "如果比较确定它们相等，则返回第二个参数。",
+        "translate": ""
+    },
+    {
+        "source": "Compares and returns the minimum of two values.",
+        "suggest": "比较并返回两个值中的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the first argument if the comparison determines them to be equal.",
+        "suggest": "如果比较确定它们相等，则返回第一个参数。",
+        "translate": ""
+    },
+    {
+        "source": "Restrict a value to a certain interval.",
+        "suggest": "将值限制为一定的时间间隔。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `max` if `self` is greater than `max`, and `min` if `self` is less than `min`.",
+        "suggest": "如果 `self` 大于 `max`，则返回 `max`; 如果 `self` 小于 `min`，则返回 `min`。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise this returns `self`.",
+        "suggest": "否则，将返回 `self`。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `min > max`.",
+        "suggest": "如果为 `min > max`，则为 Panics。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `Ord`.",
+        "suggest": "派生宏，生成 trait `Ord` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "Trait for values that can be compared for a sort-order.",
+        "suggest": "Trait 表示可以按排序顺序比较的值。",
+        "translate": ""
+    },
+    {
+        "source": "The comparison must satisfy, for all `a`, `b` and `c`:",
+        "suggest": "对于所有 `a`，`b` 和 `c`，比较必须满足:",
+        "translate": ""
+    },
+    {
+        "source": "asymmetry: if `a < b` then `!(a > b)`, as well as `a > b` implying `!(a < b)`;",
+        "suggest": "不对称: 如果 `a < b` 则 `!(a > b)`，以及 `a > b` 表示 `!(a < b)`;",
+        "translate": ""
+    },
+    {
+        "source": "transitivity: `a < b` and `b < c` implies `a < c`.",
+        "suggest": "可传递性: `a < b` 和 `b < c` 表示 `a < c`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that these requirements mean that the trait itself must be implemented symmetrically and transitively: if `T: PartialOrd<U>` and `U: PartialOrd<V>` then `U: PartialOrd<T>` and `T: PartialOrd<V>`.",
+        "suggest": "请注意，这些要求意味着 trait 本身必须对称且可传递地实现: 如果 `T: PartialOrd<U>` 和 `U: PartialOrd<V>`，则 `U: PartialOrd<T>` 和 `T: PartialOrd<V>`。",
+        "translate": ""
+    },
+    {
+        "source": "How can I implement `PartialOrd`?",
+        "suggest": "如何实现 `PartialOrd`?",
+        "translate": ""
+    },
+    {
+        "source": "only requires implementation of the [`partial_cmp`] method, with the others generated from default implementations.",
+        "suggest": "仅需要 [`partial_cmp`] 方法的实现，而其他方法则是从默认实现中生成的。",
+        "translate": ""
+    },
+    {
+        "source": "However it remains possible to implement the others separately for types which do not have a total order.",
+        "suggest": "但是，对于没有总顺序的类型，仍然可以单独实现其他类型。",
+        "translate": ""
+    },
+    {
+        "source": "For example, for floating point numbers, `NaN < 0 == false` and `NaN >= 0 == false` (cf.",
+        "suggest": "例如，对于浮点数，`NaN < 0 == false` 和 `NaN >= 0 == false` (参见",
+        "translate": ""
+    },
+    {
+        "source": "IEEE 754-2008 section 5.11).",
+        "suggest": "IEEE 754-2008 第 5.11 节)。",
+        "translate": ""
+    },
+    {
+        "source": "requires your type to be [`PartialEq`].",
+        "suggest": "要求您输入 [`PartialEq`]。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations of [`PartialEq`], `PartialOrd`, and [`Ord`] *must* agree with each other.",
+        "suggest": "[`PartialEq`]，`PartialOrd` 和 [`Ord`] 的实现 *必须* 相互同意。",
+        "translate": ""
+    },
+    {
+        "source": "If your type is [`Ord`], you can implement [`partial_cmp`] by using [`cmp`]:",
+        "suggest": "如果您的类型是 [`Ord`]，则可以使用 [`cmp`] 来实现 [`partial_cmp`]:",
+        "translate": ""
+    },
+    {
+        "source": "You may also find it useful to use [`partial_cmp`] on your type's fields.",
+        "suggest": "您可能还会发现在类型的字段上使用 [`partial_cmp`] 很有用。",
+        "translate": ""
+    },
+    {
+        "source": "Here is an example of `Person` types who have a floating-point `height` field that is the only field to be used for sorting:",
+        "suggest": "这是 `Person` 类型的示例，它们具有一个浮点 `height` 字段，该字段是唯一用于排序的字段:",
+        "translate": ""
+    },
+    {
+        "source": "This method returns an ordering between `self` and `other` values if one exists.",
+        "suggest": "如果存在，则此方法返回 `self` 和 `other` 值之间的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "When comparison is impossible:",
+        "suggest": "如果无法进行比较:",
+        "translate": ""
+    },
+    {
+        "source": "This method tests less than (for `self` and `other`) and is used by the `<` operator.",
+        "suggest": "此方法测试的内容少于 (对于 `self` 和 `other`)，并且由 `<` 操作员使用。",
+        "translate": ""
+    },
+    {
+        "source": "This method tests less than or equal to (for `self` and `other`) and is used by the `<=` operator.",
+        "suggest": "此方法测试小于或等于 (对于 `self` 和 `other`)，并且由 `<=` 运算符使用。",
+        "translate": ""
+    },
+    {
+        "source": "This method tests greater than (for `self` and `other`) and is used by the `>` operator.",
+        "suggest": "此方法测试大于 (对于 `self` 和 `other`)，并且由 `>` 操作员使用。",
+        "translate": ""
+    },
+    {
+        "source": "This method tests greater than or equal to (for `self` and `other`) and is used by the `>=` operator.",
+        "suggest": "此方法测试是否大于或等于 (对于 `self` 和 `other`)，并且由 `>=` 运算符使用。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `PartialOrd`.",
+        "suggest": "派生宏，生成 trait `PartialOrd` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "Internally uses an alias to [`Ord::min`].",
+        "suggest": "在内部使用 [`Ord::min`] 的别名。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the minimum of two values with respect to the specified comparison function.",
+        "suggest": "返回相对于指定比较函数的两个值中的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the element that gives the minimum value from the specified function.",
+        "suggest": "返回给出指定函数中最小值的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Internally uses an alias to [`Ord::max`].",
+        "suggest": "在内部使用 [`Ord::max`] 的别名。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the maximum of two values with respect to the specified comparison function.",
+        "suggest": "返回有关指定比较函数的两个值中的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the element that gives the maximum value from the specified function.",
+        "suggest": "返回给出指定函数最大值的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of PartialEq, Eq, PartialOrd and Ord for primitive types",
+        "suggest": "基本类型的 PartialEq，Eq，PartialOrd 和 Ord 的实现",
+        "translate": ""
+    },
+    {
+        "source": "The order here is important to generate more optimal assembly.",
+        "suggest": "此处的顺序对于生成更优化的装配很重要。",
+        "translate": ""
+    },
+    {
+        "source": "See <https://github.com/rust-lang/rust/issues/63758> for more info.",
+        "suggest": "有关更多信息，请参见 <https://github.com/rust-lang/rust/issues/63758>。",
+        "translate": ""
+    },
+    {
+        "source": "Casting to i8's and converting the difference to an Ordering generates more optimal assembly.",
+        "suggest": "转换为 i8 并将差异转换为 Ordering 可以生成更优化的装配。",
+        "translate": ""
+    },
+    {
+        "source": "See <https://github.com/rust-lang/rust/issues/66780> for more info.",
+        "suggest": "有关更多信息，请参见 <https://github.com/rust-lang/rust/issues/66780>。",
+        "translate": ""
+    },
+    {
+        "source": "bool as i8 returns 0 or 1, so the difference can't be anything else",
+        "suggest": "由于 i8 返回的 bool 为 0 或 1，因此其差值不能为其他值",
+        "translate": ""
+    },
+    {
+        "source": "Let's pretend that adding one is an interesting function.",
+        "suggest": "让我们假设添加一个是一个有趣的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Do more interesting stuff...",
+        "suggest": "做更多有趣的事情...",
+        "translate": ""
+    },
+    {
+        "source": "Silently truncates `big_number`, requires detecting and handling the truncation after the fact.",
+        "suggest": "默默地截断 `big_number`，事实之后需要检测并处理该截断。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an error because `big_number` is too big to fit in an `i32`.",
+        "suggest": "由于 `big_number` 太大而无法容纳在 `i32` 中，因此返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Ok(3)`.",
+        "suggest": "返回 `Ok(3)`。",
+        "translate": ""
+    },
+    {
+        "source": "Never returns `Err`",
+        "suggest": "永不返回 `Err`",
+        "translate": ""
+    },
+    {
+        "source": "Traits for conversions between types.",
+        "suggest": "Traits 用于类型之间的转换。",
+        "translate": ""
+    },
+    {
+        "source": "The traits in this module provide a way to convert from one type to another type.",
+        "suggest": "此模块中的 traits 提供了一种从一种类型转换为另一种类型的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Each trait serves a different purpose:",
+        "suggest": "每个 trait 都有不同的用途:",
+        "translate": ""
+    },
+    {
+        "source": "Implement the [`AsRef`] trait for cheap reference-to-reference conversions",
+        "suggest": "实现 [`AsRef`] trait 以实现廉价的引用到引用转换",
+        "translate": ""
+    },
+    {
+        "source": "Implement the [`AsMut`] trait for cheap mutable-to-mutable conversions",
+        "suggest": "实现 [`AsMut`] trait 进行廉价的变量到变量转换",
+        "translate": ""
+    },
+    {
+        "source": "Implement the [`From`] trait for consuming value-to-value conversions",
+        "suggest": "实现 [`From`] trait 以进行值到值的转换",
+        "translate": ""
+    },
+    {
+        "source": "Implement the [`Into`] trait for consuming value-to-value conversions to types outside the current crate",
+        "suggest": "实现 [`Into`] trait，以便将值转换为当前 crate 之外的类型",
+        "translate": ""
+    },
+    {
+        "source": "The [`TryFrom`] and [`TryInto`] traits behave like [`From`] and [`Into`], but should be implemented when the conversion can fail.",
+        "suggest": "[`TryFrom`] 和 [`TryInto`] traits 的行为类似于 [`From`] 和 [`Into`]，但应在转换失败时实现。",
+        "translate": ""
+    },
+    {
+        "source": "The traits in this module are often used as trait bounds for generic functions such that to arguments of multiple types are supported.",
+        "suggest": "此模块中的 traits 通常用作泛型函数的 trait bounds，以便支持多种类型的参数。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation of each trait for examples.",
+        "suggest": "有关示例，请参见每个 trait 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "As a library author, you should always prefer implementing [`From<T>`][`From`] or [`TryFrom<T>`][`TryFrom`] rather than [`Into<U>`][`Into`] or [`TryInto<U>`][`TryInto`], as [`From`] and [`TryFrom`] provide greater flexibility and offer equivalent [`Into`] or [`TryInto`] implementations for free, thanks to a blanket implementation in the standard library.",
+        "suggest": "作为库作者，您应该总是更喜欢实现 [`From<T>`][`From`] 或 [`TryFrom<T>`][`TryFrom`]，而不是 [`Into<U>`][`Into`] 或 [`TryInto<U>`][`TryInto`]，因为 [`From`] 和 [`TryFrom`] 提供了更大的灵活性，并免费提供了等效的 [`Into`] 或 [`TryInto`] 实现，这要归功于标准库中的全面实现。",
+        "translate": ""
+    },
+    {
+        "source": "When targeting a version prior to Rust 1.41, it may be necessary to implement [`Into`] or [`TryInto`] directly when converting to a type outside the current crate.",
+        "suggest": "当定位到 Rust 1.41 之前的版本时，当转换为当前 crate 之外的类型时，可能有必要直接实现 [`Into`] 或 [`TryInto`]。",
+        "translate": ""
+    },
+    {
+        "source": "Generic Implementations",
+        "suggest": "泛型实现",
+        "translate": ""
+    },
+    {
+        "source": "and [`AsMut`] auto-dereference if the inner type is a reference",
+        "suggest": "如果内部类型是引用，则 [`AsMut`] 自动解引用",
+        "translate": ""
+    },
+    {
+        "source": "implies [`Into`]`<T> for U`",
+        "suggest": "暗示 [`Into`]`<T> for U`",
+        "translate": ""
+    },
+    {
+        "source": "implies [`TryInto`]`<T> for U`",
+        "suggest": "暗示 [`TryInto`]`<T> for U`",
+        "translate": ""
+    },
+    {
+        "source": "and [`Into`] are reflexive, which means that all types can `into` themselves and `from` themselves",
+        "suggest": "和 [`Into`] 是自反的，这意味着所有类型都可以 `into` 自己和 `from` 自己",
+        "translate": ""
+    },
+    {
+        "source": "See each trait for usage examples.",
+        "suggest": "有关用法示例，请参见每个 trait。",
+        "translate": ""
+    },
+    {
+        "source": "The identity function.",
+        "suggest": "身份函数。",
+        "translate": ""
+    },
+    {
+        "source": "Two things are important to note about this function:",
+        "suggest": "关于此函数，有两点需要注意:",
+        "translate": ""
+    },
+    {
+        "source": "It is not always equivalent to a closure like `|x| x`, since the closure may coerce `x` into a different type.",
+        "suggest": "它并不总是等同于 `|x| x` 之类的闭包，因为闭包可能会将 `x` 强制转换为其他类型。",
+        "translate": ""
+    },
+    {
+        "source": "It moves the input `x` passed to the function.",
+        "suggest": "它将输入 `x` 传递给函数。",
+        "translate": ""
+    },
+    {
+        "source": "While it might seem strange to have a function that just returns back the input, there are some interesting uses.",
+        "suggest": "虽然有一个只返回输入的函数似乎很奇怪，但是有一些有趣的用法。",
+        "translate": ""
+    },
+    {
+        "source": "Using `identity` to do nothing in a sequence of other, interesting, functions:",
+        "suggest": "使用 `identity` 在其他有趣的函数序列中什么也不做:",
+        "translate": ""
+    },
+    {
+        "source": "Using `identity` as a \"do nothing\" base case in a conditional:",
+        "suggest": "在条件中将 `identity` 用作 \"do nothing\" 终止条件:",
+        "translate": ""
+    },
+    {
+        "source": "Using `identity` to keep the `Some` variants of an iterator of `Option<T>`:",
+        "suggest": "使用 `identity` 保留 `Option<T>` 迭代器的 `Some` 成员:",
+        "translate": ""
+    },
+    {
+        "source": "Used to do a cheap reference-to-reference conversion.",
+        "suggest": "用于执行廉价的引用到引用转换。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is similar to [`AsMut`] which is used for converting between mutable references.",
+        "suggest": "trait 类似于 [`AsMut`]，用于在可变引用之间进行转换。",
+        "translate": ""
+    },
+    {
+        "source": "If you need to do a costly conversion it is better to implement [`From`] with type `&T` or write a custom function.",
+        "suggest": "如果需要进行昂贵的转换，最好用 `&T` 类型实现 [`From`] 或编写自定义函数。",
+        "translate": ""
+    },
+    {
+        "source": "has the same signature as [`Borrow`], but [`Borrow`] is different in few aspects:",
+        "suggest": "具有与 [`Borrow`] 相同的签名，但是 [`Borrow`] 在几个方面有所不同:",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `AsRef`, [`Borrow`] has a blanket impl for any `T`, and can be used to accept either a reference or a value.",
+        "suggest": "与 `AsRef` 不同，[`Borrow`] 对任何 `T` 都有一个毯子暗示，可用于接受引用或值。",
+        "translate": ""
+    },
+    {
+        "source": "also requires that [`Hash`], [`Eq`] and [`Ord`] for borrowed value are equivalent to those of the owned value.",
+        "suggest": "还要求借用值的 [`Hash`]，[`Eq`] 和 [`Ord`] 等于拥有值的 [`Hash`]，[`Eq`] 和 [`Ord`]。",
+        "translate": ""
+    },
+    {
+        "source": "For this reason, if you want to borrow only a single field of a struct you can implement `AsRef`, but not [`Borrow`].",
+        "suggest": "因此，如果只想借用一个结构体的单个字段，则可以实现 `AsRef`，而不能实现 [`Borrow`]。",
+        "translate": ""
+    },
+    {
+        "source": "**Note: This trait must not fail**.",
+        "suggest": "**注意: 此 trait 一定不能失败**。",
+        "translate": ""
+    },
+    {
+        "source": "If the conversion can fail, use a dedicated method which returns an [`Option<T>`] or a [`Result<T, E>`].",
+        "suggest": "如果转换失败，请使用专用方法返回 [`Option<T>`] 或 [`Result<T, E>`]。",
+        "translate": ""
+    },
+    {
+        "source": "auto-dereferences if the inner type is a reference or a mutable reference (e.g.: `foo.as_ref()` will work the same if `foo` has type `&mut Foo` or `&&mut Foo`)",
+        "suggest": "如果内部类型是引用或变量引用，则自动引用 (例如: 如果 `foo` 具有 `&mut Foo` 或 `&&mut Foo` 类型，则 `foo.as_ref()` 将工作相同)",
+        "translate": ""
+    },
+    {
+        "source": "By using trait bounds we can accept arguments of different types as long as they can be converted to the specified type `T`.",
+        "suggest": "通过使用 trait bounds，我们可以接受不同类型的参数，只要它们可以转换为指定的 `T` 类型即可。",
+        "translate": ""
+    },
+    {
+        "source": "For example: By creating a generic function that takes an `AsRef<str>` we express that we want to accept all references that can be converted to [`&str`] as an argument.",
+        "suggest": "例如: 通过创建一个采用 `AsRef<str>` 的泛型函数，我们表示我们希望接受所有可以转换为 [`&str`] 的引用作为参数。",
+        "translate": ""
+    },
+    {
+        "source": "Since both [`String`] and [`&str`] implement `AsRef<str>` we can accept both as input argument.",
+        "suggest": "由于 [`String`] 和 [`&str`] 都实现了 `AsRef<str>`，因此我们可以将两者都用作输入参数。",
+        "translate": ""
+    },
+    {
+        "source": "Performs the conversion.",
+        "suggest": "执行转换。",
+        "translate": ""
+    },
+    {
+        "source": "Used to do a cheap mutable-to-mutable reference conversion.",
+        "suggest": "用于进行廉价的可变到可变引用转换。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is similar to [`AsRef`] but used for converting between mutable references.",
+        "suggest": "trait 与 [`AsRef`] 相似，但用于在变量引用之间进行转换。",
+        "translate": ""
+    },
+    {
+        "source": "If you need to do a costly conversion it is better to implement [`From`] with type `&mut T` or write a custom function.",
+        "suggest": "如果需要进行昂贵的转换，最好用 `&mut T` 类型实现 [`From`] 或编写自定义函数。",
+        "translate": ""
+    },
+    {
+        "source": "auto-dereferences if the inner type is a mutable reference (e.g.: `foo.as_mut()` will work the same if `foo` has type `&mut Foo` or `&mut &mut Foo`)",
+        "suggest": "如果内部类型是可变引用，则自动引用 (例如: 如果 `foo` 具有 `&mut Foo` 或 `&mut &mut Foo` 类型，则 `foo.as_mut()` 将工作相同)",
+        "translate": ""
+    },
+    {
+        "source": "Using `AsMut` as trait bound for a generic function we can accept all mutable references that can be converted to type `&mut T`.",
+        "suggest": "使用 `AsMut` 作为泛型函数的 trait bound，我们可以接受所有可以转换为 `&mut T` 类型的变量引用。",
+        "translate": ""
+    },
+    {
+        "source": "Because [`Box<T>`] implements `AsMut<T>` we can write a function `add_one` that takes all arguments that can be converted to `&mut u64`.",
+        "suggest": "因为 [`Box<T>`] 实现了 `AsMut<T>`，所以我们可以编写一个函数 `add_one`，该函数采用可以转换为 `&mut u64` 的所有参数。",
+        "translate": ""
+    },
+    {
+        "source": "Because [`Box<T>`] implements `AsMut<T>`, `add_one` accepts arguments of type `&mut Box<u64>` as well:",
+        "suggest": "由于 [`Box<T>`] 实现 `AsMut<T>`，因此 `add_one` 也接受 `&mut Box<u64>` 类型的参数:",
+        "translate": ""
+    },
+    {
+        "source": "A value-to-value conversion that consumes the input value.",
+        "suggest": "消耗输入值的值到值转换。",
+        "translate": ""
+    },
+    {
+        "source": "The opposite of [`From`].",
+        "suggest": "与 [`From`] 相反。",
+        "translate": ""
+    },
+    {
+        "source": "One should avoid implementing [`Into`] and implement [`From`] instead.",
+        "suggest": "应该避免实现 [`Into`]，而应实现 [`From`]。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing [`From`] automatically provides one with an implementation of [`Into`] thanks to the blanket implementation in the standard library.",
+        "suggest": "由于标准库中的全面实现，因此 [`From`] 的自动实现为 [`Into`] 的实现提供了一个实现。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer using [`Into`] over [`From`] when specifying trait bounds on a generic function to ensure that types that only implement [`Into`] can be used as well.",
+        "suggest": "在泛型函数上指定 trait bounds 时，最好使用 [`Into`] 而不是 [`From`]，以确保也可以使用仅实现 [`Into`] 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "implies `Into<U> for T`",
+        "suggest": "暗示 `Into<U> for T`",
+        "translate": ""
+    },
+    {
+        "source": "is reflexive, which means that `Into<T> for T` is implemented",
+        "suggest": "是自反的，这意味着 `Into<T> for T` 已实现",
+        "translate": ""
+    },
+    {
+        "source": "Implementing [`Into`] for conversions to external types in old versions of Rust",
+        "suggest": "在旧版本的 Rust 中实现 [`Into`] 转换为外部类型",
+        "translate": ""
+    },
+    {
+        "source": "Prior to Rust 1.41, if the destination type was not part of the current crate then you couldn't implement [`From`] directly.",
+        "suggest": "在 Rust 1.41 之前，如果目标类型不是当前 crate 的一部分，那么您将无法直接实现 [`From`]。",
+        "translate": ""
+    },
+    {
+        "source": "For example, take this code:",
+        "suggest": "例如，使用以下代码:",
+        "translate": ""
+    },
+    {
+        "source": "This will fail to compile in older versions of the language because Rust's orphaning rules used to be a little bit more strict.",
+        "suggest": "由于 Rust 的孤儿规则过去要严格一些，因此无法在较旧的语言版本中进行编译。",
+        "translate": ""
+    },
+    {
+        "source": "To bypass this, you could implement [`Into`] directly:",
+        "suggest": "要绕过它，您可以直接实现 [`Into`]:",
+        "translate": ""
+    },
+    {
+        "source": "It is important to understand that [`Into`] does not provide a [`From`] implementation (as [`From`] does with [`Into`]).",
+        "suggest": "重要的是要了解 [`Into`] 不提供 [`From`] 实现 (就像 [`From`] 与 [`Into`] 一样)。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, you should always try to implement [`From`] and then fall back to [`Into`] if [`From`] can't be implemented.",
+        "suggest": "因此，您应该始终尝试实现 [`From`]，如果无法实现 [`From`]，则应退回到 [`Into`]。",
+        "translate": ""
+    },
+    {
+        "source": "implements [`Into`]`<`[`Vec`]`<`[`u8`]`>>`:",
+        "suggest": "实现 [`Into`]`<`[`Vec`]`<`[`u8`]`>>`:",
+        "translate": ""
+    },
+    {
+        "source": "In order to express that we want a generic function to take all arguments that can be converted to a specified type `T`, we can use a trait bound of [`Into`]`<T>`.",
+        "suggest": "为了表示我们希望泛型函数采用所有可以转换为指定类型 `T` 的参数，我们可以使用 [`Into`]`<T>` 的 trait bound。",
+        "translate": ""
+    },
+    {
+        "source": "For example: The function `is_hello` takes all arguments that can be converted into a [`Vec`]`<`[`u8`]`>`.",
+        "suggest": "例如: 函数 `is_hello` 接受所有可以转换为 [`Vec`]`<`[`u8`]`>` 的参数。",
+        "translate": ""
+    },
+    {
+        "source": "Used to do value-to-value conversions while consuming the input value.",
+        "suggest": "用于在消耗输入值的同时进行值到值的转换。",
+        "translate": ""
+    },
+    {
+        "source": "It is the reciprocal of [`Into`].",
+        "suggest": "它是 [`Into`] 的倒数。",
+        "translate": ""
+    },
+    {
+        "source": "One should always prefer implementing `From` over [`Into`] because implementing `From` automatically provides one with an implementation of [`Into`] thanks to the blanket implementation in the standard library.",
+        "suggest": "与标准 [`Into`] 相比，人们应该总是更喜欢实现 `From`，因为由于标准库中的全面实现，实现 `From` 会自动为 [`Into`] 提供一个 [`Into`] 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Only implement [`Into`] when targeting a version prior to Rust 1.41 and converting to a type outside the current crate.",
+        "suggest": "仅当针对 Rust 1.41 之前的版本并将其转换为当前 crate 以外的类型时，才实现 [`Into`]。",
+        "translate": ""
+    },
+    {
+        "source": "was not able to do these types of conversions in earlier versions because of Rust's orphaning rules.",
+        "suggest": "由于 Rust 的孤儿规则，无法在较早版本中进行这些类型的转换。",
+        "translate": ""
+    },
+    {
+        "source": "See [`Into`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Into`]。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer using [`Into`] over using `From` when specifying trait bounds on a generic function.",
+        "suggest": "在泛型函数上指定 trait bounds 时，优先使用 [`Into`]。",
+        "translate": ""
+    },
+    {
+        "source": "This way, types that directly implement [`Into`] can be used as arguments as well.",
+        "suggest": "这样，直接实现 [`Into`] 的类型也可以用作参数。",
+        "translate": ""
+    },
+    {
+        "source": "The `From` is also very useful when performing error handling.",
+        "suggest": "`From` 在执行错误处理时也非常有用。",
+        "translate": ""
+    },
+    {
+        "source": "When constructing a function that is capable of failing, the return type will generally be of the form `Result<T, E>`.",
+        "suggest": "当创建一个能够失败的函数时，返回类型通常为 `Result<T, E>` 形式。",
+        "translate": ""
+    },
+    {
+        "source": "The `From` trait simplifies error handling by allowing a function to return a single error type that encapsulate multiple error types.",
+        "suggest": "`From` trait 通过允许函数返回封装了多种错误类型的单个错误类型，简化了错误处理。",
+        "translate": ""
+    },
+    {
+        "source": "See the \"Examples\" section and [the book][book] for more details.",
+        "suggest": "有关更多详细信息，请参见 \"示例\" 部分和 [这本书][book]。",
+        "translate": ""
+    },
+    {
+        "source": "implies [`Into`]`<U> for T`",
+        "suggest": "暗示 [`Into`]`<U> for T`",
+        "translate": ""
+    },
+    {
+        "source": "is reflexive, which means that `From<T> for T` is implemented",
+        "suggest": "是自反的，这意味着 `From<T> for T` 已实现",
+        "translate": ""
+    },
+    {
+        "source": "implements `From<&str>`:",
+        "suggest": "实现 `From<&str>`:",
+        "translate": ""
+    },
+    {
+        "source": "An explicit conversion from a `&str` to a String is done as follows:",
+        "suggest": "从 `&str` 到字符串的显式转换如下:",
+        "translate": ""
+    },
+    {
+        "source": "While performing error handling it is often useful to implement `From` for your own error type.",
+        "suggest": "在执行错误处理时，通常对于您自己的错误类型实现 `From` 很有用。",
+        "translate": ""
+    },
+    {
+        "source": "By converting underlying error types to our own custom error type that encapsulates the underlying error type, we can return a single error type without losing information on the underlying cause.",
+        "suggest": "通过将基础错误类型转换为封装了基础错误类型的我们自己的自定义错误类型，我们可以返回单个错误类型，而不会丢失有关基础原因的信息。",
+        "translate": ""
+    },
+    {
+        "source": "The '?' operator automatically converts the underlying error type to our custom error type by calling `Into<CliError>::into` which is automatically provided when implementing `From`.",
+        "suggest": "'?' 运算符通过调用 `Into<CliError>::into` 自动将基础错误类型转换为我们的自定义错误类型，该 `Into<CliError>::into` 是在实现 `From` 时自动提供的。",
+        "translate": ""
+    },
+    {
+        "source": "The compiler then infers which implementation of `Into` should be used.",
+        "suggest": "然后，编译器会推断应使用 `Into` 的哪种实现。",
+        "translate": ""
+    },
+    {
+        "source": "An attempted conversion that consumes `self`, which may or may not be expensive.",
+        "suggest": "尝试使用 `self` 进行转换，这可能会或可能不会很昂贵。",
+        "translate": ""
+    },
+    {
+        "source": "Library authors should usually not directly implement this trait, but should prefer implementing the [`TryFrom`] trait, which offers greater flexibility and provides an equivalent `TryInto` implementation for free, thanks to a blanket implementation in the standard library.",
+        "suggest": "库作者通常不应直接实现此 trait，而应首选实现 [`TryFrom`] trait，它具有更大的灵活性，并免费提供了等效的 `TryInto` 实现，这要归功于标准库中的全面实现。",
+        "translate": ""
+    },
+    {
+        "source": "For more information on this, see the documentation for [`Into`].",
+        "suggest": "有关此的更多信息，请参见 [`Into`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `TryInto`",
+        "suggest": "实现 `TryInto`",
+        "translate": ""
+    },
+    {
+        "source": "This suffers the same restrictions and reasoning as implementing [`Into`], see there for details.",
+        "suggest": "这与实现 [`Into`] 受到相同的限制和推理，有关详细信息，请参见此处。",
+        "translate": ""
+    },
+    {
+        "source": "The type returned in the event of a conversion error.",
+        "suggest": "发生转换错误时返回的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Simple and safe type conversions that may fail in a controlled way under some circumstances.",
+        "suggest": "简单安全的类型转换在某些情况下可能会以受控方式失败。",
+        "translate": ""
+    },
+    {
+        "source": "It is the reciprocal of [`TryInto`].",
+        "suggest": "它是 [`TryInto`] 的倒数。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you are doing a type conversion that may trivially succeed but may also need special handling.",
+        "suggest": "当您进行的类型转换可能会成功完成但可能还需要特殊处理时，这很有用。",
+        "translate": ""
+    },
+    {
+        "source": "For example, there is no way to convert an [`i64`] into an [`i32`] using the [`From`] trait, because an [`i64`] may contain a value that an [`i32`] cannot represent and so the conversion would lose data.",
+        "suggest": "例如，无法使用 [`From`] trait 将 [`i64`] 转换为 [`i32`]，因为 [`i64`] 可能包含 [`i32`] 无法表示的值，因此转换将丢失数据。",
+        "translate": ""
+    },
+    {
+        "source": "This might be handled by truncating the [`i64`] to an [`i32`] (essentially giving the [`i64`]'s value modulo [`i32::MAX`]) or by simply returning [`i32::MAX`], or by some other method.",
+        "suggest": "这可以通过将 [`i64`] 截断为 [`i32`] (本质上给 [`i64`] 的值取 [`i32::MAX`] 模) 或通过简单地返回 [`i32::MAX`] 或其他方法来处理。",
+        "translate": ""
+    },
+    {
+        "source": "The [`From`] trait is intended for perfect conversions, so the `TryFrom` trait informs the programmer when a type conversion could go bad and lets them decide how to handle it.",
+        "suggest": "[`From`] trait 用于完美的转换，因此 `TryFrom` trait 会通知程序员类型转换何时会变差，并让他们决定如何处理它。",
+        "translate": ""
+    },
+    {
+        "source": "implies [`TryInto`]`<U> for T`",
+        "suggest": "暗示 [`TryInto`]`<U> for T`",
+        "translate": ""
+    },
+    {
+        "source": "is reflexive, which means that `TryFrom<T> for T` is implemented and cannot fail -- the associated `Error` type for calling `T::try_from()` on a value of type `T` is [`Infallible`].",
+        "suggest": "是自反的，这意味着 `TryFrom<T> for T` 已实现且不会失败 - 用于在 `T` 类型的值上调用 `T::try_from()` 的关联 `Error` 类型为 [`Infallible`]。",
+        "translate": ""
+    },
+    {
+        "source": "When the [`!`] type is stabilized [`Infallible`] and [`!`] will be equivalent.",
+        "suggest": "当 [`!`] 类型稳定后，[`Infallible`] 和 [`!`] 将等效。",
+        "translate": ""
+    },
+    {
+        "source": "can be implemented as follows:",
+        "suggest": "可以实现如下:",
+        "translate": ""
+    },
+    {
+        "source": "As described, [`i32`] implements `TryFrom<`[`i64`]`>`:",
+        "suggest": "如上所述，[`i32`] 实现了 `TryFrom<`[`i64`]`>`:",
+        "translate": ""
+    },
+    {
+        "source": "GENERIC IMPLS",
+        "suggest": "泛型 IMPLS",
+        "translate": ""
+    },
+    {
+        "source": "As lifts over &",
+        "suggest": "随着提起 &",
+        "translate": ""
+    },
+    {
+        "source": "As lifts over &mut",
+        "suggest": "越过 &mut",
+        "translate": ""
+    },
+    {
+        "source": "FIXME (#45742): replace the above impls for &/&mut with the following more general one:",
+        "suggest": "FIXME (#45742): 用以下更通用的替代替换 &/&mut 的上述 impls:",
+        "translate": ""
+    },
+    {
+        "source": "As lifts over Deref",
+        "suggest": "越过 Deref",
+        "translate": ""
+    },
+    {
+        "source": "AsMut lifts over &mut",
+        "suggest": "AsMut 超过 &mut",
+        "translate": ""
+    },
+    {
+        "source": "FIXME (#45742): replace the above impl for &mut with the following more general one:",
+        "suggest": "FIXME (#45742): 用以下更通用的替代替换 &mut 的上述隐含内容:",
+        "translate": ""
+    },
+    {
+        "source": "AsMut lifts over DerefMut",
+        "suggest": "AsMut 越过 DerefMut",
+        "translate": ""
+    },
+    {
+        "source": "From implies Into",
+        "suggest": "从暗示进入",
+        "translate": ""
+    },
+    {
+        "source": "From (and thus Into) is reflexive",
+        "suggest": "From (因此 Into) 是自反的",
+        "translate": ""
+    },
+    {
+        "source": "**Stability note:** This impl does not yet exist, but we are \"reserving space\" to add it in the future.",
+        "suggest": "**稳定性注意事项:** 该暗示尚不存在，但我们 \"reserving space\" 会将其添加到 future 中。",
+        "translate": ""
+    },
+    {
+        "source": "See [rust-lang/rust#64715][#64715] for details.",
+        "suggest": "有关详细信息，请参见 [rust-lang/rust#64715][#64715]。",
+        "translate": ""
+    },
+    {
+        "source": "do a principled fix instead.",
+        "suggest": "而是进行有原则的修复。",
+        "translate": ""
+    },
+    {
+        "source": "TryFrom implies TryInto",
+        "suggest": "TryFrom 表示 TryInto",
+        "translate": ""
+    },
+    {
+        "source": "Infallible conversions are semantically equivalent to fallible conversions with an uninhabited error type.",
+        "suggest": "可靠的转换在语义上等同于错误类型没有错误的可靠的转换。",
+        "translate": ""
+    },
+    {
+        "source": "CONCRETE IMPLS",
+        "suggest": "CONCRETE IMPLS",
+        "translate": ""
+    },
+    {
+        "source": "THE NO-ERROR ERROR TYPE",
+        "suggest": "无错误错误类型",
+        "translate": ""
+    },
+    {
+        "source": "The error type for errors that can never happen.",
+        "suggest": "永远不会发生的错误的错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "Since this enum has no variant, a value of this type can never actually exist.",
+        "suggest": "由于此枚举没有成员，因此这种类型的值永远不会实际存在。",
+        "translate": ""
+    },
+    {
+        "source": "This can be useful for generic APIs that use [`Result`] and parameterize the error type, to indicate that the result is always [`Ok`].",
+        "suggest": "这对于使用 [`Result`] 并参数化错误类型的泛型 API 很有用，以指示结果始终为 [`Ok`]。",
+        "translate": ""
+    },
+    {
+        "source": "For example, the [`TryFrom`] trait (conversion that returns a [`Result`]) has a blanket implementation for all types where a reverse [`Into`] implementation exists.",
+        "suggest": "例如，对于存在反向 [`Into`] 实现的所有类型，[`TryFrom`] trait (返回 [`Result`] 的转换) 都具有通用实现。",
+        "translate": ""
+    },
+    {
+        "source": "Future compatibility",
+        "suggest": "Future 兼容性",
+        "translate": ""
+    },
+    {
+        "source": "This enum has the same role as [the `!` “never” type][never], which is unstable in this version of Rust.",
+        "suggest": "该枚举与 [the `!`“never”type][never] 具有相同的作用，在此版本的 Rust 中不稳定。",
+        "translate": ""
+    },
+    {
+        "source": "When `!` is stabilized, we plan to make `Infallible` a type alias to it:",
+        "suggest": "当 `!` 稳定后，我们计划将 `Infallible` 用作它的类型别名:",
+        "translate": ""
+    },
+    {
+        "source": "and eventually deprecate `Infallible`.",
+        "suggest": "并最终弃用 `Infallible`。",
+        "translate": ""
+    },
+    {
+        "source": "However there is one case where `!` syntax can be used before `!` is stabilized as a full-fledged type: in the position of a function’s return type.",
+        "suggest": "但是，在一种情况下，可以在将 `!` 稳定为完整类型之前使用 `!` 语法: 在函数的返回类型位置。",
+        "translate": ""
+    },
+    {
+        "source": "Specifically, it is possible implementations for two different function pointer types:",
+        "suggest": "具体来说，可能有两种不同的函数指针类型的实现:",
+        "translate": ""
+    },
+    {
+        "source": "With `Infallible` being an enum, this code is valid.",
+        "suggest": "`Infallible` 是枚举，此代码有效。",
+        "translate": ""
+    },
+    {
+        "source": "However when `Infallible` becomes an alias for the never type, the two `impl`s will start to overlap and therefore will be disallowed by the language’s trait coherence rules.",
+        "suggest": "但是，当 `Infallible` 成为 never type 的别名时，两个 `impl` 将开始重叠，因此将被语言的 trait 一致性规则所禁止。",
+        "translate": ""
+    },
+    {
+        "source": "This trait being unreachable from outside the crate prevents other implementations of the `FloatToInt` trait, which allows potentially adding more trait methods after the trait is `#[stable]`.",
+        "suggest": "从 crate 外部无法访问此 trait 会阻止 `FloatToInt` trait 的其他实现，这可能会在 trait 为 `#[stable]` 之后潜在地添加更多 trait 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Supporting trait for inherent methods of `f32` and `f64` such as `to_int_unchecked`.",
+        "suggest": "支持 `f32` 和 `f64` 的固有方法 (例如 `to_int_unchecked`) 的 trait。",
+        "translate": ""
+    },
+    {
+        "source": "Typically doesn’t need to be used directly.",
+        "suggest": "通常不需要直接使用。",
+        "translate": ""
+    },
+    {
+        "source": "Conversion traits for primitive integer and float types Conversions T -> T are covered by a blanket impl and therefore excluded Some conversions from and to usize/isize are not implemented due to portability concerns",
+        "suggest": "原始整数和浮点类型的转换 traits 转换 T -> T 由一揽子 impl 覆盖，因此被排除。由于可移植性方面的考虑，未实现从 usize/isize 到 usize/isize 的某些转换。",
+        "translate": ""
+    },
+    {
+        "source": "The C99 standard defines bounds on INTPTR_MIN, INTPTR_MAX, and UINTPTR_MAX which imply that pointer-sized integers must be at least 16 bits:",
+        "suggest": "C99 标准在 INTPTR_MIN，INTPTR_MAX 和 UINTPTR_MAX 上定义了边界，这意味着指针大小的整数必须至少为 16 位:",
+        "translate": ""
+    },
+    {
+        "source": "RISC-V defines the possibility of a 128-bit address space (RV128).",
+        "suggest": "RISC-V 定义了 128 位地址空间 (RV128) 的可能性。",
+        "translate": ""
+    },
+    {
+        "source": "CHERI proposes 256-bit “capabilities”.",
+        "suggest": "CHERI 提出了 256 位权限。",
+        "translate": ""
+    },
+    {
+        "source": "Unclear if this would be relevant to usize/isize.",
+        "suggest": "不清楚这是否与 usize/isize 有关。",
+        "translate": ""
+    },
+    {
+        "source": "integers can only be represented with full precision in a float if they fit in the significand, which is 24 bits in f32 and 53 bits in f64.",
+        "suggest": "如果整数适合有效位数，则整数只能以浮点数精确表示，有效位数在 f32 中为 24 位，在 f64 中为 53 位。",
+        "translate": ""
+    },
+    {
+        "source": "Lossy float conversions are not implemented at this time.",
+        "suggest": "目前没有实现有损浮点转换。",
+        "translate": ""
+    },
+    {
+        "source": "no possible bounds violation",
+        "suggest": "没有违反边界的可能",
+        "translate": ""
+    },
+    {
+        "source": "Try to create the target number type from a source number type.",
+        "suggest": "尝试从源号码类型创建目标号码类型。",
+        "translate": ""
+    },
+    {
+        "source": "This returns an error if the source value is outside of the range of the target type.",
+        "suggest": "如果源值超出目标类型的范围，则返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "only negative bounds",
+        "suggest": "只有负边界",
+        "translate": ""
+    },
+    {
+        "source": "unsigned to signed (only positive bound)",
+        "suggest": "无符号到有符号 (仅正向)",
+        "translate": ""
+    },
+    {
+        "source": "all other cases",
+        "suggest": "所有其他情况",
+        "translate": ""
+    },
+    {
+        "source": "intra-sign conversions",
+        "suggest": "符号内转换",
+        "translate": ""
+    },
+    {
+        "source": "Conversion traits for non-zero integer types",
+        "suggest": "非零整数类型的转换 traits",
+        "translate": ""
+    },
+    {
+        "source": "input type guarantees the value is non-zero",
+        "suggest": "输入类型保证值非零",
+        "translate": ""
+    },
+    {
+        "source": "Non-zero Unsigned -> Non-zero Unsigned",
+        "suggest": "非零无符号 -> 非零无符号",
+        "translate": ""
+    },
+    {
+        "source": "Non-zero Signed -> Non-zero Signed",
+        "suggest": "非零有符号 -> 非零有符号",
+        "translate": ""
+    },
+    {
+        "source": "NonZero UnSigned -> Non-zero Signed",
+        "suggest": "非零无符号 -> 非零有符号",
+        "translate": ""
+    },
+    {
+        "source": "Int -> Non-zero Int",
+        "suggest": "整数 -> 非零整数",
+        "translate": ""
+    },
+    {
+        "source": "$From is a NonZero type, so v is not zero.",
+        "suggest": "$From 是 NonZero 类型，因此 v 不为零。",
+        "translate": ""
+    },
+    {
+        "source": "Non-zero int -> non-zero unsigned int",
+        "suggest": "非零整数 -> 非零无符号整数",
+        "translate": ""
+    },
+    {
+        "source": "Non-zero int -> non-zero signed int",
+        "suggest": "非零 int -> 非零有符号 int",
+        "translate": ""
+    },
+    {
+        "source": "The `Default` trait for types which may have meaningful default values.",
+        "suggest": "`Default` trait 用于可能具有有意义的默认值的类型。",
+        "translate": ""
+    },
+    {
+        "source": "A trait for giving a type a useful default value.",
+        "suggest": "trait，用于为类型提供有用的默认值。",
+        "translate": ""
+    },
+    {
+        "source": "Sometimes, you want to fall back to some kind of default value, and don't particularly care what it is.",
+        "suggest": "有时，您希望退回到某种默认值，而不必特别在意它的含义。",
+        "translate": ""
+    },
+    {
+        "source": "This comes up often with `struct`s that define a set of options:",
+        "suggest": "这经常出现在定义一组选项的 `struct` 中:",
+        "translate": ""
+    },
+    {
+        "source": "How can we define some default values?",
+        "suggest": "我们如何定义一些默认值?",
+        "translate": ""
+    },
+    {
+        "source": "You can use `Default`:",
+        "suggest": "您可以使用 `Default`:",
+        "translate": ""
+    },
+    {
+        "source": "Now, you get all of the default values.",
+        "suggest": "现在，您将获得所有默认值。",
+        "translate": ""
+    },
+    {
+        "source": "Rust implements `Default` for various primitives types.",
+        "suggest": "Rust 为各种基本类型实现 `Default`。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to override a particular option, but still retain the other defaults:",
+        "suggest": "如果要覆盖特定选项，但仍保留其他默认值:",
+        "translate": ""
+    },
+    {
+        "source": "This trait can be used with `#[derive]` if all of the type's fields implement `Default`.",
+        "suggest": "如果类型的所有字段都实现 `Default`，则此 trait 可以与 `#[derive]` 一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d, it will use the default value for each field's type.",
+        "suggest": "当 `derive`d 时，它将为每个字段的类型使用默认值。",
+        "translate": ""
+    },
+    {
+        "source": "How can I implement `Default`?",
+        "suggest": "如何实现 `Default`?",
+        "translate": ""
+    },
+    {
+        "source": "Provide an implementation for the `default()` method that returns the value of your type that should be the default:",
+        "suggest": "提供 `default()` 方法的实现，该实现返回您类型的值，该值应为默认值:",
+        "translate": ""
+    },
+    {
+        "source": "Returns the \"default value\" for a type.",
+        "suggest": "返回类型的 \"default value\"。",
+        "translate": ""
+    },
+    {
+        "source": "Default values are often some kind of initial value, identity value, or anything else that may make sense as a default.",
+        "suggest": "默认值通常是某种初始值，标识值或其他可能有意义的默认值。",
+        "translate": ""
+    },
+    {
+        "source": "Using built-in default values:",
+        "suggest": "使用内置的默认值:",
+        "translate": ""
+    },
+    {
+        "source": "Making your own:",
+        "suggest": "自己制作:",
+        "translate": ""
+    },
+    {
+        "source": "Return the default value of a type according to the `Default` trait.",
+        "suggest": "根据 `Default` trait 返回类型的默认值。",
+        "translate": ""
+    },
+    {
+        "source": "The type to return is inferred from context;",
+        "suggest": "从上下文推断要返回的类型。",
+        "translate": ""
+    },
+    {
+        "source": "this is equivalent to `Default::default()` but shorter to type.",
+        "suggest": "这等效于 `Default::default()`，但类型更短。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `Default`.",
+        "suggest": "派生宏，生成 trait `Default` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "Utilities related to foreign function interface (FFI) bindings.",
+        "suggest": "与外部函数接口 (FFI) 绑定有关的实用工具。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `void` type when used as a [pointer].",
+        "suggest": "当用作 [pointer] 时，等效于 C 的 `void` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "In essence, `*const c_void` is equivalent to C's `const void*` and `*mut c_void` is equivalent to C's `void*`.",
+        "suggest": "本质上，`*const c_void` 等效于 C 的 `const void*`，而 `*mut c_void` 等效于 C 的 `void*`。",
+        "translate": ""
+    },
+    {
+        "source": "That said, this is *not* the same as C's `void` return type, which is Rust's `()` type.",
+        "suggest": "也就是说，这与 C 的 `void` 返回类型 (即 Rust 的 `()` 类型) 不同。",
+        "translate": ""
+    },
+    {
+        "source": "To model pointers to opaque types in FFI, until `extern type` is stabilized, it is recommended to use a newtype wrapper around an empty byte array.",
+        "suggest": "要在 FFI 中对指向不透明类型的指针进行建模，直到 `extern type` 稳定为止，建议在空字节数组周围使用 newtype 包装器。",
+        "translate": ""
+    },
+    {
+        "source": "See the [Nomicon] for details.",
+        "suggest": "有关详细信息，请参见 [Nomicon]。",
+        "translate": ""
+    },
+    {
+        "source": "One could use `std::os::raw::c_void` if they want to support old Rust compiler down to 1.1.0.",
+        "suggest": "如果他们想支持低至 1.1.0 的旧 Rust 编译器，则可以使用 `std::os::raw::c_void`。",
+        "translate": ""
+    },
+    {
+        "source": "After Rust 1.30.0, it was re-exported by this definition.",
+        "suggest": "Rust 1.30.0 之后，此定义将其重导出。",
+        "translate": ""
+    },
+    {
+        "source": "For more information, please read [RFC 2521].",
+        "suggest": "有关更多信息，请阅读 [RFC 2521]。",
+        "translate": ""
+    },
+    {
+        "source": "N.B., for LLVM to recognize the void pointer type and by extension functions like malloc(), we need to have it represented as i8* in LLVM bitcode.",
+        "suggest": "注意，为使 LLVM 能够识别空指针类型，并通过扩展函数 (如 malloc()) 来识别它，我们需要在 LLVM 位码中将其表示为 i8 *。",
+        "translate": ""
+    },
+    {
+        "source": "The enum used here ensures this and prevents misuse of the \"raw\" type by only having private variants.",
+        "suggest": "此处使用的枚举可确保这一点，并通过仅拥有私有成员来防止 \"raw\" 类型的滥用。",
+        "translate": ""
+    },
+    {
+        "source": "We need two variants, because the compiler complains about the repr attribute otherwise and we need at least one variant as otherwise the enum would be uninhabited and at least dereferencing such pointers would be UB.",
+        "suggest": "我们需要两个成员，因为编译器否则会抱怨 repr 属性，并且我们至少需要一个成员，否则枚举将无人居住，并且至少解引用此类指针将是 UB。",
+        "translate": ""
+    },
+    {
+        "source": "Basic implementation of a `va_list`.",
+        "suggest": "`va_list` 的基本实现。",
+        "translate": ""
+    },
+    {
+        "source": "The name is WIP, using `VaListImpl` for now.",
+        "suggest": "名称为 WIP，现在使用 `VaListImpl`。",
+        "translate": ""
+    },
+    {
+        "source": "Invariant over `'f`, so each `VaListImpl<'f>` object is tied to the region of the function it's defined in",
+        "suggest": "在 `'f` 上不变，因此每个 `VaListImpl<'f>` 对象都绑定到它在以下位置定义的函数的区域",
+        "translate": ""
+    },
+    {
+        "source": "ABI implementation of a `va_list`.",
+        "suggest": "`va_list` 的 ABI 实现。",
+        "translate": ""
+    },
+    {
+        "source": "See the [AArch64 Procedure Call Standard] for more details.",
+        "suggest": "有关更多详细信息，请参见 [AArch64 Procedure Call Standard]。",
+        "translate": ""
+    },
+    {
+        "source": "A wrapper for a `va_list`",
+        "suggest": "`va_list` 的包装",
+        "translate": ""
+    },
+    {
+        "source": "Convert a `VaListImpl` into a `VaList` that is binary-compatible with C's `va_list`.",
+        "suggest": "将 `VaListImpl` 转换为与 C 的 `va_list` 二进制兼容的 `VaList`。",
+        "translate": ""
+    },
+    {
+        "source": "The VaArgSafe trait needs to be used in public interfaces, however, the trait itself must not be allowed to be used outside this module.",
+        "suggest": "必须在公共接口中使用 VaArgSafe trait，但是，不允许在该模块之外使用 trait 本身。",
+        "translate": ""
+    },
+    {
+        "source": "Allowing users to implement the trait for a new type (thereby allowing the va_arg intrinsic to be used on a new type) is likely to cause undefined behavior.",
+        "suggest": "允许用户为新类型实现 trait (从而允许在新类型上使用 va_arg 内联函数) 可能会导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "In order to use the VaArgSafe trait in a public interface but also ensure it cannot be used elsewhere, the trait needs to be public within a private module.",
+        "suggest": "为了在公共接口中使用 VaArgSafe trait 并确保不能在其他地方使用它，trait 需要在私有模块中是公共的。",
+        "translate": ""
+    },
+    {
+        "source": "Once RFC 2145 has been implemented look into improving this.",
+        "suggest": "RFC 2145 实现后，可以考虑对此进行改进。",
+        "translate": ""
+    },
+    {
+        "source": "Trait which permits the allowed types to be used with [super::VaListImpl::arg].",
+        "suggest": "Trait，允许将允许的类型与 [super::VaListImpl::arg] 一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "Advance to the next arg.",
+        "suggest": "前进到下一个 arg。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `va_arg`.",
+        "suggest": "调用者必须坚持 `va_arg` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the `va_list` at the current location.",
+        "suggest": "在当前位置复制 `va_list`。",
+        "translate": ""
+    },
+    {
+        "source": "the caller must uphold the safety contract for `va_end`.",
+        "suggest": "调用者必须坚持 `va_end` 的安全保证。",
+        "translate": ""
+    },
+    {
+        "source": "we write to the `MaybeUninit`, thus it is initialized and `assume_init` is legal",
+        "suggest": "我们写入 `MaybeUninit`，因此它被初始化并且 `assume_init` 是合法的",
+        "translate": ""
+    },
+    {
+        "source": "this should call `va_end`, but there's no clean way to guarantee that `drop` always gets inlined into its caller, so the `va_end` would get directly called from the same function as the corresponding `va_copy`.",
+        "suggest": "这应该调用 `va_end`，但是没有干净的方法来保证 `drop` 总是内联到其调用程序中，因此 `va_end` 将直接从与相应 `va_copy` 相同的函数中调用。",
+        "translate": ""
+    },
+    {
+        "source": "states that C requires this, and LLVM basically follows the C semantics, so we need to make sure that `va_end` is always called from the same function as `va_copy`.",
+        "suggest": "声明 C 要求这样做，并且 LLVM 基本遵循 C 语义，因此我们需要确保始终从与 `va_copy` 相同的函数调用 `va_end`。",
+        "translate": ""
+    },
+    {
+        "source": "For more details,",
+        "suggest": "更多细节，",
+        "translate": ""
+    },
+    {
+        "source": "This works for now, since `va_end` is a no-op on all current LLVM targets.",
+        "suggest": "由于 `va_end` 是当前所有 LLVM 目标上的无操作项，因此，该操作现在有效。",
+        "translate": ""
+    },
+    {
+        "source": "Destroy the arglist `ap` after initialization with `va_start` or `va_copy`.",
+        "suggest": "用 `va_start` 或 `va_copy` 初始化后，销毁参数列表 `ap`。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the current location of arglist `src` to the arglist `dst`.",
+        "suggest": "将 arglist `src` 的当前位置复制到 arglist `dst`。",
+        "translate": ""
+    },
+    {
+        "source": "Loads an argument of type `T` from the `va_list` `ap` and increment the argument `ap` points to.",
+        "suggest": "从 `va_list` `ap` 加载 `T` 类型的参数，并将 `ap` 指向的参数递增。",
+        "translate": ""
+    },
+    {
+        "source": "We add `bar` field.",
+        "suggest": "我们添加 `bar` 字段。",
+        "translate": ""
+    },
+    {
+        "source": "We add `another` field.",
+        "suggest": "我们添加 `another` 字段。",
+        "translate": ""
+    },
+    {
+        "source": "We even add a field which doesn't exist (because why not?).",
+        "suggest": "我们甚至添加了一个不存在的字段 (因为为什么不呢? )。",
+        "translate": ""
+    },
+    {
+        "source": "We're good to go!",
+        "suggest": "我们很高兴去!",
+        "translate": ""
+    },
+    {
+        "source": "Show that some other field(s) exist.",
+        "suggest": "证明存在其他 field(s)。",
+        "translate": ""
+    },
+    {
+        "source": "You need to call it to \"finish\" the",
+        "suggest": "您需要调用它到 \"finish\"",
+        "translate": ""
+    },
+    {
+        "source": "struct formatting.",
+        "suggest": "结构体格式化。",
+        "translate": ""
+    },
+    {
+        "source": "We add the first field.",
+        "suggest": "我们添加第一个字段。",
+        "translate": ""
+    },
+    {
+        "source": "We add the second field.",
+        "suggest": "我们添加第二个字段。",
+        "translate": ""
+    },
+    {
+        "source": "tuple formatting.",
+        "suggest": "元组格式。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the first \"entry\".",
+        "suggest": "添加第一个 \"entry\"。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the second \"entry\".",
+        "suggest": "添加第二个 \"entry\"。",
+        "translate": ""
+    },
+    {
+        "source": "Ends the struct formatting.",
+        "suggest": "结束结构体格式化。",
+        "translate": ""
+    },
+    {
+        "source": "We add the first \"entry\".",
+        "suggest": "我们添加第一个 \"entry\"。",
+        "translate": ""
+    },
+    {
+        "source": "We add the second \"entry\".",
+        "suggest": "我们添加第二个 \"entry\"。",
+        "translate": ""
+    },
+    {
+        "source": "We add the \"whole\" entry.",
+        "suggest": "我们添加 \"whole\" 条目。",
+        "translate": ""
+    },
+    {
+        "source": "We map our vec so each entries' first field will become the \"key\".",
+        "suggest": "我们将 vec 设为 map，因此每个条目的第一个字段将成为 \"key\"。",
+        "translate": ""
+    },
+    {
+        "source": "A struct to help with [`fmt::Debug`](Debug) implementations.",
+        "suggest": "一个有助于 [`fmt::Debug`](Debug) 实现的结构体。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you wish to output a formatted struct as a part of your [`Debug::fmt`] implementation.",
+        "suggest": "当您希望将格式化的结构体作为 [`Debug::fmt`] 实现的一部分输出时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This can be constructed by the [`Formatter::debug_struct`] method.",
+        "suggest": "这可以通过 [`Formatter::debug_struct`] 方法创建。",
+        "translate": ""
+    },
+    {
+        "source": "Adds a new field to the generated struct output.",
+        "suggest": "在生成的结构体输出中添加一个新字段。",
+        "translate": ""
+    },
+    {
+        "source": "Marks the struct as non-exhaustive, indicating to the reader that there are some other fields that are not shown in the debug representation.",
+        "suggest": "将结构体标记为非穷举，向 reader 指示在调试表示中未显示其他一些字段。",
+        "translate": ""
+    },
+    {
+        "source": "Draw non-exhaustive dots (`..`), and open brace if necessary (no fields).",
+        "suggest": "绘制非穷举点 (`..`)，并在必要时打开括号 (无字段)。",
+        "translate": ""
+    },
+    {
+        "source": "Finishes output and returns any error encountered.",
+        "suggest": "完成输出并返回遇到的任何错误。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you wish to output a formatted tuple as a part of your [`Debug::fmt`] implementation.",
+        "suggest": "当您希望将格式化的元组作为 [`Debug::fmt`] 实现的一部分输出时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This can be constructed by the [`Formatter::debug_tuple`] method.",
+        "suggest": "这可以通过 [`Formatter::debug_tuple`] 方法创建。",
+        "translate": ""
+    },
+    {
+        "source": "Adds a new field to the generated tuple struct output.",
+        "suggest": "在生成的元组结构体输出中添加一个新字段。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you wish to output a formatted set of items as a part of your [`Debug::fmt`] implementation.",
+        "suggest": "当您希望输出格式化的项集作为 [`Debug::fmt`] 实现的一部分时，这很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This can be constructed by the [`Formatter::debug_set`] method.",
+        "suggest": "这可以通过 [`Formatter::debug_set`] 方法创建。",
+        "translate": ""
+    },
+    {
+        "source": "Adds a new entry to the set output.",
+        "suggest": "将新条目添加到设置的输出中。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the contents of an iterator of entries to the set output.",
+        "suggest": "将条目迭代器的内容添加到设置的输出中。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you wish to output a formatted list of items as a part of your [`Debug::fmt`] implementation.",
+        "suggest": "当您希望输出格式化的项列表作为 [`Debug::fmt`] 实现的一部分时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This can be constructed by the [`Formatter::debug_list`] method.",
+        "suggest": "这可以通过 [`Formatter::debug_list`] 方法创建。",
+        "translate": ""
+    },
+    {
+        "source": "Adds a new entry to the list output.",
+        "suggest": "将新条目添加到列表输出中。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the contents of an iterator of entries to the list output.",
+        "suggest": "将条目迭代器的内容添加到列表输出中。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful when you wish to output a formatted map as a part of your [`Debug::fmt`] implementation.",
+        "suggest": "当您希望输出格式化的 map 作为 [`Debug::fmt`] 实现的一部分时，此功能很有用。",
+        "translate": ""
+    },
+    {
+        "source": "This can be constructed by the [`Formatter::debug_map`] method.",
+        "suggest": "这可以通过 [`Formatter::debug_map`] 方法创建。",
+        "translate": ""
+    },
+    {
+        "source": "The state of newlines is tracked between keys and values",
+        "suggest": "在键和值之间跟踪换行状态",
+        "translate": ""
+    },
+    {
+        "source": "Adds a new entry to the map output.",
+        "suggest": "在 map 输出中添加一个新条目。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the key part of a new entry to the map output.",
+        "suggest": "将新条目的关键部分添加到 map 输出中。",
+        "translate": ""
+    },
+    {
+        "source": "This method, together with `value`, is an alternative to `entry` that can be used when the complete entry isn't known upfront.",
+        "suggest": "该方法与 `value` 一起，是 `entry` 的替代方法，可以在事先不知道完整条目的情况下使用。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer the `entry` method when it's possible to use.",
+        "suggest": "尽可能使用 `entry` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "must be called before `value` and each call to `key` must be followed by a corresponding call to `value`.",
+        "suggest": "必须在 `value` 之前调用，并且对 `key` 的每次调用都必须后面跟随对 `value` 的相应调用。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise this method will panic.",
+        "suggest": "否则，此方法将为 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the value part of a new entry to the map output.",
+        "suggest": "将新条目的值部分添加到 map 输出中。",
+        "translate": ""
+    },
+    {
+        "source": "This method, together with `key`, is an alternative to `entry` that can be used when the complete entry isn't known upfront.",
+        "suggest": "该方法与 `key` 一起，是 `entry` 的替代方法，可以在事先不知道完整条目的情况下使用。",
+        "translate": ""
+    },
+    {
+        "source": "Adds the contents of an iterator of entries to the map output.",
+        "suggest": "将条目迭代器的内容添加到 map 输出中。",
+        "translate": ""
+    },
+    {
+        "source": "Don't inline this so callers don't use the stack space this function requires unless they have to.",
+        "suggest": "不要内联它，这样调用者就不必使用此函数所需的栈空间。",
+        "translate": ""
+    },
+    {
+        "source": "enough for f32 and f64",
+        "suggest": "足以用于 f32 和 f64",
+        "translate": ""
+    },
+    {
+        "source": "Don't inline this so callers that call both this and the above won't wind up using the combined stack space of both functions in some cases.",
+        "suggest": "不要内联此函数，这样在某些情况下调用 this 和以上函数的调用程序将不会使用这两个函数的组合栈空间结束。",
+        "translate": ""
+    },
+    {
+        "source": "Common code of floating point Debug and Display.",
+        "suggest": "浮点调试和显示的通用代码。",
+        "translate": ""
+    },
+    {
+        "source": "Common code of floating point LowerExp and UpperExp.",
+        "suggest": "浮点 LowerExp 和 UpperExp 的通用代码。",
+        "translate": ""
+    },
+    {
+        "source": "1 integral digit + `precision` fractional digits = `precision + 1` total digits",
+        "suggest": "1 个整数位 + `precision` 小数位 = `precision + 1` 总位数",
+        "translate": ""
+    },
+    {
+        "source": "42 is '52' in octal",
+        "suggest": "42 是八进制的 '52'",
+        "translate": ""
+    },
+    {
+        "source": "delegate to i32's implementation",
+        "suggest": "委托给 i32 的实现",
+        "translate": ""
+    },
+    {
+        "source": "42 is '101010' in binary",
+        "suggest": "42 是 '101010' 二进制",
+        "translate": ""
+    },
+    {
+        "source": "42 is '2a' in hex",
+        "suggest": "42 是十六进制的 '2a'",
+        "translate": ""
+    },
+    {
+        "source": "42 is '2A' in hex",
+        "suggest": "42 是十六进制的 '2A'",
+        "translate": ""
+    },
+    {
+        "source": "this produces something like '0x7f06092ac6d0'",
+        "suggest": "这会产生类似 '0x7f06092ac6d0' 的东西",
+        "translate": ""
+    },
+    {
+        "source": "use `as` to convert to a `*const T`, which implements Pointer, which we can use",
+        "suggest": "使用 `as` 转换为 `*const T`，该 `* const T` 实现了 Pointer，我们可以使用它",
+        "translate": ""
+    },
+    {
+        "source": "is '4.2e1' in scientific notation",
+        "suggest": "是 '4.2e1' 的科学计数形式",
+        "translate": ""
+    },
+    {
+        "source": "delegate to f64's implementation",
+        "suggest": "委托 f64 的实现",
+        "translate": ""
+    },
+    {
+        "source": "is '4.2E1' in scientific notation",
+        "suggest": "是 '4.2E1' 的科学计数形式",
+        "translate": ""
+    },
+    {
+        "source": "We need to remove \"-\" from the number output.",
+        "suggest": "我们需要从数字输出中删除 \"-\"。",
+        "translate": ""
+    },
+    {
+        "source": "This is equivalent to:",
+        "suggest": "这等效于:",
+        "translate": ""
+    },
+    {
+        "source": "We set alignment to the right with \">\".",
+        "suggest": "我们使用 \">\" 在右边设置对齐方式。",
+        "translate": ""
+    },
+    {
+        "source": "If we received a width, we use it",
+        "suggest": "如果我们收到一个宽度，我们就用它",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise we do nothing special",
+        "suggest": "否则我们没什么特别的",
+        "translate": ""
+    },
+    {
+        "source": "If we received a precision, we use it.",
+        "suggest": "如果我们收到了精度，我们就会使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise we default to 2.",
+        "suggest": "否则，我们默认为 2。",
+        "translate": ""
+    },
+    {
+        "source": "You want a minus sign?",
+        "suggest": "您想要一个减号？",
+        "translate": ""
+    },
+    {
+        "source": "Have one!",
+        "suggest": "有一个!",
+        "translate": ""
+    },
+    {
+        "source": "We ignore the formatter's options.",
+        "suggest": "我们忽略格式化程序的选项。",
+        "translate": ""
+    },
+    {
+        "source": "Utilities for formatting and printing strings.",
+        "suggest": "用于格式化和打印字符串的实用工具。",
+        "translate": ""
+    },
+    {
+        "source": "Possible alignments returned by `Formatter::align`",
+        "suggest": "`Formatter::align` 返回的可能的对齐方式",
+        "translate": ""
+    },
+    {
+        "source": "Indication that contents should be left-aligned.",
+        "suggest": "指示内容应左对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Indication that contents should be right-aligned.",
+        "suggest": "指示内容应右对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Indication that contents should be center-aligned.",
+        "suggest": "指示内容应居中对齐。",
+        "translate": ""
+    },
+    {
+        "source": "The type returned by formatter methods.",
+        "suggest": "格式化程序方法返回的类型。",
+        "translate": ""
+    },
+    {
+        "source": "The error type which is returned from formatting a message into a stream.",
+        "suggest": "将消息格式化为流后返回的错误类型。",
+        "translate": ""
+    },
+    {
+        "source": "This type does not support transmission of an error other than that an error occurred.",
+        "suggest": "除了发生错误以外，此类型不支持错误的传输。",
+        "translate": ""
+    },
+    {
+        "source": "Any extra information must be arranged to be transmitted through some other means.",
+        "suggest": "必须安排任何其他信息以通过其他方式进行传输。",
+        "translate": ""
+    },
+    {
+        "source": "An important thing to remember is that the type `fmt::Error` should not be confused with [`std::io::Error`] or [`std::error::Error`], which you may also have in scope.",
+        "suggest": "要记住的重要一点是，不要将 `fmt::Error` 类型与 [`std::io::Error`] 或 [`std::error::Error`] 混淆，在作用域中也可以将它们与 [`std::io::Error`] 或 [`std::error::Error`] 混淆。",
+        "translate": ""
+    },
+    {
+        "source": "A trait for writing or formatting into Unicode-accepting buffers or streams.",
+        "suggest": "trait，用于写入或格式化为 Unicode 接受的缓冲区或流。",
+        "translate": ""
+    },
+    {
+        "source": "This trait only accepts UTF-8–encoded data and is not [flushable].",
+        "suggest": "trait 仅接受 UTF-8 编码的数据，而不是 [flushable]。",
+        "translate": ""
+    },
+    {
+        "source": "If you only want to accept Unicode and you don't need flushing, you should implement this trait;",
+        "suggest": "如果您只想接受 Unicode 且不需要冲洗，则应实现此 trait; 否则，请执行此操作。",
+        "translate": ""
+    },
+    {
+        "source": "otherwise you should implement [`std::io::Write`].",
+        "suggest": "否则，您应该实现 [`std::io::Write`]。",
+        "translate": ""
+    },
+    {
+        "source": "Writes a string slice into this writer, returning whether the write succeeded.",
+        "suggest": "将字符串切片写入此 writer，返回写入是否成功。",
+        "translate": ""
+    },
+    {
+        "source": "This method can only succeed if the entire string slice was successfully written, and this method will not return until all data has been written or an error occurs.",
+        "suggest": "仅当成功写入整个字符串切片后，此方法才能成功，并且只有在写入所有数据或发生错误后，该方法才会返回。",
+        "translate": ""
+    },
+    {
+        "source": "This function will return an instance of [`Error`] on error.",
+        "suggest": "错误时，此函数将返回 [`Error`] 的实例。",
+        "translate": ""
+    },
+    {
+        "source": "Writes a [`char`] into this writer, returning whether the write succeeded.",
+        "suggest": "将 [`char`] 写入此 writer，返回写入是否成功。",
+        "translate": ""
+    },
+    {
+        "source": "A single [`char`] may be encoded as more than one byte.",
+        "suggest": "单个 [`char`] 可以被编码为一个以上的字节。",
+        "translate": ""
+    },
+    {
+        "source": "This method can only succeed if the entire byte sequence was successfully written, and this method will not return until all data has been written or an error occurs.",
+        "suggest": "仅当成功写入了整个字节序列后，此方法才能成功，并且直到所有数据都已写入或发生错误后，该方法才会返回。",
+        "translate": ""
+    },
+    {
+        "source": "Glue for usage of the [`write!`] macro with implementors of this trait.",
+        "suggest": "结合使用 [`write!`] 宏和 trait 的实现者。",
+        "translate": ""
+    },
+    {
+        "source": "This method should generally not be invoked manually, but rather through the [`write!`] macro itself.",
+        "suggest": "通常不应手动调用此方法，而应通过 [`write!`] 宏本身来调用。",
+        "translate": ""
+    },
+    {
+        "source": "Configuration for formatting.",
+        "suggest": "格式化配置。",
+        "translate": ""
+    },
+    {
+        "source": "A `Formatter` represents various options related to formatting.",
+        "suggest": "`Formatter` 代表与格式相关的各种选项。",
+        "translate": ""
+    },
+    {
+        "source": "Users do not construct `Formatter`s directly;",
+        "suggest": "用户不直接构建 `Formatter`s。",
+        "translate": ""
+    },
+    {
+        "source": "a mutable reference to one is passed to the `fmt` method of all formatting traits, like [`Debug`] and [`Display`].",
+        "suggest": "将所有格式为 traits 的 `fmt` 方法 (例如 [`Debug`] 和 [`Display`]) 传递给 `fmt` 方法。",
+        "translate": ""
+    },
+    {
+        "source": "To interact with a `Formatter`, you'll call various methods to change the various options related to formatting.",
+        "suggest": "要与 `Formatter` 进行交互，您将调用各种方法来更改与格式相关的各种选项。",
+        "translate": ""
+    },
+    {
+        "source": "For examples, please see the documentation of the methods defined on `Formatter` below.",
+        "suggest": "有关示例，请参见下面在 `Formatter` 上定义的方法的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Argument is essentially an optimized partially applied formatting function, equivalent to `exists T.(&T, fn(&T, &mut Formatter<'_>) -> Result`.",
+        "suggest": "参数本质上是优化的部分应用的格式化函数，等效于 `exists T.(&T, fn(&T, &mut Formatter<'_>) -> Result`。",
+        "translate": ""
+    },
+    {
+        "source": "This struct represents the generic \"argument\" which is taken by the Xprintf family of functions.",
+        "suggest": "该结构体表示 Xprintf 系列函数采用的泛型 \"argument\"。",
+        "translate": ""
+    },
+    {
+        "source": "It contains a function to format the given value.",
+        "suggest": "它包含一个用于格式化给定值的函数。",
+        "translate": ""
+    },
+    {
+        "source": "At compile time it is ensured that the function and the value have the correct types, and then this struct is used to canonicalize arguments to one type.",
+        "suggest": "在编译时，请确保函数和值具有正确的类型，然后使用此结构体将参数规范化为一种类型。",
+        "translate": ""
+    },
+    {
+        "source": "This guarantees a single stable value for the function pointer associated with indices/counts in the formatting infrastructure.",
+        "suggest": "这样可以确保格式基础结构中与 indices/counts 关联的函数指针具有单个稳定值。",
+        "translate": ""
+    },
+    {
+        "source": "Note that a function defined as such would not be correct as functions are always tagged unnamed_addr with the current lowering to LLVM IR, so their address is not considered important to LLVM and as such the as_usize cast could have been miscompiled.",
+        "suggest": "请注意，这样定义的函数将是不正确的，因为该函数始终会被标记为 unnamed_addr，并且当前的状态会降低到 LLVM IR，因此它们的地址对于 LLVM 并不重要，因此 as_usize 强制转换可能会被错误编译。",
+        "translate": ""
+    },
+    {
+        "source": "In practice, we never call as_usize on non-usize containing data (as a matter of static generation of the formatting arguments), so this is merely an additional check.",
+        "suggest": "在实践中，我们绝不会在未使用的包含数据上调用 as_usize (作为 formatting 参数的静态生成的问题)，因此，这仅仅是一项额外的检查。",
+        "translate": ""
+    },
+    {
+        "source": "We primarily want to ensure that the function pointer at `USIZE_MARKER` has an address corresponding *only* to functions that also take `&usize` as their first argument.",
+        "suggest": "我们主要是要确保 `USIZE_MARKER` 处的函数指针具有对应于 *only* 的地址，该地址也将 `&usize` 作为它的第一个参数。",
+        "translate": ""
+    },
+    {
+        "source": "The read_volatile here ensures that we can safely ready out a usize from the passed reference and that this address does not point at a non-usize taking function.",
+        "suggest": "这里的 read_volatile 确保我们可以安全地从传递的引用中准备出 usize，并且此地址不指向未使用的接受函数。",
+        "translate": ""
+    },
+    {
+        "source": "ptr is a reference",
+        "suggest": "ptr 是引用",
+        "translate": ""
+    },
+    {
+        "source": "`mem::transmute(x)` is safe because",
+        "suggest": "`mem::transmute(x)` 是安全的，因为",
+        "translate": ""
+    },
+    {
+        "source": "keeps the lifetime it originated with `'b` (so as to not have an unbounded lifetime)",
+        "suggest": "保留它源自 `'b` 的生命周期 (以便没有无限的生命周期)",
+        "translate": ""
+    },
+    {
+        "source": "and `&'b Opaque` have the same memory layout (when `T` is `Sized`, as it is here) `mem::transmute(f)` is safe since `fn(&T, &mut Formatter<'_>) -> Result` and `fn(&Opaque, &mut Formatter<'_>) -> Result` have the same ABI (as long as `T` is `Sized`)",
+        "suggest": "和 `&'b Opaque` 具有相同的内存布局 (当 `T` 为 `Sized` 时，如此处所示) `mem::transmute(f)` 是安全的，因为 `fn(&T, &mut Formatter<'_>) -> Result` 和 `fn(&Opaque, &mut Formatter<'_>) -> Result` 具有相同的 ABI (只要 `T` 为 `Sized`)",
+        "translate": ""
+    },
+    {
+        "source": "The `formatter` field is only set to USIZE_MARKER if the value is a usize, so this is safe",
+        "suggest": "仅当值是 usize 时，才将 `formatter` 字段设置为 USIZE_MARKER，因此这是安全的",
+        "translate": ""
+    },
+    {
+        "source": "flags available in the v1 format of format_args",
+        "suggest": "v1 格式 (format_args) 中可用的标志",
+        "translate": ""
+    },
+    {
+        "source": "When using the format_args!() macro, this function is used to generate the Arguments structure.",
+        "suggest": "当使用 format_args! () 宏时，此函数用于生成参数结构体。",
+        "translate": ""
+    },
+    {
+        "source": "This function is used to specify nonstandard formatting parameters.",
+        "suggest": "此函数用于指定非标准格式设置参数。",
+        "translate": ""
+    },
+    {
+        "source": "The `pieces` array must be at least as long as `fmt` to construct a valid Arguments structure.",
+        "suggest": "`pieces` 数组必须至少与 `fmt` 一样长，以创建有效的参数结构体。",
+        "translate": ""
+    },
+    {
+        "source": "Also, any `Count` within `fmt` that is `CountIsParam` or `CountIsNextParam` has to point to an argument created with `argumentusize`.",
+        "suggest": "另外，`fmt` 中的任何 `Count` (即 `CountIsParam` 或 `CountIsNextParam`) 都必须指向使用 `argumentusize` 创建的参数。",
+        "translate": ""
+    },
+    {
+        "source": "However, failing to do so doesn't cause unsafety, but will ignore invalid .",
+        "suggest": "但是，不这样做不会导致不安全，但是会忽略 invalid。",
+        "translate": ""
+    },
+    {
+        "source": "Estimates the length of the formatted text.",
+        "suggest": "估计格式化文本的长度。",
+        "translate": ""
+    },
+    {
+        "source": "This is intended to be used for setting initial `String` capacity when using `format!`.",
+        "suggest": "当使用 `format!` 时，这旨在用于设置 `String` 的初始容量。",
+        "translate": ""
+    },
+    {
+        "source": "this is neither the lower nor upper bound.",
+        "suggest": "这既不是下限也不是上限。",
+        "translate": ""
+    },
+    {
+        "source": "If the format string starts with an argument, don't preallocate anything, unless length of pieces is significant.",
+        "suggest": "如果格式字符串以参数开头，则不要预分配任何内容，除非片段长度很大。",
+        "translate": ""
+    },
+    {
+        "source": "There are some arguments, so any additional push will reallocate the string.",
+        "suggest": "有一些参数，因此任何其他推送都会重新分配字符串。",
+        "translate": ""
+    },
+    {
+        "source": "To avoid that, we're \"pre-doubling\" the capacity here.",
+        "suggest": "为避免这种情况，我们将此处的容量设置为 \"pre-doubling\"。",
+        "translate": ""
+    },
+    {
+        "source": "This structure represents a safely precompiled version of a format string and its arguments.",
+        "suggest": "该结构体表示格式字符串及其参数的安全预编译版本。",
+        "translate": ""
+    },
+    {
+        "source": "This cannot be generated at runtime because it cannot safely be done, so no constructors are given and the fields are private to prevent modification.",
+        "suggest": "由于无法安全地完成此操作，因此无法在运行时生成该文件，因此未提供任何构造函数，并且该字段为私有字段以防止修改。",
+        "translate": ""
+    },
+    {
+        "source": "The [`format_args!`] macro will safely create an instance of this structure.",
+        "suggest": "[`format_args!`] 宏将安全地创建此结构体的实例。",
+        "translate": ""
+    },
+    {
+        "source": "The macro validates the format string at compile-time so usage of the [`write()`] and [`format()`] functions can be safely performed.",
+        "suggest": "宏在编译时验证格式字符串，因此可以安全地执行 [`write()`] 和 [`format()`] 函数的使用。",
+        "translate": ""
+    },
+    {
+        "source": "You can use the `Arguments<'a>` that [`format_args!`] returns in `Debug` and `Display` contexts as seen below.",
+        "suggest": "您可以在 `Debug` 和 `Display` 上下文中使用 [`format_args!`] 返回的 `Arguments<'a>`，如下所示。",
+        "translate": ""
+    },
+    {
+        "source": "The example also shows that `Debug` and `Display` format to the same thing: the interpolated format string in `format_args!`.",
+        "suggest": "该示例还显示 `Debug` 和 `Display` 的格式相同: `format_args!` 中的插值格式字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Format string pieces to print.",
+        "suggest": "格式化要打印的字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Placeholder specs, or `None` if all specs are default (as in \"{}{}\").",
+        "suggest": "占位符规范，如果所有规范均为默认规范，则为 `None` (与 \"{}{}\" 相同)。",
+        "translate": ""
+    },
+    {
+        "source": "Dynamic arguments for interpolation, to be interleaved with string pieces.",
+        "suggest": "用于插值的动态参数，与字符串片段交织。",
+        "translate": ""
+    },
+    {
+        "source": "(Every argument is preceded by a string piece.)",
+        "suggest": "(每个参数前面都有一个字符串。)",
+        "translate": ""
+    },
+    {
+        "source": "Get the formatted string, if it has no arguments to be formatted.",
+        "suggest": "获取格式化的字符串 (如果没有要格式化的参数)。",
+        "translate": ""
+    },
+    {
+        "source": "This can be used to avoid allocations in the most trivial case.",
+        "suggest": "在最琐碎的情况下，这可以用来避免分配。",
+        "translate": ""
+    },
+    {
+        "source": "should format the output in a programmer-facing, debugging context.",
+        "suggest": "应该在面向程序员的调试上下文中格式化输出。",
+        "translate": ""
+    },
+    {
+        "source": "Generally speaking, you should just `derive` a `Debug` implementation.",
+        "suggest": "一般来说，您应该只将 `derive` 和 `Debug` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "When used with the alternate format specifier `#?`, the output is pretty-printed.",
+        "suggest": "当与备用格式说明符 `#?` 一起使用时，输出将被漂亮地打印。",
+        "translate": ""
+    },
+    {
+        "source": "For more information on formatters, see [the module-level documentation][module].",
+        "suggest": "有关格式化程序的更多信息，请参见 [the module-level documentation][module]。",
+        "translate": ""
+    },
+    {
+        "source": "This trait can be used with `#[derive]` if all fields implement `Debug`.",
+        "suggest": "如果所有字段都实现 `Debug`，则此 trait 可以与 `#[derive]` 一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "When `derive`d for structs, it will use the name of the `struct`, then `{`, then a comma-separated list of each field's name and `Debug` value, then `}`.",
+        "suggest": "当为结构体 `derived' 时，它将使用 `struct` 的名称，然后是 `{`，然后是每个字段名称和 `Debug` 值的逗号分隔列表，然后是 `}`。",
+        "translate": ""
+    },
+    {
+        "source": "For `enum`s, it will use the name of the variant and, if applicable, `(`, then the `Debug` values of the fields, then `)`.",
+        "suggest": "对于 `enum`，它将使用成员的名称，如果适用，将使用 `(`，然后是字段的 `Debug` 值，然后是 `)`。",
+        "translate": ""
+    },
+    {
+        "source": "Derived `Debug` formats are not stable, and so may change with future Rust versions.",
+        "suggest": "派生的 `Debug` 格式不稳定，因此 future Rust 版本可能会更改。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, `Debug` implementations of types provided by the standard library (`libstd`, `libcore`, `liballoc`, etc.) are not stable, and may also change with future Rust versions.",
+        "suggest": "此外，标准库提供的类型 (`libstd`，`libcore`，`liballoc` 等) 的 `Debug` 实现不稳定，并且可能随 future Rust 版本而改变。",
+        "translate": ""
+    },
+    {
+        "source": "Deriving an implementation:",
+        "suggest": "派生实现:",
+        "translate": ""
+    },
+    {
+        "source": "Manually implementing:",
+        "suggest": "手动实现:",
+        "translate": ""
+    },
+    {
+        "source": "There are a number of helper methods on the [`Formatter`] struct to help you with manual implementations, such as [`debug_struct`].",
+        "suggest": "[`Formatter`] 结构体上有许多辅助方法可以帮助您实现手动实现，例如 [`debug_struct`]。",
+        "translate": ""
+    },
+    {
+        "source": "implementations using either `derive` or the debug builder API on [`Formatter`] support pretty-printing using the alternate flag:",
+        "suggest": "使用 `derive` 或 [`Formatter`] 上的调试构建器 API 的实现都支持使用 Alternate 标志进行漂亮的打印:",
+        "translate": ""
+    },
+    {
+        "source": "Pretty-printing with `#?`:",
+        "suggest": "使用 `#?` 进行漂亮的打印:",
+        "translate": ""
+    },
+    {
+        "source": "Formats the value using the given formatter.",
+        "suggest": "使用给定的格式化程序格式化该值。",
+        "translate": ""
+    },
+    {
+        "source": "Separate module to reexport the macro `Debug` from prelude without the trait `Debug`.",
+        "suggest": "单独的模块，用于从 prelude 重导出 `Debug` 宏，而无需 `Debug` trait。",
+        "translate": ""
+    },
+    {
+        "source": "Derive macro generating an impl of the trait `Debug`.",
+        "suggest": "派生宏，生成 trait `Debug` 的 impl。",
+        "translate": ""
+    },
+    {
+        "source": "Format trait for an empty format,",
+        "suggest": "格式化 trait 为空格式，",
+        "translate": ""
+    },
+    {
+        "source": "is similar to [`Debug`], but `Display` is for user-facing output, and so cannot be derived.",
+        "suggest": "与 [`Debug`] 相似，但 `Display` 用于面向用户的输出，因此无法导出。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Display` on a type:",
+        "suggest": "在类型上实现 `Display`:",
+        "translate": ""
+    },
+    {
+        "source": "The `Octal` trait should format its output as a number in base-8.",
+        "suggest": "`Octal` trait 应该将其输出格式化为 base-8 中的数字。",
+        "translate": ""
+    },
+    {
+        "source": "For primitive signed integers (`i8` to `i128`, and `isize`), negative values are formatted as the two’s complement representation.",
+        "suggest": "对于原始有符号整数 (`i8` 至 `i128` 和 `isize`)，负值的格式设置为二进制补码表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "The alternate flag, `#`, adds a `0o` in front of the output.",
+        "suggest": "备用标志 `#` 在输出前面添加 `0o`。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage with `i32`:",
+        "suggest": "`i32` 的基本用法:",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Octal` on a type:",
+        "suggest": "在类型上实现 `Octal`:",
+        "translate": ""
+    },
+    {
+        "source": "The `Binary` trait should format its output as a number in binary.",
+        "suggest": "`Binary` trait 应该将其输出格式化为二进制格式的数字。",
+        "translate": ""
+    },
+    {
+        "source": "For primitive signed integers ([`i8`] to [`i128`], and [`isize`]), negative values are formatted as the two’s complement representation.",
+        "suggest": "对于原始有符号整数 ([`i8`] 至 [`i128`] 和 [`isize`])，负值的格式设置为二进制补码表示形式。",
+        "translate": ""
+    },
+    {
+        "source": "The alternate flag, `#`, adds a `0b` in front of the output.",
+        "suggest": "备用标志 `#` 在输出前面添加 `0b`。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage with [`i32`]:",
+        "suggest": "[`i32`] 的基本用法:",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Binary` on a type:",
+        "suggest": "在类型上实现 `Binary`:",
+        "translate": ""
+    },
+    {
+        "source": "The `LowerHex` trait should format its output as a number in hexadecimal, with `a` through `f` in lower case.",
+        "suggest": "`LowerHex` trait 应该将其输出格式设置为十六进制数字，其中 `a` 至 `f` 为小写形式。",
+        "translate": ""
+    },
+    {
+        "source": "The alternate flag, `#`, adds a `0x` in front of the output.",
+        "suggest": "备用标志 `#` 在输出前面添加 `0x`。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `LowerHex` on a type:",
+        "suggest": "在类型上实现 `LowerHex`:",
+        "translate": ""
+    },
+    {
+        "source": "The `UpperHex` trait should format its output as a number in hexadecimal, with `A` through `F` in upper case.",
+        "suggest": "`UpperHex` trait 应该将其输出格式设置为十六进制数字，其中 `A` 至 `F` 为大写形式。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `UpperHex` on a type:",
+        "suggest": "在类型上实现 `UpperHex`:",
+        "translate": ""
+    },
+    {
+        "source": "The `Pointer` trait should format its output as a memory location.",
+        "suggest": "`Pointer` trait 应该将其输出格式化为存储位置。",
+        "translate": ""
+    },
+    {
+        "source": "This is commonly presented as hexadecimal.",
+        "suggest": "通常以十六进制表示。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage with `&i32`:",
+        "suggest": "`&i32` 的基本用法:",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `Pointer` on a type:",
+        "suggest": "在类型上实现 `Pointer`:",
+        "translate": ""
+    },
+    {
+        "source": "The `LowerExp` trait should format its output in scientific notation with a lower-case `e`.",
+        "suggest": "`LowerExp` trait 应该使用小写的 `e` 以科学计数法格式化其输出。",
+        "translate": ""
+    },
+    {
+        "source": "Basic usage with `f64`:",
+        "suggest": "`f64` 的基本用法:",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `LowerExp` on a type:",
+        "suggest": "在类型上实现 `LowerExp`:",
+        "translate": ""
+    },
+    {
+        "source": "The `UpperExp` trait should format its output in scientific notation with an upper-case `E`.",
+        "suggest": "`UpperExp` trait 应该使用大写的 `E` 以科学计数法格式化其输出。",
+        "translate": ""
+    },
+    {
+        "source": "Implementing `UpperExp` on a type:",
+        "suggest": "在类型上实现 `UpperExp`:",
+        "translate": ""
+    },
+    {
+        "source": "The `write` function takes an output stream, and an `Arguments` struct that can be precompiled with the `format_args!` macro.",
+        "suggest": "`write` 函数接受一个输出流，以及一个可以与 `format_args!` 宏预编译的 `Arguments` 结构体。",
+        "translate": ""
+    },
+    {
+        "source": "The arguments will be formatted according to the specified format string into the output stream provided.",
+        "suggest": "参数将根据指定的格式字符串格式化为提供的输出流。",
+        "translate": ""
+    },
+    {
+        "source": "Please note that using [`write!`] might be preferable.",
+        "suggest": "请注意，使用 [`write!`] 可能更可取。",
+        "translate": ""
+    },
+    {
+        "source": "We can use default formatting parameters for all arguments.",
+        "suggest": "我们可以对所有参数使用默认格式设置参数。",
+        "translate": ""
+    },
+    {
+        "source": "Every spec has a corresponding argument that is preceded by a string piece.",
+        "suggest": "每个规范都有一个对应的参数，该参数后有一个字符串。",
+        "translate": ""
+    },
+    {
+        "source": "arg and args.args come from the same Arguments, which guarantees the indexes are always within bounds.",
+        "suggest": "arg 和 args.args 来自相同的参数，从而确保索引始终在范围之内。",
+        "translate": ""
+    },
+    {
+        "source": "There can be only one trailing string piece left.",
+        "suggest": "只能剩下一个尾随的字符串片段。",
+        "translate": ""
+    },
+    {
+        "source": "arg and args come from the same Arguments, which guarantees the indexes are always within bounds.",
+        "suggest": "arg 和 args 来自相同的参数，从而确保索引始终在范围之内。",
+        "translate": ""
+    },
+    {
+        "source": "Extract the correct argument",
+        "suggest": "提取正确的参数",
+        "translate": ""
+    },
+    {
+        "source": "arg and args come from the same Arguments, which guarantees its index is always within bounds.",
+        "suggest": "arg 和 args 来自相同的参数，从而确保其索引始终在范围之内。",
+        "translate": ""
+    },
+    {
+        "source": "Then actually do some printing",
+        "suggest": "然后实际做一些打印",
+        "translate": ""
+    },
+    {
+        "source": "cnt and args come from the same Arguments, which guarantees this index is always within bounds.",
+        "suggest": "cnt 和 args 来自相同的参数，这确保此索引始终在范围之内。",
+        "translate": ""
+    },
+    {
+        "source": "Padding after the end of something.",
+        "suggest": "结束后填充。",
+        "translate": ""
+    },
+    {
+        "source": "Returned by `Formatter::padding`.",
+        "suggest": "由 `Formatter::padding` 返回。",
+        "translate": ""
+    }
+]

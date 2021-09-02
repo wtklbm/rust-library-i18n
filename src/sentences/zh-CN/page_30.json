@@ -1,0 +1,1227 @@
+[
+    {
+        "source": "Replaces a lane from a 128-bit vector interpreted as 16 packed u8 numbers.",
+        "suggest": "从解释为 16 个包装的 u8 数字的 128 位 vector 替换一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a lane from a 128-bit vector interpreted as 8 packed u16 numbers.",
+        "suggest": "从解释为 8 个包装的 u16 数字的 128 位 vector 中提取一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces a lane from a 128-bit vector interpreted as 8 packed u16 numbers.",
+        "suggest": "从解释为 8 个包装的 u16 数字的 128 位 vector 替换一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a lane from a 128-bit vector interpreted as 4 packed u32 numbers.",
+        "suggest": "从解释为 4 个包装的 u32 数字的 128 位 vector 中提取一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces a lane from a 128-bit vector interpreted as 4 packed u32 numbers.",
+        "suggest": "从解释为 4 个包装的 u32 数字的 128 位 vector 替换一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a lane from a 128-bit vector interpreted as 2 packed u64 numbers.",
+        "suggest": "从解释为 2 个包装的 u64 数字的 128 位 vector 中提取一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces a lane from a 128-bit vector interpreted as 2 packed u64 numbers.",
+        "suggest": "从解释为 2 个包装的 u64 数字的 128 位 vector 替换一个通道。",
+        "translate": ""
+    },
+    {
+        "source": "Compares two 128-bit vectors as if they were two vectors of 2 sixty-four-bit integers.",
+        "suggest": "比较两个 128 位 vectors，就好像它们是两个 64 位整数的两个 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Compares two 128-bit vectors as if they were two vectors of 2 sixty-four-bit signed integers.",
+        "suggest": "比较两个 128 位 vectors，就好像它们是两个 64 位有符号整数的两个 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if any bit in `a` is set, or `false` otherwise.",
+        "suggest": "如果设置了 `a` 中的任何一位，则返回 `true`，否则返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Count the number of bits set to one within each lane.",
+        "suggest": "计算每个通道内设置为 1 的位数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if all lanes are nonzero or false if any lane is nonzero.",
+        "suggest": "如果所有通道都不为零，则返回 true，如果任何通道不为零，则返回 false。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts the high bit for each lane in `a` and produce a scalar mask with all bits concatenated.",
+        "suggest": "提取 `a` 中每个通道的高位并生成一个所有位连接的标量掩码。",
+        "translate": ""
+    },
+    {
+        "source": "this produces an extraneous `i32.and` instruction against a mask of 65535 when converting from the native intrinsic's i32 return value to our desired u16.",
+        "suggest": "当从原生内联函数的 i32 返回值转换为我们想要的 u16 时，这会针对掩码 65535 生成一个无关的 `i32.and` 指令。",
+        "translate": ""
+    },
+    {
+        "source": "This shouldn't be necessary, though, but requires upstream LLVM changes.",
+        "suggest": "不过，这应该不是必需的，但需要对上游 LLVM 进行更改。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise integer extended pairwise addition producing extended results (twice wider results than the inputs).",
+        "suggest": "逐行整数扩展成对加法产生扩展结果 (结果比输入宽两倍)。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise saturating rounding multiplication in Q15 format.",
+        "suggest": "Q15 格式的通道饱和舍入乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise integer extended multiplication producing twice wider result than the inputs.",
+        "suggest": "逐行整数扩展乘法产生比输入宽两倍的结果。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i16x8_mul(i16x8_extend_low_i8x16(a), i16x8_extend_low_i8x16(b))`",
+        "suggest": "相当于 `i16x8_mul(i16x8_extend_low_i8x16(a), i16x8_extend_low_i8x16(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i16x8_mul(i16x8_extend_high_i8x16(a), i16x8_extend_high_i8x16(b))`",
+        "suggest": "相当于 `i16x8_mul(i16x8_extend_high_i8x16(a), i16x8_extend_high_i8x16(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i16x8_mul(i16x8_extend_low_u8x16(a), i16x8_extend_low_u8x16(b))`",
+        "suggest": "相当于 `i16x8_mul(i16x8_extend_low_u8x16(a), i16x8_extend_low_u8x16(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i16x8_mul(i16x8_extend_high_u8x16(a), i16x8_extend_high_u8x16(b))`",
+        "suggest": "相当于 `i16x8_mul(i16x8_extend_high_u8x16(a), i16x8_extend_high_u8x16(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise multiply signed 16-bit integers in the two input vectors and add adjacent pairs of the full 32-bit results.",
+        "suggest": "在两个输入 vectors 中逐行乘以带符号的 16 位整数，并将完整的 32 位结果的相邻对相加。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i32x4_mul(i32x4_extend_low_i16x8_s(a), i32x4_extend_low_i16x8_s(b))`",
+        "suggest": "相当于 `i32x4_mul(i32x4_extend_low_i16x8_s(a), i32x4_extend_low_i16x8_s(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i32x4_mul(i32x4_extend_high_i16x8_s(a), i32x4_extend_high_i16x8_s(b))`",
+        "suggest": "相当于 `i32x4_mul(i32x4_extend_high_i16x8_s(a), i32x4_extend_high_i16x8_s(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i32x4_mul(i32x4_extend_low_u16x8(a), i32x4_extend_low_u16x8(b))`",
+        "suggest": "相当于 `i32x4_mul(i32x4_extend_low_u16x8(a), i32x4_extend_low_u16x8(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i32x4_mul(i32x4_extend_high_u16x8(a), i32x4_extend_high_u16x8(b))`",
+        "suggest": "相当于 `i32x4_mul(i32x4_extend_high_u16x8(a), i32x4_extend_high_u16x8(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i64x2_mul(i64x2_extend_low_i32x4_s(a), i64x2_extend_low_i32x4_s(b))`",
+        "suggest": "相当于 `i64x2_mul(i64x2_extend_low_i32x4_s(a), i64x2_extend_low_i32x4_s(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i64x2_mul(i64x2_extend_high_i32x4_s(a), i64x2_extend_high_i32x4_s(b))`",
+        "suggest": "相当于 `i64x2_mul(i64x2_extend_high_i32x4_s(a), i64x2_extend_high_i32x4_s(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i64x2_mul(i64x2_extend_low_i32x4_u(a), i64x2_extend_low_i32x4_u(b))`",
+        "suggest": "相当于 `i64x2_mul(i64x2_extend_low_i32x4_u(a), i64x2_extend_low_i32x4_u(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent of `i64x2_mul(i64x2_extend_high_i32x4_u(a), i64x2_extend_high_i32x4_u(b))`",
+        "suggest": "相当于 `i64x2_mul(i64x2_extend_high_i32x4_u(a), i64x2_extend_high_i32x4_u(b))`",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise rounding to the nearest integral value not smaller than the input.",
+        "suggest": "按通道舍入到不小于输入的最近整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise rounding to the nearest integral value not greater than the input.",
+        "suggest": "按通道舍入到不大于输入的最近整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise rounding to the nearest integral value with the magnitude not larger than the input.",
+        "suggest": "按通道舍入到最接近的整数值，幅度不大于输入。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise rounding to the nearest integral value;",
+        "suggest": "按通道舍入到最接近的整数值;",
+        "translate": ""
+    },
+    {
+        "source": "if two values are equally near, rounds to the even one.",
+        "suggest": "如果两个值相等，则舍入到偶数。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise minimum value, defined as `b < a ? b : a`",
+        "suggest": "通道最小值，定义为 `b < a ? b : a`",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise maximum value, defined as `a < b ? b : a`",
+        "suggest": "通道最大值，定义为 `a < b ? b : a`",
+        "translate": ""
+    },
+    {
+        "source": "Saturating conversion of the two double-precision floating point lanes to two lower integer lanes using the IEEE `convertToIntegerTowardZero` function.",
+        "suggest": "使用 IEEE `convertToIntegerTowardZero` 函数将两个双精度浮点通道饱和转换为两个较低的整数通道。",
+        "translate": ""
+    },
+    {
+        "source": "The two higher lanes of the result are initialized to zero.",
+        "suggest": "结果的两个较高通道被初始化为零。",
+        "translate": ""
+    },
+    {
+        "source": "If any input lane is a NaN, the resulting lane is 0.",
+        "suggest": "如果任何输入通道是 NaN，则结果通道为 0。",
+        "translate": ""
+    },
+    {
+        "source": "If the rounded integer value of a lane is outside the range of the destination type, the result is saturated to the nearest representable integer value.",
+        "suggest": "如果通道的舍入整数值超出目标类型的范围，则结果饱和为最接近的可表示整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Lane-wise conversion from integer to floating point.",
+        "suggest": "从整数到浮点的逐行转换。",
+        "translate": ""
+    },
+    {
+        "source": "Conversion of the two double-precision floating point lanes to two lower single-precision lanes of the result.",
+        "suggest": "将结果的两个双精度浮点通道转换为两个较低的单精度通道。",
+        "translate": ""
+    },
+    {
+        "source": "If the conversion result is not representable as a single-precision floating point number, it is rounded to the nearest-even representable number.",
+        "suggest": "如果转换结果不能表示为单精度浮点数，则将其四舍五入为最接近的偶数可表示数。",
+        "translate": ""
+    },
+    {
+        "source": "Conversion of the two lower single-precision floating point lanes to the two double-precision lanes of the result.",
+        "suggest": "将两个较低的单精度浮点通道转换为结果的两个双精度通道。",
+        "translate": ""
+    },
+    {
+        "source": "8-bit round constant `IMM8`.",
+        "suggest": "8 位舍入常量 `IMM8`。",
+        "translate": ""
+    },
+    {
+        "source": "Rounds packed double-precision (64-bit) floating point elements in `a` according to the flag `ROUNDING`.",
+        "suggest": "根据 `ROUNDING` 标志对 `a` 中的双精度 (64-bit) 浮点包装的 (64-bit) 浮点元素进行舍入。",
+        "translate": ""
+    },
+    {
+        "source": "The value of `ROUNDING` may be as follows:",
+        "suggest": "`ROUNDING` 的值可能如下:",
+        "translate": ""
+    },
+    {
+        "source": "Rounds packed single-precision (32-bit) floating point elements in `a` according to the flag `ROUNDING`.",
+        "suggest": "根据标志 `ROUNDING` 对 `a` 中的单精度 (32-bit) 浮点包装元素进行舍入。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed double-precision (64-bit) floating-point elements in `a` and `b` based on the comparison operand specified by `IMM5`.",
+        "suggest": "根据 `IMM5` 指定的比较操作数比较 `a` 和 `b` 中包装的双精度 (64-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed single-precision (32-bit) floating-point elements in `a` and `b` based on the comparison operand specified by `IMM5`.",
+        "suggest": "根据 `IMM5` 指定的比较操作数比较 `a` 和 `b` 中包装的单精度 (32-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower double-precision (64-bit) floating-point element in `a` and `b` based on the comparison operand specified by `IMM5`, store the result in the lower element of returned vector, and copies the upper element from `a` to the upper element of returned vector.",
+        "suggest": "根据 `IMM5` 指定的比较操作数，比较 `a` 和 `b` 中的低位双精度浮点元素 (64-bit)，将结果存入返回的 vector 的低位元素，并将 `a` 的高位元素复制到返回的 vector 的高位元素。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the lower single-precision (32-bit) floating-point element in `a` and `b` based on the comparison operand specified by `IMM5`, store the result in the lower element of returned vector, and copies the upper 3 packed elements from `a` to the upper elements of returned vector.",
+        "suggest": "根据 `IMM5` 指定的比较操作数比较 `a` 和 `b` 中的低位单精度 (32-bit) 浮点元素，将结果存储在返回的 vector 的低位元素中，并将高 3 个包装的元素从 `a` 复制到返回 vector。",
+        "translate": ""
+    },
+    {
+        "source": "If the values being compared are both 0.0s (of either sign), the",
+        "suggest": "如果被比较的值都是 0.0s (任一符号)，则",
+        "translate": ""
+    },
+    {
+        "source": "value in the second operand (source operand) is returned.",
+        "suggest": "返回第二个操作数 (源操作数) 中的值。",
+        "translate": ""
+    },
+    {
+        "source": "If only one value is a NaN (SNaN or QNaN) for this instruction, the",
+        "suggest": "如果该指令只有一个值是 NaN (SNaN 或 QNaN)，则",
+        "translate": ""
+    },
+    {
+        "source": "second operand (source operand), either a NaN or a valid",
+        "suggest": "第二个操作数 (源操作数)，可以是 NaN 或有效的",
+        "translate": ""
+    },
+    {
+        "source": "floating-point value, is written to the result.",
+        "suggest": "浮点值，写入结果。",
+        "translate": ""
+    },
+    {
+        "source": "Blends packed 32-bit integers from `a` and `b` using control mask `IMM4`.",
+        "suggest": "使用控制掩码 `IMM4` 混合来自 `a` 和 `b` 的包装的 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Blends packed 32-bit integers from `a` and `b` using control mask `IMM8`.",
+        "suggest": "使用控制掩码 `IMM8` 混合来自 `a` 和 `b` 的包装的 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Blends packed 16-bit integers from `a` and `b` using control mask `IMM8`.",
+        "suggest": "使用控制掩码 `IMM8` 混合包装来自 `a` 和 `b` 的 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts 128 bits (of integer data) from `a` selected with `IMM1`.",
+        "suggest": "从 `IMM1` 选择的 `a` 中提取 128 位 (整数数据)。",
+        "translate": ""
+    },
+    {
+        "source": "Copies `a` to `dst`, then insert 128 bits (of integer data) from `b` at the location specified by `IMM1`.",
+        "suggest": "将 `a` 复制到 `dst`，然后在 `IMM1` 指定的位置插入来自 `b` 的 128 位 (整数数据)。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 16-bit integers in `a` left by `IMM8` while shifting in zeros, return the results;",
+        "suggest": "将 `a` 中包装的 16 位整数在 `IMM8` 左移同时移零，返回结果;",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 32-bit integers in `a` left by `IMM8` while shifting in zeros, return the results;",
+        "suggest": "将 `a` 中的包装的 32 位整数在 `IMM8` 左移同时移零，返回结果;",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 64-bit integers in `a` left by `IMM8` while shifting in zeros, return the results;",
+        "suggest": "将 `a` 中的包装的 64 位整数在 `IMM8` 左移同时移零，返回结果;",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 16-bit integers in `a` right by `IMM8` while shifting in sign bits.",
+        "suggest": "将 `a` 中包装的 16 位整数右移 `IMM8`，同时移入符号位。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 32-bit integers in `a` right by `IMM8` while shifting in sign bits.",
+        "suggest": "将 `a` 中包装的 32 位整数右移 `IMM8`，同时移入符号位。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 16-bit integers in `a` right by `IMM8` while shifting in zeros",
+        "suggest": "将 `a` 中包装的 16 位整数右移 `IMM8`，同时将其移入零",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 32-bit integers in `a` right by `IMM8` while shifting in zeros",
+        "suggest": "将 `a` 中包装的 32 位整数右移 `IMM8`，同时将其移入零",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 64-bit integers in `a` right by `IMM8` while shifting in zeros",
+        "suggest": "将 `a` 中包装的 64 位整数右移 `IMM8`，同时将其移入零",
+        "translate": ""
+    },
+    {
+        "source": "Extracts an 8-bit integer from `a`, selected with `INDEX`.",
+        "suggest": "从 `a` 中提取一个 8 位整数，用 `INDEX` 选择。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a 16-bit integer from `a`, selected with `INDEX`.",
+        "suggest": "从 `a` 中提取一个 16 位整数，用 `INDEX` 选择。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a 32-bit integer from `a`, selected with `INDEX`.",
+        "suggest": "从 `a` 中提取一个 32 位整数，用 `INDEX` 选择。",
+        "translate": ""
+    },
+    {
+        "source": "Compare packed unsigned 16-bit integers in a and b based on the comparison operand specified by `IMM8`, and store the results in mask vector k.",
+        "suggest": "根据 `IMM8` 指定的比较操作数比较 a 和 b 中包装的无符号 16 位整数，并将结果存储在掩码 vector k 中。",
+        "translate": ""
+    },
+    {
+        "source": "should be vpshufd",
+        "suggest": "应该是 vpshufd",
+        "translate": ""
+    },
+    {
+        "source": "Extract 256 bits (composed of 4 packed 64-bit integers) from a, selected with IMM1, and store the result in dst.",
+        "suggest": "从 a 中提取 256 位 (由 4 个包装的 64 位整数组成)，用 IMM1 选择，并将结果存储在 dst 中。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 256 bits (composed of 4 packed 64-bit integers) from a, selected with IMM1, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
+        "suggest": "从 a 中提取 256 位 (由 4 个包装的 64 位整数组成)，用 IMM1 选中，用 writemask k 将结果存入 dst (当相应的掩码位未设置时，从 src 复制元素)。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 256 bits (composed of 4 packed 64-bit integers) from a, selected with IMM1, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
+        "suggest": "从 a 中提取 256 位 (由 4 个包装的 64 位整数组成)，用 IMM1 选择，结果用 zeromask k 存储在 dst 中 (当相应的掩码位未设置时，元素归零)。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 128 bits (composed of 4 packed 32-bit integers) from a, selected with IMM2, and store the result in dst.",
+        "suggest": "从 a 中提取 128 位 (由 4 个包装的 32 位整数组成)，用 IMM2 选中，结果存入 dst。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 128 bits (composed of 4 packed 32-bit integers) from a, selected with IMM2, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
+        "suggest": "从 a 中提取 128 位 (由 4 个包装的 32 位整数组成)，用 IMM2 选中，用 writemask k 将结果存入 dst 中 (未设置相应掩码位时从 src 复制元素)。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 128 bits (composed of 4 packed 32-bit integers) from a, selected with IMM2, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
+        "suggest": "从 a 中提取 128 位 (由 4 个包装的 32 位整数组成)，用 IMM2 选择，结果用 zeromask k 存储在 dst 中 (当相应的掩码位未设置时，元素归零)。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 128 bits (composed of 4 packed 32-bit integers) from a, selected with IMM1, and store the result in dst.",
+        "suggest": "从 a 中提取 128 位 (由 4 个包装的 32 位整数组成)，用 IMM1 选中，结果存入 dst。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 128 bits (composed of 4 packed 32-bit integers) from a, selected with IMM1, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
+        "suggest": "从 a 中提取 128 位 (由 4 个包装的 32 位整数组成)，用 IMM1 选中，用 writemask k 将结果存入 dst 中 (未设置相应掩码位时从 src 复制元素)。",
+        "translate": ""
+    },
+    {
+        "source": "Extract 128 bits (composed of 4 packed 32-bit integers) from a, selected with IMM1, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
+        "suggest": "从 a 中提取 128 位 (由 4 个包装的 32 位整数组成)，用 IMM1 选择，结果用 zeromask k 存储在 dst 中 (当相应的掩码位未设置时，元素归零)。",
+        "translate": ""
+    },
+    {
+        "source": "wants to use a 32-bit address size, but asm!",
+        "suggest": "想使用 32 位地址大小，但是 asm!",
+        "translate": ""
+    },
+    {
+        "source": "defaults to using the full register name (e.g.",
+        "suggest": "默认使用完整的寄存器名称 (例如",
+        "translate": ""
+    },
+    {
+        "source": "We have to explicitly override the placeholder to use the 32-bit register name in that case.",
+        "suggest": "在这种情况下，我们必须显式覆盖占位符以使用 32 位寄存器名称。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM sometimes reserves `ebx` for its internal use, we so we need to use a scratch register for it instead.",
+        "suggest": "LLVM 有时会保留 `ebx` 供其内部使用，因此我们需要为它使用临时寄存器。",
+        "translate": ""
+    },
+    {
+        "source": "Read eflags and save a copy of it",
+        "suggest": "读取 eflags 并保存它的副本",
+        "translate": ""
+    },
+    {
+        "source": "Flip 21st bit of the flags",
+        "suggest": "翻转标志的第 21 位",
+        "translate": ""
+    },
+    {
+        "source": "Load the modified flags and read them back.",
+        "suggest": "加载修改后的标志并将其读回。",
+        "translate": ""
+    },
+    {
+        "source": "Bit 21 can only be modified if cpuid is available.",
+        "suggest": "只有在 cpuid 可用时才能修改位 21。",
+        "translate": ""
+    },
+    {
+        "source": "Use xor to find out whether bit 21 has changed",
+        "suggest": "使用 xor 找出第 21 位是否发生了变化",
+        "translate": ""
+    },
+    {
+        "source": "Helper struct used to trigger const eval errors when the const generic immediate value `imm` is not a round number.",
+        "suggest": "辅助结构体用于当 const 泛型 immediate 值 `imm` 不是整数时触发 const eval 错误。",
+        "translate": ""
+    },
+    {
+        "source": "Helper struct used to trigger const eval errors when the const generic immediate value `imm` is not a sae number.",
+        "suggest": "辅助结构体用于在 const 泛型 immediate 值 `imm` 不是 sae 数时触发 const eval 错误。",
+        "translate": ""
+    },
+    {
+        "source": "Helper struct used to trigger const eval errors when the const generic immediate value `imm` is not a mantissas sae number.",
+        "suggest": "辅助结构体用于在 const 泛型 immediate 值 `imm` 不是尾数时触发 const eval 错误。",
+        "translate": ""
+    },
+    {
+        "source": "Helper struct used to trigger const eval errors when the unsigned const generic immediate value `IMM` is out of `[MIN-MAX]` range.",
+        "suggest": "辅助结构体用于在无符号 const 泛型 immediate 值 `IMM` 超出 `[MIN-MAX]` 范围时触发 const eval 错误。",
+        "translate": ""
+    },
+    {
+        "source": "Helper struct used to trigger const eval errors when the const generic immediate value `SCALE` is not valid for gather instructions: the only valid scale values are 1, 2, 4 and 8.",
+        "suggest": "辅助结构体用于在 const 泛型 immediate 值 `SCALE` 对收集指令无效时触发 const eval 错误: 唯一有效的比例值为 1、2、4 和 8。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the approximate reciprocal square root of the first single-precision (32-bit) floating-point element in `a`, the other elements are unchanged.",
+        "suggest": "返回 `a` 中第一个单精度 (32-bit) 浮点元素的近似倒数平方根，其他元素不变。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles packed single-precision (32-bit) floating-point elements in `a` and `b` using `MASK`.",
+        "suggest": "使用 `MASK` 在 `a` 和 `b` 中打乱包装的单精度 (32-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Fetch the cache line that contains address `p` using the given `STRATEGY`.",
+        "suggest": "使用给定的 `STRATEGY` 获取包含地址 `p` 的缓存行。",
+        "translate": ""
+    },
+    {
+        "source": "The `STRATEGY` must be one of:",
+        "suggest": "`STRATEGY` 必须是以下之一:",
+        "translate": ""
+    },
+    {
+        "source": "and [`_MM_HINT_ET1`](constant._MM_HINT_ET1.html) are similar to `_MM_HINT_T0` and `_MM_HINT_T1` but indicate an anticipation to write to the address.",
+        "suggest": "和 [`_MM_HINT_ET1`](constant._MM_HINT_ET1.html) 与 `_MM_HINT_T0` 和 `_MM_HINT_T1` 类似，但表示预期写入地址。",
+        "translate": ""
+    },
+    {
+        "source": "and `rw` are based on our `STRATEGY`.",
+        "suggest": "和 `rw` 基于我们的 `STRATEGY`。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts `a` left by `IMM8` bytes while shifting in zeros.",
+        "suggest": "将 `a` 左移 `IMM8` 个字节，同时移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts `a` right by `IMM8` bytes while shifting in zeros.",
+        "suggest": "将 `a` 右移 `IMM8` 个字节，同时移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 16-bit integers in `a` left by `IMM8` while shifting in zeros.",
+        "suggest": "将 `a` 中包装的 16 位整数左移 `IMM8`，同时将其移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 32-bit integers in `a` left by `IMM8` while shifting in zeros.",
+        "suggest": "将 `a` 中包装的 32 位整数左移 `IMM8`，同时将其移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 64-bit integers in `a` left by `IMM8` while shifting in zeros.",
+        "suggest": "将 `a` 中包装的 64 位整数左移 `IMM8`，同时将其移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 16-bit integers in `a` right by `IMM8` while shifting in zeros.",
+        "suggest": "将 `a` 中包装的 16 位整数右移 `IMM8`，同时将其移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 32-bit integers in `a` right by `IMM8` while shifting in zeros.",
+        "suggest": "将 `a` 中包装的 32 位整数右移 `IMM8`，同时将其移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts packed 64-bit integers in `a` right by `IMM8` while shifting in zeros.",
+        "suggest": "将 `a` 中包装的 64 位整数右移 `IMM8`，同时将其移入零。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles 32-bit integers in `a` using the control in `IMM8`.",
+        "suggest": "使用 `IMM8` 中的控件在 `a` 中打乱 32 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles 16-bit integers in the high 64 bits of `a` using the control in `IMM8`.",
+        "suggest": "使用 `IMM8` 中的控件在 `a` 的高 64 位中打乱 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Shuffles 16-bit integers in the low 64 bits of `a` using the control in `IMM8`.",
+        "suggest": "使用 `IMM8` 中的控件在 `a` 的低 64 位中打乱 16 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME shufpd expected",
+        "suggest": "FIXME shufpd 预期",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed 16-bit integers from `a` and `b` using the mask `IMM8`.",
+        "suggest": "使用掩码 `IMM8` 混合来自 `a` 和 `b` 的 16 位整数包装。",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed double-precision (64-bit) floating-point elements from `a` and `b` using control mask `IMM2`",
+        "suggest": "使用控制掩码 `IMM2` 从 `a` 和 `b` 混合包装的双精度 (64-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Blend packed single-precision (32-bit) floating-point elements from `a` and `b` using mask `IMM4`",
+        "suggest": "使用掩码 `IMM4` 从 `a` 和 `b` 混合包装的单精度 (32-bit) 浮点元素",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a single-precision (32-bit) floating-point element from `a`, selected with `IMM8`",
+        "suggest": "从 `a` 中提取单精度 (32-bit) 浮点元素，用 `IMM8` 选择",
+        "translate": ""
+    },
+    {
+        "source": "Extracts an 8-bit integer from `a`, selected with `IMM8`.",
+        "suggest": "从 `a` 中提取一个 8 位整数，用 `IMM8` 选择。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts an 32-bit integer from `a` selected with `IMM8`",
+        "suggest": "从 `IMM8` 选择的 `a` 中提取 32 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Select a single value in `a` to store at some position in `b`, Then zero elements according to `IMM8`.",
+        "suggest": "在 `a` 中选择单个值存储在 `b` 中的某个位置，然后根据 `IMM8` 将元素归零。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of `a` with the 8-bit integer from `i` inserted at a location specified by `IMM8`.",
+        "suggest": "返回 `a` 的副本，其中 `i` 的 8 位整数插入到 `IMM8` 指定的位置。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of `a` with the 32-bit integer from `i` inserted at a location specified by `IMM8`.",
+        "suggest": "返回 `a` 的副本，其中 `i` 的 32 位整数插入到 `IMM8` 指定的位置。",
+        "translate": ""
+    },
+    {
+        "source": "is the broadcast mask, and `IMM8[5:4]` is the condition mask.",
+        "suggest": "是广播掩码，`IMM8[5:4]` 是条件掩码。",
+        "translate": ""
+    },
+    {
+        "source": "is the broadcast mask, and `IMM8[7:4]` is the condition mask.",
+        "suggest": "是广播掩码，`IMM8[7:4]` 是条件掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed double-precision (64-bit) floating-point elements in `a` using the `ROUNDING` parameter, and stores the results as packed double-precision floating-point elements.",
+        "suggest": "使用 `ROUNDING` 参数将 `a` 中的包装的双精度 (64-bit) 浮点元素舍入，并将结果存储为包装的双精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the packed single-precision (32-bit) floating-point elements in `a` using the `ROUNDING` parameter, and stores the results as packed single-precision floating-point elements.",
+        "suggest": "使用 `ROUNDING` 参数将 `a` 中的包装的单精度 (32-bit) 浮点元素舍入，并将结果存储为包装的单精度浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower double-precision (64-bit) floating-point element in `b` using the `ROUNDING` parameter, store the result as a double-precision floating-point element in the lower element of the intrinsic result, and copies the upper element from `a` to the upper element of the intrinsic result.",
+        "suggest": "使用 `ROUNDING` 参数将 `b` 中的低位双精度浮点元素 (64-bit) 舍入，将结果作为双精度浮点元素存储在内部结果的低位元素中，并将高位元素从 `a` 复制到高位元素的内在结果。",
+        "translate": ""
+    },
+    {
+        "source": "Round the lower single-precision (32-bit) floating-point element in `b` using the `ROUNDING` parameter, store the result as a single-precision floating-point element in the lower element of the intrinsic result, and copies the upper 3 packed elements from `a` to the upper elements of the instrinsic result.",
+        "suggest": "使用 `ROUNDING` 参数将 `b` 中的低位单精度 (32-bit) 浮点元素四舍五入，将结果作为单精度浮点元素存储在内部结果的低位元素中，并将高 3 个包装的元素从 `a` 复制到内在结果的上层元素。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8`, and return the generated mask.",
+        "suggest": "使用 `IMM8` 中的控件比较 `a` 和 `b` 中隐含长度的包装的字符串，并返回生成的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8` and return the generated index.",
+        "suggest": "使用 `IMM8` 中的控件比较 `a` 和 `b` 中隐含长度的包装字符串，并返回生成的索引。",
+        "translate": ""
+    },
+    {
+        "source": "The control specified by `IMM8` may be one or more of the following.",
+        "suggest": "`IMM8` 指定的控件可以是以下一种或多种。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8`, and return `1` if any character in `b` was null.",
+        "suggest": "使用 `IMM8` 中的控件比较 `a` 和 `b` 中隐含长度的包装字符串，如果 `b` 中的任何字符为空，则返回 `1`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8`, and return `1` if the resulting mask was non-zero, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件将包装的字符串与 `a` 和 `b` 中的隐式长度进行比较，如果结果掩码不为零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8`, and returns `1` if any character in `a` was null, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件比较 `a` 和 `b` 中隐含长度的包装字符串，如果 `a` 中的任何字符为空，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8`, and return bit `0` of the resulting bit mask.",
+        "suggest": "使用 `IMM8` 中的控件比较 `a` 和 `b` 中隐含长度的包装字符串，并返回结果位掩码的位 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings with implicit lengths in `a` and `b` using the control in `IMM8`, and return `1` if `b` did not contain a null character and the resulting mask was zero, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件比较 `a` 和 `b` 中隐含长度的包装字符串，如果 `b` 不包含空字符且结果掩码为零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `IMM8`, and return the generated mask.",
+        "suggest": "使用 `IMM8` 中的控件将 `a` 和 `b` 中包装的字符串与长度 `la` 和 `lb` 进行比较，并返回生成的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings `a` and `b` with lengths `la` and `lb` using the control in `IMM8` and return the generated index.",
+        "suggest": "使用 `IMM8` 中的控件将包装的字符串 `a` 和 `b` 与长度 `la` 和 `lb` 进行比较，并返回生成的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `IMM8`, and return `1` if any character in `b` was null, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，如果 `b` 中的任何字符为空，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `IMM8`, and return `1` if the resulting mask was non-zero, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，如果结果掩码非零则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `IMM8`, and return `1` if any character in a was null, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，如果 a 中的任何字符为空，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `IMM8`, and return bit `0` of the resulting bit mask.",
+        "suggest": "使用 `IMM8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，并返回结果位掩码的位 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Compares packed strings in `a` and `b` with lengths `la` and `lb` using the control in `IMM8`, and return `1` if `b` did not contain a null character and the resulting mask was zero, and `0` otherwise.",
+        "suggest": "使用 `IMM8` 中的控件将 `a` 和 `b` 中的包装字符串与长度 `la` 和 `lb` 进行比较，如果 `b` 不包含空字符且结果掩码为零，则返回 `1`，否则返回 `0`。",
+        "translate": ""
+    },
+    {
+        "source": "Unused, but needs to be a valid index.",
+        "suggest": "未使用，但需要是有效索引。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a 64-bit integer from `a`, selected with `INDEX`.",
+        "suggest": "从 `a` 中提取一个 64 位整数，用 `INDEX` 选择。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts an 64-bit integer from `a` selected with `IMM1`",
+        "suggest": "从 `IMM1` 选择的 `a` 中提取 64 位整数",
+        "translate": ""
+    },
+    {
+        "source": "Returns a copy of `a` with the 64-bit integer from `i` inserted at a location specified by `IMM1`.",
+        "suggest": "返回 `a` 的副本，其中 `i` 的 64 位整数插入到 `IMM1` 指定的位置。",
+        "translate": ""
+    },
+    {
+        "source": "There are two cases when the expected instruction is nop:",
+        "suggest": "当预期指令为 nop 时，有两种情况:",
+        "translate": ""
+    },
+    {
+        "source": "The expected intrinsic is compiled away so we can't check for it - aka the intrinsic is not generating any code.",
+        "suggest": "预期的内联函数被编译掉了，所以我们不能检查它 -- 也就是内联函数没有生成任何代码。",
+        "translate": ""
+    },
+    {
+        "source": "It is a mark, indicating that the instruction will be compiled into other instructions - mainly because of llvm optimization.",
+        "suggest": "它是一个标记，表示该指令将被编译成其他指令 -- 主要是因为 llvm 优化。",
+        "translate": ""
+    },
+    {
+        "source": "The list of required consts, used to verify the arguments, comes from either the `rustc_args_required_const` or the `rustc_legacy_const_generics` attribute.",
+        "suggest": "用于验证参数的必需常量列表来自 `rustc_args_required_const` 或 `rustc_legacy_const_generics` 属性。",
+        "translate": ""
+    },
+    {
+        "source": "Skip some intrinsics that are present in GCC and Clang but are missing from the official documentation.",
+        "suggest": "跳过 GCC 和 Clang 中存在但官方文档中缺少的一些内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "The _bittest intrinsics claim to only accept immediates but actually accept run-time values as well.",
+        "suggest": "_bittest 内联函数声称只接受立即数，但实际上也接受运行时值。",
+        "translate": ""
+    },
+    {
+        "source": "const int must be an IMM",
+        "suggest": "const int 必须是 IMM",
+        "translate": ""
+    },
+    {
+        "source": "This macro tests, at runtime, whether an `aarch64` feature is enabled on aarch64 platforms.",
+        "suggest": "这个宏在运行时测试 `aarch64` 功能是否在 aarch64 平台上启用。",
+        "translate": ""
+    },
+    {
+        "source": "Currently most features are only supported on linux-based platforms.",
+        "suggest": "目前大多数功能仅在基于 linux 的平台上受支持。",
+        "translate": ""
+    },
+    {
+        "source": "This macro takes one argument which is a string literal of the feature being tested for.",
+        "suggest": "这个宏需要一个参数，它是被测试特征的字符串字面量。",
+        "translate": ""
+    },
+    {
+        "source": "The feature names are mostly taken from their FEAT_* definitiions in the [ARM Architecture Reference Manual][docs].",
+        "suggest": "功能名称大多取自 [ARM Architecture Reference Manual][docs] 中的 FEAT_* 定义。",
+        "translate": ""
+    },
+    {
+        "source": "or \"neon\" - FEAT_AdvSIMD",
+        "suggest": "或 \"neon\"-FEAT_AdvSIMD",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_AdvSIMD (Advanced SIMD/NEON)",
+        "suggest": "FEAT_AdvSIMD (高级 SIMD/NEON)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_PMULL (Polynomial Multiply)",
+        "suggest": "FEAT_PMULL (多项式乘法)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_FP (Floating point support)",
+        "suggest": "FEAT_FP (浮点支持)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_FP16 (Half-float support)",
+        "suggest": "FEAT_FP16 (半浮动支持)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SVE (Scalable Vector Extension)",
+        "suggest": "FEAT_SVE (可扩展 Vector 扩展)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_CRC32 (Cyclic Redundancy Check)",
+        "suggest": "FEAT_CRC32 (循环冗余校验)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_LSE (Large System Extension - atomics)",
+        "suggest": "FEAT_LSE (大型系统扩展 - 原子)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_LSE2 (unaligned and register-pair atomics)",
+        "suggest": "FEAT_LSE2 (未对齐和寄存器对原子)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_RDM (Rounding Doubling Multiply - ASIMDRDM)",
+        "suggest": "FEAT_RDM (四舍五入加倍乘法 - ASIMDRDM)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_LRCPC (Release consistent Processor consistent)",
+        "suggest": "FEAT_LRCPC (发布一致处理器一致)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_LRCPC2 (RCPC with immediate offsets)",
+        "suggest": "FEAT_LRCPC2 (具有 immediate 偏移量的 RCPC)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_DotProd (Vector Dot-Product - ASIMDDP)",
+        "suggest": "FEAT_DotProd (Vector 点积 - ASIMDDP)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_TME (Transactional Memory Extensions)",
+        "suggest": "FEAT_TME (事务性内存扩展)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_FHM (fp16 multiplication instructions)",
+        "suggest": "FEAT_FHM (fp16 乘法指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_DIT (Data Independent Timing instructions)",
+        "suggest": "FEAT_DIT (数据独立时序指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_FLAGM (flag manipulation instructions)",
+        "suggest": "FEAT_FLAGM (标志操作指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SSBS (speculative store bypass safe)",
+        "suggest": "FEAT_SSBS (投机存储绕过安全)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SB (speculation barrier)",
+        "suggest": "FEAT_SB (投机障碍)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_PAuth (pointer authentication)",
+        "suggest": "FEAT_PAuth (指针认证)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_DPB (aka dcpop - data cache clean to point of persistance)",
+        "suggest": "FEAT_DPB (又名 dcpop - 数据缓存清理到持久点)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_DPB2 (aka dcpodp - data cache clean to point of deep persistance)",
+        "suggest": "FEAT_DPB2 (又名 dcpodp - 数据缓存清理到深度持久性点)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SVE2 (Scalable Vector Extension 2)",
+        "suggest": "FEAT_SVE2 (可扩展 Vector 扩展 2)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SVE_AES (SVE2 AES crypto)",
+        "suggest": "FEAT_SVE_AES (SVE2 AES 加密)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SVE_SM4 (SVE2 SM4 crypto)",
+        "suggest": "FEAT_SVE_SM4 (SVE2 SM4 加密)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SVE_SHA3 (SVE2 SHA3 crypto)",
+        "suggest": "FEAT_SVE_SHA3 (SVE2 SHA3 加密)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SVE_BitPerm (SVE2 bit permutation instructions)",
+        "suggest": "FEAT_SVE_BitPerm (SVE2 位置换指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_FRINTTS (float to integer rounding instructions)",
+        "suggest": "FEAT_FRINTTS (浮点到整数舍入指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_I8MM (integer matrix multiplication, plus ASIMD support)",
+        "suggest": "FEAT_I8MM (整数矩阵乘法，加上 ASIMD 支持)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_F32MM (single-precision matrix multiplication)",
+        "suggest": "FEAT_F32MM (单精度矩阵乘法)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_F64MM (double-precision matrix multiplication)",
+        "suggest": "FEAT_F64MM (双精度矩阵乘法)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_BF16 (BFloat16 type, plus MM instructions, plus ASIMD support)",
+        "suggest": "FEAT_BF16 (BFloat16 型，加 MM 指令，加 ASIMD 支持)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_RNG (Random Number Generator)",
+        "suggest": "FEAT_RNG (随机数生成器)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_BTI (Branch Target Identification)",
+        "suggest": "FEAT_BTI (分支目标识别)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_MTE (Memory Tagging Extension)",
+        "suggest": "FEAT_MTE (内存标记扩展)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_JSCVT (JavaScript float conversion instructions)",
+        "suggest": "FEAT_JSCVT (JavaScript 浮点转换指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_FCMA (float complex number operations)",
+        "suggest": "FEAT_FCMA (浮点复数运算)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_AES (AES instructions)",
+        "suggest": "FEAT_AES (AES 指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SHA1 & FEAT_SHA256 (SHA1 & SHA2-256 instructions)",
+        "suggest": "FEAT_SHA1&FEAT_SHA256 (SHA1&SHA2-256 指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SHA512 & FEAT_SHA3 (SHA2-512 & SHA3 instructions)",
+        "suggest": "FEAT_SHA512&FEAT_SHA3 (SHA2-512&SHA3 指令)",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_SM3 & FEAT_SM4 (SM3 & SM4 instructions)",
+        "suggest": "FEAT_SM3&FEAT_SM4 (SM3&SM4 指令)",
+        "translate": ""
+    },
+    {
+        "source": "Crypto: AES + PMULL + SHA1 + SHA256.",
+        "suggest": "加密: AES + PMULL + SHA1 + SHA256。",
+        "translate": ""
+    },
+    {
+        "source": "Prefer using the individual features where possible.",
+        "suggest": "尽可能使用单个功能。",
+        "translate": ""
+    },
+    {
+        "source": "The names match those used for cpuinfo.",
+        "suggest": "这些名称与用于 cpuinfo 的名称相匹配。",
+        "translate": ""
+    },
+    {
+        "source": "evtstrm: bool, // 2 No LLVM support",
+        "suggest": "evtstrm: bool, // 2 不支持 LLVM",
+        "translate": ""
+    },
+    {
+        "source": "cpuid: bool, // 11 No LLVM support",
+        "suggest": "cpuid: bool, // 11 不支持 LLVM",
+        "translate": ""
+    },
+    {
+        "source": "svepmull: bool, // 35 No LLVM support",
+        "suggest": "svepmull: bool, // 35 不支持 LLVM",
+        "translate": ""
+    },
+    {
+        "source": "bool, // 39 No LLVM support",
+        "suggest": "bool, // 39 不支持 LLVM",
+        "translate": ""
+    },
+    {
+        "source": "svei8mm: bool, // 41 See i8mm feature",
+        "suggest": "svei8mm: bool, // 41 见 i8mm feature",
+        "translate": ""
+    },
+    {
+        "source": "bool, // 44 See bf16 feature",
+        "suggest": "bool, // 44 见 bf16 feature",
+        "translate": ""
+    },
+    {
+        "source": "dgh: bool, // 47 No LLVM support",
+        "suggest": "dgh: bool, // 47 不支持 LLVM",
+        "translate": ""
+    },
+    {
+        "source": "The feature dependencies here come directly from LLVM's feature definintions:",
+        "suggest": "这里的特性依赖直接来自 LLVM 的特性定义:",
+        "translate": ""
+    },
+    {
+        "source": "FHM (fp16fml in LLVM) requires half float support",
+        "suggest": "FHM (LLVM 中的 fp16fml) 需要半浮点支持",
+        "translate": ""
+    },
+    {
+        "source": "(rcpc-immo in LLVM) requires RCPC support",
+        "suggest": "(LLVM 中的 rcpc-immo) 需要 RCPC 支持",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_PAuth provides both paca & pacg",
+        "suggest": "FEAT_PAuth 提供 paca 和 pacg",
+        "translate": ""
+    },
+    {
+        "source": "jsconv requires float support",
+        "suggest": "jsconv 需要浮动支持",
+        "translate": ""
+    },
+    {
+        "source": "FEAT_I8MM & FEAT_BF16 also include optional SVE components which linux exposes separately.",
+        "suggest": "FEAT_I8MM&FEAT_BF16 还包括 linux 单独公开的可选 SVE 组件。",
+        "translate": ""
+    },
+    {
+        "source": "We ignore that distinction here.",
+        "suggest": "我们在这里忽略了这种区别。",
+        "translate": ""
+    },
+    {
+        "source": "ASIMD support requires float support - if half-floats are supported, it also requires half-float support:",
+        "suggest": "ASIMD 支持需要浮动支持 - 如果支持半浮动，它还需要半浮动支持:",
+        "translate": ""
+    },
+    {
+        "source": "ASIMD extensions require ASIMD support:",
+        "suggest": "ASIMD 扩展需要 ASIMD 支持:",
+        "translate": ""
+    },
+    {
+        "source": "SVE extensions require SVE & ASIMD",
+        "suggest": "SVE 扩展需要 SVE 和 ASIMD",
+        "translate": ""
+    },
+    {
+        "source": "Cryptographic extensions require ASIMD",
+        "suggest": "加密扩展需要 ASIMD",
+        "translate": ""
+    },
+    {
+        "source": "require SHA1 & SHA256",
+        "suggest": "需要 SHA1 和 SHA256",
+        "translate": ""
+    },
+    {
+        "source": "requires SVE",
+        "suggest": "需要 SVE",
+        "translate": ""
+    },
+    {
+        "source": "extensions require SVE2 and crypto features",
+        "suggest": "扩展需要 SVE2 和加密功能",
+        "translate": ""
+    },
+    {
+        "source": "requires SHA1 & SHA2 features",
+        "suggest": "需要 SHA1 和 SHA2 功能",
+        "translate": ""
+    },
+    {
+        "source": "We write xml header on run start",
+        "suggest": "我们在运行开始时编写 xml 标头",
+        "translate": ""
+    },
+    {
+        "source": "We do not output anything on test start.",
+        "suggest": "我们在测试开始时不输出任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "We do not output anything on test timeout.",
+        "suggest": "我们不会在测试超时时输出任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "Because the testsuit node holds some of the information as attributes, we can't write it until all of the tests has ran.",
+        "suggest": "因为 testsuit 节点将一些信息作为属性保存，所以我们不能在所有测试运行之前编写它。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of writting every result as they come in, we add them to a Vec and write them all at once when run is complete.",
+        "suggest": "我们不是在结果出现时写入每个结果，而是将它们添加到 Vec 中，并在运行完成时将它们全部写入。",
+        "translate": ""
+    },
+    {
+        "source": "Module path => classname Function name => name",
+        "suggest": "模块路径 => 类名 函数名 => 名称",
+        "translate": ""
+    },
+    {
+        "source": "File path => classname Line # => test name",
+        "suggest": "文件路径 => 类名行 # => 测试名",
+        "translate": ""
+    },
+    {
+        "source": "JUnit output",
+        "suggest": "JUnit 输出",
+        "translate": ""
+    },
+    {
+        "source": "Returns None for ignored test or that that are just run, otherwise give a description of the type of test.",
+        "suggest": "对于被忽略的测试或刚刚运行的测试，返回 None，否则给出测试类型的描述。",
+        "translate": ""
+    },
+    {
+        "source": "Descriptions include \"should panic\", \"compile fail\" and \"compile\".",
+        "suggest": "描述包括 \"应该 panic\"、\"编译失败\" 和 \"编译\"。",
+        "translate": ""
+    },
+    {
+        "source": "Since ndk r23 beta 3 `libgcc` was replaced with `libunwind` thus check if we have `libunwind` available and if so use it.",
+        "suggest": "由于 ndk r23 beta 3 `libgcc` 被 `libunwind` 替换，因此检查我们是否有可用的 `libunwind`，如果有，请使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise fall back to `libgcc` to support older ndk versions.",
+        "suggest": "否则回退到 `libgcc` 以支持旧的 ndk 版本。",
+        "translate": ""
+    },
+    {
+        "source": "Don't set this for clang By default, Clang builds C code in GNU C17 mode.",
+        "suggest": "不要为 clang 设置此项 默认情况下，Clang 在 GNU C17 模式下构建 C 代码。",
+        "translate": ""
+    },
+    {
+        "source": "By default, Clang builds C++ code according to the C++98 standard, with many C++11 features accepted as extensions.",
+        "suggest": "默认情况下，Clang 根据 C++98 标准构建 C++ 代码，其中许多 C++11 特性被接受为扩展。",
+        "translate": ""
+    },
+    {
+        "source": "use the same GCC C compiler command to compile C++ code so we do not need to setup the C++ compiler env variables on the builders.",
+        "suggest": "使用相同的 GCC C 编译器命令来编译 C++ 代码，因此我们不需要在构建器上设置 C++ 编译器 env 变量。",
+        "translate": ""
+    },
+    {
+        "source": "Don't set this for clang++, as clang++ is able to compile this without libc++.",
+        "suggest": "不要为 clang++ 设置这个，因为 clang++ 可以在没有 libc++ 的情况下编译它。",
+        "translate": ""
+    }
+]
