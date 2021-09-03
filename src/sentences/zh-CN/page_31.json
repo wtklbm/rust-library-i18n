@@ -4128,5 +4128,410 @@
         "source": "See the logic in function rustc_codegen_ssa::src::back::exported_symbols, module rustc_codegen_ssa::src::back::symbol_export, rustc_middle::middle::exported_symbols and RFC 2841",
         "suggest": "参见函数 rustc_codegen_ssa::src::back::exported_symbols、模块 rustc_codegen_ssa::src::back::symbol_export、rustc_middle::middle::exported_symbols 和 RFC 2841 中的逻辑",
         "translate": ""
+    },
+    {
+        "source": "In a LinkedList, either both the head and tail are None because the list is empty, or both head and tail are Some because the list is populated.",
+        "suggest": "在 LinkedList 中，要么头部和尾部都是 None 因为列表是空的，或者头部和尾部都是 Some 因为列表被填充。",
+        "translate": ""
+    },
+    {
+        "source": "Since we have verified the head is Some, we are sure the tail is Some too.",
+        "suggest": "由于我们已经验证了头部是 Some，我们确定尾部也是 Some。",
+        "translate": ""
+    },
+    {
+        "source": "Since Rust 1.53, arrays implement IntoIterator directly:",
+        "suggest": "从 Rust 1.53 开始，数组直接实现 IntoIterator:",
+        "translate": ""
+    },
+    {
+        "source": "this method might be deprecated in the future, since [`IntoIterator`] is now implemented for arrays.",
+        "suggest": "此方法可能在 future 中被弃用，因为 [`IntoIterator`] 现在已为数组实现。",
+        "translate": ""
+    },
+    {
+        "source": "The difference from [`get`] is that this function accepts a raw pointer, which is useful to avoid the creation of temporary references.",
+        "suggest": "与 [`get`] 的不同之处在于该函数接受一个原始指针，这有助于避免创建临时引用。",
+        "translate": ""
+    },
+    {
+        "source": "This means variants at the top are less than variants at the bottom.",
+        "suggest": "这意味着顶部的成员少于底部的成员。",
+        "translate": ""
+    },
+    {
+        "source": "Here's an example:",
+        "suggest": "下面是一个例子:",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the quotient of `self` and `rhs`, rounding the result towards negative infinity.",
+        "suggest": "计算 `self` 和 `rhs` 的商，将结果四舍五入到负无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the quotient of `self` and `rhs`, rounding the result towards positive infinity.",
+        "suggest": "计算 `self` 和 `rhs` 的商，将结果四舍五入到正无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "If `rhs` is positive, calculates the smallest value greater than or equal to `self` that is a multiple of `rhs`.",
+        "suggest": "如果 `rhs` 为正数，则计算大于或等于 `self` 的最小值，即 `rhs` 的倍数。",
+        "translate": ""
+    },
+    {
+        "source": "If `rhs` is negative, calculates the largest value less than or equal to `self` that is a multiple of `rhs`.",
+        "suggest": "如果 `rhs` 为负数，则计算小于或等于 `rhs` 倍数的 `self` 的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "This function will panic if `rhs` is 0 or the operation results in overflow.",
+        "suggest": "如果 `rhs` 为 0 或操作导致溢出，则此函数将 panic。",
+        "translate": ""
+    },
+    {
+        "source": "This would otherwise fail when calculating `r` when self == T::MIN.",
+        "suggest": "否则，当 self == T::MIN 时计算 `r` 时，将导致失败。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if `rhs` is zero or the operation would result in overflow.",
+        "suggest": "如果 `rhs` 为零，则返回 `None`，否则操作会导致溢出。",
+        "translate": ""
+    },
+    {
+        "source": "This is the same as performing `self / rhs` for all unsigned integers.",
+        "suggest": "这与对所有无符号整数执行 `self / rhs` 相同。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the smallest value greater than or equal to `self` that is a multiple of `rhs`.",
+        "suggest": "计算大于或等于 `rhs` 倍数的 `self` 的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "If `rhs` is negative,",
+        "suggest": "如果 `rhs` 是负数，",
+        "translate": ""
+    },
+    {
+        "source": "The asserts are repeated in order to ensure that `get()` is non-mutating.",
+        "suggest": "重复断言以确保 `get()` 是非可变的。",
+        "translate": ""
+    },
+    {
+        "source": "The asserts are repeated in order to ensure that `raw_get()` is non-mutating.",
+        "suggest": "重复断言以确保 `raw_get()` 是非可变的。",
+        "translate": ""
+    },
+    {
+        "source": "This should not UB.",
+        "suggest": "这应该不是 UB。",
+        "translate": ""
+    },
+    {
+        "source": "See #87891",
+        "suggest": "请参见 #87891",
+        "translate": ""
+    },
+    {
+        "source": "Rust 2015 and 2018:",
+        "suggest": "Rust 2015 和 2018:",
+        "translate": ""
+    },
+    {
+        "source": "Starting in the 2021 edition, `array.into_iter()` uses `IntoIterator` normally to iterate by value, and `iter()` should be used to iterate by reference like previous editions.",
+        "suggest": "从 2021 版开始，`array.into_iter()` 通常使用 `IntoIterator` 进行值迭代，而应该像以前的版本一样使用 `iter()` 进行引用迭代。",
+        "translate": ""
+    },
+    {
+        "source": "use [`IntoIterator::into_iter`], equivalent to the post-2021 behavior (Rust 1.53+)",
+        "suggest": "使用 [`IntoIterator::into_iter`]，相当于 2021 年后的行为 (Rust 1.53+)",
+        "translate": ""
+    },
+    {
+        "source": "Double Double Quotes",
+        "suggest": "双双引号",
+        "translate": ""
+    },
+    {
+        "source": "The Windows command line is just a string",
+        "suggest": "Windows 命令行只是一个字符串",
+        "translate": ""
+    },
+    {
+        "source": "This module implements the parsing necessary to turn that string into a list of arguments.",
+        "suggest": "该模块实现了将该字符串转换为参数列表所需的解析。",
+        "translate": ""
+    },
+    {
+        "source": "`GetCommandLineW` returns a pointer to a null terminated UTF-16 string so it's safe for `WStrUnits` to use.",
+        "suggest": "`GetCommandLineW` 返回一个指向以空字符结尾的 UTF-16 字符串的指针，因此使用 `WStrUnits` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Microsoft's documentation for the Windows CLI argument format can be found at",
+        "suggest": "可以在以下位置找到 Microsoft 的 Windows CLI 参数格式文档",
+        "translate": ""
+    },
+    {
+        "source": "A more in-depth explanation is here:",
+        "suggest": "更深入的解释在这里:",
+        "translate": ""
+    },
+    {
+        "source": "includes a function to do command line parsing in shell32.dll.",
+        "suggest": "包括在 shell32.dll 中进行命令行解析的函数。",
+        "translate": ""
+    },
+    {
+        "source": "However, this is not used for two reasons:",
+        "suggest": "但是，不使用它有两个原因:",
+        "translate": ""
+    },
+    {
+        "source": "Linking with that DLL causes the process to be registered as a GUI application.",
+        "suggest": "与该 DLL 链接会使进程注册为 GUI 应用程序。",
+        "translate": ""
+    },
+    {
+        "source": "It does not follow the modern C/C++ argv rules outlined in the first two links above.",
+        "suggest": "它不遵循上面前两个链接中概述的现代 C/C++ argv 规则。",
+        "translate": ""
+    },
+    {
+        "source": "This function was tested for equivalence to the C/C++ parsing rules using an extensive test suite available at <https://github.com/ChrisDenton/winarg/tree/std>.",
+        "suggest": "使用可从以下站点获得的扩展测试套件测试了该函数与 C/C++ 解析规则的等效性：<https://github.com/ChrisDenton/winarg/tree/std>。",
+        "translate": ""
+    },
+    {
+        "source": "If the cmd line pointer is null or it points to an empty string then return the name of the executable as argv[0].",
+        "suggest": "如果 cmd 行指针为空或指向空字符串，则将可执行文件的名称返回为 argv[0]。",
+        "translate": ""
+    },
+    {
+        "source": "A quote mark always toggles `in_quotes` no matter what because there are no escape characters when parsing the executable name.",
+        "suggest": "无论如何，引号总是切换 `in_quotes`，因为在解析可执行文件名称时没有转义字符。",
+        "translate": ""
+    },
+    {
+        "source": "If not `in_quotes` then whitespace ends argv[0].",
+        "suggest": "如果不是 `in_quotes`，则空格以 argv[0] 结尾。",
+        "translate": ""
+    },
+    {
+        "source": "In all other cases the code unit is taken literally.",
+        "suggest": "在所有其他情况下，代码单元是按字面意思理解的。",
+        "translate": ""
+    },
+    {
+        "source": "Skip whitespace.",
+        "suggest": "跳过空格。",
+        "translate": ""
+    },
+    {
+        "source": "Parse the arguments according to these rules:",
+        "suggest": "根据以下规则解析参数:",
+        "translate": ""
+    },
+    {
+        "source": "All code units are taken literally except space, tab, quote and backslash.",
+        "suggest": "除空格、制表符、引号和反斜杠外，所有代码单元均按字面意思表示。",
+        "translate": ""
+    },
+    {
+        "source": "When not `in_quotes`, space and tab separate arguments.",
+        "suggest": "当不是 `in_quotes` 时，空格和制表符将参数分开。",
+        "translate": ""
+    },
+    {
+        "source": "Consecutive spaces and tabs are treated as a single separator.",
+        "suggest": "连续的空格和制表符被视为单个分隔符。",
+        "translate": ""
+    },
+    {
+        "source": "A space or tab `in_quotes` is taken literally.",
+        "suggest": "空格或制表符 `in_quotes` 按字面意思表示。",
+        "translate": ""
+    },
+    {
+        "source": "A quote toggles `in_quotes` mode unless it's escaped.",
+        "suggest": "除非转义，否则引号会切换 `in_quotes` 模式。",
+        "translate": ""
+    },
+    {
+        "source": "An escaped quote is taken literally.",
+        "suggest": "转义引用是按字面意思理解的。",
+        "translate": ""
+    },
+    {
+        "source": "A quote can be escaped if preceded by an odd number of backslashes.",
+        "suggest": "如果前面有奇数个反斜杠，则可以对引号进行转义。",
+        "translate": ""
+    },
+    {
+        "source": "If any number of backslashes is immediately followed by a quote then the number of backslashes is halved (rounding down).",
+        "suggest": "如果任何数量的反斜杠后面紧跟一个引号，则反斜杠的数量减半 (四舍五入)。",
+        "translate": ""
+    },
+    {
+        "source": "Backslashes not followed by a quote are all taken literally.",
+        "suggest": "后面没有引号的反斜杠都是字面意思。",
+        "translate": ""
+    },
+    {
+        "source": "If `in_quotes` then a quote can also be escaped using another quote (i.e.",
+        "suggest": "如果 `in_quotes` 那么一个引号也可以使用另一个引号进行转义 (比如",
+        "translate": ""
+    },
+    {
+        "source": "two consecutive quotes become one literal quote).",
+        "suggest": "两个连续的引号变成一个字面量引号)。",
+        "translate": ""
+    },
+    {
+        "source": "If not `in_quotes`, a space or tab ends the argument.",
+        "suggest": "如果不是 `in_quotes`，则以空格或制表符结束参数。",
+        "translate": ""
+    },
+    {
+        "source": "Backslashes can escape quotes or backslashes but only if consecutive backslashes are followed by a quote.",
+        "suggest": "反斜杠可以转义引号或反斜杠，但前提是连续的反斜杠后跟一个引号。",
+        "translate": ""
+    },
+    {
+        "source": "The quote is escaped if there are an odd number of backslashes.",
+        "suggest": "如果有奇数个反斜杠，引号将被转义。",
+        "translate": ""
+    },
+    {
+        "source": "If there is no quote on the end then there is no escaping.",
+        "suggest": "如果最后没有引用，则没有转义。",
+        "translate": ""
+    },
+    {
+        "source": "If `in_quotes` and not backslash escaped (see above) then a quote either unsets `in_quote` or is escaped by another quote.",
+        "suggest": "如果 `in_quotes` 而不是反斜杠转义 (见上文)，则引用要么取消设置 `in_quote`，要么被另一个引用转义。",
+        "translate": ""
+    },
+    {
+        "source": "Two consecutive quotes when `in_quotes` produces one literal quote.",
+        "suggest": "当 `in_quotes` 产生一个文字引号时，两个连续的引号。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise set `in_quotes`.",
+        "suggest": "否则设置 `in_quotes`。",
+        "translate": ""
+    },
+    {
+        "source": "The end of the command line.",
+        "suggest": "命令行结束。",
+        "translate": ""
+    },
+    {
+        "source": "Push `cur` even if empty, which we do by breaking while `in_quotes` is still set.",
+        "suggest": "即使是空的，也要推送 `cur`,当 `in_quotes` 仍然设置时，我们通过中断来实现。",
+        "translate": ""
+    },
+    {
+        "source": "If not `in_quotes` and not BACKSLASH escaped (see above) then a quote sets `in_quote`.",
+        "suggest": "如果不是 `in_quotes` 并且没有转义反斜杠 (见上文)，则引用设置 `in_quote`。",
+        "translate": ""
+    },
+    {
+        "source": "Everything else is always taken literally.",
+        "suggest": "其他的一切总是从字面上理解。",
+        "translate": ""
+    },
+    {
+        "source": "Push the final argument, if any.",
+        "suggest": "推送最后一个参数，如果有的话。",
+        "translate": ""
+    },
+    {
+        "source": "A safe iterator over a LPWSTR (aka a pointer to a series of UTF-16 code units terminated by a NULL).",
+        "suggest": "LPWSTR 上的安全迭代器 (又名指向以 NULL 结尾的一系列 UTF-16 代码单元的指针)。",
+        "translate": ""
+    },
+    {
+        "source": "The pointer must never be null...",
+        "suggest": "指针永远不能为空...",
+        "translate": ""
+    },
+    {
+        "source": "...and the memory it points to must be valid for this lifetime.",
+        "suggest": "... 并且它指向的内存必须在此生命周期内有效。",
+        "translate": ""
+    },
+    {
+        "source": "Create the iterator.",
+        "suggest": "创建迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if `lpwstr` is null.",
+        "suggest": "如果 `lpwstr` 为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "`lpwstr` must point to a null-terminated wide string that lives at least as long as the lifetime of this struct.",
+        "suggest": "`lpwstr` 必须指向一个以空字符结尾的宽字符串，该字符串至少与此结构体的生命周期一样长。",
+        "translate": ""
+    },
+    {
+        "source": "It's always safe to read the current item because we don't ever move out of the array's bounds.",
+        "suggest": "读取当前的项总是安全的，因为我们永远不会移出数组的边界。",
+        "translate": ""
+    },
+    {
+        "source": "Advance the iterator while `predicate` returns true.",
+        "suggest": "在 `predicate` 返回 true 时推进迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the number of items it advanced by.",
+        "suggest": "返回其前进的项数。",
+        "translate": ""
+    },
+    {
+        "source": "This can never return zero as that marks the end of the string.",
+        "suggest": "这永远不会返回零，因为这标志着字符串的结尾。",
+        "translate": ""
+    },
+    {
+        "source": "If NULL is reached we immediately return.",
+        "suggest": "如果达到 NULL，我们立即返回。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore it's safe to advance the pointer after that.",
+        "suggest": "因此，在那之后推进指针是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "not a continuation byte - reject",
+        "suggest": "不是连续字节 - 拒绝",
+        "translate": ""
+    },
+    {
+        "source": "more bytes needed",
+        "suggest": "需要更多字节",
+        "translate": ""
+    },
+    {
+        "source": "guaranteed by write_valid_utf8_to_console() for single codepoint writes",
+        "suggest": "由 write_valid_utf8_to_console() 保证单个代码点写入",
+        "translate": ""
+    },
+    {
+        "source": "As the console is meant for presenting text, we assume bytes of `data` are encoded as UTF-8, which needs to be encoded as UTF-16.",
+        "suggest": "由于控制台用于呈现文本，我们假设 `data` 的字节编码为 UTF-8，需要编码为 UTF-16。",
+        "translate": ""
+    },
+    {
+        "source": "If the first byte is invalid it is either first byte of a multi-byte sequence but the provided byte slice is too short or it is the first byte of an invalide multi-byte sequence.",
+        "suggest": "如果第一个字节无效，则它是多字节序列的第一个字节，但提供的字节字节太短，或者它是无效多字节序列的第一个字节。",
+        "translate": ""
     }
 ]
