@@ -271,7 +271,7 @@
     },
     {
         "source": "Both [`Mutex`]es and [`RwLock`]s are poisoned whenever a thread fails while the lock is held.",
-        "suggest": "每当持有锁的线程发生故障时，[互斥锁] 和 [RwLock`] 都会中毒。",
+        "suggest": "每当持有锁的线程发生故障时，[`Mutex`] 和 [`RwLock`] 都会中毒。",
         "translate": ""
     },
     {

@@ -3226,7 +3226,7 @@
     },
     {
         "source": "`String`s implement [`Deref`]`<Target=str>`, and so inherit all of [`str`]'s methods.",
-        "suggest": "字符串实现 [`Deref`]`<Target=str>`，因此继承了 [str] 的所有方法。",
+        "suggest": "字符串实现 [`Deref`]`<Target=str>`，因此继承了 [`str`] 的所有方法。",
         "translate": ""
     },
     {

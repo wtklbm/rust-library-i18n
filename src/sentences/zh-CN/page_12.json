@@ -3396,7 +3396,7 @@
     },
     {
         "source": "The [pattern] can be a [`char`], a slice of [`char`]s, or a function or closure that determines if a character matches.",
-        "suggest": "[pattern] 可以是 [`char`]，可以是 [`char`s] 的切片，也可以是确定字符是否匹配的函数或闭包。",
+        "suggest": "[pattern] 可以是 [`char`]、[`char`] 的切片，也可以是确定字符是否匹配的函数或闭包。",
         "translate": ""
     },
     {

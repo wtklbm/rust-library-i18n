@@ -4261,7 +4261,7 @@
     },
     {
         "source": "Like [`struct`]s and [`enum`]s, a module and its content are private by default, unaccessible to code outside of the module.",
-        "suggest": "像 [` 结构体] 和 [枚举] 一样，默认情况下，模块及其内容是私有的，无法在模块外部进行代码访问。",
+        "suggest": "和 [`struct`] 和 [`enum`] 一样，默认情况下，模块及其内容是私有的，无法在模块外部进行代码访问。",
         "translate": ""
     },
     {
@@ -4271,7 +4271,7 @@
     },
     {
         "source": "Capture a [closure]'s environment by value.",
-        "suggest": "通过值捕获 [闭包] 的环境。",
+        "suggest": "按值捕获 [closure] 的环境。",
         "translate": ""
     },
     {
@@ -4301,7 +4301,7 @@
     },
     {
         "source": "For more information on the `move` keyword, see the [closure]'s section of the Rust book or the [threads] section",
-        "suggest": "有关 `move` 关键字的更多信息，请参见 Rust 书的 [闭包] 部分或 [threads] 部分",
+        "suggest": "有关 `move` 关键字的更多信息，请参见 Rust 书的 [closure] 部分或 [threads] 部分",
         "translate": ""
     },
     {

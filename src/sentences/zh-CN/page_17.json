@@ -3486,7 +3486,7 @@
     },
     {
         "source": "After creating a `TcpStream` by either [`connect`]ing to a remote host or [`accept`]ing a connection on a [`TcpListener`], data can be transmitted by [reading] and [writing] to it.",
-        "suggest": "通过 [`连接] 到远程主机或 [` 接受] [`TcpListener`] 上的连接创建 `TcpStream` 之后，数据可以由 [reading] 和 [writing] 传输到该 `TcpStream`。",
+        "suggest": "在通过 [`connect`] 到远程主机或 [`accept`] 在 [`TcpListener`] 上创建连接来创建 `TcpStream` 后，数据可以由 [reading] 和 [writing] 传输到该 `TcpStream`。",
         "translate": ""
     },
     {
@@ -3526,7 +3526,7 @@
     },
     {
         "source": "An iterator that infinitely [`accept`]s connections on a [`TcpListener`].",
-        "suggest": "一个 [`TcpListener`] 上无限 [[接受]] 连接的迭代器。",
+        "suggest": "一个在 [`TcpListener`] 上无限 [`accept`] 连接的迭代器。",
         "translate": ""
     },
     {

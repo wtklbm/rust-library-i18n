@@ -2816,7 +2816,7 @@
     },
     {
         "source": "You can think of `flat_map(f)` as the semantic equivalent of [`map`]ping, and then [`flatten`]ing as in `map(f).flatten()`.",
-        "suggest": "您可以将 `flat_map(f)` 视为 [`map`] ping  的语义等效项，然后像 map(f).flatten()` 中进行 [flatten]。",
+        "suggest": "您可以把 `flat_map(f)` 视为 [`map`] 的语义等价物，然后把 [`flatten`] 看作是 `map(f).flatten()`。",
         "translate": ""
     },
     {
@@ -2961,7 +2961,7 @@
     },
     {
         "source": "For example, a [`String`] can be built from [`char`]s, and an iterator of [`Result<T, E>`][`Result`] items can be collected into `Result<Collection<T>, E>`.",
-        "suggest": "例如，可以从 [`char`s] 构建 [`String`]，并且可以将 [`Result<T, E>`][`Result`] 项的迭代器收集到 `Result<Collection<T>, E>` 中。",
+        "suggest": "例如，可以从 [`char`] 构建一个 [`String`]，并且可以将 [`Result<T, E>`][`Result`] 项的迭代器收集到 `Result<Collection<T>, E>` 中。",
         "translate": ""
     },
     {
@@ -4581,7 +4581,7 @@
     },
     {
         "source": "All other formatting macros ([`format!`], [`write!`], [`println!`], etc) are proxied through this one.",
-        "suggest": "所有其他格式化宏 ([`format! `]，[`write!`]，[`println!`] 等) 都通过此代理。",
+        "suggest": "所有其他格式化宏 ([`format!`]，[`write!`]，[`println!`] 等) 都通过此代理。",
         "translate": ""
     },
     {

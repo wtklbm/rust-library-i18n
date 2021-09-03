@@ -4541,12 +4541,12 @@
     },
     {
         "source": "<code>[std::ops]::{[Drop], [Fn], [FnMut], [FnOnce]}</code>, various operations for both destructors and overloading `()`.",
-        "suggest": "<code>[std::ops]::{[丢弃], [Fn], [FnMut], [FnOnce]}</code>，用于析构函数和重载 `()` 的各种操作。",
+        "suggest": "<code>[std::ops]::{[Drop], [Fn], [FnMut], [FnOnce]}</code>，用于析构函数和重载 `()` 的各种操作。",
         "translate": ""
     },
     {
         "source": "<code>[std::mem]::[drop][mem::drop]</code>, a convenience function for explicitly dropping a value.",
-        "suggest": "<code>[std::mem]::[丢弃][mem:: 丢弃]</code>，一种用于明确丢弃值的便利功能。",
+        "suggest": "<code>[std::mem]::[drop][mem::drop]</code>，一种用于明确丢弃值的便利功能。",
         "translate": ""
     },
     {
@@ -4556,7 +4556,7 @@
     },
     {
         "source": "<code>[std::borrow]::[ToOwned]</code>, the conversion trait that defines [`to_owned`], the generic method for creating an owned type from a borrowed type.",
-        "suggest": "<code>[std:: 借用]::[ToOwned]</code>，定义 [`to_owned`] 的转换 trait，泛型从借用类型创建拥有所有权的类型的方法。",
+        "suggest": "<code>[std::borrow]::[ToOwned]</code>，定义 [`to_owned`] 的转换 trait，泛型从借用类型创建拥有所有权的类型的方法。",
         "translate": ""
     },
     {

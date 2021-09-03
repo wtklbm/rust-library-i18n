@@ -2021,17 +2021,17 @@
     },
     {
         "source": "This method will continuously call [`write_at`] until there is no more data to be written or an error of non-[`io::ErrorKind::Interrupted`] kind is returned.",
-        "suggest": "此方法将连续调用 [`write_at`]，直到没有更多数据要写入或返回非 [`io::Interrupted`] 类型的错误为止。",
+        "suggest": "此方法将不断地调用 [`write_at`]，直到没有更多数据要写入或返回非 [`io::ErrorKind::Interrupted`] 类型的错误为止。",
         "translate": ""
     },
     {
         "source": "The first error that is not of [`io::ErrorKind::Interrupted`] kind generated from this method will be returned.",
-        "suggest": "从此方法生成的不是 [`io::ErrorKind::Interrupted`] 类型的第一个错误将被返回。",
+        "suggest": "将返回第一个不是由该方法生成的 [`io::ErrorKind::Interrupted`] 类型的错误。",
         "translate": ""
     },
     {
         "source": "This function will return the first error of non-[`io::ErrorKind::Interrupted`] kind that [`write_at`] returns.",
-        "suggest": "该函数将返回 [`write_at`] 返回的第一个非 [[io::Interrupted`] 类型的错误。",
+        "suggest": "该函数将返回 [`write_at`] 返回的第一个非 [`io::ErrorKind::Interrupted`] 类型的错误。",
         "translate": ""
     },
     {

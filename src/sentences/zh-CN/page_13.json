@@ -91,7 +91,7 @@
     },
     {
         "source": "For more detail about why, see '[Implementing Stream](#implementing-stream)'.",
-        "suggest": "有关原因的更多详细信息，请参见 `[实现流] (#implementing-stream) `。",
+        "suggest": "有关原因的更多详细信息，请参见 [实现流](#implementing-stream)。",
         "translate": ""
     },
     {
@@ -3851,7 +3851,7 @@
     },
     {
         "source": "one or more similar inputs for which data[input] succeeds, and the corresponding output as an array.",
-        "suggest": "数据 [输入] 成功的一个或多个相似输入，以及对应的输出作为数组。",
+        "suggest": "data[input] 成功的一个或多个相似输入，以及对应的输出作为数组。",
         "translate": ""
     },
     {

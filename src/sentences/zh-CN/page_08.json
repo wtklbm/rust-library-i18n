@@ -536,7 +536,7 @@
     },
     {
         "source": "Copying [`String`] would duplicate responsibility for managing the [`String`]'s buffer, leading to a double free.",
-        "suggest": "复制 [`String`] 将重复管理 [String] 缓冲区的责任，从而导致双重释放。",
+        "suggest": "复制 [`String`] 将重复管理 [`String`] 缓冲区，从而导致双重释放。",
         "translate": ""
     },
     {
