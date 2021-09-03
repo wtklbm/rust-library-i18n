@@ -366,7 +366,7 @@
     },
     {
         "source": "must be [valid] for writes of `size` many bytes, and it must be properly aligned.",
-        "suggest": "必须为 [valid] 才能写入许多字节的 `size`，并且必须正确对齐。",
+        "suggest": "必须是 [有效][valid] 的才能写入许多字节的 `size`，并且必须正确对齐。",
         "translate": ""
     },
     {
@@ -4201,7 +4201,7 @@
     },
     {
         "source": "FIONBIO is inadequate for sockets on illumos/Solaris, so use the fcntl(F_[GS]ETFL)-based method provided by FileDesc instead.",
-        "suggest": "FIONBIO 不适合 illumos/Solaris 上的套接字，因此请使用 FileDesc 提供的基于 fcntl (F_ [GS] ETFL) 的方法。",
+        "suggest": "FIONBIO 不适合 illumos/Solaris 上的套接字，因此请使用 FileDesc 提供的基于 `fcntl(F_[GS]ETFL)` 的方法。",
         "translate": ""
     },
     {

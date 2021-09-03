@@ -3416,7 +3416,7 @@
     },
     {
         "source": "The feature names supported are the lowercase versions of the ones defined by Intel in [their documentation][docs].",
-        "suggest": "支持的功能名称是 [their documentation][docs] 中 Intel 定义的功能的小写版本。",
+        "suggest": "支持的功能名称是 [their 文档][docs] 中 Intel 定义的功能的小写版本。",
         "translate": ""
     },
     {
@@ -4461,7 +4461,7 @@
     },
     {
         "source": "The [CPUID Wikipedia page][wiki_cpuid] contains all the information about which flags to set to query which values, and in which registers these are reported.",
-        "suggest": "[CPUID Wikipedia page][wiki_cpuid] 包含有关设置哪些标志以查询哪些值以及在哪些寄存器中报告这些标志的所有信息。",
+        "suggest": "[CPUID 维基百科][wiki_cpuid] 页面包含有关设置哪些标志以查询哪些值，以及在哪些寄存器中报告这些标志的所有信息。",
         "translate": ""
     },
     {
@@ -4996,7 +4996,7 @@
     },
     {
         "source": "Next up you can [find an issue][issues] to help out on, we've selected a few with the [`help wanted`][help] and [`impl-period`][impl] tags which could particularly use some help.",
-        "suggest": "接下来，您可以使用 [查找问题][issues] 进行帮助，我们选择了一些带有 [`help wanted`][help] 和 [`impl-period`][impl] 标签的标签，这些标签可能特别有用。",
+        "suggest": "接下来，您可以通过 [查找问题][issues] 进行帮助，我们选择了一些带有 [`help wanted`][help] 和 [`impl-period`][impl] 标签的标签，这些标签可能特别有用。",
         "translate": ""
     }
 ]

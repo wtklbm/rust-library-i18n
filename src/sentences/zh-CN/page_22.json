@@ -2751,7 +2751,7 @@
     },
     {
         "source": "This is usually not needed when writing safe code, as [`Mutex`es][Mutex] already poison themselves when a thread panics while holding the lock.",
-        "suggest": "编写安全代码时通常不需要这样做，因为当线程在持有锁时 panic，[`Mutex`es][Mutex] 已经中毒了。",
+        "suggest": "编写安全代码时通常不需要这样做，因为当线程在持有锁时 panic，[`Mutex`][Mutex] 已经中毒了。",
         "translate": ""
     },
     {
@@ -3876,7 +3876,7 @@
     },
     {
         "source": "The [ARM's NEON Intrinsics Online Database][arm_dat] is also useful.",
-        "suggest": "[ARM's NEON Intrinsics Online Database][arm_dat] 也很有用。",
+        "suggest": "[ARM 的 NEON Intrinsics 在线数据库][arm_dat] 也很有用。",
         "translate": ""
     },
     {

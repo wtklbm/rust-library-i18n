@@ -1536,7 +1536,7 @@
     },
     {
         "source": "It consists of a data pointer and a [virtual function pointer table (vtable)][vtable] that customizes the behavior of the `RawWaker`.",
-        "suggest": "它由一个数据指针和一个自定义 `RawWaker` 行为的 [virtual function pointer table (vtable)][vtable] 组成。",
+        "suggest": "它由一个数据指针和一个自定义 `RawWaker` 行为的 [虚函数指针表 (vtable)][vtable] 组成。",
         "translate": ""
     },
     {

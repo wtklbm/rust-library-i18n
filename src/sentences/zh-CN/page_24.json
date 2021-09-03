@@ -586,7 +586,7 @@
     },
     {
         "source": "Unlike `x86_64`, however, WebAssembly does not currently have dynamic detection at runtime as to whether SIMD is supported (this is one of the motivators for the [conditional sections proposal][condsections], but that is still pretty early days).",
-        "suggest": "但是，与 `x86_64` 不同，WebAssembly 当前在运行时无法动态检测是否支持 SIMD (这是 [conditional sections proposal][condsections] 的动机之一，但这还处于初期阶段)。",
+        "suggest": "但是，与 `x86_64` 不同，WebAssembly 当前在运行时无法动态检测是否支持 SIMD (这是 [有条件的部分提案][condsections] 的动机之一，但这还处于初期阶段)。",
         "translate": ""
     },
     {
@@ -751,7 +751,7 @@
     },
     {
         "source": "Relevant is also the [LLVM NVPTX Backend documentation][llvm_docs].",
-        "suggest": "也与 [LLVM NVPTX Backend documentation][llvm_docs] 有关。",
+        "suggest": "也与 [LLVM NVPTX 后端文档][llvm_docs] 有关。",
         "translate": ""
     },
     {

@@ -2106,7 +2106,7 @@
     },
     {
         "source": "In addition to the [implementors listed below][impls], the following types also implement `Clone`:",
-        "suggest": "除 [implementors listed below][impls] 之外，以下类型还实现 `Clone`:",
+        "suggest": "除了下面列出的 [实现者][impls] 外，以下类型还实现了 `Clone`:",
         "translate": ""
     },
     {
@@ -3566,7 +3566,7 @@
     },
     {
         "source": "This enum has the same role as [the `!` “never” type][never], which is unstable in this version of Rust.",
-        "suggest": "该枚举与 [the `!`“never”type][never] 具有相同的作用，在此版本的 Rust 中不稳定。",
+        "suggest": "该枚举与 [never 类型 (`!`)][never] 具有相同的作用，在此版本的 Rust 中不稳定。",
         "translate": ""
     },
     {
@@ -3841,7 +3841,7 @@
     },
     {
         "source": "Equivalent to C's `void` type when used as a [pointer].",
-        "suggest": "当用作 [pointer] 时，等效于 C 的 `void` 类型。",
+        "suggest": "当用作 [指针][pointer] 时，等效于 C 的 `void` 类型。",
         "translate": ""
     },
     {

@@ -166,12 +166,12 @@
     },
     {
         "source": "This crate provides the `Terminal` trait, which abstracts over an [ANSI Terminal][ansi] to provide color printing, among other things.",
-        "suggest": "crate 提供了 `Terminal` trait，它在 [ANSI Terminal][ansi] 上进行抽象以提供彩色打印。",
+        "suggest": "crate 提供了 `Terminal` trait，它在 [ANSI 终端][ansi] 上进行抽象以提供彩色打印。",
         "translate": ""
     },
     {
         "source": "There are two implementations, the `TerminfoTerminal`, which uses control characters from a [terminfo][ti] database, and `WinConsole`, which uses the [Win32 Console API][win].",
-        "suggest": "有两种实现，一种是 `TerminfoTerminal`，它使用来自 [terminfo][ti] 数据库的控制字符，另一种是 `WinConsole`，它使用 [Win32 Console API][win]。",
+        "suggest": "有两种实现，一种是 `TerminfoTerminal`，它使用来自 [术语信息][ti] 数据库的控制字符，另一种是 `WinConsole`，它使用 [Win32 控制台 API][win]。",
         "translate": ""
     },
     {
@@ -3821,7 +3821,7 @@
     },
     {
         "source": "You may also <code>impl [Unpin] for Struct</code> *even if* the type of `field` is not [`Unpin`].",
-        "suggest": "您也可以 <code>impl [Unpin] for Struct</code> *even if* the type of `field` is not [`Unpin`].</code>",
+        "suggest": "您也可以 <code>impl [Unpin] for Struct</code> 即使 `field` 的类型不是 [`Unpin`].</code>",
         "translate": ""
     },
     {
@@ -4461,7 +4461,7 @@
     },
     {
         "source": "For more information on the `move` keyword, see the [closures][closure] section of the Rust book or the [threads] section.",
-        "suggest": "有关 `move` 关键字的更多信息，请参见 Rust 书籍的 [闭包][closure] 部分或 [threads] 部分。",
+        "suggest": "有关 `move` 关键字的更多信息，请参见 Rust 书籍的 [闭包][closure] 部分或 [线程][threads] 部分。",
         "translate": ""
     },
     {

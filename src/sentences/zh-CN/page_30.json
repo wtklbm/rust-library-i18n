@@ -811,7 +811,7 @@
     },
     {
         "source": "The feature names are mostly taken from their FEAT_* definitiions in the [ARM Architecture Reference Manual][docs].",
-        "suggest": "功能名称大多取自 [ARM Architecture Reference Manual][docs] 中的 FEAT_* 定义。",
+        "suggest": "功能名称大多取自 [ARM 架构参考手册][docs] 中的 FEAT_* 定义。",
         "translate": ""
     },
     {
@@ -1222,6 +1222,3781 @@
     {
         "source": "Don't set this for clang++, as clang++ is able to compile this without libc++.",
         "suggest": "不要为 clang++ 设置这个，因为 clang++ 可以在没有 libc++ 的情况下编译它。",
+        "translate": ""
+    },
+    {
+        "source": "The compiler shouldn't be able to optimize away the `sift_down` assignment in `PeekMut`'s `DerefMut` implementation since the loop might not run.",
+        "suggest": "由于循环可能无法运行，编译器不应该优化掉 `PeekMut` 的 `DerefMut` 实现中的 `sift_down` 分配。",
+        "translate": ""
+    },
+    {
+        "source": "if there is an `#[alloc_error_handler]`",
+        "suggest": "如果有 `#[alloc_error_handler]`",
+        "translate": ""
+    },
+    {
+        "source": "Returns an error if the allocation fails",
+        "suggest": "如果分配失败，则返回一个错误",
+        "translate": ""
+    },
+    {
+        "source": "Each node is represented as a `usize`, for a shorter implementation.",
+        "suggest": "对于较短的实现，每个节点都表示为 `usize`。",
+        "translate": ""
+    },
+    {
+        "source": "A `BinaryHeap` with a known list of items can be initialized from an array:",
+        "suggest": "可以从数组初始化具有已知项列表的 `BinaryHeap`:",
+        "translate": ""
+    },
+    {
+        "source": "If successful but at the cost of shrinking the parent node, returns that shrunk parent node.",
+        "suggest": "如果成功但代价是缩小父节点，则返回缩小的父节点。",
+        "translate": ""
+    },
+    {
+        "source": "A `BTreeMap` with a known list of items can be initialized from an array:",
+        "suggest": "可以从数组初始化具有已知项列表的 `BTreeMap`:",
+        "translate": ""
+    },
+    {
+        "source": "implements an [`Entry API`], which allows for complex methods of getting, setting, updating and removing keys and their values:",
+        "suggest": "实现了一个 [`Entry API`]，它允许使用复杂的方法来获取、设置、更新和删除键及其值:",
+        "translate": ""
+    },
+    {
+        "source": "The elements are visited in ascending key order.",
+        "suggest": "元素按升序键顺序访问。",
+        "translate": ""
+    },
+    {
+        "source": "we consume the dying handle immediately.",
+        "suggest": "我们立即消耗这个 dying 的句柄。",
+        "translate": ""
+    },
+    {
+        "source": "we don't touch the tree before consuming the dying handle.",
+        "suggest": "在消耗掉 dying 的句柄之前，我们不会动树。",
+        "translate": ""
+    },
+    {
+        "source": "of a `next` method returning a dying KV handle, invalidated by further calls to this function and some others.",
+        "suggest": "`next` 方法返回一个 dying 的 KV 句柄，通过进一步调用这个函数和其他一些函数而无效。",
+        "translate": ""
+    },
+    {
+        "source": "of a `next_back` method returning a dying KV handle, invalidated by further calls to this function and some others.",
+        "suggest": "`next_back` 方法返回一个 dying 的 KV 句柄，通过进一步调用这个函数和其他一些函数而无效。",
+        "translate": ""
+    },
+    {
+        "source": "and `back` are always both `None` or both `Some`.",
+        "suggest": "和 `back` 始终都是 `None` 或都是 `Some`。",
+        "translate": ""
+    },
+    {
+        "source": "If possible, extract some result from the following KV and move to the edge beyond it.",
+        "suggest": "如果可能，从下面的 KV 中提取一些结果并移动到超出它的 edge。",
+        "translate": ""
+    },
+    {
+        "source": "If possible, extract some result from the preceding KV and move to the edge beyond it.",
+        "suggest": "如果可能，从前面的 KV 中提取一些结果并移动到超出它的 edge。",
+        "translate": ""
+    },
+    {
+        "source": "not yet descended",
+        "suggest": "还没有下降",
+        "translate": ""
+    },
+    {
+        "source": "the code above would have replaced it.",
+        "suggest": "上面的代码将取代它。",
+        "translate": ""
+    },
+    {
+        "source": "If there are no such edges, i.e., if the tree contains no key within the range, returns an empty `front` and `back`.",
+        "suggest": "如果没有这样的 edges，即，如果树不包含范围内的键，则返回空的 `front` 和 `back`。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, we have to explicitly call `reborrow` on a more powerful `NodeRef` in order to reach a method like `into_kv`.",
+        "suggest": "因此，我们必须在功能更强大的 `NodeRef` 上显式调用 `reborrow`，才能达到像 `into_kv` 这样的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Beware, as this method is very dangerous, doubly so since it might not immediately appear dangerous.",
+        "suggest": "请注意，因为这种方法非常危险，所以加倍危险，因为它可能不会立即出现危险。",
+        "translate": ""
+    },
+    {
+        "source": "The node that the handle refers to must not yet have been deallocated.",
+        "suggest": "句柄所指的节点必须尚未释放。",
+        "translate": ""
+    },
+    {
+        "source": "A `BTreeSet` with a known list of items can be initialized from an array:",
+        "suggest": "可以从数组初始化具有已知项列表的 `BTreeSet`:",
+        "translate": ""
+    },
+    {
+        "source": "The elements are visited in ascending order.",
+        "suggest": "元素按升序访问。",
+        "translate": ""
+    },
+    {
+        "source": "Splits the collection into two at the given value.",
+        "suggest": "按照给定的值将集合一分为二。",
+        "translate": ""
+    },
+    {
+        "source": "Returns everything after the given value, including the value.",
+        "suggest": "返回给定值之后的所有内容，包括该值。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an iterator that visits all values in ascending order and uses a closure to determine if a value should be removed.",
+        "suggest": "创建一个按升序访问所有值的迭代器，并使用闭包来确定是否应删除某个值。",
+        "translate": ""
+    },
+    {
+        "source": "If the closure returns `true`, the value is removed from the set and yielded.",
+        "suggest": "如果闭包返回 `true`，则该值将从集合中移除并产生。",
+        "translate": ""
+    },
+    {
+        "source": "If the closure returns `false`, or panics, the value remains in the set and will not be yielded.",
+        "suggest": "如果闭包返回 `false` 或 panics，则该值保留在集合中，不会产生。",
+        "translate": ""
+    },
+    {
+        "source": "If the iterator is only partially consumed or not consumed at all, each of the remaining values is still subjected to the closure and removed and dropped if it returns `true`.",
+        "suggest": "如果迭代器只被部分使用或完全没有使用，则每个剩余的值仍然受闭包的影响，如果返回 `true`，则删除和删除。",
+        "translate": ""
+    },
+    {
+        "source": "A `LinkedList` with a known list of items can be initialized from an array:",
+        "suggest": "可以从数组初始化具有已知项列表的 `LinkedList`:",
+        "translate": ""
+    },
+    {
+        "source": "Provides a reference to the front element of the cursor's parent list, or None if the list is empty.",
+        "suggest": "提供对游标父列表前元素的引用，如果列表为空，则为 None。",
+        "translate": ""
+    },
+    {
+        "source": "Provides a reference to the back element of the cursor's parent list, or None if the list is empty.",
+        "suggest": "提供对游标父列表的后部元素的引用，如果列表为空，则为 None。",
+        "translate": ""
+    },
+    {
+        "source": "Appends an element to the front of the cursor's parent list.",
+        "suggest": "将一个元素附加到游标的父列表的前面。",
+        "translate": ""
+    },
+    {
+        "source": "The node that the cursor points to is unchanged, even if it is the \"ghost\" node.",
+        "suggest": "游标指向的节点不变，即使是 \"ghost\" 节点。",
+        "translate": ""
+    },
+    {
+        "source": "This operation should compute in O(1) time.",
+        "suggest": "此操作应在 O(1) 时间内计算。",
+        "translate": ""
+    },
+    {
+        "source": "continues to point to \"ghost\" when it addes a node to mimic the behavior of `insert_before` on an empty list.",
+        "suggest": "当它添加一个节点来模拟 `insert_before` 在空列表上的行为时，它继续指向 \"ghost\"。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: We know that `push_front` does not change the position in memory of other nodes.",
+        "suggest": "安全性: 我们知道 `push_front` 不会改变其他节点在内存中的位置。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures that `self.current` remains valid.",
+        "suggest": "这确保 `self.current` 保持有效。",
+        "translate": ""
+    },
+    {
+        "source": "Appends an element to the back of the cursor's parent list.",
+        "suggest": "将一个元素附加到游标父列表的后面。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: We know that `push_back` does not change the position in memory of other nodes.",
+        "suggest": "安全性: 我们知道 `push_back` 不会改变其他节点在内存中的位置。",
+        "translate": ""
+    },
+    {
+        "source": "The index of \"ghost\" is the length of the list, so we just need to increment self.index to reflect the new length of the list.",
+        "suggest": "\"ghost\" 的索引是列表的长度，所以我们只需要增加 self.index 来反映列表的新长度。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the first element from the cursor's parent list and returns it, or None if the list is empty.",
+        "suggest": "从游标的父列表中删除第一个元素并返回它，如果列表为空，则返回 None。",
+        "translate": ""
+    },
+    {
+        "source": "The element the cursor points to remains unchanged, unless it was pointing to the front element.",
+        "suggest": "游标指向的元素保持不变，除非它指向前面的元素。",
+        "translate": ""
+    },
+    {
+        "source": "In that case, it points to the new front element.",
+        "suggest": "在这种情况下，它指向新的前端元素。",
+        "translate": ""
+    },
+    {
+        "source": "We can't check if current is empty, we must check the list directly.",
+        "suggest": "我们不能检查 current 是否为空，我们必须直接检查列表。",
+        "translate": ""
+    },
+    {
+        "source": "It is possible for `self.current == None` and the list to be non-empty.",
+        "suggest": "`self.current == None` 和列表可能不为空。",
+        "translate": ""
+    },
+    {
+        "source": "We can't point to the node that we pop.",
+        "suggest": "我们不能指向我们弹出的节点。",
+        "translate": ""
+    },
+    {
+        "source": "Copying the behavior of `remove_current`, we move on the the next node in the sequence.",
+        "suggest": "复制 `remove_current` 的行为，我们移动到序列中的下一个节点。",
+        "translate": ""
+    },
+    {
+        "source": "If the list is of length 1 then we end pointing to the \"ghost\" node at index 0, which is expected.",
+        "suggest": "如果列表的长度为 1，那么我们结束指向索引 0 处的 \"ghost\" 节点，这是预期的。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the last element from the cursor's parent list and returns it, or None if the list is empty.",
+        "suggest": "从游标的父列表中删除最后一个元素并返回它，如果列表为空，则返回 None。",
+        "translate": ""
+    },
+    {
+        "source": "The element the cursor points to remains unchanged, unless it was pointing to the back element.",
+        "suggest": "游标指向的元素保持不变，除非它指向后面的元素。",
+        "translate": ""
+    },
+    {
+        "source": "In that case, it points to the \"ghost\" element.",
+        "suggest": "在这种情况下，它指向 \"ghost\" 元素。",
+        "translate": ""
+    },
+    {
+        "source": "The index now reflects the length of the list.",
+        "suggest": "索引现在反映了列表的长度。",
+        "translate": ""
+    },
+    {
+        "source": "It was the length of the list minus 1, but now the list is 1 smaller.",
+        "suggest": "它是列表的长度减 1，但现在列表小 1。",
+        "translate": ""
+    },
+    {
+        "source": "No change is needed for `index`.",
+        "suggest": "`index` 不需要更改。",
+        "translate": ""
+    },
+    {
+        "source": "Provides a mutable reference to the front element of the cursor's parent list, or None if the list is empty.",
+        "suggest": "提供对游标父元素的前端列表的引用引用，如果列表为空，则为 None。",
+        "translate": ""
+    },
+    {
+        "source": "Provides a mutable reference to back element of the cursor's parent list, or `None` if the list is empty.",
+        "suggest": "提供一个循环引用来返回游标的父列表的元素，如果列表为空，则提供 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Building and mutating a list with a cursor, then getting the back element:",
+        "suggest": "使用游标构建和可变列表，然后获取返回元素:",
+        "translate": ""
+    },
+    {
+        "source": "Details about the allocation that caused the error",
+        "suggest": "有关导致错误的分配的详细信息",
+        "translate": ""
+    },
+    {
+        "source": "Details of the allocation that caused a `TryReserveError`",
+        "suggest": "导致 `TryReserveError` 的分配的详细信息",
+        "translate": ""
+    },
+    {
+        "source": "Always evaluates to [`TryReserveErrorKind::CapacityOverflow`].",
+        "suggest": "始终评估为 [`TryReserveErrorKind::CapacityOverflow`]。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: The TrustedRandomAccess contract requires that callers only pass an index that is in bounds.",
+        "suggest": "安全性: TrustedRandomAccess 合约要求调用者只传递一个在边界内的索引。",
+        "translate": ""
+    },
+    {
+        "source": "A `VecDeque` with a known list of items can be initialized from an array:",
+        "suggest": "可以从数组初始化具有已知项列表的 `VecDeque`:",
+        "translate": ""
+    },
+    {
+        "source": "Stage 1: All values are retained.",
+        "suggest": "第 1 阶段: 保留所有值。",
+        "translate": ""
+    },
+    {
+        "source": "Stage 2: Swap retained value into current idx.",
+        "suggest": "第 2 阶段: 将保留值交换为当前 idx。",
+        "translate": ""
+    },
+    {
+        "source": "Stage 3: Trancate all values after idx.",
+        "suggest": "第 3 阶段: 在 idx 之后转换所有值。",
+        "translate": ""
+    },
+    {
+        "source": "Note that alignment might not be implemented by some types.",
+        "suggest": "请注意，某些类型可能不会实现对齐。",
+        "translate": ""
+    },
+    {
+        "source": "In the above grammar, `text` must not contain any `'{'` or `'}'` characters.",
+        "suggest": "在上述语法中，`text` 不得包含任何 `'{'` 或 `'}'` 字符。",
+        "translate": ""
+    },
+    {
+        "source": "To run liballoc tests without x.py without ending up with two copies of liballoc, Miri needs to be able to \"empty\" this crate.",
+        "suggest": "要在没有 x.py 的情况下运行 liballoc 测试而不以两个 liballoc 副本结束，Miri 需要能够 \"empty\" 这个 crate。",
+        "translate": ""
+    },
+    {
+        "source": "See <https://github.com/rust-lang/miri-test-libstd/issues/4>.",
+        "suggest": "请参见 <https://github.com/rust-lang/miri-test-libstd/issues/4>。",
+        "translate": ""
+    },
+    {
+        "source": "rustc itself never sets the feature, so this line has no affect there.",
+        "suggest": "rustc 本身从不设置该功能，因此该行在那里没有影响。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`make_mut`][make_mut], which will [`clone`][clone] the inner value when there are other `Rc` pointers.",
+        "suggest": "另请参见 [`make_mut`][make_mut]，当有其他 `Rc` 指针时，它将 [`clone`][clone] 内部值。",
+        "translate": ""
+    },
+    {
+        "source": "However, if there are no other `Rc` pointers to this allocation, but some [`Weak`] pointers, then the [`Weak`] pointers will be disassociated and the inner value will not be cloned.",
+        "suggest": "但是，如果没有其他指向此分配的 `Rc` 指针，而是一些 [`Weak`] 指针，则 [`Weak`] 指针将被解除关联，并且不会克隆内部值。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`get_mut`], which will fail rather than cloning the inner value or diassociating [`Weak`] pointers.",
+        "suggest": "另请参见 [`get_mut`]，它会失败而不是克隆内部值或取消关联 [`Weak`] 指针。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a generic type `T` into an `Rc<T>`",
+        "suggest": "泛型 `T` 改装成 `Rc<T>`",
+        "translate": ""
+    },
+    {
+        "source": "this is an implementation detail of the language that must not be relied upon outside of std.",
+        "suggest": "这是 std 之外不得依赖的语言的实现细节。",
+        "translate": ""
+    },
+    {
+        "source": "This merge sort borrows some (but not all) ideas from TimSort, which is described in detail [here](https://github.com/python/cpython/blob/main/Objects/listsort.txt).",
+        "suggest": "这个归并排序借用了 TimSort 的一些 (但不是全部) 想法，在 [这里](https://github.com/python/cpython/blob/main/Objects/listsort.txt) 有详细描述。",
+        "translate": ""
+    },
+    {
+        "source": "This might not actually increase the capacity:",
+        "suggest": "这实际上可能不会增加容量:",
+        "translate": ""
+    },
+    {
+        "source": "In other words, it might not be what a human considers the length of the string.",
+        "suggest": "换句话说，它可能不是人类认为的字符串长度。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new `Pin<Arc<T>>`, return an error if allocation fails.",
+        "suggest": "创建一个新的 `Pin<Arc<T>>`，如果分配失败则返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Destroy the data at this time, even though we must not free the box allocation itself (there might still be weak pointers lying around).",
+        "suggest": "此时的数据，即使我们不能释放 box 分配本身 (可能仍然存在弱指针)。",
+        "translate": ""
+    },
+    {
+        "source": "If there are other `Arc` pointers to the same allocation, then `make_mut` will [`clone`] the inner value to a new allocation to ensure unique ownership.",
+        "suggest": "如果有其他 `Arc` 指针指向同一分配，则 `make_mut` 会将内部值 [`clone`] 到新分配以确保唯一的所有权。",
+        "translate": ""
+    },
+    {
+        "source": "However, if there are no other `Arc` pointers to this allocation, but some [`Weak`] pointers, then the [`Weak`] pointers will be disassociated and the inner value will not be cloned.",
+        "suggest": "但是，如果没有其他指向此分配的 `Arc` 指针，而是一些 [`Weak`] 指针，则 [`Weak`] 指针将被解除关联，并且不会克隆内部值。",
+        "translate": ""
+    },
+    {
+        "source": "See also [`make_mut`][make_mut], which will [`clone`][clone] the inner value when there are other `Arc` pointers.",
+        "suggest": "另见 [`make_mut`][make_mut]，当有其他 `Arc` 指针时，它将 [`clone`][clone] 内部值。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `T` into an `Arc<T>`",
+        "suggest": "将 `T` 转换为 `Arc<T>`",
+        "translate": ""
+    },
+    {
+        "source": "The conversion moves the value into a newly allocated `Arc`.",
+        "suggest": "转换将值移动到新分配的 `Arc` 中。",
+        "translate": ""
+    },
+    {
+        "source": "It is equivalent to calling `Arc::new(t)`.",
+        "suggest": "相当于调用 `Arc::new(t)`。",
+        "translate": ""
+    },
+    {
+        "source": "TrustedRandomAccess (without NoCoerce) must not be implemented because subtypes/supertypes of `T` might not be `Copy`",
+        "suggest": "不得实现 TrustedRandomAccess (无 NoCoerce)，因为 `T` 的 subtypes/supertypes 可能不是 `Copy`",
+        "translate": ""
+    },
+    {
+        "source": "The [`vec!`] macro is provided for convenient initialization:",
+        "suggest": "[`vec!`] 宏提供方便初始化:",
+        "translate": ""
+    },
+    {
+        "source": "Because this shifts over the remaining elements, it has a worst-case performance of O(n).",
+        "suggest": "因为这会转移到其余元素上，所以它的最坏情况性能为 O(n)。",
+        "translate": ""
+    },
+    {
+        "source": "If you don't need the order of elements to be preserved, use [`swap_remove`] instead.",
+        "suggest": "如果不需要保留元素的顺序，请改用 [`swap_remove`]。",
+        "translate": ""
+    },
+    {
+        "source": "Use SetLenOnDrop to work around bug where compiler might not realize the store through `ptr` through self.set_len() don't alias.",
+        "suggest": "使用 SetLenOnDrop 来解决编译器可能无法通过 `ptr` 到 self.set_len() 不使用别名实现存储的错误。",
+        "translate": ""
+    },
+    {
+        "source": "The hash of a vector is the same as that of the corresponding slice, as required by the `core::borrow::Borrow` implementation.",
+        "suggest": "根据 `core::borrow::Borrow` 实现的要求，vector 的哈希值与相应的 3 的哈希值相同。",
+        "translate": ""
+    },
+    {
+        "source": "Since next() executes user code which can panic we have to bump the length after each step.",
+        "suggest": "由于 next() 执行可以 panic 的用户代码，我们必须在每一步之后增加长度。",
+        "translate": ""
+    },
+    {
+        "source": "check if SourceIter contract was upheld caveat: if they weren't we might not even make it to this point",
+        "suggest": "检查 SourceIter 合同是否得到维护警告: 如果不是，我们甚至可能无法做到这一点",
+        "translate": ""
+    },
+    {
+        "source": "Since `SpecInPlaceCollect::collect_in_place` above might use `__iterator_get_unchecked` internally, this call might be operating on a `vec::IntoIter` with incorrect internal state regarding which elements have already been “consumed”.",
+        "suggest": "由于上面的 `SpecInPlaceCollect::collect_in_place` 可能在内部使用 `__iterator_get_unchecked`，因此此调用可能在 `vec::IntoIter` 上运行，内部状态不正确，即哪些元素已被 `消耗`。",
+        "translate": ""
+    },
+    {
+        "source": "However, the `TrustedRandomIteratorNoCoerce` implementation of `vec::IntoIter` is only present if the `Vec` elements don’t have a destructor, so it doesn’t matter if elements are “dropped multiple times” in this case.",
+        "suggest": "但是，`vec::IntoIter` 的 `TrustedRandomIteratorNoCoerce` 实现仅在 `Vec` 元素没有析构函数时才存在，因此在这种情况下元素是否被 `多次丢弃` 并不重要。",
+        "translate": ""
+    },
+    {
+        "source": "This argument technically currently lacks justification from the `# Safety` docs for `SourceIter`/`InPlaceIterable` and/or `TrustedRandomAccess`, so it might be possible that someone could inadvertently create new library unsoundness involving this `.forget_allocation_drop_remaining()` call.",
+        "suggest": "这个参数在技术上目前缺乏 `SourceIter`/`InPlaceIterable` 或者 `TrustedRandomAccess` 的 `# Safety` 文档的理由，所以可能有人可能无意中创建了新的库不健全涉及这个 `.forget_allocation_drop_remaining()` 调用。",
+        "translate": ""
+    },
+    {
+        "source": "Since this executes user code which can panic we have to bump the pointer after each step.",
+        "suggest": "由于这会执行用户代码，这可能会导致 panic，因此我们必须在每一步之后 bump 指针。",
+        "translate": ""
+    },
+    {
+        "source": "`end` is the last writable element of the allocation and used for bounds checks.",
+        "suggest": "`end` 是分配的最后一个可写元素，用于边界检查。",
+        "translate": ""
+    },
+    {
+        "source": "This method is specialized and one of its implementations makes use of `Iterator::__iterator_get_unchecked` calls with a `TrustedRandomAccessNoCoerce` bound on `I` which means the caller of this method must take the safety conditions of that trait into consideration.",
+        "suggest": "这个方法是专门的，它的一个实现使用 `Iterator::__iterator_get_unchecked` 调用，`TrustedRandomAccessNoCoerce` 绑定在 `I` 上，这意味着这个方法的调用者必须考虑 trait 的安全条件。",
+        "translate": ""
+    },
+    {
+        "source": "Since the loop executes user code which can panic we have to bump the pointer after each step.",
+        "suggest": "由于循环执行的用户代码可能会导致 panic，因此我们必须在每一步之后 bump 指针。",
+        "translate": ""
+    },
+    {
+        "source": "Integrity means that all elements are present after a comparison panics, even if the order might not be correct.",
+        "suggest": "完整性意味着在比较 panics 之后所有元素都存在，即使顺序可能不正确。",
+        "translate": ""
+    },
+    {
+        "source": "This test might give a false positive in case the box reallocates, but the allocator keeps the original pointer.",
+        "suggest": "如果 box 重新分配，此测试可能会给出误报，但分配器保留原始指针。",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand, it won't give a false negative: If it fails, then the memory was definitely not reused.",
+        "suggest": "另一方面，它不会给出错误否定: 如果失败，那么内存肯定没有被重用。",
+        "translate": ""
+    },
+    {
+        "source": "Test const functions in the library",
+        "suggest": "在库中测试 const 函数",
+        "translate": ""
+    },
+    {
+        "source": "FIXME remove this struct once we put `K: ?const Ord` on BTreeMap::new.",
+        "suggest": "一旦我们将 `K: ?const Ord` 放在 BTreeMap::new 上，FIXME 就会移除这个结构体。",
+        "translate": ""
+    },
+    {
+        "source": "p: predicate, b: bound selection",
+        "suggest": "p: 谓词，b: 绑定选择",
+        "translate": ""
+    },
+    {
+        "source": "with a predicate always returning false, the split*-iterators become maximally short, so the size_hint lower bounds are tight",
+        "suggest": "谓词总是返回 false，split*-iterators 变得最大，所以 size_hint 下界很紧",
+        "translate": ""
+    },
+    {
+        "source": "with a predicate always returning true, the split*-iterators become maximally long, so the size_hint upper bounds are tight",
+        "suggest": "谓词总是返回 true，split*-iterators 变得最大，所以 size_hint 上限很紧",
+        "translate": ""
+    },
+    {
+        "source": "See #85462",
+        "suggest": "请参见 #85462",
+        "translate": ""
+    },
+    {
+        "source": "Empty needle and haystack",
+        "suggest": "空针和 haystack",
+        "translate": ""
+    },
+    {
+        "source": "Empty needle and non-empty haystack",
+        "suggest": "空针和非空 haystack",
+        "translate": ""
+    },
+    {
+        "source": "A crate which builds the `backtrace` crate as-if it's included as a submodule into the standard library.",
+        "suggest": "构建 `backtrace` crate 的 crate 就好像它作为子模块包含在标准库中一样。",
+        "translate": ""
+    },
+    {
+        "source": "We try to set this crate up similarly to the standard library itself to minimize the likelihood of issues when updating the `backtrace` crate.",
+        "suggest": "我们尝试将此 crate 设置为类似于标准库本身，以最大限度地减少更新 `backtrace` crate 时出现问题的可能性。",
+        "translate": ""
+    },
+    {
+        "source": "We want to `pub use std::*` in the root but we don't want `std` available in the root namespace, so do this in a funky inner module.",
+        "suggest": "我们希望 `pub use std::*` 在根目录中，但我们不希望 `std` 在根名称空间中可用，因此在时髦的内部模块中执行此操作。",
+        "translate": ""
+    },
+    {
+        "source": "This is the magical part which we hope works.",
+        "suggest": "这是我们希望起作用的神奇部分。",
+        "translate": ""
+    },
+    {
+        "source": "We only want to capture this closure's frame, assert_cpp_frames, space::templated_trampoline, and cpp_trampoline.",
+        "suggest": "我们只想捕获这个闭包的帧，assert_cpp_frames、space::templated_trampoline 和 cpp_trampoline。",
+        "translate": ""
+    },
+    {
+        "source": "Those are logical frames, which might be inlined into fewer physical frames, so we may end up with extra logical frames after resolving these.",
+        "suggest": "这些是逻辑帧，它们可能会被内联到较少的物理帧中，因此在解决这些问题后，我们最终可能会得到额外的逻辑帧。",
+        "translate": ""
+    },
+    {
+        "source": "Skip the backtrace::trace closure and assert_cpp_frames, and then take the two C++ frame names.",
+        "suggest": "跳过 backtrace::trace 闭包和 assert_cpp_frames，然后取这两个 C++ 框架名称。",
+        "translate": ""
+    },
+    {
+        "source": "Test that the debuginfo is being found by checking that the backtrace contains `main` and that the source filename uses the path given in the command line arguments.",
+        "suggest": "通过检查 backtrace 是否包含 `main` 以及源文件名是否使用命令行参数中给出的路径来测试是否找到了调试信息。",
+        "translate": ""
+    },
+    {
+        "source": "For dwz tests, this assumes that the path string will be moved into the dwz file.",
+        "suggest": "对于 dwz 测试，这假定路径字符串将被移动到 dwz 文件中。",
+        "translate": ""
+    },
+    {
+        "source": "Verifies that when debug info includes only lines tables the generated backtrace is still generated successfully.",
+        "suggest": "验证当调试信息仅包含行表时，所生成的 backtrace 仍能成功生成。",
+        "translate": ""
+    },
+    {
+        "source": "The test exercises behaviour that failed previously when compiling with clang -g1.",
+        "suggest": "测试练习之前在使用 clang -g1 编译时失败的行为。",
+        "translate": ""
+    },
+    {
+        "source": "The test case uses C rather than rust, since at that time when it was written the debug info generated at level 1 in rustc was essentially the same as at level 2.",
+        "suggest": "测试用例使用 C 而不是 rust，因为在编写它时，rustc 中级别 1 生成的调试信息与级别 2 基本相同。",
+        "translate": ""
+    },
+    {
+        "source": "intentionally blank",
+        "suggest": "故意空白",
+        "translate": ""
+    },
+    {
+        "source": "This needs to go in a crate by itself, since it modifies the dSYM for the entire test output directory.",
+        "suggest": "这需要单独进入 crate，因为它修改了整个测试输出目录的 dSYM。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this crate is *not* part of the overall `backtrace-rs` workspace, so that it gets its own 'target' directory.",
+        "suggest": "请注意，此 crate 不是整个 `backtrace-rs` 工作区的一部分，因此它有自己的 'target' 目录。",
+        "translate": ""
+    },
+    {
+        "source": "We manually invoke this test in .github/workflows/main.yml by passing `--manifest-path` to Cargo",
+        "suggest": "我们通过将 `--manifest-path` 传递给 Cargo 在 .github/workflows/main.yml 中手动调用此测试",
+        "translate": ""
+    },
+    {
+        "source": "Find our dSYM and replace the DWARF binary with an empty file",
+        "suggest": "找到我们的 dSYM 并用一个空文件替换 DWARF 二进制文件",
+        "translate": ""
+    },
+    {
+        "source": "Pop executable",
+        "suggest": "弹出可执行文件",
+        "translate": ""
+    },
+    {
+        "source": "currently on MinGW we can't symbolize kernel32.dll and other system libraries, which means we miss the last few symbols.",
+        "suggest": "目前在 MinGW 上我们不能符号化 kernel32.dll 和其他系统库，这意味着我们错过了最后几个符号。",
+        "translate": ""
+    },
+    {
+        "source": "Try to locate an external debug file using the build ID.",
+        "suggest": "尝试使用构建 ID 查找外部调试文件。",
+        "translate": ""
+    },
+    {
+        "source": "Try to locate an external debug file using the GNU debug link section.",
+        "suggest": "尝试使用 GNU 调试链接部分查找外部调试文件。",
+        "translate": ""
+    },
+    {
+        "source": "Load debuginfo from an external debug file.",
+        "suggest": "从外部调试文件加载调试信息。",
+        "translate": ""
+    },
+    {
+        "source": "check crc",
+        "suggest": "检查 CRC",
+        "translate": ""
+    },
+    {
+        "source": "Try to locate a supplementary object file.",
+        "suggest": "尝试查找补充 object 文件。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of the \".gnu_debuglink\" section is documented at:",
+        "suggest": "\".gnu_debuglink\" 部分的内容记录在:",
+        "translate": ""
+    },
+    {
+        "source": "The format of the \".gnu_debugaltlink\" section is based on gdb.",
+        "suggest": "\".gnu_debugaltlink\" 部分的格式基于 gdb。",
+        "translate": ""
+    },
+    {
+        "source": "Locate a debug file based on its build ID.",
+        "suggest": "根据构建 ID 定位调试文件。",
+        "translate": ""
+    },
+    {
+        "source": "The format of build id paths is documented at:",
+        "suggest": "构建 ID 路径的格式记录在:",
+        "translate": ""
+    },
+    {
+        "source": "Locate a file specified in a `.gnu_debuglink` section.",
+        "suggest": "找到在 `.gnu_debuglink` 部分中指定的文件。",
+        "translate": ""
+    },
+    {
+        "source": "is the file containing the section.",
+        "suggest": "是包含该部分的文件。",
+        "translate": ""
+    },
+    {
+        "source": "is from the contents of the section.",
+        "suggest": "来自章节的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Search order is based on gdb, documented at:",
+        "suggest": "搜索顺序基于 gdb，记录在:",
+        "translate": ""
+    },
+    {
+        "source": "gdb also allows the user to customize the debug search path, but we don't.",
+        "suggest": "gdb 还允许用户自定义调试搜索路径，但我们没有。",
+        "translate": ""
+    },
+    {
+        "source": "gdb also supports debuginfod, but we don't yet.",
+        "suggest": "gdb 也支持 debuginfod，但我们还没有。",
+        "translate": ""
+    },
+    {
+        "source": "Try \"/parent/filename\" if it differs from \"path\"",
+        "suggest": "如果与 \"path\" 不同，请尝试 \"/parent/filename\"",
+        "translate": ""
+    },
+    {
+        "source": "Try \"/parent/.debug/filename\"",
+        "suggest": "试试 \"/parent/.debug/filename\"",
+        "translate": ""
+    },
+    {
+        "source": "Try \"/usr/lib/debug/parent/filename\"",
+        "suggest": "试试 \"/usr/lib/debug/parent/filename\"",
+        "translate": ""
+    },
+    {
+        "source": "Locate a file specified in a `.gnu_debugaltlink` section.",
+        "suggest": "找到在 `.gnu_debugaltlink` 部分中指定的文件。",
+        "translate": ""
+    },
+    {
+        "source": "and `build_id` are the contents of the section.",
+        "suggest": "和 `build_id` 是该部分的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Search order is based on gdb:",
+        "suggest": "搜索顺序基于 gdb:",
+        "translate": ""
+    },
+    {
+        "source": "filename, which is either absolute or relative to `path`",
+        "suggest": "文件名，绝对或相对于 `path`",
+        "translate": ""
+    },
+    {
+        "source": "the build ID path under `BUILD_ID_PATH`",
+        "suggest": "`BUILD_ID_PATH` 下的构建 ID 路径",
+        "translate": ""
+    },
+    {
+        "source": "Stores a `Mmap` for the lifetime of this `Stash`, returning a pointer which is scoped to just this lifetime.",
+        "suggest": "为这个 `Stash` 的生命周期存储一个 `Mmap`，返回一个指针，该指针的范围仅限于这个生命周期。",
+        "translate": ""
+    },
+    {
+        "source": "this is the only location for a mutable pointer to `mmap_aux`, and this structure isn't threadsafe to shared across threads either.",
+        "suggest": "这是唯一的位置，并且指向 `mmap_aux` 的指针，这个结构体也不是线程安全的，不能跨线程共享。",
+        "translate": ""
+    },
+    {
+        "source": "This also is careful to store at most one `mmap_aux` since overwriting a previous one would invalidate the previous pointer.",
+        "suggest": "这也很小心，最多存储一个 `mmap_aux`，因为覆盖前一个会使前一个指针无效。",
+        "translate": ""
+    },
+    {
+        "source": "Given that though we can safely return a pointer to our interior-owned contents.",
+        "suggest": "鉴于我们可以安全地返回一个指向我们内部拥有所有权的内容的指针。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `Mapping` by ensuring that the `data` specified is used to create a `Context` and it can only borrow from that or the `Stash` of decompressed sections or auxiliary data.",
+        "suggest": "通过确保指定的 `data` 用于创建 `Context` 来创建 `Mapping`，并且只能从该 `data` 或已解压部分或辅助数据的 `Stash` 中借用。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a `Mapping` from `data`, or if the closure decides to, returns a different mapping.",
+        "suggest": "从 `data` 创建一个 `Mapping`，或者如果闭包决定，返回一个不同的映射。",
+        "translate": ""
+    },
+    {
+        "source": "dbghelp on MSVC doesn't support column numbers",
+        "suggest": "MSVC 上的 dbghelp 不支持列号",
+        "translate": ""
+    },
+    {
+        "source": "we allocate from the top, counting down",
+        "suggest": "我们从顶部分配，倒计时",
+        "translate": ""
+    },
+    {
+        "source": "contract forbids making a `Layout` with align=0, or align not power of 2.",
+        "suggest": "契约禁止使用 align=0 或 align 不是 2 的幂进行 `Layout`。",
+        "translate": ""
+    },
+    {
+        "source": "So we can safely use a mask to ensure alignment without worrying about UB.",
+        "suggest": "所以我们可以放心地使用掩码来确保对齐，而不必担心 UB。",
+        "translate": ""
+    },
+    {
+        "source": "You must not rely on allocations actually happening, even if there are explicit heap allocations in the source.",
+        "suggest": "您不能依赖实际发生的分配，即使源中有显式的堆分配。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a \"by reference\" adapter for this instance of `Allocator`.",
+        "suggest": "为这个 `Allocator` 实例创建一个 \"by reference\" 适配器。",
+        "translate": ""
+    },
+    {
+        "source": "The returned adapter also implements `Allocator` and will simply borrow this.",
+        "suggest": "退回的适配器也实现了 `Allocator`，并将简单地借用它。",
+        "translate": ""
+    },
+    {
+        "source": "This is why `IsRawEqComparable` is an `unsafe trait`.",
+        "suggest": "这就是 `IsRawEqComparable` 是 `unsafe trait` 的原因。",
+        "translate": ""
+    },
+    {
+        "source": "exists on here mostly because `min_specialization` didn't let me repeat the `T` type parameter in the above specialization, so instead the `T == U` constraint comes from the impls on this.",
+        "suggest": "存在于此处主要是因为 `min_specialization` 不允许我在上述专业化中重复 `T` 类型参数，因此 `T == U` 约束来自于此的 impls。",
+        "translate": ""
+    },
+    {
+        "source": "Neither `Self` nor `U` has any padding.",
+        "suggest": "`Self` 和 `U` 都没有任何填充。",
+        "translate": ""
+    },
+    {
+        "source": "and `U` have the same layout.",
+        "suggest": "和 `U` 具有相同的布局。",
+        "translate": ""
+    },
+    {
+        "source": "is byte-wise (this means no floats, among other things)",
+        "suggest": "是逐字节的 (这意味着没有浮点数等)",
+        "translate": ""
+    },
+    {
+        "source": "The type of `value` is an `i32` here, instead of `&i32`",
+        "suggest": "`value` 的类型在这里是 `i32`，而不是 `&i32`",
+        "translate": ""
+    },
+    {
+        "source": "This uses try_fold(&mut iter) instead of fold(iter) because the latter would go through the blanket `impl Iterator for &mut I` implementation which lacks inline annotations on its methods and adding those would be a larger perturbation than using try_fold here.",
+        "suggest": "这使用 try_fold(&mut iter) 而不是 fold(iter)，因为后者将通过全面的 `impl Iterator for &mut I` 实现，该实现缺乏对其方法的内联注释，并且添加这些将比在此处使用 try_fold 造成更大的扰动。",
+        "translate": ""
+    },
+    {
+        "source": "Whether it would be beneficial to add those annotations should be investigated separately.",
+        "suggest": "添加这些注解是否有益应单独研究。",
+        "translate": ""
+    },
+    {
+        "source": "idx is obtained by folding over the `alive` range, which implies the value is currently considered alive but as the range is being consumed each value we read here will only be read once and then considered dead.",
+        "suggest": "idx 是通过折叠 `alive` 范围获得的，这意味着该值当前被认为是活着的，但是随着范围被消耗，我们在这里读取的每个值只会被读取一次，然后被认为是死的。",
+        "translate": ""
+    },
+    {
+        "source": "The hash of an array is the same as that of the corresponding slice, as required by the `Borrow` implementation.",
+        "suggest": "数组的哈希值与对应的 X 像素的哈希值相同，符合实现的要求。",
+        "translate": ""
+    },
+    {
+        "source": "If you don't necessarily need a new fixed-size array, consider using [`Iterator::map`] instead.",
+        "suggest": "如果您不一定需要新的固定大小的数组，请考虑改用 [`Iterator::map`]。",
+        "translate": ""
+    },
+    {
+        "source": "Note on performance and stack usage",
+        "suggest": "关于性能和栈使用的注意事项",
+        "translate": ""
+    },
+    {
+        "source": "Unfortunately, usages of this method are currently not always optimized as well as they could be.",
+        "suggest": "不幸的是，这种方法的使用目前并不总是像它们可能的那样优化。",
+        "translate": ""
+    },
+    {
+        "source": "This mainly concerns large arrays, as mapping over small arrays seem to be optimized just fine.",
+        "suggest": "这主要涉及大数组，因为小数组上的映射似乎优化得很好。",
+        "translate": ""
+    },
+    {
+        "source": "Also note that in debug mode (i.e.",
+        "suggest": "另请注意，在调试模式下 (即",
+        "translate": ""
+    },
+    {
+        "source": "without any optimizations), this method can use a lot of stack space (a few times the size of the array or more).",
+        "suggest": "没有任何优化)，这种方法可以使用大量的栈空间 (数组大小的几倍或更多)。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, in performance-critical code, try to avoid using this method on large arrays or check the emitted code.",
+        "suggest": "因此，在性能关键的代码中，尽量避免在大型数组上使用此方法或检查发出的代码。",
+        "translate": ""
+    },
+    {
+        "source": "Also try to avoid chained maps (e.g.",
+        "suggest": "还要尽量避免链接 maps (例如",
+        "translate": ""
+    },
+    {
+        "source": "In many cases, you can instead use [`Iterator::map`] by calling `.iter()` or `.into_iter()` on your array.",
+        "suggest": "在许多情况下，您可以通过在阵列上调用 `.iter()` 或 `.into_iter()` 来代替使用 [`Iterator::map`]。",
+        "translate": ""
+    },
+    {
+        "source": "is only necessary if you really need a new array of the same size as the result.",
+        "suggest": "仅当您确实需要与结果大小相同的新数组时才需要。",
+        "translate": ""
+    },
+    {
+        "source": "Rust's lazy iterators tend to get optimized very well.",
+        "suggest": "Rust 的惰性迭代器往往会得到很好的优化。",
+        "translate": ""
+    },
+    {
+        "source": "However be cautious: this method expects `self` to be mutable, which is generally not the case when using a `Cell`.",
+        "suggest": "但是要小心: 此方法要求 `self` 为附属 0，而使用 `Cell` 时通常不是这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "If you require interior mutability by reference, consider using `RefCell` which provides run-time checked mutable borrows through its [`borrow_mut`] method.",
+        "suggest": "如果您需要通过引用进行内部养性，可以考虑使用 `RefCell`，它通过其 [`borrow_mut`] 方法提供运行时检查的附属借用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a `&[Cell<T>; N]` from a `&Cell<[T; N]>`",
+        "suggest": "从 `&Cell<[T; N]>` 返回 `&[Cell<T>; N]`",
+        "translate": ""
+    },
+    {
+        "source": "This gets updated whenever we go from having zero borrows to having a single borrow.",
+        "suggest": "每当我们从零借用变为单一借用时，这一点就会更新。",
+        "translate": ""
+    },
+    {
+        "source": "When a borrow occurs, this gets included in the generated `BorrowError/`BorrowMutError`",
+        "suggest": "当借用发生时，这将包含在生成的 `BorrowError/`BorrowMutError` 中",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`decode_utf16`] method on [`char`].",
+        "suggest": "这个 `struct` 是通过 [`char`] 上的 [`decode_utf16`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created when using the [`DecodeUtf16`] type.",
+        "suggest": "该 `struct` 是在使用 [`DecodeUtf16`] 类型时创建的。",
+        "translate": ""
+    },
+    {
+        "source": "The version of [Unicode](https://www.unicode.org/) that the Unicode parts of `char` and `str` methods are based on.",
+        "suggest": "`char` 和 `str` 方法的 Unicode 部分所基于的 [Unicode](https://www.unicode.org/) 版本。",
+        "translate": ""
+    },
+    {
+        "source": "If this `char` does not have an uppercase mapping, the iterator yields the same `char`.",
+        "suggest": "如果此 `char` 没有大写映射，则迭代器生成相同的 `char`。",
+        "translate": ""
+    },
+    {
+        "source": "Differs from [`Copy`] in that [`Copy`] is implicit and an inexpensive bit-wise copy, while `Clone` is always explicit and may or may not be expensive.",
+        "suggest": "与 [`Copy`] 的不同之处在于 [`Copy`] 是隐式的并且是廉价的按位复制，而 `Clone` 始终是显式的并且可能昂贵也可能不昂贵。",
+        "translate": ""
+    },
+    {
+        "source": "can also be written `x == y`, and `x.ne(y)` can be written `x != y`.",
+        "suggest": "也可以写成 `x == y`，`x.ne(y)` 可以写成 `x != y`。",
+        "translate": ""
+    },
+    {
+        "source": "We use the easier-to-read infix notation in the remainder of this documentation.",
+        "suggest": "我们在本文档的其余部分使用更易于阅读的中缀符号。",
+        "translate": ""
+    },
+    {
+        "source": "Implementations must ensure that `eq` and `ne` are consistent with each other:",
+        "suggest": "实现必须确保 `eq` 和 `ne` 彼此一致:",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `!(a == b)` (ensured by the default implementation).",
+        "suggest": "当且仅当 `!(a == b)` (由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "If [`PartialOrd`] or [`Ord`] are also implemented for `Self` and `Rhs`, their methods must also be consistent with `PartialEq` (see the documentation of those traits for the exact requirements).",
+        "suggest": "如果 `Self` 和 `Rhs` 也实现了 [`PartialOrd`] 或 [`Ord`]，则它们的方法也必须与 `PartialEq` 一致 (具体要求请参见那些 traits 的文档)。",
+        "translate": ""
+    },
+    {
+        "source": "The equality relation `==` must satisfy the following conditions (for all `a`, `b`, `c` of type `A`, `B`, `C`):",
+        "suggest": "等式关系 `==` 必须满足以下条件 (对于所有类型为 `A`、`B`、`C` 的 `a`、`b`、`c`) :",
+        "translate": ""
+    },
+    {
+        "source": "Implementations must be consistent with the [`PartialOrd`] implementation, and ensure `max`, `min`, and `clamp` are consistent with `cmp`:",
+        "suggest": "实现必须与 [`PartialOrd`] 实现一致，并确保 `max`、`min` 和 `clamp` 与 `cmp` 一致:",
+        "translate": ""
+    },
+    {
+        "source": "(ensured by the default implementation).",
+        "suggest": "(由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "For `a.clamp(min, max)`, see the [method docs](#method.clamp) (ensured by the default implementation).",
+        "suggest": "对于 `a.clamp(min, max)`，请参见 [方法文档](#method.clamp) (由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "It's easy to accidentally make `cmp` and `partial_cmp` disagree by deriving some of the traits and manually implementing others.",
+        "suggest": "通过派生一些 traits 并手动实现其他的，很容易意外地使 `cmp` 和 `partial_cmp` 不一致。",
+        "translate": ""
+    },
+    {
+        "source": "From the above and the requirements of `PartialOrd`, it follows that `<` defines a strict total order.",
+        "suggest": "综上所述，根据 `PartialOrd` 的要求，`<` 定义了严格的总顺序。",
+        "translate": ""
+    },
+    {
+        "source": "This means that for all `a`, `b` and `c`:",
+        "suggest": "这意味着对于所有 `a`、`b` 和 `c`:",
+        "translate": ""
+    },
+    {
+        "source": "exactly one of `a < b`, `a == b` or `a > b` is true;",
+        "suggest": "`a < b`、`a == b` 或 `a > b` 中恰好有一个为真;",
+        "translate": ""
+    },
+    {
+        "source": "is transitive: `a < b` and `b < c` implies `a < c`.",
+        "suggest": "是可传递的: `a < b` 和 `b < c` 意味着 `a < c`。",
+        "translate": ""
+    },
+    {
+        "source": "The `lt`, `le`, `gt`, and `ge` methods of this trait can be called using the `<`, `<=`, `>`, and `>=` operators, respectively.",
+        "suggest": "此 trait 的 `lt`、`le`、`gt` 和 `ge` 方法可以分别使用 `<`、`<=`、`>` 和 `>=` 相互调用。",
+        "translate": ""
+    },
+    {
+        "source": "The methods of this trait must be consistent with each other and with those of `PartialEq` in the following sense:",
+        "suggest": "这个 trait 的方法必须相互一致，并且在以下意义上与 `PartialEq` 的方法一致:",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `partial_cmp(a, b) == Some(Equal)`.",
+        "suggest": "当且仅当 `partial_cmp(a, b) == Some(Equal)`。",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `partial_cmp(a, b) == Some(Less)` (ensured by the default implementation).",
+        "suggest": "当且仅当 `partial_cmp(a, b) == Some(Less)` (由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `partial_cmp(a, b) == Some(Greater)` (ensured by the default implementation).",
+        "suggest": "当且仅当 `partial_cmp(a, b) == Some(Greater)` (由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `a < b || a == b` (ensured by the default implementation).",
+        "suggest": "当且仅当 `a < b || a == b` (由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `a > b || a == b` (ensured by the default implementation).",
+        "suggest": "当且仅当 `a > b || a == b` (由默认实现确保)。",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `!(a == b)` (already part of `PartialEq`).",
+        "suggest": "当且仅当 `!(a == b)` (已经是 `PartialEq` 的一部分)。",
+        "translate": ""
+    },
+    {
+        "source": "If [`Ord`] is also implemented for `Self` and `Rhs`, it must also be consistent with `partial_cmp` (see the documentation of that trait for the exact requirements).",
+        "suggest": "如果 [`Ord`] 也为 `Self` 和 `Rhs` 实现，它也必须与 `partial_cmp` 一致 (具体要求请参见 trait 的文档)。",
+        "translate": ""
+    },
+    {
+        "source": "duality: `a < b` if and only if `b > a`.",
+        "suggest": "二元性: `a < b` 当且仅当 `b > a`。",
+        "translate": ""
+    },
+    {
+        "source": "The following corollaries follow from the above requirements:",
+        "suggest": "从上述要求得出以下推论:",
+        "translate": ""
+    },
+    {
+        "source": "irreflexivity of `<` and `>`: `!(a < a)`,",
+        "suggest": "`<` 和 `>` 的非自反性: `!(a < a)`，",
+        "translate": ""
+    },
+    {
+        "source": "transitivity of `>`: if `a > b` and `b > c` then `a > c`",
+        "suggest": "`>` 的传递性: 如果 `a > b` 和 `b > c` 则 `a > c`",
+        "translate": ""
+    },
+    {
+        "source": "duality of `partial_cmp`:",
+        "suggest": "`partial_cmp` 的二元性:",
+        "translate": ""
+    },
+    {
+        "source": "args.args and args.pieces come from the same Arguments, which guarantees the indexes are always within bounds.",
+        "suggest": "args.args 和 args.pieces 来自同一个参数，保证索引总是在限定范围内。",
+        "translate": ""
+    },
+    {
+        "source": "fmt and args.pieces come from the same Arguments, which guarantees the indexes are always within bounds.",
+        "suggest": "fmt 和 args.pieces 来自同一个 参数，保证索引总是在限定范围内。",
+        "translate": ""
+    },
+    {
+        "source": "This is used for `numfmt::Part::Num` and `numfmt::Part::Copy`.",
+        "suggest": "这用于 `numfmt::Part::Num` 和 `numfmt::Part::Copy`。",
+        "translate": ""
+    },
+    {
+        "source": "It's safe to use for `numfmt::Part::Num` since every char `c` is between `b'0'` and `b'9'`, which means `s` is valid UTF-8.",
+        "suggest": "用于 `numfmt::Part::Num` 是安全的，因为每个字符 `c` 都在 `b'0'` 和 `b'9'` 之间，这意味着 `s` 是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "It's also probably safe in practice to use for `numfmt::Part::Copy(buf)` since `buf` should be plain ASCII, but it's possible for someone to pass in a bad value for `buf` into `numfmt::to_shortest_str` since it is a public function.",
+        "suggest": "在实践中使用 `numfmt::Part::Copy(buf)` 也可能是安全的，因为 `buf` 应该是纯 ASCII，但有人可能会将 `buf` 的错误值传递给 `numfmt::to_shortest_str`，因为它是一个公共函数。",
+        "translate": ""
+    },
+    {
+        "source": "A future is a value that might not have finished computing yet.",
+        "suggest": "future 是一个可能尚未完成计算的值。",
+        "translate": ""
+    },
+    {
+        "source": "Then later, in a `#[test]` for the type...",
+        "suggest": "然后，在 `#[test]` 类型中...",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the hash of a single value.",
+        "suggest": "计算单个值的哈希值。",
+        "translate": ""
+    },
+    {
+        "source": "This is intended as a convenience for code which *consumes* hashes, such as the implementation of a hash table or in unit tests that check whether a custom [`Hash`] implementation behaves as expected.",
+        "suggest": "这是为了方便*消耗*哈希的代码，例如散列表的实现或在单元测试中检查自定义 [`Hash`] 实现是否按预期运行。",
+        "translate": ""
+    },
+    {
+        "source": "This must not be used in any code which *creates* hashes, such as in an implementation of [`Hash`].",
+        "suggest": "这不能用在任何*创建*散列的代码中，例如在 [`Hash`] 的实现中。",
+        "translate": ""
+    },
+    {
+        "source": "The way to create a combined hash of multiple values is to call [`Hash::hash`] multiple times using the same [`Hasher`], not to call this method repeatedly and combine the results.",
+        "suggest": "创建多个值的组合散列的方法是使用同一个 [`Hasher`] 多次调用 [`Hash::hash`]，而不是重复调用此方法并组合结果。",
+        "translate": ""
+    },
+    {
+        "source": "Note that, unlike most intrinsics, this is safe to call;",
+        "suggest": "请注意，与大多数内联函数不同，这对调用是安全的;",
+        "translate": ""
+    },
+    {
+        "source": "it does not require an `unsafe` block.",
+        "suggest": "它不需要 `unsafe` 块。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, implementations must not require the user to uphold any safety invariants.",
+        "suggest": "因此，实现不得要求用户维护任何安全不可变变量。",
+        "translate": ""
+    },
+    {
+        "source": "is to be preferred if possible, as its behavior is more user-friendly and more stable.",
+        "suggest": "如果可能，最好是首选，因为它的行为更用户友好且更稳定。",
+        "translate": ""
+    },
+    {
+        "source": "The current implementation of `intrinsics::abort` is to invoke an invalid instruction, on most platforms.",
+        "suggest": "`intrinsics::abort` 的当前实现是在大多数平台上调用无效指令。",
+        "translate": ""
+    },
+    {
+        "source": "On Unix, the process will probably terminate with a signal like `SIGABRT`, `SIGILL`, `SIGTRAP`, `SIGSEGV` or `SIGBUS`.",
+        "suggest": "在 Unix 上，进程可能会以 `SIGABRT`、`SIGILL`、`SIGTRAP`、`SIGSEGV` 或 `SIGBUS` 之类的信号终止。",
+        "translate": ""
+    },
+    {
+        "source": "The precise behaviour is not guaranteed and not stable.",
+        "suggest": "不能保证精确的行为并且不稳定。",
+        "translate": ""
+    },
+    {
+        "source": "Transmuting pointers to integers in a `const` context is [undefined behavior][ub].",
+        "suggest": "在 `const` 上下文中转换指向整数的指针是 [undefined behavior][ub]。",
+        "translate": ""
+    },
+    {
+        "source": "Any attempt to use the resulting value for integer operations will abort const-evaluation.",
+        "suggest": "任何将结果值用于整数运算的尝试都将终止常量评估。",
+        "translate": ""
+    },
+    {
+        "source": "Turning an `&str` into a `&[u8]`:",
+        "suggest": "将 `&str` 变成 `&[u8]`:",
+        "translate": ""
+    },
+    {
+        "source": "Determines whether the raw bytes of the two values are equal.",
+        "suggest": "确定两个值的原始字节是否相等。",
+        "translate": ""
+    },
+    {
+        "source": "The is particularly handy for arrays, since it allows things like just comparing `i96`s instead of forcing `alloca`s for `[6 x i16]`.",
+        "suggest": "这对于数组特别方便，因为它允许只比较 i96 而不是强制 `[6 x i16]` 的 alloca。",
+        "translate": ""
+    },
+    {
+        "source": "Above some backend-decided threshold this will emit calls to `memcmp`, like slice equality does, instead of causing massive code size.",
+        "suggest": "在某些后端决定的之上，这将发出 `memcmp` 调用，就像对相等阈值所做的那样，而不是导致大量代码大小。",
+        "translate": ""
+    },
+    {
+        "source": "It's UB to call this if any of the *bytes* in `*a` or `*b` are uninitialized.",
+        "suggest": "如果 `*a` 或 `*b` 中的任何 *bytes* 未初始化，这是 UB 到调用 this。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this is a stricter criterion than just the *values* being fully-initialized: if `T` has padding, it's UB to call this intrinsic.",
+        "suggest": "请注意，这是一个比完全初始化 *values* 更严格的标准: 如果 `T` 有填充，它是 UB 到调用这个内联函数。",
+        "translate": ""
+    },
+    {
+        "source": "(The implementation is allowed to branch on the results of comparisons, which is UB if any of their inputs are `undef`.)",
+        "suggest": "(该实现允许在比较结果上进行分支，如果它们的任何输入为 `undef`，则为 UB。)",
+        "translate": ""
+    },
+    {
+        "source": "See documentation of [`std::hint::black_box`] for details.",
+        "suggest": "有关详细信息，请参见 [`std::hint::black_box`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "convert to an associated const once specialization supports that",
+        "suggest": "一旦专业化支持，转换为关联的 const",
+        "translate": ""
+    },
+    {
+        "source": "Instead of this helper trait there should be multiple impl TrustedLen for Flatten<> blocks with different bounds on Iterator::Item but the compiler erroneously considers them overlapping",
+        "suggest": "而不是这个助手 trait 应该有多个 impl TrustedLen for Flatten <> 块在 Iterator::Item 上具有不同的边界，但编译器错误地认为它们重叠",
+        "translate": ""
+    },
+    {
+        "source": "for `I: FusedIterator`, we never bother setting `None`, but we still have to be prepared for that state due to variance.",
+        "suggest": "对于 `I: FusedIterator`，我们从不费心设置 `None`，但由于差异，我们仍然必须为该状态做好准备。",
+        "translate": ""
+    },
+    {
+        "source": "See rust-lang/rust#85863",
+        "suggest": "请参见 rust-lang/rust#85863",
+        "translate": ""
+    },
+    {
+        "source": "Specialized macro that doesn't check if the expression is `None`.",
+        "suggest": "不检查表达式是否为 `None` 的专用宏。",
+        "translate": ""
+    },
+    {
+        "source": "(We trust that a `FusedIterator` will fuse itself.)",
+        "suggest": "(我们相信 `FusedIterator` 本身也会 fuse。)",
+        "translate": ""
+    },
+    {
+        "source": "Any specialized implementation here is made internal to avoid exposing default fns outside this trait.",
+        "suggest": "此处的任何专门实现都是内部实现的，以避免在此 trait 之外暴露默认 fns。",
+        "translate": ""
+    },
+    {
+        "source": "We only need to worry about `&mut self` methods, which may exhaust the iterator without consuming it.",
+        "suggest": "我们只需要担心 `&mut self` 方法，它可能会耗尽迭代器而不消耗它。",
+        "translate": ""
+    },
+    {
+        "source": "General `Fuse` impl which sets `iter = None` when exhausted.",
+        "suggest": "通用 `Fuse` impl 在耗尽时设置 `iter = None`。",
+        "translate": ""
+    },
+    {
+        "source": "Specialized `Fuse` impl which doesn't bother clearing `iter` when exhausted.",
+        "suggest": "专门的 `Fuse` impl，在耗尽时不会费心清除 `iter`。",
+        "translate": ""
+    },
+    {
+        "source": "However, we must still be prepared for the possibility that it was already cleared!",
+        "suggest": "不过，我们还是要做好准备，它已经被清除了!",
+        "translate": ""
+    },
+    {
+        "source": "This trait provides transitive access to source-stage in an iterator-adapter pipeline under the conditions that",
+        "suggest": "此 trait 在以下条件下提供对迭代器适配器管道中源级的传递访问",
+        "translate": ""
+    },
+    {
+        "source": "Work around limitations of specialization, requiring `default` impls to be repeated in intermediary impls.",
+        "suggest": "解决专业化的限制，要求在中间实现中重复 `default` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "The function body below only uses `self.a/b.len()` and `self.a/b.next_back()` and doesn’t call `next_back` too often, so this implementation is safe in the `TrustedRandomAccessNoCoerce` specialization",
+        "suggest": "下面的函数体只使用 `self.a/b.len()` 和 `self.a/b.next_back()`，并不会经常调用 `next_back`，所以这个实现在 `TrustedRandomAccessNoCoerce` 专业化中是安全的",
+        "translate": ""
+    },
+    {
+        "source": "since get_unchecked executes code which can panic we increment the counters beforehand so that the same index won't be accessed twice, as required by TrustedRandomAccess",
+        "suggest": "由于 get_unchecked 执行可以 panic 的代码，因此我们事先增加了计数器，以便不会按照 TrustedRandomAccess 的要求访问相同的索引两次",
+        "translate": ""
+    },
+    {
+        "source": "as above, increment before executing code that may panic",
+        "suggest": "如上所述，在执行可能 panic 的代码之前递增",
+        "translate": ""
+    },
+    {
+        "source": "since next_back() may panic we increment the counters beforehand to keep Zip's state in sync with the underlying iterator source",
+        "suggest": "由于 next_back() 可能 panic 我们预先增加计数器以保持 Zip 的状态与底层迭代器源同步",
+        "translate": ""
+    },
+    {
+        "source": "All subtypes and all supertypes of `Self` must also implement `TrustedRandomAccess`.",
+        "suggest": "`Self` 的所有子类型和所有超类型也必须实现 `TrustedRandomAccess`。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, this means that types with non-invariant parameters usually can not have an impl for `TrustedRandomAccess` that depends on any trait bounds on such parameters, except for bounds that come from the respective struct/enum definition itself, or bounds involving traits that themselves come with a guarantee similar to this one.",
+        "suggest": "特别是，这意味着具有非不变参数的类型通常不能具有依赖于此类参数上的任何 trait bounds 的 `TrustedRandomAccess` 的 impl，除了来自相应 struct/enum 定义本身的边界，或涉及 traits 本身的边界与此类似的保证。",
+        "translate": ""
+    },
+    {
+        "source": "If `Self: ExactSizeIterator` then `self.len()` must always produce results consistent with `self.size()`.",
+        "suggest": "如果 `Self: ExactSizeIterator` 则 `self.len()` 必须始终产生与 `self.size()` 一致的结果。",
+        "translate": ""
+    },
+    {
+        "source": "If `Self: Iterator`, then `<Self as Iterator>::__iterator_get_unchecked(&mut self, idx)` must be safe to call provided the following conditions are met.",
+        "suggest": "如果是 `Self: Iterator`，那么只要满足以下条件，`<Self as Iterator>::__iterator_get_unchecked(&mut self, idx)` 就必须是安全的调用。",
+        "translate": ""
+    },
+    {
+        "source": "If `Self: !Clone`, then `self.__iterator_get_unchecked(idx)` is never called with the same index on `self` more than once.",
+        "suggest": "如果是 `Self: !Clone`，则 `self.__iterator_get_unchecked(idx)` 永远不会在 `self` 上使用相同的索引多次调用。",
+        "translate": ""
+    },
+    {
+        "source": "After `self.__iterator_get_unchecked(idx)` has been called, then `self.next_back()` will only be called at most `self.size() - idx - 1` times.",
+        "suggest": "`self.__iterator_get_unchecked(idx)` 被调用后，`self.next_back()` 最多只会被调用 `self.size() - idx - 1` 次。",
+        "translate": ""
+    },
+    {
+        "source": "If `Self: Clone` and `self` is cloned, then this number is calculated for `self` and its clone individually, but `self.next_back()` calls that happened before the cloning count for both `self` and the clone.",
+        "suggest": "如果克隆 `Self: Clone` 和 `self`，则分别为 `self` 及其克隆计算此数字，但 `self.next_back()` 调用发生在 `self` 和克隆的克隆计数之前。",
+        "translate": ""
+    },
+    {
+        "source": "After `self.__iterator_get_unchecked(idx)` has been called, then only the following methods will be called on `self` or on any new clones of `self`:",
+        "suggest": "调用 `self.__iterator_get_unchecked(idx)` 后，将仅在 `self` 或 `self` 的任何新克隆上调用以下方法:",
+        "translate": ""
+    },
+    {
+        "source": "If `T` is a subtype of `Self`, then `self` is allowed to be coerced to `T`.",
+        "suggest": "如果 `T` 是 `Self` 的子类型，则允许将 `self` 强制转换为 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "If `self` is coerced to `T` after `self.__iterator_get_unchecked(idx)` has already been called, then no methods except for the ones listed under 4.",
+        "suggest": "如果在 `self.__iterator_get_unchecked(idx)` 已经被调用之后 `self` 被强制为 `T`，那么除了 4.",
+        "translate": ""
+    },
+    {
+        "source": "are allowed to be called on the resulting value of type `T`, either.",
+        "suggest": "也可以在 `T` 类型的结果值上调用。",
+        "translate": ""
+    },
+    {
+        "source": "Multiple such coercion steps are allowed.",
+        "suggest": "允许多个这样的强制步骤。",
+        "translate": ""
+    },
+    {
+        "source": "Regarding 2.",
+        "suggest": "关于 2.",
+        "translate": ""
+    },
+    {
+        "source": "and 3., the number of times `__iterator_get_unchecked(idx)` or `next_back()` is called on `self` and the resulting value of type `T` (and on further coercion results with sub-subtypes) are added together and their sums must not exceed the specified bounds.",
+        "suggest": "和 3.，在 `self` 上调用 `__iterator_get_unchecked(idx)` 或 `next_back()` 的次数和 `T` 类型的结果值 (以及子子类型的进一步强制结果) 相加，它们的总和不得超过指定的界限。",
+        "translate": ""
+    },
+    {
+        "source": "It must be safe to call the methods listed above on `self` after calling `self.__iterator_get_unchecked(idx)`, assuming that the required traits are implemented.",
+        "suggest": "假设实现了所需的 traits，在调用 `self.__iterator_get_unchecked(idx)` 后，在 `self` 上调用上面列出的方法必须是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "It must also be safe to drop `self` after calling `self.__iterator_get_unchecked(idx)`.",
+        "suggest": "调用 `self.__iterator_get_unchecked(idx)` 后丢弃 `self` 也必须是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` is a subtype of `Self`, then it must be safe to coerce `self` to `T`.",
+        "suggest": "如果 `T` 是 `Self` 的子类型，那么将 `self` 强制转换为 `T` 必须是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Clarify interaction with SourceIter/InPlaceIterable.",
+        "suggest": "阐明与 SourceIter/InPlaceIterable 的交互。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `SouceIter::as_inner` after `__iterator_get_unchecked` is supposed to be allowed.",
+        "suggest": "应该允许在 `__iterator_get_unchecked` 之后调用 `SouceIter::as_inner`。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`TrustedRandomAccess`] but without any of the requirements / guarantees around coercions to subtypes after `__iterator_get_unchecked` (they aren’t allowed here!), and without the requirement that subtypes / supertypes implement `TrustedRandomAccessNoCoerce`.",
+        "suggest": "与 [`TrustedRandomAccess`] 类似，但没有任何要求 / 保证对 `__iterator_get_unchecked` 之后的子类型进行强制 (这里不允许! )，并且没有子类型 / 超类型实现 `TrustedRandomAccessNoCoerce` 的要求。",
+        "translate": ""
+    },
+    {
+        "source": "This trait was created in PR #85874 to fix soundness issue #85873 without performance regressions.",
+        "suggest": "这个 trait 是在 PR #85874 中创建的，以修复 issue #85873 的健全性而不会出现性能回归。",
+        "translate": ""
+    },
+    {
+        "source": "It is subject to change as we might want to build a more generally useful (for performance optimizations) and more sophisticated trait or trait hierarchy that replaces or extends [`TrustedRandomAccess`] and `TrustedRandomAccessNoCoerce`.",
+        "suggest": "它可能会发生变化，因为我们可能想要构建一个更普遍有用 (用于性能优化) 和更复杂的 trait 或 trait 层次结构来替换或扩展 [`TrustedRandomAccess`] 和 `TrustedRandomAccessNoCoerce`。",
+        "translate": ""
+    },
+    {
+        "source": "If `Self: TrustedRandomAccess`, it must be safe to call `Iterator::__iterator_get_unchecked(self, index)`.",
+        "suggest": "如果是 `Self: TrustedRandomAccess`，调用 `Iterator::__iterator_get_unchecked(self, index)` 一定是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Bear in mind that methods on infinite iterators, even those for which a result can be determined mathematically in finite time, might not terminate.",
+        "suggest": "请记住，无限迭代器上的方法，即使是可以在有限时间内通过数学方法确定结果的方法，也可能不会终止。",
+        "translate": ""
+    },
+    {
+        "source": "if and only if `Step::backward_checked(&b, n) == Some(a)`",
+        "suggest": "当且仅当 `Step::backward_checked(&b, n) == Some(a)`",
+        "translate": ""
+    },
+    {
+        "source": "Use wrapping_sub in isize space and cast to usize to compute the difference that might not fit inside the range of isize.",
+        "suggest": "在 isize 空间中使用 wrapping_sub 并强制转换为使用 size 来计算可能不适合 isize 范围的差异。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is used to implement [`Iterator::sum()`].",
+        "suggest": "这个 trait 用于实现 [`Iterator::sum()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Types which implement this trait can be generated by using the [`sum()`] method on an iterator.",
+        "suggest": "可以通过在迭代器上使用 [`sum()`] 方法生成实现此 trait 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Like [`FromIterator`], this trait should rarely be called directly.",
+        "suggest": "和 [`FromIterator`] 一样，这个 trait 应该很少被直接调用。",
+        "translate": ""
+    },
+    {
+        "source": "This trait is used to implement [`Iterator::product()`].",
+        "suggest": "这个 trait 用于实现 [`Iterator::product()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Types which implement this trait can be generated by using the [`product()`] method on an iterator.",
+        "suggest": "可以通过在迭代器上使用 [`product()`] 方法生成实现此 trait 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "also allows for arbitrarily nested tuples as elements",
+        "suggest": "还允许任意嵌套的元组作为元素",
+        "translate": ""
+    },
+    {
+        "source": "Allows to `extend` a tuple of collections that also implement `Extend`.",
+        "suggest": "允许 `extend` 一个集合的元组也实现 `Extend`。",
+        "translate": ""
+    },
+    {
+        "source": "`rfold()` combines elements in a *right-associative* fashion.",
+        "suggest": "`rfold()` 以*右关联*方式组合元素。",
+        "translate": ""
+    },
+    {
+        "source": "For associative operators like `+`, the order the elements are combined in is not important, but for non-associative operators like `-` the order will affect the final result.",
+        "suggest": "对于像 `+` 这样的关联性，元素组合的顺序并不重要，但对于像 `-` 这样的非关联性，顺序会影响最终结果。",
+        "translate": ""
+    },
+    {
+        "source": "For a *left-associative* version of `rfold()`, see [`Iterator::fold()`].",
+        "suggest": "对于 `rfold()` 的*左关联*版本，请参见 [`Iterator::fold()`]。",
+        "translate": ""
+    },
+    {
+        "source": "This example demonstrates the right-associative nature of `rfold()`:",
+        "suggest": "这个例子演示了 `rfold()` 的右结合性质:",
+        "translate": ""
+    },
+    {
+        "source": "it builds a string, starting with an initial value and continuing with each element from the back until the front:",
+        "suggest": "它构建一个字符串，从一个初始值开始，从后面到前面的每个元素继续:",
+        "translate": ""
+    },
+    {
+        "source": "you can also unzip multiple nested tuples at once",
+        "suggest": "您还可以一次解压缩多个嵌套元组",
+        "translate": ""
+    },
+    {
+        "source": "behaves like the sequence `self.next()`, `self.nth(step-1)`, `self.nth(step-1)`, …, but is also free to behave like the sequence `advance_n_and_return_first(&mut self, step)`, `advance_n_and_return_first(&mut self, step)`, … Which way is used may change for some iterators for performance reasons.",
+        "suggest": "行为类似于序列 `self.next()`, `self.nth(step-1)`, `self.nth(step-1)`, ...，但也可以像序列 `advance_n_and_return_first(&mut self, step)`, `advance_n_and_return_first(&mut self, step)`, ... 一样自由地行为。出于性能原因，某些迭代器使用哪种方式可能会改变。",
+        "translate": ""
+    },
+    {
+        "source": "In some cases `for_each` may also be faster than a loop, because it will use internal iteration on adapters like `Chain`.",
+        "suggest": "在某些情况下，`for_each` 也可能比循环更快，因为它将在 `Chain` 等适配器上使用内部迭代。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator adapter similar to [`fold`] that holds internal state and produces a new iterator.",
+        "suggest": "一个类似于 [`fold`] 的迭代器适配器，它保存内部状态并生成一个新的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful to allow applying iterator adapters while still retaining ownership of the original iterator.",
+        "suggest": "这对于允许应用迭代器适配器同时仍保留原始迭代器的所有权很有用。",
+        "translate": ""
+    },
+    {
+        "source": "While you cannot `break` from a closure, the [`ControlFlow`] type allows a similar idea:",
+        "suggest": "虽然您不能从 闭包 `break`，[`ControlFlow`] 类型允许类似的想法:",
+        "translate": ""
+    },
+    {
+        "source": "The [`ControlFlow`] type can be used with this method for the situations in which you'd use `break` and `continue` in a normal loop:",
+        "suggest": "[`ControlFlow`] 类型可以与此方法一起用于在正常循环中使用 `break` 和 `continue` 的情况:",
+        "translate": ""
+    },
+    {
+        "source": "`fold()`, and similar methods that traverse the entire iterator, might not terminate for infinite iterators, even on traits for which a result is determinable in finite time.",
+        "suggest": "`fold()` 和遍历整个迭代器的类似方法可能不会因无限迭代器而终止，即使在 traits 上，其结果在有限时间内是可确定的。",
+        "translate": ""
+    },
+    {
+        "source": "`fold()` combines elements in a *left-associative* fashion.",
+        "suggest": "`fold()` 以*左关联*方式组合元素。",
+        "translate": ""
+    },
+    {
+        "source": "For a *right-associative* version of `fold()`, see [`DoubleEndedIterator::rfold()`].",
+        "suggest": "对于 `fold()` 的*右关联*版本，请参见 [`DoubleEndedIterator::rfold()`]。",
+        "translate": ""
+    },
+    {
+        "source": "This example demonstrates the left-associative nature of `fold()`:",
+        "suggest": "这个例子演示了 `fold()` 的左关联特性:",
+        "translate": ""
+    },
+    {
+        "source": "it builds a string, starting with an initial value and continuing with each element from the front until the back:",
+        "suggest": "它构建一个字符串，从一个初始值开始，从前面到后面的每个元素继续:",
+        "translate": ""
+    },
+    {
+        "source": "See [TrustedRandomAccess][super::super::TrustedRandomAccess]",
+        "suggest": "请参见 [TrustedRandomAccess][super::super::TrustedRandomAccess]",
+        "translate": ""
+    },
+    {
+        "source": "In that case, the lower bound must be [`usize::MAX`], resulting in an [`Iterator::size_hint()`] of `(usize::MAX, None)`.",
+        "suggest": "在这种情况下，下限必须是 [`usize::MAX`]，导致 `(usize::MAX, None)` 的 [`Iterator::size_hint()`]。",
+        "translate": ""
+    },
+    {
+        "source": "To run libcore tests without x.py without ending up with two copies of libcore, Miri needs to be able to \"empty\" this crate.",
+        "suggest": "要在没有 x.py 的情况下运行 libcore 测试而不最终得到两个 libcore 副本，Miri 需要能够 \"empty\" 这个 crate。",
+        "translate": ""
+    },
+    {
+        "source": "Library features for const fns:",
+        "suggest": "const fns 的库功能:",
+        "translate": ""
+    },
+    {
+        "source": "Language features:",
+        "suggest": "语言特点:",
+        "translate": ""
+    },
+    {
+        "source": "Target features:",
+        "suggest": "目标特点:",
+        "translate": ""
+    },
+    {
+        "source": "Same as `format_args`, but can be used in some const contexts.",
+        "suggest": "与 `format_args` 相同，但可以在某些 const 上下文中使用。",
+        "translate": ""
+    },
+    {
+        "source": "This macro is used by the panic macros for the `const_panic` feature.",
+        "suggest": "这个宏被 panic 宏用于 `const_panic` 功能。",
+        "translate": ""
+    },
+    {
+        "source": "This macro will be removed once `format_args` is allowed in const contexts.",
+        "suggest": "一旦在 const 上下文中允许 `format_args`，这个宏将被删除。",
+        "translate": ""
+    },
+    {
+        "source": "Setting hello does not leak prior allocations, but drops them",
+        "suggest": "设置 hello 不会预先分配，但不会泄漏它们",
+        "translate": ""
+    },
+    {
+        "source": "x is initialized now:",
+        "suggest": "x 现在初始化:",
+        "translate": ""
+    },
+    {
+        "source": "This leaks the contained string:",
+        "suggest": "这会泄漏包含的字符串:",
+        "translate": ""
+    },
+    {
+        "source": "As the content is stored inside a `MaybeUninit`, the destructor is not run for the inner data if the MaybeUninit leaves scope without a call to [`assume_init`], [`assume_init_drop`], or similar.",
+        "suggest": "由于内容存储在 `MaybeUninit` 中，如果 MaybeUninit 离开作用域而没有调用到 [`assume_init`]、[`assume_init_drop`] 或类似对象，则不会为内部数据运行析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "Code that receives the mutable reference returned by this function needs to keep this in mind.",
+        "suggest": "接收这个函数返回的附属引用引用的代码需要记住这一点。",
+        "translate": ""
+    },
+    {
+        "source": "The safety model of Rust regards leaks as safe, but they are usually still undesirable.",
+        "suggest": "Rust 的安全模型认为泄漏是安全的，但它们通常仍然是不可取的。",
+        "translate": ""
+    },
+    {
+        "source": "This being said, the mutable reference behaves like any other mutable reference would, so assigning a new value to it will drop the old content.",
+        "suggest": "话虽这么说，但借用引用与其他任何一个借用引用一样，因此为其赋予新的值将摒弃旧的内容。",
+        "translate": ""
+    },
+    {
+        "source": "This usage of the method causes a leak:",
+        "suggest": "该方法的这种用法会导致泄漏:",
+        "translate": ""
+    },
+    {
+        "source": "This method can be used to avoid unsafe in some cases.",
+        "suggest": "这种方法可以用来避免在某些情况下不安全。",
+        "translate": ""
+    },
+    {
+        "source": "The example below shows a part of an implementation of a fixed sized arena that lends out pinned references.",
+        "suggest": "下面的例子展示了一个固定大小的 arena 实现的一部分，它提供了固定的引用。",
+        "translate": ""
+    },
+    {
+        "source": "With `write`, we can avoid the need to write through a raw pointer:",
+        "suggest": "有了 `write`，我们就可以避免通过裸指针路径来写:",
+        "translate": ""
+    },
+    {
+        "source": "Moreover, similar to the [`ptr::read`] function, this function creates a bitwise copy of the contents, regardless whether the contained type implements the [`Copy`] trait or not.",
+        "suggest": "此外，类似于 [`ptr::read`] 函数，该函数创建内容的按位副本，无论所包含的类型是否实现 [`Copy`] trait。",
+        "translate": ""
+    },
+    {
+        "source": "If you have ownership of the `MaybeUninit`, you can also use [`assume_init`] as an alternative.",
+        "suggest": "如果您拥有 `MaybeUninit`，您也可以使用 [`assume_init`] 作为替代。",
+        "translate": ""
+    },
+    {
+        "source": "For example, setting a [`Vec<T>`] to an invalid but non-null address makes it initialized (under the current implementation;",
+        "suggest": "例如，将 [`Vec<T>`] 设置为无效但非空的地址使其初始化 (在当前实现下;",
+        "translate": ""
+    },
+    {
+        "source": "this does not constitute a stable guarantee), because the only requirement the compiler knows about it is that the data pointer must be non-null.",
+        "suggest": "这并不构成稳定的保证)，因为编译器知道的唯一要求是数据指针必须非空。",
+        "translate": ""
+    },
+    {
+        "source": "Copies the elements from `src` to `this`, returning a mutable reference to the now initialized contents of `this`.",
+        "suggest": "从 `src` 复制元素，将 `this` 现在初始化的内容返回给 `this` 的资源引用。",
+        "translate": ""
+    },
+    {
+        "source": "Valid elements have just been copied into `this` so it is initialized",
+        "suggest": "有效元素刚刚被复制到 `this` 中，因此它被初始化",
+        "translate": ""
+    },
+    {
+        "source": "Clones the elements from `src` to `this`, returning a mutable reference to the now initialized contents of `this`.",
+        "suggest": "将元素从 `src` 克隆到 `this`，返回一个资源引用引用到 `this` 现在初始化的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Any already initialized elements will not be dropped.",
+        "suggest": "任何已经初始化的元素都不会被丢弃。",
+        "translate": ""
+    },
+    {
+        "source": "Valid elements have just been written into `this` so it is initialized",
+        "suggest": "有效元素刚刚被写入 `this`，因此它被初始化",
+        "translate": ""
+    },
+    {
+        "source": "the caller must guarantee that an uninitialized value is valid for `T`.",
+        "suggest": "调用者必须保证未初始化的值对 `T` 有效。",
+        "translate": ""
+    },
+    {
+        "source": "If U has a higher alignment requirement, src might not be suitably aligned.",
+        "suggest": "如果 U 有更高的对齐要求，则 src 可能无法正确对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Common utilities, for internal use only.",
+        "suggest": "通用实用工具，仅供内部使用。",
+        "translate": ""
+    },
+    {
+        "source": "Helper methods to process immutable bytes.",
+        "suggest": "处理不封字节的辅助方法。",
+        "translate": ""
+    },
+    {
+        "source": "safe as long as self is not empty",
+        "suggest": "只要 self 不为空就安全",
+        "translate": ""
+    },
+    {
+        "source": "Get if the slice contains no elements.",
+        "suggest": "如果三个元素不包含元素，则获取。",
+        "translate": ""
+    },
+    {
+        "source": "Check if the slice at least `n` length.",
+        "suggest": "检查是否至少 `n` 长度。",
+        "translate": ""
+    },
+    {
+        "source": "Check if the first character in the slice is equal to c.",
+        "suggest": "判断 cri 中的第一个字符是否等于 c。",
+        "translate": ""
+    },
+    {
+        "source": "Check if the first character in the slice is equal to c1 or c2.",
+        "suggest": "检查 xX 中的第一个字符是否等于 X01 或 c2。",
+        "translate": ""
+    },
+    {
+        "source": "Bounds-checked test if the first character in the slice is a digit.",
+        "suggest": "边界检查测试是否第一个字符是数字。",
+        "translate": ""
+    },
+    {
+        "source": "Check if self starts with u with a case-insensitive comparison.",
+        "suggest": "通过不区分大小写的比较检查 self 是否以 u 开头。",
+        "translate": ""
+    },
+    {
+        "source": "Get the remaining slice after the first N elements.",
+        "suggest": "获取前 N 个元素后剩余的三个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Get the slice after skipping all leading characters equal c.",
+        "suggest": "跳过所有等于 c 的前导字符后获取第三个。",
+        "translate": ""
+    },
+    {
+        "source": "Get the slice after skipping all leading characters equal c1 or c2.",
+        "suggest": "跳过所有等于 c1 或 c2 的前导字符后获取第三个。",
+        "translate": ""
+    },
+    {
+        "source": "Read 8 bytes as a 64-bit integer in little-endian order.",
+        "suggest": "以小端顺序读取 8 个字节作为 64 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "safe as long as self is at least 8 bytes",
+        "suggest": "只要 self 至少为 8 个字节就安全",
+        "translate": ""
+    },
+    {
+        "source": "Try to read the next 8 bytes from the slice.",
+        "suggest": "尝试从 4 读取接下来的 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "self must be at least 8 bytes.",
+        "suggest": "self 必须至少为 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "Calculate the offset of slice from another.",
+        "suggest": "计算一个与另一个的偏移量。",
+        "translate": ""
+    },
+    {
+        "source": "Helper methods to process mutable bytes.",
+        "suggest": "处理控件字节的辅助方法。",
+        "translate": ""
+    },
+    {
+        "source": "Write a 64-bit integer as 8 bytes in little-endian order.",
+        "suggest": "以小端顺序将 64 位整数写入 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "we must use `write_unaligned`, since dst is not guaranteed to be properly aligned.",
+        "suggest": "我们必须使用 `write_unaligned`，因为不能保证 dst 正确对齐。",
+        "translate": ""
+    },
+    {
+        "source": "Miri will warn us if we use `write` instead of `write_unaligned`, as expected.",
+        "suggest": "如果我们按预期使用 `write` 而不是 `write_unaligned`，Miri 会警告我们。",
+        "translate": ""
+    },
+    {
+        "source": "Bytes wrapper with specialized methods for ASCII characters.",
+        "suggest": "具有 ASCII 字符专用方法的字节包装器。",
+        "translate": ""
+    },
+    {
+        "source": "Advance the view by n, advancing it in-place to (n..).",
+        "suggest": "将视图推进 n，将其就地推进到 (n..)。",
+        "translate": ""
+    },
+    {
+        "source": "safe as long n is less than the buffer length",
+        "suggest": "只要 n 小于缓冲区长度就安全",
+        "translate": ""
+    },
+    {
+        "source": "Advance the view by n, advancing it in-place to (1..).",
+        "suggest": "将视图推进 n，将其就地推进到 (1..)。",
+        "translate": ""
+    },
+    {
+        "source": "Iteratively parse and consume digits from bytes.",
+        "suggest": "从字节中迭代解析和使用数字。",
+        "translate": ""
+    },
+    {
+        "source": "self cannot be empty",
+        "suggest": "自我不能为空",
+        "translate": ""
+    },
+    {
+        "source": "Determine if 8 bytes are all decimal digits.",
+        "suggest": "判断 8 个字节是否都是十进制数字。",
+        "translate": ""
+    },
+    {
+        "source": "This does not care about the order in which the bytes were loaded.",
+        "suggest": "这与加载字节的顺序无关。",
+        "translate": ""
+    },
+    {
+        "source": "e is biased, so it be directly shifted into the exponent bits.",
+        "suggest": "e 是有偏差的，因此它被直接移入指数位。",
+        "translate": ""
+    },
+    {
+        "source": "The significant digits.",
+        "suggest": "有效数字。",
+        "translate": ""
+    },
+    {
+        "source": "The biased, binary exponent.",
+        "suggest": "有偏差的二进制指数。",
+        "translate": ""
+    },
+    {
+        "source": "Arbitrary-precision decimal class for fallback algorithms.",
+        "suggest": "回退算法的任意精度十进制类。",
+        "translate": ""
+    },
+    {
+        "source": "This is only used if the fast-path (native floats) and the Eisel-Lemire algorithm are unable to unambiguously determine the float.",
+        "suggest": "这仅在快速路径 (本地浮点数) 和 Eisel-Lemire 算法无法明确确定浮点数时使用。",
+        "translate": ""
+    },
+    {
+        "source": "The technique used is \"Simple Decimal Conversion\", developed by Nigel Tao and Ken Thompson.",
+        "suggest": "使用的技术是简单的十进制转换，由 Nigel Tao 和 Ken Thompson 开发。",
+        "translate": ""
+    },
+    {
+        "source": "A detailed description of the algorithm can be found in \"ParseNumberF64 by Simple Decimal Conversion\", available online:",
+        "suggest": "该算法的详细描述可以在 \"ParseNumberF64 by Simple Decimal Conversion\" 中找到，可在线获取:",
+        "translate": ""
+    },
+    {
+        "source": "The number of significant digits in the decimal.",
+        "suggest": "十进制中有效数字的位数。",
+        "translate": ""
+    },
+    {
+        "source": "The offset of the decimal point in the significant digits.",
+        "suggest": "有效数字中小数点的偏移量。",
+        "translate": ""
+    },
+    {
+        "source": "If the number of significant digits stored in the decimal is truncated.",
+        "suggest": "如果十进制中存储的有效位数被截断。",
+        "translate": ""
+    },
+    {
+        "source": "Buffer of the raw digits, in the range [0, 9].",
+        "suggest": "原始数字的缓冲区，范围为 [0, 9]。",
+        "translate": ""
+    },
+    {
+        "source": "The maximum number of digits required to unambiguously round a float.",
+        "suggest": "明确舍入浮点数所需的最大位数。",
+        "translate": ""
+    },
+    {
+        "source": "For a double-precision IEEE-754 float, this required 767 digits, so we store the max digits + 1.",
+        "suggest": "对于双精度 IEEE-754 浮点数，这需要 767 位数字，因此我们存储最大数字 + 1。",
+        "translate": ""
+    },
+    {
+        "source": "We can exactly represent a float in radix `b` from radix 2 if `b` is divisible by 2.",
+        "suggest": "如果 `b` 可以被 2 整除，我们就可以从基数 2 准确地表示基数 `b` 中的浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "This function calculates the exact number of digits required to exactly represent that float.",
+        "suggest": "该函数计算精确表示该浮点数所需的确切位数。",
+        "translate": ""
+    },
+    {
+        "source": "According to the \"Handbook of Floating Point Arithmetic\", for IEEE754, with emin being the min exponent, p2 being the precision, and b being the radix, the number of digits follows as:",
+        "suggest": "根据浮点运算手册，对于 IEEE754，emin 为 min 指数，p2 为精度，b 为基数，位数如下:",
+        "translate": ""
+    },
+    {
+        "source": "For f32, this follows as:",
+        "suggest": "对于 f32，如下所示:",
+        "translate": ""
+    },
+    {
+        "source": "For f64, this follows as:",
+        "suggest": "对于 f64，如下所示:",
+        "translate": ""
+    },
+    {
+        "source": "In Python:",
+        "suggest": "在 Python 中:",
+        "translate": ""
+    },
+    {
+        "source": "The max digits that can be exactly represented in a 64-bit integer.",
+        "suggest": "可以用 64 位整数精确表示的最大位数。",
+        "translate": ""
+    },
+    {
+        "source": "Append a digit to the buffer.",
+        "suggest": "将一个数字附加到缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "Trim trailing zeros from the buffer.",
+        "suggest": "从缓冲区中修剪尾随零。",
+        "translate": ""
+    },
+    {
+        "source": "All of the following calls to `Decimal::trim` can't panic because:",
+        "suggest": "以下所有对 `Decimal::trim` 的调用都不能 panic，因为:",
+        "translate": ""
+    },
+    {
+        "source": "sets `num_digits` to a max of `Decimal::MAX_DIGITS`.",
+        "suggest": "将 `num_digits` 设置为最大 `Decimal::MAX_DIGITS`。",
+        "translate": ""
+    },
+    {
+        "source": "sets `num_digits` to `write_index`, which is bounded by `num_digits`.",
+        "suggest": "将 `num_digits` 设置为 `write_index`，它以 `num_digits` 为界。",
+        "translate": ""
+    },
+    {
+        "source": "`num_digits` to a max of `Decimal::MAX_DIGITS`.",
+        "suggest": "`num_digits` 到最大 `Decimal::MAX_DIGITS`。",
+        "translate": ""
+    },
+    {
+        "source": "Trim is only called in `right_shift` and `left_shift`.",
+        "suggest": "Trim 仅在 `right_shift` 和 `left_shift` 中调用。",
+        "translate": ""
+    },
+    {
+        "source": "Computes decimal * 2^shift.",
+        "suggest": "计算十进制 * 2^shift。",
+        "translate": ""
+    },
+    {
+        "source": "Computes decimal * 2^-shift.",
+        "suggest": "计算十进制 * 2^-shift。",
+        "translate": ""
+    },
+    {
+        "source": "but without the overhead of clearing `digits`.",
+        "suggest": "但没有清除 `digits` 的开销。",
+        "translate": ""
+    },
+    {
+        "source": "Parse a big integer representation of the float as a decimal.",
+        "suggest": "将浮点数的大整数表示解析为小数。",
+        "translate": ""
+    },
+    {
+        "source": "Skip leading zeros.",
+        "suggest": "跳过前导零。",
+        "translate": ""
+    },
+    {
+        "source": "s is at least 8 bytes.",
+        "suggest": "s 至少为 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "d.num_digits + 8 is less than d.digits.len()",
+        "suggest": "d.num_digits + 8 小于 d.digits.len()",
+        "translate": ""
+    },
+    {
+        "source": "Ignore the trailing zeros if there are any",
+        "suggest": "如果有任何尾随零，请忽略",
+        "translate": ""
+    },
+    {
+        "source": "Helper trait for generic float types.",
+        "suggest": "泛型浮点类型的辅助 trait。",
+        "translate": ""
+    },
+    {
+        "source": "Round-to-even only happens for negative values of q when q ≥ −4 in the 64-bit case and when q ≥ −17 in the 32-bitcase.",
+        "suggest": "当 q ≥ −4 在 64 位情况下和 q ≥ -17 在 32 位情况下时，只对 q 的负值进行舍入到偶数。",
+        "translate": ""
+    },
+    {
+        "source": "When q ≥ 0,we have that 5^q ≤ 2m+1.",
+        "suggest": "当 q ≥ 0 时，我们有 5^q ≤ 2m+1。",
+        "translate": ""
+    },
+    {
+        "source": "In the 64-bit case,we have 5^q ≤ 2m+1 ≤ 2^54 or q ≤ 23.",
+        "suggest": "在 64 位情况下，我们有 5^q ≤ 2m+1 ≤ 2^54 或 q ≤ 23。",
+        "translate": ""
+    },
+    {
+        "source": "In the 32-bit case,we have",
+        "suggest": "在 32 位的情况下，我们有",
+        "translate": ""
+    },
+    {
+        "source": "5^q ≤ 2m+1 ≤ 2^25 or q ≤ 10.",
+        "suggest": "5^q ≤ 2m+1 ≤ 2^25 或 q ≤ 10。",
+        "translate": ""
+    },
+    {
+        "source": "When q < 0, we have w ≥ (2m+1)×5^−q. We must have that w < 2^64 so (2m+1)×5^−q < 2^64.",
+        "suggest": "当 q < 0 时，我们有 w ≥ (2m+1)×5^−q。我们必须有 w < 2^64 所以 (2m+1)×5^−q < 2^64。",
+        "translate": ""
+    },
+    {
+        "source": "We have that 2m+1 > 2^53 (64-bit case) or 2m+1 > 2^24 (32-bit case).",
+        "suggest": "我们有 2m+1 > 2^53 (64 位情况) 或 2m+1 > 2^24 (32 位情况)。",
+        "translate": ""
+    },
+    {
+        "source": "Hence,we must have 2^53×5^−q < 2^64 (64-bit) and 2^24×5^−q < 2^64 (32-bit).",
+        "suggest": "因此，我们必须有 2^53×5^−q < 2^64 (64-bit) 和 2^24×5^−q < 2^64 (32-bit)。",
+        "translate": ""
+    },
+    {
+        "source": "Hence we have 5^−q < 2^11 or q ≥ −4 (64-bit case) and 5^−q < 2^40 or q ≥ −17 (32-bitcase).",
+        "suggest": "因此，我们有 5^−q < 2^11 或 q ≥ −4 (64 位情况) 和 5^−q < 2^40 或 q ≥ −17 (32-bitcase)。",
+        "translate": ""
+    },
+    {
+        "source": "Thus we have that we only need to round ties to even when we have that q ∈ [−4,23](in the 64-bit case) or q∈[−17,10] (in the 32-bit case).",
+        "suggest": "因此，我们只需要在我们有 q ∈ [−4,23](in the 64-bit case) 或 q∈[−17,10] (在 32 位情况下) 时才需要舍入关系。",
+        "translate": ""
+    },
+    {
+        "source": "In both cases,the power of five(5^|q|) fits in a 64-bit word.",
+        "suggest": "在这两种情况下，five(5^|q|) 的功能都适合 64 位字。",
+        "translate": ""
+    },
+    {
+        "source": "Minimum exponent that for a fast path case, or `-⌊(MANTISSA_EXPLICIT_BITS+1)/log2(5)⌋`",
+        "suggest": "快速路径情况下的最小指数，或 `-⌊(MANTISSA_EXPLICIT_BITS+1)/log2(5)⌋`",
+        "translate": ""
+    },
+    {
+        "source": "Maximum exponent that for a fast path case, or `⌊(MANTISSA_EXPLICIT_BITS+1)/log2(5)⌋`",
+        "suggest": "快速路径情况下的最大指数，或 `⌊(MANTISSA_EXPLICIT_BITS+1)/log2(5)⌋`",
+        "translate": ""
+    },
+    {
+        "source": "Maximum exponent that can be represented for a disguised-fast path case.",
+        "suggest": "可以为伪装的快速路径情况表示的最大指数。",
+        "translate": ""
+    },
+    {
+        "source": "This is `MAX_EXPONENT_FAST_PATH + ⌊(MANTISSA_EXPLICIT_BITS+1)/log2(10)⌋`",
+        "suggest": "这是 `MAX_EXPONENT_FAST_PATH + ⌊(MANTISSA_EXPLICIT_BITS+1)/log2(10)⌋`",
+        "translate": ""
+    },
+    {
+        "source": "Minimum exponent value `-(1 << (EXP_BITS - 1)) + 1`.",
+        "suggest": "最小指数值 `-(1 << (EXP_BITS - 1)) + 1`。",
+        "translate": ""
+    },
+    {
+        "source": "Largest exponent value `(1 << EXP_BITS) - 1`.",
+        "suggest": "最大指数值 `(1 << EXP_BITS) - 1`。",
+        "translate": ""
+    },
+    {
+        "source": "Index (in bits) of the sign.",
+        "suggest": "符号的索引 (以位为单位)。",
+        "translate": ""
+    },
+    {
+        "source": "Smallest decimal exponent for a non-zero value.",
+        "suggest": "非零值的最小十进制指数。",
+        "translate": ""
+    },
+    {
+        "source": "Largest decimal exponent for a non-infinite value.",
+        "suggest": "非无限值的最大十进制指数。",
+        "translate": ""
+    },
+    {
+        "source": "Maximum mantissa for the fast-path (`1 << 53` for f64).",
+        "suggest": "快速路径的最大尾数 (f64 为 `1 << 53`)。",
+        "translate": ""
+    },
+    {
+        "source": "Convert integer into float through an as cast.",
+        "suggest": "通过 as 转换将整数转换为浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "This is only called in the fast-path algorithm, and therefore will not lose precision, since the value will always have only if the value is <= Self::MAX_MANTISSA_FAST_PATH.",
+        "suggest": "这仅在快速路径算法中调用，因此不会丢失精度，因为只有当值 <= Self::MAX_MANTISSA_FAST_PATH 时，该值才会始终具有。",
+        "translate": ""
+    },
+    {
+        "source": "Get a small power-of-ten for fast-path multiplication.",
+        "suggest": "获得一个小的 10 次幂以进行快速路径乘法。",
+        "translate": ""
+    },
+    {
+        "source": "assuming FLT_EVAL_METHOD = 0",
+        "suggest": "假设 FLT_EVAL_METHOD = 0",
+        "translate": ""
+    },
+    {
+        "source": "Platform-specific, assembly instructions to avoid intermediate rounding on architectures with FPUs.",
+        "suggest": "特定于平台的组装说明，以避免对具有 FPU 的架构进行中间舍入。",
+        "translate": ""
+    },
+    {
+        "source": "Implementation of the Eisel-Lemire algorithm.",
+        "suggest": "Eisel-Lemire 算法的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Compute a float using an extended-precision representation.",
+        "suggest": "使用扩展精度表示计算浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "Fast conversion of a the significant digits and decimal exponent a float to an extended representation with a binary float.",
+        "suggest": "将浮点数的有效数字和十进制指数快速转换为具有二进制浮点数的扩展表示。",
+        "translate": ""
+    },
+    {
+        "source": "This algorithm will accurately parse the vast majority of cases, and uses a 128-bit representation (with a fallback 192-bit representation).",
+        "suggest": "该算法将准确解析绝大多数情况，并使用 128 位表示 (后备 192 位表示)。",
+        "translate": ""
+    },
+    {
+        "source": "This algorithm scales the exponent by the decimal exponent using pre-computed powers-of-5, and calculates if the representation can be unambiguously rounded to the nearest machine float.",
+        "suggest": "该算法使用预先计算的 5 次幂按十进制指数缩放指数，并计算表示是否可以明确四舍五入到最近的机器浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "Near-halfway cases are not handled here, and are represented by a negative, biased binary exponent.",
+        "suggest": "这里不处理接近一半的情况，并由负的、有偏差的二进制指数表示。",
+        "translate": ""
+    },
+    {
+        "source": "The algorithm is described in detail in \"Daniel Lemire, Number Parsing at a Gigabyte per Second\" in section 5, \"Fast Algorithm\", and section 6, \"Exact Numbers And Ties\", available online:",
+        "suggest": "该算法在第 5 节 \"Fast Algorithm\" 和第 6 节 \"Exact Numbers And Ties\" 中的 \"Daniel Lemire, Number Parsing at a Gigabyte per Second\" 中有详细描述，可在线获取:",
+        "translate": ""
+    },
+    {
+        "source": "Short-circuit if the value can only be a literal 0 or infinity.",
+        "suggest": "短路如果值只能是一个字面量 0 或无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "Normalize our significant digits, so the most-significant bit is set.",
+        "suggest": "规范化我们的有效数字，因此设置了最高有效位。",
+        "translate": ""
+    },
+    {
+        "source": "If we have failed to approximate w x 5^-q with our 128-bit value.",
+        "suggest": "如果我们未能用我们的 128 位值近似 w x 5^-q。",
+        "translate": ""
+    },
+    {
+        "source": "Since the addition of 1 could lead to an overflow which could then round up over the half-way point, this can lead to improper rounding of a float.",
+        "suggest": "由于加 1 可能导致溢出，然后在中点处向上舍入，这可能导致浮点数舍入不当。",
+        "translate": ""
+    },
+    {
+        "source": "However, this can only occur if q ∈ [-27, 55].",
+        "suggest": "然而，这只能在 q ∈ [-27, 55] 时发生。",
+        "translate": ""
+    },
+    {
+        "source": "The upper bound of q is 55 because 5^55 < 2^128, however, this can only happen if 5^q > 2^64, since otherwise the product can be represented in 64-bits, producing an exact result.",
+        "suggest": "q 的上限是 55，因为 5^55 < 2^128，但是，这只能在 5^q > 2^64 时发生，否则乘积可以用 64 位表示，从而产生精确的结果。",
+        "translate": ""
+    },
+    {
+        "source": "For negative exponents, rounding-to-even can only occur if 5^-q < 2^64.",
+        "suggest": "对于负指数，仅当 5^-q < 2^64 时才会发生舍入到偶数。",
+        "translate": ""
+    },
+    {
+        "source": "For detailed explanations of rounding for negative exponents, see <https://arxiv.org/pdf/2101.11408.pdf#section.9.1>.",
+        "suggest": "有关负指数舍入的详细说明，请参见 <https://arxiv.org/pdf/2101.11408.pdf#section.9.1>。",
+        "translate": ""
+    },
+    {
+        "source": "For detailed explanations of rounding for positive exponents, see <https://arxiv.org/pdf/2101.11408.pdf#section.8>.",
+        "suggest": "有关正指数舍入的详细说明，请参见 <https://arxiv.org/pdf/2101.11408.pdf#section.8>。",
+        "translate": ""
+    },
+    {
+        "source": "Have more than 64 bits below the minimum exponent, must be 0.",
+        "suggest": "低于最小指数超过 64 位，必须为 0。",
+        "translate": ""
+    },
+    {
+        "source": "Have a subnormal value.",
+        "suggest": "有一个 subnormal 值。",
+        "translate": ""
+    },
+    {
+        "source": "Need to handle rounding ties.",
+        "suggest": "需要处理四舍五入的关系。",
+        "translate": ""
+    },
+    {
+        "source": "Normally, we need to round up, but if we fall right in between and and we have an even basis, we need to round down.",
+        "suggest": "通常情况下，我们需要四舍五入，但如果我们正好介于两者之间并且我们有一个偶数基础，我们就需要四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "This will only occur if:",
+        "suggest": "这只会在以下情况下发生:",
+        "translate": ""
+    },
+    {
+        "source": "The lower 64 bits of the 128-bit representation is 0.",
+        "suggest": "128 位表示的低 64 位为 0。",
+        "translate": ""
+    },
+    {
+        "source": "IE, 5^q fits in single 64-bit word.",
+        "suggest": "IE, 5^q 适合单个 64 位字。",
+        "translate": ""
+    },
+    {
+        "source": "The least-significant bit prior to truncated mantissa is odd.",
+        "suggest": "截断尾数之前的最低有效位是奇数。",
+        "translate": ""
+    },
+    {
+        "source": "All the bits truncated when shifting to mantissa bits + 1 are 0.",
+        "suggest": "移至尾数位 + 1 时截断的所有位均为 0。",
+        "translate": ""
+    },
+    {
+        "source": "Or, we may fall between two floats: we are exactly halfway.",
+        "suggest": "或者，我们可能介于两个浮动之间: 我们正好在一半。",
+        "translate": ""
+    },
+    {
+        "source": "Zero the lowest bit, so we don't round up.",
+        "suggest": "将最低位清零，所以我们不四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "Round-to-even, then shift the significant digits into place.",
+        "suggest": "舍入到偶数，然后将有效数字移到位。",
+        "translate": ""
+    },
+    {
+        "source": "Rounding up overflowed, so the carry bit is set.",
+        "suggest": "向上舍入溢出，因此设置进位位。",
+        "translate": ""
+    },
+    {
+        "source": "Set the mantissa to 1 (only the implicit, hidden bit is set) and increase the exponent.",
+        "suggest": "将尾数设置为 1 (仅设置隐式隐藏位) 并增加指数。",
+        "translate": ""
+    },
+    {
+        "source": "Zero out the hidden bit.",
+        "suggest": "将隐藏位清零。",
+        "translate": ""
+    },
+    {
+        "source": "Exponent is above largest normal value, must be infinite.",
+        "suggest": "指数高于最大正常值，必须是无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "Calculate a base 2 exponent from a decimal exponent.",
+        "suggest": "从十进制指数计算基数为 2 的指数。",
+        "translate": ""
+    },
+    {
+        "source": "This uses a pre-computed integer approximation for log2(10), where 217706 / 2^16 is accurate for the entire range of non-finite decimal exponents.",
+        "suggest": "这对 log2(10) 使用预先计算的整数近似值，其中 217706/2^16 对于整个非有限十进制指数范围是准确的。",
+        "translate": ""
+    },
+    {
+        "source": "This will compute or rather approximate w * 5**q and return a pair of 64-bit words approximating the result, with the \"high\" part corresponding to the most significant bits and the low part corresponding to the least significant bits.",
+        "suggest": "这将计算或近似 w * 5**q 并返回一对近似结果的 64 位字，其中 \"high\" 部分对应于最高有效位，低部分对应于最低有效位。",
+        "translate": ""
+    },
+    {
+        "source": "5^q < 2^64, then the multiplication always provides an exact value.",
+        "suggest": "5^q < 2^64，那么乘法总是提供一个精确的值。",
+        "translate": ""
+    },
+    {
+        "source": "That means whenever we need to round ties to even, we always have an exact value.",
+        "suggest": "这意味着每当我们需要将关系四舍五入到偶数时，我们总是有一个精确的值。",
+        "translate": ""
+    },
+    {
+        "source": "Only need one multiplication as long as there is 1 zero but in the explicit mantissa bits, +1 for the hidden bit, +1 to determine the rounding direction, +1 for if the computed product has a leading zero.",
+        "suggest": "只要有 1 个零，但在显式尾数位中，只需要一次乘法，+1 表示隐藏位，+1 确定舍入方向，+1 表示计算的乘积是否有前导零。",
+        "translate": ""
+    },
+    {
+        "source": "Need to do a second multiplication to get better precision for the lower product.",
+        "suggest": "需要进行第二次乘法以获得较低乘积的更好精度。",
+        "translate": ""
+    },
+    {
+        "source": "This will always be exact where q is < 55, since 5^55 < 2^128.",
+        "suggest": "这在 q < 55 时总是准确的，因为 5^55 < 2^128。",
+        "translate": ""
+    },
+    {
+        "source": "If this wraps, then we need to need to round up the hi product.",
+        "suggest": "如果这样包装，那么我们需要将 hi 产品四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "We then try a long chain of progressively more general and expensive special cases using machine-sized integers and small, fixed-sized floating point numbers (first `f32`/`f64`, then a type with 64 bit significand).",
+        "suggest": "然后，我们尝试使用机器大小的整数和固定大小的小浮点数 (首先是 `f32`/`f64`，然后是具有 64 位有效数的类型) 的一长串越来越普遍和昂贵的特殊情况。",
+        "translate": ""
+    },
+    {
+        "source": "The extended-precision algorithm uses the Eisel-Lemire algorithm, which uses a 128-bit (or 192-bit) representation that can accurately and quickly compute the vast majority of floats.",
+        "suggest": "扩展精度算法使用 Eisel-Lemire 算法，该算法使用 128 位 (或 192 位) 表示，可以准确快速地计算绝大多数浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "When all these fail, we bite the bullet and resort to using a large-decimal representation, shifting the digits into range, calculating the upper significant bits and exactly round to the nearest representation.",
+        "suggest": "当所有这些都失败时，我们硬着头皮求助于使用大十进制表示，将数字移入范围，计算高位有效位并精确四舍五入到最近的表示。",
+        "translate": ""
+    },
+    {
+        "source": "available online:",
+        "suggest": "在线提供:",
+        "translate": ""
+    },
+    {
+        "source": "float is used in flt2dec, and all are used in unit tests.",
+        "suggest": "在 flt2dec 中使用 float，在单元测试中全部使用。",
+        "translate": ""
+    },
+    {
+        "source": "Used in unit tests, keep public.",
+        "suggest": "用于单元测试，保持公开。",
+        "translate": ""
+    },
+    {
+        "source": "This is much better than making FloatErrorKind and ParseFloatError::kind public.",
+        "suggest": "这比公开 FloatErrorKind 和 ParseFloatError::kind 好得多。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `BiasedFp` to the closest machine float type.",
+        "suggest": "将 `BiasedFp` 转换为最接近的机器浮点类型。",
+        "translate": ""
+    },
+    {
+        "source": "If significant digits were truncated, then we can have rounding error only if `mantissa + 1` produces a different result.",
+        "suggest": "如果有效数字被截断，那么只有当 `mantissa + 1` 产生不同的结果时，我们才会有舍入错误。",
+        "translate": ""
+    },
+    {
+        "source": "We also avoid redundantly using the Eisel-Lemire algorithm if it was unable to correctly round on the first pass.",
+        "suggest": "如果 Eisel-Lemire 算法无法在第一次通过时正确取整，我们也会避免使用多余的 Eisel-Lemire 算法。",
+        "translate": ""
+    },
+    {
+        "source": "Unable to correctly round the float using the Eisel-Lemire algorithm.",
+        "suggest": "无法使用 Eisel-Lemire 算法正确舍入浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "Fallback to a slower, but always correct algorithm.",
+        "suggest": "回退到较慢但始终正确的算法。",
+        "translate": ""
+    },
+    {
+        "source": "Representation of a float as the significant digits and exponent.",
+        "suggest": "将浮点数表示为有效数字和指数。",
+        "translate": ""
+    },
+    {
+        "source": "Detect if the float can be accurately reconstructed from native floats.",
+        "suggest": "检测是否可以从原生浮点数准确地重建浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "The fast path algorithmn using machine-sized integers and floats.",
+        "suggest": "使用机器大小的整数和浮点数的快速路径算法。",
+        "translate": ""
+    },
+    {
+        "source": "This is extracted into a separate function so that it can be attempted before constructing a Decimal.",
+        "suggest": "这被提取到一个单独的函数中，以便可以在创建一个 Decimal 之前尝试它。",
+        "translate": ""
+    },
+    {
+        "source": "This only works if both the mantissa and the exponent can be exactly represented as a machine float, since IEE-754 guarantees no rounding will occur.",
+        "suggest": "这只适用于尾数和指数都可以精确表示为机器浮点数的情况，因为 IEE-754 保证不会发生舍入。",
+        "translate": ""
+    },
+    {
+        "source": "There is an exception: disguised fast-path cases, where we can shift powers-of-10 from the exponent to the significant digits.",
+        "suggest": "有一个例外: 伪装的快速路径情况，我们可以将 10 的幂从指数转移到有效数字。",
+        "translate": ""
+    },
+    {
+        "source": "normal fast path",
+        "suggest": "正常快速路径",
+        "translate": ""
+    },
+    {
+        "source": "disguised fast path",
+        "suggest": "伪装的快速路径",
+        "translate": ""
+    },
+    {
+        "source": "Functions to parse floating-point numbers.",
+        "suggest": "解析浮点数的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Parse 8 digits, loaded as bytes in little-endian order.",
+        "suggest": "解析 8 位数字，以小端顺序加载为字节。",
+        "translate": ""
+    },
+    {
+        "source": "This uses the trick where every digit is in [0x030, 0x39], and therefore can be parsed in 3 multiplications, much faster than the normal 8.",
+        "suggest": "这使用了每个数字都在 [0x030, 0x39] 中的技巧，因此可以在 3 次乘法中解析，比正常的 8 次要快得多。",
+        "translate": ""
+    },
+    {
+        "source": "This is based off the algorithm described in \"Fast numeric string to int\", available here:",
+        "suggest": "这是基于 \"Fast numeric string to int\" 中描述的算法，可在此处获得:",
+        "translate": ""
+    },
+    {
+        "source": "will not overflow, fits in 63 bits",
+        "suggest": "不会溢出，适合 63 位",
+        "translate": ""
+    },
+    {
+        "source": "Parse digits until a non-digit character is found.",
+        "suggest": "解析数字直到找到非数字字符。",
+        "translate": ""
+    },
+    {
+        "source": "may cause overflows, to be handled later",
+        "suggest": "可能会导致溢出，稍后处理",
+        "translate": ""
+    },
+    {
+        "source": "Parse up to 19 digits (the max that can be stored in a 64-bit integer).",
+        "suggest": "解析最多 19 位数字 (可以存储在 64 位整数中的最大值)。",
+        "translate": ""
+    },
+    {
+        "source": "no overflows here",
+        "suggest": "这里没有溢出",
+        "translate": ""
+    },
+    {
+        "source": "cannot be empty",
+        "suggest": "不能为空",
+        "translate": ""
+    },
+    {
+        "source": "Try to parse 8 digits at a time, using an optimized algorithm.",
+        "suggest": "尝试使用优化算法一次解析 8 位数字。",
+        "translate": ""
+    },
+    {
+        "source": "already ensured the buffer was >= 8 bytes in read_u64.",
+        "suggest": "已经确保缓冲区在 read_u64 中 >= 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "already ensured the buffer was >= 8 bytes in try_read_u64.",
+        "suggest": "已经确保 try_read_u64 中的缓冲区 >= 8 个字节。",
+        "translate": ""
+    },
+    {
+        "source": "Parse the scientific notation component of a float.",
+        "suggest": "解析浮点数的科学记数法组件。",
+        "translate": ""
+    },
+    {
+        "source": "s cannot be empty",
+        "suggest": "s 不能为空",
+        "translate": ""
+    },
+    {
+        "source": "no overflows here, saturate well before overflow",
+        "suggest": "这里没有溢出，在溢出之前饱和",
+        "translate": ""
+    },
+    {
+        "source": "Parse a partial, non-special floating point number.",
+        "suggest": "解析部分非特殊浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "This creates a representation of the float as the significant digits and the decimal exponent.",
+        "suggest": "这将创建浮点数表示为有效数字和十进制指数。",
+        "translate": ""
+    },
+    {
+        "source": "parse initial digits before dot",
+        "suggest": "解析点之前的初始数字",
+        "translate": ""
+    },
+    {
+        "source": "handle dot with the following digits",
+        "suggest": "用以下数字处理点",
+        "translate": ""
+    },
+    {
+        "source": "s cannot be empty due to first_is",
+        "suggest": "由于 first_is，s 不能为空",
+        "translate": ""
+    },
+    {
+        "source": "handle scientific format",
+        "suggest": "处理科学格式",
+        "translate": ""
+    },
+    {
+        "source": "If None, we have no trailing digits after exponent, or an invalid float.",
+        "suggest": "如果没有，我们在指数之后没有尾随数字，或者一个无效的浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "handle uncommon case with many digits",
+        "suggest": "处理多位数的罕见情况",
+        "translate": ""
+    },
+    {
+        "source": "p cannot be empty due to first_is2",
+        "suggest": "由于 first_is2，p 不能为空",
+        "translate": ""
+    },
+    {
+        "source": "at this point we have more than 19 significant digits, let's try again",
+        "suggest": "此时我们有超过 19 位有效数字，让我们再试一次",
+        "translate": ""
+    },
+    {
+        "source": "big int",
+        "suggest": "大整数",
+        "translate": ""
+    },
+    {
+        "source": "the next byte must be present and be '.' We know this is true because we had more than 19 digits previously, so we overflowed a 64-bit integer, but parsing only the integral digits produced less than 19 digits.",
+        "suggest": "下一个字节必须存在并且是 '.' 我们知道这是真的，因为我们之前有超过 19 位数字，所以我们溢出了一个 64 位整数，但只解析整数位产生少于 19 位数字。",
+        "translate": ""
+    },
+    {
+        "source": "That means we must have a decimal point, and at least 1 fractional digit.",
+        "suggest": "这意味着我们必须有一个小数点，并且至少有 1 个小数位。",
+        "translate": ""
+    },
+    {
+        "source": "add back the explicit part",
+        "suggest": "添加回显式部分",
+        "translate": ""
+    },
+    {
+        "source": "Try to parse a non-special floating point number.",
+        "suggest": "尝试解析一个非特殊的浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "Parse a partial representation of a special, non-finite float.",
+        "suggest": "解析特殊的非有限浮点数的部分表示。",
+        "translate": ""
+    },
+    {
+        "source": "Try to parse a special, non-finite float.",
+        "suggest": "尝试解析一个特殊的、非有限的浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "Slow, fallback algorithm for cases the Eisel-Lemire algorithm cannot round.",
+        "suggest": "对于 Eisel-Lemire 算法无法舍入的情况，慢速回退算法。",
+        "translate": ""
+    },
+    {
+        "source": "Parse the significant digits and biased, binary exponent of a float.",
+        "suggest": "解析浮点数的有效数字和有偏差的二进制指数。",
+        "translate": ""
+    },
+    {
+        "source": "This is a fallback algorithm that uses a big-integer representation of the float, and therefore is considerably slower than faster approximations.",
+        "suggest": "这是一种回退算法，它使用浮点数的大整数表示，因此比更快的近似值慢得多。",
+        "translate": ""
+    },
+    {
+        "source": "However, it will always determine how to round the significant digits to the nearest machine float, allowing use to handle near half-way cases.",
+        "suggest": "但是，它将始终确定如何将有效数字舍入到最近的机器浮点数，从而允许使用处理接近一半的情况。",
+        "translate": ""
+    },
+    {
+        "source": "Near half-way cases are halfway between two consecutive machine floats.",
+        "suggest": "接近中途的情况是在两个连续的机器浮动之间。",
+        "translate": ""
+    },
+    {
+        "source": "For example, the float `16777217.0` has a bitwise representation of `100000000000000000000000 1`.",
+        "suggest": "例如，浮点数 `16777217.0` 具有 `100000000000000000000000 1` 的按位表示。",
+        "translate": ""
+    },
+    {
+        "source": "Rounding to a single-precision float, the trailing `1` is truncated.",
+        "suggest": "舍入为单精度浮点数，尾随的 `1` 被截断。",
+        "translate": ""
+    },
+    {
+        "source": "Using round-nearest, tie-even, any value above `16777217.0` must be rounded up to `16777218.0`, while any value before or equal to `16777217.0` must be rounded down to `16777216.0`.",
+        "suggest": "使用最接近的平局，任何高于 `16777217.0` 的值都必须向上舍入为 `16777218.0`，而任何等于或等于 `16777217.0` 的值必须向下舍入为 `16777216.0`。",
+        "translate": ""
+    },
+    {
+        "source": "These near-halfway conversions therefore may require a large number of digits to unambiguously determine how to round.",
+        "suggest": "因此，这些接近一半的转换可能需要大量数字来明确确定如何舍入。",
+        "translate": ""
+    },
+    {
+        "source": "The algorithms described here are based on \"Processing Long Numbers Quickly\", available here:",
+        "suggest": "此处描述的算法基于 \"Processing Long Numbers Quickly\"，可在此处获得:",
+        "translate": ""
+    },
+    {
+        "source": "Shift right toward (1/2 ...",
+        "suggest": "向右移动 (1/2 ...",
+        "translate": ""
+    },
+    {
+        "source": "Shift left toward (1/2 ...",
+        "suggest": "向左移动 (1/2 ...",
+        "translate": ""
+    },
+    {
+        "source": "We are now in the range [1/2 ... 1] but the binary format uses [1 ... 2].",
+        "suggest": "我们现在在 [1/2 ... 1] 范围内，但二进制格式使用 [1 ... 2]。",
+        "translate": ""
+    },
+    {
+        "source": "Shift the decimal to the hidden bit, and then round the value to get the high mantissa+1 bits.",
+        "suggest": "将小数移到隐藏位，然后将值四舍五入得到高尾数 + 1 位。",
+        "translate": ""
+    },
+    {
+        "source": "Rounding up overflowed to the carry bit, need to shift back to the hidden bit.",
+        "suggest": "向上舍入溢出到进位位，需要移回隐藏位。",
+        "translate": ""
+    },
+    {
+        "source": "Zero out all the bits above the explicit mantissa bits.",
+        "suggest": "将显式尾数位上方的所有位清零。",
+        "translate": ""
+    },
+    {
+        "source": "Pre-computed tables powers-of-5 for extended-precision representations.",
+        "suggest": "用于扩展精度表示的预计算表 5 的幂。",
+        "translate": ""
+    },
+    {
+        "source": "These tables enable fast scaling of the significant digits of a float to the decimal exponent, with minimal rounding errors, in a 128 or 192-bit representation.",
+        "suggest": "这些表能够以 128 或 192 位表示形式将浮点数的有效数字快速缩放为十进制指数，并且舍入误差最小。",
+        "translate": ""
+    },
+    {
+        "source": "Use static to avoid long compile times: Rust compiler errors can have the entire table compiled multiple times, and then emit code multiple times, even if it's stripped out in the final binary.",
+        "suggest": "使用静态避免较长的编译时间: Rust 编译器错误可以多次编译整个表，然后多次发出代码，即使它在最终的二进制文件中被剥离。",
+        "translate": ""
+    },
+    {
+        "source": "This variant will be constructed when parsing an empty string.",
+        "suggest": "解析空字符串时将构造此成员。",
+        "translate": ""
+    },
+    {
+        "source": "Shared utilties used by both float and integer formatting.",
+        "suggest": "浮点和整数格式使用的共享实用程序。",
+        "translate": ""
+    },
+    {
+        "source": "The smallest value that can be represented by this integer type,",
+        "suggest": "此整数类型可以表示的最小值，",
+        "translate": ""
+    },
+    {
+        "source": "The largest value that can be represented by this integer type,",
+        "suggest": "此整数类型可以表示的最大值，",
+        "translate": ""
+    },
+    {
+        "source": "Saturating integer division.",
+        "suggest": "饱和整数除法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes `self / rhs`, saturating at the numeric bounds instead of overflowing.",
+        "suggest": "计算 `self / rhs`，在数值边界处饱和而不是溢出。",
+        "translate": ""
+    },
+    {
+        "source": "MIN / -1 is the only possible saturating overflow",
+        "suggest": "MIN/-1 是唯一可能的饱和溢出",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self + rhs + carry` without the ability to overflow.",
+        "suggest": "计算 `self + rhs + carry` 没有溢出的能力。",
+        "translate": ""
+    },
+    {
+        "source": "Performs \"ternary addition\" which takes in an extra bit to add, and may return an additional bit of overflow.",
+        "suggest": "执行 \"ternary addition\"，它需要添加一个额外的位，并可能返回一个额外的溢出位。",
+        "translate": ""
+    },
+    {
+        "source": "This allows for chaining together multiple additions to create \"big integers\" which represent larger values.",
+        "suggest": "这允许将多个添加链接在一起以创建代表更大值的 \"big integers\"。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self - rhs - borrow` without the ability to overflow.",
+        "suggest": "计算 `self - rhs - borrow` 没有溢出的能力。",
+        "translate": ""
+    },
+    {
+        "source": "Performs \"ternary subtraction\" which takes in an extra bit to subtract, and may return an additional bit of overflow.",
+        "suggest": "执行 \"ternary subtraction\"，它接受一个额外的位来减去，并且可能返回一个额外的溢出位。",
+        "translate": ""
+    },
+    {
+        "source": "This allows for chaining together multiple subtractions to create \"big integers\" which represent larger values.",
+        "suggest": "这允许将多个减法链接在一起以创建代表更大值的 \"big integers\"。",
+        "translate": ""
+    },
+    {
+        "source": "This method might not be optimized owing to implementation details;",
+        "suggest": "由于实现细节，此方法可能未优化;",
+        "translate": ""
+    },
+    {
+        "source": "can produce results more efficiently for base 2, and `log10` can produce results more efficiently for base 10.",
+        "suggest": "可以更有效地为基数 2 生成结果，而 `log10` 可以更有效地为基数 10 生成结果。",
+        "translate": ""
+    },
+    {
+        "source": "When the number is zero, or if the base is not at least 2;",
+        "suggest": "当数字为零时，或基数不至少为 2 时;",
+        "translate": ""
+    },
+    {
+        "source": "it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which the method can return 0).",
+        "suggest": "它在调试模式下为 panics，在发布模式下返回值被包装为 0 (该方法可以返回 0 的唯一情况)。",
+        "translate": ""
+    },
+    {
+        "source": "In debug builds, trigger a panic on None.",
+        "suggest": "在调试版本中，在 None 上触发 panic。",
+        "translate": ""
+    },
+    {
+        "source": "When the number is zero it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which the method can return 0).",
+        "suggest": "当数字为零时，它在调试模式下为 panics，在发布模式下返回值包装为 0 (该方法可以返回 0 的唯一情况)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the number is negative or zero, or if the base is not at least 2.",
+        "suggest": "如果数字为负数或零，或者基数不至少为 2，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "can produce results more efficiently for base 2, and `checked_log10` can produce results more efficiently for base 10.",
+        "suggest": "可以更有效地为基数 2 生成结果，而 `checked_log10` 可以更有效地为基数 10 生成结果。",
+        "translate": ""
+    },
+    {
+        "source": "Optimization for 128 bit wide integers.",
+        "suggest": "128 位宽整数的优化。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the number is negative or zero.",
+        "suggest": "如果数字为负数或零，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "We just checked that this number is positive",
+        "suggest": "我们刚刚检查过这个数字是正数",
+        "translate": ""
+    },
+    {
+        "source": "Note that the #[rustc_inherit_overflow_checks] and #[inline] above mean that the overflow semantics of the subtraction depend on the crate we're being called from.",
+        "suggest": "请注意，上面的 #[rustc_inherit_overflow_checks] 和 #[inline] 意味着减法的溢出语义取决于我们正在调用的 crate。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the complete product `self * rhs` without the possibility to overflow.",
+        "suggest": "计算完整的产品 `self * rhs`，没有溢出的可能性。",
+        "translate": ""
+    },
+    {
+        "source": "This returns the low-order (wrapping) bits and the high-order (overflow) bits of the result as two separate values, in that order.",
+        "suggest": "这将返回结果的低位 (wrapping) 位和高位 (overflow) 位作为两个单独的值，按该顺序。",
+        "translate": ""
+    },
+    {
+        "source": "longer-term this should be done via an intrinsic, but for now we can deal without an impl for u128/i128",
+        "suggest": "从长远来看，这应该通过内联函数来完成，但现在我们可以不用 u128/i128 的实现",
+        "translate": ""
+    },
+    {
+        "source": "overflow will be contained within the wider types",
+        "suggest": "溢出将包含在更广泛的类型中",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the \"full multiplication\" `self * rhs + carry` without the possibility to overflow.",
+        "suggest": "计算 \"full multiplication\" `self * rhs + carry` 而不可能溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Performs \"long multiplication\" which takes in an extra amount to add, and may return an additional amount of overflow.",
+        "suggest": "执行 \"long multiplication\"，它需要添加额外的量，并且可能返回额外的溢出量。",
+        "translate": ""
+    },
+    {
+        "source": "This allows for chaining together multiple multiplications to create \"big integers\" which represent larger values.",
+        "suggest": "这允许将多个乘法链接在一起以创建代表更大值的 \"big integers\"。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a non-zero without checking whether the value is non-zero.",
+        "suggest": "创建一个非零值而不检查该值是否为非零值。",
+        "translate": ""
+    },
+    {
+        "source": "This results in undefined behaviour if the value is zero.",
+        "suggest": "如果该值为零，这将导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "A bunch of methods for unsigned nonzero types only.",
+        "suggest": "一堆仅适用于无符号非零类型的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Add an unsigned integer to a non-zero value.",
+        "suggest": "将无符号整数添加到非零值。",
+        "translate": ""
+    },
+    {
+        "source": "Check for overflow and return [`None`] on overflow As a consequence, the result cannot wrap to zero.",
+        "suggest": "检查溢出并在溢出时返回 [`None`] 因此，结果不能归零。",
+        "translate": ""
+    },
+    {
+        "source": "$Int::checked_add returns None on overflow so the result cannot be zero.",
+        "suggest": "$Int::checked_add 在溢出时返回 None，因此结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "$Int::saturating_add returns $Int::MAX on overflow so the result cannot be zero.",
+        "suggest": "$Int::saturating_add 在溢出时返回 $Int::MAX，因此结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "Add an unsigned integer to a non-zero value, assuming overflow cannot occur.",
+        "suggest": "假设不会发生溢出，将无符号整数添加到非零值。",
+        "translate": ""
+    },
+    {
+        "source": "Overflow is unchecked, and it is undefined behaviour to overflow *even if the result would wrap to a non-zero value*.",
+        "suggest": "溢出未检查，如果结果将换行为非零值，则溢出 *even 是未定义的行为 *。",
+        "translate": ""
+    },
+    {
+        "source": "The behaviour is undefined as soon as",
+        "suggest": "该行为是未定义的",
+        "translate": ""
+    },
+    {
+        "source": "The caller ensures there is no overflow.",
+        "suggest": "调用者确保没有溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the smallest power of two greater than or equal to n.",
+        "suggest": "返回大于或等于 n 的 2 的最小幂。",
+        "translate": ""
+    },
+    {
+        "source": "Check for overflow and return [`None`] if the next power of two is greater than the type’s maximum value.",
+        "suggest": "如果下一个 2 的幂大于类型的最大值，则检查是否溢出并返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "As a consequence, the result cannot wrap to zero.",
+        "suggest": "因此，结果不能归零。",
+        "translate": ""
+    },
+    {
+        "source": "The next power of two is positive and overflow is checked.",
+        "suggest": "下一个 2 的幂为正，并检查溢出。",
+        "translate": ""
+    },
+    {
+        "source": "A bunch of methods for signed nonzero types only.",
+        "suggest": "一堆仅用于有符号非零类型的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of self.",
+        "suggest": "计算 self 的绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "for documentation on overflow behaviour.",
+        "suggest": "有关溢出行为的文档。",
+        "translate": ""
+    },
+    {
+        "source": "This cannot overflow to zero.",
+        "suggest": "这不能溢出到零。",
+        "translate": ""
+    },
+    {
+        "source": "Check for overflow and returns [`None`] if",
+        "suggest": "检查溢出并返回 [`None`] 如果",
+        "translate": ""
+    },
+    {
+        "source": "The result cannot be zero.",
+        "suggest": "结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "absolute value of nonzero cannot yield zero values.",
+        "suggest": "非零的绝对值不能产生零值。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of self, with overflow information, see",
+        "suggest": "计算 self 的绝对值，带有溢出信息，请参见",
+        "translate": ""
+    },
+    {
+        "source": "Saturating absolute value, see",
+        "suggest": "饱和绝对值，请参见",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping absolute value, see",
+        "suggest": "包装绝对值，请参见",
+        "translate": ""
+    },
+    {
+        "source": "FIXME: add once Neg is implemented?",
+        "suggest": "FIXME: 添加一次 Neg 实现?",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute value of self without any wrapping or panicking.",
+        "suggest": "在没有任何包装或 panicking 的情况下计算 self 的绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "A bunch of methods for both signed and unsigned nonzero types.",
+        "suggest": "有符号和无符号非零类型的一堆方法。",
+        "translate": ""
+    },
+    {
+        "source": "Multiply two non-zero integers together.",
+        "suggest": "将两个非零整数相乘。",
+        "translate": ""
+    },
+    {
+        "source": "Check for overflow and return [`None`] on overflow.",
+        "suggest": "检查溢出并在溢出时返回 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "checked_mul returns None on overflow and `other` is also non-null so the result cannot be zero.",
+        "suggest": "Checked_mul 在溢出时返回 None 并且 `other` 也是非空的，因此结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "saturating_mul returns u*::MAX on overflow and `other` is also non-null so the result cannot be zero.",
+        "suggest": "saturating_mul 在溢出时返回 u*::MAX 并且 `other` 也是非空的，因此结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "Multiply two non-zero integers together, assuming overflow cannot occur.",
+        "suggest": "假设不会发生溢出，将两个非零整数相乘。",
+        "translate": ""
+    },
+    {
+        "source": "Raise non-zero value to an integer power.",
+        "suggest": "将非零值提高到整数幂。",
+        "translate": ""
+    },
+    {
+        "source": "checked_pow returns None on overflow so the result cannot be zero.",
+        "suggest": "Checked_pow 在溢出时返回 None，因此结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "saturating_pow returns u*::MAX on overflow so the result cannot be zero.",
+        "suggest": "saturating_pow 在溢出时返回 u*::MAX，因此结果不能为零。",
+        "translate": ""
+    },
+    {
+        "source": "Use this when the generated code should differ between signed and unsigned types.",
+        "suggest": "当生成的代码在有符号和无符号类型之间应该不同时使用它。",
+        "translate": ""
+    },
+    {
+        "source": "Definitions of `Saturating<T>`.",
+        "suggest": "`Saturating<T>` 的定义。",
+        "translate": ""
+    },
+    {
+        "source": "Provides intentionally-saturating arithmetic on `T`.",
+        "suggest": "在 `T` 上提供有意饱和的算法。",
+        "translate": ""
+    },
+    {
+        "source": "While most arithmetic falls into this category, some code explicitly expects and relies upon saturating arithmetic.",
+        "suggest": "虽然大多数算术都属于这一类，但有些代码明确期望并依赖于饱和算术。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating arithmetic can be achieved either through methods like `saturating_add`, or through the `Saturating<T>` type, which says that all standard arithmetic operations on the underlying value are intended to have saturating semantics.",
+        "suggest": "饱和算术可以通过像 `saturating_add` 这样的方法或通过 `Saturating<T>` 类型来实现，它表示对底层值的所有标准算术运算都旨在具有饱和语义。",
+        "translate": ""
+    },
+    {
+        "source": "The underlying value can be retrieved through the `.0` index of the `Saturating` tuple.",
+        "suggest": "可以通过 `Saturating` 元组的 `.0` 索引检索底层值。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME what is the correct implementation here?",
+        "suggest": "FIXME 这里的正确实现是什么?",
+        "translate": ""
+    },
+    {
+        "source": "see discussion https://github.com/rust-lang/rust/pull/87921#discussion_r695870065",
+        "suggest": "参见讨论 https://github.com/rust-lang/rust/pull/87921#discussion_r695870065",
+        "translate": ""
+    },
+    {
+        "source": "Shifts the bits to the left by a specified amount, `n`, saturating the truncated bits to the end of the resulting integer.",
+        "suggest": "将位向左移动指定的量 `n`，将截断的位饱和到结果整数的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Shifts the bits to the right by a specified amount, `n`, saturating the truncated bits to the beginning of the resulting integer.",
+        "suggest": "将位右移指定的量 `n`，将截断的位饱和到结果整数的开头。",
+        "translate": ""
+    },
+    {
+        "source": "Results that are too large are saturated:",
+        "suggest": "过大的结果是饱和的:",
+        "translate": ""
+    },
+    {
+        "source": "Related to potential Shl and ShlAssign implementation",
+        "suggest": "与潜在的 Shl 和 ShlAssign 实现相关",
+        "translate": ""
+    },
+    {
+        "source": "When the number is negative, zero, or if the base is not at least 2;",
+        "suggest": "当数字为负数时，为零，或者基数不至少为 2;",
+        "translate": ""
+    },
+    {
+        "source": "When the number is negative or zero it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which the method can return 0).",
+        "suggest": "当数字为负数或零时，它在调试模式下为 panics，在发布模式下返回值包装为 0 (该方法可以返回 0 的唯一情况)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the number is zero, or if the base is not at least 2.",
+        "suggest": "如果数字为零，或者基数不至少为 2，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the number is zero.",
+        "suggest": "如果数字为零，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "on unsigned types, there is no overflow in integer division",
+        "suggest": "在无符号类型上，整数除法没有溢出",
+        "translate": ""
+    },
+    {
+        "source": "longer-term this should be done via an intrinsic, but this has been shown to generate optimal code for now, and LLVM doesn't have an equivalent intrinsic",
+        "suggest": "从长远来看，这应该通过内联函数来完成，但目前已经证明这可以生成最佳代码，并且 LLVM 没有等效的内联函数",
+        "translate": ""
+    },
+    {
+        "source": "The automatically generated \"drop glue\" which recursively calls the destructors of all the fields of this value.",
+        "suggest": "自动生成的 \"drop glue\" 递归调用该值的所有字段的析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "(It must not be an *identical* residual when interconversion is involved.)",
+        "suggest": "(当涉及相互转换时，它不能是*相同的*残差。)",
+        "translate": ""
+    },
+    {
+        "source": "returns `None` on error",
+        "suggest": "出错时返回 `None`",
+        "translate": ""
+    },
+    {
+        "source": "same with `checked_mul()`",
+        "suggest": "与 `checked_mul()` 相同",
+        "translate": ""
+    },
+    {
+        "source": "Substitute an error message if we have `None` so far",
+        "suggest": "如果到目前为止我们有 `None`，则替换一条错误消息",
+        "translate": ""
+    },
+    {
+        "source": "Won't panic because we unconditionally used `Some` above",
+        "suggest": "不会 panic 因为我们无条件使用了上面的 `Some`",
+        "translate": ""
+    },
+    {
+        "source": "already calls into_iter(), so we don't have to do so",
+        "suggest": "已经调用 into_iter()，所以我们不必这样做",
+        "translate": ""
+    },
+    {
+        "source": "Explicit returns to illustrate return types matching",
+        "suggest": "显式返回来说明返回类型匹配",
+        "translate": ""
+    },
+    {
+        "source": "This won't compile because all possible returns from the function must have the same concrete type.",
+        "suggest": "这不会编译，因为函数的所有可能返回必须具有相同的具体类型。",
+        "translate": ""
+    },
+    {
+        "source": "Explicit returns to illustrate return types not matching",
+        "suggest": "显式返回以说明返回类型不匹配",
+        "translate": ""
+    },
+    {
+        "source": "Notice that in order to use the inner [`i32`] value, the `check_optional` function first needs to use pattern matching to determine whether the box has a value (i.e., it is [`Some(...)`][`Some`]) or not ([`None`]).",
+        "suggest": "注意，为了使用内部的 [`i32`] 值，`check_optional` 函数首先需要使用模式匹配来确定 box 是否有值 (即它是 [`Some(...)`][`Some`]) 或没有 ([`None`])。",
+        "translate": ""
+    },
+    {
+        "source": "Method overview",
+        "suggest": "方法概述",
+        "translate": ""
+    },
+    {
+        "source": "In addition to working with pattern matching, [`Option`] provides a wide variety of different methods.",
+        "suggest": "除了使用模式匹配，[`Option`] 还提供了多种不同的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Querying the variant",
+        "suggest": "查询变量",
+        "translate": ""
+    },
+    {
+        "source": "The [`is_some`] and [`is_none`] methods return [`true`] if the [`Option`] is [`Some`] or [`None`], respectively.",
+        "suggest": "如果 [`Option`] 分别为 [`Some`] 或 [`None`]，则 [`is_some`] 和 [`is_none`] 方法返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "Adapters for working with references",
+        "suggest": "用于处理引用的适配器",
+        "translate": ""
+    },
+    {
+        "source": "converts from `&Option<T>` to `Option<&T>`",
+        "suggest": "从 `&Option<T>` 转换为 `Option<&T>`",
+        "translate": ""
+    },
+    {
+        "source": "converts from `&mut Option<T>` to `Option<&mut T>`",
+        "suggest": "从 `&mut Option<T>` 转换为 `Option<&mut T>`",
+        "translate": ""
+    },
+    {
+        "source": "converts from `&Option<T>` to `Option<&T::Target>`",
+        "suggest": "从 `&Option<T>` 转换为 `Option<&T::Target>`",
+        "translate": ""
+    },
+    {
+        "source": "converts from `&mut Option<T>` to",
+        "suggest": "从 `&mut Option<T>` 转换为",
+        "translate": ""
+    },
+    {
+        "source": "converts from [`Pin`]`<&Option<T>>` to",
+        "suggest": "从 [`Pin`]`<&Option<T>>` 转换为",
+        "translate": ""
+    },
+    {
+        "source": "converts from [`Pin`]`<&mut Option<T>>` to `Option<`[`Pin`]`<&mut T>>`",
+        "suggest": "从 [`Pin`]`<&mut Option<T>>` 转换为 `Option<`[`Pin`]`<&mut T>>`",
+        "translate": ""
+    },
+    {
+        "source": "Extracting the contained value",
+        "suggest": "提取包含的值",
+        "translate": ""
+    },
+    {
+        "source": "These methods extract the contained value in an [`Option<T>`] when it is the [`Some`] variant.",
+        "suggest": "这些方法提取 [`Option<T>`] 中包含的值，当它是 [`Some`] 成员时。",
+        "translate": ""
+    },
+    {
+        "source": "If the [`Option`] is [`None`]:",
+        "suggest": "如果 [`Option`] 为 [`None`]:",
+        "translate": ""
+    },
+    {
+        "source": "panics with a provided custom message",
+        "suggest": "一个提供自定义消息的 panics",
+        "translate": ""
+    },
+    {
+        "source": "panics with a generic message",
+        "suggest": "带有通用消息的 panics",
+        "translate": ""
+    },
+    {
+        "source": "returns the provided default value",
+        "suggest": "返回提供的默认值",
+        "translate": ""
+    },
+    {
+        "source": "returns the default value of the type `T` (which must implement the [`Default`] trait)",
+        "suggest": "返回类型 `T` 的默认值 (必须实现 [`Default`] trait)",
+        "translate": ""
+    },
+    {
+        "source": "returns the result of evaluating the provided function",
+        "suggest": "返回对提供的函数求值的结果",
+        "translate": ""
+    },
+    {
+        "source": "These methods transform [`Option`] to [`Result`]:",
+        "suggest": "这些方法将 [`Option`] 转换为 [`Result`]:",
+        "translate": ""
+    },
+    {
+        "source": "transforms [`Some(v)`] to [`Ok(v)`], and [`None`] to [`Err(err)`] using the provided default `err` value",
+        "suggest": "使用提供的默认 `err` 值将 [`Some(v)`] 转换为 [`Ok(v)`]，并将 [`None`] 转换为 [`Err(err)`]",
+        "translate": ""
+    },
+    {
+        "source": "transforms [`Some(v)`] to [`Ok(v)`], and [`None`] to a value of [`Err`] using the provided function",
+        "suggest": "使用提供的函数将 [`Some(v)`] 转换为 [`Ok(v)`]，并将 [`None`] 转换为 [`Err`] 的值",
+        "translate": ""
+    },
+    {
+        "source": "transposes an [`Option`] of a [`Result`] into a [`Result`] of an [`Option`]",
+        "suggest": "将 [`Result`] 的 [`Option`] 转换为 [`Option`] 的 [`Result`]",
+        "translate": ""
+    },
+    {
+        "source": "These methods transform the [`Some`] variant:",
+        "suggest": "这些方法改变了 [`Some`] 成员:",
+        "translate": ""
+    },
+    {
+        "source": "calls the provided predicate function on the contained value `t` if the [`Option`] is [`Some(t)`], and returns [`Some(t)`] if the function returns `true`;",
+        "suggest": "如果 [`Option`] 是 [`Some(t)`]，则在包含的值 `t` 上调用提供的谓词函数，如果函数返回 `true`，则返回 [`Some(t)`];",
+        "translate": ""
+    },
+    {
+        "source": "otherwise, returns [`None`]",
+        "suggest": "否则，返回 [`None`]",
+        "translate": ""
+    },
+    {
+        "source": "removes one level of nesting from an",
+        "suggest": "从一个嵌套中删除一层",
+        "translate": ""
+    },
+    {
+        "source": "transforms [`Option<T>`] to [`Option<U>`] by applying the provided function to the contained value of [`Some`] and leaving [`None`] values unchanged",
+        "suggest": "通过将提供的函数应用于 [`Some`] 的包含值并保持 [`None`] 值不变，将 [`Option<T>`] 转换为 [`Option<U>`]",
+        "translate": ""
+    },
+    {
+        "source": "These methods transform [`Option<T>`] to a value of a possibly different type `U`:",
+        "suggest": "这些方法将 [`Option<T>`] 转换为可能不同类型 `U` 的值:",
+        "translate": ""
+    },
+    {
+        "source": "applies the provided function to the contained value of [`Some`], or returns the provided default value if the [`Option`] is",
+        "suggest": "将提供的函数应用于 [`Some`] 的包含值，如果 [`Option`] 是，则返回提供的默认值",
+        "translate": ""
+    },
+    {
+        "source": "applies the provided function to the contained value of [`Some`], or returns the result of evaluating the provided fallback function if the [`Option`] is [`None`]",
+        "suggest": "将提供的函数应用于 [`Some`] 的包含值，或者如果 [`Option`] 是 [`None`]，则返回评估提供的回退函数的结果",
+        "translate": ""
+    },
+    {
+        "source": "These methods combine the [`Some`] variants of two [`Option`] values:",
+        "suggest": "这些方法结合了两个 [`Option`] 值的 [`Some`] 成员:",
+        "translate": ""
+    },
+    {
+        "source": "returns [`Some((s, o))`] if `self` is [`Some(s)`] and the provided [`Option`] value is [`Some(o)`];",
+        "suggest": "如果 `self` 为 [`Some(s)`] 且提供的 [`Option`] 值为 [`Some(o)`]，则返回 [`Some((s, o))`];",
+        "translate": ""
+    },
+    {
+        "source": "calls the provided function `f` and returns [`Some(f(s, o))`] if `self` is [`Some(s)`] and the provided [`Option`] value is [`Some(o)`];",
+        "suggest": "如果 `self` 为 [`Some(s)`] 且提供的 [`Option`] 值为 [`Some(o)`]，则调用提供的函数 `f` 并返回 [`Some(f(s, o))`];",
+        "translate": ""
+    },
+    {
+        "source": "Boolean operators",
+        "suggest": "布尔运算符",
+        "translate": ""
+    },
+    {
+        "source": "These methods treat the [`Option`] as a boolean value, where [`Some`] acts like [`true`] and [`None`] acts like [`false`].",
+        "suggest": "这些方法将 [`Option`] 视为布尔值，其中 [`Some`] 的作用类似于 [`true`]，而 [`None`] 的作用类似于 [`false`]。",
+        "translate": ""
+    },
+    {
+        "source": "There are two categories of these methods: ones that take an [`Option`] as input, and ones that take a function as input (to be lazily evaluated).",
+        "suggest": "这些方法有两类: 一类以 [`Option`] 作为输入，一类以函数作为输入 (延迟评估)。",
+        "translate": ""
+    },
+    {
+        "source": "The [`and`], [`or`], and [`xor`] methods take another [`Option`] as input, and produce an [`Option`] as output.",
+        "suggest": "[`and`]、[`or`] 和 [`xor`] 方法将另一个 [`Option`] 作为输入，并生成一个 [`Option`] 作为输出。",
+        "translate": ""
+    },
+    {
+        "source": "Only the [`and`] method can produce an [`Option<U>`] value having a different inner type `U` than [`Option<T>`].",
+        "suggest": "只有 [`and`] 方法可以生成具有与 [`Option<T>`] 不同的内部类型 `U` 的 [`Option<U>`] 值。",
+        "translate": ""
+    },
+    {
+        "source": "The [`and_then`] and [`or_else`] methods take a function as input, and only evaluate the function when they need to produce a new value.",
+        "suggest": "[`and_then`] 和 [`or_else`] 方法将函数作为输入，并且仅在需要产生新值时才评估函数。",
+        "translate": ""
+    },
+    {
+        "source": "Only the [`and_then`] method can produce an [`Option<U>`] value having a different inner type `U` than [`Option<T>`].",
+        "suggest": "只有 [`and_then`] 方法可以生成具有与 [`Option<T>`] 不同的内部类型 `U` 的 [`Option<U>`] 值。",
+        "translate": ""
+    },
+    {
+        "source": "This is an example of using methods like [`and_then`] and [`or`] in a pipeline of method calls.",
+        "suggest": "这是在方法调用管道中使用 [`and_then`] 和 [`or`] 等方法的示例。",
+        "translate": ""
+    },
+    {
+        "source": "Early stages of the pipeline pass failure values ([`None`]) through unchanged, and continue processing on success values ([`Some`]).",
+        "suggest": "管道的早期阶段通过不变的失败值 ([`None`])，并继续处理成功值 ([`Some`])。",
+        "translate": ""
+    },
+    {
+        "source": "Toward the end, [`or`] substitutes an error message if it receives [`None`].",
+        "suggest": "最后，如果 [`or`] 收到 [`None`]，它会替换一条错误消息。",
+        "translate": ""
+    },
+    {
+        "source": "Comparison operators",
+        "suggest": "比较运算符",
+        "translate": ""
+    },
+    {
+        "source": "If `T` implements [`PartialOrd`] then [`Option<T>`] will derive its [`PartialOrd`] implementation.",
+        "suggest": "如果 `T` 实现 [`PartialOrd`]，那么 [`Option<T>`] 将派生其 [`PartialOrd`] 实现。",
+        "translate": ""
+    },
+    {
+        "source": "With this order, [`None`] compares as less than any [`Some`], and two [`Some`] compare the same way as their contained values would in `T`.",
+        "suggest": "使用此顺序，[`None`] 的比较比任何 [`Some`] 都小，两个 [`Some`] 的比较方式与其在 `T` 中包含的值相同。",
+        "translate": ""
+    },
+    {
+        "source": "If `T` also implements [`Ord`], then so does [`Option<T>`].",
+        "suggest": "如果 `T` 也实现了 [`Ord`]，那么 [`Option<T>`] 也是如此。",
+        "translate": ""
+    },
+    {
+        "source": "Iterating over `Option`",
+        "suggest": "迭代结束 `Option`",
+        "translate": ""
+    },
+    {
+        "source": "An [`Option`] can be iterated over.",
+        "suggest": "可以对 [`Option`] 进行迭代。",
+        "translate": ""
+    },
+    {
+        "source": "This can be helpful if you need an iterator that is conditionally empty.",
+        "suggest": "如果您需要一个条件为空的迭代器，这会很有帮助。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator will either produce a single value (when the [`Option`] is [`Some`]), or produce no values (when the [`Option`] is [`None`]).",
+        "suggest": "迭代器将产生单个值 (当 [`Option`] 为 [`Some`] 时)，或不产生任何值 (当 [`Option`] 为 [`None`] 时)。",
+        "translate": ""
+    },
+    {
+        "source": "For example, [`into_iter`] acts like [`once(v)`] if the [`Option`] is [`Some(v)`], and like [`empty()`] if the [`Option`] is [`None`].",
+        "suggest": "例如，如果 [`Option`] 是 [`Some(v)`]，则 [`into_iter`] 的作用类似于 [`once(v)`]; 如果 [`Option`] 是 [`None`]，则它的作用类似于 [`empty()`]。",
+        "translate": ""
+    },
+    {
+        "source": "Iterators over [`Option<T>`] come in three types:",
+        "suggest": "[`Option<T>`] 上的迭代器分为三种类型:",
+        "translate": ""
+    },
+    {
+        "source": "consumes the [`Option`] and produces the contained value",
+        "suggest": "消耗 [`Option`] 并产生包含的值",
+        "translate": ""
+    },
+    {
+        "source": "produces an immutable reference of type `&T` to the contained value",
+        "suggest": "对包含的值产生类型为 `&T` 的不支持引用",
+        "translate": ""
+    },
+    {
+        "source": "produces a mutable reference of type `&mut T` to the contained value",
+        "suggest": "产生一个 `&mut T` 类型的引用引用到包含的值",
+        "translate": ""
+    },
+    {
+        "source": "An iterator over [`Option`] can be useful when chaining iterators, for example, to conditionally insert items.",
+        "suggest": "[`Option`] 上的迭代器在链接迭代器时很有用，例如，有条件地插入项。",
+        "translate": ""
+    },
+    {
+        "source": "(It's not always necessary to explicitly call an iterator constructor: many [`Iterator`] methods that accept other iterators will also accept iterable types that implement [`IntoIterator`], which includes [`Option`].)",
+        "suggest": "(并不总是需要显式调用迭代器构造函数: 许多接受其他迭代器的 [`Iterator`] 方法也将接受实现 [`IntoIterator`] 的可迭代类型，其中包括 [`Option`]。)",
+        "translate": ""
+    },
+    {
+        "source": "One reason to chain iterators in this way is that a function returning `impl Iterator` must have all possible return values be of the same concrete type.",
+        "suggest": "以这种方式链接迭代器的一个原因是，返回 `impl Iterator` 的函数必须使所有可能的返回值都具有相同的具体类型。",
+        "translate": ""
+    },
+    {
+        "source": "Chaining an iterated [`Option`] can help with that.",
+        "suggest": "链接一个迭代的 [`Option`] 可以帮助解决这个问题。",
+        "translate": ""
+    },
+    {
+        "source": "If we try to do the same thing, but using [`once()`] and [`empty()`], we can't return `impl Iterator` anymore because the concrete types of the return values differ.",
+        "suggest": "如果我们尝试做同样的事情，但是使用 [`once()`] 和 [`empty()`]，我们就不能再返回 `impl Iterator`，因为返回值的具体类型不同。",
+        "translate": ""
+    },
+    {
+        "source": "Collecting into `Option`",
+        "suggest": "收集到 `Option`",
+        "translate": ""
+    },
+    {
+        "source": "implements the [`FromIterator`][impl-FromIterator] trait, which allows an iterator over [`Option`] values to be collected into an [`Option`] of a collection of each contained value of the original [`Option`] values, or [`None`] if any of the elements was [`None`].",
+        "suggest": "实现 [`FromIterator`][impl-FromIterator] trait，它允许将 [`Option`] 值上的迭代器收集到原始 [`Option`] 值的每个包含值的集合的 [`Option`] 中，或者如果任何元素是 [`None`]，则为 [`None`]。",
+        "translate": ""
+    },
+    {
+        "source": "also implements the [`Product`][impl-Product] and [`Sum`][impl-Sum] traits, allowing an iterator over [`Option`] values to provide the [`product`][Iterator::product] and [`sum`][Iterator::sum] methods.",
+        "suggest": "还实现了 [`Product`][impl-Product] 和 [`Sum`][impl-Sum] traits，允许对 [`Option`] 值的迭代器提供 [`product`][Iterator::product] 和 [`sum`][Iterator::sum] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Modifying an [`Option`] in-place",
+        "suggest": "就地修改 [`Option`]",
+        "translate": ""
+    },
+    {
+        "source": "These methods return a mutable reference to the contained value of an",
+        "suggest": "这些方法返回对包含的值的可变引用",
+        "translate": ""
+    },
+    {
+        "source": "inserts a value, dropping any old contents",
+        "suggest": "插入一个值，丢弃任何旧内容",
+        "translate": ""
+    },
+    {
+        "source": "gets the current value, inserting a provided default value if it is [`None`]",
+        "suggest": "获取当前值，如果是 [`None`]，则插入提供的默认值",
+        "translate": ""
+    },
+    {
+        "source": "gets the current value, inserting the default value of type `T` (which must implement [`Default`]) if it is",
+        "suggest": "获取当前值，如果是，则插入类型为 `T` (必须实现 [`Default`]) 的默认值",
+        "translate": ""
+    },
+    {
+        "source": "gets the current value, inserting a default computed by the provided function if it is [`None`]",
+        "suggest": "获取当前值，如果它是 [`None`]，则插入由提供的函数计算的默认值",
+        "translate": ""
+    },
+    {
+        "source": "These methods transfer ownership of the contained value of an",
+        "suggest": "这些方法转移包含的值的所有权",
+        "translate": ""
+    },
+    {
+        "source": "takes ownership of the contained value of an [`Option`], if any, replacing the [`Option`] with [`None`]",
+        "suggest": "获取 [`Option`] 的包含值的所有权（如果有），将 [`Option`] 替换为 [`None`]",
+        "translate": ""
+    },
+    {
+        "source": "takes ownership of the contained value of an [`Option`], if any, replacing the [`Option`] with a [`Some`] containing the provided value",
+        "suggest": "获取 [`Option`] 的包含值的所有权，如果有的话，将 [`Option`] 替换为包含所提供值的 [`Some`]",
+        "translate": ""
+    },
+    {
+        "source": "Unzips an option containing a tuple of two options",
+        "suggest": "解压包含两个选项的元组的选项",
+        "translate": ""
+    },
+    {
+        "source": "If `self` is `Some((a, b))` this method returns `(Some(a), Some(b))`.",
+        "suggest": "如果 `self` 是 `Some((a, b))`，则此方法返回 `(Some(a), Some(b))`。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, `(None, None)` is returned.",
+        "suggest": "否则，返回 `(None, None)`。",
+        "translate": ""
+    },
+    {
+        "source": "The [`map`] method takes the `self` argument by value, consuming the original, so this technique uses `from` to first take an `Option` to a reference to the value inside the original.",
+        "suggest": "[`map`] 方法按值取 `self` 参数，消耗原始值，因此该技术使用 `from` 首先取 `Option` 到原始值内部值的引用。",
+        "translate": ""
+    },
+    {
+        "source": "It might not be the case, however, that this is actually a problem due to the specific usage of [`catch_unwind`] if unwind safety is specifically taken into account.",
+        "suggest": "然而，如果特别考虑到展开安全，这实际上可能不是由于 [`catch_unwind`] 的特定用途而造成的问题。",
+        "translate": ""
+    },
+    {
+        "source": "pin projection.",
+        "suggest": "pin projection。",
+        "translate": ""
+    },
+    {
+        "source": "AssertUnwindSafe follows structural pinning.",
+        "suggest": "AssertUnwindSafe 遵循结构固定。",
+        "translate": ""
+    },
+    {
+        "source": "Arguments::new_v1 is safe with exactly one str and zero args",
+        "suggest": "Arguments::new_v1 是安全的，只有一个 str 和零个参数",
+        "translate": ""
+    },
+    {
+        "source": "This function is used instead of panic_fmt in const eval.",
+        "suggest": "在 const eval 中使用此函数代替 panic_fmt。",
+        "translate": ""
+    },
+    {
+        "source": "This is only evaluated at compile time, which reliably handles this UB (in case this branch turns out to be reachable somehow).",
+        "suggest": "这仅在编译时评估，它可靠地处理此 UB (以防此分支以某种方式可达)。",
+        "translate": ""
+    },
+    {
+        "source": "It is still completely okay to not ever call [`drop`] on a pinned element (e.g., you can still call [`mem::forget`] on a <code>[Pin]<[Box]\\<T>></code>).",
+        "suggest": "永远不要在固定元素上调用 [`drop`] 仍然是完全可以的 (例如，您仍然可以在 <code>[Pin]<[Box]\\></code><T><code>[Pin]<[Box]\\></code>)。",
+        "translate": ""
+    },
+    {
+        "source": "However you must not free or reuse the storage *without calling [`drop`]*.",
+        "suggest": "但是，您不得释放或重用调用 [`drop`]* 的存储 *without。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a pinned mutable reference from this nested pinned pointer.",
+        "suggest": "从这个嵌套的固定指针中获取固定引用引用。",
+        "translate": ""
+    },
+    {
+        "source": "This is a generic method to go from `Pin<&mut Pin<Pointer<T>>>` to `Pin<&mut T>`.",
+        "suggest": "这是从 `Pin<&mut Pin<Pointer<T>>>` 到 `Pin<&mut T>` 的泛型方法。",
+        "translate": ""
+    },
+    {
+        "source": "It is safe because the existence of a `Pin<Pointer<T>>` ensures that the pointee, `T`, cannot move in the future, and this method does not enable the pointee to move.",
+        "suggest": "它是安全的，因为 `Pin<Pointer<T>>` 的存在确保了指向者 `T` 在 future 中不能移动，并且该方法不会使指向者移动。",
+        "translate": ""
+    },
+    {
+        "source": "implementations of `P::DerefMut` are likewise ruled out by the contract of `Pin::new_unchecked`.",
+        "suggest": "`P::DerefMut` 的实现同样被 `Pin::new_unchecked` 的合同排除在外。",
+        "translate": ""
+    },
+    {
+        "source": "What we're asserting here is that going from",
+        "suggest": "我们在这里断言的是，从",
+        "translate": ""
+    },
+    {
+        "source": "is safe.",
+        "suggest": "是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "We need to ensure that two things hold for that to be the case:",
+        "suggest": "我们需要确保有两件事能够做到这一点:",
+        "translate": ""
+    },
+    {
+        "source": "Once we give out a `Pin<&mut P::Target>`, an `&mut P::Target` will not be given out.",
+        "suggest": "一旦我们发出 `Pin<&mut P::Target>`，就不会发出 `&mut P::Target`。",
+        "translate": ""
+    },
+    {
+        "source": "By giving out a `Pin<&mut P::Target>`, we do not risk of violating `Pin<&mut Pin<P>>`",
+        "suggest": "通过发放 `Pin<&mut P::Target>`，我们没有违反 `Pin<&mut Pin<P>>` 的风险",
+        "translate": ""
+    },
+    {
+        "source": "The existence of `Pin<P>` is sufficient to guarantee #1: since we already have a `Pin<P>`, it must already uphold the pinning guarantees, which must mean that `Pin<&mut P::Target>` does as well, since `Pin::as_mut` is safe.",
+        "suggest": "`Pin<P>` 的存在足以保证 #1: 因为我们已经有了 `Pin<P>`，它必须已经维护了固定保证，这意味着 `Pin<&mut P::Target>` 也可以，因为 `Pin::as_mut` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "We do not have to rely on the fact that P is _also_ pinned.",
+        "suggest": "我们不必依赖 P 也被固定的事实。",
+        "translate": ""
+    },
+    {
+        "source": "For #2, we need to ensure that code given a `Pin<&mut P::Target>` cannot cause the `Pin<P>` to move?",
+        "suggest": "对于 #2，我们需要确保给定 `Pin<&mut P::Target>` 的代码不会导致 `Pin<P>` 移动?",
+        "translate": ""
+    },
+    {
+        "source": "That is not possible, since `Pin<&mut P::Target>` no longer retains any access to the `P` itself, much less the `Pin<P>`.",
+        "suggest": "这是不可能的，因为 `Pin<&mut P::Target>` 不再保留对 `P` 本身的任何访问权限，更不用说 `Pin<P>`。",
+        "translate": ""
+    },
+    {
+        "source": "Decompose a (possibly wide) pointer into its address and metadata components.",
+        "suggest": "将 (可能是宽的) 指针分解为其地址和元数据组件。",
         "translate": ""
     }
 ]

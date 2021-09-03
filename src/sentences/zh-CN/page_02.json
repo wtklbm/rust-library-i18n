@@ -2151,7 +2151,7 @@
     },
     {
         "source": "The current algorithm is based on [pattern-defeating quicksort][pdqsort] by Orson Peters, which combines the fast average case of randomized quicksort with the fast worst case of heapsort, while achieving linear time on slices with certain patterns.",
-        "suggest": "当前算法基于 Orson Peters 的 [pattern-defeating quicksort][pdqsort]，该算法将随机快速排序的快速平均情况与堆排序的快速最坏情况相结合，同时在具有特定模式的切片上实现了线性时间。",
+        "suggest": "当前算法基于 Orson Peters 的 [pattern-defeating 的快速排序][pdqsort]，该算法将随机快速排序的快速平均情况与堆排序的快速最坏情况相结合，同时在具有特定模式的切片上实现了线性时间。",
         "translate": ""
     },
     {
@@ -4541,7 +4541,7 @@
     },
     {
         "source": "See the [`rc` documentation][rc_examples] for more examples of reference counting in general.",
-        "suggest": "有关更多一般引用计数示例，请参见 [`rc` documentation][rc_examples]。",
+        "suggest": "有关更多一般引用计数示例，请参见 [`rc` 文档][rc_examples]。",
         "translate": ""
     },
     {

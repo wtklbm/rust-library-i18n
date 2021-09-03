@@ -306,7 +306,7 @@
     },
     {
         "source": "Due to the [concurrency] involved in modern computers, assumptions about the program's execution order are often wrong.",
-        "suggest": "由于现代计算机中使用了 [concurrency]，因此有关程序执行顺序的假设通常是错误的。",
+        "suggest": "由于现代计算机中使用了 [并发][concurrency]，因此有关程序执行顺序的假设通常是错误的。",
         "translate": ""
     },
     {
@@ -336,7 +336,7 @@
     },
     {
         "source": "For example, it might hoist memory loads at the top of a code block, so that the CPU can start [prefetching] the values from memory.",
-        "suggest": "例如，它可能会在代码块的顶部提升内存负载，以便 CPU 可以从内存中启动 [prefetching] 值。",
+        "suggest": "例如，它可能会在代码块的顶部提升内存负载，以便 CPU 可以从内存中启动 [预取][prefetching] 值。",
         "translate": ""
     },
     {
@@ -356,7 +356,7 @@
     },
     {
         "source": "Modern CPUs are capable of [superscalar] execution, i.e., multiple instructions might be executing at the same time, even though the machine code describes a sequential process.",
-        "suggest": "现代的 CPU 能够执行 [superscalar]，也就是说，多个指令可能同时执行，即使机器代码描述的是一个顺序过程。",
+        "suggest": "现代的 CPU 能够执行 [超标量][superscalar]，也就是说，多个指令可能同时执行，即使机器代码描述的是一个顺序过程。",
         "translate": ""
     },
     {
@@ -4806,7 +4806,7 @@
     },
     {
         "source": "Arc is used to count the number of used sockets.",
-        "suggest": "圆弧用于计算已用插座的数量。",
+        "suggest": "Arc 用于计算已用套接字的数量。",
         "translate": ""
     },
     {

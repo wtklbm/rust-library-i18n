@@ -491,7 +491,7 @@
     },
     {
         "source": "See the [Reference][union] for more informations on `union`s.",
-        "suggest": "有关 `union` 的更多信息，请参见 [引用][union]。",
+        "suggest": "有关 `union` 的更多信息，请参见 [union]。",
         "translate": ""
     },
     {
@@ -741,7 +741,7 @@
     },
     {
         "source": "It offers core types, like [`Vec<T>`] and [`Option<T>`], library-defined [operations on language primitives](#primitives), [standard macros](#macros), [I/O] and [multithreading], among [many other things][other].",
-        "suggest": "它提供了核心类型，例如 [`Vec<T>`] 和 [`Option<T>`]，库定义的对 [语言原语](#primitives) 的操作，[标准库宏](#macros)，[I/O] 和 [multithreading]，以及许多 [其他][other] 东西。",
+        "suggest": "它提供了核心类型，例如 [`Vec<T>`] 和 [`Option<T>`]，库定义的对 [语言原语](#primitives) 的操作，[标准库宏](#macros)，[I/O] 和 [多线程][multithreading]，以及许多 [其他][other] 东西。",
         "translate": ""
     },
     {
@@ -3121,7 +3121,7 @@
     },
     {
         "source": "All currently blocked and future [reads] will return [`Ok`]`(0)`.",
-        "suggest": "当前所有已阻止的 future [reads] 将返回 [`Ok`]`(0)`。",
+        "suggest": "所有当前被阻止的和未来的 [reads] 将返回 [`Ok`]`(0)`。",
         "translate": ""
     },
     {
@@ -3131,7 +3131,7 @@
     },
     {
         "source": "All currently blocked and future [writes] will return an error.",
-        "suggest": "当前所有被阻止的 future [writes] 将返回错误。",
+        "suggest": "所有当前被阻止和未来的 [writes] 将返回错误。",
         "translate": ""
     },
     {
@@ -4001,7 +4001,7 @@
     },
     {
         "source": "the socket is closed here",
-        "suggest": "插座在这里关闭",
+        "suggest": "套接字在这里关闭",
         "translate": ""
     },
     {

@@ -2251,7 +2251,7 @@
     },
     {
         "source": "The original C++ version of SwissTable can be found [here], and this [CppCon talk] gives an overview of how the algorithm works.",
-        "suggest": "可以在 [here] 上找到 SwissTable 的原始 C++ 版本，而该 [CppCon talk] 概述了该算法的工作原理。",
+        "suggest": "可以在 [这里][here] 找到 SwissTable 的原始 C++ 版本，而该 [CppCon talk] 概述了该算法的工作原理。",
         "translate": ""
     },
     {

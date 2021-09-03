@@ -3686,7 +3686,7 @@
     },
     {
         "source": "What Rust calls enums are more commonly known as [Algebraic Data Types][ADT] if you're coming from a functional programming background.",
-        "suggest": "如果您来自函数式编程背景，那么 Rust 所谓的枚举通常被称为 [Algebraic Data Types][ADT]。",
+        "suggest": "如果您来自函数式编程背景，那么 Rust 所谓的枚举通常被称为 [代数数据类型][ADT]。",
         "translate": ""
     },
     {
@@ -4251,12 +4251,12 @@
     },
     {
         "source": "Organize code into [modules].",
-        "suggest": "将代码整理到 [modules] 中。",
+        "suggest": "将代码整理到 [模块][modules] 中。",
         "translate": ""
     },
     {
         "source": "Use `mod` to create new [modules] to encapsulate code, including other modules:",
-        "suggest": "使用 `mod` 创建新的 [modules] 来封装代码，包括其他模块:",
+        "suggest": "使用 `mod` 创建新的 [模块][modules] 来封装代码，包括其他模块:",
         "translate": ""
     },
     {
@@ -4271,7 +4271,7 @@
     },
     {
         "source": "Capture a [closure]'s environment by value.",
-        "suggest": "按值捕获 [closure] 的环境。",
+        "suggest": "按值捕获 [闭包][closure] 的环境。",
         "translate": ""
     },
     {
@@ -4291,7 +4291,7 @@
     },
     {
         "source": "is often used when [threads] are involved.",
-        "suggest": "涉及 [threads] 时经常使用。",
+        "suggest": "涉及 [线程][threads] 时经常使用。",
         "translate": ""
     },
     {
@@ -4301,7 +4301,7 @@
     },
     {
         "source": "For more information on the `move` keyword, see the [closure]'s section of the Rust book or the [threads] section",
-        "suggest": "有关 `move` 关键字的更多信息，请参见 Rust 书的 [closure] 部分或 [threads] 部分",
+        "suggest": "有关 `move` 关键字的更多信息，请参见 Rust 书的 [闭包][closure] 部分或 [线程][threads] 部分",
         "translate": ""
     },
     {
@@ -4366,12 +4366,12 @@
     },
     {
         "source": "For more information on the `pub` keyword, please see the visibility section of the [reference] and for some examples, see [Rust by Example].",
-        "suggest": "有关 `pub` 关键字的更多信息，请参见 [reference] 的可见性部分，有关某些示例，请参见 [Rust by Example]。",
+        "suggest": "有关 `pub` 关键字的更多信息，请参见 [reference] 的可见性部分，有关某些示例，请参见 [Rust 示例][Rust by Example]。",
         "translate": ""
     },
     {
         "source": "[Rust by Example]:../rust-by-example/mod/visibility.html",
-        "suggest": "[Rust 例如: ] ../visibility.html",
+        "suggest": "[Rust by Example]:../rust-by-example/mod/visibility.html",
         "translate": ""
     },
     {
@@ -4736,12 +4736,12 @@
     },
     {
         "source": "For more information on structs, take a look at the [Rust Book][book] or the [Reference][reference].",
-        "suggest": "有关结构体的更多信息，请查看 [Rust Book][book] 或 [Reference][reference]。",
+        "suggest": "有关结构体的更多信息，请查看 [Rust 书][book] 或 [reference]。",
         "translate": ""
     },
     {
         "source": "The parent of the current [module].",
-        "suggest": "当前 [module] 的父级。",
+        "suggest": "当前 [模块][module] 的父级。",
         "translate": ""
     },
     {

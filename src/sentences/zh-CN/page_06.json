@@ -3791,12 +3791,12 @@
     },
     {
         "source": "must be [valid] for reads of `count * size_of::<T>()` bytes.",
-        "suggest": "必须为 [valid] 才能读取 `count * size_of::<T>()` 字节。",
+        "suggest": "对于 `count * size_of::<T>()` 字节的读取，必须是 [有效][valid] 的。",
         "translate": ""
     },
     {
         "source": "must be [valid] for writes of `count * size_of::<T>()` bytes.",
-        "suggest": "对于写入 `count * size_of::<T>()` 字节，必须为 [valid]。",
+        "suggest": "对于 `count * size_of::<T>()` 字节的写入，必须为 [有效][valid] 的。",
         "translate": ""
     },
     {

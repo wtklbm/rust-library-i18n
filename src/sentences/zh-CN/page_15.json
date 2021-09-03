@@ -1691,7 +1691,7 @@
     },
     {
         "source": "See the [module's toplevel documentation about conversions][conversions] for a discussion on the traits which `OsString` implements for [conversions] from/to native representations.",
-        "suggest": "有关 [module's toplevel documentation about conversions][conversions] 为 [conversions] from/to 原生表示形式实现的 traits 的讨论，请参见 [module's toplevel documentation about conversions][conversions]。",
+        "suggest": "请参见模块中关于 [conversions] 的顶级文档，以讨论为 `OsString` from/to 原生表示形式的 [conversions] 而实现的特征。",
         "translate": ""
     },
     {
@@ -1716,7 +1716,7 @@
     },
     {
         "source": "See the [module's toplevel documentation about conversions][conversions] for a discussion on the traits which `OsStr` implements for [conversions] from/to native representations.",
-        "suggest": "有关 [module's toplevel documentation about conversions][conversions] 为 [conversions] from/to 原生表示形式实现的 traits 的讨论，请参见 [module's toplevel documentation about conversions][conversions]。",
+        "suggest": "请参见模块中关于 [conversions] 的顶级文档，以讨论为 `OsStr` from/to 原生表示形式的 [conversions] 而实现的特征。。",
         "translate": ""
     },
     {
@@ -3441,7 +3441,7 @@
     },
     {
         "source": "On Windows, this converts the path to use [extended length path][path] syntax, which allows your program to use longer path names, but means you can only join backslash-delimited paths to it, and it may be incompatible with other applications (if passed to the application on the command-line, or written to a file another application may read).",
-        "suggest": "在 Windows 上，这会将路径转换为使用 [extended length path][path] 语法，这允许您的程序使用更长的路径名，但是意味着您只能将反斜杠分隔的路径连接到该路径，并且它可能与其他应用程序不兼容 (如果传递给该应用程序，命令行，或写入另一个应用程序可以读取的文件)。",
+        "suggest": "在 Windows 上，这会将路径转换为使用 [扩展长度路径][path] 语法，这允许您的程序使用更长的路径名，但是意味着您只能将反斜杠分隔的路径连接到该路径，并且它可能与其他应用程序不兼容 (如果传递给该应用程序，命令行，或写入另一个应用程序可以读取的文件)。",
         "translate": ""
     },
     {

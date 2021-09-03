@@ -346,7 +346,7 @@
     },
     {
         "source": "The purpose of this bound is to encode the concept of [exception safety][rfc] in the type system.",
-        "suggest": "此绑定的目的是在类型系统中对 [exception safety][rfc] 的概念进行编码。",
+        "suggest": "此绑定的目的是在类型系统中对 [异常安全][rfc] 的概念进行编码。",
         "translate": ""
     },
     {
@@ -3396,7 +3396,7 @@
     },
     {
         "source": "Please see [the documentation for `f32`][`f32`] or [Wikipedia on double precision values][wikipedia] for more information.",
-        "suggest": "请参见 [the documentation for `f32`][`f32`] 或 [Wikipedia on double precision values][wikipedia] 了解更多信息。",
+        "suggest": "请参见 [`f32`] 的文档或关于双精度值的 [维基百科][wikipedia] 了解更多信息。",
         "translate": ""
     },
     {

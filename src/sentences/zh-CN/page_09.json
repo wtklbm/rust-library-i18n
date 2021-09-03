@@ -1611,7 +1611,7 @@
     },
     {
         "source": "(thus `mant / scale < 10`) where `d[i..j]` is a shorthand for `d[i] * 10^(j-i) + ...",
-        "suggest": "(因此 `mant / scale < 10`)，其中 `d[i..j]` 是 `d [i] * 10 ^ (ji) + ... 的简写",
+        "suggest": "(因此 `mant / scale < 10`)，其中 `d[i..j]` 是 `d[i] * 10^(j-i) + ... 的简写",
         "translate": ""
     },
     {

@@ -1821,12 +1821,12 @@
     },
     {
         "source": "We replace self[index] with the last element.",
-        "suggest": "我们用最后一个元素替换 self [index]。",
+        "suggest": "我们用最后一个元素替换 self[index]。",
         "translate": ""
     },
     {
         "source": "Note that if the bounds check above succeeds there must be a last element (which can be self[index] itself).",
-        "suggest": "请注意，如果上面的边界检查成功，则必须有最后一个元素 (可以是 self [index] 本身)。",
+        "suggest": "请注意，如果上面的边界检查成功，则必须有最后一个元素 (可以是 self[index] 本身)。",
         "translate": ""
     },
     {
@@ -3466,7 +3466,7 @@
     },
     {
         "source": "a similar input for which DATA[input] succeeds, and the corresponding output str.",
-        "suggest": "DATA [input] 成功的类似输入，以及对应的输出 str。",
+        "suggest": "DATA[input] 成功的类似输入，以及对应的输出 str。",
         "translate": ""
     },
     {

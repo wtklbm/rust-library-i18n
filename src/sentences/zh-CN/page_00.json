@@ -751,7 +751,7 @@
     },
     {
         "source": "Move a value from a [`Box`] back to the stack by [dereferencing]:",
-        "suggest": "通过 [dereferencing] 将值从 [`Box`] 移回栈:",
+        "suggest": "通过 [解引用][dereferencing] 将值从 [`Box`] 移回栈:",
         "translate": ""
     },
     {
@@ -811,7 +811,7 @@
     },
     {
         "source": "For zero-sized values, the `Box` pointer still has to be [valid] for reads and writes and sufficiently aligned.",
-        "suggest": "对于零大小的值，`Box` 指针对于读取和写入仍必须为 [valid]，并且必须充分对齐。",
+        "suggest": "对于零大小的值，`Box` 指针对于读取和写入仍必须为 [有效的][valid]，并且必须充分对齐。",
         "translate": ""
     },
     {
@@ -1611,7 +1611,7 @@
     },
     {
         "source": "This is a larger example that implements [Dijkstra's algorithm][dijkstra] to solve the [shortest path problem][sssp] on a [directed graph][dir_graph].",
-        "suggest": "这是一个较大的示例，实现了 [Dijkstra's algorithm][dijkstra] 来解决 [directed graph][dir_graph] 上的 [shortest path problem][sssp]。",
+        "suggest": "这是一个较大的示例，实现了 [Dijkstra 算法][dijkstra] 来解决 [有向图][dir_graph] 上的 [最短路径问题][sssp]。",
         "translate": ""
     },
     {
@@ -1731,7 +1731,7 @@
     },
     {
         "source": "If the item is modified then the worst case time complexity is *O*(log(*n*)), otherwise it's *O*(1).",
-        "suggest": "如果该项被修改，则最坏情况下的时间复杂度为 *O*(log (*n*) )，否则为 *O*(1)。",
+        "suggest": "如果该项被修改，则最坏情况下的时间复杂度为 *O*(log(*n*))，否则为 *O*(1)。",
         "translate": ""
     },
     {
@@ -1741,12 +1741,12 @@
     },
     {
         "source": "The worst case cost of `pop` on a heap containing *n* elements is *O*(log(*n*)).",
-        "suggest": "`pop` 在包含 *n* 个元素的堆上的最坏情况代价是 *O*(log (*n*) )。",
+        "suggest": "`pop` 在包含 *n* 个元素的堆上的最坏情况代价是 *O*(log(*n*))。",
         "translate": ""
     },
     {
         "source": "!self.is_empty() means that self.len() > 0",
-        "suggest": "! self.is_empty () 表示 self.len()> 0",
+        "suggest": "`!self.is_empty()` 表示 `self.len() > 0`",
         "translate": ""
     },
     {
@@ -1776,7 +1776,7 @@
     },
     {
         "source": "The worst case cost of a *single* call to `push` is *O*(*n*).",
-        "suggest": "对 `push` 进行 `*` 调用的最坏情况是* O *(* n *)。",
+        "suggest": "对 `push` 进行 `*` 调用的最坏情况是 *O*(*n*)。",
         "translate": ""
     },
     {
@@ -1901,7 +1901,7 @@
     },
     {
         "source": "child == 2 * hole.pos() + 1 != hole.pos() and child + 1 == 2 * hole.pos() + 2 != hole.pos().",
-        "suggest": "child == 2 *hole.pos() +1! = hole.pos() 和 child +1 == 2* hole.pos() + 2! = hole.pos()。",
+        "suggest": "`child == 2 * hole.pos() + 1 != hole.pos()` 和 `child + 1 == 2 * hole.pos() + 2 != hole.pos().`。",
         "translate": ""
     },
     {
@@ -1916,7 +1916,7 @@
     },
     {
         "source": "child is now either the old child or the old child+1 We already proven that both are < self.len() and != hole.pos()",
-        "suggest": "child 现在是大子节点还是大子节点 + 1 我们已经证明它们都是 < self.len() 和! = hole.pos()",
+        "suggest": "child 要么是老节点要么是老节点 + 1，我们已经证明它们都是 `< self.len()` 和 `!= hole.pos()`",
         "translate": ""
     },
     {
@@ -1956,7 +1956,7 @@
     },
     {
         "source": "child == end - 1 < self.len(), so it's a valid index and child == 2 * hole.pos() + 1 != hole.pos().",
-        "suggest": "child == end - 1 < self.len()，所以它是一个有效的索引，child == 2 * hole.pos() + 1 != hole.pos()。",
+        "suggest": "`child == end - 1 < self.len()`，所以它是一个有效的索引，`child == 2 * hole.pos() + 1 != hole.pos()`。",
         "translate": ""
     },
     {
@@ -1971,7 +1971,7 @@
     },
     {
         "source": "The only case when !(n < self.len()) is if self.len() == 0, but it's ruled out by the loop condition.",
-        "suggest": "!(n < self.len()) 是 self.len() == 0 的唯一情况，但是循环条件将其排除在外。",
+        "suggest": "`!(n < self.len())` 是 `self.len() == 0` 的唯一情况，但是循环条件将其排除在外。",
         "translate": ""
     },
     {
@@ -1981,7 +1981,7 @@
     },
     {
         "source": "takes O(len1 + len2) operations and about 2 * (len1 + len2) comparisons in the worst case while `extend` takes O(len2 * log(len1)) operations and about 1 * len2 * log_2(len1) comparisons in the worst case, assuming len1 >= len2.",
-        "suggest": "假设 len1 >= len2，则在最坏的情况下进行 O(len1 + len2) 操作并进行约 2 * (len1 + len2) 比较，而在最坏的情况下，`extend` 进行 O(len2* log(len1)) 操作并进行约 1 * len2 * log_2(len1) 比较 (假设 len1 >= len2)。",
+        "suggest": "假设 `len1 >= len2`，则在最坏的情况下进行 `O(len1 + len2)` 操作并进行约 `2 * (len1 + len2)` 比较，而在最坏的情况下，`extend` 进行 `O(len2 * log(len1))` 操作并进行约 `1 * len2 * log_2(len1)` 比较 (假设 `len1 >= len2`)。",
         "translate": ""
     },
     {
@@ -2006,7 +2006,7 @@
     },
     {
         "source": "is *O*(*n* \\* log(*n*));",
-        "suggest": "是 *O*(*n*\\*log(* n*));",
+        "suggest": "是 *O*(*n* \\* log(*n*));",
         "translate": ""
     },
     {

@@ -2341,7 +2341,7 @@
     },
     {
         "source": "The [CPUID Wikipedia page][wiki_cpuid] contains how to query which information using the `EAX` and `ECX` registers, and the interpretation of the results returned in `EAX`, `EBX`, `ECX`, and `EDX`.",
-        "suggest": "[CPUID Wikipedia page][wiki_cpuid] 包含如何使用 `EAX` 和 `ECX` 寄存器查询哪些信息，以及如何解释 `EAX`，`EBX`，`ECX` 和 `EDX` 返回的结果。",
+        "suggest": "[CPUID 维基百科][wiki_cpuid] 页面包含如何使用 `EAX` 和 `ECX` 寄存器查询哪些信息，以及如何解释 `EAX`，`EBX`，`ECX` 和 `EDX` 返回的结果。",
         "translate": ""
     },
     {

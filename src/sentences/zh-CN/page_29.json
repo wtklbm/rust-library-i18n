@@ -3546,7 +3546,7 @@
     },
     {
         "source": "Instead of coercing a reference to a raw pointer, you can use the macros [`ptr::addr_of!`] (for `*const T`) and [`ptr::addr_of_mut!`] (for `*mut T`).",
-        "suggest": "您可以使用宏 [`ptr::addr_of!`] (对于 `*const T`) 和 [`ptr::addr_of_mut!`] (对于 `*mut T`)，而不是强制引用到裸针疗法。",
+        "suggest": "您可以使用宏 [`ptr::addr_of!`] (对于 `*const T`) 和 [`ptr::addr_of_mut!`] (对于 `*mut T`)，而不是强制引用裸指针。",
         "translate": ""
     },
     {
@@ -4816,7 +4816,7 @@
     },
     {
         "source": "The [simd proposal][simd] for WebAssembly added a new `v128` type for a",
-        "suggest": "WebAssembly 的 [simd proposal][simd] 添加了一个新的 `v128` 类型，用于",
+        "suggest": "WebAssembly 的 [simd 提案][simd] 添加了一个新的 `v128` 类型，用于",
         "translate": ""
     },
     {
@@ -4831,7 +4831,7 @@
     },
     {
         "source": "Unlike `x86_64`, however, WebAssembly does not currently have dynamic detection at runtime as to whether SIMD is supported (this is one of the motivators for the [conditional sections][condsections] and [feature detection] proposals, but that is still pretty early days).",
-        "suggest": "然而，与 `x86_64` 不同的是，WebAssembly 目前没有在运行时动态检测是否支持 SIMD (这是 [conditional sections][condsections] 和 [feature detection] 提案的动机之一，但这还处于早期阶段)。",
+        "suggest": "然而，与 `x86_64` 不同的是，WebAssembly 目前没有在运行时动态检测是否支持 SIMD (这是 [条件部分][condsections] 和 [特征检测][feature detection] 提案的动机之一，但这还处于早期阶段)。",
         "translate": ""
     },
     {

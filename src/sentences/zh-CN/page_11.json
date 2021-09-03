@@ -86,7 +86,7 @@
     },
     {
         "source": "Even for operations of [size zero][zst], the pointer must not be pointing to deallocated memory, i.e., deallocation makes pointers invalid even for zero-sized operations.",
-        "suggest": "即使对于 [size zero][zst] 的操作，指针也不得指向已释放的内存，即，即使对于大小为零的操作，释放也会使指针无效。",
+        "suggest": "即使对于 [大小为零][zst] 的操作，指针也不得指向已释放的内存，即，即使对于大小为零的操作，释放也会使指针无效。",
         "translate": ""
     },
     {
@@ -136,7 +136,7 @@
     },
     {
         "source": "For more information, see the [book] as well as the section in the reference devoted to [undefined behavior][ub].",
-        "suggest": "有关更多信息，请参见 [book] 以及专门针对 [undefined behavior][ub] 的引用中的部分。",
+        "suggest": "有关更多信息，请参见 [书籍][book] 以及专门针对 [未定义的行为][ub] 的引用中的部分。",
         "translate": ""
     },
     {
@@ -206,7 +206,7 @@
     },
     {
         "source": "must be [valid] for both reads and writes.",
-        "suggest": "对于读写，必须为 [valid]。",
+        "suggest": "对于读写，必须为 [有效][valid] 的。",
         "translate": ""
     },
     {
@@ -346,7 +346,7 @@
     },
     {
         "source": "Both `x` and `y` must be [valid] for both reads and writes.",
-        "suggest": "对于读取和写入，`x` 和 `y` 都必须为 [valid]。",
+        "suggest": "对于读取和写入，`x` 和 `y` 都必须为 [有效][valid] 的。",
         "translate": ""
     },
     {
@@ -411,7 +411,7 @@
     },
     {
         "source": "Both `x` and `y` must be [valid] for both reads and writes of `count",
-        "suggest": "`x` 和 `y` 都必须为 [valid] 才能读取和写入 `count",
+        "suggest": "`x` 和 `y` 都必须 [有效][valid] 才能读取和写入 `count",
         "translate": ""
     },
     {
@@ -546,7 +546,7 @@
     },
     {
         "source": "must be [valid] for reads.",
-        "suggest": "必须为 [valid] 才能读取。",
+        "suggest": "必须是 [有效][valid] 的才能读取。",
         "translate": ""
     },
     {
@@ -686,7 +686,7 @@
     },
     {
         "source": "must be [valid] for writes.",
-        "suggest": "必须为 [valid] 进行写入。",
+        "suggest": "必须是 [有效][valid] 的才能进行写入。",
         "translate": ""
     },
     {
@@ -1341,7 +1341,7 @@
     },
     {
         "source": "The pointer must be [valid] for reads and writes for `ptr.len() * mem::size_of::<T>()` many bytes, and it must be properly aligned.",
-        "suggest": "指针必须为 [valid] 才能进行 `ptr.len() * mem::size_of::<T>()` 多个字节的读取和写入，并且必须正确对齐。",
+        "suggest": "指针必须是 [有效][valid] 的才能进行 `ptr.len() * mem::size_of::<T>()` 多个字节的读取和写入，并且必须正确对齐。",
         "translate": ""
     },
     {
@@ -3241,7 +3241,7 @@
     },
     {
         "source": "This struct is created by the [`iter`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`iter`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`iter`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3281,7 +3281,7 @@
     },
     {
         "source": "This struct is created by the [`iter_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`iter_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`iter_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3351,7 +3351,7 @@
     },
     {
         "source": "This struct is created by the [`split`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`split`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`split`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3366,7 +3366,7 @@
     },
     {
         "source": "This struct is created by the [`split_inclusive`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`split_inclusive`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`split_inclusive`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3381,7 +3381,7 @@
     },
     {
         "source": "This struct is created by the [`split_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`split_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`split_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3401,7 +3401,7 @@
     },
     {
         "source": "This struct is created by the [`split_inclusive_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`split_inclusive_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`split_inclusive_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3411,7 +3411,7 @@
     },
     {
         "source": "This struct is created by the [`rsplit`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rsplit`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rsplit`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3426,7 +3426,7 @@
     },
     {
         "source": "This struct is created by the [`rsplit_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rsplit_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rsplit_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3441,7 +3441,7 @@
     },
     {
         "source": "This struct is created by the [`splitn`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`splitn`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`splitn`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3451,17 +3451,17 @@
     },
     {
         "source": "This struct is created by the [`rsplitn`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rsplitn`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rsplitn`] 方法创建的。",
         "translate": ""
     },
     {
         "source": "This struct is created by the [`splitn_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`splitn_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`splitn_mut`] 方法创建的。",
         "translate": ""
     },
     {
         "source": "This struct is created by the [`rsplitn_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rsplitn_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rsplitn_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3471,7 +3471,7 @@
     },
     {
         "source": "This struct is created by the [`windows`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`windows`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`windows`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3491,7 +3491,7 @@
     },
     {
         "source": "This struct is created by the [`chunks`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`chunks`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`chunks`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3511,7 +3511,7 @@
     },
     {
         "source": "This struct is created by the [`chunks_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`chunks_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`chunks_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3531,7 +3531,7 @@
     },
     {
         "source": "This struct is created by the [`chunks_exact`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`chunks_exact`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`chunks_exact`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3561,7 +3561,7 @@
     },
     {
         "source": "This struct is created by the [`chunks_exact_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`chunks_exact_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`chunks_exact_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3576,7 +3576,7 @@
     },
     {
         "source": "This struct is created by the [`array_windows`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`array_windows`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`array_windows`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3611,7 +3611,7 @@
     },
     {
         "source": "This struct is created by the [`array_chunks`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`array_chunks`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`array_chunks`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3636,7 +3636,7 @@
     },
     {
         "source": "This struct is created by the [`array_chunks_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`array_chunks_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`array_chunks_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3646,7 +3646,7 @@
     },
     {
         "source": "This struct is created by the [`rchunks`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rchunks`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rchunks`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3666,7 +3666,7 @@
     },
     {
         "source": "This struct is created by the [`rchunks_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rchunks_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rchunks_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3676,7 +3676,7 @@
     },
     {
         "source": "This struct is created by the [`rchunks_exact`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rchunks_exact`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rchunks_exact`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3696,7 +3696,7 @@
     },
     {
         "source": "This struct is created by the [`rchunks_exact_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`rchunks_exact_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`rchunks_exact_mut`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3711,7 +3711,7 @@
     },
     {
         "source": "This struct is created by the [`group_by`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`group_by`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`group_by`] 方法创建的。",
         "translate": ""
     },
     {
@@ -3721,7 +3721,7 @@
     },
     {
         "source": "This struct is created by the [`group_by_mut`] method on [slices].",
-        "suggest": "该结构体是通过 [slices] 上的 [`group_by_mut`] 方法创建的。",
+        "suggest": "该结构体是通过 [切片][slices] 上的 [`group_by_mut`] 方法创建的。",
         "translate": ""
     },
     {

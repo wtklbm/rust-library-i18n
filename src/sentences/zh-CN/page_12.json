@@ -116,12 +116,12 @@
     },
     {
         "source": "Comparing self[r] against self[w-1], this value is a duplicate, so we increment `r` but leave everything else unchanged:",
-        "suggest": "将 self[r] 与 self [w-1] 进行比较，该值是重复的，因此我们增加 `r`，但其他所有内容保持不变:",
+        "suggest": "将 self[r] 与 self[w-1] 进行比较，该值是重复的，因此我们增加 `r`，但其他所有内容保持不变:",
         "translate": ""
     },
     {
         "source": "Comparing self[r] against self[w-1], this is not a duplicate, so swap self[r] and self[w] and advance r and w:",
-        "suggest": "比较 self[r] 与 self [w-1]，这不是重复项，因此交换 self[r] 和 self[w] 并前进 r 和 w:",
+        "suggest": "比较 self[r] 与 self[w-1]，这不是重复项，因此交换 self[r] 和 self[w] 并前进 r 和 w:",
         "translate": ""
     },
     {
@@ -741,7 +741,7 @@
     },
     {
         "source": "must be [valid] for reads for `len * mem::size_of::<T>()` many bytes, and it must be properly aligned.",
-        "suggest": "必须为 [valid]，才能读取许多字节的 `len * mem::size_of::<T>()`，并且必须正确对齐。",
+        "suggest": "必须是 [有效][valid] 的，才能读取许多字节的 `len * mem::size_of::<T>()`，并且必须正确对齐。",
         "translate": ""
     },
     {
@@ -796,7 +796,7 @@
     },
     {
         "source": "must be [valid] for both reads and writes for `len * mem::size_of::<T>()` many bytes, and it must be properly aligned.",
-        "suggest": "`len * mem::size_of::<T>()` 的多个字节的读取和写入必须为 [valid]，并且必须正确对齐。",
+        "suggest": "`len * mem::size_of::<T>()` 的多个字节的读取和写入必须是 [有效][valid] 的，并且必须正确对齐。",
         "translate": ""
     },
     {
@@ -3066,7 +3066,7 @@
     },
     {
         "source": "The [pattern] can be a `&str`, [`char`], a slice of [`char`]s, or a function or closure that determines if a character matches.",
-        "suggest": "[pattern] 可以是 `&str`，[`char`]，[`char`] 的切片，也可以是确定字符是否匹配的函数或闭包。",
+        "suggest": "[模式][pattern] 可以是 `&str`，[`char`]，[`char`] 的切片，也可以是确定字符是否匹配的函数或闭包。",
         "translate": ""
     },
     {
@@ -3396,7 +3396,7 @@
     },
     {
         "source": "The [pattern] can be a [`char`], a slice of [`char`]s, or a function or closure that determines if a character matches.",
-        "suggest": "[pattern] 可以是 [`char`]、[`char`] 的切片，也可以是确定字符是否匹配的函数或闭包。",
+        "suggest": "[模式][pattern] 可以是 [`char`]、[`char`] 的切片，也可以是确定字符是否匹配的函数或闭包。",
         "translate": ""
     },
     {

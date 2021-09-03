@@ -1646,7 +1646,7 @@
     },
     {
         "source": "See the [type-level documentation][MaybeUninit] for some examples.",
-        "suggest": "有关一些示例，请参见 [type-level documentation][MaybeUninit]。",
+        "suggest": "有关一些示例，请参见 [类型级文档][MaybeUninit]。",
         "translate": ""
     },
     {
@@ -1776,7 +1776,7 @@
     },
     {
         "source": "The [type-level documentation][inv] contains more information about this initialization invariant.",
-        "suggest": "[type-level documentation][inv] 包含有关此初始化不可变变量的更多信息。",
+        "suggest": "[类型级文档][inv] 中包含了有关此初始化不可变变量的更多信息。",
         "translate": ""
     },
     {
@@ -2741,7 +2741,7 @@
     },
     {
         "source": "Using `zeroed` on such types causes immediate [undefined behavior][ub] because [the Rust compiler assumes][inv] that there always is a valid value in a variable it considers initialized.",
-        "suggest": "在此类类型上使用 `zeroed` 会立即导致 [undefined behavior][ub]，因为 [the Rust compiler assumes][inv] 在它认为已初始化的变量中始终存在有效值。",
+        "suggest": "在此类类型上使用 `zeroed` 会立即导致 [未定义的行为][ub]，因为 [Rust 编译器][inv] 假设在它认为已初始化的变量中始终存在有效值。",
         "translate": ""
     },
     {
@@ -2786,7 +2786,7 @@
     },
     {
         "source": "As the [`assume_init` documentation][assume_init] explains, [the Rust compiler assumes][inv] that values are properly initialized.",
-        "suggest": "正如 [`assume_init` documentation][assume_init] 所解释的那样，[the Rust compiler assumes][inv] 值已正确初始化。",
+        "suggest": "正如 [`assume_init` 文档][assume_init] 所解释的那样，[Rust 编译器][inv] 假设值已正确初始化。",
         "translate": ""
     },
     {
@@ -2986,7 +2986,7 @@
     },
     {
         "source": "This function triggers [undefined behavior][ub] if `U` is larger than `T`.",
-        "suggest": "如果 `U` 大于 `T`，则此函数将触发 [undefined behavior][ub]。",
+        "suggest": "如果 `U` 大于 `T`，则此函数将触发 [未定义的行为][ub]。",
         "translate": ""
     },
     {

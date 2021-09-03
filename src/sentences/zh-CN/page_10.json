@@ -16,7 +16,7 @@
     },
     {
         "source": "For more details, visit [the chapter in *The Rust Programming Language*][book] as well as the reference sections on [the dereference operator][ref-deref-op], [method resolution] and [type coercions].",
-        "suggest": "有关更多详细信息，请访问 [Rust 编程语言中的章节][book] 以及 [解引用运算符][ref-deref-op]，[method resolution] 和 [type coercions] 上的引用部分。",
+        "suggest": "有关更多详细信息，请访问 [Rust 编程语言中的章节][book] 以及 [解引用运算符][ref-deref-op]，[方法解析][method resolution] 和 [type coercions] 上的引用部分。",
         "translate": ""
     },
     {
@@ -381,7 +381,7 @@
     },
     {
         "source": "See the [chapter on closures in *The Rust Programming Language*][book] for some more information on this topic.",
-        "suggest": "有关此主题的更多信息，请参见 [Rust 编程语言中关于闭包的章节][book]。",
+        "suggest": "有关此主题的更多信息，请参见 [Rust 编程语言][book] 中关于闭包的章节。",
         "translate": ""
     },
     {
@@ -2896,7 +2896,7 @@
     },
     {
         "source": "Therefore, pinning also comes with a [`drop`]-related guarantee.",
-        "suggest": "因此，固定还会附带 [drop] 相关的保证。",
+        "suggest": "因此，固定还会附带 [丢弃][drop] 相关的保证。",
         "translate": ""
     },
     {
@@ -4516,7 +4516,7 @@
     },
     {
         "source": "The pointer must be [valid] for reads for `ptr.len() * mem::size_of::<T>()` many bytes, and it must be properly aligned.",
-        "suggest": "指针必须为 [valid]，才能读取许多字节的 `ptr.len() * mem::size_of::<T>()`，并且必须正确对齐。",
+        "suggest": "指针必须为 [有效][valid] 的，才能读取许多字节的 `ptr.len() * mem::size_of::<T>()`，并且必须正确对齐。",
         "translate": ""
     },
     {
