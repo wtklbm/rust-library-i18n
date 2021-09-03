@@ -4031,7 +4031,7 @@
     },
     {
         "source": "This intrinsic is identical to _mm512_permutexvar_epi32, and it is recommended that you use that intrinsic name.",
-        "suggest": "此内联函数与 _mm512_permutexvar_epi32 相同，建议您使用该内在名称。",
+        "suggest": "此内部函数与 _mm512_permutexvar_epi32 相同，建议您使用该内部函数名称。",
         "translate": ""
     },
     {

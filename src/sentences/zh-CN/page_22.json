@@ -196,7 +196,7 @@
     },
     {
         "source": "Slice just wraps [u8], and &*self.inner is &[u8], therefore transmuting &[u8] to &Slice is safe.",
-        "suggest": "切片仅包裹 [u8]，而 &* self.inner 是 &[u8]，因此变换 &[u8] to &Slice 是安全的。",
+        "suggest": "切片仅包裹 [u8]，而 &* self.inner 是 &[u8]，因此将 &[u8] 转换为 &Slice 是安全的。",
         "translate": ""
     },
     {
@@ -3236,7 +3236,7 @@
     },
     {
         "source": "This might wedge the buildbots.",
-        "suggest": "这可能会使构建机器人陷入僵局。",
+        "suggest": "这可能会影响构建机器人。",
         "translate": ""
     },
     {
@@ -3251,7 +3251,7 @@
     },
     {
         "source": "try this at home, instead..!)",
-        "suggest": "在家尝试一下吧..! )",
+        "suggest": "在家里尝试一下吧..! )",
         "translate": ""
     },
     {
@@ -4106,12 +4106,12 @@
     },
     {
         "source": "Folding minimum of adjacent pairs",
-        "suggest": "相邻对的折叠最少",
+        "suggest": "相邻对的最小折叠",
         "translate": ""
     },
     {
         "source": "Folding maximum of adjacent pairs",
-        "suggest": "相邻对的最大折叠数",
+        "suggest": "相邻对的最大折叠",
         "translate": ""
     },
     {
@@ -4486,7 +4486,7 @@
     },
     {
         "source": "This instruction flushes the processor pipeline fetch buffers, so that following instructions are fetched from cache or memory.",
-        "suggest": "该指令刷新处理器管线的取缓冲区，以便从高速缓存或内存中取以下指令。",
+        "suggest": "此指令刷新处理器管道提取缓冲区，以便从高速缓存或内存中提取后续指令。",
         "translate": ""
     },
     {
@@ -4586,7 +4586,7 @@
     },
     {
         "source": "Intrinsics that could live here:",
-        "suggest": "可能居住在这里的内在因素:",
+        "suggest": "可以在这里生存的内联函数:",
         "translate": ""
     },
     {

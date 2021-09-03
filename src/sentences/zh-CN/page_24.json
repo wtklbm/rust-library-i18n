@@ -761,17 +761,17 @@
     },
     {
         "source": "x-th thread-block dimension.",
-        "suggest": "第 x 个线程块尺寸。",
+        "suggest": "第 x 个线程块维度。",
         "translate": ""
     },
     {
         "source": "y-th thread-block dimension.",
-        "suggest": "第 y 个线程块的尺寸。",
+        "suggest": "第 y 个线程块的维度。",
         "translate": ""
     },
     {
         "source": "z-th thread-block dimension.",
-        "suggest": "第 z 个线程块的尺寸。",
+        "suggest": "第 z 个线程块的维度。",
         "translate": ""
     },
     {

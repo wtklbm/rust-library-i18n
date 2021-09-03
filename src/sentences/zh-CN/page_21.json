@@ -146,7 +146,7 @@
     },
     {
         "source": "Fall back to reading /dev/urandom if `getrandom` is not supported on the current kernel.",
-        "suggest": "如果当前内核不支持 `getrandom`，则退回到读取 /dev/urandom。",
+        "suggest": "如果当前内核不支持 `getrandom`，则回退到读取 /dev/urandom。",
         "translate": ""
     },
     {
@@ -1591,7 +1591,7 @@
     },
     {
         "source": "If it fails, fall back to memory allocation via `memory.grow`.",
-        "suggest": "如果失败，则通过 `memory.grow` 退回到内存分配。",
+        "suggest": "如果失败，则通过 `memory.grow` 回退到内存分配。",
         "translate": ""
     },
     {

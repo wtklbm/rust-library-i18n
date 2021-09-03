@@ -2046,7 +2046,7 @@
     },
     {
         "source": "any changes to the constness of intrinsics should be discussed with the language team.",
-        "suggest": "对内在常量的任何更改都应与语言团队讨论。",
+        "suggest": "对内联函数常量的任何更改都应与语言团队讨论。",
         "translate": ""
     },
     {

@@ -3251,7 +3251,7 @@
     },
     {
         "source": "Therefore, you should always try to implement [`From`] and then fall back to [`Into`] if [`From`] can't be implemented.",
-        "suggest": "因此，您应该始终尝试实现 [`From`]，如果无法实现 [`From`]，则应退回到 [`Into`]。",
+        "suggest": "因此，您应该始终尝试实现 [`From`]，如果无法实现 [`From`]，则应回退到 [`Into`]。",
         "translate": ""
     },
     {
@@ -3741,7 +3741,7 @@
     },
     {
         "source": "Sometimes, you want to fall back to some kind of default value, and don't particularly care what it is.",
-        "suggest": "有时，您希望退回到某种默认值，而不必特别在意它的含义。",
+        "suggest": "有时，您希望回退到某种默认值，而不必特别关心它的含义。",
         "translate": ""
     },
     {

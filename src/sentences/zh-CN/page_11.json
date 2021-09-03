@@ -2831,7 +2831,7 @@
     },
     {
         "source": "the caller guarantees that `slice` is not dangling, so it cannot be longer than `isize::MAX`.",
-        "suggest": "调用者保证 `slice` 不悬空，因此长度不能超过 `isize::MAX`。",
+        "suggest": "调用者保证 `slice` 没有悬空，因此长度不能超过 `isize::MAX`。",
         "translate": ""
     },
     {
@@ -2846,7 +2846,7 @@
     },
     {
         "source": "N.B., use intrinsic indexing",
-        "suggest": "注意，使用内在索引",
+        "suggest": "注意，使用内联索引",
         "translate": ""
     },
     {

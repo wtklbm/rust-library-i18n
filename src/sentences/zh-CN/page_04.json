@@ -1596,7 +1596,7 @@
     },
     {
         "source": "If that's not present though fall back to the symbol table name specified in `symname`.",
-        "suggest": "如果不存在，则退回到 `symname` 中指定的符号表名称。",
+        "suggest": "如果不存在，则回退到 `symname` 中指定的符号表名称。",
         "translate": ""
     },
     {
@@ -2001,7 +2001,7 @@
     },
     {
         "source": "The `Display` implementation will print out the demangled symbol.",
-        "suggest": "`Display` 的实现将打印出拆线的符号。",
+        "suggest": "`Display` 的实现将打印出 demangled 符号。",
         "translate": ""
     },
     {
@@ -3921,7 +3921,7 @@
     },
     {
         "source": "is guaranteed to have the same size and alignment",
-        "suggest": "保证具有相同的尺寸和对齐方式",
+        "suggest": "保证具有相同的大小和对齐方式",
         "translate": ""
     },
     {

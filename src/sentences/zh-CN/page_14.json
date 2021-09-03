@@ -1741,7 +1741,7 @@
     },
     {
         "source": "Backtraces are attempted to be as accurate as possible, but no guarantees are provided about the exact accuracy of a backtrace.",
-        "suggest": "试图使回溯线尽可能准确，但不能保证回溯线的准确度。",
+        "suggest": "回溯试图尽可能地准确，但不保证回溯的准确度。",
         "translate": ""
     },
     {

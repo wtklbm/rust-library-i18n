@@ -251,7 +251,7 @@
     },
     {
         "source": "Computes the tangent of a number (in radians).",
-        "suggest": "计算数字的切线 (以弧度为单位)。",
+        "suggest": "计算一个数的正切 (以弧度为单位)。",
         "translate": ""
     },
     {
@@ -646,7 +646,7 @@
     },
     {
         "source": "Returns a slice of [`u8`]s bytes that were attempted to convert to a [`CString`].",
-        "suggest": "返回试图转换为 [`CString`] 的 [u8] s 个字节的片段。",
+        "suggest": "返回试图转换为 [`CString`] 的 [u8] 个字节的片段。",
         "translate": ""
     },
     {
@@ -2106,7 +2106,7 @@
     },
     {
         "source": "Test write works",
-        "suggest": "测试写作作品",
+        "suggest": "测试写入工作",
         "translate": ""
     },
     {
@@ -2331,7 +2331,7 @@
     },
     {
         "source": "It can be more efficient to read the contents of a file with a buffered [`Read`]er. This can be accomplished with [`BufReader<R>`]:",
-        "suggest": "使用缓冲的 [`Read`] er 来读取文件的内容可能会更有效。这可以用 [`BufReader<R>`] 完成:",
+        "suggest": "使用缓冲的 [`Read`] 来读取文件的内容可能会更有效。这可以用 [`BufReader<R>`] 完成:",
         "translate": ""
     },
     {
@@ -4421,7 +4421,7 @@
     },
     {
         "source": "Flush existing content to prepare for our write.",
-        "suggest": "刷新现有内容以准备我们的写作。",
+        "suggest": " 刷新现有内容为我们的写作做准备。",
         "translate": ""
     },
     {
@@ -4546,7 +4546,7 @@
     },
     {
         "source": "This way, we get the benefits of more granular partial-line handling without losing anything in efficiency",
-        "suggest": "这样，我们可以获得更细的分线处理的好处，而不会损失任何效率",
+        "suggest": "通过这种方式，我们获得了更细粒度的局部行处理的好处，而不会损失任何效率。",
         "translate": ""
     },
     {

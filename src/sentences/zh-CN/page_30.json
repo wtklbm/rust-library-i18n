@@ -1536,7 +1536,7 @@
     },
     {
         "source": "Safety: The TrustedRandomAccess contract requires that callers only pass an index that is in bounds.",
-        "suggest": "安全性: TrustedRandomAccess 合约要求调用者只传递一个在边界内的索引。",
+        "suggest": "安全性: TrustedRandomAccess 契约要求调用者只传递一个在边界内的索引。",
         "translate": ""
     },
     {
@@ -2066,7 +2066,7 @@
     },
     {
         "source": "The returned adapter also implements `Allocator` and will simply borrow this.",
-        "suggest": "退回的适配器也实现了 `Allocator`，并将简单地借用它。",
+        "suggest": "返回的适配器也实现了 `Allocator`，并将简单地借用它。",
         "translate": ""
     },
     {
@@ -2111,7 +2111,7 @@
     },
     {
         "source": "idx is obtained by folding over the `alive` range, which implies the value is currently considered alive but as the range is being consumed each value we read here will only be read once and then considered dead.",
-        "suggest": "idx 是通过折叠 `alive` 范围获得的，这意味着该值当前被认为是活着的，但是随着范围被消耗，我们在这里读取的每个值只会被读取一次，然后被认为是死的。",
+        "suggest": "idx 是通过折叠 `alive` 范围获得的，这意味着该值当前被认为是活动的，但是随着范围被消耗，我们在这里读取的每个值只会被读取一次，然后被认为是死的。",
         "translate": ""
     },
     {

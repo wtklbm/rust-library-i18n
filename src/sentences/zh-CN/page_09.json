@@ -2411,7 +2411,7 @@
     },
     {
         "source": "if this is not possible, we don't know which one is the correct output for `v`, so we give up and fall back.",
-        "suggest": "如果无法做到这一点，我们不知道哪一个是 `v` 的正确输出，因此我们放弃并退回。",
+        "suggest": "如果无法做到这一点，我们不知道哪一个是 `v` 的正确输出，因此我们放弃并后退。",
         "translate": ""
     },
     {

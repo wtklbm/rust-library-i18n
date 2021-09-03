@@ -881,12 +881,12 @@
     },
     {
         "source": "As such, you'll see a few different types of I/O throughout the documentation in this module: [`File`]s, [`TcpStream`]s, and sometimes even [`Vec<T>`]s.",
-        "suggest": "这样，您将在此模块的整个文档中看到几种不同类型的 I/O: [`File`] s，[`TcpStream`] s，有时甚至是 [`Vec<T>`] s。",
+        "suggest": "这样，您将在此模块的整个文档中看到几种不同类型的 I/O: [`File`]，[`TcpStream`]，有时甚至是 [`Vec<T>`]。",
         "translate": ""
     },
     {
         "source": "For example, [`Read`] adds a [`read`][`Read::read`] method, which we can use on [`File`]s:",
-        "suggest": "例如，[`Read`] 添加了 [`read`][`Read::read`] 方法，我们可以在 [`File`] s 上使用该方法:",
+        "suggest": "例如，[`Read`] 添加了 [`read`][`Read::read`] 方法，我们可以在 [`File`] 上使用该方法:",
         "translate": ""
     },
     {
@@ -961,7 +961,7 @@
     },
     {
         "source": "doesn't add any new ways of writing;",
-        "suggest": "没有增加任何新的写作方式;",
+        "suggest": "没有添加任何新的写作方式;",
         "translate": ""
     },
     {
@@ -1011,12 +1011,12 @@
     },
     {
         "source": "For example, [`Lines`] is used to split over lines:",
-        "suggest": "例如，[`Lines`] 用于分割线:",
+        "suggest": "例如，[`Lines`] 用于拆分多行:",
         "translate": ""
     },
     {
         "source": "There are a number of [functions][functions-list] that offer access to various features.",
-        "suggest": "有许多 [functions][functions-list] 提供对各种功能的访问。",
+        "suggest": "有许多 [函数][functions-list] 提供对各种功能的访问。",
         "translate": ""
     },
     {
@@ -2871,7 +2871,7 @@
     },
     {
         "source": "For instance, if the TLS key for the local stream is already destroyed, or if the local stream is locked by another thread, it will just fall back to the global stream.",
-        "suggest": "例如，如果本地流的 TLS 密钥已被破坏，或者如果本地流已被另一个线程锁定，则它将仅退回到串流。",
+        "suggest": "例如，如果本地流的 TLS 密钥已被破坏，或者如果本地流已被另一个线程锁定，它就会回退到全局流。",
         "translate": ""
     },
     {
@@ -3496,7 +3496,7 @@
     },
     {
         "source": "To put it simply, constants are inlined wherever they're used, making using them identical to simply replacing the name of the `const` with its value.",
-        "suggest": "简而言之，无论在何处使用常量都可以内联常量，这使得使用常量等同于用其值替换 `const` 的名称。",
+        "suggest": "简而言之，常量在任何使用它们的地方都被内联，使用它们与简单地用它的值替换 `const` 的名称是相同的。",
         "translate": ""
     },
     {
@@ -3561,7 +3561,7 @@
     },
     {
         "source": "More about `const` as used in raw pointers can be read at the Rust docs for the [pointer primitive].",
-        "suggest": "可以在 [pointer primitive] 的 Rust 文档中阅读有关裸指针中使用的 `const` 的更多信息。",
+        "suggest": "可以在 [指针原语][pointer primitive] 的 Rust 文档中阅读有关裸指针中使用的 `const` 的更多信息。",
         "translate": ""
     },
     {
@@ -3581,7 +3581,7 @@
     },
     {
         "source": "See [continue expressions] from the reference for more details.",
-        "suggest": "有关更多详细信息，请参见引用中的 [continue expressions]。",
+        "suggest": "有关更多详细信息，请参见参考中的 [continue 表达式][continue expressions]。",
         "translate": ""
     },
     {
@@ -3671,7 +3671,7 @@
     },
     {
         "source": "Read more about control flow in the [Rust Book].",
-        "suggest": "在 [Rust Book] 中阅读更多关于控制流的信息。",
+        "suggest": "在 [Rust 书][Rust Book] 中阅读更多关于控制流的信息。",
         "translate": ""
     },
     {

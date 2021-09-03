@@ -221,7 +221,7 @@
     },
     {
         "source": "A trait does not have an implicit `Sized` bound as this is incompatible with [trait object]s where, by definition, the trait needs to work with all possible implementors, and thus could be any size.",
-        "suggest": "trait 没有隐式 `Sized` 绑定，因为它与 [trait object] s 不兼容，根据定义，trait 需要与所有可能的实现者一起使用，因此可以为任意大小。",
+        "suggest": "trait 没有隐式 `Sized` 绑定，因为它与 [trait 对象][trait object] 不兼容，根据定义，trait 需要与所有可能的实现者一起使用，因此可以为任意大小。",
         "translate": ""
     },
     {
@@ -2636,7 +2636,7 @@
     },
     {
         "source": "This is the alignment used for struct fields.",
-        "suggest": "这是用于结构体字段的路线。",
+        "suggest": "这是用于结构字段的对齐方式。",
         "translate": ""
     },
     {

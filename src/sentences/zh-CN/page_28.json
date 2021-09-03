@@ -466,7 +466,7 @@
     },
     {
         "source": "Try falling back to sgr, then op",
-        "suggest": "尝试退回到 sgr，然后再操作",
+        "suggest": "尝试回退到 sgr，然后再操作",
         "translate": ""
     },
     {
@@ -831,7 +831,7 @@
     },
     {
         "source": "The unfortunate side effect of not being able to do as many runs is automatically handled by the statistical analysis below (i.e., larger error bars).",
-        "suggest": "下面的统计分析 (即，较大的误差线) 自动处理了无法进行多次运行的不幸副作用。",
+        "suggest": "下面的统计分析自动处理了不能做那么多运行的不幸的副作用（即较大的错误条）。",
         "translate": ""
     },
     {
@@ -2151,7 +2151,7 @@
     },
     {
         "source": "A [`Weak`] pointer can be [`upgrade`][upgrade]d to an `Arc`, but this will return [`None`] if the value stored in the allocation has already been dropped.",
-        "suggest": "[`Weak`] 指针可以 [`upgrade`][upgrade] d 为 `Arc`，但如果存储在分配中的值已经被丢弃，这将返回 [`None`]。",
+        "suggest": "[`Weak`] 指针可以 [`upgrade`][upgrade] 为 `Arc`，但如果存储在分配中的值已经被丢弃，这将返回 [`None`]。",
         "translate": ""
     },
     {

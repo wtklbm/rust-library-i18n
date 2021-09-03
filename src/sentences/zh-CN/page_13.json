@@ -746,7 +746,7 @@
     },
     {
         "source": "data races are prevented by atomic intrinsics.",
-        "suggest": "数据竞争被原子内在因素阻止。",
+        "suggest": "原子内联函数可以防止数据竞争。",
         "translate": ""
     },
     {
@@ -2371,7 +2371,7 @@
     },
     {
         "source": "Collapses all unit items from an iterator into one.",
-        "suggest": "将一个迭代器中的所有单元项折叠为一个。",
+        "suggest": "将一个迭代器中的所有 unit 项折叠为一个。",
         "translate": ""
     },
     {

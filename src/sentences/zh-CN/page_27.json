@@ -1981,7 +1981,7 @@
     },
     {
         "source": "not actually an intrinsic but useful in various tests as we proted from `i64x2::new` which is backwards from `_mm_set_epi64x`",
-        "suggest": "实际上不是内在的，而是在各种测试中有用的，正如我们从 `i64x2::new` 推论出的那样 (从 `_mm_set_epi64x` 向后推)",
+        "suggest": "实际上不是内联函数，而是在各种测试中有用的，正如我们从 `i64x2::new` 推论出的那样 (从 `_mm_set_epi64x` 向后推)",
         "translate": ""
     },
     {
@@ -2156,7 +2156,7 @@
     },
     {
         "source": "calls an intrinsic",
-        "suggest": "称内在",
+        "suggest": "调用一个内联函数",
         "translate": ""
     },
     {
@@ -2461,7 +2461,7 @@
     },
     {
         "source": "Normalize to no leading underscore to handle platforms that may inject extra ones in symbol names.",
-        "suggest": "规范化为不带下划线的前导下划线，以处理可能在符号名称中插入多余的下划线的平台。",
+        "suggest": "标准化为无前导下划线以处理可能在符号名称中注入额外下划线的平台。",
         "translate": ""
     },
     {
@@ -2766,7 +2766,7 @@
     },
     {
         "source": "strip leading underscore from fn name when building a test _mm_foo -> mm_foo such that the test name is test_mm_foo.",
-        "suggest": "构建测试 _mm_foo -> mm_foo 时，请从 fn 名称中删除前划线，以使测试名称为 test_mm_foo。",
+        "suggest": "构建测试 _mm_foo -> mm_foo 时，请从 fn 名称中去除前导下划线，以使测试名称为 test_mm_foo。",
         "translate": ""
     },
     {
@@ -2861,7 +2861,7 @@
     },
     {
         "source": "With all underscores but the first one replaced with a `.`",
-        "suggest": "带有所有下划线，但第一个用 `.` 代替",
+        "suggest": "将除了第一个下划线以外的所有下划线替换为 `.`",
         "translate": ""
     },
     {
@@ -4331,7 +4331,7 @@
     },
     {
         "source": "this file is incomplete (contains hwcap but not hwcap2), we want to fall back to /proc/cpuinfo in this case, so reading should fail.",
-        "suggest": "该文件不完整 (包含 hwcap，但不包含 hwcap2)，在这种情况下，我们想退回到 /proc/cpuinfo，因此读取失败。",
+        "suggest": "该文件不完整 (包含 hwcap，但不包含 hwcap2)，在这种情况下，我们想回退到 /proc/cpuinfo，因此读取失败。",
         "translate": ""
     },
     {
@@ -4381,7 +4381,7 @@
     },
     {
         "source": "fall back via `cpuinfo`.",
-        "suggest": "通过 `cpuinfo` 退回。",
+        "suggest": "通过 `cpuinfo` 回退。",
         "translate": ""
     },
     {
@@ -4421,7 +4421,7 @@
     },
     {
         "source": "Try to read the features using IsProcessorFeaturePresent.",
-        "suggest": "尝试使用 IsProcessorFeaturePresent 来阅读特征。",
+        "suggest": "尝试使用 IsProcessorFeaturePresent 来读取特征。",
         "translate": ""
     },
     {

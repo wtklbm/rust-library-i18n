@@ -1761,7 +1761,7 @@
     },
     {
         "source": "If it doesn't we just fall back to `ftruncate`, generating an error for too-large values.",
-        "suggest": "如果不是，我们只是退回到 `ftruncate`，对于太大的值会产生错误。",
+        "suggest": "如果不是，我们只是回退到 `ftruncate`，对于太大的值会产生错误。",
         "translate": ""
     },
     {
@@ -1931,12 +1931,12 @@
     },
     {
         "source": "for owner and read for others.",
-        "suggest": "供所有者和其他人阅读。",
+        "suggest": "供所有者和其他人读取。",
         "translate": ""
     },
     {
         "source": "Give read/write for owner and read for others.",
-        "suggest": "为所有者提供 read/write，为他人阅读。",
+        "suggest": "为所有者提供读写权限，为其他人提供读取权限。",
         "translate": ""
     },
     {
@@ -3576,7 +3576,7 @@
     },
     {
         "source": "Fall back to using `fcopyfile` if `fclonefileat` does not succeed.",
-        "suggest": "如果 `fclonefileat` 不成功，则退回到使用 `fcopyfile`。",
+        "suggest": "如果 `fclonefileat` 不成功，则回退到使用 `fcopyfile`。",
         "translate": ""
     },
     {

@@ -51,7 +51,7 @@
     },
     {
         "source": "Implement `unsafe` [`trait`]s",
-        "suggest": "实现 `unsafe` [`trait`] s",
+        "suggest": "实现 `unsafe` [`trait`]",
         "translate": ""
     },
     {
@@ -441,7 +441,7 @@
     },
     {
         "source": "Read more about `object safety` and [trait object]s.",
-        "suggest": "阅读有关 `object safety` 和 [trait object] 的更多信息。",
+        "suggest": "阅读有关 `object safety` 和 [trait 对象][trait object] 的更多信息。",
         "translate": ""
     },
     {

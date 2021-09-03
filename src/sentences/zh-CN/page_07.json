@@ -1611,7 +1611,7 @@
     },
     {
         "source": "Folding is useful whenever you have a collection of something, and want to produce a single value from it.",
-        "suggest": "每当您有一些东西想要从中产生单个值时，折叠就会很有用。",
+        "suggest": "当您拥有某个集合，并且希望从中产生单个值时，`fold` 非常有用。",
         "translate": ""
     },
     {
@@ -2646,7 +2646,7 @@
     },
     {
         "source": "Creates an iterator that [`skip`]s elements based on a predicate.",
-        "suggest": "创建一个迭代器，该迭代器基于谓词 [`skip`] s 个元素。",
+        "suggest": "创建一个迭代器，该迭代器基于谓词 [`skip`] 个元素。",
         "translate": ""
     },
     {
@@ -3136,7 +3136,7 @@
     },
     {
         "source": "Folds every element into an accumulator by applying an operation, returning the final result.",
-        "suggest": "通过应用操作将每个元素折叠到一个累加器中，返回最终结果。",
+        "suggest": "通过应用操作将每个元素 `fold` 到一个累加器中，返回最终结果。",
         "translate": ""
     },
     {
@@ -3366,7 +3366,7 @@
     },
     {
         "source": "This is only possible if the iterator has an end, so `rev()` only works on [`DoubleEndedIterator`]s.",
-        "suggest": "仅在迭代器具有结束符的情况下才有可能，因此 `rev()` 仅适用于 [`DoubleEndedIterator`] s。",
+        "suggest": "仅在迭代器具有结束符的情况下才有可能，因此 `rev()` 仅适用于 [`DoubleEndedIterator`]。",
         "translate": ""
     },
     {

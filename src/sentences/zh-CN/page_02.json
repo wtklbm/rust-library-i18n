@@ -621,7 +621,7 @@
     },
     {
         "source": "A [`Weak`] pointer can be [`upgrade`][upgrade]d to an [`Rc`], but this will return [`None`] if the value stored in the allocation has already been dropped.",
-        "suggest": "[`Weak`] 指针可以被 [`upgrade`][upgrade] d 到 [`Rc`]，但是如果已经丢弃了分配中存储的值，则它将返回 [`None`]。",
+        "suggest": "[`Weak`] 指针可以被 [`upgrade`][upgrade] 到 [`Rc`]，但是如果已经丢弃了分配中存储的值，则它将返回 [`None`]。",
         "translate": ""
     },
     {
@@ -1491,7 +1491,7 @@
     },
     {
         "source": "Fall back to normal implementation.",
-        "suggest": "退回正常实现。",
+        "suggest": "回退到正常实现。",
         "translate": ""
     },
     {
@@ -1511,7 +1511,7 @@
     },
     {
         "source": "Thus it may return [`None`] when [`upgrade`]d.",
-        "suggest": "因此，当 [`upgrade`] d 时，它可能返回 [`None`]。",
+        "suggest": "因此，当 [`upgrade`] 时，它可能返回 [`None`]。",
         "translate": ""
     },
     {
@@ -2761,7 +2761,7 @@
     },
     {
         "source": "Additionally, if the top run starts at index 0, it will always demand a merge operation until the stack is fully collapsed, in order to complete the sort.",
-        "suggest": "另外，如果最高运行从索引 0 开始，它将始终要求合并操作，直到栈完全折叠为止，以完成排序。",
+        "suggest": "另外，如果最高运行从索引 0 开始，它将始终要求合并操作，直到栈完全展开为止，以完成排序。",
         "translate": ""
     },
     {
@@ -3371,7 +3371,7 @@
     },
     {
         "source": "The [`Utf8Error`] type provided by [`std::str`] represents an error that may occur when converting a slice of [`u8`]s to a [`&str`].",
-        "suggest": "[`std::str`] 提供的 [`Utf8Error`] 类型表示将 [`u8`] s 的切片转换为 [`&str`] 时可能发生的错误。",
+        "suggest": "[`std::str`] 提供的 [`Utf8Error`] 类型表示将 [`u8`] 的切片转换为 [`&str`] 时可能发生的错误。",
         "translate": ""
     },
     {
@@ -3891,7 +3891,7 @@
     },
     {
         "source": "Returns the length of this `String`, in bytes, not [`char`]s or graphemes.",
-        "suggest": "返回此 `String` 的长度，以字节为单位，而不是 [`char`] s 或字素。",
+        "suggest": "返回此 `String` 的长度，以字节为单位，而不是 [`char`] 或字素。",
         "translate": ""
     },
     {
@@ -4026,7 +4026,7 @@
     },
     {
         "source": "Returns a slice of [`u8`]s bytes that were attempted to convert to a `String`.",
-        "suggest": "返回试图转换为 `String` 的 [u8] s 个字节的片段。",
+        "suggest": "返回试图转换为 `String` 的 [u8] 个字节的片段。",
         "translate": ""
     },
     {

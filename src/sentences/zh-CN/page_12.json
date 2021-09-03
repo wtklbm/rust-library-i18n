@@ -1806,7 +1806,7 @@
     },
     {
         "source": "If too many bad pivot choices were made, simply fall back to heapsort in order to guarantee `O(n * log(n))` worst-case.",
-        "suggest": "如果做出了太多错误的枢轴选择，则只需退回到 heapsort 以确保 `O(n * log(n))` 最坏的情况。",
+        "suggest": "如果做出了太多错误的枢轴选择，则只需回退到 heapsort 以确保 `O(n * log(n))` 最坏的情况。",
         "translate": ""
     },
     {
@@ -2166,7 +2166,7 @@
     },
     {
         "source": "An iterator over the [`char`]s of a string slice.",
-        "suggest": "字符串切片的 [`char`] s 上的迭代器。",
+        "suggest": "字符串切片的 [`char`] 上的迭代器。",
         "translate": ""
     },
     {
@@ -2201,7 +2201,7 @@
     },
     {
         "source": "An iterator over the [`char`]s of a string slice, and their positions.",
-        "suggest": "字符串切片的 ['char`] s 及其位置上的迭代器。",
+        "suggest": "字符串切片的 ['char`] 及其位置上的迭代器。",
         "translate": ""
     },
     {
@@ -2956,7 +2956,7 @@
     },
     {
         "source": "Returns an iterator over the [`char`]s of a string slice, and their positions.",
-        "suggest": "返回字符串切片的 ['char`] s 及其位置上的迭代器。",
+        "suggest": "返回字符串切片的 ['char`] 及其位置上的迭代器。",
         "translate": ""
     },
     {
@@ -4151,7 +4151,7 @@
     },
     {
         "source": "Searches for chars that are equal to any of the [`char`]s in the slice.",
-        "suggest": "搜索等于切片中任何 [`char`] s 的字符。",
+        "suggest": "搜索等于切片中任何 [`char`] 的字符。",
         "translate": ""
     },
     {

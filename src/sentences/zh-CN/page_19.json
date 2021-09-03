@@ -856,7 +856,7 @@
     },
     {
         "source": "As found online, however, the cache of nodes is of an infinite size.",
-        "suggest": "但是，如在线所见，节点的缓存是无限大小的。",
+        "suggest": "然而，正如在网上发现的那样，节点的缓存是无限大的。",
         "translate": ""
     },
     {
@@ -991,7 +991,7 @@
     },
     {
         "source": "For now, native usage of channels (off the runtime) will fall back onto mutexes/cond vars for descheduling/atomic decisions.",
-        "suggest": "目前，通道的原生用法 (在运行时关闭) 将退回到 mutexes/cond 变量上进行 descheduling/atomic 决策。",
+        "suggest": "目前，通道的原生用法 (在运行时关闭) 将回退到 mutexes/cond 变量上进行 descheduling/atomic 决策。",
         "translate": ""
     },
     {
@@ -2031,7 +2031,7 @@
     },
     {
         "source": "This function should be used after newly created Packet was wrapped with an Arc In other case mutex data will be duplicated while cloning and that could cause problems on platforms where it is represented by opaque data structure",
-        "suggest": "新创建的数据包用弧线包裹后，应使用此函数。在其他情况下，互斥锁数据将在克隆时复制，这可能会在以不透明数据表示的平台上引起问题",
+        "suggest": "这个函数应该在新创建的 Packet 用 Arc 包装后使用，否则在克隆时互斥锁数据将被复制，这可能会导致在它由不透明数据结构表示的平台上出现问题",
         "translate": ""
     },
     {
@@ -2381,7 +2381,7 @@
     },
     {
         "source": "Note that this load is not only an assert for correctness about disconnection, but also a proper fence before the read of `to_wake`, so this assert cannot be removed with also removing the `to_wake` assert.",
-        "suggest": "请注意，此负载不仅是断线正确性的断言，而且还是读取 `to_wake` 之前的正确防护，因此不能同时删除 `to_wake` 断言来删除此断言。",
+        "suggest": "请注意，此负载不仅是断开连接正确性的断言，而且还是读取 `to_wake` 之前的适当围栏，因此无法在删除 `to_wake` 断言的同时删除此断言。",
         "translate": ""
     },
     {
