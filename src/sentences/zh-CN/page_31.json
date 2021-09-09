@@ -4533,5 +4533,40 @@
         "source": "If the first byte is invalid it is either first byte of a multi-byte sequence but the provided byte slice is too short or it is the first byte of an invalide multi-byte sequence.",
         "suggest": "如果第一个字节无效，则它是多字节序列的第一个字节，但提供的字节字节太短，或者它是无效多字节序列的第一个字节。",
         "translate": ""
+    },
+    {
+        "source": "Always evaluates to [`TryReserveError::CapacityOverflow`].",
+        "suggest": "始终评估为 [`TryReserveError::CapacityOverflow`]。",
+        "translate": ""
+    },
+    {
+        "source": "While you cannot `break` from a closure, the [`crate::ops::ControlFlow`] type allows a similar idea:",
+        "suggest": "虽然您不能从闭包中 `break`，但 [`crate::ops::ControlFlow`] 类型允许类似的想法:",
+        "translate": ""
+    },
+    {
+        "source": "The [`crate::ops::ControlFlow`] type can be used with this method for the situations in which you'd use `break` and `continue` in a normal loop:",
+        "suggest": "[`crate::ops::ControlFlow`] 类型可以与此方法一起用于在正常循环中使用 `break` 和 `continue` 的情况:",
+        "translate": ""
+    },
+    {
+        "source": "Fast conversion of a the significant digits and decimal exponent a float to a extended representation with a binary float.",
+        "suggest": "将浮点数的有效数字和十进制指数快速转换为具有二进制浮点数的扩展表示。",
+        "translate": ""
+    },
+    {
+        "source": "This method may not be optimized owing to implementation details;",
+        "suggest": "由于实现细节，此方法可能未优化;",
+        "translate": ""
+    },
+    {
+        "source": "and Redox lack `linkat`, so use `link` instead.",
+        "suggest": "Redox 缺少 `linkat`，所以用 `link` 代替。",
+        "translate": ""
+    },
+    {
+        "source": "Temporary null documentation to work around #57569 until the fix is beta",
+        "suggest": "临时空文档以解决 #57569 问题，直到修复程序成为 beta 版",
+        "translate": ""
     }
 ]
