@@ -22,15 +22,15 @@
 > 在使用中文文档时，请注意版本号，中文文档版本和 Rust 版本号必须要保持一致。而且必须使用 `stable` 版本，不要使用 `nightly` 版本。
 
 
-如果您是刚开始使用 Rust，那么在 Rust 安装成功后，您还应该通过 `rustup component add rust-src` 命令来安装 `rust-src`。当安装 `rust-src` 之后，请按照以下步骤进行操作：
+如果您是刚开始使用 Rust，那么请确保 Rust 已经安装好，并且可以正常工作。在 Rust 安装成功后，您还应该通过 `rustup component add rust-src` 命令来安装 `rust-src` 组件。当安装 `rust-src` 组件之后，请按照以下步骤进行操作：
 
-1. 首先获取到系统环境变量 `CARGO_HOME` 的值，这个值是一个文件路径
-2. 在 `CARGO_HOME` 文件夹下，找到一个名字叫做 `.rustup` 的文件夹，在该文件夹下有一个叫做 `toolchains` 的文件夹
-3. 在 `toolchains` 文件夹下，找到您当前所使用的 Rust 版本并将其打开，比如在 Windows 上是 `stable-x86_64-pc-windows-msvc`
+1. 在终端执行: `rustup default stable` 来切换到 `stable` 版本，并确保 `stable` 的版本与中文版文档所对应的版本一致
+2. 在终端执行 `rustup show`，然后在输出中找到 `rustup home` 所对应的路径，然后将其在资源管理器中打开
+3. 打开 `toolchains` 的文件夹，在该文件夹下，找到您当前所使用的 Rust 工具链并将其打开，例如，在 `Windows` 平台上对应的是 `stable-x86_64-pc-windows-msvc` 文件夹
 4. 然后打开 `lib/rustlib/src/rust` 目录，这个目录下的文件夹就是 Rust 标准库源代码所在的位置
 5. 将 `lib/rustlib/src/rust/library` 文件夹下的所有内容保存一份副本
 6. 下载本仓库对应的中文文档源文件，将其重命名为 `library` 并放置到 `lib/rustlib/src/rust` 文件夹下
-7. 运行: `rustup default stable` 来切换到 `stable` 版本
+7. 请确保您已经在 IDE 中安装 Rust 相关插件，例如，`vscode` 需要安装：[rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
 8. 重新启动 `IDE` 工具，中文文档的智能提示开始工作
 9. 愉快的编码！
 
