@@ -81,7 +81,7 @@
     },
     {
         "source": "Inside the hook a panic can be accessed as a `&dyn Any + Send`, which contains either a `&str` or `String` for regular `panic!()` invocations.",
-        "suggest": "在 hook 内部，可以将 X0panic0Z 作为 `&dyn Any + Send` 进行访问，其中包含用于常规 `panic!()` 调用的 `&str` 或 `String`。",
+        "suggest": "在 hook 内部，可以将 panic 作为 `&dyn Any + Send` 进行访问，其中包含用于常规 `panic!()` 调用的 `&str` 或 `String`。",
         "translate": ""
     },
     {

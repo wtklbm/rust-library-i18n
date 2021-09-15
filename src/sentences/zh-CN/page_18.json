@@ -471,7 +471,7 @@
     },
     {
         "source": "This function is called by the panic runtime if it catches an exception object which does not correspond to a Rust panic.",
-        "suggest": "如果 panic 运行时捕获到一个与 X0Rust0Z panic 不对应的异常 object，则该函数由 panic 运行时调用。",
+        "suggest": "如果 panic 运行时捕获到一个与 Rust panic 不对应的异常 object，则该函数由 panic 运行时调用。",
         "translate": ""
     },
     {

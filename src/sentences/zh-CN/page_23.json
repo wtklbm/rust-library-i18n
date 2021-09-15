@@ -2156,7 +2156,7 @@
     },
     {
         "source": "Negate (complement) one bit in each element of vector `a` (sixteen unsigned 8-bit integer numbers).",
-        "suggest": "对 X0vector0Z `a` 的每个元素中的 (complement) 取反 (十六个无符号的 8 位整数)。",
+        "suggest": "对 vector `a` 的每个元素中的 (complement) 取反 (十六个无符号的 8 位整数)。",
         "translate": ""
     },
     {
@@ -2166,7 +2166,7 @@
     },
     {
         "source": "Negate (complement) one bit in each element of vector `a` (eight unsigned 16-bit integer numbers).",
-        "suggest": "对 X0vector0Z `a` 的每个元素中的 (complement) 取反 (八个无符号的 16 位整数)。",
+        "suggest": "对 vector `a` 的每个元素中的 (complement) 取反 (八个无符号的 16 位整数)。",
         "translate": ""
     },
     {
@@ -2176,7 +2176,7 @@
     },
     {
         "source": "Negate (complement) one bit in each element of vector `a` (four unsigned 32-bit integer numbers).",
-        "suggest": "对 X0vector0Z `a` 的每个元素中的 (complement) 取反 (四个无符号的 32 位整数)。",
+        "suggest": "对 vector `a` 的每个元素中的 (complement) 取反 (四个无符号的 32 位整数)。",
         "translate": ""
     },
     {
@@ -2186,7 +2186,7 @@
     },
     {
         "source": "Negate (complement) one bit in each element of vector `a` (two unsigned 64-bit integer numbers).",
-        "suggest": "对 X0vector0Z `a` 的每个元素中的 (complement) 取反 (两个无符号的 64 位整数)。",
+        "suggest": "对 vector `a` 的每个元素中的 (complement) 取反 (两个无符号的 64 位整数)。",
         "translate": ""
     },
     {

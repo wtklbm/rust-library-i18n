@@ -2321,7 +2321,7 @@
     },
     {
         "source": "The `hash_builder` passed should implement the [`BuildHasher`] trait for the HashMap to be useful, see its documentation for details.",
-        "suggest": "传递的 `hash_builder` 应该为 X0HashMap0Z 实现 [`BuildHasher`] trait 才有用，有关详细信息，请参见其文档。",
+        "suggest": "传递的 `hash_builder` 应该为 HashMap 实现 [`BuildHasher`] trait 才有用，有关详细信息，请参见其文档。",
         "translate": ""
     },
     {
