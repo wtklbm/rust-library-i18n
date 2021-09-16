@@ -2666,7 +2666,7 @@
     },
     {
         "source": "Because the closure passed to `skip_while()` takes a reference, and many iterators iterate over references, this leads to a possibly confusing situation, where the type of the closure argument is a double reference:",
-        "suggest": "因为传递给 `skip_while()` 的闭包需要一个引号，并且许多迭代器都在引用上进行迭代，所以这会导致一种可能令人困惑的情况，其中闭包参数的类型是双引号:",
+        "suggest": "因为传递给 `skip_while()` 的闭包需要一个引号，并且许多迭代器都在引用上进行迭代，所以这会导致一种可能令人困惑的情况，其中闭包参数的类型是双引用:",
         "translate": ""
     },
     {
