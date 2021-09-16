@@ -1681,7 +1681,7 @@
     },
     {
         "source": "Returns a reference to the `Waker` for the current task.",
-        "suggest": "返回当前任务的 `Waker` 引号。",
+        "suggest": "返回对当前任务的 `Waker` 的引用。",
         "translate": ""
     },
     {

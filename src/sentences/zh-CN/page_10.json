@@ -1496,7 +1496,7 @@
     },
     {
         "source": "Take a reference to the contained string",
-        "suggest": "对包含的字符串加上引号",
+        "suggest": "获取对所包含字符串的引用",
         "translate": ""
     },
     {

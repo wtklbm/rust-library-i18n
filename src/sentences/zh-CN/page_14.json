@@ -21,7 +21,7 @@
     },
     {
         "source": "format the kind without quotes, as in `kind: Float`",
-        "suggest": "格式化无引号的格式，例如 `kind: Float`",
+        "suggest": "格式化不带引号的种类，例如 `kind: Float`",
         "translate": ""
     },
     {

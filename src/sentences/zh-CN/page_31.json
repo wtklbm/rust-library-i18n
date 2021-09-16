@@ -4401,7 +4401,7 @@
     },
     {
         "source": "The quote is escaped if there are an odd number of backslashes.",
-        "suggest": "如果有奇数个反斜杠，引号将被转义。",
+        "suggest": "如果有奇数个反斜杠，则转义引号。",
         "translate": ""
     },
     {
