@@ -4568,5 +4568,435 @@
         "source": "Temporary null documentation to work around #57569 until the fix is beta",
         "suggest": "临时空文档以解决 #57569 问题，直到修复程序成为 beta 版",
         "translate": ""
+    },
+    {
+        "source": "A C library that may be linked into a C/C++ program to produce symbolic backtraces",
+        "suggest": "一个可以链接到 C/C++ 程序以生成符号回溯的 C 库",
+        "translate": ""
+    },
+    {
+        "source": "Initially written by Ian Lance Taylor <iant@golang.org>.",
+        "suggest": "最初由 Ian Lance Taylor 撰写 <iant@golang.org>",
+        "translate": ""
+    },
+    {
+        "source": "This is version 1.0.",
+        "suggest": "这是 1.0 版本。",
+        "translate": ""
+    },
+    {
+        "source": "It is likely that this will always be version 1.0.",
+        "suggest": "很可能永远是 1.0 版。",
+        "translate": ""
+    },
+    {
+        "source": "The libbacktrace library may be linked into a program or library and used to produce symbolic backtraces.",
+        "suggest": "libbacktrace 库可以链接到程序或库中，并用于生成符号回溯。",
+        "translate": ""
+    },
+    {
+        "source": "Sample uses would be to print a detailed backtrace when an error occurs or to gather detailed profiling information.",
+        "suggest": "示例用途是在发生错误时打印详细的回溯或收集详细的分析信息。",
+        "translate": ""
+    },
+    {
+        "source": "The libbacktrace library is provided under a BSD license.",
+        "suggest": "libbacktrace 库是在 BSD 许可下提供的。",
+        "translate": ""
+    },
+    {
+        "source": "See the source files for the exact license text.",
+        "suggest": "有关确切的许可证文本，请参见源文件。",
+        "translate": ""
+    },
+    {
+        "source": "The public functions are declared and documented in the header file backtrace.h, which should be #include'd by a user of the library.",
+        "suggest": "公共函数在头文件 backtrace.h 中声明并记录，该文件应该由库的用户 #include&#39;d。",
+        "translate": ""
+    },
+    {
+        "source": "Building libbacktrace will generate a file backtrace-supported.h, which a user of the library may use to determine whether backtraces will work.",
+        "suggest": "构建 libbacktrace 将生成一个文件 backtrace-supported.h，库的用户可以使用它来确定回溯是否有效。",
+        "translate": ""
+    },
+    {
+        "source": "See the source file backtrace-supported.h.in for the macros that it defines.",
+        "suggest": "请参见源文件 backtrace-supported.h.in 以了解其定义的宏。",
+        "translate": ""
+    },
+    {
+        "source": "As of January 2018, libbacktrace only supports ELF, PE/COFF, and XCOFF executables with DWARF debugging information.",
+        "suggest": "截至 2018 年 1 月，libbacktrace 仅支持带有 DWARF 调试信息的 ELF、PE/COFF 和 XCOFF 可执行文件。",
+        "translate": ""
+    },
+    {
+        "source": "The library is written to make it straightforward to add support for other object file and debugging formats.",
+        "suggest": "编写该库是为了使添加对其他对象文件和调试格式的支持变得简单。",
+        "translate": ""
+    },
+    {
+        "source": "The library relies on the C++ unwind API defined at",
+        "suggest": "该库依赖于定义的 C++ unwind API",
+        "translate": ""
+    },
+    {
+        "source": "This API is provided by GCC.",
+        "suggest": "该 API 由 GCC 提供。",
+        "translate": ""
+    },
+    {
+        "source": "Load multiple single-element structures to one, two, three, or four registers",
+        "suggest": "将多个单一元素结构加载到一个、两个、三个或四个寄存器中",
+        "translate": ""
+    },
+    {
+        "source": "Store multiple single-element structures to one, two, three, or four registers",
+        "suggest": "将多个单一元素结构存储到一个、两个、三个或四个寄存器中",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `float64x1_t` vectors.",
+        "suggest": "包含两个 `float64x1_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `float64x1_t` vectors.",
+        "suggest": "包含三个 `float64x1_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `float64x1_t` vectors.",
+        "suggest": "包含四个 `float64x1_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `float64x2_t` vectors.",
+        "suggest": "包含两个 `float64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `float64x2_t` vectors.",
+        "suggest": "包含三个 `float64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `float64x2_t` vectors.",
+        "suggest": "包含四个 `float64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "Store multiple single-element structures from one, two, three, or four registers",
+        "suggest": "从一个、两个、三个或四个寄存器中存储多个单一元素结构",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `int16x4_t` vectors.",
+        "suggest": "包含两个 `int16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `int16x4_t` vectors.",
+        "suggest": "包含三个 `int16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `int16x4_t` vectors.",
+        "suggest": "包含四个 `int16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `int16x8_t` vectors.",
+        "suggest": "包含两个 `int16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `int16x8_t` vectors.",
+        "suggest": "包含三个 `int16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `int16x8_t` vectors.",
+        "suggest": "包含四个 `int16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `uint16x4_t` vectors.",
+        "suggest": "包含两个 `uint16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `uint16x4_t` vectors.",
+        "suggest": "包含三个 `uint16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `uint16x4_t` vectors.",
+        "suggest": "包含四个 `uint16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `uint16x8_t` vectors.",
+        "suggest": "包含两个 `uint16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `uint16x8_t` vectors.",
+        "suggest": "包含三个 `uint16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `uint16x8_t` vectors.",
+        "suggest": "包含四个 `uint16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `poly16x4_t` vectors.",
+        "suggest": "包含两个 `poly16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `poly16x4_t` vectors.",
+        "suggest": "包含三个 `poly16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `poly16x4_t` vectors.",
+        "suggest": "包含四个 `poly16x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `poly16x8_t` vectors.",
+        "suggest": "包含两个 `poly16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `poly16x8_t` vectors.",
+        "suggest": "包含三个 `poly16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `poly16x8_t` vectors.",
+        "suggest": "包含四个 `poly16x8_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `int32x2_t` vectors.",
+        "suggest": "包含两个 `int32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `int32x2_t` vectors.",
+        "suggest": "包含三个 `int32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `int32x2_t` vectors.",
+        "suggest": "包含四个 `int32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `int32x4_t` vectors.",
+        "suggest": "包含两个 `int32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `int32x4_t` vectors.",
+        "suggest": "包含三个 `int32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `int32x4_t` vectors.",
+        "suggest": "包含四个 `int32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `uint32x2_t` vectors.",
+        "suggest": "包含两个 `uint32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `uint32x2_t` vectors.",
+        "suggest": "包含三个 `uint32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `uint32x2_t` vectors.",
+        "suggest": "包含四个 `uint32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `uint32x4_t` vectors.",
+        "suggest": "包含两个 `uint32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `uint32x4_t` vectors.",
+        "suggest": "包含三个 `uint32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `uint32x4_t` vectors.",
+        "suggest": "包含四个 `uint32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `float32x2_t` vectors.",
+        "suggest": "包含两个 `float32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `float32x2_t` vectors.",
+        "suggest": "包含三个 `float32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `float32x2_t` vectors.",
+        "suggest": "包含四个 `float32x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing two `float32x4_t` vectors.",
+        "suggest": "包含两个 `float32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing three `float32x4_t` vectors.",
+        "suggest": "包含三个 `float32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `float32x4_t` vectors.",
+        "suggest": "包含四个 `float32x4_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `int64x1_t` vectors.",
+        "suggest": "包含四个 `int64x1_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `int64x2_t` vectors.",
+        "suggest": "包含四个 `int64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `uint64x1_t` vectors.",
+        "suggest": "包含四个 `uint64x1_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `uint64x2_t` vectors.",
+        "suggest": "包含四个 `uint64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "PowerPC-specific 128-bit wide vector mask of two `i64`",
+        "suggest": "两个 `i64` 的 PowerPC 特定的 128 位宽 vector 掩码",
+        "translate": ""
+    },
+    {
+        "source": "Generate and run programs using equivalent C and Rust intrinsics, checking that each produces the same result from random inputs.",
+        "suggest": "使用等效的 C 和 Rust 内联函数生成并运行程序，检查每个程序是否从随机输入产生相同的结果。",
+        "translate": ""
+    },
+    {
+        "source": "The intrinsic.csv is the arm neon tracking google sheet (https://docs.google.com/spreadsheets/d/1MqW1g8c7tlhdRWQixgdWvR4uJHNZzCYAf4V0oHjZkwA/edit#gid=0) that contains the intrinsic list.",
+        "suggest": "intrinsic.csv 是包含内联函数列表的 arm neon 跟踪谷歌表 (https://docs.google.com/spreadsheets/d/1MqW1g8c7tlhdRWQixgdWvR4uJHNZzCYAf4V0oHjZkwA/edit#gid=0)。",
+        "translate": ""
+    },
+    {
+        "source": "The done percentage column should be renamed to \"enabled\".",
+        "suggest": "完成百分比列应重命名为 \"enabled\"。",
+        "translate": ""
+    },
+    {
+        "source": "An argument for the intrinsic.",
+        "suggest": "内联函数的一个参数。",
+        "translate": ""
+    },
+    {
+        "source": "The argument's index in the intrinsic function call.",
+        "suggest": "参数在内联函数调用中的索引。",
+        "translate": ""
+    },
+    {
+        "source": "The argument name.",
+        "suggest": "参数名称。",
+        "translate": ""
+    },
+    {
+        "source": "The type of the argument.",
+        "suggest": "参数的类型。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an argument from a Rust style signature i.e.",
+        "suggest": "从 Rust 样式签名创建一个参数，即",
+        "translate": ""
+    },
+    {
+        "source": "Creates an argument list from a Rust function signature, the data for this function should only be the arguments.",
+        "suggest": "从 Rust 函数签名创建一个参数列表，这个函数的数据应该只是参数。",
+        "translate": ""
+    },
+    {
+        "source": "for `fn test(a: u32, b: u32) -> u32` data should just be `a: u32, b: u32`",
+        "suggest": "对于 `fn test(a: u32, b: u32) -> u32` 数据应该只是 `a: u32, b: u32`",
+        "translate": ""
+    },
+    {
+        "source": "Converts the argument list into the call paramters for a C function call.",
+        "suggest": "将参数列表转换为 C 函数调用的调用参数。",
+        "translate": ""
+    },
+    {
+        "source": "this would generate something like `a, &b, c`",
+        "suggest": "这会产生类似 `a, &b, c` 的东西",
+        "translate": ""
+    },
+    {
+        "source": "Converts the argument list into the call paramters for a Rust function.",
+        "suggest": "将参数列表转换为 Rust 函数的调用参数。",
+        "translate": ""
+    },
+    {
+        "source": "this would generate something like `a, b, c`",
+        "suggest": "这会产生类似 `a, b, c` 的东西",
+        "translate": ""
+    },
+    {
+        "source": "Creates a line that initializes this argument for C code.",
+        "suggest": "创建一行，为 C 代码初始化此参数。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a line that initializes this argument for Rust code.",
+        "suggest": "创建一行，为 Rust 代码初始化此参数。",
+        "translate": ""
+    },
+    {
+        "source": "An intrinsic",
+        "suggest": "一个内联函数",
+        "translate": ""
+    },
+    {
+        "source": "If the intrinsic should be tested.",
+        "suggest": "如果内联函数应该被测试。",
+        "translate": ""
+    },
+    {
+        "source": "The function name of this intrinsic.",
+        "suggest": "这个内联函数的函数名。",
+        "translate": ""
+    },
+    {
+        "source": "Any arguments for this intrinsinc.",
+        "suggest": "此内联函数的任何参数。",
+        "translate": ""
+    },
+    {
+        "source": "The return type of this intrinsic.",
+        "suggest": "这个内联函数的返回类型。",
+        "translate": ""
     }
 ]

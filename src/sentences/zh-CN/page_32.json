@@ -1,3277 +1,607 @@
 [
     {
-        "source": "pub fn simd_fpowi pub fn simd_fpow",
-        "suggest": "酒吧 fn simd_fpowi 酒吧 fn simd_fpow",
-        "translate": false
-    },
-    {
-        "source": "pub unsafe fn i8x16_bitmask(a: v128) -> i32 {",
-        "suggest": "酒吧不安全 fn i8x16_bitmask(a: v128) -> i32 {",
-        "translate": false
-    },
-    {
-        "source": "pub unsafe fn i16x8_bitmask(a: v128) -> i32 {",
-        "suggest": "酒吧不安全 fn i16x8_bitmask(a: v128) -> i32 {",
-        "translate": false
-    },
-    {
-        "source": "pub unsafe fn i32x4_bitmask(a: v128) -> i32 {",
-        "suggest": "酒吧不安全 fn i32x4_bitmask(a: v128) -> i32 {",
-        "translate": false
-    },
-    {
-        "source": "FIXME vmovntdq",
-        "suggest": "修复 vmovntdq",
-        "translate": false
-    },
-    {
-        "source": "FIXME movntdq",
-        "suggest": "修复 movntdq",
-        "translate": false
-    },
-    {
-        "source": "FIXME movntpd",
-        "suggest": "修复 movntpd",
-        "translate": false
-    },
-    {
-        "source": "use drop for [T]",
-        "suggest": "对 [T] 使用 drop",
-        "translate": false
-    },
-    {
-        "source": "T = self.tail;",
-        "suggest": "T= self.tail;",
-        "translate": false
-    },
-    {
-        "source": "H = self.head;",
-        "suggest": "H= self.head;",
-        "translate": false
-    },
-    {
-        "source": "self:  [a b c|d e f] other: [0 1 2 3|4 5] front = 3, mid = 1, [a b c] == [0 1 2] && [d] == [3] && [e f] == [4 5]",
-        "suggest": "self: [a b c|d e f] 其他: [0 1 2 3|4 5] 前 = 3，中 = 1，[a b c] == [0 1 2]&&[d] == [3]&&[e f] == [4 5]",
-        "translate": false
-    },
-    {
-        "source": "for item in iter.into_iter() {",
-        "suggest": "用于 iter.into_iter() 中的项 {",
-        "translate": false
-    },
-    {
-        "source": "([0 1], [a b]) (\\[2\\], \\[c\\]) ([3 4], [d e])",
-        "suggest": "([0 1]，[a b]) (\\[2\\]，\\[c\\]) ([3 4]，[d e])",
-        "translate": false
-    },
-    {
-        "source": "0, 1, 2, .., len - 1",
-        "suggest": "0，1，2，..，len-1",
-        "translate": false
-    },
-    {
-        "source": "\"Hello   Some(\"hi\")   !\"",
-        "suggest": "`您好 Some(\"hi\")! `",
-        "translate": false
-    },
-    {
-        "source": "Hello {arg 0 (\"x\")} is {arg 1 (0.01) with precision specified inline (5)}",
-        "suggest": "您好 {arg 0 (\"x\")} 是 {arg 1 (0.01) with precision specified inline (5)}",
-        "translate": false
-    },
-    {
-        "source": "Hello {arg 1 (\"x\")} is {arg 2 (0.01) with precision specified in arg 0 (5)}",
-        "suggest": "您好 {arg 1 (\"x\")} 是 {arg 2 (0.01) with precision specified in arg 0 (5)}",
-        "translate": false
-    },
-    {
-        "source": "Hello {arg 0 (\"x\")} is {arg 2 (0.01) with precision specified in arg 1 (5)}",
-        "suggest": "您好 {arg 0 (\"x\")} 是 {arg 2 (0.01) with precision specified in arg 1 (5)}",
-        "translate": false
-    },
-    {
-        "source": "Hello {next arg (\"x\")} is {second of next two args (0.01) with precision specified in first of next two args (5)}",
-        "suggest": "您好 {next arg (\"x\")} 是 {second of next two args (0.01) with precision specified in first of next two args (5)}",
-        "translate": false
-    },
-    {
-        "source": "Hello {next arg (\"x\")} is {arg 2 (0.01) with precision specified in its predecessor (5)}",
-        "suggest": "您好 {next arg (\"x\")} 是 {arg 2 (0.01) with precision specified in its predecessor (5)}",
-        "translate": false
-    },
-    {
-        "source": "Hello {next arg (\"x\")} is {arg \"number\" (0.01) with precision specified in arg \"prec\" (5)}",
-        "suggest": "您好 {next arg (\"x\")} 是 {arg \"number\" (0.01) with precision specified in arg \"prec\" (5)}",
-        "translate": false
-    },
-    {
-        "source": "*nothing* ⇒ [`Display`]",
-        "suggest": "*nothing* ⇒ [`Display`]",
-        "translate": false
-    },
-    {
-        "source": "X = None, | = lo",
-        "suggest": "X = 无，|= 罗",
-        "translate": false
-    },
-    {
-        "source": "pub struct NEON128 { pub Low: ULONG64, pub High: LONG64, }",
-        "suggest": "酒馆结构体 NEON128 { pub Low: ULONG64, pub High: LONG64, }",
-        "translate": false
-    },
-    {
-        "source": "pub type PNEON128 = *mut NEON128;",
-        "suggest": "pub 类型 PNEON128= *mut NEON128;",
-        "translate": false
-    },
-    {
-        "source": "pub Q:",
-        "suggest": "酒吧 Q:",
-        "translate": false
-    },
-    {
-        "source": "pub S:",
-        "suggest": "酒吧 S:",
-        "translate": false
-    },
-    {
-        "source": "b'a' + 0x1F == 0x80 == 0b1000_0000 b'z' + 0x1F == 0x98 == 0b1001_1000",
-        "suggest": "b'a'+ 0x1F == 0x80 == 0b1000_0000 b'z'+ 0x1F == 0x98 == 0b1001_1000",
-        "translate": false
-    },
-    {
-        "source": "b'a' + 0x05 == 0x66 == 0b0110_0110 b'z' + 0x05 == 0x7F == 0b0111_1111",
-        "suggest": "b'a'+ 0x05 == 0x66 == 0b0110_0110 b'z'+ 0x05 == 0x7F == 0b0111_1111",
-        "translate": false
-    },
-    {
-        "source": "_0 _1 _2 _3 _4 _5 _6 _7 _8 _9 _a _b _c _d _e _f",
-        "suggest": "_0 _1 _2 _3 _4 _5 _6 _7 _8 _9 _a_b _c_d _e_f",
-        "translate": false
-    },
-    {
-        "source": "struct FooUse(Foo<[i32]>);",
-        "suggest": "结构体 FooUse(Foo<[i32]>);",
-        "translate": false
-    },
-    {
-        "source": "let y: &dyn Bar = &Impl;",
-        "suggest": "令 y: &dyn Bar= &Impl;",
-        "translate": false
-    },
-    {
-        "source": "0 bool | 1 u8 | 1 u16 | 2 u32 | 4 u64 | 8 u128 | 16 i8 | 1 i16 | 2 i32 | 4 i64 | 8 i128 | 16 f32 | 4 f64 | 8 char | 4",
-        "suggest": "0 bool |1 u8 |1 个 u16 |2 u32 |4 u64 |8 u128 |16 i8 |1 i16 |2 i32 |4 i64 |8 i128 |16 f32 |4 f64 |8 个字符 | 4",
-        "translate": false
-    },
-    {
-        "source": "by William D.",
-        "suggest": "威廉・D。",
-        "translate": false
-    },
-    {
-        "source": "Clinger, available online:",
-        "suggest": "克林格 (Clinger)，在线可用:",
-        "translate": false
-    },
-    {
-        "source": "Panics for `e >= CEIL_LOG5_OF_MAX_SIG`.",
-        "suggest": "`e >= CEIL_LOG5_OF_MAX_SIG` 的 Panics。",
-        "translate": false
-    },
-    {
-        "source": "2^(nbits-1) < mant <= 2^nbits if mant > 0",
-        "suggest": "2 ^ (nbits-1) <mant <= 2 ^ nbits (如果 mant> 0",
-        "translate": false
-    },
-    {
-        "source": "x 10^exp = 1.234 x 10^(exp-1)",
-        "suggest": "x 10 ^ exp= 1.234 x 10 ^ (exp-1)",
-        "translate": false
-    },
-    {
-        "source": "Burger, R.",
-        "suggest": "汉堡河",
-        "translate": false
-    },
-    {
-        "source": "Florian Loitsch.",
-        "suggest": "弗洛里安・洛伊奇 (Florian Loitsch)。",
-        "translate": false
-    },
-    {
-        "source": "10**-i; e = 4 * i - 80",
-        "suggest": "10 **-i;e=4* i-80",
-        "translate": false
-    },
-    {
-        "source": "(f, e, k)",
-        "suggest": "(f，e，k)",
-        "translate": false
-    },
-    {
-        "source": "(v - 1 ulp)",
-        "suggest": "(v-1 ulp)",
-        "translate": false
-    },
-    {
-        "source": "(v + 1 ulp)",
-        "suggest": "(v +1 ulp)",
-        "translate": false
-    },
-    {
-        "source": ":|1 ulp|1 ulp|  :",
-        "suggest": ": | 1 ulp | 1 ulp |:",
-        "translate": false
-    },
-    {
-        "source": "std::mem::swap(&mut *still_unmoved, &mut *new_unmoved);",
-        "suggest": "std::swap (&mut *still_unmoved，&mut* new_unmoved);",
-        "translate": false
-    },
-    {
-        "source": "s = String::from(\"bar\");",
-        "suggest": "s=String::from (`bar`) ;",
-        "translate": false
-    },
-    {
-        "source": "xy ≡ 1 (mod 2ⁿ) → xy (2 - xy) ≡ 1 (mod 2²ⁿ)",
-        "suggest": "xy≡1 (mod2ⁿ) →xy (2-xy) ≡1 (mod2²ⁿ)",
-        "translate": false
-    },
-    {
-        "source": "y = y * (2 - xy) mod n",
-        "suggest": "y=y * (2-xy) mod n",
-        "translate": false
-    },
-    {
-        "source": "Arndt:",
-        "suggest": "Arndt:",
-        "translate": false
-    },
-    {
-        "source": "<=> `i < ln / 2 - (chunk - 1) < ln / 2 < ln`.",
-        "suggest": "<=> `i < ln / 2 - (chunk - 1) < ln / 2 < ln`。",
-        "translate": false
-    },
-    {
-        "source": "Us = lcm(size_of::<T>, size_of::<U>) / size_of::<U> Ts = lcm(size_of::<T>, size_of::<U>) / size_of::<T>",
-        "suggest": "我们 = lcm(size_of::<T>, size_of::<U>)/size_of::<U>Ts= lcm(size_of::<T>, size_of::<U>)/size_of::</u><T>",
-        "translate": false
-    },
-    {
-        "source": "Us = size_of::<T> / gcd(size_of::<T>, size_of::<U>) Ts = size_of::<U> / gcd(size_of::<T>, size_of::<U>)",
-        "suggest": "我们 = size_of::<T>/gcd(size_of::<T>, size_of::<U>) Ts=size_of::<U>/gcd(size_of::<T>, size_of::<U>)</u>",
-        "translate": false
-    },
-    {
-        "source": "struct $forward_iterator($internal_iterator);",
-        "suggest": "结构体 $forward_iterator($internal_iterator);",
-        "translate": false
-    },
-    {
-        "source": "struct $reverse_iterator($internal_iterator);",
-        "suggest": "结构体 $reverse_iterator($internal_iterator);",
-        "translate": false
-    },
-    {
-        "source": "impl DoubleEndedIterator for $forward_iterator where P::Searcher: DoubleEndedSearcher",
-        "suggest": "$forward_iterator 的 impl DoubleEndedIterator，其中 P::Searcher: DoubleEndedSearcher",
-        "translate": false
-    },
-    {
-        "source": "impl Iterator for $reverse_iterator where P::Searcher: ReverseSearcher",
-        "suggest": "$reverse_iterator 的 impl 迭代器，其中 P::Searcher: ReverseSearcher",
-        "translate": false
-    },
-    {
-        "source": "impl DoubleEndedIterator for $reverse_iterator where P::Searcher: DoubleEndedSearcher",
-        "suggest": "$reverse_iterator 的 impl DoubleEndedIterator，其中 P::Searcher: DoubleEndedSearcher",
-        "translate": false
-    },
-    {
-        "source": "Impl for F: FnMut(char) -> bool",
-        "suggest": "F 的 Impl: FnMut(char) -> bool",
-        "translate": false
-    },
-    {
-        "source": "Impl for &&str",
-        "suggest": "&&str 的 Impl",
-        "translate": false
-    },
-    {
-        "source": "w] case",
-        "suggest": "w] 情况",
-        "translate": false
-    },
-    {
-        "source": "Relaxed  | Relaxed | Relaxed Acquire  | Acquire | Acquire Release  | Release | Relaxed AcqRel   | AcqRel  | Acquire SeqCst   | SeqCst  | SeqCst",
-        "suggest": "放松 | 放松 | 轻松获取 | 取得 | 获取发布 | 发布 | 轻松的 AcqRel |AcqRel | 采集 SeqCst |SeqCst | 序列号",
-        "translate": false
-    },
-    {
-        "source": "Always 0 <= nanos < NANOS_PER_SEC",
-        "suggest": "始终为 0 <= 纳米 < NANOS_PER_SEC",
-        "translate": false
-    },
-    {
-        "source": ":D",
-        "suggest": ": D",
-        "translate": false
-    },
-    {
-        "source": "ptr::write_unaligned(unaligned_ptr, u16::from_ne_bytes([0x23, 0x45]));",
-        "suggest": "ptr::write_unaligned (unaligned_ptr，u16::from_ne_bytes ([0x23，0x45]) ) ;",
-        "translate": false
-    },
-    {
-        "source": "Produces: None, Some(2), Some(3), None, ...",
-        "suggest": "产生: 无，Some(2)，Some(3)，无，...",
-        "translate": false
-    },
-    {
-        "source": "2^-1074 = 4.94065...",
-        "suggest": "2 ^-1074=4.94065 ...",
-        "translate": false
-    },
-    {
-        "source": "* 10^-324 (2^53-1) * 2^971 = 1.79763...",
-        "suggest": "*10 ^-324 (2^53-1)* 2 ^ 971=1.79763 ...",
-        "translate": false
-    },
-    {
-        "source": "10^3 * 0.1 (exact)",
-        "suggest": "10 ^ 3 * 0.1 (exact)",
-        "translate": false
-    },
-    {
-        "source": "10^1 * 0.100000762939453125 (exact)",
-        "suggest": "10 ^ 1 * 0.100000762939453125 (exact)",
-        "translate": false
-    },
-    {
-        "source": "10^18 * 0.3141592 (exact)",
-        "suggest": "10 ^ 18 * 0.3141592 (exact)",
-        "translate": false
-    },
-    {
-        "source": "pathological case: high = 10^23 (exact).",
-        "suggest": "病理情况: 高 = 10 ^ 23 (exact)。",
-        "translate": false
-    },
-    {
-        "source": "Some: &Option<T: Deref>::Some(T) -> Option<&T::Deref::Target>::Some(&*T)",
-        "suggest": "一些: &Option<T: Deref>::Some (T) -> Option <&T::Target>::Some (&* T)",
-        "translate": false
-    },
-    {
-        "source": "None: &Option<T: Deref>>::None -> None",
-        "suggest": "无: &Option<T: Deref >>:: 无 -> 无",
-        "translate": false
-    },
-    {
-        "source": "Some: &mut Option<T: Deref>::Some(T) -> Option<&mut T::Deref::Target>::Some(&mut *T)",
-        "suggest": "某些: &mut Option<T: Deref>::Some (T) -> Option <&mut T::Target>::Some (&mut *T)",
-        "translate": false
-    },
-    {
-        "source": "None: &mut Option<T: Deref>>::None -> None",
-        "suggest": "无: &mut Option<T: Deref >>:: 无 -> 无",
-        "translate": false
-    },
-    {
-        "source": "Deref, E>::Ok(T).as_deref() -> Result<&T::Deref::Target, &E>::Ok(&*T)",
-        "suggest": "Deref，E>::Ok (T) .as_deref () -> 结果 <&T::Target，&E>::Ok (&* T)",
-        "translate": false
-    },
-    {
-        "source": "Deref, E>::Err(T).as_deref() -> Result<&T::Deref::Target, &E>::Err(&*E)",
-        "suggest": "Deref，E>::Err (T) .as_deref () -> 结果 <&T::Target，&E>::Err (&* E)",
-        "translate": false
-    },
-    {
-        "source": "Result<T: DerefMut, E>::Ok(T).as_deref_mut() -> Result<&mut T::DerefMut::Target, &mut E>::Ok(&mut *T)",
-        "suggest": "结果 <T: DerefMut, E>::Ok (T) .as_deref_mut () -> 结果 <&mut T::DerefMut::Target，&mut E>::Ok (&mut *T)",
-        "translate": false
-    },
-    {
-        "source": "Result<T: DerefMut, E>::Err(T).as_deref_mut() -> Result<&mut T, &mut E>::Err(&mut *E)",
-        "suggest": "结果 <T: DerefMut, E>::Err (T) .as_deref_mut () -> 结果 <&mut T，&mut E>::Err (&mut *E)",
-        "translate": false
-    },
-    {
-        "source": "The tl;dr;",
-        "suggest": "The tl;dr;",
-        "translate": false
-    },
-    {
-        "source": "EAX, EDX",
-        "suggest": "EAX，EDX",
-        "translate": false
-    },
-    {
-        "source": "RAX, RDX",
-        "suggest": "RAX，RDX",
-        "translate": false
-    },
-    {
-        "source": "os=none (\"bare metal\" targets)",
-        "suggest": "os=none (\"bare metal\" 目标)",
-        "translate": false
-    },
-    {
-        "source": "struct rust_panic {",
-        "suggest": "结构体 rust_panic {",
-        "translate": false
-    },
-    {
-        "source": "void foo() { rust_panic a = {0, 1};",
-        "suggest": "无效 foo() { rust_panic a = {0, 1};",
-        "translate": false
-    },
-    {
-        "source": "throw a;",
-        "suggest": "扔",
-        "translate": false
-    },
-    {
-        "source": "tvos (aarch64-apple-tvos, x86_64-apple-tvos)",
-        "suggest": "tvos (aarch64-apple-tvos，x86_64-apple-tvos)",
-        "translate": false
-    },
-    {
-        "source": "uefi (x86_64-unknown-uefi, i686-unknown-uefi)",
-        "suggest": "uefi (x86_64-unknown-uefi，i686-unknown-uefi)",
-        "translate": false
-    },
-    {
-        "source": "Sequences: [`Vec`], [`VecDeque`],",
-        "suggest": "序列: [`Vec`]，[`VecDeque`]，",
-        "translate": false
-    },
-    {
-        "source": "Maps: [`HashMap`],",
-        "suggest": "Maps: [`HashMap`]，",
-        "translate": false
-    },
-    {
-        "source": "Sets: [`HashSet`],",
-        "suggest": "套装: [`HashSet`]，",
-        "translate": false
-    },
-    {
-        "source": "Line 1\\n Line 2\\n Line 3\\n Line 4",
-        "suggest": "1\\n 线 2\\n 线 3\\n 线 4",
-        "translate": false
-    },
-    {
-        "source": "Line 1\\n Line 2\\n Line 3",
-        "suggest": "1\\n 线 2\\n 线 3",
-        "translate": false
-    },
-    {
-        "source": "true, blah: \"hello!\".to_string(), }`.",
-        "suggest": "是的，等等: `hello! `。to_string ()，}`。",
-        "translate": false
-    },
-    {
-        "source": "vs `ref`",
-        "suggest": "与 `ref`",
-        "translate": false
-    },
-    {
-        "source": "`let thing =",
-        "suggest": "` 让事物 =",
-        "translate": false
-    },
-    {
-        "source": "[`SocketAddrV6`], `(`[`IpAddr`]`, `[`u16`]`)`, `(`[`Ipv4Addr`]`, `[`u16`]`)`, `(`[`Ipv6Addr`]`,",
-        "suggest": "[`SocketAddrV6`]，`(`[`IpAddr`]`，`[`u16`]`)`，`(`[`Ipv4Addr`]`，`[`u16`]`)`，`(`[`Ipv6Addr`]`，",
-        "translate": false
-    },
-    {
-        "source": "perl -n < library/std/src/os/raw/mod.rs -e 'next unless m/type_alias\\!/; die \"$_ ?\" unless m/, (c_\\w+) = (\\w+), NonZero_(\\w+) = NonZero(\\w+)/; die \"$_ ?\" unless $3 eq $1 and $4 eq ucfirst $2'",
-        "suggest": "perl -n <library/std/src/os/raw/mod.rs -e next 除非 m/type_alias\\!/; 除非 m/，(c_\\w+) = (\\w+)，NonZero_(\\w+) =NonZero (\\w +) /; 除非 $3 eq $1 和 $4 eq ucfirst $ 2'",
-        "translate": false
-    },
-    {
-        "source": "[`PartialOrd`], [`Eq`],",
-        "suggest": "[`PartialOrd`]，[`Eq`]，",
-        "translate": false
-    },
-    {
-        "source": "pub use crate::sys_common::fs::remove_dir_all;",
-        "suggest": "pub 使用 crate::sys_common::fs::remove_dir_all;",
-        "translate": false
-    },
-    {
-        "source": ",-------> /---------\\ next ---,",
-        "suggest": "，------ -> /---------\\ 下一个 ---，",
-        "translate": false
-    },
-    {
-        "source": "prev \\-----/ <--- prev",
-        "suggest": "上一页 \\-----/<--- 上一页",
-        "translate": false
-    },
-    {
-        "source": "local_source remote_end (write)  +-------->   (splice to) write_end",
-        "suggest": "local_source remote_end (write) +- ------ -> (剪接) write_end",
-        "translate": false
-    },
-    {
-        "source": "si_signo, si_errno, si_code",
-        "suggest": "si_signo，si_errno，si_code",
-        "translate": false
-    },
-    {
-        "source": "unsafe { imp::destroy(self.key) }",
-        "suggest": "不安全的 { imp::destroy(self.key) }",
-        "translate": false
-    },
-    {
-        "source": "windows, x86_64, AWS",
-        "suggest": "windows，x86_64，AWS",
-        "translate": false
-    },
-    {
-        "source": "16-bit floats test_vcombine!(test_vcombine_f16 => vcombine_f16([3_f16, 4., 5., 6.], [13_f16, 14., 15., 16.]));",
-        "suggest": "16 位浮点数 test_vcombine! (test_vcombine_f16 => vcombine_f16([3_f16, 4., 5., 6.], [13_f16, 14., 15., 16.]));",
-        "translate": false
-    },
-    {
-        "source": "**ARMv5TE** - `+v4t +v5te`",
-        "suggest": "**ARMv5TE**-`+v4t +v5te`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv6** - `+v4t +v5te +v6`",
-        "suggest": "**ARMv6**-`+v4t +v5te +v6`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv6-M** - `+v4t +v5te +v6 +thumb-mode +mclass`",
-        "suggest": "**ARMv6-M**-`+v4t +v5te +v6 +thumb-mode +mclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv7-A** - `+v4t +v5te +v6 +v6k +v6t2 +v7 +dsp +thumb2 +aclass`",
-        "suggest": "**ARMv7-A**-`+v4t +v5te +v6 +v6k +v6t2 +v7 +dsp +thumb2 +aclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv7-R** - `+v4t +v5te +v6 +v6k +v6t2  +v7 +dsp +thumb2 +rclass`",
-        "suggest": "**ARMv7-R**-`+v4t +v5te +v6 +v6k +v6t2 +v7 +dsp +thumb2 +rclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv7-M** - `+v4t +v5te +v6 +v6k +v6t2 +v7 +thumb2 +thumb-mode +mclass`",
-        "suggest": "**ARMv7-M**-`+v4t +v5te +v6 +v6k +v6t2 +v7 +thumb2 +thumb-mode +mclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv7E-M** - `+v4t +v5te +v6 +v6k +v6t2 +v7 +dsp +thumb2 +thumb-mode +mclass`",
-        "suggest": "**ARMv7E-M**-`+v4t +v5te +v6 +v6k +v6t2 +v7 +dsp +thumb2 +thumb-mode +mclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv8-M** - `+v4t +v5te +v6 +v6k +v6t2 +v7 +thumb2 +thumb-mode +mclass`",
-        "suggest": "**ARMv8-M**-`+v4t +v5te +v6 +v6k +v6t2 +v7 +thumb2 +thumb-mode +mclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv8-R** - `+v4t +v5te +v6 +v6k +v6t2 +v7 +v8 +thumb2 +rclass`",
-        "suggest": "**ARMv8-R**-`+v4t +v5te +v6 +v6k +v6t2 +v7 +v8 +thumb2 +rclass`",
-        "translate": false
-    },
-    {
-        "source": "**ARMv8-A (AArch64)** - `+fp +neon`",
-        "suggest": "**ARMv8-A (AArch64)**-`+fp +neon`",
-        "translate": false
-    },
-    {
-        "source": "v7-A, v7-R",
-        "suggest": "v7-A，v7-R",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __ssat16",
-        "suggest": "\\[\\] __ssat16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __usat16",
-        "suggest": "\\[\\] __usat16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __sxtab16",
-        "suggest": "\\[\\] __sxtab16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __sxtb16",
-        "suggest": "\\[\\] __sxtb16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uxtab16",
-        "suggest": "\\[\\] __uxtab16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uxtb16",
-        "suggest": "\\[\\] __uxtb16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uadd8",
-        "suggest": "\\[\\] __uadd8",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uhadd8",
-        "suggest": "\\[\\] __uhadd8",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uhsub8",
-        "suggest": "\\[\\] __uhsub8",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uqadd8",
-        "suggest": "\\[\\] __uqadd8",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uqsub8",
-        "suggest": "\\[\\] __uqsub8",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __shasx",
-        "suggest": "\\[\\] __shasx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __shsax",
-        "suggest": "\\[\\] __shsax",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __ssax",
-        "suggest": "\\[\\] __ssax",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __ssub16",
-        "suggest": "\\[\\] __ssub16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uadd16",
-        "suggest": "\\[\\] __uadd16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uasx",
-        "suggest": "\\[\\] __uasx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uhadd16",
-        "suggest": "\\[\\] __uhadd16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uhasx",
-        "suggest": "\\[\\] __uhasx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uhsax",
-        "suggest": "\\[\\] __uhsax",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uhsub16",
-        "suggest": "\\[\\] __uhsub16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uqadd16",
-        "suggest": "\\[\\] __uqadd16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uqasx",
-        "suggest": "\\[\\] __uqasx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __uqsub16",
-        "suggest": "\\[\\] __uqsub16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __usax",
-        "suggest": "\\[\\] __usax",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __usub16",
-        "suggest": "\\[\\] __usub16",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __smladx",
-        "suggest": "\\[\\] __smladx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __smlald",
-        "suggest": "\\[\\] __smlald",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __smlaldx",
-        "suggest": "\\[\\] __smlaldx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __smlsdx",
-        "suggest": "\\[\\] __smlsdx",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __smlsld",
-        "suggest": "\\[\\] __smlsld",
-        "translate": false
-    },
-    {
-        "source": "\\[ \\] __smlsldx",
-        "suggest": "\\[\\] __smlsldx",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] + b\\[0\\] res\\[1\\] = a\\[1\\] + b\\[1\\] res\\[2\\] = a\\[2\\] + b\\[2\\] res\\[3\\] = a\\[3\\] + b\\[3\\]",
-        "suggest": "res\\[0\\]=a\\[0\\] + b\\[0\\] res\\[1\\]=a\\[1\\] + b\\[1\\] res\\[2\\]=a\\[2\\] + b\\[2\\] res\\[3\\]=a\\[3\\] + b\\[3\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] - b\\[0\\] res\\[1\\] = a\\[1\\] - b\\[1\\] res\\[2\\] = a\\[2\\] - b\\[2\\] res\\[3\\] = a\\[3\\] - b\\[3\\]",
-        "suggest": "res\\[0\\]=a\\[0\\]-b\\[0\\] res\\[1\\]=a\\[1\\]-b\\[1\\] res\\[2\\]=a\\[2\\]-b\\[2\\] res\\[3\\]=a\\[3\\]-b\\[3\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] - b\\[0\\] res\\[1\\] = a\\[1\\] - b\\[1\\]",
-        "suggest": "res\\[0\\]=a\\[0\\]-b\\[0\\] res\\[1\\]=a\\[1\\]-b\\[1\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] + b\\[0\\] res\\[1\\] = a\\[1\\] + b\\[1\\]",
-        "suggest": "res\\[0\\]=a\\[0\\] + b\\[0\\] res\\[1\\]=a\\[1\\] + b\\[1\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] - b\\[1\\] res\\[1\\] = a\\[1\\] + b\\[0\\]",
-        "suggest": "res\\[0\\]=a\\[0\\]-b\\[1\\] res\\[1\\]=a\\[1\\] + b\\[0\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] + b\\[1\\] res\\[1\\] = a\\[1\\] - b\\[0\\]",
-        "suggest": "res\\[0\\]=a\\[0\\] + b\\[1\\] res\\[1\\]=a\\[1\\]-b\\[0\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] + b\\[1\\] res\\[1\\] = a\\[1\\] + b\\[0\\]",
-        "suggest": "res\\[0\\]=a\\[0\\] + b\\[1\\] res\\[1\\]=a\\[1\\] + b\\[0\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] + b\\[1\\] res\\[1\\] = a\\[1\\] + b\\[0\\] res\\[2\\] = a\\[2\\] + b\\[2\\] res\\[3\\] = a\\[3\\] + b\\[3\\]",
-        "suggest": "res\\[0\\]=a\\[0\\] + b\\[1\\] res\\[1\\]=a\\[1\\] + b\\[0\\] res\\[2\\]=a\\[2\\] + b\\[2\\] res\\[3\\]=a\\[3\\] + b\\[3\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = GE\\[0\\] ? a\\[0\\] : b\\[0\\] res\\[1\\] = GE\\[1\\] ? a\\[1\\] : b\\[1\\] res\\[2\\] = GE\\[2\\] ? a\\[2\\] : b\\[2\\] res\\[3\\] = GE\\[3\\] ? a\\[3\\] : b\\[3\\]",
-        "suggest": "res\\[0\\]=GE\\[0\\]? a\\[0\\]: b\\[0\\] res\\[1\\]=GE\\[1\\] a\\[1\\]: b\\[1\\] res\\[2\\]=GE\\[2\\] 吗? a\\[2\\]: b\\[2\\] res\\[3\\]=GE\\[3\\]? a\\[3\\]: b\\[3\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = (a\\[0\\] + b\\[0\\]) / 2 res\\[1\\] = (a\\[1\\] + b\\[1\\]) / 2 res\\[2\\] = (a\\[2\\] + b\\[2\\]) / 2 res\\[3\\] = (a\\[3\\] + b\\[3\\]) / 2",
-        "suggest": "res\\[0\\]= (a\\[0\\] + b\\[0\\]) /2 res\\[1\\]= (a\\[1\\] + b\\[1\\]) /2 res\\[2\\]= (a\\[2\\] + b\\[2\\]) /2 res\\[3\\]= (a\\[3\\] + b\\[3\\]) /2",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = (a\\[0\\] + b\\[0\\]) / 2 res\\[1\\] = (a\\[1\\] + b\\[1\\]) / 2",
-        "suggest": "res\\[0\\]= (a\\[0\\] + b\\[0\\]) /2 res\\[1\\]= (a\\[1\\] + b\\[1\\]) /2",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = (a\\[0\\] - b\\[0\\]) / 2 res\\[1\\] = (a\\[1\\] - b\\[1\\]) / 2 res\\[2\\] = (a\\[2\\] - b\\[2\\]) / 2 res\\[3\\] = (a\\[3\\] - b\\[3\\]) / 2",
-        "suggest": "res\\[0\\]= (a\\[0\\]-b\\[0\\]) /2 res\\[1\\]= (a\\[1\\]-b\\[1\\]) /2 res\\[2\\]= (a\\[2\\]-b\\[2\\]) /2 res\\[3\\]= (a\\[3\\]-b\\[3\\]) /2",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = a\\[0\\] - a\\[0\\] res\\[1\\] = a\\[1\\] - a\\[1\\] res\\[2\\] = a\\[2\\] - a\\[2\\] res\\[3\\] = a\\[3\\] - a\\[3\\]",
-        "suggest": "res\\[0\\]=a\\[0\\]-a\\[0\\] res\\[1\\]=a\\[1\\]-a\\[1\\] res\\[2\\]=a\\[2\\]-a\\[2\\] res\\[3\\]=a\\[3\\]-a\\[3\\]",
-        "translate": false
-    },
-    {
-        "source": "res\\[0\\] = (a\\[0\\] - b\\[0\\]) / 2 res\\[1\\] = (a\\[1\\] - b\\[1\\]) / 2",
-        "suggest": "res\\[0\\]= (a\\[0\\]-b\\[0\\]) /2 res\\[1\\]= (a\\[1\\]-b\\[1\\]) /2",
-        "translate": false
-    },
-    {
-        "source": "pub struct float16x4_t(f16, f16, f16, f16);",
-        "suggest": "pub 结构体 float16x4_t(f16, f16, f16, f16);",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_ceqi_d() {",
-        "suggest": "不安全的 fn test_msa_ceqi_d() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_cfcmsa() {",
-        "suggest": "不安全的 fn test_msa_cfcmsa() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_clei_s_d() {",
-        "suggest": "不安全的 fn test_msa_clei_s_d() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_clti_s_d() {",
-        "suggest": "不安全的 fn test_msa_clti_s_d() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_ctcmsa() {}",
-        "suggest": "不安全的 Fn test_msa_ctcmsa() {}",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_fexupl_w() {",
-        "suggest": "不安全的 fn test_msa_fexupl_w() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_fexupr_w() {",
-        "suggest": "不安全的 fn test_msa_fexupr_w() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_ldi_d() {",
-        "suggest": "不安全的 fn test_msa_ldi_d() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_maxi_s_d() {",
-        "suggest": "不安全的 fn test_msa_maxi_s_d() {",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn test_msa_mini_s_d() {",
-        "suggest": "不安全的 fn test_msa_mini_s_d() {",
-        "translate": false
-    },
-    {
-        "source": "pub struct vector_Float16 = f16x8;",
-        "suggest": "pub struct vector_Float16 = f16x8;",
-        "translate": false
-    },
-    {
-        "source": "pub struct vector_signed_long_long = vector_signed_long;",
-        "suggest": "pub 结构体 vector_signed_long_long=vector_signed_long;",
-        "translate": false
-    },
-    {
-        "source": "pub struct vector_unsigned_long_long = vector_unsigned_long;",
-        "suggest": "pub 结构体 vector_unsigned_long_long=vector_unsigned_long;",
-        "translate": false
-    },
-    {
-        "source": "pub struct vector_bool_long_long = vector_bool_long;",
-        "suggest": "pub 结构体 vector_bool_long_long=vector_bool_long;",
-        "translate": false
-    },
-    {
-        "source": "pub struct vector_signed___int128 = i128x1;",
-        "suggest": "pub 结构体 vector_signed___int128=i128x1;",
-        "translate": false
-    },
-    {
-        "source": "pub struct vector_unsigned___int128 = i128x1;",
-        "suggest": "pub 结构体 vector_unsigned___int128=i128x1;",
-        "translate": false
-    },
-    {
-        "source": "2, 3, 6, 7.",
-        "suggest": "2、3、6、7",
-        "translate": false
-    },
-    {
-        "source": "TODO _mm256_stream_load_si256 (__m256i const* mem_addr)",
-        "suggest": "TODO _mm256_stream_load_si256 (__m256i const * mem_addr)",
-        "translate": false
-    },
-    {
-        "source": "msvc: vbroadcasti64x4, linux: vperm",
-        "suggest": "msvc: vbroadcasti64x4，linux: vperm",
-        "translate": false
-    },
-    {
-        "source": "msvc: vbroadcastf32x4, linux: vshuf",
-        "suggest": "msvc: vbroadcastf32x4，linux: vshuf",
-        "translate": false
-    },
-    {
-        "source": "msvc: vbroadcastf32x4, linux: vshu",
-        "suggest": "msvc: vbroadcastf32x4，linux: vshu",
-        "translate": false
-    },
-    {
-        "source": "msvc: vbroadcastf64x4, linux: vperm",
-        "suggest": "msvc: vbroadcastf64x4，linux: vperm",
-        "translate": false
-    },
-    {
-        "source": "msvc: vbroadcastf64x4, linux: vper",
-        "suggest": "msvc: vbroadcastf64x4，linux: vper",
-        "translate": false
-    },
-    {
-        "source": "ord b.extract(0)",
-        "suggest": "奥德 b.extract(0)",
-        "translate": false
-    },
-    {
-        "source": "ord c.extract(0)",
-        "suggest": "奥德 c.extract(0)",
-        "translate": false
-    },
-    {
-        "source": "ord d.extract(0)",
-        "suggest": "奥德 d.extract(0)",
-        "translate": false
-    },
-    {
-        "source": "unord b.extract(0)",
-        "suggest": "下级 b.extract(0)",
-        "translate": false
-    },
-    {
-        "source": "unord c.extract(0)",
-        "suggest": "下级 c.extract(0)",
-        "translate": false
-    },
-    {
-        "source": "unord d.extract(0)",
-        "suggest": "下级 d.extract(0)",
-        "translate": false
-    },
-    {
-        "source": "i.cpuid.iter().any(|c| {",
-        "suggest": "i.cpuid.iter ()。any (| c | {",
-        "translate": false
-    },
-    {
-        "source": "if avx512 { continue }",
-        "suggest": "如果 avx512 { continue }",
-        "translate": false
-    },
-    {
-        "source": "float const * foo => float const* foo",
-        "suggest": "float const *foo => float const* foo",
-        "translate": false
-    },
-    {
-        "source": "const float* foo => float const*",
-        "suggest": "const float *foo => 浮点 const*",
-        "translate": false
-    },
-    {
-        "source": "evtstrm: bool, // 2",
-        "suggest": "evtstrm: bool，//2",
-        "translate": false
-    },
-    {
-        "source": "cpuid: bool, // 11",
-        "suggest": "cpuid: bool，//11",
-        "translate": false
-    },
-    {
-        "source": "jscvt: bool, // 13 fcma: bool, // 14",
-        "suggest": "jscvt: bool，//13 fcma: bool，//14",
-        "translate": false
-    },
-    {
-        "source": "dcpop: bool, // 16 sha3: bool, // 17 sm3: bool, // 18 sm4: bool, // 19",
-        "suggest": "dcpop: bool，//16 sha3: bool，//17 sm3: bool，//18 sm4: bool，//19",
-        "translate": false
-    },
-    {
-        "source": "sha512: bool, // 21",
-        "suggest": "sha512: bool，//21",
-        "translate": false
-    },
-    {
-        "source": "evtstrm: bit::test(auxv.hwcap, 2),",
-        "suggest": "evtstrm: bit::test (auxv.hwcap，2)，",
-        "translate": false
-    },
-    {
-        "source": "cpuid: bit::test(auxv.hwcap, 11),",
-        "suggest": "cpuid: bit::test (auxv.hwcap，11)，",
-        "translate": false
-    },
-    {
-        "source": "jscvt: bit::test(auxv.hwcap, 13), fcma: bit::test(auxv.hwcap, 14),",
-        "suggest": "jscvt: bit::test (auxv.hwcap，13)，fcma: bit::test (auxv.hwcap，14)，",
-        "translate": false
-    },
-    {
-        "source": "dcpop: bit::test(auxv.hwcap, 16), sha3: bit::test(auxv.hwcap, 17), sm3: bit::test(auxv.hwcap, 18), sm4: bit::test(auxv.hwcap, 19),",
-        "suggest": "dcpop: bit::test (auxv.hwcap，16)，sha3: bit::test (auxv.hwcap，17)，sm3: bit::test (auxv.hwcap，18)，sm4: bit::test (auxv.hwcap，18)，sm4: bit::test (auxv。.hwcap，19)，",
-        "translate": false
-    },
-    {
-        "source": "sha512: bit::test(auxv.hwcap, 21),",
-        "suggest": "sha512: bit::test (auxv.hwcap，21)，",
-        "translate": false
-    },
-    {
-        "source": "jscvt: f.has(\"jscvt\"), fcma:",
-        "suggest": "jscvt: f.has(\"jscvt\")，fcma:",
-        "translate": false
-    },
-    {
-        "source": "dcpop: f.has(\"dcpop\"), sha3: f.has(\"sha3\"), sm3: f.has(\"sm3\"), sm4:",
-        "suggest": "dcpop: f.has(\"dcpop\")，sha3: f.has(\"sha3\")，sm3: f.has(\"sm3\")，sm4:",
-        "translate": false
-    },
-    {
-        "source": "EAX = 1, ECX = 0: Queries \"Processor Info and Feature Bits\";",
-        "suggest": "EAX = 1，ECX = 0: 查询 \"Processor Info and Feature Bits\";",
-        "translate": false
-    },
-    {
-        "source": "EAX = 7, ECX = 0: Queries \"Extended Features\";",
-        "suggest": "EAX=7，ECX=0: 查询 \"Extended Features\";",
-        "translate": false
-    },
-    {
-        "source": "unsafe { worker(); }",
-        "suggest": "不安全的 { worker(); }",
-        "translate": false
-    },
-    {
-        "source": "T             H",
-        "suggest": "TH",
-        "translate": false
-    },
-    {
-        "source": "H                 T",
-        "suggest": "H T",
-        "translate": false
-    },
-    {
-        "source": "T I             H",
-        "suggest": "卫生部",
-        "translate": false
-    },
-    {
-        "source": "H         T   I",
-        "suggest": "HTI",
-        "translate": false
-    },
-    {
-        "source": "M M M                         M",
-        "suggest": "MMMM",
-        "translate": false
-    },
-    {
-        "source": "I                   H     T",
-        "suggest": "IHT",
-        "translate": false
-    },
-    {
-        "source": "M M                     M M M M",
-        "suggest": "MMMMMM",
-        "translate": false
-    },
-    {
-        "source": "T   R         H",
-        "suggest": "TRH",
-        "translate": false
-    },
-    {
-        "source": "H         T   R",
-        "suggest": "HTR",
-        "translate": false
-    },
-    {
-        "source": "R     H           T",
-        "suggest": "RHT",
-        "translate": false
-    },
-    {
-        "source": "from: DEFGH....ABC",
-        "suggest": "来自: DEFGH .... ABC",
-        "translate": false
-    },
-    {
-        "source": "to:   ABCDEFGH....",
-        "suggest": "至: ABCDEFGH ....",
-        "translate": false
-    },
-    {
-        "source": "from: FGH....ABCDE",
-        "suggest": "来自: FGH .... ABCDE",
-        "translate": false
-    },
-    {
-        "source": "to:   ...ABCDEFGH.",
-        "suggest": "到: ... ABCDEFGH。",
-        "translate": false
-    },
-    {
-        "source": "from: EFGHI...ABCD or HIJK.ABCDEFG",
-        "suggest": "来自: EFGHI ... ABCD 或 HIJK.ABCDEFG",
-        "translate": false
-    },
-    {
-        "source": "to:   ABCDEFGHI...",
-        "suggest": "至: ABCDEFGHI ...",
-        "translate": false
-    },
-    {
-        "source": "or ABCDEFGHIJK.",
-        "suggest": "或 ABCDEFGHIJK。",
-        "translate": false
-    },
-    {
-        "source": "EF..ABCD ABCDEF..",
-        "suggest": "EF..ABCD ABCDEF ..",
-        "translate": false
-    },
-    {
-        "source": "|<-              processed len   ->| ^- next to check",
-        "suggest": "| <- 处理后的 len -> |^- 检查旁边",
-        "translate": false
-    },
-    {
-        "source": "|<-  deleted cnt     ->|",
-        "suggest": "| <- 删除的 cnt -> |",
-        "translate": false
-    },
-    {
-        "source": "|<-              original_len                          ->| Kept: Elements which predicate returns true on.",
-        "suggest": "| <-original_len -> | 保留: 谓词在其上返回 true 的元素。",
-        "translate": false
-    },
-    {
-        "source": ": |1 ulp|1 ulp|",
-        "suggest": ": | 1 ulp | 1 ulp |",
-        "translate": false
-    },
-    {
-        "source": "unsafe {",
-        "suggest": "不安全 {",
-        "translate": false
-    },
-    {
-        "source": "H         T",
-        "suggest": "H T",
-        "translate": false
-    },
-    {
-        "source": "T   I         H",
-        "suggest": "卫生部",
-        "translate": false
-    },
-    {
-        "source": "T               H",
-        "suggest": "TH",
-        "translate": false
-    },
-    {
-        "source": "H             T",
-        "suggest": "H T",
-        "translate": false
-    },
-    {
-        "source": "T       I     H",
-        "suggest": "卫生部",
-        "translate": false
-    },
-    {
-        "source": "H       T",
-        "suggest": "H T",
-        "translate": false
-    },
-    {
-        "source": "H             T         I",
-        "suggest": "HTI",
-        "translate": false
-    },
-    {
-        "source": "H           T",
-        "suggest": "H T",
-        "translate": false
-    },
-    {
-        "source": "H   T",
-        "suggest": "H T",
-        "translate": false
-    },
-    {
-        "source": "I             H     T",
-        "suggest": "IHT",
-        "translate": false
-    },
-    {
-        "source": "I     H           T",
-        "suggest": "IHT",
-        "translate": false
-    },
-    {
-        "source": "T           H",
-        "suggest": "TH",
-        "translate": false
-    },
-    {
-        "source": "T       R     H",
-        "suggest": "TRH",
-        "translate": false
-    },
-    {
-        "source": "H           T         R",
-        "suggest": "HTR",
-        "translate": false
-    },
-    {
-        "source": "M M                         M M",
-        "suggest": "MMMM",
-        "translate": false
-    },
-    {
-        "source": "H                 T         R",
-        "suggest": "HTR",
-        "translate": false
-    },
-    {
-        "source": "R               H     T",
-        "suggest": "RHT",
-        "translate": false
-    },
-    {
-        "source": "M M M                       M M",
-        "suggest": "MMMMMM",
-        "translate": false
-    },
-    {
-        "source": ":                    |1 ulp|1 ulp|",
-        "suggest": ": | 1 ulp | 1 ulp |",
-        "translate": false
-    },
-    {
-        "source": "unsafe {        core::arch::wasm32::atomic_notify(             LOCKED.as_mut_ptr(),",
-        "suggest": "不安全 {",
-        "translate": false
-    },
-    {
-        "source": "v   1        2    |  2",
-        "suggest": "v 1 2 |2 个",
-        "translate": false
-    },
-    {
-        "source": "T = source_deque_tail;",
-        "suggest": "T=source_deque_tail;",
-        "translate": false
-    },
-    {
-        "source": "H = source_deque_head;",
-        "suggest": "H=source_deque_head;",
-        "translate": false
-    },
-    {
-        "source": "t = drain_tail;",
-        "suggest": "t=drain_tail;",
-        "translate": false
-    },
-    {
-        "source": "h = drain_head",
-        "suggest": "h=drain_head",
-        "translate": false
-    },
-    {
-        "source": "T   t   h   H",
-        "suggest": "高度",
-        "translate": false
-    },
-    {
-        "source": "S . . .",
-        "suggest": "S.。。",
-        "translate": false
-    },
-    {
-        "source": "2 [_ _ A A A A B B _] D . . .",
-        "suggest": "2 [_ _ A A A A B B _] D。。。",
-        "translate": false
-    },
-    {
-        "source": "D .",
-        "suggest": "D.",
-        "translate": false
-    },
-    {
-        "source": ".. S .",
-        "suggest": ".. S。",
-        "translate": false
-    },
-    {
-        "source": "3 [C C _ _ _ B B C C] D . . .",
-        "suggest": "3 [C C _ _ _ B B C C] D。。。",
-        "translate": false
-    },
-    {
-        "source": "3 [C C A A _ _ _ C C] D . . .",
-        "suggest": "3 [C C A A _ _ _ C C] D。。。",
-        "translate": false
-    },
-    {
-        "source": ".",
-        "suggest": "。",
-        "translate": false
-    },
-    {
-        "source": "D . .",
-        "suggest": "D.。",
-        "translate": false
-    },
-    {
-        "source": ".. S . .",
-        "suggest": ".. S。。",
-        "translate": false
-    },
-    {
-        "source": "4 [H A B D _ E F F G] . ..",
-        "suggest": "4 [H A B D _ E F F G]。..",
-        "translate": false
-    },
-    {
-        "source": "T             H A [o o o o o o o . . . . . . . . . ] H T",
-        "suggest": "THA [o o o o o o o . . . . . . . . . ] HT",
-        "translate": false
-    },
-    {
-        "source": "T             H B [. . . o o o o o o o . . . . . . ] H T",
-        "suggest": "泰铢 [. . . o o o o o o o . . . . . . ] HT",
-        "translate": false
-    },
-    {
-        "source": "H                 T C [o o o o o . . . . . . . . . o o ]",
-        "suggest": "宏达 [o o o o o . . . . . . . . . o o ]",
-        "translate": false
-    },
-    {
-        "source": "A Nop",
-        "suggest": "小睡",
-        "translate": false
-    },
-    {
-        "source": "[A o o o o o o . . . . . . .",
-        "suggest": "[噢!。。。。。。",
-        "translate": false
-    },
-    {
-        "source": "M                             M",
-        "suggest": "毫米",
-        "translate": false
-    },
-    {
-        "source": "M M M",
-        "suggest": "MMM",
-        "translate": false
-    },
-    {
-        "source": "(cap + 1 - offset) > (cap + 1 - len) && (len - (cap + 1 - offset)) > (cap + 1 - len)) right block size  >   free space    &&      left block size       >    free space",
-        "suggest": "(上限 + 1 - 偏移) > (上限 + 1-len) && (len- (上限 + 1 - 偏移) ) > (上限 + 1-len) ) 右块大小 > 可用空间 && 左块大小 > 可用空间",
-        "translate": false
-    },
-    {
-        "source": "AsRef<str> for Drain<'a> { fn as_ref(&self) -> &str {",
-        "suggest": "AsRef<str> for Drain<'a> {fn as_ref(&self) -> &str {",
-        "translate": false
-    },
-    {
-        "source": "AsRef<[u8]> for Drain<'a> { fn as_ref(&self) -> &[u8] {        self.as_str().as_bytes() } }",
-        "suggest": "用于 Drain<'a> 的 AsRef<[u8]> { fn as_ref(&self) -> &[u8] { self.as_str().as_bytes() }}",
-        "translate": false
-    },
-    {
-        "source": "--no_https avoids javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: No trusted certificate found",
-        "suggest": "--no_https 避免 javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: 未找到可信证书",
-        "translate": false
-    },
-    {
-        "source": "?Sized> AsRef<U> for D { fn as_ref(&self) -> &U {        self.deref().as_ref() } }",
-        "suggest": "大小 > AsRef<U> for D { fn as_ref(&self) -> &U { self.deref().as_ref() }}",
-        "translate": false
-    },
-    {
-        "source": "?Sized> AsMut<U> for D { fn as_mut(&mut self) -> &mut U {        self.deref_mut().as_mut() } }",
-        "suggest": "大小 > AsMut<U> for D { fn as_mut(&mut self) -> &mut U { self.deref_mut().as_mut() }}",
-        "translate": false
-    },
-    {
-        "source": "x        lsb",
-        "suggest": "l",
-        "translate": false
-    },
-    {
-        "source": "q     trunc.",
-        "suggest": "q 截断",
-        "translate": false
-    },
-    {
-        "source": "|<---- buf ---->|  zeroes   |     exp",
-        "suggest": "| <----buf--- -> | 零 | 经验值",
-        "translate": false
-    },
-    {
-        "source": "10^exp    10^(exp-buf.len())   10^(exp-buf.len()-nzeroes)",
-        "suggest": "10 ^ exp 10 ^ (exp-buf.len () ) 10 ^ (exp-buf.len () -nzeroes)",
-        "translate": false
-    },
-    {
-        "source": "|1 ulp|1 ulp|                 |1 ulp|1 ulp|                 |1 ulp|1 ulp|",
-        "suggest": "| 1 ulp | 1 ulp || 1 ulp | 1 ulp || 1 ulp | 1 ulp |",
-        "translate": false
-    },
-    {
-        "source": ":<--------- 10^kappa ---------->:",
-        "suggest": ": <---------10 ^ kappa-- ------- -> :",
-        "translate": false
-    },
-    {
-        "source": "|1 ulp|1 ulp|                     :",
-        "suggest": "| 1 ulp | 1 ulp |:",
-        "translate": false
-    },
-    {
-        "source": ":<------- remainder ------>|   :",
-        "suggest": ": <------- 余数 --- -- -> |:",
-        "translate": false
-    },
-    {
-        "source": ":<--------- 10^kappa --------->:",
-        "suggest": ": <---------10 ^ kappa-- ------ -> :",
-        "translate": false
-    },
-    {
-        "source": "UTF8-1      = %x00-7F UTF8-2      = %xC2-DF UTF8-tail UTF8-3      = %xE0 %xA0-BF UTF8-tail / %xE1-EC 2( UTF8-tail ) / %xED %x80-9F UTF8-tail / %xEE-EF 2( UTF8-tail ) UTF8-4      = %xF0 %x90-BF 2( UTF8-tail ) / %xF1-F3 3( UTF8-tail ) / %xF4 %x80-8F 2( UTF8-tail )",
-        "suggest": "UTF8-1=%x00-7F UTF8-2=%xC2-DF UTF8 尾 UTF8-3= %xE0%xA0-BF UTF8 尾 /%xE1-EC 2( UTF8-tail )/%xED%x80-9F UTF8 尾 /%xEE-EF 2( UTF8-tail ) UTF8-4= %xF0%x90-BF 2( UTF8-tail )/%xF1-F3 3( UTF8-tail )/%xF4%x80-8F 2( UTF8-tail )",
-        "translate": false
-    },
-    {
-        "source": "(upper, # items in lowers)",
-        "suggest": "(上方，下方的 #项)",
-        "translate": false
-    },
-    {
-        "source": "lengths 0x00..0x7f are encoded as 00, 01, ..., 7e, 7f lengths 0x80..0x7fff are encoded as 80 80, 80 81, ..., ff fe, ff ff",
-        "suggest": "长度 0x00..0x7f 编码为 00、01，...，7e，7f 长度 0x80..0x7fff 编码为 80 80、80 81，...，ff fe，ff ff",
-        "translate": false
-    },
-    {
-        "source": "fn check(x: u16, singletonuppers: &[(u8, u8)], singletonlowers: &[u8], normal: &[u8]) -> bool { let xupper = (x >> 8) as u8;",
-        "suggest": "fn check (x: u16，singletonuppers: &[(u8，u8) ]，singletonlowers: &[u8]，normal: &[u8]) -> bool {令 xupper= (x>> 8) 为 u8;",
-        "translate": false
-    },
-    {
-        "source": "let mut lowerstart = 0;",
-        "suggest": "令 mut lowerstart=0;",
-        "translate": false
-    },
-    {
-        "source": "for &(upper, lowercount) in singletonuppers { let lowerend = lowerstart + lowercount as usize;",
-        "suggest": "对于单例 upper 中的 & (upper，lowercount) {让 lowerend=lowerstart + lowercount 作为 usize;",
-        "translate": false
-    },
-    {
-        "source": "if xupper == upper { for &lower in &singletonlowers[lowerstart..lowerend] { if lower == x as u8 { return false; } } } else if xupper < upper { break; } lowerstart = lowerend;",
-        "suggest": "如果 xupper == 上限 { for &lower in &singletonlowers[lowerstart..lowerend] { if lower == x as u8 { return false; }}} 否则，如果 xupper < 上限 { break; }",
-        "translate": false
-    },
-    {
-        "source": "let mut x = x as i32;",
-        "suggest": "让 mut x=x 作为 i32;",
-        "translate": false
-    },
-    {
-        "source": "let mut normal = normal.iter().cloned();",
-        "suggest": "让 mut normal=normal.iter ()。cloned () ;",
-        "translate": false
-    },
-    {
-        "source": "let mut current = true;",
-        "suggest": "令 mut current=true;",
-        "translate": false
-    },
-    {
-        "source": "while let Some(v) = normal.next() { let len = if v & 0x80 != 0 { ((v & 0x7f) as i32) << 8 | normal.next().unwrap() as i32 } else { v as i32 };",
-        "suggest": "而让 Some(v) = normal.next() { let len = if v & 0x80 != 0 { ((v & 0x7f) as i32) << 8 | normal.next().unwrap() as i32 } 否则 { v as i32 };",
-        "translate": false
-    },
-    {
-        "source": "if x < 0 { break; } current = !current;",
-        "suggest": "如果 x <0 { break; } 当前 = !current;",
-        "translate": false
-    },
-    {
-        "source": "} current }",
-        "suggest": "} 当前的}",
-        "translate": false
-    },
-    {
-        "source": "fn is_printable(x: char) -> bool { let x = x as u32;",
-        "suggest": "fn is_printable(x: char) -> bool {令 x=x 为 u32;",
-        "translate": false
-    },
-    {
-        "source": "let lower = x as u16;",
-        "suggest": "让 lower=x 作为 u16;",
-        "translate": false
-    },
-    {
-        "source": "if x < 0x10000 {",
-        "suggest": "如果 x <0x10000 {",
-        "translate": false
-    },
-    {
-        "source": "} else if x < 0x20000 {",
-        "suggest": "} 如果 x <0x20000 {",
-        "translate": false
-    },
-    {
-        "source": "} else {",
-        "suggest": "} 别的 {",
-        "translate": false
-    },
-    {
-        "source": "true }",
-        "suggest": "真的}",
-        "translate": false
-    },
-    {
-        "source": "'A'    '9'    '.'    ' '",
-        "suggest": "'A' '9' '.' '",
-        "translate": false
-    },
-    {
-        "source": "unsafe { ptr::write(&mut res as *mut _, 42); } res } const ALIGNED: i32 = write_aligned();",
-        "suggest": "不安全的 { ptr::write(&mut res as *mut _, 42); } res} const ALIGNED: i32 = write_aligned();",
-        "translate": false
-    },
-    {
-        "source": "} two_aligned } const UNALIGNED: [u16; 2] = write_unaligned();",
-        "suggest": "} two_aligned} const unaligned: [u16; 2] = write_unaligned();",
-        "translate": false
-    },
-    {
-        "source": "fn mut_ptr_write() { const fn aligned() -> i32 {",
-        "suggest": "fn mut_ptr_write() {const fn aligned() -> i32 {",
-        "translate": false
-    },
-    {
-        "source": "unsafe { (&mut res as *mut i32).write(42); } res } const ALIGNED: i32 = aligned();",
-        "suggest": "不安全的 { (&mut res as *mut i32).write(42); } res} const ALIGNED: i32 = aligned();",
-        "translate": false
-    },
-    {
-        "source": "unaligned_ptr.write_unaligned(u16::from_ne_bytes([0x23, 0x45]));",
-        "suggest": "unaligned_ptr.write_unaligned (u16::from_ne_bytes ([0x23，0x45]) ) ;",
-        "translate": false
-    },
-    {
-        "source": "a            b              c              d              e              a              b              c              d              EOF",
-        "suggest": "abcdeabcd EOF",
-        "translate": false
-    },
-    {
-        "source": "d            c              b              a            e                d              c              b              a             EOF",
-        "suggest": "dcbaedcba EOF",
-        "translate": false
-    },
-    {
-        "source": "creation mode           | read  | write | read-write | append | read-append |",
-        "suggest": "创建模式 | 阅读 | 写读写追加 | 读取追加 |",
-        "translate": false
-    },
-    {
-        "source": "not set (open existing) |   X   |   X   |     X      |   X    |      X      | create                  |       |   X   |     X      |   X    |      X      | truncate                |       |   X   |     X      |        |             | create and truncate     |       |   X   |     X      |        |             | create_new              |       |   X   |     X      |   X    |      X      |",
-        "suggest": "未设置 (打开现有) |X |X |X |X |X | 创建 || X |X |X |X | 截断 | X |X ||| 创建和截断 || X |X |||create_new ||X |X |X |X |",
-        "translate": false
-    },
-    {
-        "source": "recv() queue.push(t)                       return if queue.pop() if increment() == -1                deschedule { wakeup()                            if decrement() > 0",
-        "suggest": "recv() queue.push(t) 返回 queue.pop() 如果 increment() == -1 调度 {wakeup() 如果 decrement()> 0",
-        "translate": false
-    },
-    {
-        "source": "next --->",
-        "suggest": "下一个 -- ->",
-        "translate": false
-    },
-    {
-        "source": "|prev_tail|           |head_tail|",
-        "suggest": "| prev_tail || head_tail |",
-        "translate": false
-    },
-    {
-        "source": "next ---> /-----\\ next --->",
-        "suggest": "下一个 -- -> /-----\\ 下一个 -- ->",
-        "translate": false
-    },
-    {
-        "source": "|prev_tail|           |entry|           |head_tail|",
-        "suggest": "| prev_tail || 输入 || head_tail |",
-        "translate": false
-    },
-    {
-        "source": "|head_tail|           |first|           |second|",
-        "suggest": "| head_tail || 第一 || 秒 |",
-        "translate": false
-    },
-    {
-        "source": "|head_tail|           |second|",
-        "suggest": "| head_tail || 秒 |",
-        "translate": false
-    },
-    {
-        "source": "|prev|           |entry|           |next|",
-        "suggest": "| 上一页 || 输入 || 下一个 |",
-        "translate": false
-    },
-    {
-        "source": "|prev|           |next|",
-        "suggest": "| 上一页 || 下一个 |",
-        "translate": false
-    },
-    {
-        "source": "timeout );",
-        "suggest": "超时 ) ;",
-        "translate": false
-    },
-    {
-        "source": "unsafe {        core::arch::wasm32::atomic_notify( LOCKED.as_mut_ptr(),",
-        "suggest": "不安全 {",
-        "translate": false
-    },
-    {
-        "source": "res = abs(a\\[0\\] - b\\[0\\]) + abs(a\\[1\\] - b\\[1\\]) +",
-        "suggest": "分辨率 = abs(a\\[0\\] - b\\[0\\]) + abs(a\\[1\\] - b\\[1\\]) +",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_NORM_1_2     // interval [1, 2) _MM_MANT_NORM_p5_2    // interval [0.5, 2) _MM_MANT_NORM_p5_1    // interval [0.5, 1) _MM_MANT_NORM_p75_1p5 // interval [0.75, 1.5) The sign is determined by sc which can take the following values:",
-        "suggest": "_MM_MANT_NORM_1_2// 间隔 [1，2) _MM_MANT_NORM_p5_2// 间隔 [0.5，2) _MM_MANT_NORM_p5_1// 间隔 [0.5，1) _MM_MANT_NORM_p75_1p5// 间隔 [0.75，1.5) 该符号由 sc 决定，它可以采用以下值:",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_SIGN_src     // sign = sign(src) _MM_MANT_SIGN_zero    // sign = 0 _MM_MANT_SIGN_nan     // dst = NaN if sign(src) = 1",
-        "suggest": "_MM_MANT_SIGN_src// 符号 = sign(src)_MM_MANT_SIGN_zero// 符号 = 0 _MM_MANT_SIGN_nan// 如果 sign(src) =1 则 dst=NaN",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_NORM_1_2     // interval [1, 2)",
-        "suggest": "_MM_MANT_NORM_1_2// 间隔 [1、2)",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_NORM_p5_2    // interval [0.5, 2)",
-        "suggest": "_MM_MANT_NORM_p5_2// 间隔 [0.5，2)",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_NORM_p5_1    // interval [0.5, 1)",
-        "suggest": "_MM_MANT_NORM_p5_1// 间隔 [0.5，1)",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_NORM_p75_1p5 // interval [0.75, 1.5)",
-        "suggest": "_MM_MANT_NORM_p75_1p5// 间隔 [0.75，1.5)",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_SIGN_src     // sign = sign(src)",
-        "suggest": "_MM_MANT_SIGN_src// 符号 = sign(src)",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_SIGN_zero    // sign = 0",
-        "suggest": "_MM_MANT_SIGN_zero// 符号 = 0",
-        "translate": false
-    },
-    {
-        "source": "_MM_MANT_SIGN_nan     // dst = NaN if sign(src) = 1",
-        "suggest": "_MM_MANT_SIGN_nan// 如果 sign(src) =1 则 dst=NaN",
-        "translate": false
-    },
-    {
-        "source": "(_MM_FROUND_TO_NEAREST_INT |_MM_FROUND_NO_EXC) // round to nearest, and suppress exceptions (_MM_FROUND_TO_NEG_INF |_MM_FROUND_NO_EXC)     // round down, and suppress exceptions (_MM_FROUND_TO_POS_INF |_MM_FROUND_NO_EXC)     // round up, and suppress exceptions (_MM_FROUND_TO_ZERO |_MM_FROUND_NO_EXC)        // truncate, and suppress exceptions _MM_FROUND_CUR_DIRECTION // use MXCSR.RC;",
-        "suggest": "(_MM_FROUND_TO_NEAREST_INT | _MM_FROUND_NO_EXC) // 舍入到最接近的位置，并抑制异常 (_MM_FROUND_TO_NEG_INF | _MM_FROUND_NO_EXC) // 向下取整并抑制异常 (_MM_FROUND_TO_POS_INF | _MM_FROUNDS 和 //_抑制异常 _MM_FROUND_CUR_DIRECTION// 使用 MXCSR.RC;",
-        "translate": false
-    },
-    {
-        "source": "core_arch::{simd::*, simd_llvm::*, x86::*}, mem::transmute, };",
-        "suggest": "core_arch::{simd::*，simd_llvm::*，x86::*}，mem::transmute，};",
-        "translate": false
-    },
-    {
-        "source": "fn type_to_native_type(t: &str) -> &str { match t { \"int8x8_t\" => \"i8\", \"int8x16_t\" => \"i8\", \"int16x4_t\" => \"i16\", \"int16x8_t\" => \"i16\", \"int32x2_t\" => \"i32\", \"int32x4_t\" => \"i32\", \"int64x1_t\" => \"i64\", \"int64x2_t\" => \"i64\", \"uint8x8_t\" => \"u8\", \"uint8x16_t\" => \"u8\", \"uint16x4_t\" => \"u16\", \"uint16x8_t\" => \"u16\", \"uint32x2_t\" => \"u32\", \"uint32x4_t\" => \"u32\", \"uint64x1_t\" => \"u64\", \"uint64x2_t\" => \"u64\", \"float16x4_t\" => \"f16\", \"float16x8_t\" => \"f16\", \"float32x2_t\" => \"f32\", \"float32x4_t\" => \"f32\", \"float64x1_t\" => \"f64\", \"float64x2_t\" => \"f64\", \"poly64x1_t\" => \"i64\", \"poly64x2_t\" => \"i64\", _ => panic!(\"unknown type: {}\", t), } }",
-        "suggest": "fn type_to_native_type (t: &str) -> &str { match t { \"int8x8_t\" => \"i8\", \"int8x16_t\" => \"i8\", \"int16x4_t\" => \"i16\", \"int16x8_t\" => \"i16\", \"int32x2_t\" => \"i32\", \"int32x4_t\" => \"i32\", \"int64x1_t\" => \"i64\", \"int64x2_t\" => \"i64\", \"uint8x8_t\" => \"u8\", \"uint8x16_t\" => \"u8\", \"uint16x4_t\" => \"u16\", \"uint16x8_t\" => \"u16\", \"uint32x2_t\" => \"u32\", \"uint32x4_t\" => \"u32\", \"uint64x1_t\" => \"u64\", \"uint64x2_t\" => \"u64\", \"float16x4_t\" => \"f16\", \"float16x8_t\" => \"f16\", \"float32x2_t\" => \"f32\", \"float32x4_t\" => \"f32\", \"float64x1_t\" => \"f64\", \"float64x2_t\" => \"f64\", \"poly64x1_t\" => \"i64\", \"poly64x2_t\" => \"i64\", _ => panic!(\"unknown type: {}\", t), }}",
-        "translate": false
-    },
-    {
-        "source": "ab cd ef     $instr..",
-        "suggest": "ab cd ef $ instr ..",
-        "translate": false
-    },
-    {
-        "source": "00 12          # this line os optional",
-        "suggest": "00 12# 此行 os 可选",
-        "translate": false
-    },
-    {
-        "source": "mips-*gnu* | mipsel-*gnu*) export RUSTFLAGS=\"${RUSTFLAGS} -C target-feature=+msa,+fp64,+mips32r5\" cargo_test \"--release\"",
-        "suggest": "mips-*gnu* |mipsel-*gnu*) export RUSTFLAGS=`$ {RUSTFLAGS} -C target-feature=+ msa，+ fp64，+ mips32r5` cargo_test \"--release\"",
-        "translate": false
-    },
-    {
-        "source": "if rustup component add clippy-preview ; then cargo clippy -V cargo clippy --all -- -D clippy::pedantic fi",
-        "suggest": "如果 rustup 组件添加 clippy-preview; 然后 cargo clippy -V cargo clippy-- all--D clippy::pedantic fi",
-        "translate": false
-    },
-    {
-        "source": "#[macro_use] extern crate stdarch;",
-        "suggest": "#[macro_use] extern crate stdarch;",
-        "translate": false
-    },
-    {
-        "source": "31, 5 (May. 1996),",
-        "suggest": "31, 5 (1996 年 5 月),",
-        "translate": false
-    },
-    {
-        "source": "45, 6 (June 2010),",
-        "suggest": "45、6 (2010 年 6 月)，",
-        "translate": false
-    },
-    {
-        "source": "&Result<T: Deref, E>::Ok(T).as_deref() -> Result<&T::Deref::Target, &E>::Ok(&*T)",
-        "suggest": "& 结果 <T: Deref, E>::Ok (T).as_deref () -> 结果 <&T::Target,&E>::Ok (&*T)",
-        "translate": false
-    },
-    {
-        "source": "&Result<T: Deref, E>::Err(T).as_deref() -> Result<&T::Deref::Target, &E>::Err(&*E)",
-        "suggest": "& 结果 <T: Deref, E>::Err (T).as_deref () -> 结果 <&T::Target,&E>::Err (&*E)",
-        "translate": false
-    },
-    {
-        "source": "FIXME vmovntpd",
-        "suggest": "修复 vmovntpd",
-        "translate": false
-    },
-    {
-        "source": "200, )\"",
-        "suggest": "200,)\"",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_loadu_epi16`] //need i1",
-        "suggest": "[`_mm512_mask_loadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_loadu_epi16`] //need i1",
-        "suggest": "[`_mm512_maskz_loadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_loadu_epi16`] //need i1",
-        "suggest": "[`_mm_mask_loadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_loadu_epi16`] //need i1",
-        "suggest": "[`_mm_maskz_loadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_loadu_epi16`] //need i1",
-        "suggest": "[`_mm256_mask_loadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_loadu_epi16`] //need i1",
-        "suggest": "[`_mm256_maskz_loadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_loadu_epi8`] //need i1",
-        "suggest": "[`_mm512_mask_loadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_loadu_epi8`] //need i1",
-        "suggest": "[`_mm512_maskz_loadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_loadu_epi8`] //need i1",
-        "suggest": "[`_mm_mask_loadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_loadu_epi8`] //need i1",
-        "suggest": "[`_mm_maskz_loadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_loadu_epi8`] //need i1",
-        "suggest": "[`_mm256_mask_loadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_loadu_epi8`] //need i1",
-        "suggest": "[`_mm256_maskz_loadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_storeu_epi16`] //need i1",
-        "suggest": "[`_mm_mask_storeu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_storeu_epi16`] //need i1",
-        "suggest": "[`_mm256_mask_storeu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_storeu_epi8`] //need i1",
-        "suggest": "[`_mm512_mask_storeu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_storeu_epi8`] //need i1",
-        "suggest": "[`_mm_mask_storeu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_storeu_epi8`] //need i1",
-        "suggest": "[`_mm256_mask_storeu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i32gather_epi32`] //need i1",
-        "suggest": "[`_mm_mmask_i32gather_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i32gather_epi32`] //need i1",
-        "suggest": "[`_mm256_mmask_i32gather_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i32gather_epi64`] //need i1",
-        "suggest": "[`_mm_mmask_i32gather_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i32gather_epi64`] //need i1",
-        "suggest": "[`_mm256_mmask_i32gather_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i32gather_ps`] //need i1",
-        "suggest": "[`_mm_mmask_i32gather_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i32gather_ps`] //need i1",
-        "suggest": "[`_mm256_mmask_i32gather_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i32gather_pd`] //need i1",
-        "suggest": "[`_mm_mmask_i32gather_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i32gather_pd`] //need i1",
-        "suggest": "[`_mm256_mmask_i32gather_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i64gather_epi32`] //need i1",
-        "suggest": "[`_mm_mmask_i64gather_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i64gather_epi32`] //need i1",
-        "suggest": "[`_mm256_mmask_i64gather_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i64gather_epi64`] //need i1",
-        "suggest": "[`_mm_mmask_i64gather_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i64gather_epi64`] //need i1",
-        "suggest": "[`_mm256_mmask_i64gather_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i64gather_ps`] //need i1",
-        "suggest": "[`_mm_mmask_i64gather_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i64gather_ps`] //need i1",
-        "suggest": "[`_mm256_mmask_i64gather_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mmask_i64gather_pd`] //need i1",
-        "suggest": "[`_mm_mmask_i64gather_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mmask_i64gather_pd`] //need i1",
-        "suggest": "[`_mm256_mmask_i64gather_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32extgather_epi32`] //not in llvm",
-        "suggest": "[`_mm512_i32extgather_epi32`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32extgather_epi32`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32extgather_epi32`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32extgather_ps`] // not in llvm",
-        "suggest": "[`_mm512_i32extgather_ps`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32extgather_ps`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32extgather_ps`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32loextgather_epi64`] //not in llvm",
-        "suggest": "[`_mm512_i32loextgather_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32loextgather_epi64`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32loextgather_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32loextgather_pd`] //not in llvm",
-        "suggest": "[`_mm512_i32loextgather_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32loextgather_pd`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32loextgather_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32logather_epi64`] //not in llvm",
-        "suggest": "[`_mm512_i32logather_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32logather_epi64`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32logather_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32logather_pd`] //not in llvm",
-        "suggest": "[`_mm512_i32logather_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32logather_pd`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32logather_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i32scatter_epi32`] //need i1",
-        "suggest": "[`_mm_i32scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i32scatter_epi32`] // need i1",
-        "suggest": "[`_mm_mask_i32scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i32scatter_epi32`] //need i1",
-        "suggest": "[`_mm256_i32scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i32scatter_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_i32scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i32scatter_epi64`]//need i1",
-        "suggest": "[`_mm_i32scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i32scatter_epi64`] //need i1",
-        "suggest": "[`_mm_mask_i32scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i32scatter_epi64`] //need i1",
-        "suggest": "[`_mm256_i32scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i32scatter_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_i32scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i32scatter_ps`] //need i1",
-        "suggest": "[`_mm_i32scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i32scatter_ps`] //need i1",
-        "suggest": "[`_mm_mask_i32scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i32scatter_ps`] //need i1",
-        "suggest": "[`_mm256_i32scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i32scatter_ps`] //need i1",
-        "suggest": "[`_mm256_mask_i32scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i32scatter_pd`] //need i1",
-        "suggest": "[`_mm_i32scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i32scatter_pd`] //need i1",
-        "suggest": "[`_mm_mask_i32scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i32scatter_pd`] //need i1",
-        "suggest": "[`_mm256_i32scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i32scatter_pd`] //need i1",
-        "suggest": "[`_mm256_mask_i32scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i64scatter_epi32`] //need i1",
-        "suggest": "[`_mm_i64scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i64scatter_epi32`] //need i1",
-        "suggest": "[`_mm_mask_i64scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i64scatter_epi32`] //need i1",
-        "suggest": "[`_mm256_i64scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i64scatter_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_i64scatter_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i64scatter_epi64`] //need i1",
-        "suggest": "[`_mm_i64scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i64scatter_epi64`] //need i1",
-        "suggest": "[`_mm_mask_i64scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i64scatter_epi64`] //need i1",
-        "suggest": "[`_mm256_i64scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i64scatter_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_i64scatter_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i64scatter_ps`] //need i1",
-        "suggest": "[`_mm_i64scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i64scatter_ps`] //need i1",
-        "suggest": "[`_mm_mask_i64scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i64scatter_ps`] //need i1",
-        "suggest": "[`_mm256_i64scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i64scatter_ps`] //need i1",
-        "suggest": "[`_mm256_mask_i64scatter_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_i64scatter_pd`] //need i1",
-        "suggest": "[`_mm_i64scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_i64scatter_pd`] //need i1",
-        "suggest": "[`_mm_mask_i64scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_i64scatter_pd`] //need i1",
-        "suggest": "[`_mm256_i64scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_i64scatter_pd`] //need i1",
-        "suggest": "[`_mm256_mask_i64scatter_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32extscatter_epi32`] //not in llvm",
-        "suggest": "[`_mm512_i32extscatter_epi32`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32extscatter_epi32`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32extscatter_epi32`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32extscatter_ps`] //not in llvm",
-        "suggest": "[`_mm512_i32extscatter_ps`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32extscatter_ps`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32extscatter_ps`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32loextscatter_epi64`] //not in llvm",
-        "suggest": "[`_mm512_i32loextscatter_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32loextscatter_epi64`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32loextscatter_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32loextscatter_pd`] //not in llvm",
-        "suggest": "[`_mm512_i32loextscatter_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32loextscatter_pd`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32loextscatter_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32loscatter_epi64`] //not in llvm",
-        "suggest": "[`_mm512_i32loscatter_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32loscatter_epi64`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32loscatter_epi64`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_i32loscatter_pd`] //not in llvm",
-        "suggest": "[`_mm512_i32loscatter_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_i32loscatter_pd`] //not in llvm",
-        "suggest": "[`_mm512_mask_i32loscatter_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_compressstoreu_epi32`] //need i1",
-        "suggest": "[`_mm512_mask_compressstoreu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_compressstoreu_epi32`] //need i1",
-        "suggest": "[`_mm_mask_compressstoreu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_compressstoreu_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_compressstoreu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_compressstoreu_epi64`] //need i1",
-        "suggest": "[`_mm512_mask_compressstoreu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_compressstoreu_epi64`] //need i1",
-        "suggest": "[`_mm_mask_compressstoreu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_compressstoreu_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_compressstoreu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_compressstoreu_ps`] //need i1",
-        "suggest": "[`_mm512_mask_compressstoreu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_compressstoreu_ps`] //need i1",
-        "suggest": "[`_mm_mask_compressstoreu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_compressstoreu_ps`] //need i1",
-        "suggest": "[`_mm256_mask_compressstoreu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_compressstoreu_pd`] //need i1",
-        "suggest": "[`_mm512_mask_compressstoreu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_compressstoreu_pd`] //need i1",
-        "suggest": "[`_mm_mask_compressstoreu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_compressstoreu_pd`] //need i1",
-        "suggest": "[`_mm256_mask_compressstoreu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_expandloadu_epi32`] //need i1",
-        "suggest": "[`_mm512_mask_expandloadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_expandloadu_epi32`] //need i1",
-        "suggest": "[`_mm512_maskz_expandloadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_expandloadu_epi32`] //need i1",
-        "suggest": "[`_mm_mask_expandloadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_expandloadu_epi32`] //need i1",
-        "suggest": "[`_mm_maskz_expandloadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_expandloadu_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_expandloadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_expandloadu_epi32`] //need i1",
-        "suggest": "[`_mm256_maskz_expandloadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_expandloadu_epi64`] //need i1",
-        "suggest": "[`_mm512_mask_expandloadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_expandloadu_epi64`] //need i1",
-        "suggest": "[`_mm512_maskz_expandloadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_expandloadu_epi64`] //need i1",
-        "suggest": "[`_mm_mask_expandloadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_expandloadu_epi64`] //need i1",
-        "suggest": "[`_mm_maskz_expandloadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_expandloadu_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_expandloadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_expandloadu_epi64`] //need i1",
-        "suggest": "[`_mm256_maskz_expandloadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_expandloadu_ps`] //need i1",
-        "suggest": "[`_mm512_mask_expandloadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_expandloadu_ps`] //need i1",
-        "suggest": "[`_mm512_maskz_expandloadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_expandloadu_ps`] //need i1",
-        "suggest": "[`_mm_mask_expandloadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_expandloadu_ps`] //need i1",
-        "suggest": "[`_mm_maskz_expandloadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_expandloadu_ps`] //need i1",
-        "suggest": "[`_mm256_mask_expandloadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_expandloadu_ps`] //need i1",
-        "suggest": "[`_mm256_maskz_expandloadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_expandloadu_pd`] //need i1",
-        "suggest": "[`_mm512_mask_expandloadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_expandloadu_pd`] //need i1",
-        "suggest": "[`_mm512_maskz_expandloadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_expandloadu_pd`] //need i1",
-        "suggest": "[`_mm_mask_expandloadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_expandloadu_pd`] //need i1",
-        "suggest": "[`_mm_maskz_expandloadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_expandloadu_pd`] //need i1",
-        "suggest": "[`_mm256_mask_expandloadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_expandloadu_pd`] //need i1",
-        "suggest": "[`_mm256_maskz_expandloadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_svml_round_pd`] //not in llvm",
-        "suggest": "[`_mm512_svml_round_pd`] // 不在 llvm 中",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_load_epi32`] //need i1",
-        "suggest": "[`_mm512_mask_load_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_load_epi32`] //need i1",
-        "suggest": "[`_mm512_maskz_load_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_load_epi32`] //need i1",
-        "suggest": "[`_mm_mask_load_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_epi32`] //need i1",
-        "suggest": "[`_mm_maskz_load_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_load_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_load_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_load_epi32`] //need i1",
-        "suggest": "[`_mm256_maskz_load_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_load_epi64`] //need i1",
-        "suggest": "[`_mm512_mask_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_load_epi64`] //need i1",
-        "suggest": "[`_mm512_maskz_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_load_epi64`] //need i1",
-        "suggest": "[`_mm_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_load_epi64`] //need i1",
-        "suggest": "[`_mm_mask_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_epi64`] //need i1",
-        "suggest": "[`_mm_maskz_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_load_epi64`] //need i1",
-        "suggest": "[`_mm256_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_load_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_load_epi64`] //need i1",
-        "suggest": "[`_mm256_maskz_load_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_load_ps`] //need i1",
-        "suggest": "[`_mm512_mask_load_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_load_ps`] //need i1",
-        "suggest": "[`_mm512_maskz_load_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_ps`] //need i",
-        "suggest": "[`_mm_maskz_load_ps`] // 需要我",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_load_ps`] //need i1",
-        "suggest": "[`_mm_mask_load_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_ps`] //need i1",
-        "suggest": "[`_mm_maskz_load_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_load_ps`] //need i1",
-        "suggest": "[`_mm256_mask_load_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_load_ps`] //need i1",
-        "suggest": "[`_mm256_maskz_load_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_load_pd`] //need i1",
-        "suggest": "[`_mm512_mask_load_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_load_pd`] //need i1",
-        "suggest": "[`_mm512_maskz_load_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_load_pd`] //need i1",
-        "suggest": "[`_mm_mask_load_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_pd`] //need i1",
-        "suggest": "[`_mm_maskz_load_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_load_pd`] //need i1",
-        "suggest": "[`_mm256_mask_load_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_load_pd`] //need i1",
-        "suggest": "[`_mm256_maskz_load_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_loadu_epi32`] //need i1",
-        "suggest": "[`_mm512_mask_loadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_loadu_epi32`] //need i1",
-        "suggest": "[`_mm_mask_loadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_loadu_epi32`] //need i1",
-        "suggest": "[`_mm_maskz_loadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_loadu_epi32`] //need i1",
-        "suggest": "[`_mm512_maskz_loadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_loadu_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_loadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_loadu_epi32`] //need i1",
-        "suggest": "[`_mm256_maskz_loadu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_loadu_epi64`] //need i1",
-        "suggest": "[`_mm512_mask_loadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_loadu_epi64`] //need i1",
-        "suggest": "[`_mm512_maskz_loadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_loadu_epi64`] //need i1",
-        "suggest": "[`_mm_mask_loadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_loadu_epi64`] //need i1",
-        "suggest": "[`_mm_maskz_loadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_loadu_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_loadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_loadu_epi64`] //need i1",
-        "suggest": "[`_mm256_maskz_loadu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_loadu_ps`] //need i1",
-        "suggest": "[`_mm512_mask_loadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_loadu_ps`] //need i1",
-        "suggest": "[`_mm512_maskz_loadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_loadu_ps`] //need i1",
-        "suggest": "[`_mm_mask_loadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_loadu_ps`] //need i1",
-        "suggest": "[`_mm_maskz_loadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_loadu_ps`] //need i1",
-        "suggest": "[`_mm256_mask_loadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_loadu_ps`] //need i1",
-        "suggest": "[`_mm256_maskz_loadu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_loadu_pd`] //need i1",
-        "suggest": "[`_mm512_mask_loadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_loadu_pd`] //need i1",
-        "suggest": "[`_mm512_maskz_loadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_loadu_pd`] //need i1",
-        "suggest": "[`_mm_mask_loadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_loadu_pd`] //need i1",
-        "suggest": "[`_mm_maskz_loadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_loadu_pd`] //need i1",
-        "suggest": "[`_mm256_mask_loadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_loadu_pd`] //need i1",
-        "suggest": "[`_mm256_maskz_loadu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_store_epi32`] //need i1",
-        "suggest": "[`_mm512_mask_store_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_store_epi32`] //need i1",
-        "suggest": "[`_mm_mask_store_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_store_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_store_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_store_epi64`] //need i1",
-        "suggest": "[`_mm512_mask_store_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_store_epi64`] //need i1",
-        "suggest": "[`_mm_mask_store_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_store_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_store_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_store_ps`] //need i1",
-        "suggest": "[`_mm512_mask_store_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_store_ps`] //need i1",
-        "suggest": "[`_mm_mask_store_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_store_ps`] //need i1",
-        "suggest": "[`_mm256_mask_store_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_store_pd`] //need i1",
-        "suggest": "[`_mm512_mask_store_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_store_pd`] //need i1",
-        "suggest": "[`_mm_mask_store_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_store_pd`] //need i1",
-        "suggest": "[`_mm256_mask_store_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_storeu_epi32`] //need i1",
-        "suggest": "[`_mm512_mask_storeu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_storeu_epi32`] //need i1",
-        "suggest": "[`_mm_mask_storeu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_storeu_epi32`] //need i1",
-        "suggest": "[`_mm256_mask_storeu_epi32`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_storeu_epi64`] //need i1",
-        "suggest": "[`_mm512_mask_storeu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_storeu_epi64`] //need i1",
-        "suggest": "[`_mm_mask_storeu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_storeu_epi64`] //need i1",
-        "suggest": "[`_mm256_mask_storeu_epi64`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_storeu_ps`] //need i1",
-        "suggest": "[`_mm512_mask_storeu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_storeu_ps`] //need i1",
-        "suggest": "[`_mm_mask_storeu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_storeu_ps`] //need i1",
-        "suggest": "[`_mm256_mask_storeu_ps`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_storeu_pd`] //need i1",
-        "suggest": "[`_mm512_mask_storeu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_storeu_pd`] //need i1",
-        "suggest": "[`_mm_mask_storeu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_storeu_pd`] //need i1",
-        "suggest": "[`_mm256_mask_storeu_pd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_stream_load_si512`] //stream_load_si256, ...",
-        "suggest": "[`_mm512_stream_load_si512`] // stream_load_si256, ...",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_load_sd`] //need i1",
-        "suggest": "[`_mm_mask_load_sd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_load_ss`] //need i1",
-        "suggest": "[`_mm_mask_load_ss`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_store_sd`] //need i1",
-        "suggest": "[`_mm_mask_store_sd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_store_ss`] //need i1",
-        "suggest": "[`_mm_mask_store_ss`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_sd`] //need i1",
-        "suggest": "[`_mm_maskz_load_sd`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_load_ss`] //need i1",
-        "suggest": "[`_mm_maskz_load_ss`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_kortestz`] //not sure",
-        "suggest": "[`_mm512_kortestz`] // 不确定",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_compressstoreu_epi16`] //need i1",
-        "suggest": "[`_mm_mask_compressstoreu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_compressstoreu_epi16`] //need i1",
-        "suggest": "[`_mm256_mask_compressstoreu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_compressstoreu_epi16`] //need i1",
-        "suggest": "[`_mm512_mask_compressstoreu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_compressstoreu_epi8`] //need i1",
-        "suggest": "[`_mm_mask_compressstoreu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_compressstoreu_epi8`] //need i1",
-        "suggest": "[`_mm256_mask_compressstoreu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_compressstoreu_epi8`] //need i1",
-        "suggest": "[`_mm512_mask_compressstoreu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_expandloadu_epi16`] //need i1",
-        "suggest": "[`_mm_mask_expandloadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_expandloadu_epi16`] //need i1",
-        "suggest": "[`_mm_maskz_expandloadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_expandloadu_epi16`] //need i1",
-        "suggest": "[`_mm256_mask_expandloadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_expandloadu_epi16`] //need i1",
-        "suggest": "[`_mm256_maskz_expandloadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_expandloadu_epi16`] //need i1",
-        "suggest": "[`_mm512_mask_expandloadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_expandloadu_epi16`] //need i1",
-        "suggest": "[`_mm512_maskz_expandloadu_epi16`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_mask_expandloadu_epi8`] //need i1",
-        "suggest": "[`_mm_mask_expandloadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm_maskz_expandloadu_epi8`] //need i1",
-        "suggest": "[`_mm_maskz_expandloadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_mask_expandloadu_epi8`] //need i1",
-        "suggest": "[`_mm256_mask_expandloadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm256_maskz_expandloadu_epi8`] //need i1",
-        "suggest": "[`_mm256_maskz_expandloadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_mask_expandloadu_epi8`] //need i1",
-        "suggest": "[`_mm512_mask_expandloadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "[`_mm512_maskz_expandloadu_epi8`] //need i1",
-        "suggest": "[`_mm512_maskz_expandloadu_epi8`] // 需要 i1",
-        "translate": false
-    },
-    {
-        "source": "\\[x\\] __usub8",
-        "suggest": "\\[x\\] __usub8",
-        "translate": false
-    },
-    {
-        "source": "cargo +nightly run --release --bin connect5",
-        "suggest": "cargo +nightly run--release--bin connect5",
-        "translate": false
-    },
-    {
-        "source": "0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  <b>15</b>",
-        "suggest": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 <b>15</b>",
-        "translate": false
-    },
-    {
-        "source": "16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  <b>31</b>",
-        "suggest": "16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 <b>31</b>",
-        "translate": false
-    },
-    {
-        "source": "1  x x x x _ _ _ _ _ _  _  _  _  _  _  0  x  o  x  o  x  0  0  0  0  0  0  0  0  0  0  0",
-        "suggest": "1 xxxx _ _ _ _ _ _ _ _ _ _ 0 xoxox 0 0 0 0 0 0 0 0 0 0 0",
-        "translate": false
-    },
-    {
-        "source": "2  x _ _ _ _ o _ x o _  _  _  _  _  _  0  x  o  _  _  _  _  _| x  x  o  o  o  x  x  _  _",
-        "suggest": "2 x _ _ _ _ o_xo _ _ _ _ _ _ 0 xo _ _ _ _ _|xxooxx _ _",
-        "translate": false
-    },
-    {
-        "source": "16 0 0 0 0 0 0 0 0 0 0  0  0  0  0  0  0  x  o  x  o  o  o  o  o  o  o  0  0  0  0  0  0",
-        "suggest": "16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 xoxooooooo 0 0 0 0 0 0",
-        "translate": false
-    },
-    {
-        "source": "01_11..............: \"0\" is in row 16 and column 1-16.",
-        "suggest": "01_11................: \"0\" 位于第 16 行 1-16 列。",
-        "translate": false
-    },
-    {
-        "source": "1  x x x _ _ _ _ _ _ _  _  _  _  _  0  x  o  x  o  x  0  0  0  0  0  0  0  0  0  0  0  0",
-        "suggest": "1  x x x _ _ _ _ _ _ _  _  _  _  _  0  x  o  x  o  x  0  0  0  0  0  0  0  0  0  0  0  0",
-        "translate": false
-    },
-    {
-        "source": "16 0 0 0 0 0 0 0 0 0 0  0  0  0  0  0  x  o  x  o  o  o  o  o  o  o  0  0  0  0  0  0  0 answer_mask[1]: ................_10: \"0\" is in row 1 and column 17-32;",
-        "suggest": "16 0 0 0 0 0 0 0 0 0 0  0  0  0  0  0  x  o  x  o  o  o  o  o  o  o  0  0  0  0  0  0  0 answer_mask[1]: ................_10: \"0\" 在第 1 行并且 17-32 列;",
-        "translate": false
-    },
-    {
-        "source": "unsafe fn worker() {",
-        "suggest": "不安全的 fn worker() {",
-        "translate": false
-    },
-    {
-        "source": "Per Searcher::next:",
-        "suggest": "Per Searcher::next:",
-        "translate": false
-    },
-    {
-        "source": "per Searcher::next:",
-        "suggest": "per Searcher::next:",
-        "translate": false
-    },
-    {
-        "source": "`steps_between(&a, &b) == Some(n)` only if `a <= b`",
-        "suggest": "`steps_between(&a, &b) == Some(n)` 仅当 `a <= b`",
-        "translate": false
-    },
-    {
-        "source": "`steps_between(&a, &b) == None` if `a > b`",
-        "suggest": "`steps_between(&a, &b) == None` 如果 `a > b`",
-        "translate": false
-    },
-    {
-        "source": "If `a < b` then `(0, Some(0))` is returned by `ops::Range<A: Step>::size_hint`.",
-        "suggest": "如果 `a < b` 则 `(0, Some(0))` 由 `ops::Range<A: Step>::size_hint` 返回。",
-        "translate": false
-    },
-    {
-        "source": "1 2 3 4 5 6 7 8 9 _ _ _ _ _ _ x 10",
-        "suggest": "1 2 3 4 5 6 7 8 9 x 10",
-        "translate": false
-    },
-    {
-        "source": "FIXME wasmtime",
-        "suggest": "FIXME wasmtime",
-        "translate": false
-    },
-    {
-        "source": "FIXME llvm",
-        "suggest": "修复 llvm",
-        "translate": false
-    },
-    {
-        "source": "FIXME wasmtime compare_bytes(i64x2_extend_low_i32x4_s(zero), zero);",
-        "suggest": "FIXME wasmtime compare_bytes(i64x2_extend_low_i32x4_s(zero)，零) ;",
-        "translate": false
-    },
-    {
-        "source": "core_arch/src/arm_shared/simd32 vfmaq_n_f32_vfma : #instructions = 26 >= 22 (limit)",
-        "suggest": "core_arch/simd32 vfmaq_n_f32_vfma: #instructions =26 >=22 (limit)",
-        "translate": false
-    },
-    {
-        "source": "svepmull: bit::test(auxv.hwcap, 35),",
-        "suggest": "svepmull: bit::test (auxv.hwcap, 35),",
-        "translate": false
-    },
-    {
-        "source": "bit::test(auxv.hwcap, 39),",
-        "suggest": "位::测试 (auxv.hwcap，39)，",
-        "translate": false
-    },
-    {
-        "source": "svei8mm: bit::test(auxv.hwcap, 41),",
-        "suggest": "svei8mm: bit::test (auxv.hwcap, 41),",
-        "translate": false
-    },
-    {
-        "source": "bit::test(auxv.hwcap, 44),",
-        "suggest": "位::测试 (auxv.hwcap，44)，",
-        "translate": false
-    },
-    {
-        "source": "dgh: bit::test(auxv.hwcap, 47),",
-        "suggest": "dgh: 位::测试 (auxv.hwcap，47)，",
-        "translate": false
-    },
-    {
-        "source": "emin = -126 p2 = 24",
-        "suggest": "emin = -126 p2 = 24",
-        "translate": false
-    },
-    {
-        "source": "emin = -1022 p2 = 53",
-        "suggest": "emin= -1022 p2 =53",
-        "translate": false
-    },
-    {
-        "source": "1].",
-        "suggest": "1]。",
-        "translate": false
-    },
-    {
-        "source": "assert_eq!(max, (-max).wrapping_abs());",
-        "suggest": "assert_eq!(max, (-max).wrapping_abs ());",
-        "translate": false
-    },
-    {
-        "source": "impl Shl<$f> for Saturating<$t> { type Output = Saturating<$t>;",
-        "suggest": "impl Shl<$f> for Saturating<$t> {type Output= Saturating<$t>;",
-        "translate": false
-    },
-    {
-        "source": "fn shl(self, other: $f) -> Saturating<$t> { if other < 0 { Saturating(self.0.shr((-other & self::shift_max::$t as $f) as u32)) } else { Saturating(self.0.shl((other & self::shift_max::$t as $f) as u32)) } } } forward_ref_binop!",
-        "suggest": "fn shl(self, other: $f) -> Saturating<$t> { if other < 0 { Saturating(self.0.shr((-other & self::shift_max::$t as $f) as u32)) } 否则 { Saturating(self.0.shl((other & self::shift_max::$t as $f) as u32)) }}} forward_ref_binop!",
-        "translate": false
-    },
-    {
-        "source": "fn shl_assign(&mut self, other: $f) { *self = *self << other; } } forward_ref_op_assign!",
-        "suggest": "fn shl_assign(&mut self, other: $f) { *self = *self << other; }} forward_ref_op_assign!",
-        "translate": false
-    },
-    {
-        "source": "impl Op<T> for Saturating<T>, impl OpAssign<T> for Saturating<T>",
-        "suggest": "Saturating<T> 的 impl Op<T>，Saturating<T> 的 impl OpAssign<T>",
-        "translate": false
-    },
-    {
-        "source": "mod shift_max {    #![allow(non_upper_case_globals)]",
-        "suggest": "mod shift_max {#![allow (non_upper_case_globals)]",
-        "translate": false
-    },
-    {
-        "source": "mod platform { pub const usize: u32 = super::u16;",
-        "suggest": "mod 平台 {pub const 使用: u32 = super::u16;",
-        "translate": false
-    },
-    {
-        "source": "pub const isize: u32 = super::i16;",
-        "suggest": "酒吧常量大小: u32 = super::i16;",
-        "translate": false
-    },
-    {
-        "source": "mod platform { pub const usize: u32 = super::u32;",
-        "suggest": "mod 平台 {pub const 使用: u32 = super::u32;",
-        "translate": false
-    },
-    {
-        "source": "pub const isize: u32 = super::i32;",
-        "suggest": "酒吧常量大小: u32 = super::i32;",
-        "translate": false
-    },
-    {
-        "source": "mod platform { pub const usize: u32 = super::u64;",
-        "suggest": "mod 平台 {pub const 使用: u32 = super::u64;",
-        "translate": false
-    },
-    {
-        "source": "pub const isize: u32 = super::i64;",
-        "suggest": "酒吧常量大小: u32 = super::i64;",
-        "translate": false
-    },
-    {
-        "source": "pub const i8: u32 = (1 << 3) - 1;",
-        "suggest": "pub const i8: u32 =(1 << 3)-1;",
-        "translate": false
-    },
-    {
-        "source": "pub const i16: u32 = (1 << 4) - 1;",
-        "suggest": "pub const i16: u32 =(1 << 4)-1;",
-        "translate": false
-    },
-    {
-        "source": "pub const i32: u32 = (1 << 5) - 1;",
-        "suggest": "pub const i32: u32 =(1 << 5)-1;",
-        "translate": false
-    },
-    {
-        "source": "pub const i64: u32 = (1 << 6) - 1;",
-        "suggest": "pub const i64: u32 =(1 << 6)-1;",
-        "translate": false
-    },
-    {
-        "source": "pub const i128: u32 = (1 << 7) - 1;",
-        "suggest": "pub const i128: u32 =(1 << 7)-1;",
-        "translate": false
-    },
-    {
-        "source": "pub use self::platform::isize;",
-        "suggest": "酒吧使用 self::platform::isize;",
-        "translate": false
-    },
-    {
-        "source": "pub const u8: u32 = i8;",
-        "suggest": "酒吧常量 u8: u32 = i8;",
-        "translate": false
-    },
-    {
-        "source": "pub const u16: u32 = i16;",
-        "suggest": "酒吧常量 u16: u32 = i16;",
-        "translate": false
-    },
-    {
-        "source": "pub const u32: u32 = i32;",
-        "suggest": "酒吧常量 u32: u32 = i32;",
-        "translate": false
-    },
-    {
-        "source": "pub const u64: u32 = i64;",
-        "suggest": "酒吧常量 u64: u32 = i64;",
-        "translate": false
-    },
-    {
-        "source": "pub const u128: u32 = i128;",
-        "suggest": "酒吧 const u128: u32 =i128;",
-        "translate": false
-    },
-    {
-        "source": "pub use self::platform::usize;",
-        "suggest": "酒吧使用 self::platform::usize;",
-        "translate": false
-    },
-    {
-        "source": "IoSlice::advance_slices(&mut bufs, 10);",
-        "suggest": "IoSlice::advance_slices (&mut bufs, 10);",
-        "translate": false
-    },
-    {
-        "source": "<code>[std::convert]::{[TryFrom], [TryInto]}</code>,",
-        "suggest": "<code>[std::convert]::{[TryFrom], [TryInto]}</code> ,",
-        "translate": false
-    },
-    {
-        "source": "Thread 1             |  // Thread 2",
-        "suggest": "主题 1 |// 线程 2",
-        "translate": false
-    },
-    {
-        "source": "https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings#choosing-a-stringcomparison-member-for-your-method-call[2] https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings#stringtoupper-and-stringtolower[3] https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=net-5.0#System_StringComparison_Ordinal[4] https://docs.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-comparestringordinal",
-        "suggest": "https://docs.microsoft.com/best-practices-strings#choosing-a-stringcomparison-member-for-your-method-call [2] https://docs.microsoft.com/best-practices-strings#stringtoupper-and-stringtolower [3] https://docs.microsoft.com/system.stringcomparison?view=net-5.0#System_StringComparison_Ordinal [4] https://docs.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-comparestringordinal",
-        "translate": false
-    },
-    {
-        "source": "1-aligned load.",
-        "suggest": "1 - 对齐负载。",
-        "translate": false
-    },
-    {
-        "source": "1-aligned store.",
-        "suggest": "1 对齐的 store。",
-        "translate": false
-    },
-    {
-        "source": "__impl_slice_eq1! { [const N: usize] Vec<A>, &mut [B; N], } __impl_slice_eq1!",
-        "suggest": "<i>__impl_slice_eq1!</i> <b>__impl_slice_eq1! </b> <i>{ [const N: usize] Vec<A>, &mut [B; N], } __impl_slice_eq1!</i> <b>{ [const N: usize] Vec<A>, &mut [B; N], } __impl_slice_eq1! </b>",
-        "translate": false
-    },
-    {
-        "source": "fn test() -> Option<()> {",
-        "suggest": "fn test()-&gt; Option<()> {",
+        "source": "Generates a std::cout for the intrinsics results that will match the rust debug output format for the return type.",
+        "suggest": "为内联函数结果生成一个 std::cout，该结果将匹配 Rust 调试输出格式的返回类型。",
         "translate": ""
     },
     {
-        "source": "sh_impl_unsigned! { $t, u8 } sh_impl_unsigned!",
-        "suggest": "<i>sh_impl_unsigned!</i> <b>sh_impl_unsigned! </b> <i>{ $t, u8 } sh_impl_unsigned!</i> <b>{ $t, u8 } sh_impl_unsigned! </b>",
-        "translate": false
+        "source": "Only perform the test for intrinsics that are enabled...",
+        "suggest": "只对启用的内联函数进行测试...",
+        "translate": ""
     },
     {
-        "source": "sh_impl_signed! { $t, i8 } sh_impl_signed!",
-        "suggest": "<i>sh_impl_signed!</i> <b>sh_impl_signed! </b> <i>{ $t, i8 } sh_impl_signed!</i> <b>{ $t, i8 } sh_impl_signed! </b>",
-        "translate": false
+        "source": "Not sure how we would compare intrinsic that returns void.",
+        "suggest": "不知道我们如何比较返回 void 的内联函数。",
+        "translate": ""
     },
     {
-        "source": "T -> &mut U",
-        "suggest": "T-&gt; &mut U",
-        "translate": false
+        "source": "Skip pointers for now, we would probably need to look at the return type to work out how many elements we need to point to.",
+        "suggest": "现在跳过指针，我们可能需要查看返回类型来计算我们需要指向多少个元素。",
+        "translate": ""
     },
     {
-        "source": "T -> *mut U",
-        "suggest": "T-&gt; *mut U",
-        "translate": false
+        "source": "intrinsics with a lane parameter have constraints, deal with them later.",
+        "suggest": "带有 lane 参数的内联函数有约束，以后再处理。",
+        "translate": ""
     },
     {
-        "source": "T -> *const U",
-        "suggest": "T-&gt; *const U",
-        "translate": false
+        "source": "fails to compile this intrinsic due to an error.",
+        "suggest": "由于错误，无法编译此内联函数。",
+        "translate": ""
     },
     {
-        "source": "`arctan(y/x)` -> `[-pi/2, pi/2]`",
-        "suggest": "`arctan(y/x)`-&gt; `[-pi/2, pi/2]`",
-        "translate": false
+        "source": "fatal error: error in backend: Cannot select: 0x2b99c30: i64 = AArch64ISD::VSHL Constant:i64<1>, Constant:i32<1>",
+        "suggest": "致命错误: 后端错误: 无法选择: 0x2b99c30: i64 = AArch64ISD::VSHL Constant:i64<1>, Constant:i32<1>",
+        "translate": ""
     },
     {
-        "source": "`arctan(y/x) + pi` -> `(pi/2, pi]`",
-        "suggest": "`arctan(y/x) + pi`-&gt; `(pi/2, pi]`",
-        "translate": false
+        "source": "Gets the type part of a c typedef for a type that's in the form of {type}{size}_t.",
+        "suggest": "获取 {type}{size}_t 形式的类型的 c typedef 的类型部分。",
+        "translate": ""
     },
     {
-        "source": "`arctan(y/x) - pi` -> `(-pi, -pi/2)`",
-        "suggest": "`arctan(y/x) - pi`-&gt; `(-pi, -pi/2)`",
-        "translate": false
+        "source": "Gets the rust prefix for the type kind i.e. i, u, f.",
+        "suggest": "获取类型 kind 的 Rust 前缀，即 i、u、f。",
+        "translate": ""
+    },
+    {
+        "source": "The bit length of this type (e.g. 32 for u32).",
+        "suggest": "这个类型的位长度 (例如，u32 为 32)。",
+        "translate": ""
+    },
+    {
+        "source": "Length of the SIMD vector (i.e. 4 for uint32x4_t), A value of `None` means this is not a simd type.",
+        "suggest": "SIMD vector 的长度 (即 4 表示 uint32x4_t)，`None` 值就意味着这不是 simd 类型。",
+        "translate": ""
+    },
+    {
+        "source": "A `None` can be assumed to be 1, although in some places a distinction is needed between `u64` and `uint64x1_t` this signals that.",
+        "suggest": "可以假设 `None` 为 1，尽管在某些地方需要区分 `u64` 和 `uint64x1_t`，这表明了这一点。",
+        "translate": ""
+    },
+    {
+        "source": "The number of rows for SIMD matrices (i.e. 2 for uint8x8x2_t).",
+        "suggest": "SIMD 矩阵的行数 (即 2 表示 uint8x8x2_t)。",
+        "translate": ""
+    },
+    {
+        "source": "A value of `None` represents a type that does not contain any rows encoded in the type (e.g.",
+        "suggest": "`None` 的值表示不包含在该类型中编码的任何行的类型 (例如",
+        "translate": ""
+    },
+    {
+        "source": "A value of `None` can be assumed to be 1 though.",
+        "suggest": "但是 `None` 的值可以假设为 1。",
+        "translate": ""
+    },
+    {
+        "source": "Get the TypeKind for this type, recursing into pointers.",
+        "suggest": "获取此类型的 TypeKind，递归到指针中。",
+        "translate": ""
+    },
+    {
+        "source": "Get the size of a single element inside this type, recursing into pointers, i.e.",
+        "suggest": "获取该类型内单个元素的大小，递归到指针中，即",
+        "translate": ""
+    },
+    {
+        "source": "a pointer to a u16 would be 16 rather than the size of a pointer.",
+        "suggest": "指向 u16 的指针将是 16 而不是指针的大小。",
+        "translate": ""
+    },
+    {
+        "source": "Determine if the type is a simd type, this will treat a type such as `uint64x1` as simd.",
+        "suggest": "确定类型是否为 simd 类型，这会将 `uint64x1` 等类型视为 simd。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a string containing the typename for this type in C format.",
+        "suggest": "以 C 格式获取包含此类型的类型名称的字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a cast for this type if needs promotion.",
+        "suggest": "如果需要升级，则获取此类型的强制转换。",
+        "translate": ""
+    },
+    {
+        "source": "This is required for 8 bit types due to printing as the 8 bit types use a char and when using that in `std::cout` it will print as a character, which means value of 0 will be printed as a null byte.",
+        "suggest": "由于 8 位类型使用字符，因此这对于 8 位类型是必需的，当在 `std::cout` 中使用它时，它将打印为字符，这意味着 0 值将打印为空字节。",
+        "translate": ""
+    },
+    {
+        "source": "Generates a comma list of values that can be used to initialize an argument for the intrinsic call.",
+        "suggest": "生成一个逗号值列表，可用于初始化内联函数调用的参数。",
+        "translate": ""
+    },
+    {
+        "source": "This is determistic based on the pass number.",
+        "suggest": "这是基于通过数来确定的。",
+        "translate": ""
+    },
+    {
+        "source": "The pass index, i.e. the iteration index for the call to an intrinsic",
+        "suggest": "通过索引，即调用到内联函数的迭代索引",
+        "translate": ""
+    },
+    {
+        "source": "Returns a string such as",
+        "suggest": "返回一个字符串，例如",
+        "translate": ""
+    },
+    {
+        "source": "if `language` is `Language::C`",
+        "suggest": "如果 `language` 是 `Language::C`",
+        "translate": ""
+    },
+    {
+        "source": "if `language` is `Language::Rust`",
+        "suggest": "如果 `language` 是 `Language::Rust`",
+        "translate": ""
+    },
+    {
+        "source": "Determines the load function for this type.",
+        "suggest": "确定此类型的负载函数。",
+        "translate": ""
+    },
+    {
+        "source": "Determines the get lane function for this type.",
+        "suggest": "确定此类型的获取通道函数。",
+        "translate": ""
+    },
+    {
+        "source": "Gets a hex constant value for a single lane in in a determistic way",
+        "suggest": "以确定的方式获取单个通道的十六进制常量值",
+        "translate": ""
+    },
+    {
+        "source": "The number of bits for the type, only 8, 16, 32, 64 are valid values",
+        "suggest": "类型的位数，只有 8、16、32、64 是有效值",
+        "translate": ""
+    },
+    {
+        "source": "The index of the simd lane we are generating for",
+        "suggest": "我们正在生成的 simd 通道的索引",
+        "translate": ""
+    },
+    {
+        "source": "The index of the pass we are generating the values for",
+        "suggest": "我们正在生成值的传递的索引",
+        "translate": ""
+    },
+    {
+        "source": "The smallest normal value.",
+        "suggest": "最小的正常值。",
+        "translate": ""
+    },
+    {
+        "source": "The value just below 0.5.",
+        "suggest": "值略低于 0.5。",
+        "translate": ""
+    },
+    {
+        "source": "The value just above 0.5.",
+        "suggest": "值略高于 0.5。",
+        "translate": ""
+    },
+    {
+        "source": "The value just below 1.0.",
+        "suggest": "值略低于 1.0。",
+        "translate": ""
+    },
+    {
+        "source": "The value just above 1.0.",
+        "suggest": "值略高于 1.0。",
+        "translate": ""
+    },
+    {
+        "source": "The largest finite value.",
+        "suggest": "最大的有限值。",
+        "translate": ""
+    },
+    {
+        "source": "Quiet NaNs",
+        "suggest": "安静的 NaNs",
+        "translate": ""
+    },
+    {
+        "source": "Signalling NaNs",
+        "suggest": "信令 NaNs",
+        "translate": ""
+    },
+    {
+        "source": "A recognisable bit pattern.",
+        "suggest": "可识别的位模式。",
+        "translate": ""
+    },
+    {
+        "source": "The largest subnormal value.",
+        "suggest": "最大的 subnormal 值。",
+        "translate": ""
+    },
+    {
+        "source": "The smallest subnormal value.",
+        "suggest": "最小的 subnormal 值。",
+        "translate": ""
+    },
+    {
+        "source": "The same values again, but negated.",
+        "suggest": "再次相同的值再次被否定了。",
+        "translate": ""
+    },
+    {
+        "source": "Simple values.",
+        "suggest": "单个值。",
+        "translate": ""
+    },
+    {
+        "source": "Target features need to be enabled for LLVM objdump on Macos ARM64",
+        "suggest": "需要为 Macos ARM64 上的 LLVM objdump 启用目标功能",
+        "translate": ""
+    },
+    {
+        "source": "Normalize [us]shll.* ..., #0 instructions to the preferred form: [us]xtl.* ...",
+        "suggest": "将 `[us]shll.* ..., #0` 指令规范化为首选形式: `[us]xtl.*` ...",
+        "translate": ""
+    },
+    {
+        "source": "as LLVM objdump does not do that.",
+        "suggest": "因为 LLVM objdump 不这样做。",
+        "translate": ""
+    },
+    {
+        "source": "for details.",
+        "suggest": "详情。",
+        "translate": ""
+    },
+    {
+        "source": "strip trailing comma",
+        "suggest": "去除尾随逗号",
+        "translate": ""
+    },
+    {
+        "source": "Look for subroutine call instructions in the disassembly to detect whether inlining failed: all intrinsics are `#[inline(always)]`, so calling one intrinsic from another should not generate subroutine call instructions.",
+        "suggest": "在反汇编中查找子程序调用指令来检测是否内联失败: 所有内联函数都是 `#[inline(always)]`，所以从另一个调用一个内联函数不应生成子程序调用指令。",
+        "translate": ""
+    },
+    {
+        "source": "original logic but does not match comment",
+        "suggest": "与注释不匹配的原始逻辑",
+        "translate": ""
+    },
+    {
+        "source": "Add detection for other archs",
+        "suggest": "添加对其他 archs 的检测",
+        "translate": ""
+    },
+    {
+        "source": "A iterator for deduping the key of a sorted iterator.",
+        "suggest": "一个迭代器，用于对排序后的迭代器的键进行去重。",
+        "translate": ""
+    },
+    {
+        "source": "When encountering the duplicated key, only the last key-value pair is yielded.",
+        "suggest": "当遇到重复的键时，只产生最后一个键值对。",
+        "translate": ""
+    },
+    {
+        "source": "Used by [`BTreeMap::bulk_build_from_sorted_iter`].",
+        "suggest": "由 [`BTreeMap::bulk_build_from_sorted_iter`] 使用。",
+        "translate": ""
+    },
+    {
+        "source": "Makes a `BTreeMap` from a sorted iterator.",
+        "suggest": "从排序的迭代器生成一个 `BTreeMap`。",
+        "translate": ""
+    },
+    {
+        "source": "use stable sort to preserve the insertion order.",
+        "suggest": "使用稳定排序来保留插入顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Traversal isn't needed, it happens using the result of `borrow_mut`.",
+        "suggest": "遍历是不需要的，无论发生什么都使用 `borrow_mut` 的结果。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, we move all the resizing and error-handling logic from grow_amortized and handle_reserve behind a call, while making sure that this function is likely to be inlined as just a comparison and a call if the comparison fails.",
+        "suggest": "因此，我们将所有的调整大小和错误处理逻辑从 grow_amortized 和 handle_reserve 移到一个调用之后，同时确保如果比较失败，这个函数很可能被内联为一个比较和一个调用。",
+        "translate": ""
+    },
+    {
+        "source": "This way, you can avoid moving the original array if its elements are not [`Copy`].",
+        "suggest": "这样，如果原始数组的元素不是 [`Copy`]，则可以避免移动原始数组。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Some(t)` if the `bool` is [`true`](../std/keyword.true.html), or `None` otherwise.",
+        "suggest": "如果 `bool` 是 [`true`](../std/keyword.true.html)，则返回 `Some(t)`，否则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Some(f())` if the `bool` is [`true`](../std/keyword.true.html), or `None` otherwise.",
+        "suggest": "如果 `bool` 是 [`true`](../std/keyword.true.html)，则返回 `Some(f())`，否则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "It can occur, for example, when giving ill-formed UTF-8 bytes to [`String::from_utf8_lossy`](../std/string/struct.String.html#method.from_utf8_lossy).",
+        "suggest": "例如，当将格式错误的 UTF-8 字节提供给 [`String::from_utf8_lossy`](../std/string/struct.String.html#method.from_utf8_lossy) 时，就会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "Using [`to_string`](../std/string/trait.ToString.html#tymethod.to_string):",
+        "suggest": "使用 [`to_string`](../std/string/trait.ToString.html#tymethod.to_string):",
+        "translate": ""
+    },
+    {
+        "source": "This will escape the characters similar to the [`Debug`](core::fmt::Debug) implementations of `str` or `char`.",
+        "suggest": "这将转义类似于 `str` 或 `char` 的 [`Debug`](core::fmt::Debug) 实现的字符。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to <code>[to_ascii_lowercase]\\(a) == [to_ascii_lowercase]\\(b)</code>.",
+        "suggest": "相当于 <code>[to_ascii_lowercase]\\(a) == [to_ascii_lowercase]\\(b)</code>。",
+        "translate": ""
+    },
+    {
+        "source": "The reducing function is a closure with two arguments: an 'accumulator', and an element.",
+        "suggest": "Reduce 函数是一个闭包，有两个参数: 一个 'accumulator' 和一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "For iterators with at least one element, this is the same as [`fold()`] with the first element of the iterator as the initial accumulator value, folding every subsequent element into it.",
+        "suggest": "对于具有至少一个元素的迭代器，这与 [`fold()`] 相同，将迭代器的第一个元素作为初始累加器值，将每个后续元素 fold 到其中。",
+        "translate": ""
+    },
+    {
+        "source": "Those implementations are:",
+        "suggest": "这些实现是:",
+        "translate": ""
+    },
+    {
+        "source": "Arrays `[T; N]` implement `Unsize<[T]>`.",
+        "suggest": "数组 `[T; N]` 实现 `Unsize<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "Types implementing a trait `Trait` also implement `Unsize<dyn Trait>`.",
+        "suggest": "实现 trait `Trait` 的类型也实现 `Unsize<dyn Trait>`。",
+        "translate": ""
+    },
+    {
+        "source": "Structs `Foo<..., T, ...>` implement `Unsize<Foo<..., U, ...>>` if all of these conditions are met:",
+        "suggest": "如果满足所有这些条件，结构体 `Foo<..., T, ...>` 实现 `Unsize<Foo<..., U, ...>>`:",
+        "translate": ""
+    },
+    {
+        "source": "Only the last field of `Foo` has a type involving `T`.",
+        "suggest": "只有 `Foo` 的最后一个字段具有涉及 `T` 的类型。",
+        "translate": ""
+    },
+    {
+        "source": "where `Bar<T>` stands for the actual type of that last field.",
+        "suggest": "其中 `Bar<T>` 代表最后一个字段的实际类型。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` is `rhs` is zero or the operation would result in overflow.",
+        "suggest": "如果 `rhs` 为零，则返回 `None`，否则操作将导致溢出。",
+        "translate": ""
+    },
+    {
+        "source": "is guaranteed to have the same layout and ABI as `T`.",
+        "suggest": "保证与 `T` 具有相同的布局和 ABI。",
+        "translate": ""
+    },
+    {
+        "source": "Inserts `value` into the option, then returns a mutable reference to it.",
+        "suggest": "将 `value` 插入到选项，然后返回对它的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Unzips an option containing a tuple of two options.",
+        "suggest": "解压缩包含两个选项的元组的选项。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the contained [`Some`] value or a default.",
+        "suggest": "返回包含的 [`Some`] 值或默认值。",
+        "translate": ""
+    },
+    {
+        "source": "Leaves the original `Option` in-place, creating a new one containing a mutable reference to the inner type's [`Deref::Target`] type.",
+        "suggest": "在这里保留原始的 `Option`，创建一个包含对内部类型的 [`Deref::Target`] 类型的可变引用的新的 `Option`。",
+        "translate": ""
+    },
+    {
+        "source": "Moves `val` into a new [`Some`].",
+        "suggest": "将 `val` 移动到新的 [`Some`] 中。",
+        "translate": ""
+    },
+    {
+        "source": "Should no [`None`][Option::None] occur, a container of type `V` containing the values of each [`Option`] is returned.",
+        "suggest": "如果没有出现 [`None`][Option::None]，则返回一个 `V` 类型的容器，其中包含每个 [`Option`] 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Converts from `Option<Option<T>>` to `Option<T>`.",
+        "suggest": "从 `Option<Option<T>>` 转换为 `Option<T>`。",
+        "translate": ""
+    },
+    {
+        "source": "should have the same contents.",
+        "suggest": "应该有相同的内容。",
+        "translate": ""
+    },
+    {
+        "source": "These are different files so that relative links work properly without having to have `CARGO_PKG_NAME` set, but conceptually they should always be the same.",
+        "suggest": "这些是不同的文件，因此相关链接无需设置 `CARGO_PKG_NAME` 即可正常工作，但从概念上讲，它们应该始终相同。",
+        "translate": ""
+    },
+    {
+        "source": "The `bool` represents a value, which could only be either [`true`] or [`false`].",
+        "suggest": "`bool` 代表一个值，它只能是 [`true`] 或 [`false`]。",
+        "translate": ""
+    },
+    {
+        "source": "If you cast a `bool` into an integer, [`true`] will be 1 and [`false`] will be 0.",
+        "suggest": "如果将 `bool` 转换为整数，则 [`true`] 表示为 1，[`false`] 表示为 0。",
+        "translate": ""
+    },
+    {
+        "source": "which is an important macro in testing, checks whether an expression is [`true`] and panics if it isn't.",
+        "suggest": "测试中的一个重要宏，检查表达式是否为 [`true`]，如果不是则为 panics。",
+        "translate": ""
+    },
+    {
+        "source": "Prior to Rust 1.53, arrays did not implement [`IntoIterator`] by value, so the method call `array.into_iter()` auto-referenced into a [slice iterator](slice::iter).",
+        "suggest": "在 Rust 1.53 之前，数组没有按值实现 [`IntoIterator`]，因此调用 `array.into_iter()` 方法自动引用到 [slice 迭代器](slice::iter)。",
+        "translate": ""
+    },
+    {
+        "source": "Right now, the old behavior is preserved in the 2015 and 2018 editions of Rust for compatibility, ignoring [`IntoIterator`] by value.",
+        "suggest": "目前，为了兼容性，Rust 的 2015 和 2018 版本中保留了旧行为，忽略了 [`IntoIterator`] 的值。",
+        "translate": ""
+    },
+    {
+        "source": "For example, in [`PartialOrd`] and [`Ord`], the elements are compared sequentially until the first non-equal set is found.",
+        "suggest": "例如，在 [`PartialOrd`] 和 [`Ord`] 中，元素按顺序进行比较，直到找到第一个不相等的集合。",
+        "translate": ""
+    },
+    {
+        "source": "You can get one by using the `&` or `&mut` operators on a value, or by using a [`ref`](../std/keyword.ref.html) or <code>[ref](../std/keyword.ref.html) [mut](../std/keyword.mut.html)</code> pattern.",
+        "suggest": "您可以通过在值上使用 `&` 或 `&mut` 运算符，或者使用 [`ref`](../std/keyword.ref.html) 或 <code>[ref](../std/keyword.ref.html) [mut](../std/keyword.mut.html)</code> 模式。",
+        "translate": ""
+    },
+    {
+        "source": "For those familiar with pointers, a reference is just a pointer that is assumed to be aligned, not null, and pointing to memory containing a valid value of `T` - for example, <code>&[bool]</code> can only point to an allocation containing the integer values `1` ([`true`](../std/keyword.true.html)) or `0` ([`false`](../std/keyword.false.html)), but creating a <code>&[bool]</code> that points to an allocation containing the value `3` causes undefined behaviour.",
+        "suggest": "对于那些熟悉指针的人来说，引用只是一个被认为是对齐的指针，而不是空的，并且指向包含有效值 `T` 的内存 -- 例如， <code>&[bool]</code> 只能指向包含整数值 `1` ([`true`](../std/keyword.true.html)) 或 `0` ([`false`](../std/keyword.false.html)) 的分配，但创建一个 <code>&[bool]</code> 指向包含值 `3` 的分配会导致未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "In fact, <code>[Option]\\<&T></code> has the same memory representation as a nullable but aligned pointer, and can be passed across FFI boundaries as such.",
+        "suggest": "事实上，<code>[Option]\\<&T></code> 与可为空但已对齐的指针具有相同的内存表示，并且可以像这样跨 FFI 边界传递。",
+        "translate": ""
+    },
+    {
+        "source": "\\(note that `&T` references only get `Send` if <code>T: [Sync]</code>)",
+        "suggest": "\\ (注意 `&T` 引用只在 <code>T: [Sync]</code> 得到 `Send` )",
+        "translate": ""
+    },
+    {
+        "source": "Like references, function pointers are, among other things, assumed to not be null, so if you want to pass a function pointer over FFI and be able to accommodate null pointers, make your type [`Option<fn()>`](core::option#options-and-pointers-nullable-pointers) with your required signature.",
+        "suggest": "像引用一样，函数指针被假定为不为空，所以如果你想通过 FFI 传递函数指针并能够容纳空指针，请使用所需的签名来创建类型 [`Option<fn()>`](core::option#options-and-pointers-nullable-pointers)。",
+        "translate": ""
+    },
+    {
+        "source": "Lint rustdoc::broken_intra_doc_links is allowed as `slice::sort_by_key` is in crate `alloc`, and as such doesn't exists yet when building `core`:",
+        "suggest": "Lint rustdoc::broken_intra_doc_links 是允许的，因为 `slice::sort_by_key` 在 `alloc` crate 中，因此在构建 `core` 时还不存在:",
+        "translate": ""
+    },
+    {
+        "source": "This breaks links when slice is displayed in core, but changing it to use relative links would break when the item is re-exported.",
+        "suggest": "当切片显示在核心中时，这会断开链接，但将其更改为使用相对链接会在项目重新导出时断开。",
+        "translate": ""
+    },
+    {
+        "source": "So allow the core links to be broken for now.",
+        "suggest": "所以现在允许核心链接被破坏。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty span pointing to directly before this span.",
+        "suggest": "创建一个直接指向此跨度之前的空跨度。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an empty span pointing to directly after this span.",
+        "suggest": "创建一个直接指向此跨度之后的空跨度。",
+        "translate": ""
+    },
+    {
+        "source": "Of particular interest to collections is the `rev` adapter, which reverses any iterator that supports this operation.",
+        "suggest": "集合特别感兴趣的是 `rev` 适配器，它反转支持此操作的任何迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`CString`] into an owned [`Cow`] without copying or allocating.",
+        "suggest": "无需复制或分配即可将 [`CString`] 转换为拥有所有权的 [`Cow`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`CStr`] into a borrowed [`Cow`] without copying or allocating.",
+        "suggest": "将 [`CStr`] 转换为借用的 [`Cow`]，无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `&`[`CString`] into a borrowed [`Cow`] without copying or allocating.",
+        "suggest": "将 `&`[`CString`] 转换为借用的 [`Cow`]，无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "This method is primarily used to interface with the [`format_args!()`] macro, and it is rare that this should explicitly be called.",
+        "suggest": "此方法主要用于与 [`format_args!()`] 宏接口，很少需要显式调用。",
+        "translate": ""
+    },
+    {
+        "source": "breaks from inner loop, lets outer loop continue.",
+        "suggest": "从内循环中断，让外循环继续。",
+        "translate": ""
+    },
+    {
+        "source": "Compile-time constants, compile-time evaluable functions, and raw pointers.",
+        "suggest": "编译时常量、编译时可评估函数和原始指针。",
+        "translate": ""
+    },
+    {
+        "source": "On certain platforms right now the \"main modules\" modules that are documented don't compile (missing things in `libc` which is empty), so just omit them with an empty module and add the \"unstable\" attribute.",
+        "suggest": "现在在某些平台上，已记录的 \"main modules\" 模块无法编译 (`libc` 中缺少空的内容)，因此只需使用空模块省略它们并添加 \"unstable\" 属性即可。",
+        "translate": ""
+    },
+    {
+        "source": "linux, wasi and windows are handled a bit differently.",
+        "suggest": "linux、wasi 和 windows 的处理方式略有不同。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new symlink to a non-directory file on the filesystem.",
+        "suggest": "创建指向文件系统上非目录文件的新符号链接。",
+        "translate": ""
+    },
+    {
+        "source": "The `original` path should not be a directory or a symlink to a directory, otherwise the symlink will be broken.",
+        "suggest": "`original` 路径不应是目录或指向目录的符号链接，否则符号链接将被破坏。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`symlink_dir`] for directories.",
+        "suggest": "对目录使用 [`symlink_dir`]。",
+        "translate": ""
+    },
+    {
+        "source": "This function currently corresponds to [`CreateSymbolicLinkW`][CreateSymbolicLinkW].",
+        "suggest": "该函数目前对应 [`CreateSymbolicLinkW`][CreateSymbolicLinkW]。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this [may change in the future][changes].",
+        "suggest": "注意这个 [将来可能会发生变化][changes]。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new symlink to a directory on the filesystem.",
+        "suggest": "创建一个指向文件系统目录的新符号链接。",
+        "translate": ""
+    },
+    {
+        "source": "The `original` path must be a directory or a symlink to a directory, otherwise the symlink will be broken.",
+        "suggest": "`original` 路径必须是目录或指向目录的符号链接，否则符号链接将被破坏。",
+        "translate": ""
+    },
+    {
+        "source": "Use [`symlink_file`] for other files.",
+        "suggest": "对其他文件使用 [`symlink_file`]。",
+        "translate": ""
     }
 ]
