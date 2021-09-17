@@ -121,7 +121,7 @@
     },
     {
         "source": "If we're waiting on something asynchronous to resolve, the future will wait until the stream is ready to yield again.",
-        "suggest": "如果我们正在等待异步处理，则 future 将等待，直到流准备再次屈服。",
+        "suggest": "如果我们正在等待异步解决某些事情，则 future 将等待，直到流准备好再次生成。",
         "translate": ""
     },
     {

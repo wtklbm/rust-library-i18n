@@ -1706,7 +1706,7 @@
     },
     {
         "source": "If the closure returns true, then the element is removed and yielded.",
-        "suggest": "如果闭包返回 true，那么将删除并屈服该元素。",
+        "suggest": "如果闭包返回 true，则删除并生成元素。",
         "translate": ""
     },
     {

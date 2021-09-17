@@ -3951,7 +3951,7 @@
     },
     {
         "source": "Returns an immutable slice of all elements that have not been yielded yet.",
-        "suggest": "返回尚未屈服的所有元素的不可变切片。",
+        "suggest": "返回尚未产生的所有元素的不可变切片。",
         "translate": ""
     },
     {
@@ -3961,7 +3961,7 @@
     },
     {
         "source": "Returns a mutable slice of all elements that have not been yielded yet.",
-        "suggest": "返回所有尚未屈服的元素的可变切片。",
+        "suggest": "返回尚未生成的所有元素的可变切片。",
         "translate": ""
     },
     {
@@ -4076,7 +4076,7 @@
     },
     {
         "source": "Only print the elements that were not yielded yet: we cannot access the yielded elements anymore.",
-        "suggest": "只打印尚未屈服的元素: 我们无法再访问屈服的元素。",
+        "suggest": "只打印尚未产生的元素: 我们不能再访问产生的元素。",
         "translate": ""
     },
     {

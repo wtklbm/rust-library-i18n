@@ -636,7 +636,7 @@
     },
     {
         "source": "The generator will continue executing until it either yields or returns, at which point this function will return.",
-        "suggest": "生成器将继续执行，直到它屈服或返回为止，此时该函数将返回。",
+        "suggest": "生成器将继续执行，直到它产生或返回，此时该函数将返回。",
         "translate": ""
     },
     {
