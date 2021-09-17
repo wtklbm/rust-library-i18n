@@ -3223,5 +3223,55 @@
         "source": "1-aligned store.",
         "suggest": "1 对齐的 store。",
         "translate": false
+    },
+    {
+        "source": "__impl_slice_eq1! { [const N: usize] Vec<A>, &mut [B; N], } __impl_slice_eq1!",
+        "suggest": "<i>__impl_slice_eq1!</i> <b>__impl_slice_eq1! </b> <i>{ [const N: usize] Vec<A>, &mut [B; N], } __impl_slice_eq1!</i> <b>{ [const N: usize] Vec<A>, &mut [B; N], } __impl_slice_eq1! </b>",
+        "translate": false
+    },
+    {
+        "source": "fn test() -> Option<()> {",
+        "suggest": "fn test()-&gt; Option<()> {",
+        "translate": ""
+    },
+    {
+        "source": "sh_impl_unsigned! { $t, u8 } sh_impl_unsigned!",
+        "suggest": "<i>sh_impl_unsigned!</i> <b>sh_impl_unsigned! </b> <i>{ $t, u8 } sh_impl_unsigned!</i> <b>{ $t, u8 } sh_impl_unsigned! </b>",
+        "translate": false
+    },
+    {
+        "source": "sh_impl_signed! { $t, i8 } sh_impl_signed!",
+        "suggest": "<i>sh_impl_signed!</i> <b>sh_impl_signed! </b> <i>{ $t, i8 } sh_impl_signed!</i> <b>{ $t, i8 } sh_impl_signed! </b>",
+        "translate": false
+    },
+    {
+        "source": "T -> &mut U",
+        "suggest": "T-&gt; &mut U",
+        "translate": false
+    },
+    {
+        "source": "T -> *mut U",
+        "suggest": "T-&gt; *mut U",
+        "translate": false
+    },
+    {
+        "source": "T -> *const U",
+        "suggest": "T-&gt; *const U",
+        "translate": false
+    },
+    {
+        "source": "`arctan(y/x)` -> `[-pi/2, pi/2]`",
+        "suggest": "`arctan(y/x)`-&gt; `[-pi/2, pi/2]`",
+        "translate": false
+    },
+    {
+        "source": "`arctan(y/x) + pi` -> `(pi/2, pi]`",
+        "suggest": "`arctan(y/x) + pi`-&gt; `(pi/2, pi]`",
+        "translate": false
+    },
+    {
+        "source": "`arctan(y/x) - pi` -> `(-pi, -pi/2)`",
+        "suggest": "`arctan(y/x) - pi`-&gt; `(-pi, -pi/2)`",
+        "translate": false
     }
 ]
