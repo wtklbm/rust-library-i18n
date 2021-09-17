@@ -2571,7 +2571,7 @@
     },
     {
         "source": "Creates an iterator that both filters and maps.",
-        "suggest": "创建一个同时过滤和 maps 的迭代器。",
+        "suggest": "创建一个同时过滤和映射的迭代器。",
         "translate": ""
     },
     {
@@ -2646,7 +2646,7 @@
     },
     {
         "source": "Creates an iterator that [`skip`]s elements based on a predicate.",
-        "suggest": "创建一个迭代器，该迭代器基于谓词 [`skip`] 个元素。",
+        "suggest": "创建一个迭代器，该迭代器基于谓词 [`skip`] 元素。",
         "translate": ""
     },
     {
@@ -2701,12 +2701,12 @@
     },
     {
         "source": "Creates an iterator that both yields elements based on a predicate and maps.",
-        "suggest": "创建一个迭代器，该迭代器均基于谓词和 maps 产生元素。",
+        "suggest": "创建一个迭代器，该迭代器均基于谓词和映射生成元素。",
         "translate": ""
     },
     {
         "source": "It will call this closure on each element of the iterator, and yield elements while it returns [`Some(_)`][`Some`].",
-        "suggest": "它将在迭代器的每个元素上调用此闭包，并在返回 [`Some(_)`][`Some`] 时产生 yield 元素。",
+        "suggest": "它将在迭代器的每个元素上调用此闭包，并在返回 [`Some(_)`][`Some`] 时产生元素。",
         "translate": ""
     },
     {
@@ -2796,7 +2796,7 @@
     },
     {
         "source": "Creates an iterator that works like map, but flattens nested structure.",
-        "suggest": "创建一个迭代器，其工作方式类似于 map，但是将嵌套的结构展平。",
+        "suggest": "创建一个迭代器，其工作方式类似于 map，但它会将嵌套的结构展平。",
         "translate": ""
     },
     {
@@ -3181,7 +3181,7 @@
     },
     {
         "source": "Reduces the elements to a single one, by repeatedly applying a reducing operation.",
-        "suggest": "通过重复应用归约运算，将元素缩减为一个。",
+        "suggest": "通过重复应用缩减操作，将元素缩减为一个。",
         "translate": ""
     },
     {
@@ -3261,7 +3261,7 @@
     },
     {
         "source": "Applies function to the elements of iterator and returns the first non-none result.",
-        "suggest": "将函数应用于迭代器的元素，并返回第一个非无结果。",
+        "suggest": "将函数应用于迭代器的元素，并返回第一个非 None 的结果。",
         "translate": ""
     },
     {
@@ -3271,7 +3271,7 @@
     },
     {
         "source": "Applies function to the elements of iterator and returns the first true result or the first error.",
-        "suggest": "将函数应用于迭代器的元素，并返回第一个真结果或第一个错误。",
+        "suggest": "将函数应用于迭代器的元素，并返回第一个为 true 的结果或第一个错误。",
         "translate": ""
     },
     {
