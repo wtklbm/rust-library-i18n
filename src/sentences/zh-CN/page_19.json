@@ -296,7 +296,7 @@
     },
     {
         "source": "The final result could be determined just by looking at the code at compile time, so [constant folding] might turn the whole block into a simple `println!(\"7 4 4\")`.",
-        "suggest": "最终结果可以仅通过在编译时查看代码来确定，因此 [constant folding] 可能会将整个块变成一个简单的 `println!(\"7 4 4\")`。",
+        "suggest": "最终结果可以仅通过在编译时查看代码来确定，因此 [常量合并][constant folding] 可能会将整个块变成一个简单的 `println!(\"7 4 4\")`。",
         "translate": ""
     },
     {
@@ -846,7 +846,7 @@
     },
     {
         "source": "The SPSC queue found online is essentially a linked list of nodes where one half of the nodes are the \"queue of data\" and the other half of nodes are a cache of unused nodes.",
-        "suggest": "在线找到的 SPSC 队列实质上是节点的链表，其中一半节点是 \"queue of data\"，另一半节点是未使用节点的缓存。",
+        "suggest": "在线找到的 SPSC 队列实质上是节点的链表，其中一半节点是 \"数据队列\"，另一半节点是未使用节点的缓存。",
         "translate": ""
     },
     {
@@ -1226,7 +1226,7 @@
     },
     {
         "source": "All data sent on the [`Sender`] will become available on the [`Receiver`] in the same order as it was sent, and no [`send`] will block the calling thread (this channel has an \"infinite buffer\", unlike [`sync_channel`], which will block after its buffer limit is reached).",
-        "suggest": "在 [`Sender`] 上发送的所有数据将以与发送时相同的顺序在 [`Receiver`] 上可用，并且没有 [`send`] 将阻塞调用线程 (此通道具有一个 \"infinite buffer\"，与 [`sync_channel`] 不同，它将在达到其缓冲区限制后阻塞)。",
+        "suggest": "在 [`Sender`] 上发送的所有数据将以与发送时相同的顺序在 [`Receiver`] 上可用，并且没有 [`send`] 将阻塞调用线程 (此通道具有一个 \"无限缓冲区\"，与 [`sync_channel`] 不同，它将在达到其缓冲区限制后阻塞)。",
         "translate": ""
     },
     {
@@ -1286,7 +1286,7 @@
     },
     {
         "source": "Note that a buffer size of 0 is valid, in which case this becomes \"rendezvous channel\" where each [`send`] will not return until a [`recv`] is paired with it.",
-        "suggest": "请注意，缓冲区大小为 0 是有效的，在这种情况下，它变为 \"rendezvous channel\"，其中每个 [`send`] 在与 [`recv`] 配对之前不会返回。",
+        "suggest": "请注意，缓冲区大小为 0 是有效的，在这种情况下，它变为 \"会合通道\"，其中每个 [`send`] 在与 [`recv`] 配对之前不会返回。",
         "translate": ""
     },
     {
@@ -1706,7 +1706,7 @@
     },
     {
         "source": "The one caveat to consider is that when a port sees a disconnected channel it must check for data because there is no \"data plus upgrade\" state.",
-        "suggest": "需要考虑的一个警告是，当端口看到断开的通道时，它必须检查数据，因为没有 \"data plus upgrade\" 状态。",
+        "suggest": "需要考虑的一个警告是，当端口看到断开的通道时，它必须检查数据，因为没有 \"数据加升级\" 状态。",
         "translate": ""
     },
     {
@@ -2121,7 +2121,7 @@
     },
     {
         "source": "The logic for incrementing is \"add and if disconnected store disconnected\".",
-        "suggest": "递增逻辑为 \"add and if disconnected store disconnected\"。",
+        "suggest": "递增的逻辑为 \"添加，如果断开连接，则存储断开连接\"。",
         "translate": ""
     },
     {
@@ -2161,12 +2161,12 @@
     },
     {
         "source": "As a result, this preflight check serves as the definitive \"this will never be received\".",
-        "suggest": "结果，此预检检查将用作确定的 \"this will never be received\"。",
+        "suggest": "结果，此预检检查将用作确定的 \"永远不会收到\"。",
         "translate": ""
     },
     {
         "source": "Once we get beyond this check, we have permanently entered the realm of \"this may be received\"",
-        "suggest": "一旦超出此检查范围，我们将永久进入 \"this may be received\" 领域",
+        "suggest": "一旦超出此检查范围，我们将永久进入 \"这可能会收到\" 的领域",
         "translate": ""
     },
     {
@@ -2191,7 +2191,7 @@
     },
     {
         "source": "see the comment in 'try' for a shared channel for why this window of \"not disconnected\" is ok.",
-        "suggest": "请参见 'try' 中有关共享通道的文档，以了解 \"not disconnected\" 窗口正常的原因。",
+        "suggest": "请参见 'try' 中有关共享通道的文档，以了解 \"未断开连接\" 窗口正常的原因。",
         "translate": ""
     },
     {
@@ -2256,7 +2256,7 @@
     },
     {
         "source": "In this case, we spin in a yield loop because the remote sender should finish their enqueue operation \"very quickly\".",
-        "suggest": "在这种情况下，我们旋转一个 yield 循环，因为远程发送者应该完成其入队操作 \"very quickly\"。",
+        "suggest": "在这种情况下，我们在一个 yield 循环中旋转，因为远程发送方应该 \"非常快\" 地完成他们的入队操作。",
         "translate": ""
     },
     {
@@ -2646,7 +2646,7 @@
     },
     {
         "source": "Any message could contain an \"upgrade request\" to a new shared port, so the internal queue it's a queue of T, but rather Message<T>",
-        "suggest": "任何消息都可以包含到新共享端口的 \"upgrade request\"，因此内部队列是 T 队列，而 Message<T>",
+        "suggest": "任何消息都可以包含一个 \"升级请求\" 到一个新的共享端口，所以内部队列是一个 T 的队列，而 Message<T>",
         "translate": ""
     },
     {
@@ -2666,7 +2666,7 @@
     },
     {
         "source": "As described in the mod's doc comment, -1 == wakeup",
-        "suggest": "如 mod 的文档注释中所述，-1 == 唤醒",
+        "suggest": "如 mod 的文档注释中所述，-1 == wakeup",
         "translate": ""
     },
     {
@@ -2961,7 +2961,7 @@
     },
     {
         "source": "Now that we've determined that this queue \"has data\", we peek at the queue to see if the data is an upgrade or not.",
-        "suggest": "现在，我们确定该队列为 \"has data\"，我们将窥视该队列以查看数据是否为升级。",
+        "suggest": "现在我们已经确定这个队列 \"有数据\"，我们查看队列看看数据是否是升级的",
         "translate": ""
     },
     {
@@ -3011,7 +3011,7 @@
     },
     {
         "source": "Implementation-wise, it can all be summed up with \"use a mutex plus some logic\".",
-        "suggest": "在实现方面，可以全部用 \"use a mutex plus some logic\" 进行总结。",
+        "suggest": "在实现方面，可以全部用 \"使用互斥锁加上一些逻辑\" 来概括。",
         "translate": ""
     },
     {

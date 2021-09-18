@@ -481,7 +481,7 @@
     },
     {
         "source": "Instead, we'll just note where we expect rlimit to start faulting, so our handler can report \"stack overflow\", and trust that the kernel's own stack guard will work.",
-        "suggest": "取而代之的是，我们只需要注意 rlimit 会在哪里开始出错，以便我们的处理程序可以报告 \"stack overflow\"，并相信内核自己的栈保护将起作用。",
+        "suggest": "取而代之的是，我们只需要注意 rlimit 会在哪里开始出错，以便我们的处理程序可以报告 \"栈溢出\"，并相信内核自己的栈保护会起作用。",
         "translate": ""
     },
     {
@@ -811,7 +811,7 @@
     },
     {
         "source": "right now there is no concept of \"thread exit\", but this is likely going to show up at some point in the form of an exported symbol that the wasm runtime is going to be expected to call.",
-        "suggest": "现在没有 \"thread exit\" 的概念，但是这可能会以导出符号的形式在某些时候显示出来，表明 wasm 运行时将被调用。",
+        "suggest": "现在没有 \"线程退出\" 的概念，但是这可能会以导出符号的形式在某些时候显示出来，表明 wasm 运行时将被调用。",
         "translate": ""
     },
     {
@@ -1501,7 +1501,7 @@
     },
     {
         "source": "The crate is a port of dlmalloc.c from C to Rust and is basically just so we can have \"pure Rust\" for now which is currently technically required (can't link with C yet).",
-        "suggest": "crate 是 dlmalloc.c 从 C 到 Rust 的端口，基本上就是这样，我们现在可以拥有 \"pure Rust\"，这是当前在技术上需要的 (尚不能与 C 链接)。",
+        "suggest": "crate 是 dlmalloc.c 从 C 到 Rust 的端口，基本上就是这样，我们现在可以拥有 \"纯 Rust\"，这是当前在技术上需要的 (尚不能与 C 链接)。",
         "translate": ""
     },
     {
@@ -1616,7 +1616,7 @@
     },
     {
         "source": "Maintain a form of \"two level\" allocator scheme where the main thread has its own allocator.",
-        "suggest": "维护一种 \"two level\" 分配器方案的形式，其中主线程具有其自己的分配器。",
+        "suggest": "维护一种 \"两级\" 分配器方案的形式，其中主线程具有其自己的分配器。",
         "translate": ""
     },
     {
@@ -1916,7 +1916,7 @@
     },
     {
         "source": "Do so with with a simple \"atomically add to a global counter\" strategy.",
-        "suggest": "使用简单的 \"atomically add to a global counter\" 策略即可做到这一点。",
+        "suggest": "使用简单的 \"原子添加到全局计数器\" 策略来实现。",
         "translate": ""
     },
     {
@@ -2081,12 +2081,12 @@
     },
     {
         "source": "While not precisely correct should be \"correct enough\" for now.",
-        "suggest": "虽然目前尚不完全正确，但现在应该是 \"correct enough\"。",
+        "suggest": "虽然不完全正确，但现在应该 \"足够正确\"。",
         "translate": ""
     },
     {
         "source": "A \"compatibility layer\" for supporting older versions of Windows",
-        "suggest": "\"compatibility layer\"，用于支持较早版本的 Windows",
+        "suggest": "用于支持旧版本 Windows 的 \"兼容层\"",
         "translate": ""
     },
     {
@@ -2126,7 +2126,7 @@
     },
     {
         "source": "That is, there is no unpredictable \"cache miss\" that occurs when calling a DLL import.",
-        "suggest": "也就是说，调用 DLL 导入时，不会发生不可预测的 \"cache miss\"。",
+        "suggest": "也就是说，调用 DLL 导入时，不会发生不可预测的 \"缓存未命中\"。",
         "translate": ""
     },
     {
@@ -3106,17 +3106,17 @@
     },
     {
         "source": "In some cases, however, the returned \"correct length\" may actually be 0!",
-        "suggest": "但是，在某些情况下，返回的 \"correct length\" 实际上可能为 0!",
+        "suggest": "但是，在某些情况下，返回的 \"正确长度\" 实际上可能为 0!",
         "translate": ""
     },
     {
         "source": "To handle this case we call `SetLastError` to reset it to 0 and then check it again if we get the \"0 error value\".",
-        "suggest": "为了处理这种情况，我们调用 `SetLastError` 将其重置为 0，然后再次检查是否获得 \"0 error value\"。",
+        "suggest": "为了处理这种情况，我们调用 `SetLastError` 将其重置为 0，然后再次检查是否获得 \"0 错误值\"。",
         "translate": ""
     },
     {
         "source": "If the \"last error\" is still 0 then we interpret it as a 0 length buffer and not an actual error.",
-        "suggest": "如果 \"last error\" 仍为 0，则我们将其解释为长度为 0 的缓冲区，而不是实际错误。",
+        "suggest": "如果 \"最后一个错误\" 仍为 0，则我们将其解释为长度为 0 的缓冲区，而不是实际错误。",
         "translate": ""
     },
     {
@@ -3506,7 +3506,7 @@
     },
     {
         "source": "Instead, we create a \"hopefully unique\" name and create a named pipe which has overlapped operations enabled.",
-        "suggest": "而是，我们创建一个 \"hopefully unique\" 名称并创建一个已启用重叠操作的命名管道。",
+        "suggest": "而是，我们创建一个 \"希望是唯一的\" 名称并创建一个已启用重叠操作的命名管道。",
         "translate": ""
     },
     {
@@ -3826,7 +3826,7 @@
     },
     {
         "source": "On Windows we pass an \"environment block\" which is not a char**, but rather a concatenation of null-terminated k=v\\0 sequences, with a final \\0 to terminate.",
-        "suggest": "在 Windows 上，我们传递的 \"environment block\" 不是 char **，而是空终止的 k=v\\0 序列的串联，最后一个 \\0 终止。",
+        "suggest": "在 Windows 上，我们传递的 \"环境块\" 不是 char**，而是空终止的 k=v\\0 序列的串联，最后一个 \\0 终止。",
         "translate": ""
     },
     {
@@ -4186,7 +4186,7 @@
     },
     {
         "source": "If you're looking at this code, and wondering \"what is this doing?\", you're not alone!",
-        "suggest": "如果您正在查看此代码，并且想知道 \"what is this doing?\"，您并不孤单!",
+        "suggest": "如果您正在查看此代码，并且想知道 \"这是在做什么？\"，您并不孤单!",
         "translate": ""
     },
     {
@@ -4666,7 +4666,7 @@
     },
     {
         "source": "High precision timing on windows operates in \"Performance Counter\" units, as returned by the WINAPI QueryPerformanceCounter function.",
-        "suggest": "windows 上的高精度计时以 \"Performance Counter\" 为单位运行，这由 WINAPI QueryPerformanceCounter 函数返回。",
+        "suggest": "windows 上的高精度计时以 \"性能计数器\" 为单位运行，这是由 WINAPI QueryPerformanceCounter 函数返回的。",
         "translate": ""
     },
     {
@@ -4691,7 +4691,7 @@
     },
     {
         "source": "Per microsoft docs, the margin of error for cross-thread time comparisons using QueryPerformanceCounter is 1 \"tick\" -- defined as 1/frequency().",
-        "suggest": "根据 Microsoft 文档，使用 QueryPerformanceCounter 进行跨线程时间比较的错误幅度为 1 \"tick\" - 定义为 1/frequency ()。",
+        "suggest": "根据 Microsoft 文档，使用 QueryPerformanceCounter 进行跨线程时间比较的错误幅度为 1 \"tick\" -- 定义为 1/frequency()。",
         "translate": ""
     },
     {

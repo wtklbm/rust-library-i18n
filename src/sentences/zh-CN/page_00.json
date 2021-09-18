@@ -1176,12 +1176,12 @@
     },
     {
         "source": "Box is recognized as a \"unique pointer\" by Stacked Borrows, but internally it is a raw pointer for the type system.",
-        "suggest": "Box 被 Stacked 借用识别为 \"unique pointer\"，但在内部它是类型系统的裸指针。",
+        "suggest": "Box 被 Stacked 借用识别为 \"唯一指针\"，但在内部它是类型系统的裸指针。",
         "translate": ""
     },
     {
         "source": "Turning it directly into a raw pointer would not be recognized as \"releasing\" the unique pointer to permit aliased raw accesses, so all raw pointer methods have to go through `Box::leak`.",
-        "suggest": "将其直接转换为裸指针将不会被视为 \"releasing\" 允许别名原始访问的唯一指针，因此所有裸指针方法都必须通过 `Box::leak`。",
+        "suggest": "将其直接转换为裸指针将不会被视为 \"释放\" 允许别名原始访问的唯一指针，因此所有裸指针方法都必须通过 `Box::leak`。",
         "translate": ""
     },
     {
@@ -3066,7 +3066,7 @@
     },
     {
         "source": "These are mostly for testing the algorithm that \"fixes\" the right edge after insertion.",
-        "suggest": "这些主要用于测试 \"fixes\" 插入后正确的 edge 的算法。",
+        "suggest": "这些主要用于测试插入后 \"修复\" 右边缘的算法。",
         "translate": ""
     },
     {
@@ -4336,7 +4336,7 @@
     },
     {
         "source": "For a leaf node, \"having an edge\" only means we can identify a position in the node, since leaf edges are empty and need no data representation.",
-        "suggest": "对于叶节点，\"having an edge\" 仅意味着我们可以标识节点中的位置，因为叶 edges 为空并且不需要数据表示。",
+        "suggest": "对于叶节点，\"有一个 edge\" 仅意味着我们可以标识节点中的位置，因为叶 edges 为空并且不需要数据表示。",
         "translate": ""
     },
     {

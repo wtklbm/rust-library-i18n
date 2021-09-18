@@ -36,7 +36,7 @@
     },
     {
         "source": "Under certain circumstances, the old implementation of LineWriter would try to buffer \"to the last newline\" but be forced to buffer less than that, leading to inappropriate partial line writes.",
-        "suggest": "在某些情况下，LineWriter 的旧实现将尝试缓冲 \"to the last newline\"，但是被迫缓冲不到 \"to the last newline\"，从而导致不适当的部分行写操作。",
+        "suggest": "在某些情况下，LineWriter 的旧实现将尝试缓冲 \"到最后一行\"，但被迫缓冲少于这个值，从而导致不适当的部分行写入。",
         "translate": ""
     },
     {
@@ -526,7 +526,7 @@
     },
     {
         "source": "An error returned when an operation could not be completed because an \"end of file\" was reached prematurely.",
-        "suggest": "由于过早到达 \"end of file\" 而无法完成操作时，返回错误。",
+        "suggest": "由于过早到达 \"文件结尾\" 而无法完成操作时，返回错误。",
         "translate": ""
     },
     {
@@ -1211,7 +1211,7 @@
     },
     {
         "source": "This reader has reached its \"end of file\" and will likely no longer be able to produce bytes.",
-        "suggest": "reader 已到达其 \"end of file\"，可能不再能够产生字节。",
+        "suggest": "reader 已到达其 \"文件结尾\"，可能不再能够产生字节。",
         "translate": ""
     },
     {
@@ -1466,7 +1466,7 @@
     },
     {
         "source": "If this function encounters an \"end of file\" before completely filling the buffer, it returns an error of the kind [`ErrorKind::UnexpectedEof`].",
-        "suggest": "如果此函数在完全填充缓冲区之前遇到 \"end of file\"，它将返回 [`ErrorKind::UnexpectedEof`] 类型的错误。",
+        "suggest": "如果此函数在完全填充缓冲区之前遇到 \"文件结尾\"，它将返回 [`ErrorKind::UnexpectedEof`] 类型的错误。",
         "translate": ""
     },
     {
@@ -3426,7 +3426,7 @@
     },
     {
         "source": "For more details consult the [Reference on \"break expression\"] and the [Reference on \"break and loop values\"].",
-        "suggest": "有关更多详细信息，请咨询 [Reference on \"break expression\"] 和 [Reference on \"break and loop values\"]。",
+        "suggest": "有关更多详细信息，请参阅 [有关 \"break 表达式\"][Reference on \"break expression\"] 和 [有关 \"break 和循环值\"][Reference on \"break and loop values\"] 的参考资料。",
         "translate": ""
     },
     {
@@ -3531,7 +3531,7 @@
     },
     {
         "source": "This marks a function as being callable in the body of a `const` or `static` item and in array initializers (commonly called \"const contexts\").",
-        "suggest": "这将一个函数标记为可以在 `const` 或 `static` 项的主体中以及在数组初始化程序 (通常称为 \"const contexts\") 中被调用。",
+        "suggest": "这将一个函数标记为可以在 `const` 或 `static` 项的主体中以及在数组初始化程序 (通常称为 \"常量上下文\") 中被调用。",
         "translate": ""
     },
     {
@@ -4011,12 +4011,12 @@
     },
     {
         "source": "For more information on implementations, see the [Rust book][book1] or the [Reference].",
-        "suggest": "有关实现的更多信息，请参见 [Rust book][book1] 或 [Reference]。",
+        "suggest": "有关实现的更多信息，请参见 [Rust 书][book1] 或 [Reference]。",
         "translate": ""
     },
     {
         "source": "The other use of the `impl` keyword is in `impl Trait` syntax, which can be seen as a shorthand for \"a concrete type that implements this trait\".",
-        "suggest": "`impl` 关键字的另一个用法是 `impl Trait` 语法，可以将其视为 \"a concrete type that implements this trait\" 的简写。",
+        "suggest": "`impl` 关键字的另一个用法是 `impl Trait` 语法，可以将其视为 \"实现此 trait 的具体类型\" 的简写。",
         "translate": ""
     },
     {
@@ -4026,7 +4026,7 @@
     },
     {
         "source": "For more information on `impl Trait` syntax, see the [Rust book][book2].",
-        "suggest": "有关 `impl Trait` 语法的更多信息，请参见 [Rust book][book2]。",
+        "suggest": "有关 `impl Trait` 语法的更多信息，请参见 [Rust 书][book2]。",
         "translate": ""
     },
     {
@@ -4056,7 +4056,7 @@
     },
     {
         "source": "(Read more about [range patterns])",
-        "suggest": "(了解有关 [range patterns] 的更多信息)",
+        "suggest": "(了解有关 [范围模式][range patterns] 的更多信息)",
         "translate": ""
     },
     {
@@ -4446,7 +4446,7 @@
     },
     {
         "source": "returns from the function immediately (an \"early return\"):",
-        "suggest": "立即从函数 (\"early return\") 返回:",
+        "suggest": "立即从函数返回 (\"提前返回\"):",
         "translate": ""
     },
     {

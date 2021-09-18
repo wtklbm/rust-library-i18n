@@ -4056,12 +4056,12 @@
     },
     {
         "source": "Performs \"ternary addition\" which takes in an extra bit to add, and may return an additional bit of overflow.",
-        "suggest": "执行 \"ternary addition\"，它需要添加一个额外的位，并可能返回一个额外的溢出位。",
+        "suggest": "执行 \"三元加法\"，它需要添加一个额外的位，并可能返回一个额外的溢出位。",
         "translate": ""
     },
     {
         "source": "This allows for chaining together multiple additions to create \"big integers\" which represent larger values.",
-        "suggest": "这允许将多个添加链接在一起以创建代表更大值的 \"big integers\"。",
+        "suggest": "这允许将多个添加链接在一起以创建代表更大值的 \"大整数\"。",
         "translate": ""
     },
     {
@@ -4071,12 +4071,12 @@
     },
     {
         "source": "Performs \"ternary subtraction\" which takes in an extra bit to subtract, and may return an additional bit of overflow.",
-        "suggest": "执行 \"ternary subtraction\"，它接受一个额外的位来减去，并且可能返回一个额外的溢出位。",
+        "suggest": "执行 \"三元减法\"，它接受一个额外的位来减去，并且可能返回一个额外的溢出位。",
         "translate": ""
     },
     {
         "source": "This allows for chaining together multiple subtractions to create \"big integers\" which represent larger values.",
-        "suggest": "这允许将多个减法链接在一起以创建代表更大值的 \"big integers\"。",
+        "suggest": "这允许将多个减法链接在一起以创建代表更大值的 \"大整数\"。",
         "translate": ""
     },
     {
@@ -4171,7 +4171,7 @@
     },
     {
         "source": "This allows for chaining together multiple multiplications to create \"big integers\" which represent larger values.",
-        "suggest": "这允许将多个乘法链接在一起以创建代表更大值的 \"big integers\"。",
+        "suggest": "这允许将多个乘法链接在一起以创建代表更大值的 \"大整数\"。",
         "translate": ""
     },
     {

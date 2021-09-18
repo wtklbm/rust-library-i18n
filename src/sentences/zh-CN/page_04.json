@@ -221,7 +221,7 @@
     },
     {
         "source": "Ensure that the `SYMOPT_DEFERRED_LOADS` flag is set, because according to MSVC's own docs about this: \"This is the fastest, most efficient way to use the symbol handler.\", so let's do that!",
-        "suggest": "确保设置了 `SYMOPT_DEFERRED_LOADS` 标志，因为根据 MSVC 自己的文档: \"This is the fastest, most efficient way to use the symbol handler.\"，让我们开始吧!",
+        "suggest": "确保设置了 `SYMOPT_DEFERRED_LOADS` 标志，因为根据 MSVC 自己的文档: \"这是使用符号处理程序的最快、最有效的方法。\"，让我们开始吧!",
         "translate": ""
     },
     {
@@ -1716,7 +1716,7 @@
     },
     {
         "source": "If /proc/self/exe is used then we can typically ignore these as we assume that libbacktrace is \"mostly correct\" and otherwise doesn't do weird things with \"attempted to be correct\" dwarf debug info.",
-        "suggest": "如果使用 /proc/self/exe，则通常可以忽略这些，因为我们假设 libbacktrace 是 \"mostly correct\"，否则对于 \"attempted to be correct\" 矮调试信息不会做奇怪的事情。",
+        "suggest": "如果使用 /proc/self/exe，则通常可以忽略这些，因为我们假设 libbacktrace 是 \"大部分是正确的\"，否则不会用 \"试图正确\" 的 dwarf 调试信息做奇怪的事情。",
         "translate": ""
     },
     {
@@ -3016,7 +3016,7 @@
     },
     {
         "source": "Note that the pointer value may potentially represent a valid pointer, which means this must not be used as a \"not yet initialized\" sentinel value.",
-        "suggest": "请注意，该指针值可能表示一个有效的指针，这意味着不得将其用作 \"not yet initialized\" 标记值。",
+        "suggest": "请注意，该指针值可能表示一个有效的指针，这意味着不得将其用作 \"尚未初始化\" 的标记值。",
         "translate": ""
     },
     {
@@ -3506,7 +3506,7 @@
     },
     {
         "source": "Creates a \"by reference\" adaptor for this instance of `Allocator`.",
-        "suggest": "为此 `Allocator` 实例创建 \"by reference\" 适配器。",
+        "suggest": "为这个 `Allocator` 实例创建 \"by reference\" 适配器。",
         "translate": ""
     },
     {

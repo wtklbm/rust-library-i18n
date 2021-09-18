@@ -2091,7 +2091,7 @@
     },
     {
         "source": "the first parts of these tests are straight ports from the AES-NI tests the second parts directly compare the two, for inputs that are different across lanes and \"more random\" than the standard test vectors ideally we'd be using quickcheck here instead",
-        "suggest": "这些测试的第一部分是 AES-NI 测试的直接端口，第二部分直接比较两者，对于跨通道和 \"more random\" 的输入与标准测试 vectors 不同的输入，理想情况下，我们将在此处使用 quickcheck",
+        "suggest": "这些测试的第一部分是来自 AES-NI 测试的直接端口，第二部分直接比较两者，对于不同通道的输入和比标准测试向量 \"更随机\" 的输入，理想情况下我们应该在这里使用 quickcheck 来代替",
         "translate": ""
     },
     {
@@ -2806,7 +2806,7 @@
     },
     {
         "source": "Note that this means that an instance of `__m128i` typically just means a \"bag of bits\" which is left up to interpretation at the point of use.",
-        "suggest": "请注意，这意味着 `__m128i` 的实例通常仅表示 \"bag of bits\"，该 \"bag of bits\" 留待使用时进行解释。",
+        "suggest": "请注意，这意味着 `__m128i` 的实例通常仅表示一个 \"bag of bits\"，该 \"bag of bits\" 留待使用时进行解释。",
         "translate": ""
     },
     {

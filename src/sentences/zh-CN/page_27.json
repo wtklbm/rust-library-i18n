@@ -4486,7 +4486,7 @@
     },
     {
         "source": "EAX returns the \"Highest Function Parameter\", that is, the maximum leaf value for subsequent calls of `cpuinfo` in range [0,",
-        "suggest": "EAX 返回 \"Highest Function Parameter\"，即 `cpuinfo` 后续调用的最大叶子值，范围为 [0，",
+        "suggest": "EAX 返回 \"最高函数参数\"，即 `cpuinfo` 后续调用的最大叶子值，范围为 [0，",
         "translate": ""
     },
     {
@@ -4511,7 +4511,7 @@
     },
     {
         "source": "CPUID does not support \"Extended Features\"",
-        "suggest": "CPUID 不支持 \"Extended Features\"",
+        "suggest": "CPUID 不支持 \"扩展功能\"",
         "translate": ""
     },
     {

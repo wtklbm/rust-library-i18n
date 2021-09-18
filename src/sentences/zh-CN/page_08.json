@@ -656,7 +656,7 @@
     },
     {
         "source": "Types that are not `Sync` are those that have \"interior mutability\" in a non-thread-safe form, such as [`Cell`][cell] and [`RefCell`][refcell].",
-        "suggest": "不是 `Sync` 的类型是具有非线程安全形式的 \"interior mutability\" 的类型，例如 [`Cell`][cell] 和 [`RefCell`][refcell]。",
+        "suggest": "不是 `Sync` 的类型是具有非线程安全形式的 \"内部可变性\" 的类型，例如 [`Cell`][cell] 和 [`RefCell`][refcell]。",
         "translate": ""
     },
     {
@@ -3596,7 +3596,7 @@
     },
     {
         "source": "The hand-wavy \"close to halfway\" is made precise by the numeric analysis in the paper.",
-        "suggest": "通过本文中的数值分析，可以使手工波浪 \"close to halfway\" 变得精确。",
+        "suggest": "通过本文中的数值分析，可以使 hand-wavy \"close to halfway\" 变得精确。",
         "translate": ""
     },
     {

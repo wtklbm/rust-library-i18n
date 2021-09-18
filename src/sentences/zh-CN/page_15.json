@@ -886,7 +886,7 @@
     },
     {
         "source": "Bypass \"move out of struct which implements [`Drop`] trait\" restriction.",
-        "suggest": "绕过 \"move out of struct which implements [`Drop`] trait\" 限制。",
+        "suggest": "绕过 \"move out of struct which implements [`Drop`] trait\" 的限制。",
         "translate": ""
     },
     {

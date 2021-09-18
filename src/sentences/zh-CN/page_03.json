@@ -3471,7 +3471,7 @@
     },
     {
         "source": "This helps validate \"critical points\" where an input range straddles the boundary between valid and invalid.",
-        "suggest": "这有助于验证 \"critical points\" 的输入范围是否跨越有效和无效之间的边界。",
+        "suggest": "这有助于验证输入范围跨越有效和无效边界的 \"临界点\"。",
         "translate": ""
     },
     {

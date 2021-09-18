@@ -3836,7 +3836,7 @@
     },
     {
         "source": "It must be \"dereferencable\" in the sense defined in [the module documentation].",
-        "suggest": "在 [the module documentation] 中定义的意义上，它必须是 \"dereferencable\"。",
+        "suggest": "在 [模块级文档][the module documentation] 中定义的意义上，它必须是 \"dereferencable\"。",
         "translate": ""
     },
     {

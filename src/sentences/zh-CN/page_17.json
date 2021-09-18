@@ -86,12 +86,12 @@
     },
     {
         "source": "Not all uses of `unsafe` are equivalent: some are here to mark the existence of a contract the programmer must check, others are to say \"I have checked the contract, go ahead and do this\".",
-        "suggest": "并非 `unsafe` 的所有用法都是等效的: 这里有些标记是程序员必须检查的契约的存在，而另一些是 \"I have checked the contract, go ahead and do this\"。",
+        "suggest": "并非 `unsafe` 的所有用法都是等效的: 这里有些标记是程序员必须检查的契约的存在，而另一些是 \"我已经检查了契约，继续做这个吧\"。",
         "translate": ""
     },
     {
         "source": "The following [discussion on Rust Internals] has more in-depth explanations about this but here is a summary of the main points:",
-        "suggest": "以下 [discussion on Rust Internals] 对此有更深入的说明，但这是要点的总结:",
+        "suggest": "以下 [关于 Rust 内部的讨论][discussion on Rust Internals] 对此有更深入的说明，但这是要点的总结:",
         "translate": ""
     },
     {
@@ -2261,7 +2261,7 @@
     },
     {
         "source": "The four octets are in decimal notation, divided by `.` (this is called \"dot-decimal notation\").",
-        "suggest": "四个八位位组用十进制表示法除以 `.` (称为 \"dot-decimal notation\")。",
+        "suggest": "四个八位位组用十进制表示法除以 `.` (称为 \"点十进制表示法\")。",
         "translate": ""
     },
     {
@@ -2531,12 +2531,12 @@
     },
     {
         "source": "is the \"IPv4 dummy address\" (see [IETF RFC 7600])",
-        "suggest": "是 \"IPv4 dummy address\" (请参见 [IETF RFC 7600])",
+        "suggest": "是 \"IPv4 虚拟地址\" (请参见 [IETF RFC 7600])",
         "translate": ""
     },
     {
         "source": "is the \"Port Control Protocol Anycast\" (see [IETF RFC 7723])",
-        "suggest": "是 \"Port Control Protocol Anycast\" (请参见 [IETF RFC 7723])",
+        "suggest": "是 \"端口控制协议 Anycast\" (请参见 [IETF RFC 7723])",
         "translate": ""
     },
     {
@@ -2801,7 +2801,7 @@
     },
     {
         "source": "A common misconception is to think that \"unicast link-local addresses start with `fe80::`\", but [IETF RFC 4291] actually defines a stricter format for these addresses:",
-        "suggest": "一个普遍的误解是认为 \"unicast link-local addresses start with `fe80::`\"，但是 [IETF RFC 4291] 实际上为这些地址定义了一种更严格的格式:",
+        "suggest": "一个普遍的误解是认为 \"单播链路本地地址以 `fe80::` 开头\"，但是 [IETF RFC 4291] 实际上为这些地址定义了一种更严格的格式:",
         "translate": ""
     },
     {
@@ -2926,7 +2926,7 @@
     },
     {
         "source": "Converts this address to an [`IPv4` address] if it's an \"IPv4-mapped IPv6 address\" defined in [IETF RFC 4291 section 2.5.5.2], otherwise returns [`None`].",
-        "suggest": "如果它是 [IETF RFC 4291 section 2.5.5.2] 中定义的 \"IPv4-mapped IPv6 address\"，则将该地址转换为 [`IPv4` address]，否则返回 [`None`]。",
+        "suggest": "如果它是 [IETF RFC 4291 第 2.5.5.2 节][IETF RFC 4291 section 2.5.5.2] 中定义的 \"IPv4 映射 IPv6 地址\"，则将该地址转换为 [`IPv4` address]，否则返回 [`None`]。",
         "translate": ""
     },
     {
@@ -3181,7 +3181,7 @@
     },
     {
         "source": "This module is \"publicly exported\" through the `FromStr` implementations below.",
-        "suggest": "此模块是 \"publicly exported\" 至以下 `FromStr` 的实现。",
+        "suggest": "此该模块通过下面的 `FromStr` 实现 \"公开导出\"。",
         "translate": ""
     },
     {
@@ -4676,7 +4676,7 @@
     },
     {
         "source": "When documenting libstd we want to show unix/windows/linux/wasi modules as these are the \"main modules\" that are used across platforms, so all modules are enabled when `cfg(doc)` is set.",
-        "suggest": "在记录 libstd 时，我们希望显示 unix/windows/linux/wasi 模块，因为这些模块是跨平台使用的 \"main modules\"，因此在设置 `cfg(doc)` 时将启用所有模块。",
+        "suggest": "在记录 libstd 时，我们希望显示 unix/windows/linux/wasi 模块，因为这些模块是跨平台使用的 \"主模块\"，因此在设置 `cfg(doc)` 时将启用所有模块。",
         "translate": ""
     },
     {

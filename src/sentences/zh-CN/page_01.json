@@ -3746,7 +3746,7 @@
     },
     {
         "source": "Each formatting argument is allowed to specify which value argument it's referencing, and if omitted it is assumed to be \"the next argument\".",
-        "suggest": "允许每个格式参数指定其引用的值参数，如果省略，则假定为 \"the next argument\"。",
+        "suggest": "每个格式化参数都可以指定它引用的值参数，如果省略，则假定它是 \"下一个参数\"。",
         "translate": ""
     },
     {
@@ -3766,12 +3766,12 @@
     },
     {
         "source": "The \"next argument\" specifier can be thought of as an iterator over the argument.",
-        "suggest": "可以将 \"next argument\" 说明符视为参数的迭代器。",
+        "suggest": "可以将 \"下一个参数\" 说明符可以看作是参数的迭代器。",
         "translate": ""
     },
     {
         "source": "Each time a \"next argument\" specifier is seen, the iterator advances.",
-        "suggest": "每次看到 \"next argument\" 说明符时，迭代器都会前进。",
+        "suggest": "每次看到 \"下一个参数\" 说明符时，迭代器都会前进。",
         "translate": ""
     },
     {
@@ -3851,7 +3851,7 @@
     },
     {
         "source": "This is a parameter for the \"minimum width\" that the format should take up.",
-        "suggest": "这是格式应使用的 \"minimum width\" 的参数。",
+        "suggest": "这是格式应使用的 \"最小宽度\" 的参数。",
         "translate": ""
     },
     {
@@ -3866,7 +3866,7 @@
     },
     {
         "source": "Referring to an argument with the dollar syntax does not affect the \"next argument\" counter, so it's usually a good idea to refer to arguments by position, or use named arguments.",
-        "suggest": "使用 Dollar 语法引用参数不会影响 \"next argument\" 计数器，因此按位置引用参数或使用命名参数通常是一个好主意。",
+        "suggest": "使用 Dollar 语法引用参数不会影响 \"下一个参数\" 计数器，因此按位置引用参数或使用命名参数通常是一个好主意。",
         "translate": ""
     },
     {
@@ -4021,7 +4021,7 @@
     },
     {
         "source": "For non-numeric types, this can be considered a \"maximum width\".",
-        "suggest": "对于非数字类型，可以将其视为 \"maximum width\"。",
+        "suggest": "对于非数字类型，可以将其视为 \"最大宽度\"。",
         "translate": ""
     },
     {
@@ -4781,7 +4781,7 @@
     },
     {
         "source": "Catches all overflows in capacity computations (promotes them to \"capacity overflow\" panics).",
-        "suggest": "捕获容量计算中的所有溢出 (将它们提升为 \"capacity overflow\" panics)。",
+        "suggest": "捕获容量计算中的所有溢出 (将它们提升为 \"容量溢出\" panics)。",
         "translate": ""
     },
     {
@@ -4961,7 +4961,7 @@
     },
     {
         "source": "means \"unallocated\".",
-        "suggest": "表示 \"unallocated\"。",
+        "suggest": "表示 \"未分配\"。",
         "translate": ""
     },
     {

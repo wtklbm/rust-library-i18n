@@ -1656,7 +1656,7 @@
     },
     {
         "source": "Note that a \"best effort\" is made to ensure that destructors for types stored in thread local storage are run, but not all platforms can guarantee that destructors will be run for all types in thread local storage.",
-        "suggest": "请注意，使用 \"best effort\" 可以确保运行线程本地存储中存储的类型的析构函数，但并非所有平台都可以保证将针对线程本地存储中的所有类型运行析构函数。",
+        "suggest": "请注意，我们尽了 \"最大努力\" 来确保运行线程本地存储中存储的类型的析构函数，但并非所有平台都能保证运行线程本地存储中所有类型的析构函数。",
         "translate": ""
     },
     {
@@ -1821,7 +1821,7 @@
     },
     {
         "source": "To avoid setting the \"I'm running a destructor\" flag we just use `mem::replace` which should sequence the operations a little differently and make this safe to call.",
-        "suggest": "为了避免设置 \"I'm running a destructor\" 标志，我们只使用 `mem::replace`，它应该对操作的顺序稍有不同，从而可以安全地进行调用。",
+        "suggest": "为了避免设置 \"我正在运行析构函数\" 标志，我们只使用 `mem::replace`，它应该以稍微不同的方式对操作进行排序，并确保调用安全。",
         "translate": ""
     },
     {
@@ -3366,7 +3366,7 @@
     },
     {
         "source": "There is no method to get \"the number of seconds\" from an instant.",
-        "suggest": "没有方法可以立即获取 \"the number of seconds\"。",
+        "suggest": "没有方法可以立即获取 \"秒数\"。",
         "translate": ""
     },
     {
@@ -3521,12 +3521,12 @@
     },
     {
         "source": "We keep a global \"latest now\" instance which is returned instead of what the OS says if the OS goes backwards.",
-        "suggest": "我们保留一个 \"latest now\" 实例，如果 OS 向后运行，则返回该实例，而不是 OS 所说的。",
+        "suggest": "们保留了一个全局的 \"最新\" 实例，如果操作系统 backward，它将被返回，而不是操作系统所说的内容。",
         "translate": ""
     },
     {
         "source": "To hopefully mitigate the impact of this, a few platforms are excluded as \"these at least haven't gone backwards yet\".",
-        "suggest": "为了希望减轻这种影响，\"these at least haven't gone backwards yet\" 排除了一些平台。",
+        "suggest": "为了希望减轻这种影响，一些平台被排除在外，因为 \"这些平台至少还没有 backward\"。",
         "translate": ""
     },
     {

@@ -4251,7 +4251,7 @@
     },
     {
         "source": "ULEB128 and SLEB128 encodings are defined in Section 7.6 - \"Variable Length Data\".",
-        "suggest": "7.6-\"Variable Length Data\" 节中定义了 ULEB128 和 SLEB128 编码。",
+        "suggest": "7.6-\"可变长度数据\" 节中定义了 ULEB128 和 SLEB128 编码。",
         "translate": ""
     },
     {
@@ -4341,7 +4341,7 @@
     },
     {
         "source": "For background on exception handling and stack unwinding please see \"Exception Handling in LLVM\" (llvm.org/docs/ExceptionHandling.html) and documents linked from it.",
-        "suggest": "有关异常处理和栈的背景展开，请参见 \"Exception Handling in LLVM\" (llvm.org/docs/ExceptionHandling.html) 及其链接的文档。",
+        "suggest": "有关异常处理和栈的背景展开，请参见 \"LLVM 中的异常处理\" (llvm.org/docs/ExceptionHandling.html) 及其链接的文档。",
         "translate": ""
     },
     {
@@ -4466,7 +4466,7 @@
     },
     {
         "source": "To preserve signatures of functions like _Unwind_GetLanguageSpecificData(), which take only the context pointer, GCC personality routines stash a pointer to exception_object in the context, using location reserved for ARM's \"scratch register\" (r12).",
-        "suggest": "为了保留仅使用上下文指针的 _Unwind_GetLanguageSpecificData() 之类的函数签名，GCC 个性化例程使用为 \"scratch register\" (r12) 保留的位置在上下文中存储了指向 exception_object 的指针。",
+        "suggest": "为了保留仅使用上下文指针的 _Unwind_GetLanguageSpecificData() 之类的函数签名，GCC 个性化例程使用为 \"暂存寄存器\" (r12) 保留的位置在上下文中存储了指向 exception_object 的指针。",
         "translate": ""
     },
     {
@@ -4531,7 +4531,7 @@
     },
     {
         "source": "On some (e.g., Linux), the unwinder can discover unwind info sections on its own (by dynamically enumerating currently loaded modules via the dl_iterate_phdr() API and finding their \".eh_frame\" sections);",
-        "suggest": "在某些情况下 (例如 Linux)，展开器可以自己发现 unwind 信息部分 (通过 dl_iterate_phdr() API and finding their \".eh_frame\" sections) 动态枚举当前加载的模块;",
+        "suggest": "在某些情况下 (例如 Linux)，展开器可以自己发现展开信息部分 (通过 dl_iterate_phdr() API 动态枚举当前加载的模块并找到它们的 \".eh_frame\" 部分);",
         "translate": ""
     },
     {

@@ -1476,7 +1476,7 @@
     },
     {
         "source": "Note that the pointer value may potentially represent a valid pointer to a `T`, which means this must not be used as a \"not yet initialized\" sentinel value.",
-        "suggest": "请注意，该指针值可能表示一个指向 `T` 的有效指针，这意味着不得将其用作 \"not yet initialized\" 标记值。",
+        "suggest": "请注意，该指针值可能表示一个指向 `T` 的有效指针，这意味着不得将其用作 \"尚未初始化\" 标记值。",
         "translate": ""
     },
     {
@@ -3996,7 +3996,7 @@
     },
     {
         "source": "As of this writing this causes a \"Const-stable functions can only call other const-stable functions\" error.",
-        "suggest": "在撰写本文时，这将导致 \"Const-stable functions can only call other const-stable functions\" 错误。",
+        "suggest": "在撰写本文时，这将导致 \"Const-stable 只能调用其他 const-stable 函数\" 的错误。",
         "translate": ""
     },
     {

@@ -76,7 +76,7 @@
     },
     {
         "source": "A client-side \"global object\" (usually a function pointer), which may be using a different `proc_macro` from the one used by the server, but can be interacted with compatibly.",
-        "suggest": "客户端 \"global object\" (通常是函数指针)，可以使用与服务器使用的 `proc_macro` 不同的 `proc_macro`，但可以兼容地进行交互。",
+        "suggest": "客户端 \"全局对象\" (通常是函数指针)，可以使用与服务器使用的 `proc_macro` 不同的 `proc_macro`，但可以兼容地进行交互。",
         "translate": ""
     },
     {
@@ -851,7 +851,7 @@
     },
     {
         "source": "An implicit delimiter, that may, for example, appear around tokens coming from a \"macro variable\" `$var`.",
-        "suggest": "一个隐式定界符，例如，可能出现在来自 \"macro variable\" `$var` 的 tokens 周围。",
+        "suggest": "一个隐式定界符，例如，可能出现在来自 \"宏变量\" `$var` 的 tokens 周围。",
         "translate": ""
     },
     {
@@ -4501,7 +4501,7 @@
     },
     {
         "source": "Creating a file or directory with a fixed or predictable name may result in \"insecure temporary file\" security vulnerabilities.",
-        "suggest": "使用固定或可预测的名称创建文件或目录可能会导致 \"insecure temporary file\" 安全漏洞。",
+        "suggest": "使用固定或可预测的名称创建文件或目录可能会导致 \"不安全的临时文件\" 安全漏洞。",
         "translate": ""
     },
     {
@@ -4821,7 +4821,7 @@
     },
     {
         "source": "is generally used when errors cross \"abstraction boundaries\".",
-        "suggest": "当错误跨越 \"abstraction boundaries\" 时通常使用。",
+        "suggest": "通常在错误跨越 \"抽象边界\" 时使用。",
         "translate": ""
     },
     {

@@ -3021,7 +3021,7 @@
     },
     {
         "source": "If a \"transactional spawn\" is required to gracefully handle errors it is recommended to use the cross-platform `spawn` instead.",
-        "suggest": "如果需要 \"transactional spawn\" 来妥善处理错误，建议改用跨平台 `spawn`。",
+        "suggest": "如果需要 \"事务性生成\" 来妥善处理错误，建议改用跨平台 `spawn`。",
         "translate": ""
     },
     {
@@ -4246,7 +4246,7 @@
     },
     {
         "source": "If the version fails to parse, we treat it the same as \"not glibc\".",
-        "suggest": "如果版本解析失败，我们将其与 \"not glibc\" 相同。",
+        "suggest": "如果版本解析失败，我们将其视为 \"非 glibc\"。",
         "translate": ""
     },
     {

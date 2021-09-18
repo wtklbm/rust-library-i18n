@@ -351,7 +351,7 @@
     },
     {
         "source": "If a dtor isn't needed we can do something \"very raw\" and just get going.",
-        "suggest": "如果不需要 dtor，我们可以做一些 \"very raw\" 的事情，然后开始。",
+        "suggest": "如果不需要 dtor，我们可以做一些 \"非常原始\" 的事情，然后开始。",
         "translate": ""
     },
     {
@@ -3241,7 +3241,7 @@
     },
     {
         "source": "Note that this encompasses more addresses than those defined in [RFC 4291 section 2.5.6], which describes \"Link-Local IPv6 Unicast Addresses\" as having the following stricter format:",
-        "suggest": "请注意，这包含比 [RFC 4291 section 2.5.6] 中定义的地址更多的地址，[RFC 4291 section 2.5.6] 将 \"Link-Local IPv6 Unicast Addresses\" 描述为具有以下更严格的格式:",
+        "suggest": "请注意，这包含比 [RFC 4291 section 2.5.6] 中定义的地址更多的地址，[RFC 4291 第 2.5.6 节] 将 \"链路本地 IPv6 单播地址\" 描述为具有以下更严格的格式:",
         "translate": ""
     },
     {
@@ -3256,7 +3256,7 @@
     },
     {
         "source": "Also note that while [RFC 4291 section 2.5.3] mentions about the [loopback address] (`::1`) that \"it is treated as having Link-Local scope\", this does not mean that the loopback address actually has link-local scope and this method will return `false` on it.",
-        "suggest": "另请注意，虽然 [RFC 4291 section 2.5.3] 提到 \"它被视为具有 Link-Local 作用域\" 的 [loopback address] (`::1`)，但这并不意味着回环地址实际上具有链接本地作用域，并且此方法将在其上返回 `false`。",
+        "suggest": "另请注意，虽然 [RFC 4291 第 2.5.3 章] 提到 \"它被视为具有 Link-Local 作用域\" 的 [环回地址][loopback address] (`::1`)，但这并不意味着回环地址实际上具有链接本地作用域，并且此方法将在其上返回 `false`。",
         "translate": ""
     },
     {

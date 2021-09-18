@@ -206,7 +206,7 @@
     },
     {
         "source": "This is a \"helper marker trait\" used to provide impl blocks for the [`UnwindSafe`] trait, for more information see that documentation.",
-        "suggest": "这是 \"helper marker trait\"，用于为 [`UnwindSafe`] trait 提供 impl 块，有关更多信息，请参见该文档。",
+        "suggest": "这是 \"辅助标记 trait\"，用于为 [`UnwindSafe`] trait 提供 impl 块，有关更多信息，请参见该文档。",
         "translate": ""
     },
     {
@@ -2856,7 +2856,7 @@
     },
     {
         "source": "Writing `*self` essentially tells the compiler \"We know that this code can never be run, so just treat the entire function body as having type [`fmt::Result`]\".",
-        "suggest": "编写 `*self` 实质上就是告诉编译器 \"We know that this code can never be run, so just treat the entire function body as having type [`fmt::Result`]\"。",
+        "suggest": "编写 `*self` 实质上就是告诉编译器 \"我们知道这段代码永远无法运行，所以只需将整个函数体视为具有类型 [`fmt::Result`]\"。",
         "translate": ""
     },
     {
@@ -3541,7 +3541,7 @@
     },
     {
         "source": "For more information on how to use references, see [the book's section on \"References and Borrowing\"][book-refs].",
-        "suggest": "有关如何使用引用的更多信息，请参见 [the book's section on \"References and Borrowing\"][book-refs]。",
+        "suggest": "有关如何使用引用的更多信息，请参见 [本书的 \"References and Borrowing\" 章节][book-refs]。",
         "translate": ""
     },
     {

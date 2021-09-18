@@ -3226,7 +3226,7 @@
     },
     {
         "source": "Rustdocs on the impl block show a \"[+] show undocumented items\" toggle.",
-        "suggest": "impl 块上的 Rustdocs 显示了 \"[+] show undocumented items\" 切换。",
+        "suggest": "impl 块上的 Rustdocs 显示了一个 \"[+] 显示未记录的项\" 切换。",
         "translate": ""
     },
     {
@@ -4396,7 +4396,7 @@
     },
     {
         "source": "[`Error::source()`] is generally used when errors cross \"abstraction boundaries\".",
-        "suggest": "[`Error::source()`] 通常在错误交叉 \"abstraction boundaries\" 时使用。",
+        "suggest": "[`Error::source()`] 通常在错误交叉 \"抽象边界\" 时使用。",
         "translate": ""
     },
     {

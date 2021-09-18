@@ -2001,7 +2001,7 @@
     },
     {
         "source": "In Rust, some simple types are \"implicitly copyable\" and when you assign them or pass them as arguments, the receiver will get a copy, leaving the original value in place.",
-        "suggest": "在 Rust 中，一些简单类型是 \"implicitly copyable\"，当您分配它们或将它们作为参数传递时，接收者将获得一个副本，而将原始值保留在原位。",
+        "suggest": "在 Rust 中，一些简单类型是 \"隐式可复制的\"，当您分配它们或将它们作为参数传递时，接收者将获得一个副本，而将原始值保留在原位。",
         "translate": ""
     },
     {
@@ -3071,7 +3071,7 @@
     },
     {
         "source": "Using `identity` as a \"do nothing\" base case in a conditional:",
-        "suggest": "在条件中将 `identity` 用作 \"do nothing\" 终止条件:",
+        "suggest": "在条件中将 `identity` 用作 \"什么也不做\" 的基本情况:",
         "translate": ""
     },
     {
@@ -3506,7 +3506,7 @@
     },
     {
         "source": "**Stability note:** This impl does not yet exist, but we are \"reserving space\" to add it in the future.",
-        "suggest": "**稳定性注意事项:** 该暗示尚不存在，但我们 \"reserving space\" 会将其添加到 future 中。",
+        "suggest": "**稳定性注意事项:** 该暗示尚不存在，但我们 \"保留空间\" 以在将来添加它。",
         "translate": ""
     },
     {
@@ -3796,7 +3796,7 @@
     },
     {
         "source": "Returns the \"default value\" for a type.",
-        "suggest": "返回类型的 \"default value\"。",
+        "suggest": "返回类型的 \"默认值\"。",
         "translate": ""
     },
     {

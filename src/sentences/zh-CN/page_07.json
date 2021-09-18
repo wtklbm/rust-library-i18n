@@ -3951,7 +3951,7 @@
     },
     {
         "source": "If we don't do this, both the generated test artifact and the linked libtest (which transitively includes libcore) will both define the same set of lang items, and this will cause the E0152 \"found duplicate lang item\" error.",
-        "suggest": "如果我们不这样做，那么生成的测试工件和链接的 libtest (可传递地包括 libcore) 都将定义相同的 lang 项集，这将导致 E0152 \"found duplicate lang item\" 错误。",
+        "suggest": "如果我们不这样做，那么生成的测试工件和链接的 libtest (可传递地包括 libcore) 都将定义相同的 lang 项集，这将导致 E0152 \"发现重复的 lang 项\" 错误。",
         "translate": ""
     },
     {

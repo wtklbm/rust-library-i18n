@@ -626,7 +626,7 @@
     },
     {
         "source": "We effectively convert the numbers to \"two's complement\" form.",
-        "suggest": "我们将数字有效地转换为 \"two's complement\" 形式。",
+        "suggest": "我们将数字有效地转换为 \"二进制补码\" 的形式。",
         "translate": ""
     },
     {
@@ -636,7 +636,7 @@
     },
     {
         "source": "We branchlessly calculate an \"all-ones except for the sign bit\" mask from negative-signed values: right shifting sign-extends the integer, so we \"fill\" the mask with sign bits, and then convert to unsigned to push one more zero bit.",
-        "suggest": "我们从负号值无分支地计算 \"all-ones except for the sign bit\" 掩码: 右移符号以扩展整数，因此我们用符号位 \"fill\" 掩码，然后转换为无符号以压入另一个零位。",
+        "suggest": "我们从负号值无分支地计算 \"除符号位之外的全 1\" 掩码: 右移符号以扩展整数，因此我们用符号位 \"fill\" 掩码，然后转换为无符号以压入另一个零位。",
         "translate": ""
     },
     {
