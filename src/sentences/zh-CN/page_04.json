@@ -2991,7 +2991,7 @@
     },
     {
         "source": "an (unstable) [extern type], then this function is always safe to call, but may panic or otherwise return the wrong value, as the extern type's layout is not known.",
-        "suggest": "(unstable) [extern type]，则此函数始终可以安全调用，但可能会 panic 或以其他方式返回错误的值，因为外部类型的布局未知。",
+        "suggest": "一个不稳定的 [外部类型][extern type]，则此函数始终可以安全调用，但可能会 panic 或以其他方式返回错误的值，因为外部类型的布局未知。",
         "translate": ""
     },
     {
@@ -4766,7 +4766,7 @@
     },
     {
         "source": "Having one mutable reference (`&mut T`) to the object (also known as **mutability**).",
-        "suggest": "对对象有一个可变引用 (`&mut T`) (也称为 **可变性**)。",
+        "suggest": "对对象有一个可变引用 (`&mut T`) (也称为可变性)。",
         "translate": ""
     },
     {

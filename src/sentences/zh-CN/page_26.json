@@ -2106,7 +2106,7 @@
     },
     {
         "source": "The reference is [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2: Instruction Set Reference, A-Z][intel64_ref] (p. 4-241).",
-        "suggest": "引用的是 [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2: Instruction Set Reference, A-Z][intel64_ref] (第 4-241 页)。",
+        "suggest": "引用的是 [Intel 64 和 IA-32 架构软件开发人员手册第 2 卷: 指令集参考, A-Z][intel64_ref] (第 4-241 页)。",
         "translate": ""
     },
     {
@@ -2531,7 +2531,7 @@
     },
     {
         "source": "Wikipedia's [FMA][wiki_fma] page provides a quick overview of the instructions available.",
-        "suggest": "Wikipedia 的 [FMA][wiki_fma] 页面提供了对可用说明的快速概述。",
+        "suggest": "维基百科的 [FMA][wiki_fma] 页面提供了对可用说明的快速概述。",
         "translate": ""
     },
     {
@@ -3926,7 +3926,7 @@
     },
     {
         "source": "is supposed to take an `i32` instead of an `u32` as is the case for [other shuffle intrinsics](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_).",
-        "suggest": "应该像 [other shuffle intrinsics](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_) 那样使用 `i32` 而不是 `u32`。",
+        "suggest": "应该像 [其他 shuffle 内联函数](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_) 那样使用 `i32` 而不是 `u32`。",
         "translate": ""
     },
     {

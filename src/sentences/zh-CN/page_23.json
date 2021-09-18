@@ -1166,7 +1166,7 @@
     },
     {
         "source": "This function requires the AVX2 feature as [documented by Intel][intel-dox] so to correctly call this function we need to (a) guarantee we only call it on `x86`/`x86_64` and (b) ensure that the CPU feature is available",
-        "suggest": "此函数需要 AVX2 功能作为 [documented by Intel][intel-dox]，因此要正确调用此函数，我们需要 (a) 保证我们仅在 `x86`/`x86_64` 和 (b) 上调用它，以确保 CPU 功能可用",
+        "suggest": "这个函数需要 AVX2 特性，[由英特尔记录][intel-dox]，所以为了正确调用这个函数，我们需要 (a) 保证我们仅在 `x86`/`x86_64` 和 (b) 上调用它，以确保 CPU 功能可用",
         "translate": ""
     },
     {

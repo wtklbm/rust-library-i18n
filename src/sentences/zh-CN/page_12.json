@@ -111,7 +111,7 @@
     },
     {
         "source": "Comparing self[r] against self[w-1], this is not a duplicate, so we swap self[r] and self[w] (no effect as r==w) and then increment both r and w, leaving us with:",
-        "suggest": "将 self[r] 与 self [w-1] 进行比较，这不是重复项，因此我们交换 self[r] 和 self[w] (因为 r == w 无效)，然后将 r 和 w 都递增，所以我们得到:",
+        "suggest": "将 self[r] 与 self[w-1] 进行比较，这不是重复项，因此我们交换 self[r] 和 self[w] (因为 r == w 无效)，然后将 r 和 w 都递增，所以我们得到:",
         "translate": ""
     },
     {
@@ -2201,7 +2201,7 @@
     },
     {
         "source": "An iterator over the [`char`]s of a string slice, and their positions.",
-        "suggest": "字符串切片的 ['char`] 及其位置上的迭代器。",
+        "suggest": "字符串切片的 [`char`] 及其位置上的迭代器。",
         "translate": ""
     },
     {
@@ -2956,7 +2956,7 @@
     },
     {
         "source": "Returns an iterator over the [`char`]s of a string slice, and their positions.",
-        "suggest": "返回字符串切片的 ['char`] 及其位置上的迭代器。",
+        "suggest": "返回字符串切片的 [`char`] 及其位置上的迭代器。",
         "translate": ""
     },
     {
@@ -3616,7 +3616,7 @@
     },
     {
         "source": "is [implemented][pattern-impls] in the stable API for [`&str`][`str`], [`char`], slices of [`char`], and functions and closures implementing `FnMut(char) -> bool`.",
-        "suggest": "[`&str`][`str`]，[`char`]，[`char`] 的片段以及实现 `FnMut(char) -> bool` 的函数和闭包的稳定 API 中的 [implemented][pattern-impls]。",
+        "suggest": "在 [`&str`][`str`]、[`char`]、[`char`] 的切片以及实现 `FnMut(char) -> bool` 的函数和闭包的稳定 API 中的 [实现][pattern-impls]。",
         "translate": ""
     },
     {
@@ -3936,7 +3936,7 @@
     },
     {
         "source": "haystack[finger_back - 1] is the last byte of the slice we must inspect during forward searching (and thus the first byte to be inspected when calling next_back()).",
-        "suggest": "haystack [finger_back-1] 是在向前搜索期间必须检查的片的最后一个字节 (因此，在调用 next_back()) 时要检查的第一个字节)。",
+        "suggest": "haystack[finger_back - 1] 是在向前搜索期间必须检查的片的最后一个字节 (因此，在调用 next_back()) 时要检查的第一个字节)。",
         "translate": ""
     },
     {
@@ -4571,7 +4571,7 @@
     },
     {
         "source": "Strings are ordered  [lexicographically](Ord#lexicographical-comparison) by their byte values.",
-        "suggest": "字符串按字节值按 [lexicographically](Ord#lexicographical-comparison) 排序。",
+        "suggest": "字符串按字节值按 [按字典顺序](Ord#lexicographical-comparison) 排序。",
         "translate": ""
     },
     {
@@ -4596,7 +4596,7 @@
     },
     {
         "source": "Strings are compared [lexicographically](Ord#lexicographical-comparison) by their byte values.",
-        "suggest": "[lexicographically](Ord#lexicographical-comparison) 通过字符串的字节值对字符串进行比较。",
+        "suggest": "[按字典顺序](Ord#lexicographical-comparison) 通过字符串的字节值对字符串进行比较。",
         "translate": ""
     },
     {

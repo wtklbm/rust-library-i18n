@@ -3226,7 +3226,7 @@
     },
     {
         "source": "Any address that is not a [multicast address] (`ff00::/8`) is unicast.",
-        "suggest": "任何不是 [multicast address] (`ff00::/8`) 的地址都是单播的。",
+        "suggest": "任何不是 [多播地址][multicast address] (`ff00::/8`) 的地址都是单播的。",
         "translate": ""
     },
     {
@@ -3241,7 +3241,7 @@
     },
     {
         "source": "Note that this encompasses more addresses than those defined in [RFC 4291 section 2.5.6], which describes \"Link-Local IPv6 Unicast Addresses\" as having the following stricter format:",
-        "suggest": "请注意，这包含比 [RFC 4291 section 2.5.6] 中定义的地址更多的地址，[RFC 4291 第 2.5.6 节] 将 \"链路本地 IPv6 单播地址\" 描述为具有以下更严格的格式:",
+        "suggest": "请注意，这包含比 [RFC 4291 第 2.5.6 节][RFC 4291 section 2.5.6] 中定义的地址更多的地址，[RFC 4291 第 2.5.6 节] 将 \"链路本地 IPv6 单播地址\" 描述为具有以下更严格的格式:",
         "translate": ""
     },
     {
@@ -3256,7 +3256,7 @@
     },
     {
         "source": "Also note that while [RFC 4291 section 2.5.3] mentions about the [loopback address] (`::1`) that \"it is treated as having Link-Local scope\", this does not mean that the loopback address actually has link-local scope and this method will return `false` on it.",
-        "suggest": "另请注意，虽然 [RFC 4291 第 2.5.3 章] 提到 \"它被视为具有 Link-Local 作用域\" 的 [环回地址][loopback address] (`::1`)，但这并不意味着回环地址实际上具有链接本地作用域，并且此方法将在其上返回 `false`。",
+        "suggest": "另请注意，虽然 [RFC 4291 第 2.5.3 章][RFC 4291 section 2.5.3] 提到 \"它被视为具有 Link-Local 作用域\" 的 [环回地址][loopback address] (`::1`)，但这并不意味着回环地址实际上具有链接本地作用域，并且此方法将在其上返回 `false`。",
         "translate": ""
     },
     {
@@ -4751,7 +4751,7 @@
     },
     {
         "source": "Here you'll find intrinsics specific to WebAssembly that aren't otherwise surfaced somewhere in a cross-platform abstraction of `std`, and you'll also find functions for leveraging WebAssembly proposals such as [atomics] and [simd].",
-        "suggest": "在这里，您会发现特定于 WebAssembly 的内联函数，它们不会在 `std` 的跨平台抽象中以其他方式出现，您还会发现利用 WebAssembly 提案 (如 [atomics] 和 [simd]) 的函数。",
+        "suggest": "在这里，您会发现特定于 WebAssembly 的内联函数，它们不会在 `std` 的跨平台抽象中以其他方式出现，您还会发现利用 WebAssembly 提案 (如 [原子性][atomics] 和 [simd]) 的函数。",
         "translate": ""
     },
     {
@@ -4766,7 +4766,7 @@
     },
     {
         "source": "Stable WebAssembly instructions are [documented online][instrdoc].",
-        "suggest": "稳定的 WebAssembly 指令是 [documented online][instrdoc]。",
+        "suggest": "稳定的 WebAssembly 指令是 [在线文档][instrdoc]。",
         "translate": ""
     },
     {
@@ -4791,7 +4791,7 @@
     },
     {
         "source": "Note that the instructions added in the [atomics] proposal can work in either a context with a shared wasm memory and without.",
-        "suggest": "请注意，在 [atomics] 提案中添加的指令可以在具有共享 wasm 内存和不具有共享 wasm 内存的上下文中工作。",
+        "suggest": "请注意，在 [原子性][atomics] 提案中添加的指令可以在具有共享 wasm 内存和不具有共享 wasm 内存的上下文中工作。",
         "translate": ""
     },
     {
@@ -4836,7 +4836,7 @@
     },
     {
         "source": "Note that this does not include the standard library unless you [recompile the standard library][buildstd].",
-        "suggest": "请注意，除非您使用 [recompile the standard library][buildstd]，否则这不包括标准库。",
+        "suggest": "请注意，除非您使用 [重新编译标准库][buildstd]，否则这不包括标准库。",
         "translate": ""
     },
     {
@@ -4846,7 +4846,7 @@
     },
     {
         "source": "This type corresponds to the `v128` type in the [WebAssembly SIMD proposal](https://github.com/webassembly/simd).",
-        "suggest": "此类型对应于 [WebAssembly SIMD proposal](https://github.com/webassembly/simd) 中的 `v128` 类型。",
+        "suggest": "此类型对应于 [WebAssembly SIMD 提议](https://github.com/webassembly/simd) 中的 `v128` 类型。",
         "translate": ""
     },
     {

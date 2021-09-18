@@ -181,12 +181,12 @@
     },
     {
         "source": "For more about the concept of streams generally, please see the [module-level documentation].",
-        "suggest": "有关一般的流概念的更多信息，请参见 [module-level documentation]。",
+        "suggest": "有关一般的流概念的更多信息，请参见 [模块级文档][module-level documentation]。",
         "translate": ""
     },
     {
         "source": "In particular, you may want to know how to [implement `Stream`][impl].",
-        "suggest": "特别是，您可能想知道如何 [implement `Stream`][impl]。",
+        "suggest": "特别是，您可能想知道如何 [实现 `Stream`][impl]。",
         "translate": ""
     },
     {
@@ -321,7 +321,7 @@
     },
     {
         "source": "These orderings are the same as the [C++20 atomic orderings][1].",
-        "suggest": "这些顺序与 [C++20 atomic orderings][1] 相同。",
+        "suggest": "这些顺序与 [C++20 原子排序][1] 相同。",
         "translate": ""
     },
     {
@@ -331,7 +331,7 @@
     },
     {
         "source": "Atomic variables are safe to share between threads (they implement [`Sync`]) but they do not themselves provide the mechanism for sharing and follow the [threading model](../../../std/thread/index.html#the-threading-model) of Rust.",
-        "suggest": "原子变量可以安全地在线程之间共享 (它们实现 [`Sync`])，但是它们本身并不提供共享机制并遵循 Rust 的 [threading model](../../../std/thread/index.html#the-threading-model)。",
+        "suggest": "原子变量可以安全地在线程之间共享 (它们实现 [`Sync`])，但是它们本身并不提供共享机制并遵循 Rust 的 [线程模型](../../../std/thread/index.html#the-threading-model)。",
         "translate": ""
     },
     {
@@ -351,7 +351,7 @@
     },
     {
         "source": "All atomic types in this module are guaranteed to be [lock-free] if they're available.",
-        "suggest": "如果可用，则保证该模块中的所有原子类型均为 [lock-free]。",
+        "suggest": "如果可用，则保证该模块中的所有原子类型均为 [无锁][lock-free]。",
         "translate": ""
     },
     {
@@ -411,7 +411,7 @@
     },
     {
         "source": "Additionally on Linux, these CAS operations are implemented via [operating system support], which may come with a performance penalty.",
-        "suggest": "此外，在 Linux 上，这些 CAS 操作是通过 [operating system support] 实现的，这可能会降低性能。",
+        "suggest": "此外，在 Linux 上，这些 CAS 操作是通过 [操作系统支持][operating system support] 实现的，这可能会降低性能。",
         "translate": ""
     },
     {
@@ -531,7 +531,7 @@
     },
     {
         "source": "Rust's memory orderings are [the same as those of C++20](https://en.cppreference.com/w/cpp/atomic/memory_order).",
-        "suggest": "Rust 的内存顺序为 [the same as those of C++20](https://en.cppreference.com/w/cpp/atomic/memory_order)。",
+        "suggest": "Rust 的内存顺序为 [与 C++ 20 相同](https://en.cppreference.com/w/cpp/atomic/memory_order)。",
         "translate": ""
     },
     {
@@ -1051,7 +1051,7 @@
     },
     {
         "source": "For more about the differences between atomic types and non-atomic types as well as information about the portability of this type, please see the [module-level documentation].",
-        "suggest": "有关原子类型和非原子类型之间的区别以及有关此类型的可移植性的更多信息，请参见 [module-level documentation]。",
+        "suggest": "有关原子类型和非原子类型之间的区别以及有关此类型的可移植性的更多信息，请参见 [模块级文档][module-level documentation]。",
         "translate": ""
     },
     {
@@ -1421,7 +1421,7 @@
     },
     {
         "source": "Curious readers are encouraged to read the Linux kernel's discussion of [memory barriers].",
-        "suggest": "鼓励好奇的读者阅读 Linux 内核对 [memory barriers] 的讨论。",
+        "suggest": "鼓励好奇的读者阅读 Linux 内核对 [内存屏障][memory barriers] 的讨论。",
         "translate": ""
     },
     {
@@ -1766,7 +1766,7 @@
     },
     {
         "source": "The behavior of the returned `Waker` is undefined if the contract defined in [`RawWaker`]'s and [`RawWakerVTable`]'s documentation is not upheld.",
-        "suggest": "如果未遵守 [RawWaker`] 和 [`RawWakerVTable`] 文档中定义的契约，则返回的 `Waker` 的行为是不确定的。",
+        "suggest": "如果未遵守 [`RawWaker`] 和 [`RawWakerVTable`] 文档中定义的契约，则返回的 `Waker` 的行为是不确定的。",
         "translate": ""
     },
     {

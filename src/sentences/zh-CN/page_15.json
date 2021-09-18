@@ -1691,7 +1691,7 @@
     },
     {
         "source": "See the [module's toplevel documentation about conversions][conversions] for a discussion on the traits which `OsString` implements for [conversions] from/to native representations.",
-        "suggest": "请参见模块中关于 [conversions] 的顶级文档，以讨论为 `OsString` from/to 原生表示形式的 [conversions] 而实现的特征。",
+        "suggest": "请参见模块中关于 [转换][conversions] 的顶级文档，以讨论为 `OsString` from/to 原生表示形式的 [转换][conversions] 而实现的特征。",
         "translate": ""
     },
     {
@@ -1716,7 +1716,7 @@
     },
     {
         "source": "See the [module's toplevel documentation about conversions][conversions] for a discussion on the traits which `OsStr` implements for [conversions] from/to native representations.",
-        "suggest": "请参见模块中关于 [conversions] 的顶级文档，以讨论为 `OsStr` from/to 原生表示形式的 [conversions] 而实现的特征。。",
+        "suggest": "请参见模块中关于 [转换][conversions] 的顶级文档，以讨论为 `OsStr` from/to 原生表示形式的 [转换][conversions] 而实现的特征。。",
         "translate": ""
     },
     {
@@ -2721,7 +2721,7 @@
     },
     {
         "source": "Note that, this [may change in the future][changes].",
-        "suggest": "注意，这个 [may change in the future][changes]。",
+        "suggest": "注意，这个 [将来可能会改变][changes]。",
         "translate": ""
     },
     {

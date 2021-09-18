@@ -1081,7 +1081,7 @@
     },
     {
         "source": "This function **transfers ownership** of the underlying file descriptor to the caller.",
-        "suggest": "此函数将基础文件描述符的所有权 ** 转让给调用者。",
+        "suggest": "该函数将底层文件描述符的所有权转移给调用者。",
         "translate": ""
     },
     {
@@ -2946,7 +2946,7 @@
     },
     {
         "source": "For further details refer to the [POSIX fork() specification] and the equivalent documentation for any targeted platform, especially the requirements around *async-signal-safety*.",
-        "suggest": "有关更多详细信息，请参见 [POSIX fork() specification] 和任何目标平台的等效文档，尤其是有关 *async-signal-safety* 的要求。",
+        "suggest": "有关更多详细信息，请参见 [POSIX fork() 规范][POSIX fork() specification] 和任何目标平台的等效文档，尤其是有关 *async-signal-safety* 的要求。",
         "translate": ""
     },
     {
@@ -3156,7 +3156,7 @@
     },
     {
         "source": "This function **transfers ownership** of the underlying pthread_t to the caller.",
-        "suggest": "此函数将基础 pthread_t 的所有权 ** 转移给调用方。",
+        "suggest": "该函数将底层 pthread_t 的所有权转移给调用者。",
         "translate": ""
     },
     {

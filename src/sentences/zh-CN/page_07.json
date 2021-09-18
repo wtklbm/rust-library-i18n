@@ -141,7 +141,7 @@
     },
     {
         "source": "See the [Adapters](#adapters) section below for more details.",
-        "suggest": "有关更多详细信息，请参见下面的 [Adapters](#adapters) 部分。",
+        "suggest": "有关更多详细信息，请参见下面的 [适配器](#adapters) 部分。",
         "translate": ""
     },
     {
@@ -851,7 +851,7 @@
     },
     {
         "source": "Let’s re-implement the counter iterator from [module-level documentation]:",
-        "suggest": "让我们从 [module-level documentation] 重新实现计数器迭代器:",
+        "suggest": "让我们从 [模块级文档][module-level documentation] 重新实现计数器迭代器:",
         "translate": ""
     },
     {
@@ -1341,7 +1341,7 @@
     },
     {
         "source": "One benefit of implementing `IntoIterator` is that your type will [work with Rust's `for` loop syntax](crate::iter#for-loops-and-intoiterator).",
-        "suggest": "实现 `IntoIterator` 的好处之一是您的类型将为 [work with Rust's `for` loop syntax](crate::iter#for-loops-and-intoiterator)。",
+        "suggest": "实现 `IntoIterator` 的好处之一是您的类型将为 [使用 Rust 的 `for` 循环语法](crate::iter#for-loops-and-intoiterator)。",
         "translate": ""
     },
     {
@@ -1491,7 +1491,7 @@
     },
     {
         "source": "The elements yielded by `DoubleEndedIterator`'s methods may differ from the ones yielded by [`Iterator`]'s methods:",
-        "suggest": "DoubleEndedIterator 方法产生的元素可能与 [Iterator`] 方法产生的元素不同:",
+        "suggest": "DoubleEndedIterator 方法产生的元素可能与 [`Iterator`] 方法产生的元素不同:",
         "translate": ""
     },
     {
@@ -1721,7 +1721,7 @@
     },
     {
         "source": "This means that `unsafe` code **must not** rely on the correctness of [`Iterator::size_hint`].",
-        "suggest": "这意味着 `unsafe` 代码 ** 一定不要依赖 [`Iterator::size_hint`] 的正确性。",
+        "suggest": "这意味着 `unsafe` 代码一定不要依赖 [`Iterator::size_hint`] 的正确性。",
         "translate": ""
     },
     {
@@ -1731,7 +1731,7 @@
     },
     {
         "source": "In the [module-level docs], we implemented an [`Iterator`],",
-        "suggest": "在 [module-level docs] 中，我们实现了 [`Iterator`]，",
+        "suggest": "在 [模块级文档][module-level docs] 中，我们实现了 [`Iterator`]，",
         "translate": ""
     },
     {
@@ -2111,12 +2111,12 @@
     },
     {
         "source": "For more about the concept of iterators generally, please see the [module-level documentation].",
-        "suggest": "有关一般迭代器概念的更多信息，请参见 [module-level documentation]。",
+        "suggest": "有关一般迭代器概念的更多信息，请参见 [模块级文档][module-level documentation]。",
         "translate": ""
     },
     {
         "source": "In particular, you may want to know how to [implement `Iterator`][impl].",
-        "suggest": "特别是，您可能想知道如何 [implement `Iterator`][impl]。",
+        "suggest": "特别是，您可能想知道如何 [实现 `Iterator`][impl]。",
         "translate": ""
     },
     {
@@ -4956,7 +4956,7 @@
     },
     {
         "source": "Read the [unstable book] for the usage.",
-        "suggest": "请阅读 [unstable book] 的用法。",
+        "suggest": "请阅读 [unstable 书][unstable book] 中的用法。",
         "translate": ""
     },
     {

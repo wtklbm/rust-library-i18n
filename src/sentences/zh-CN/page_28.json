@@ -41,7 +41,7 @@
     },
     {
         "source": "If some of the above syntax does not look familiar, the [Documentation as tests] section of the [Rust Book] describes the `rustdoc` syntax quite well.",
-        "suggest": "如果上述某些语法看起来不太熟悉，则 [Rust Book] 的 [Documentation as tests] 部分将很好地描述 `rustdoc` 语法。",
+        "suggest": "如果上述某些语法看起来不太熟悉，则 [Rust 书][Rust Book] 的 [作为测试的文档][Documentation as tests] 部分将很好地描述 `rustdoc` 语法。",
         "translate": ""
     },
     {
@@ -2171,7 +2171,7 @@
     },
     {
         "source": "For example it is **not** safe to build a `Vec<u8>` from a pointer to a C `char` array with length `size_t`.",
-        "suggest": "例如，从指向长度为 `size_t` 的 C `char` 数组的指针构建 `Vec<u8>` 是 ** 不安全的。",
+        "suggest": "例如，从指向长度为 `size_t` 的 C `char` 数组的指针构建 `Vec<u8>` 是不安全的。",
         "translate": ""
     },
     {
@@ -2246,7 +2246,7 @@
     },
     {
         "source": "However, when `T` *has* no statically-known size, e.g., a slice [`[T]`][slice] or a [trait object], then `size_of_val_raw` can be used to get the dynamically-known size.",
-        "suggest": "然而，当 `T`*没有* 静态大小时，例如，[`[T]`][slice] 或 [trait object]，那么 `size_of_val_raw` 可用于获取动态已知大小。",
+        "suggest": "然而，当 `T`*没有* 静态大小时，例如，[`[T]`][slice] 或 [trait 对象][trait object]，那么 `size_of_val_raw` 可用于获取动态已知大小。",
         "translate": ""
     },
     {
@@ -2331,7 +2331,7 @@
     },
     {
         "source": "See [below](#incorrect-usage) for an example incorrectly not taking this into account.",
-        "suggest": "请参见 [below](#incorrect-usage) 以获取错误地未考虑到这一点的示例。",
+        "suggest": "请参见 [下文](#incorrect-usage) 以获取错误地未考虑到这一点的示例。",
         "translate": ""
     },
     {
@@ -3411,7 +3411,7 @@
     },
     {
         "source": "in a future Rust version this method may become unnecessary when Rust allows [inline const expressions](https://github.com/rust-lang/rust/issues/76001).",
-        "suggest": "在 future Rust 版本中，当 Rust 允许 [inline const expressions](https://github.com/rust-lang/rust/issues/76001) 时，此方法可能变得不必要。",
+        "suggest": "在 future Rust 版本中，当 Rust 允许 [内联常量表达式](https://github.com/rust-lang/rust/issues/76001) 时，此方法可能变得不必要。",
         "translate": ""
     },
     {
@@ -3936,12 +3936,12 @@
     },
     {
         "source": "Both the starting and resulting pointer must be either in bounds or one byte past the end of the same [allocated object].",
-        "suggest": "起始指针和结果指针都必须在边界内或在同一个 [allocated object] 的末尾之后一个字节。",
+        "suggest": "起始指针和结果指针都必须在边界内或在同一个 [分配对象][allocated object] 的末尾之后一个字节。",
         "translate": ""
     },
     {
         "source": "The resulting pointer \"remembers\" the [allocated object] that `self` points to;",
-        "suggest": "结果指针 \"remembers\" 是 `self` 指向的 [allocated object];",
+        "suggest": "结果指针 \"remembers\" 是 `self` 指向的 [分配对象][allocated object];",
         "translate": ""
     },
     {
@@ -3951,12 +3951,12 @@
     },
     {
         "source": "Both the starting and other pointer must be either in bounds or one byte past the end of the same [allocated object].",
-        "suggest": "起始指针和其他指针都必须在边界内或在同一个 [allocated object] 的末尾之后一个字节。",
+        "suggest": "起始指针和其他指针都必须在边界内或在同一个 [分配对象][allocated object] 的末尾之后一个字节。",
         "translate": ""
     },
     {
         "source": "The entire memory range of this slice must be contained within a single [allocated object]!",
-        "suggest": "整个内存范围必须包含在单个 [allocated object] 内!",
+        "suggest": "整个内存范围必须包含在单个 [分配对象][allocated object] 内!",
         "translate": ""
     },
     {

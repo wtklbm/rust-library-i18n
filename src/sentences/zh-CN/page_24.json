@@ -456,7 +456,7 @@
     },
     {
         "source": "See the [module documentation](../index.html) for more details.",
-        "suggest": "有关更多详细信息，请参见 [module documentation](../index.html)。",
+        "suggest": "有关更多详细信息，请参见 [模块级文档](../index.html)。",
         "translate": ""
     },
     {
@@ -486,7 +486,7 @@
     },
     {
         "source": "Here you'll find intrinsics necessary for leveraging WebAssembly proposals such as [atomics] and [simd].",
-        "suggest": "在这里，您将发现利用 [atomics] 和 [simd] 等 WebAssembly 建议所必需的内联函数。",
+        "suggest": "在这里，您将发现利用 [原子性][atomics] 和 [simd] 等 WebAssembly 建议所必需的内联函数。",
         "translate": ""
     },
     {
@@ -501,7 +501,7 @@
     },
     {
         "source": "See the [module documentation](../index.html) for general information about the `arch` module and platform intrinsics.",
-        "suggest": "有关 `arch` 模块和平台内联函数的一般信息，请参见 [module documentation](../index.html)。",
+        "suggest": "有关 `arch` 模块和平台内联函数的一般信息，请参见 [模块级文档](../index.html)。",
         "translate": ""
     },
     {
@@ -746,7 +746,7 @@
     },
     {
         "source": "The reference is the [CUDA C Programming Guide][cuda_c].",
-        "suggest": "引用的是 [CUDA C Programming Guide][cuda_c]。",
+        "suggest": "引用的是 [CUDA C 编程指南][cuda_c]。",
         "translate": ""
     },
     {
@@ -976,7 +976,7 @@
     },
     {
         "source": "The references are: [POWER ISA v2.07B (for POWER8 & POWER8 with NVIDIA NVlink)] and [POWER ISA v3.0B (for POWER9)].",
-        "suggest": "引用的是: [POWER ISA v2.07B (for POWER8 & POWER8 with NVIDIA NVlink)] 和 [POWER ISA v3.0B (for POWER9)]。",
+        "suggest": "引用的是: [POWER ISA v2.07B (适用于带有 NVIDIA NVlink 的 POWER8 和 POWER8)][POWER ISA v2.07B (for POWER8 & POWER8 with NVIDIA NVlink)] 和 [POWER ISA v3.0B (适用于 POWER9)][POWER ISA v3.0B (for POWER9)]。",
         "translate": ""
     },
     {
@@ -2381,7 +2381,7 @@
     },
     {
         "source": "The reference is [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2: Instruction Set Reference, A-Z][intel64_ref].",
-        "suggest": "引用的是 [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2: Instruction Set Reference, A-Z][intel64_ref]。",
+        "suggest": "引用的是 [英特尔 64 位和 IA-32 架构软件开发人员手册第 2 卷: 指令集参考, A-Z][intel64_ref]。",
         "translate": ""
     },
     {
@@ -3706,7 +3706,7 @@
     },
     {
         "source": "Wikipedia's [AVX][wiki_avx] and [FMA][wiki_fma] pages provide a quick overview of the instructions available.",
-        "suggest": "Wikipedia 的 [AVX][wiki_avx] 和 [FMA][wiki_fma] 页面提供了对可用说明的快速概述。",
+        "suggest": "维基百科的 [AVX][wiki_avx] 和 [FMA][wiki_fma] 页面提供了对可用说明的快速概述。",
         "translate": ""
     },
     {

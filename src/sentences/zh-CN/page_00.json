@@ -231,7 +231,7 @@
     },
     {
         "source": "while this type is unstable, the functionality it provides can be accessed through the [free functions in `alloc`](self#functions).",
-        "suggest": "尽管此类型不稳定，但是可以通过 [free functions in `alloc`](self#functions) 访问其提供的功能。",
+        "suggest": "尽管此类型不稳定，但是可以通过 [`alloc` 中的自由函数](self#functions) 访问其提供的功能。",
         "translate": ""
     },
     {
@@ -1066,7 +1066,7 @@
     },
     {
         "source": "For this to be safe, the memory must have been allocated in accordance with the [memory layout] used by `Box` .",
-        "suggest": "为了安全起见，必须根据 `Box` 所使用的 [memory layout] 分配内存。",
+        "suggest": "为了安全起见，必须根据 `Box` 所使用的 [内存布局][memory layout] 分配内存。",
         "translate": ""
     },
     {
@@ -1081,7 +1081,7 @@
     },
     {
         "source": "The safety conditions are described in the [memory layout] section.",
-        "suggest": "安全条件在 [memory layout] 部分中进行了描述。",
+        "suggest": "安全条件在 [内存布局][memory layout] 部分中进行了描述。",
         "translate": ""
     },
     {
@@ -1126,7 +1126,7 @@
     },
     {
         "source": "In particular, the caller should properly destroy `T` and release the memory, taking into account the [memory layout] used by `Box`.",
-        "suggest": "特别地，考虑到 `Box` 使用的 [memory layout]，调用者应正确销毁 `T` 并释放内存。",
+        "suggest": "特别地，考虑到 `Box` 使用的 [内存布局][memory layout]，调用者应正确销毁 `T` 并释放内存。",
         "translate": ""
     },
     {
@@ -3276,7 +3276,7 @@
     },
     {
         "source": "A map based on a [B-Tree].",
-        "suggest": "基于 [B-Tree] 的 map。",
+        "suggest": "基于 [B 树][B-Tree] 的 map。",
         "translate": ""
     },
     {
@@ -3671,7 +3671,7 @@
     },
     {
         "source": "See the [module-level documentation] for more.",
-        "suggest": "有关更多信息，请参见 [module-level documentation]。",
+        "suggest": "有关更多信息，请参见 [模块级文档][module-level documentation]。",
         "translate": ""
     },
     {

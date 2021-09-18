@@ -3431,7 +3431,7 @@
     },
     {
         "source": "Test a slicing operation **that should succeed,** testing it on all of the indexing methods.",
-        "suggest": "测试切片操作 **应该成功，** 在所有索引方法上进行测试。",
+        "suggest": "测试切片操作应该成功，在所有索引方法上进行测试。",
         "translate": ""
     },
     {

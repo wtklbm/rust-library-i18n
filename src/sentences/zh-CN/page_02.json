@@ -656,7 +656,7 @@
     },
     {
         "source": "To avoid name clashes with `T`'s methods, the methods of [`Rc<T>`][`Rc`] itself are associated functions, called using [fully qualified syntax]:",
-        "suggest": "为了避免与 T 方法的名称冲突，[`Rc<T>`][`Rc`] 本身的方法是关联函数，使用 [fully qualified syntax] 进行调用:",
+        "suggest": "为了避免与 T 方法的名称冲突，[`Rc<T>`][`Rc`] 本身的方法是关联函数，使用 [完全限定语法][fully qualified syntax] 进行调用:",
         "translate": ""
     },
     {
@@ -3176,7 +3176,7 @@
     },
     {
         "source": "You can create a `String` from [a literal string][`str`] with [`String::from`]:",
-        "suggest": "您可以使用 [`String::from`] 从 [a literal string][`str`] 创建 `String`:",
+        "suggest": "您可以使用 [`String::from`] 从 [字符串字面量][`str`] 创建 `String`:",
         "translate": ""
     },
     {
@@ -3571,7 +3571,7 @@
     },
     {
         "source": "Decode a UTF-16–encoded slice `v` into a `String`, replacing invalid data with [the replacement character (`U+FFFD`)][U+FFFD].",
-        "suggest": "将 UTF-16 编码的切片 `v` 解码为 `String`，将无效数据替换为 [the replacement character (`U+FFFD`)][U+FFFD]。",
+        "suggest": "将 UTF-16 编码的切片 `v` 解码为 `String`，将无效数据替换为 [替换字符 (`U+FFFD`)][U+FFFD]。",
         "translate": ""
     },
     {
@@ -4511,7 +4511,7 @@
     },
     {
         "source": "automatically dereferences to `T` (via the [`Deref`][deref] trait), so you can call `T`'s methods on a value of type `Arc<T>`. To avoid name clashes with `T`'s methods, the methods of `Arc<T>` itself are associated functions, called using [fully qualified syntax]:",
-        "suggest": "自动取消对 `T` 的引用 (通过 [`Deref`][deref] trait)，因此您可以在 `Arc<T>` 类型的值上调用 `T` 的方法。为了避免与 T 方法的名称冲突，`Arc<T>` 本身的方法是关联函数，使用 [fully qualified syntax] 进行调用:",
+        "suggest": "自动取消对 `T` 的引用 (通过 [`Deref`][deref] trait)，因此您可以在 `Arc<T>` 类型的值上调用 `T` 的方法。为了避免与 T 方法的名称冲突，`Arc<T>` 本身的方法是关联函数，使用 [完全限定语法][fully qualified syntax] 进行调用:",
         "translate": ""
     },
     {
@@ -4846,7 +4846,7 @@
     },
     {
         "source": "This method can be used to release the final `Arc` and backing storage, but **should not** be called after the final `Arc` has been released.",
-        "suggest": "此方法可用于释放最终的 `Arc` 和后备存储，但是在释放最终的 `Arc` 之后，不应 **调用**。",
+        "suggest": "此方法可用于释放最终的 `Arc` 和后备存储，但不应在最终的 `Arc` 释放后调用。",
         "translate": ""
     },
     {
@@ -4951,7 +4951,7 @@
     },
     {
         "source": "As explained in the [Boost documentation][1], Increasing the reference counter can always be done with memory_order_relaxed: New references to an object can only be formed from an existing reference, and passing an existing reference from one thread to another must already provide any required synchronization.",
-        "suggest": "如 [Boost documentation][1] 中所述，可以始终通过 memory_order_relaxed 来完成增加引用计数器的操作: 对对象的新引用只能由现有引用形成，并且将现有引用从一个线程传递到另一个线程必须已经提供了所需的同步。",
+        "suggest": "如 [Boost 文档][1] 中所述，可以始终通过 memory_order_relaxed 来完成增加引用计数器的操作: 对对象的新引用只能由现有引用形成，并且将现有引用从一个线程传递到另一个线程必须已经提供了所需的同步。",
         "translate": ""
     },
     {

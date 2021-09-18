@@ -1091,7 +1091,7 @@
     },
     {
         "source": "This module provides a generic way to compute the [hash] of a value.",
-        "suggest": "该模块提供了一种计算值的 [hash] 的通用方法。",
+        "suggest": "该模块提供了一种计算值的 [哈希][hash] 的通用方法。",
         "translate": ""
     },
     {
@@ -1296,7 +1296,7 @@
     },
     {
         "source": "A `BuildHasher` is typically used (e.g., by [`HashMap`]) to create [`Hasher`]s for each key such that they are hashed independently of one another, since [`Hasher`]s contain state.",
-        "suggest": "`BuildHasher` 通常用于 (例如，由 [`HashMap`] 来) 为每个键创建 ['Hasher`]，使得它们彼此独立地进行哈希处理，因为 ['Hasher`] 包含状态。",
+        "suggest": "`BuildHasher` 通常用于 (例如，由 [`HashMap`] 来) 为每个键创建 [`Hasher`]，使得它们彼此独立地进行哈希处理，因为 [`Hasher`] 包含状态。",
         "translate": ""
     },
     {
@@ -1321,7 +1321,7 @@
     },
     {
         "source": "Each call to `build_hasher` on the same instance should produce identical [`Hasher`]s.",
-        "suggest": "在同一实例上对 `build_hasher` 的每次调用都应产生相同的 ['Hasher`]。",
+        "suggest": "在同一实例上对 `build_hasher` 的每次调用都应产生相同的 [`Hasher`]。",
         "translate": ""
     },
     {
@@ -1336,7 +1336,7 @@
     },
     {
         "source": "Any `BuildHasherDefault` is [zero-sized].",
-        "suggest": "任何 `BuildHasherDefault` 都是 [zero-sized]。",
+        "suggest": "任何 `BuildHasherDefault` 都是 [零大小][zero-sized]。",
         "translate": ""
     },
     {
@@ -3821,7 +3821,7 @@
     },
     {
         "source": "If `T` is not [`Copy`], using *both* the values in the region beginning at `*src` and the region beginning at `*dst` can [violate memory safety][read-ownership].",
-        "suggest": "如果 `T` 不是 [`Copy`]，则同时使用 *both* 和 [violate memory safety][read-ownership] 开头的区域中的值都可以 [violate memory safety][read-ownership]。",
+        "suggest": "如果 `T` 不是 [`Copy`]，则使用两个以 `*src` 开头的区域和以 `*dst` 开头的区域中的值可以 [违反内存安全][read-ownership]。",
         "translate": ""
     },
     {

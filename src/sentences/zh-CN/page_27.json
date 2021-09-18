@@ -4006,7 +4006,7 @@
     },
     {
         "source": "For proper support of [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb), the OS has to always report only the features supported by all cores, like [FreeBSD does](https://reviews.freebsd.org/D17137#393947).",
-        "suggest": "为了正确支持 [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb)，操作系统必须始终仅报告所有内核所支持的特征，例如 [FreeBSD does](https://reviews.freebsd.org/D17137#393947)。",
+        "suggest": "为了正确支持 [不同内核具有不同功能的 SoC](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb)，操作系统必须始终仅报告所有内核所支持的特征，例如 [FreeBSD 文档](https://reviews.freebsd.org/D17137#393947)。",
         "translate": ""
     },
     {

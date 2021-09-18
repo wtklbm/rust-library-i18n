@@ -3841,7 +3841,7 @@
     },
     {
         "source": "Each argument being formatted can be transformed by a number of formatting parameters (corresponding to `format_spec` in [the syntax](#syntax)).",
-        "suggest": "每个要格式化的参数都可以通过许多格式化参数进行转换 (对应于 [the syntax](#syntax)) 中的 `format_spec`。",
+        "suggest": "每个要格式化的参数都可以通过许多格式化参数进行转换 (对应于 [语法](#syntax)) 中的 `format_spec`。",
         "translate": ""
     },
     {
@@ -4496,7 +4496,7 @@
     },
     {
         "source": "They are re-exported through the [standard collections library](../std/collections/index.html).",
-        "suggest": "它们通过 [standard collections library](../std/collections/index.html) 重导出。",
+        "suggest": "它们通过 [标准 collections 库](../std/collections/index.html) 重导出。",
         "translate": ""
     },
     {
@@ -4686,7 +4686,7 @@
     },
     {
         "source": "See the [module-level documentation](../index.html) for more.",
-        "suggest": "有关更多信息，请参见 [module-level documentation](../index.html)。",
+        "suggest": "有关更多信息，请参见 [模块级文档](../index.html)。",
         "translate": ""
     },
     {

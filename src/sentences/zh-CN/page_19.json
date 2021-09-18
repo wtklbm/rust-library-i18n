@@ -106,7 +106,7 @@
     },
     {
         "source": "For more information, see information about [poisoning] on the [`Mutex`] type.",
-        "suggest": "有关更多信息，请参见有关 [`Mutex`] 类型的 [poisoning] 的信息。",
+        "suggest": "有关更多信息，请参见有关 [`Mutex`] 类型的 [中毒][poisoning] 的信息。",
         "translate": ""
     },
     {
@@ -311,7 +311,7 @@
     },
     {
         "source": "Access to global variables can lead to nondeterministic results, **even if** compiler optimizations are disabled, and it is **still possible** to introduce synchronization bugs.",
-        "suggest": "即使禁用了编译器优化，**访问变量变量也可能导致不确定的结果，** 仍然可能 ** 引入同步错误。",
+        "suggest": "访问全局变量会导致不确定的结果，即使编译器优化被禁用，仍然可能引入同步错误。",
         "translate": ""
     },
     {
@@ -346,12 +346,12 @@
     },
     {
         "source": "Use [compiler fences] to prevent this reordering.",
-        "suggest": "使用 [compiler fences] 防止此重新排序。",
+        "suggest": "使用 [编译器隔离][compiler fences] 防止此重新排序。",
         "translate": ""
     },
     {
         "source": "A **single processor** executing instructions [out-of-order]:",
-        "suggest": "一个单处理器 ** 执行指令 [out-of-order]:",
+        "suggest": "一个单处理器执行指令 [乱序][out-of-order]:",
         "translate": ""
     },
     {
@@ -1096,7 +1096,7 @@
     },
     {
         "source": "An owning iterator over messages on a [`Receiver`], created by **Receiver::into_iter**.",
-        "suggest": "[`Receiver`] 上由消息接收者拥有的迭代器，该迭代器由 **接收者::into_iter** 创建。",
+        "suggest": "[`Receiver`] 上由消息接收者拥有的迭代器，该迭代器由 **Receiver::into_iter** 创建。",
         "translate": ""
     },
     {
@@ -1141,7 +1141,7 @@
     },
     {
         "source": "An error returned from the [`Sender::send`] or [`SyncSender::send`] function on **channel**s.",
-        "suggest": "X **X** 上的 [`Sender::send`] 或 [`SyncSender::send`] 函数返回错误。",
+        "suggest": "从 **通道** 上的 [`Sender::send`] 或 [`SyncSender::send`] 函数返回错误。",
         "translate": ""
     },
     {
@@ -1176,7 +1176,7 @@
     },
     {
         "source": "This **channel** is currently empty, but the **Sender**(s) have not yet disconnected, so data may yet become available.",
-        "suggest": "该 **通道** 当前为空，但 **发送器** 尚未断开连接，因此数据可能仍可用。",
+        "suggest": "该 **通道** 当前为空，但 **发送者** 尚未断开连接，因此数据可能仍可用。",
         "translate": ""
     },
     {
@@ -4106,7 +4106,7 @@
     },
     {
         "source": "This is similar to [poisoning with mutexes][poison].",
-        "suggest": "这类似于 [poisoning with mutexes][poison]。",
+        "suggest": "这类似于 [互斥体中毒][poison]。",
         "translate": ""
     },
     {

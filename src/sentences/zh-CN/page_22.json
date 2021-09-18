@@ -1046,7 +1046,7 @@
     },
     {
         "source": "This library uses Rust’s type system to maintain [well-formedness](https://simonsapin.github.io/wtf-8/#well-formed), like the `String` and `&str` types do for UTF-8.",
-        "suggest": "该库使用 Rust 的类型系统来维护 [well-formedness](https://simonsapin.github.io/wtf-8/#well-formed)，就像 `String` 和 `&str` 类型用于 UTF-8 一样。",
+        "suggest": "该库使用 Rust 的类型系统来维护 [结构良好性](https://simonsapin.github.io/wtf-8/#well-formed)，就像 `String` 和 `&str` 类型用于 UTF-8 一样。",
         "translate": ""
     },
     {
@@ -2156,7 +2156,7 @@
     },
     {
         "source": "Communication between threads can be done through [channels], Rust's message-passing types, along with [other forms of thread synchronization](../../std/sync/index.html) and shared-memory data structures.",
-        "suggest": "线程之间的通信可以通过 [channels]、Rust 的消息传递类型、以及 [其他形式的线程同步](../../std/sync/index.html) 和共享内存数据结构来完成。",
+        "suggest": "线程之间的通信可以通过 [通道][channels]、Rust 的消息传递类型、以及 [其他形式的线程同步](../../std/sync/index.html) 和共享内存数据结构来完成。",
         "translate": ""
     },
     {
@@ -3201,7 +3201,7 @@
     },
     {
         "source": "In terms of [atomic memory orderings],  the completion of the associated thread synchronizes with this function returning.",
-        "suggest": "就 [atomic memory orderings] 而言，关联线程的完成与此函数返回同步。",
+        "suggest": "就 [原子内存排序][atomic memory orderings] 而言，关联线程的完成与此函数返回同步。",
         "translate": ""
     },
     {
@@ -3871,7 +3871,7 @@
     },
     {
         "source": "The reference for NEON is [ARM's NEON Intrinsics Reference][arm_ref].",
-        "suggest": "NEON 的引用为 [ARM's NEON Intrinsics Reference][arm_ref]。",
+        "suggest": "NEON 的引用为 [ARM 的 NEON 内部函数参考][arm_ref]。",
         "translate": ""
     },
     {

@@ -1086,7 +1086,7 @@
     },
     {
         "source": "If `self` is [finite] and `start == end`, the value at any point will always be `start == end`.",
-        "suggest": "如果 `self` 是 [finite] 和 `start == end`，则任何一点的值将始终为 `start == end`。",
+        "suggest": "如果 `self` 是 [限定的][finite] 并且 `start == end`，则任何一点的值将始终为 `start == end`。",
         "translate": ""
     },
     {
@@ -1771,7 +1771,7 @@
     },
     {
         "source": "See the Reference for more information on [trait objects][ref-trait-obj] and [object safety][ref-obj-safety].",
-        "suggest": "有关 [trait objects][ref-trait-obj] 和 [object safety][ref-obj-safety] 的更多信息，请参见引用。",
+        "suggest": "有关 [trait 对象][ref-trait-obj] 和 [对象安全][ref-obj-safety] 的更多信息，请参见引用。",
         "translate": ""
     },
     {
@@ -1846,12 +1846,12 @@
     },
     {
         "source": "IPv4-compatible IPv6 addresses are defined in [IETF RFC 4291 Section 2.5.5.1], and have been officially deprecated.",
-        "suggest": "IPv4 兼容的 IPv6 地址在 [IETF RFC 4291 Section 2.5.5.1] 中定义，并已被正式弃用。",
+        "suggest": "IPv4 兼容的 IPv6 地址在 [IETF RFC 4291 第 2.5.5.1 节][IETF RFC 4291 Section 2.5.5.1] 中定义，并已被正式弃用。",
         "translate": ""
     },
     {
         "source": "The RFC describes the format of an \"IPv4-Compatible IPv6 address\" as follows:",
-        "suggest": "RFC 描述了 \"IPv4-Compatible IPv6 address\" 的格式如下:",
+        "suggest": "RFC 描述了 \"IPv4 兼容 IPv6 地址\" 的格式如下:",
         "translate": ""
     },
     {
@@ -1876,7 +1876,7 @@
     },
     {
         "source": "IPv4-mapped IPv6 addresses are defined in [IETF RFC 4291 Section 2.5.5.2].",
-        "suggest": "IPv4 映射的 IPv6 地址在 [IETF RFC 4291 Section 2.5.5.2] 中定义。",
+        "suggest": "IPv4 映射的 IPv6 地址在 [IETF RFC 4291 第 2.5.5.2 节][IETF RFC 4291 Section 2.5.5.2] 中定义。",
         "translate": ""
     },
     {
@@ -1901,7 +1901,7 @@
     },
     {
         "source": "Scope of an [IPv6 multicast address] as defined in [IETF RFC 7346 section 2].",
-        "suggest": "[IETF RFC 7346 section 2] 中定义的 [IPv6 multicast address] 的作用域。",
+        "suggest": "[IETF RFC 7346 第 2 节][IETF RFC 7346 section 2] 中定义的 [IPv6 多播地址][IPv6 multicast address] 的范围。",
         "translate": ""
     },
     {
@@ -1976,7 +1976,7 @@
     },
     {
         "source": "Converts this address to an [IPv4-compatible] [`IPv6` address].",
-        "suggest": "将此地址转换为 [IPv4-compatible] [`IPv6` address]。",
+        "suggest": "将此地址转换为 [IPv4 兼容][IPv4-compatible] 的 [`IPv6` 地址][`IPv6` address]。",
         "translate": ""
     },
     {
@@ -1991,12 +1991,12 @@
     },
     {
         "source": "Converts this address to an [IPv4-mapped] [`IPv6` address].",
-        "suggest": "将此地址转换为 [IPv4-mapped] [`IPv6` address]。",
+        "suggest": "将此地址转换为 [IPv4 映射][IPv4-mapped] 的 [`IPv6` 地址][`IPv6` address]。",
         "translate": ""
     },
     {
         "source": "Returns [`true`] if this is the [loopback address] (`::1`), as defined in [IETF RFC 4291 section 2.5.3].",
-        "suggest": "如果这是 [loopback address] (`::1`)，如 [IETF RFC 4291 section 2.5.3] 中所定义，则返回 [`true`]。",
+        "suggest": "如果这是 [环回地址][loopback address] (`::1`)，如 [IETF RFC 4291 第 2.5.3 节][IETF RFC 4291 section 2.5.3] 中所定义，则返回 [`true`]。",
         "translate": ""
     },
     {
@@ -2006,12 +2006,12 @@
     },
     {
         "source": "Converts this address to an [`IPv4` address] if it's an [IPv4-mapped] address, as defined in [IETF RFC 4291 section 2.5.5.2], otherwise returns [`None`].",
-        "suggest": "如果它是 [IPv4-mapped] 地址 (如 [IETF RFC 4291 section 2.5.5.2] 中所定义)，则将此地址转换为 [`IPv4` address]，否则返回 [`None`]。",
+        "suggest": "如果它是 [IPv4 映射][IPv4-mapped] 地址 (如 [IETF RFC 4291 第 2.5.5.2 节][IETF RFC 4291 section 2.5.5.2] 中所定义)，则将此地址转换为 [`IPv4` address]，否则返回 [`None`]。",
         "translate": ""
     },
     {
         "source": "Converts this address to an [`IPv4` address] if it is either an [IPv4-compatible] address as defined in [IETF RFC 4291 section 2.5.5.1], or an [IPv4-mapped] address as defined in [IETF RFC 4291 section 2.5.5.2], otherwise returns [`None`].",
-        "suggest": "如果此地址是 [IETF RFC 4291 section 2.5.5.1] 中定义的 [IPv4-compatible] 地址或 [IETF RFC 4291 section 2.5.5.2] 中定义的 [IPv4-mapped] 地址，则将此地址转换为 [`IPv4` address]，否则返回 [`None`]。",
+        "suggest": "如果此地址是 [IETF RFC 4291 第 2.5.5.1 节][IETF RFC 4291 section 2.5.5.1] 中定义的 [IPv4 兼容][IPv4-compatible] 地址或 [IETF RFC 4291 第 2.5.5.2 节][IETF RFC 4291 section 2.5.5.2] 中定义的 [ IPv4 映射][IPv4-mapped] 地址，则将此地址转换为 [`IPv4` 地址][`IPv4` address]，否则返回 [`None`]。",
         "translate": ""
     },
     {
@@ -2481,7 +2481,7 @@
     },
     {
         "source": "See [here] for the full story.",
-        "suggest": "有关完整故事，请参见 [here]。",
+        "suggest": "有关完整故事，请参见 [这个][here]。",
         "translate": ""
     },
     {
@@ -3266,7 +3266,7 @@
     },
     {
         "source": "91e7cf982d01 `abort: Do not flush stdio streams [BZ #15436]' by Florian Weimer.",
-        "suggest": "91e7cf982d01 `abort: Do not flush 标准输入输出流 [BZ#15436]' by Florian Weimer。",
+        "suggest": "91e7cf982d01 `关于: 不要刷新标准输入输出流 [BZ #15436] by Florian Weimer。",
         "translate": ""
     },
     {
@@ -4106,7 +4106,7 @@
     },
     {
         "source": "This module provides the `Terminal` trait, which abstracts over an [ANSI Terminal][ansi] to provide color printing, among other things.",
-        "suggest": "该模块提供了 `Terminal` trait，它抽象了 [ANSI Terminal][ansi] 以提供彩色打印等。",
+        "suggest": "该模块提供了 `Terminal` trait，它抽象了 [ANSI 终端][ansi] 以提供彩色打印等。",
         "translate": ""
     },
     {

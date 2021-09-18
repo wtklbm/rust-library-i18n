@@ -16,7 +16,7 @@
     },
     {
         "source": "This is referred to as [soundness]: a well-typed program actually has the desired properties.",
-        "suggest": "这称为 [soundness]: 类型正确的程序实际上具有所需的属性。",
+        "suggest": "这称为 [可靠性][soundness]: 类型正确的程序实际上具有所需的属性。",
         "translate": ""
     },
     {
@@ -46,7 +46,7 @@
     },
     {
         "source": "Dereference [raw pointers]",
-        "suggest": "解引用 [raw pointers]",
+        "suggest": "解引用 [裸指针][raw pointers]",
         "translate": ""
     },
     {
@@ -351,7 +351,7 @@
     },
     {
         "source": "We have written an [async book] detailing async/await and trade-offs compared to using threads.",
-        "suggest": "我们已经编写了 [async book]，其中详细介绍了 async/await 和与使用线程相比的取舍。",
+        "suggest": "我们已经编写了 [异步书][async book]，其中详细介绍了 async/await 和与使用线程相比的取舍。",
         "translate": ""
     },
     {
@@ -376,12 +376,12 @@
     },
     {
         "source": "Read the [async book] for details on how async/await and executors work.",
-        "suggest": "阅读 [async book]，以获得有关 async/await 和执行程序如何工作的详细信息。",
+        "suggest": "阅读 [异步书][async book]，以获得有关 async/await 和执行程序如何工作的详细信息。",
         "translate": ""
     },
     {
         "source": "is a prefix of a [trait object]'s type.",
-        "suggest": "是 [trait 对象] 类型的前缀。",
+        "suggest": "是 [trait 对象][trait object] 类型的前缀。",
         "translate": ""
     },
     {
@@ -491,7 +491,7 @@
     },
     {
         "source": "See the [Reference][union] for more informations on `union`s.",
-        "suggest": "有关 `union` 的更多信息，请参见 [union]。",
+        "suggest": "有关 `union` 的更多信息，请参见 [[Reference][union]。",
         "translate": ""
     },
     {
@@ -831,7 +831,7 @@
     },
     {
         "source": "Second, implicit methods on [primitive types] are documented here.",
-        "suggest": "其次，此处记录了 [primitive types] 上的隐式方法。",
+        "suggest": "其次，此处记录了 [原始类型][primitive types] 上的隐式方法。",
         "translate": ""
     },
     {
@@ -861,7 +861,7 @@
     },
     {
         "source": "32-bit integers (very useful), and there is a [page for the module `std::i32`] that documents the constant values [`MIN`] and [`MAX`] (rarely useful).",
-        "suggest": "32 位整数 (非常有用)，并且有一个 [page for the module `std::i32`] 记录了常量值 [`MIN`] 和 [`MAX`] (很少有用)。",
+        "suggest": "32 位整数 (非常有用)，并且有一个 [`std::i32` 模块的页面][page for the module `std::i32`] 记录了常量值 [`MIN`] 和 [`MAX`] (很少有用)。",
         "translate": ""
     },
     {
@@ -876,7 +876,7 @@
     },
     {
         "source": "Third, the standard library defines [The Rust Prelude], a small collection of items - mostly traits - that are imported into every module of every crate.",
-        "suggest": "第三，标准库还定义了 [The Rust Prelude]，这是一小部分项目 - 主要是 traits - 导入到每个 crate 的每个模块中。",
+        "suggest": "第三，标准库还定义了 Rust [Prelude][The Rust Prelude]，这是一小部分项目 - 主要是 traits - 导入到每个 crate 的每个模块中。",
         "translate": ""
     },
     {
@@ -1411,7 +1411,7 @@
     },
     {
         "source": "The macro works by using the `Debug` implementation of the type of the given expression to print the value to [stderr] along with the source location of the macro invocation as well as the source code of the expression.",
-        "suggest": "宏通过使用给定表达式的类型的 `Debug` 实现将值与宏调用的源位置以及表达式的源代码一起打印到 [stderr] 来工作。",
+        "suggest": "宏通过使用给定表达式的类型的 `Debug` 实现将值与宏调用的源位置以及表达式的源代码一起打印到 [标准错误][stderr] 来工作。",
         "translate": ""
     },
     {
@@ -1616,7 +1616,7 @@
     },
     {
         "source": "Internet socket addresses consist of an [IP address], a 16-bit port number, as well as possibly some version-dependent additional information.",
-        "suggest": "Internet 套接字地址包含一个 [IP address]，一个 16 位端口号以及一些可能与版本有关的附加信息。",
+        "suggest": "Internet 套接字地址包含一个 [IP 地址][IP address]，一个 16 位端口号以及一些可能与版本有关的附加信息。",
         "translate": ""
     },
     {
@@ -1656,7 +1656,7 @@
     },
     {
         "source": "socket addresses consist of an [`IPv6` address], a 16-bit port number, as well as fields containing the traffic class, the flow label, and a scope identifier (see [IETF RFC 2553, Section 3.3] for more details).",
-        "suggest": "套接字地址由 [`IPv6` address]，16 位端口号以及包含流量类别，流标签和作用域标识符的字段组成 (有关更多详细信息，请参见 [IETF RFC 2553, Section 3.3])。",
+        "suggest": "套接字地址由 [`IPv6` 地址][`IPv6` address]，16 位端口号以及包含流量类别，流标签和作用域标识符的字段组成 (有关更多详细信息，请参见 [IETF RFC 2553，第 3.3 节][IETF RFC 2553, Section 3.3])。",
         "translate": ""
     },
     {
@@ -1666,7 +1666,7 @@
     },
     {
         "source": "Creates a new socket address from an [IP address] and a port number.",
-        "suggest": "从 [IP address] 和端口号创建一个新的套接字地址。",
+        "suggest": "从 [IP 地址][IP address] 和端口号创建一个新的套接字地址。",
         "translate": ""
     },
     {
@@ -1696,12 +1696,12 @@
     },
     {
         "source": "Returns [`true`] if the [IP address] in this `SocketAddr` is an [`IPv4` address], and [`false`] otherwise.",
-        "suggest": "如果此 `SocketAddr` 中的 [IP address] 是 [`IPv4` address]，则返回 [`true`]，否则返回 [`false`]。",
+        "suggest": "如果此 `SocketAddr` 中的 [IP 地址][IP address] 是 [`IPv4` address]，则返回 [`true`]，否则返回 [`false`]。",
         "translate": ""
     },
     {
         "source": "Returns [`true`] if the [IP address] in this `SocketAddr` is an [`IPv6` address], and [`false`] otherwise.",
-        "suggest": "如果此 `SocketAddr` 中的 [IP address] 是 [`IPv6` address]，则返回 [`true`]，否则返回 [`false`]。",
+        "suggest": "如果此 `SocketAddr` 中的 [IP 地址][IP address] 是 [`IPv6` address]，则返回 [`true`]，否则返回 [`false`]。",
         "translate": ""
     },
     {
@@ -1726,7 +1726,7 @@
     },
     {
         "source": "For more information on the meaning and layout of the `flowinfo` and `scope_id` parameters, see [IETF RFC 2553, Section 3.3].",
-        "suggest": "有关 `flowinfo` 和 `scope_id` 参数的含义和布局的更多信息，请参见 [IETF RFC 2553, Section 3.3]。",
+        "suggest": "有关 `flowinfo` 和 `scope_id` 参数的含义和布局的更多信息，请参见 [IETF RFC 2553，第 3.3 节][IETF RFC 2553, Section 3.3]。",
         "translate": ""
     },
     {
@@ -1736,12 +1736,12 @@
     },
     {
         "source": "This information corresponds to the `sin6_flowinfo` field in C's `netinet/in.h`, as specified in [IETF RFC 2553, Section 3.3].",
-        "suggest": "该信息对应于 [IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_flowinfo` 字段。",
+        "suggest": "该信息对应于 [IETF RFC 2553, 第 3.3 节][IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_flowinfo` 字段。",
         "translate": ""
     },
     {
         "source": "It combines information about the flow label and the traffic class as specified in [IETF RFC 2460], respectively [Section 6] and [Section 7].",
-        "suggest": "它结合了关于流标签和流量类别的信息，分别在 [IETF RFC 2460]，[Section 6] 和 [Section 7] 中指定。",
+        "suggest": "它结合了关于流标签和流量类别的信息，分别在 [IETF RFC 2460]，[第 6 节][Section 6] 和 [第 7 节][Section 7] 中指定。",
         "translate": ""
     },
     {
@@ -1761,7 +1761,7 @@
     },
     {
         "source": "This information corresponds to the `sin6_scope_id` field in C's `netinet/in.h`, as specified in [IETF RFC 2553, Section 3.3].",
-        "suggest": "该信息对应于 [IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_scope_id` 字段。",
+        "suggest": "该信息对应于 [IETF RFC 2553, 第 3.3 节][IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_scope_id` 字段。",
         "translate": ""
     },
     {
@@ -2551,7 +2551,7 @@
     },
     {
         "source": "This range is defined in [IETF RFC 2544] as `192.18.0.0` through `198.19.255.255` but [errata 423] corrects it to `198.18.0.0/15`.",
-        "suggest": "[IETF RFC 2544] 将该范围定义为 `192.18.0.0` 至 `198.19.255.255`，但 [errata 423] 将其更正为 `198.18.0.0/15`。",
+        "suggest": "[IETF RFC 2544] 将该范围定义为 `192.18.0.0` 至 `198.19.255.255`，但 [勘误表 423][errata 423] 将其更正为 `198.18.0.0/15`。",
         "translate": ""
     },
     {
@@ -2831,7 +2831,7 @@
     },
     {
         "source": "This method returns [`true`] for addresses in the range reserved by [RFC 4291 section 2.4], i.e. addresses with the following format:",
-        "suggest": "对于 [RFC 4291 section 2.4] 保留的范围内的地址，此方法返回 [`true`]，即具有以下格式的地址:",
+        "suggest": "对于 [RFC 4291 第 2.4 节][RFC 4291 section 2.4] 保留的范围内的地址，此方法返回 [`true`]，即具有以下格式的地址:",
         "translate": ""
     },
     {
@@ -2906,7 +2906,7 @@
     },
     {
         "source": "This method returns [`true`] for site-local addresses as per [RFC 4291 section 2.5.7]",
-        "suggest": "此方法根据 [RFC 4291 section 2.5.7] 返回 [`true`] 作为站点本地地址",
+        "suggest": "此方法根据 [RFC 4291 第 2.5.7 节][RFC 4291 section 2.5.7] 返回 [`true`] 作为站点本地地址",
         "translate": ""
     },
     {
@@ -3121,7 +3121,7 @@
     },
     {
         "source": "All currently blocked and future [reads] will return [`Ok`]`(0)`.",
-        "suggest": "所有当前被阻止的和未来的 [reads] 将返回 [`Ok`]`(0)`。",
+        "suggest": "所有当前被阻止的和未来的 [读取][reads] 将返回 [`Ok`]`(0)`。",
         "translate": ""
     },
     {
@@ -3131,7 +3131,7 @@
     },
     {
         "source": "All currently blocked and future [writes] will return an error.",
-        "suggest": "所有当前被阻止和未来的 [writes] 将返回错误。",
+        "suggest": "所有当前被阻止和未来的 [写入][writes] 将返回错误。",
         "translate": ""
     },
     {
@@ -3486,7 +3486,7 @@
     },
     {
         "source": "After creating a `TcpStream` by either [`connect`]ing to a remote host or [`accept`]ing a connection on a [`TcpListener`], data can be transmitted by [reading] and [writing] to it.",
-        "suggest": "在通过 [`connect`] 到远程主机或 [`accept`] 在 [`TcpListener`] 上创建连接来创建 `TcpStream` 后，数据可以由 [reading] 和 [writing] 传输到该 `TcpStream`。",
+        "suggest": "在通过 [`connect`] 到远程主机或 [`accept`] 在 [`TcpListener`] 上创建连接来创建 `TcpStream` 后，数据可以由 [读取][reading] 和 [写入][writing] 传输到该 `TcpStream`。",
         "translate": ""
     },
     {
@@ -4011,7 +4011,7 @@
     },
     {
         "source": "After creating a `UdpSocket` by [`bind`]ing it to a socket address, data can be [sent to] and [received from] any other socket address.",
-        "suggest": "通过将 `UdpSocket` 绑定到一个套接字地址来创建 `UdpSocket` 之后，数据可以是 [sent to] 和 [received from] 任何其他套接字地址。",
+        "suggest": "通过将 `UdpSocket` 绑定到一个套接字地址来创建 `UdpSocket` 之后，数据可以是 [发送到][sent to] 和 [从哪里接收][received from] 任何其他套接字地址。",
         "translate": ""
     },
     {
@@ -4456,7 +4456,7 @@
     },
     {
         "source": "See the [ABI documentation] for more information.",
-        "suggest": "有关更多信息，请参见 [ABI documentation]。",
+        "suggest": "有关更多信息，请参见 [ABI 文档][ABI documentation]。",
         "translate": ""
     },
     {
@@ -4716,7 +4716,7 @@
     },
     {
         "source": "is completely unlike [Rust's `char` type];",
-        "suggest": "完全不同于 [Rust's `char` type];",
+        "suggest": "完全不同于 [Rust 的 `char` 类型][Rust's `char` type];",
         "translate": ""
     },
     {
@@ -4751,7 +4751,7 @@
     },
     {
         "source": "This type will almost always be [`f64`], which is guaranteed to be an [IEEE-754 double-precision float] in Rust.",
-        "suggest": "此类型几乎总是 [`f64`]，并保证它是 Rust 中的 [IEEE-754 double-precision float]。",
+        "suggest": "此类型几乎总是 [`f64`]，并保证它是 Rust 中的 [IEEE-754 双精度浮点数][IEEE-754 double-precision float]。",
         "translate": ""
     },
     {
@@ -4766,7 +4766,7 @@
     },
     {
         "source": "This type will almost always be [`f32`], which is guaranteed to be an [IEEE-754 single-precision float] in Rust.",
-        "suggest": "此类型几乎总是 [`f32`]，并保证它是 Rust 中的 [IEEE-754 single-precision float]。",
+        "suggest": "此类型几乎总是 [`f32`]，并保证它是 Rust 中的 [IEEE-754 单精度浮点数][IEEE-754 single-precision float]。",
         "translate": ""
     },
     {

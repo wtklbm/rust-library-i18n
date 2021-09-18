@@ -2601,7 +2601,7 @@
     },
     {
         "source": "For possible values and their descriptions, see [File Attribute Constants] in the Windows Dev Center.",
-        "suggest": "有关可能的值及其说明，请参见 Windows 开发人员中心中的 [File Attribute Constants]。",
+        "suggest": "有关可能的值及其说明，请参见 Windows 开发人员中心中的 [文件属性常量][File Attribute Constants]。",
         "translate": ""
     },
     {
@@ -2886,7 +2886,7 @@
     },
     {
         "source": "Sets the [process creation flags][1] to be passed to `CreateProcess`.",
-        "suggest": "设置要传递给 `CreateProcess` 的 [process creation flags][1]。",
+        "suggest": "设置要传递给 `CreateProcess` 的 [进程创建标志][1]。",
         "translate": ""
     },
     {

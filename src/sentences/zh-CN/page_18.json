@@ -106,7 +106,7 @@
     },
     {
         "source": "That was a bit of a whirlwind tour of unwind safety, but for more information about unwind safety and how it applies to Rust, see an [associated RFC][rfc].",
-        "suggest": "那是 unwind 安全性的旋风之旅，但是有关 unwind 安全性及其如何应用于 Rust 的更多信息，请参见 [associated RFC][rfc]。",
+        "suggest": "那是 unwind 安全性的旋风之旅，但是有关 unwind 安全性及其如何应用于 Rust 的更多信息，请参见 [相关的 RFC][rfc]。",
         "translate": ""
     },
     {
@@ -1036,7 +1036,7 @@
     },
     {
         "source": "Verbatim prefix using Windows' _**U**niform **N**aming **C**onvention_, e.g.,",
-        "suggest": "使用 Windows 的 _**U** niform **N** aming **C** onvention_ 的逐字前缀，例如，",
+        "suggest": "使用 Windows 的 _**U**niform **N**aming **C**onvention_ 的逐字前缀，例如，",
         "translate": ""
     },
     {
@@ -1066,7 +1066,7 @@
     },
     {
         "source": "Prefix using Windows' _**U**niform **N**aming **C**onvention_, e.g.",
-        "suggest": "使用 Windows 的 _**U** niform **N** aming **C** onvention_ 的前缀，例如",
+        "suggest": "使用 Windows 的 _**U**niform **N**aming **C**onvention_ 的前缀，例如",
         "translate": ""
     },
     {
@@ -1446,7 +1446,7 @@
     },
     {
         "source": "More details about the overall approach can be found in the [module documentation](self).",
-        "suggest": "有关整体方法的更多详细信息，请参见 [module documentation](self)。",
+        "suggest": "有关整体方法的更多详细信息，请参见 [模块级文档](self)。",
         "translate": ""
     },
     {
@@ -3106,7 +3106,7 @@
     },
     {
         "source": "You can move elements out of an array with a [slice pattern].",
-        "suggest": "您可以使用 [slice pattern] 将元素移出数组。",
+        "suggest": "您可以使用 [切片模式][slice pattern] 将元素移出数组。",
         "translate": ""
     },
     {
@@ -3131,7 +3131,7 @@
     },
     {
         "source": "You can use a [slice pattern] to move elements out of an array:",
-        "suggest": "您可以使用 [slice pattern] 将元素移出数组:",
+        "suggest": "您可以使用 [切片模式][slice pattern] 将元素移出数组:",
         "translate": ""
     },
     {
@@ -3146,7 +3146,7 @@
     },
     {
         "source": "Also see the reference on [dynamically sized types](../reference/dynamically-sized-types.html).",
-        "suggest": "另请参见 [dynamically sized types](../reference/dynamically-sized-types.html) 上的引用。",
+        "suggest": "另请参见 [动态大小的类型](../reference/dynamically-sized-types.html) 上的引用。",
         "translate": ""
     },
     {
@@ -3286,7 +3286,7 @@
     },
     {
         "source": "For more about tuples, see [the book](../book/ch03-02-data-types.html#the-tuple-type).",
-        "suggest": "有关元组的更多信息，请参见 [the book](../book/ch03-02-data-types.html#the-tuple-type)。",
+        "suggest": "有关元组的更多信息，请参见 [这本书](../book/ch03-02-data-types.html#the-tuple-type)。",
         "translate": ""
     },
     {
@@ -3381,7 +3381,7 @@
     },
     {
         "source": "For more information on floating point numbers, see [Wikipedia][wikipedia].",
-        "suggest": "有关浮点数的更多信息，请参见 [Wikipedia][wikipedia]。",
+        "suggest": "有关浮点数的更多信息，请参见 [维基百科][wikipedia]。",
         "translate": ""
     },
     {
@@ -3671,7 +3671,7 @@
     },
     {
         "source": "For more information and a list of supported ABIs, see [the nomicon's section on foreign calling conventions][nomicon-abi].",
-        "suggest": "有关更多信息和受支持的 ABI 列表，请参见 [the nomicon's section on foreign calling conventions][nomicon-abi]。",
+        "suggest": "有关更多信息和受支持的 ABI 列表，请参见 [nomicon 中关于外部调用约定的部分][nomicon-abi]。",
         "translate": ""
     },
     {
@@ -4036,7 +4036,7 @@
     },
     {
         "source": "When an instance of `ChildStdin` is [dropped], the `ChildStdin`'s underlying file handle will be closed.",
-        "suggest": "当 `ChildStdin` 的实例是 [dropped] 时，`ChildStdin` 的基础文件句柄将关闭。",
+        "suggest": "当 `ChildStdin` 的实例 [丢弃][dropped] 时，`ChildStdin` 的基础文件句柄将关闭。",
         "translate": ""
     },
     {
@@ -4056,7 +4056,7 @@
     },
     {
         "source": "When an instance of `ChildStdout` is [dropped], the `ChildStdout`'s underlying file handle will be closed.",
-        "suggest": "当 `ChildStdout` 的实例是 [dropped] 时，`ChildStdout` 的基础文件句柄将关闭。",
+        "suggest": "当 `ChildStdout` 的实例 [丢弃][dropped] 时，`ChildStdout` 的基础文件句柄将关闭。",
         "translate": ""
     },
     {
@@ -4071,7 +4071,7 @@
     },
     {
         "source": "When an instance of `ChildStderr` is [dropped], the `ChildStderr`'s underlying file handle will be closed.",
-        "suggest": "当 `ChildStderr` 的实例是 [dropped] 时，`ChildStderr` 的基础文件句柄将关闭。",
+        "suggest": "当 `ChildStderr` 的实例 [丢弃][dropped] 时，`ChildStderr` 的基础文件句柄将关闭。",
         "translate": ""
     },
     {
@@ -4716,7 +4716,7 @@
     },
     {
         "source": "Due to [platform-specific behavior], the exit code for this example will be `0` on Linux, but `256` on Windows:",
-        "suggest": "由于 [platform-specific behavior]，此示例的退出代码将是 Linux 上的 `0`，但 Windows 上的 `256`:",
+        "suggest": "由于 [特定于平台的行为][platform-specific behavior]，此示例的退出代码将是 Linux 上的 `0`，但 Windows 上的 `256`:",
         "translate": ""
     },
     {
@@ -4741,7 +4741,7 @@
     },
     {
         "source": "However, [`panic!`] will still call the [panic hook] while `abort` will not.",
-        "suggest": "但是，[`panic!`] 仍然会调用 [panic hook]，而 `abort` 不会。",
+        "suggest": "但是，[`panic!`] 仍然会调用 [panic 钩子][panic hook]，而 `abort` 不会。",
         "translate": ""
     },
     {

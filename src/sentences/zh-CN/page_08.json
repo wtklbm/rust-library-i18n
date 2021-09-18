@@ -101,7 +101,7 @@
     },
     {
         "source": "Detailed information about error handling is found in the [book].",
-        "suggest": "有关错误处理的详细信息，请参见 [book]。",
+        "suggest": "有关错误处理的详细信息，请参见 [书][book]。",
         "translate": ""
     },
     {
@@ -321,7 +321,7 @@
     },
     {
         "source": "See also the [structural match RFC][RFC1445], and [issue 63438] which motivated migrating from attribute-based design to this trait.",
-        "suggest": "另请参见 [structural match RFC][RFC1445] 和 [issue 63438]，它们促使从基于属性的设计迁移到此 trait。",
+        "suggest": "另请参见 [结构匹配 RFC][RFC1445] 和 [issue 63438]，它们促使从基于属性的设计迁移到此 trait。",
         "translate": ""
     },
     {
@@ -686,7 +686,7 @@
     },
     {
         "source": "For cases when one does need thread-safe interior mutability, Rust provides [atomic data types], as well as explicit locking via [`sync::Mutex`][mutex] and [`sync::RwLock`][rwlock].",
-        "suggest": "对于确实需要线程安全的内部可变性的情况，Rust 提供 [atomic data types] 以及通过 [`sync::Mutex`][mutex] 和 [`sync::RwLock`][rwlock] 进行的显式锁定。",
+        "suggest": "对于确实需要线程安全的内部可变性的情况，Rust 提供 [原子数据类型][atomic data types] 以及通过 [`sync::Mutex`][mutex] 和 [`sync::RwLock`][rwlock] 进行的显式锁定。",
         "translate": ""
     },
     {
@@ -846,7 +846,7 @@
     },
     {
         "source": "This has bearing on the Rust compiler's [drop check] analysis.",
-        "suggest": "这与 Rust 编译器的 [drop check] 分析有关。",
+        "suggest": "这与 Rust 编译器的 [丢弃检查][drop check] 分析有关。",
         "translate": ""
     },
     {
@@ -1031,12 +1031,12 @@
     },
     {
         "source": "and drop order.",
-        "suggest": "和 drop 指令。",
+        "suggest": "和 drop 顺序。",
         "translate": ""
     },
     {
         "source": "Rust has a well-defined [drop order] of values.",
-        "suggest": "Rust 具有定义明确的 [drop order] 值。",
+        "suggest": "Rust 具有定义明确的 [丢弃顺序][drop order] 值。",
         "translate": ""
     },
     {
@@ -1116,7 +1116,7 @@
     },
     {
         "source": "As such, unless the contained value is a packed struct, the destructor will be called in-place without moving the value, and thus can be used to safely drop [pinned] data.",
-        "suggest": "这样，除非所包含的值是包装的结构体，否则析构函数将在不移动值的情况下就地调用，因此可用于安全地丢弃 [pinned] 数据。",
+        "suggest": "这样，除非所包含的值是包装的结构体，否则析构函数将在不移动值的情况下就地调用，因此可用于安全地丢弃 [固定][pinned] 数据。",
         "translate": ""
     },
     {
@@ -1441,7 +1441,7 @@
     },
     {
         "source": "As a consequence, zero-initializing a variable of reference type causes instantaneous [undefined behavior][ub], no matter whether that reference ever gets used to access memory:",
-        "suggest": "结果，将引用类型的变量初始化为零会导致瞬时 [undefined behavior][ub]，无论引用是否曾经被用来访问内存:",
+        "suggest": "结果，将引用类型的变量初始化为零会导致瞬时 [未定义的行为][ub]，无论引用是否曾经被用来访问内存:",
         "translate": ""
     },
     {
@@ -2271,7 +2271,7 @@
     },
     {
         "source": "Takes ownership and \"forgets\" about the value **without running its destructor**.",
-        "suggest": "在不运行其析构函数 **的情况下，获取所有权和 \"forgets\" 值**。",
+        "suggest": "获取所有权和 \"forgets\" 值，而不运行其析构函数。",
         "translate": ""
     },
     {
@@ -2531,12 +2531,12 @@
     },
     {
         "source": "Round up the current size to the nearest multiple of the next field's [alignment].",
-        "suggest": "将当前大小四舍五入到下一个字段的 [alignment] 的最接近倍数。",
+        "suggest": "将当前大小四舍五入到下一个字段的 [对齐][alignment] 的最接近倍数。",
         "translate": ""
     },
     {
         "source": "Finally, round the size of the struct to the nearest multiple of its [alignment].",
-        "suggest": "最后，将结构体的大小四舍五入到其 [alignment] 的最接近倍数。",
+        "suggest": "最后，将结构体的大小四舍五入到其 [对齐][alignment] 的最接近倍数。",
         "translate": ""
     },
     {
@@ -2596,7 +2596,7 @@
     },
     {
         "source": "However, when `T` *has* no statically-known size, e.g., a slice [`[T]`][slice] or a [trait object], then `size_of_val` can be used to get the dynamically-known size.",
-        "suggest": "但是，当 `T` 没有静态已知的大小 (例如，切片 [`[T]`][slice] 或 [trait object]) 时，可以使用 `size_of_val` 获得动态已知的大小。",
+        "suggest": "但是，当 `T` 没有静态已知的大小 (例如，切片 [`[T]`][slice] 或 [trait 对象][trait object]) 时，可以使用 `size_of_val` 获得动态已知的大小。",
         "translate": ""
     },
     {

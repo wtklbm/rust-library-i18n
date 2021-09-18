@@ -106,7 +106,7 @@
     },
     {
         "source": "All accesses performed by functions in this module are *non-atomic* in the sense of [atomic operations] used to synchronize between threads.",
-        "suggest": " 在用于在线程之间同步的 [atomic operations] 的意义上，此模块中的函数执行的所有访问都是非原子的。",
+        "suggest": " 在用于在线程之间同步的 [原子操作][atomic operations] 的意义上，此模块中的函数执行的所有访问都是非原子的。",
         "translate": ""
     },
     {
@@ -126,7 +126,7 @@
     },
     {
         "source": "These axioms, along with careful use of [`offset`] for pointer arithmetic, are enough to correctly implement many useful things in unsafe code.",
-        "suggest": "这些公理，以及仔细地使用 [`offset`] 进行指针算术，足以在不安全的代码中正确实现许多有用的东西。",
+        "suggest": "这些公理，以及仔细地使用 [`offset`] 进行指针运算，足以在不安全的代码中正确实现许多有用的东西。",
         "translate": ""
     },
     {
@@ -186,7 +186,7 @@
     },
     {
         "source": "It can be used to drop [pinned] data when `T` is not `repr(packed)` (pinned data must not be moved before it is dropped).",
-        "suggest": "当 `T` 不是 `repr(packed)` 时，可用于丢弃 [pinned] 数据 (在丢弃固定的数据之前，不得移动固定的数据)。",
+        "suggest": "当 `T` 不是 `repr(packed)` 时，可用于丢弃 [固定][pinned] 数据 (在丢弃固定的数据之前，不得移动固定的数据)。",
         "translate": ""
     },
     {
@@ -601,7 +601,7 @@
     },
     {
         "source": "If `T` is not [`Copy`], using both the returned value and the value at `*src` can [violate memory safety][read-ownership].",
-        "suggest": "如果 `T` 不是 [`Copy`]，则同时使用返回值和 `*src` 处的值都可以 [violate memory safety][read-ownership]。",
+        "suggest": "如果 `T` 不是 [`Copy`]，则同时使用返回值和 `*src` 处的值都可以 [违反内存安全][read-ownership]。",
         "translate": ""
     },
     {
@@ -2086,7 +2086,7 @@
     },
     {
         "source": "See the [module documentation](self) for details.",
-        "suggest": "有关详细信息，请参见 [module documentation](self)。",
+        "suggest": "有关详细信息，请参见 [模块文档](self)。",
         "translate": ""
     },
     {
@@ -2316,7 +2316,7 @@
     },
     {
         "source": "Panics if the value is an [`Ok`], with a custom panic message provided by the [`Ok`]'s value.",
-        "suggest": "Panics，如果该值为 [`Ok`]，则由 [Ok] 的值提供自定义 panic 消息。",
+        "suggest": "如果该值为 [`Ok`]，则会产生 panic，[`Ok`] 的值提供自定义 panic 消息。",
         "translate": ""
     },
     {
@@ -2671,7 +2671,7 @@
     },
     {
         "source": "Implements comparison of vectors [lexicographically](Ord#lexicographical-comparison).",
-        "suggest": "实现 vectors [lexicographically](Ord#lexicographical-comparison) 的比较。",
+        "suggest": "实现 vectors [按字典顺序](Ord#lexicographical-comparison) 的比较。",
         "translate": ""
     },
     {

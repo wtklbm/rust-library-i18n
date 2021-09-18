@@ -456,7 +456,7 @@
     },
     {
         "source": "See [the book] for more.",
-        "suggest": "有关更多信息，请参见 [the book]。",
+        "suggest": "有关更多信息，请参见 [这本书][the book]。",
         "translate": ""
     },
     {
@@ -1666,7 +1666,7 @@
     },
     {
         "source": "In the first example, the lowercased string is represented `\"cafe\\u{301}\"` (the last character is an acute accent [combining character]).",
-        "suggest": "在第一个示例中，小写的字符串表示为 `\"cafe\\u{301}\"` (最后一个字符为重音符 [combining character])。",
+        "suggest": "在第一个示例中，小写的字符串表示为 `\"cafe\\u{301}\"` (最后一个字符为重音符 [组合字符][combining character])。",
         "translate": ""
     },
     {
@@ -1736,7 +1736,7 @@
     },
     {
         "source": "can learn more about its status in the [tracking issue].",
-        "suggest": "可以在 [tracking issue] 中了解有关其状态的更多信息。",
+        "suggest": "可以在 [跟踪问题][tracking issue] 中了解有关其状态的更多信息。",
         "translate": ""
     },
     {
@@ -2181,7 +2181,7 @@
     },
     {
         "source": "A [hash map] implemented with quadratic probing and SIMD lookup.",
-        "suggest": "通过二次探测和 SIMD 查找实现的 [hash map]。",
+        "suggest": "通过二次探测和 SIMD 查找实现的 [哈希表][hash map]。",
         "translate": ""
     },
     {
@@ -2251,7 +2251,7 @@
     },
     {
         "source": "The original C++ version of SwissTable can be found [here], and this [CppCon talk] gives an overview of how the algorithm works.",
-        "suggest": "可以在 [这里][here] 找到 SwissTable 的原始 C++ 版本，而该 [CppCon talk] 概述了该算法的工作原理。",
+        "suggest": "可以在 [这里][here] 找到 SwissTable 的原始 C++ 版本，而该 [CppCon 讨论][CppCon talk] 概述了该算法的工作原理。",
         "translate": ""
     },
     {
@@ -2471,7 +2471,7 @@
     },
     {
         "source": "The key may be any borrowed form of the map's key type, but [`Hash`] and [`Eq`] on the borrowed form *must* match those for the key type.",
-        "suggest": "键可以是 map 键类型的任何借用形式，但是借用形式上的 ['Hash`] 和 [`Eq`] 必须与键的类型匹配。",
+        "suggest": "键可以是 map 键类型的任何借用形式，但是借用形式上的 [`Hash`] 和 [`Eq`] 必须与键的类型匹配。",
         "translate": ""
     },
     {
@@ -4426,12 +4426,12 @@
     },
     {
         "source": "Joins a collection of [`Path`]s appropriately for the `PATH` environment variable.",
-        "suggest": "为 `PATH` 环境变量适当地加入 [Path] 的集合。",
+        "suggest": "为 `PATH` 环境变量适当地加入 [`Path`] 的集合。",
         "translate": ""
     },
     {
         "source": "Returns an [`Err`] (containing an error message) if one of the input [`Path`]s contains an invalid character for constructing the `PATH` variable (a double quote on Windows or a colon on Unix).",
-        "suggest": "如果输入 [Path] 之一包含用于构造 `PATH` 变量的无效字符 (Windows 上的双引号或 Unix 上的冒号)，则返回 [`Err`] (包含错误消息)。",
+        "suggest": "如果输入 [`Path`] 之一包含用于构造 `PATH` 变量的无效字符 (Windows 上的双引号或 Unix 上的冒号)，则返回 [`Err`] (包含错误消息)。",
         "translate": ""
     },
     {
@@ -4581,7 +4581,7 @@
     },
     {
         "source": "This sort of behavior has been known to [lead to privilege escalation] when used incorrectly.",
-        "suggest": "如果不正确使用 [lead to privilege escalation]，这种行为是已知的。",
+        "suggest": "如果不正确使用会 [导致特权升级][lead to privilege escalation]，这种行为是已知的。",
         "translate": ""
     },
     {

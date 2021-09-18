@@ -16,7 +16,7 @@
     },
     {
         "source": "For more details, visit [the chapter in *The Rust Programming Language*][book] as well as the reference sections on [the dereference operator][ref-deref-op], [method resolution] and [type coercions].",
-        "suggest": "有关更多详细信息，请访问 [Rust 编程语言中的章节][book] 以及 [解引用运算符][ref-deref-op]，[方法解析][method resolution] 和 [type coercions] 上的引用部分。",
+        "suggest": "有关更多详细信息，请访问 [Rust 编程语言中的章节][book] 以及 [解引用运算符][ref-deref-op]，[方法解析][method resolution] 和 [类型强制转换][type coercions] 上的引用部分。",
         "translate": ""
     },
     {
@@ -126,7 +126,7 @@
     },
     {
         "source": "To learn about some of those other cases, please see [the reference] section on destructors.",
-        "suggest": "要了解其他一些情况，请参见析构函数的 [the reference] 部分。",
+        "suggest": "要了解其他一些情况，请参见析构函数的 [参考][the reference] 部分。",
         "translate": ""
     },
     {
@@ -351,12 +351,12 @@
     },
     {
         "source": "This trait (`Fn`) is not to be confused with [function pointers] (`fn`).",
-        "suggest": "请勿将此 trait (`Fn`) 与 [function pointers] (`fn`) 混淆。",
+        "suggest": "请勿将此 trait (`Fn`) 与 [函数指针][function pointers] (`fn`) 混淆。",
         "translate": ""
     },
     {
         "source": "is implemented automatically by closures which only take immutable references to captured variables or don't capture anything at all, as well as (safe) [function pointers] (with some caveats, see their documentation for more details).",
-        "suggest": "由闭包自动实现，闭包只对捕获的变量进行不可变引用或根本不捕获任何内容，还有 (安全) [function pointers] (有一些警告，请参见其文档以获取更多详细信息)。",
+        "suggest": "由闭包自动实现，闭包只对捕获的变量进行不可变引用或根本不捕获任何内容，还有 (安全) [函数指针][function pointers] (有一些警告，请参见其文档以获取更多详细信息)。",
         "translate": ""
     },
     {
@@ -426,7 +426,7 @@
     },
     {
         "source": "is implemented automatically by closures which take mutable references to captured variables, as well as all types that implement [`Fn`], e.g., (safe) [function pointers] (since `FnMut` is a supertrait of [`Fn`]).",
-        "suggest": "由闭包自动实现，闭包将可变引用引用到捕获的变量，以及实现 [`Fn`] 的所有类型，例如 (safe) [function pointers] (因为 `FnMut` 是 [`Fn`] 的特征)。",
+        "suggest": "由闭包自动实现，闭包将可变引用引用到捕获的变量，以及实现 [`Fn`] 的所有类型，例如 (safe) [函数指针][function pointers] (因为 `FnMut` 是 [`Fn`] 的特征)。",
         "translate": ""
     },
     {
@@ -481,7 +481,7 @@
     },
     {
         "source": "is implemented automatically by closures that might consume captured variables, as well as all types that implement [`FnMut`], e.g., (safe) [function pointers] (since `FnOnce` is a supertrait of [`FnMut`]).",
-        "suggest": "由可能消耗捕获变量的闭包以及实现 [`FnMut`] 的所有类型 (例如 (safe) [function pointers] (因为 `FnOnce` 是 [`FnMut`] 的特征) ) 自动实现。",
+        "suggest": "由可能消耗捕获变量的闭包以及实现 [`FnMut`] 的所有类型 (例如 (safe) [函数指针][function pointers] (因为 `FnOnce` 是 [`FnMut`] 的特征) ) 自动实现。",
         "translate": ""
     },
     {
@@ -796,7 +796,7 @@
     },
     {
         "source": "Implementations of operator traits should be unsurprising in their respective contexts, keeping in mind their usual meanings and [operator precedence].",
-        "suggest": "考虑到它们的通常含义和 [operator precedence]，运算符 traits 的实现在它们各自的上下文中应该不足为奇。",
+        "suggest": "考虑到它们的通常含义和 [运算符优先级][operator precedence]，运算符 traits 的实现在它们各自的上下文中应该不足为奇。",
         "translate": ""
     },
     {
@@ -946,7 +946,7 @@
     },
     {
         "source": "is primarily used as a [slicing index], its shorthand is `..`.",
-        "suggest": "主要用作 [slicing index]，其简写为 `..`。",
+        "suggest": "主要用作 [切片索引][slicing index]，其简写为 `..`。",
         "translate": ""
     },
     {
@@ -971,7 +971,7 @@
     },
     {
         "source": "Used as a [slicing index], `RangeFull` produces the full array as a slice.",
-        "suggest": "用作 [slicing index] 时，`RangeFull` 产生完整的阵列作为切片。",
+        "suggest": "用作 [切片索引][slicing index] 时，`RangeFull` 产生完整的阵列作为切片。",
         "translate": ""
     },
     {
@@ -1076,7 +1076,7 @@
     },
     {
         "source": "When used as a [slicing index], `RangeTo` produces a slice of all array elements before the index indicated by `end`.",
-        "suggest": "当用作 [slicing index] 时，`RangeTo` 会在 `end` 所指示的索引之前生成所有数组元素的切片。",
+        "suggest": "当用作 [切片索引][slicing index] 时，`RangeTo` 会在 `end` 所指示的索引之前生成所有数组元素的切片。",
         "translate": ""
     },
     {
@@ -1231,12 +1231,12 @@
     },
     {
         "source": "When used as a [slicing index], `RangeToInclusive` produces a slice of all array elements up to and including the index indicated by `end`.",
-        "suggest": "当用作 [slicing index] 时，`RangeToInclusive` 会生成所有数组元素的切片，直到并包括 `end` 指示的索引。",
+        "suggest": "当用作 [切片索引][slicing index] 时，`RangeToInclusive` 会生成所有数组元素的切片，直到并包括 `end` 指示的索引。",
         "translate": ""
     },
     {
         "source": "The upper bound of the range (inclusive)",
-        "suggest": "范围 (inclusive) 的上限",
+        "suggest": "范围的上限 (inclusive)",
         "translate": ""
     },
     {
@@ -2081,7 +2081,7 @@
     },
     {
         "source": "Consumes the `self` argument then, if [`Some`], returns the contained value, otherwise if [`None`], returns the [default value] for that type.",
-        "suggest": "消费 `self` 参数，如果 [`Some`]，则返回所包含的值，否则，如果 [`None`]，则返回该类型的 [default value]。",
+        "suggest": "消费 `self` 参数，如果 [`Some`]，则返回所包含的值，否则，如果 [`None`]，则返回该类型的 [默认值][default value]。",
         "translate": ""
     },
     {
@@ -2851,12 +2851,12 @@
     },
     {
         "source": "Feel free to [skip to where the theoretical discussion continues](#drop-guarantee).",
-        "suggest": "随时使用 [skip to where the theoretical discussion continues](#drop-guarantee)。",
+        "suggest": "请随意 [跳到理论讨论的地方继续](#drop-guarantee)。",
         "translate": ""
     },
     {
         "source": "Example: intrusive doubly-linked list",
-        "suggest": "示例: 侵入式双链表",
+        "suggest": "示例: 侵入式双向链表",
         "translate": ""
     },
     {
@@ -3666,7 +3666,7 @@
     },
     {
         "source": "See the [module-level documentation](super) for more.",
-        "suggest": "有关更多信息，请参见 [module-level documentation](super)。",
+        "suggest": "有关更多信息，请参见 [模块级文档](super)。",
         "translate": ""
     },
     {
@@ -3916,7 +3916,7 @@
     },
     {
         "source": "The computed offset, **in bytes**, cannot overflow an `isize`.",
-        "suggest": "计算的偏移量 (以字节为单位 **) 不会使 `isize` 溢出。",
+        "suggest": "计算的偏移量 (以字节为单位) 不会使 `isize` 溢出。",
         "translate": ""
     },
     {
@@ -4466,7 +4466,7 @@
     },
     {
         "source": "The returned value is the number of **elements**, not the number of bytes.",
-        "suggest": "返回的值是 **elements** 的数量，而不是字节数。",
+        "suggest": "返回的值是 **元素** 的数量，而不是字节数。",
         "translate": ""
     },
     {

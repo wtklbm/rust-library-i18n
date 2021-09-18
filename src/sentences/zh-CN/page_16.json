@@ -1541,7 +1541,7 @@
     },
     {
         "source": "Read all bytes from a [reader][Read] into a new [`String`].",
-        "suggest": "将 [reader][Read] 的所有字节读入新的 [`String`]。",
+        "suggest": "将 [读取][Read] 的所有字节读入新的 [`String`]。",
         "translate": ""
     },
     {
@@ -1906,7 +1906,7 @@
     },
     {
         "source": "The underlying buffers, to which the [`IoSlice`]s point (but not the [`IoSlice`]s themselves), are unchanged and can be reused.",
-        "suggest": "[IoSlice] 指向的基础缓冲区 (而不是 [IoSlice] 本身) 是不变的，可以重用。",
+        "suggest": "[`IoSlice`] 指向的基础缓冲区 (而不是 [`IoSlice`] 本身) 是不变的，可以重用。",
         "translate": ""
     },
     {
@@ -3376,7 +3376,7 @@
     },
     {
         "source": "This is most useful when converting pointers using `as *const _` or `as *mut _` though the [`cast`][const-cast] method is recommended over `as *const _` and it is [the same][mut-cast] for `as *mut _`: those methods make the intent clearer.",
-        "suggest": "使用 `as *const _` 或 `as* mut _` 转换指针时，这是最有用的，尽管 `as *const _` 推荐使用 [`cast`][const-cast] 方法，而 `as* mut _` 则建议使用 [the same][mut-cast]: 这些方法使意图更清晰。",
+        "suggest": "使用 `as *const _` 或 `as *mut _` 转换指针时，这是最有用的，尽管 `as *const _` 推荐使用 [`cast`][const-cast] 方法，而 `as *mut _` 则建议使用 [同样的][mut-cast]: 这些方法使意图更清晰。",
         "translate": ""
     },
     {
@@ -3516,7 +3516,7 @@
     },
     {
         "source": "For more detail on `const`, see the [Rust Book] or the [Reference].",
-        "suggest": "有关 `const` 的更多详细信息，请参见 [Rust Book] 或 [Reference]。",
+        "suggest": "有关 `const` 的更多详细信息，请参见 [Rust 书][Rust Book] 或 [Reference]。",
         "translate": ""
     },
     {
@@ -3601,7 +3601,7 @@
     },
     {
         "source": "More can be read about crates in the [Reference].",
-        "suggest": "可以在 [Reference] 中了解有关 crates 的更多信息。",
+        "suggest": "可以在 [参考][Reference] 中了解有关 crates 的更多信息。",
         "translate": ""
     },
     {
@@ -3736,7 +3736,7 @@
     },
     {
         "source": "For more information, take a look at the [Rust Book] or the [Reference]",
-        "suggest": "有关更多信息，请查看 [Rust Book] 或 [Reference]",
+        "suggest": "有关更多信息，请查看 [Rust 书][Rust Book] 或 [Reference]",
         "translate": ""
     },
     {
@@ -3796,7 +3796,7 @@
     },
     {
         "source": "For more information on FFI, check the [Rust book] or the [Reference].",
-        "suggest": "有关 FFI 的更多信息，请检查 [Rust book] 或 [Reference]。",
+        "suggest": "有关 FFI 的更多信息，请检查 [Rust 书][Rust book] 或 [Reference]。",
         "translate": ""
     },
     {
@@ -3856,12 +3856,12 @@
     },
     {
         "source": "For more information on the various types of functions and how they're used, consult the [Rust book] or the [Reference].",
-        "suggest": "有关各种类型的函数以及如何使用它们的更多信息，请查阅 [Rust book] 或 [Reference]。",
+        "suggest": "有关各种类型的函数以及如何使用它们的更多信息，请查阅 [Rust 书][Rust book] 或 [Reference]。",
         "translate": ""
     },
     {
         "source": "Iteration with [`in`], trait implementation with [`impl`], or [higher-ranked trait bounds] (`for<'a>`).",
-        "suggest": "使用 [`in`] 进行迭代，使用 [`impl`] 或 [higher-ranked trait bounds] (`for<'a>`) 实现 trait。",
+        "suggest": "使用 [`in`] 进行迭代，使用 [`impl`] 或 [更高等级的 trait bounds][higher-ranked trait bounds] (`for<'a>`) 实现 trait。",
         "translate": ""
     },
     {
@@ -3881,7 +3881,7 @@
     },
     {
         "source": "is also used for [higher-ranked trait bounds] as in `for<'a> &'a T: PartialEq<i32>`.",
-        "suggest": "与 `for<'a> &'a T: PartialEq<i32>` 一样，也用于 [higher-ranked trait bounds]。",
+        "suggest": "与 `for<'a> &'a T: PartialEq<i32>` 一样，也用于 [更高等级的 trait bounds][higher-ranked trait bounds]。",
         "translate": ""
     },
     {
@@ -3916,7 +3916,7 @@
     },
     {
         "source": "For more information on for-loops, see the [Rust book] or the [Reference].",
-        "suggest": "有关 for 循环的更多信息，请参见 [Rust book] 或 [Reference]。",
+        "suggest": "有关 for 循环的更多信息，请参见 [Rust 书][Rust book] 或 [Reference]。",
         "translate": ""
     },
     {
@@ -3976,7 +3976,7 @@
     },
     {
         "source": "For more information on `if` expressions, see the [Rust book] or the [Reference].",
-        "suggest": "有关 `if` 表达式的更多信息，请参见 [Rust book] 或 [Reference]。",
+        "suggest": "有关 `if` 表达式的更多信息，请参见 [Rust 书][Rust book] 或 [Reference]。",
         "translate": ""
     },
     {
@@ -4081,7 +4081,7 @@
     },
     {
         "source": "See the [Rust book][book1] for more information on pattern matching.",
-        "suggest": "有关模式匹配的更多信息，请参见 [Rust book][book1]。",
+        "suggest": "有关模式匹配的更多信息，请参见 [Rust 书][book1]。",
         "translate": ""
     },
     {
@@ -4131,7 +4131,7 @@
     },
     {
         "source": "For more information on the `let` keyword, see the [Rust book][book2] or the [Reference]",
-        "suggest": "有关 `let` 关键字的更多信息，请参见 [Rust book][book2] 或 [Reference]。",
+        "suggest": "有关 `let` 关键字的更多信息，请参见 [Rust 书][book2] 或 [Reference]。",
         "translate": ""
     },
     {
@@ -4986,7 +4986,7 @@
     },
     {
         "source": "In traits, `type` is used to declare an [associated type]:",
-        "suggest": "在 traits 中，`type` 用于声明 [associated type]:",
+        "suggest": "在 traits 中，`type` 用于声明 [关联类型][associated type]:",
         "translate": ""
     },
     {

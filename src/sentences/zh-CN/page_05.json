@@ -11,7 +11,7 @@
     },
     {
         "source": "See the [module-level documentation](self) for more.",
-        "suggest": "有关更多信息，请参见 [module-level documentation](self)。",
+        "suggest": "有关更多信息，请参见 [模块级文档](self)。",
         "translate": ""
     },
     {
@@ -1166,12 +1166,12 @@
     },
     {
         "source": "A `char` is a [Unicode Scalar Value], which means that it is a [Code Point], but only ones within a certain range.",
-        "suggest": "`char` 是 [Unicode Scalar Value]，这意味着它是 [Code Point]，但仅在一定范围内。",
+        "suggest": "`char` 是 [Unicode 标量值][Unicode Scalar Value]，这意味着它是 [代码点][Code Point]，但仅在一定范围内。",
         "translate": ""
     },
     {
         "source": "is the highest valid code point that's a valid [Unicode Scalar Value].",
-        "suggest": "是有效 [Unicode Scalar Value] 的最高有效代码点。",
+        "suggest": "是有效 [Unicode 标量值][Unicode Scalar Value] 的最高有效代码点。",
         "translate": ""
     },
     {
@@ -1436,7 +1436,7 @@
     },
     {
         "source": "is described in Chapter 4 (Character Properties) of the [Unicode Standard] and specified in the [Unicode Character Database][ucd] [`DerivedCoreProperties.txt`].",
-        "suggest": "在 [Unicode 标准] 的第 4 章 (字符属性) 中进行了说明，并在 [Unicode 字符数据库][ucd] [`DerivedCoreProperties.txt`] 中进行了指定。",
+        "suggest": "在 [Unicode 标准][Unicode Standard] 的第 4 章 (字符属性) 中进行了说明，并在 [Unicode 字符数据库][ucd] [`DerivedCoreProperties.txt`] 中进行了指定。",
         "translate": ""
     },
     {
@@ -1526,7 +1526,7 @@
     },
     {
         "source": "In the [Unicode Standard], Chapter 4 (Character Properties) discusses case mapping in general and Chapter 3 (Conformance) discusses the default algorithm for case conversion.",
-        "suggest": "在 [Unicode 标准] 中，第 4 章 (字符属性) 通常讨论大小写映射，而第 3 章 (一致性) 讨论大小写转换的默认算法。",
+        "suggest": "在 [Unicode 标准][Unicode Standard] 中，第 4 章 (字符属性) 通常讨论大小写映射，而第 3 章 (一致性) 讨论大小写转换的默认算法。",
         "translate": ""
     },
     {
@@ -1881,7 +1881,7 @@
     },
     {
         "source": "A [`char`] is a [Unicode Scalar Value], which means that it is a [Code Point], but only ones within a certain range.",
-        "suggest": "[`char`] 是 [Unicode Scalar Value]，这意味着它是 [Code Point]，但仅在一定范围内。",
+        "suggest": "[`char`] 是 [Unicode 标量值][Unicode Scalar Value]，这意味着它是 [代码点][Code Point]，但仅在一定范围内。",
         "translate": ""
     },
     {
@@ -2286,7 +2286,7 @@
     },
     {
         "source": "**Symmetric**: if `A: PartialEq<B>` and `B: PartialEq<A>`, then **`a == b` implies `b == a`**; and",
-        "suggest": "**对称**: 如果 `A: PartialEq<B>` 和 `B: PartialEq<A>`，则 **a == b`意味着 'b == a`**; 和",
+        "suggest": "**对称**: 如果 `A: PartialEq<B>` 和 `B: PartialEq<A>`，则 **`a == b` 意味着 'b == a`**; 和",
         "translate": ""
     },
     {
@@ -2296,7 +2296,7 @@
     },
     {
         "source": "PartialEq<C>`, then **`a == b` and `b == c` implies `a == c`**.",
-        "suggest": "偏等式 <C>`，然后 **`a == b`，而 `b == c` 表示`a == c`**。",
+        "suggest": "PartialEq<C>`，然后 **`a == b`，并且 `b == c` 暗示了 `a == c`**。",
         "translate": ""
     },
     {
@@ -2601,7 +2601,7 @@
     },
     {
         "source": "Trait for types that form a [total order](https://en.wikipedia.org/wiki/Total_order).",
-        "suggest": "Trait 用于形成 [total order](https://en.wikipedia.org/wiki/Total_order) 的类型。",
+        "suggest": "Trait 用于形成 [总序](https://en.wikipedia.org/wiki/Total_order) 的类型。",
         "translate": ""
     },
     {
@@ -3916,7 +3916,7 @@
     },
     {
         "source": "See the [AArch64 Procedure Call Standard] for more details.",
-        "suggest": "有关更多详细信息，请参见 [AArch64 Procedure Call Standard]。",
+        "suggest": "有关更多详细信息，请参见 [AArch64 过程调用标准][AArch64 Procedure Call Standard]。",
         "translate": ""
     },
     {
@@ -4726,7 +4726,7 @@
     },
     {
         "source": "For more information on formatters, see [the module-level documentation][module].",
-        "suggest": "有关格式化程序的更多信息，请参见 [the module-level documentation][module]。",
+        "suggest": "有关格式化程序的更多信息，请参见 [模块级文档][module]。",
         "translate": ""
     },
     {
