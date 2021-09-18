@@ -2581,12 +2581,12 @@
     },
     {
         "source": "Alternatively adds and subtracts packed double-precision (64-bit) floating-point elements in `a` to/from packed elements in `b`.",
-        "suggest": "或者，将`a`中的包装双精度（64位）浮点元素与`b`中的包装元素进行加减。",
+        "suggest": "或者，将`a`中的包装双精度 (64位) 浮点元素与`b`中的包装元素进行加减。",
         "translate": ""
     },
     {
         "source": "Alternatively adds and subtracts packed single-precision (32-bit) floating-point elements in `a` to/from packed elements in `b`.",
-        "suggest": "或者，将`a`中的包装的单精度（32位）浮点元素与`b`中的包装的元素进行加减。",
+        "suggest": "或者，将`a`中的包装的单精度 (32位) 浮点元素与`b`中的包装的元素进行加减。",
         "translate": ""
     },
     {

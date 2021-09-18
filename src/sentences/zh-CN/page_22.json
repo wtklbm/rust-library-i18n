@@ -2801,7 +2801,7 @@
     },
     {
         "source": "If the intention is to yield the current time-slice you may want to use [`yield_now`] instead.",
-        "suggest": "如果要产生当前时间切片，则可能需要使用 [`yield_now`]。",
+        "suggest": "如果要产生当前时间片，则可能需要使用 [`yield_now`]。",
         "translate": ""
     },
     {

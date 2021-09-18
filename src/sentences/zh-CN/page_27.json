@@ -1331,7 +1331,7 @@
     },
     {
         "source": "Specify the ranges of values to be searched for [A-Za-z0-9].",
-        "suggest": "指定要搜索的 [A-Za-z0-9] 值的范围。",
+        "suggest": "指定要搜索的值的范围 [A-Za-z0-9]。",
         "translate": ""
     },
     {
@@ -1991,7 +1991,7 @@
     },
     {
         "source": "`i586`'s `xsave` and `xsaveopt` target feature intrinsics",
-        "suggest": "i586 的 `xsave` 和 `xsaveopt` 目标功能内部",
+        "suggest": "i586 的 `xsave` 和 `xsaveopt` 目标特征的内联函数",
         "translate": ""
     },
     {
@@ -2211,7 +2211,7 @@
     },
     {
         "source": "This method also requires the `cmpxchg16b` CPU feature to be available at runtime to work correctly.",
-        "suggest": "此方法还要求 `cmpxchg16b` CPU 功能在运行时可用，才能正常工作。",
+        "suggest": "此方法还要求 `cmpxchg16b` CPU 特征在运行时可用，才能正常工作。",
         "translate": ""
     },
     {
@@ -2351,7 +2351,7 @@
     },
     {
         "source": "`x86_64`'s `xsave` and `xsaveopt` target feature intrinsics",
-        "suggest": "x86_64 的 `xsave` 和 `xsaveopt` 目标功能内部",
+        "suggest": "x86_64 的 `xsave` 和 `xsaveopt` 目标特征的内联函数",
         "translate": ""
     },
     {
@@ -2376,7 +2376,7 @@
     },
     {
         "source": "On MIPS CI run-time feature detection always returns false due",
-        "suggest": "在 MIPS CI 上，运行时功能检测始终由于以下原因而返回 false",
+        "suggest": "在 MIPS CI 上，运行时特征检测始终由于以下原因而返回 false",
         "translate": ""
     },
     {
@@ -2966,7 +2966,7 @@
     },
     {
         "source": "These don't actually have a target feature unlike their brethren with the `x` inside the name which requires adx",
-        "suggest": "这些人实际上没有目标功能，与他们的弟兄不同，名称中的 `x` 要求 adx",
+        "suggest": "这些实际上没有目标特征，不像他们的兄弟，名字里面有 `x`, 需要 adx",
         "translate": ""
     },
     {
@@ -2976,7 +2976,7 @@
     },
     {
         "source": "this is needed by _xsave and probably some related intrinsics, but let's just skip it for now.",
-        "suggest": "_xsave 和一些相关的内联函数需要此功能，但现在我们就跳过它。",
+        "suggest": "这是 _xsave 和一些相关的内联函数所需要的，但现在让我们跳过它。",
         "translate": ""
     },
     {
@@ -2991,7 +2991,7 @@
     },
     {
         "source": "Fix mismatching feature names:",
-        "suggest": "修复不匹配的功能名称:",
+        "suggest": "修复不匹配的特征名称:",
         "translate": ""
     },
     {
@@ -3011,7 +3011,7 @@
     },
     {
         "source": "The XML lists them as avx512f/kncni, but we are solely gating them behind avx512f since we don't have a KNC feature yet.",
-        "suggest": "XML 将它们列为 avx512f/kncni，但是由于我们还没有 KNC 功能，因此我们将它们仅列在 avx512f 后面。",
+        "suggest": "XML 将它们列为 avx512f/kncni，但是由于我们还没有 KNC 特征，因此我们将它们仅列在 avx512f 后面。",
         "translate": ""
     },
     {
@@ -3116,17 +3116,17 @@
     },
     {
         "source": "Rust's standard library run-time CPU feature detection",
-        "suggest": "Rust 的标准库运行时 CPU 功能检测",
+        "suggest": "Rust 的标准库运行时 CPU 特征检测",
         "translate": ""
     },
     {
         "source": "The private `std::detect` module implements run-time feature detection in Rust's standard library.",
-        "suggest": "专用 `std::detect` 模块在 Rust 的标准库中实现了运行时功能检测。",
+        "suggest": "专用 `std::detect` 模块在 Rust 的标准库中实现了运行时特征检测。",
         "translate": ""
     },
     {
         "source": "This allows detecting whether the CPU the binary runs on supports certain features, like SIMD instructions.",
-        "suggest": "这样可以检测二进制文件所运行的 CPU 是否支持某些功能，例如 SIMD 指令。",
+        "suggest": "这样可以检测二进制文件所运行的 CPU 是否支持某些特征，例如 SIMD 指令。",
         "translate": ""
     },
     {
@@ -3141,12 +3141,12 @@
     },
     {
         "source": "Unstable features of `std::detect` are available on nightly Rust behind the `feature(stdsimd)` feature-gate.",
-        "suggest": "`std::detect` 的不稳定特性可在 `feature(stdsimd)` 功能门后的每晚 Rust 上获得。",
+        "suggest": "`std::detect` 的不稳定特征可在 `feature(stdsimd)` feature-gate 后的每晚 Rust 上获得。",
         "translate": ""
     },
     {
         "source": "If you need run-time feature detection in `#[no_std]` environments, Rust `core` library cannot help you.",
-        "suggest": "如果需要在 `#[no_std]` 环境中进行运行时功能检测，则 Rust `core` 库无法为您提供帮助。",
+        "suggest": "如果需要在 `#[no_std]` 环境中进行运行时特征检测，则 Rust `core` 库无法为您提供帮助。",
         "translate": ""
     },
     {
@@ -3156,7 +3156,7 @@
     },
     {
         "source": "You can then manually include `std_detect` as a dependency to get similar run-time feature detection support than the one offered by Rust's standard library.",
-        "suggest": "然后，您可以手动将 `std_detect` 作为依赖项包括在内，以获得与 Rust 标准库所提供的功能类似的运行时特征检测支持。",
+        "suggest": "然后，您可以手动包含 `std_detect` 作为依赖项，以获得与 Rust 标准库提供的类似的运行时特征检测支持。",
         "translate": ""
     },
     {
@@ -3171,12 +3171,12 @@
     },
     {
         "source": "When this is not the case, this feature allows other fallback methods to perform run-time feature detection.",
-        "suggest": "如果不是这种情况，则此功能允许其他后备方法执行运行时功能检测。",
+        "suggest": "如果不是这种情况，此特征允许其他回退方法执行运行时特征检测。",
         "translate": ""
     },
     {
         "source": "When this feature is disabled, `std_detect` assumes that [`getauxval`] is linked to the binary.",
-        "suggest": "禁用此功能后，`std_detect` 假定 [`getauxval`] 已链接到二进制文件。",
+        "suggest": "禁用此特征后，`std_detect` 假定 [`getauxval`] 已链接到二进制文件。",
         "translate": ""
     },
     {
@@ -3186,17 +3186,17 @@
     },
     {
         "source": "(enabled by default, requires `std`): Enable to perform run-time feature detection using file APIs (e.g. `/proc/cpuinfo`, etc.) if other more performant methods fail.",
-        "suggest": "(默认情况下启用，需要 `std`) : 如果其他性能更高的方法失败，则启用使用文件 API (例如 `/proc/cpuinfo` 等) 执行运行时功能检测。",
+        "suggest": "(默认情况下启用，需要 `std`) : 如果其他性能更高的方法失败，则启用使用文件 API (例如 `/proc/cpuinfo` 等) 执行运行时特征检测。",
         "translate": ""
     },
     {
         "source": "This feature requires `libstd` as a dependency, preventing the crate from working on applications in which `std` is not available.",
-        "suggest": "此功能需要 `libstd` 作为依赖项，从而阻止 crate 在无法使用 `std` 的应用程序上工作。",
+        "suggest": "此特征需要 `libstd` 作为依赖项，从而阻止 crate 在无法使用 `std` 的应用程序上工作。",
         "translate": ""
     },
     {
         "source": "All `x86`/`x86_64` targets are supported on all platforms by querying the `cpuid` instruction directly for the features supported by the hardware and the operating system.",
-        "suggest": "通过直接查询 `cpuid` 指令以获取硬件和操作系统支持的功能，所有平台都支持所有 `x86`/`x86_64` 目标。",
+        "suggest": "所有 `x86`/`x86_64` 目标在所有平台上都支持，通过直接查询 `cpuid` 指令获取硬件和操作系统支持的特征。",
         "translate": ""
     },
     {
@@ -3231,12 +3231,12 @@
     },
     {
         "source": "run-time features.",
-        "suggest": "运行时功能。",
+        "suggest": "运行时特征。",
         "translate": ""
     },
     {
         "source": "Checks if `aarch64` feature is enabled.",
-        "suggest": "检查是否启用了 `aarch64` 功能。",
+        "suggest": "检查是否启用了 `aarch64` 特征。",
         "translate": ""
     },
     {
@@ -3301,12 +3301,12 @@
     },
     {
         "source": "Run-time feature detection on ARM Aarch32.",
-        "suggest": "ARM Aarch32 上的运行时功能检测。",
+        "suggest": "ARM Aarch32 上的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Checks if `arm` feature is enabled.",
-        "suggest": "检查是否启用了 `arm` 功能。",
+        "suggest": "检查是否启用了 `arm` 特征。",
         "translate": ""
     },
     {
@@ -3316,12 +3316,12 @@
     },
     {
         "source": "Run-time feature detection on MIPS.",
-        "suggest": "MIPS 上的运行时功能检测。",
+        "suggest": "MIPS 上的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Checks if `mips` feature is enabled.",
-        "suggest": "检查是否启用了 `mips` 功能。",
+        "suggest": "检查是否启用了 `mips` 特征。",
         "translate": ""
     },
     {
@@ -3331,57 +3331,57 @@
     },
     {
         "source": "Run-time feature detection on MIPS64.",
-        "suggest": "MIPS64 上的运行时功能检测。",
+        "suggest": "MIPS64 上的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Checks if `mips64` feature is enabled.",
-        "suggest": "检查是否启用了 `mips64` 功能。",
+        "suggest": "检查是否启用了 `mips64` 特征。",
         "translate": ""
     },
     {
         "source": "Run-time feature detection on PowerPC.",
-        "suggest": "PowerPC 上的运行时功能检测。",
+        "suggest": "PowerPC 上的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Checks if `powerpc` feature is enabled.",
-        "suggest": "检查是否启用了 `powerpc` 功能。",
+        "suggest": "检查是否启用了 `powerpc` 特征。",
         "translate": ""
     },
     {
         "source": "Run-time feature detection on PowerPC64.",
-        "suggest": "PowerPC64 上的运行时功能检测。",
+        "suggest": "PowerPC64 上的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "This module implements minimal run-time feature detection for x86.",
-        "suggest": "该模块为 x86 实现了最小的运行时功能检测。",
+        "suggest": "该模块为 x86 实现了最小的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "The features are detected using the `detect_features` function below.",
-        "suggest": "使用下面的 `detect_features` 函数可以检测到这些功能。",
+        "suggest": "使用下面的 `detect_features` 函数可以检测到这些特征。",
         "translate": ""
     },
     {
         "source": "This function uses the CPUID instruction to read the feature flags from the CPU and encodes them in an `usize` where each bit position represents whether a feature is available (bit is set) or unavaiable (bit is cleared).",
-        "suggest": "该函数使用 CPUID 指令从 CPU 读取功能标志并将其编码在 `usize` 中，其中每个位的位置表示功能是可用的 (设置了位) 还是不可用的 (清除了位)。",
+        "suggest": "该函数使用 CPUID 指令从 CPU 读取特征标志并将其编码在 `usize` 中，其中每个位的位置表示特征是可用的 (设置了位) 还是不可用的 (清除了位)。",
         "translate": ""
     },
     {
         "source": "The enum `Feature` is used to map bit positions to feature names, and the the `__crate::detect::check_for!` macro is used to map string literals (e.g., \"avx\") to these bit positions (e.g., `Feature::avx`).",
-        "suggest": "枚举 `Feature` 用于 map 位位置以指定功能名称，而 `__crate::detect::check_for!` 宏用于 map 字符串字面量 (例如 \"avx\") 到这些位位置 (例如 `Feature::avx`)。",
+        "suggest": "枚举 `Feature` 用于 map 位位置以指定特征名称，而 `__crate::detect::check_for!` 宏用于 map 字符串字面量 (例如 \"avx\") 到这些位位置 (例如 `Feature::avx`)。",
         "translate": ""
     },
     {
         "source": "The run-time feature detection is performed by the `__crate::detect::check_for(Feature) -> bool` function.",
-        "suggest": "运行时功能检测由 `__crate::detect::check_for(Feature) -> bool` 函数执行。",
+        "suggest": "运行时特征检测由 `__crate::detect::check_for(Feature) -> bool` 函数执行。",
         "translate": ""
     },
     {
         "source": "On its first call, this functions queries the CPU for the available features and stores them in a global `AtomicUsize` variable.",
-        "suggest": "在第一次调用时，此函数向 CPU 查询可用功能，并将其存储在 `AtomicUsize` 变量中。",
+        "suggest": "在第一次调用时，此函数向 CPU 查询可用特征，并将其存储在 `AtomicUsize` 变量中。",
         "translate": ""
     },
     {
@@ -3391,17 +3391,17 @@
     },
     {
         "source": "A macro to test at *runtime* whether a CPU feature is available on x86/x86-64 platforms.",
-        "suggest": "一个在 *运行时* 测试 x86/x86-64 平台上是否具有 CPU 功能的宏。",
+        "suggest": "一个在 *运行时* 测试 x86/x86-64 平台上是否具有 CPU 特征的宏。",
         "translate": ""
     },
     {
         "source": "This macro is provided in the standard library and will detect at runtime whether the specified CPU feature is detected.",
-        "suggest": "标准库中提供了此宏，它将在运行时检测是否检测到指定的 CPU 功能。",
+        "suggest": "标准库中提供了此宏，它将在运行时检测是否检测到指定的 CPU 特征。",
         "translate": ""
     },
     {
         "source": "This does **not** resolve at compile time unless the specified feature is already enabled for the entire crate.",
-        "suggest": "除非在整个 crate 中启用了指定功能，否则在编译时不会解析。",
+        "suggest": "除非在整个 crate 中启用了指定特征，否则在编译时不会解析。",
         "translate": ""
     },
     {
@@ -3411,17 +3411,17 @@
     },
     {
         "source": "This macro only takes one argument which is a string literal of the feature being tested for.",
-        "suggest": "该宏仅使用一个参数，该参数是要测试的功能的字符串字面量。",
+        "suggest": "该宏仅使用一个参数，该参数是要测试的特征的字符串字面量。",
         "translate": ""
     },
     {
         "source": "The feature names supported are the lowercase versions of the ones defined by Intel in [their documentation][docs].",
-        "suggest": "支持的功能名称是 [their 文档][docs] 中 Intel 定义的功能的小写版本。",
+        "suggest": "支持的特征名称是 [their 文档][docs] 中 Intel 定义的特征的小写版本。",
         "translate": ""
     },
     {
         "source": "Supported arguments",
-        "suggest": "支持参数",
+        "suggest": "支持的参数",
         "translate": ""
     },
     {
@@ -3436,7 +3436,7 @@
     },
     {
         "source": "Instead testing for multiple features must be done through separate macro invocations for now.",
-        "suggest": "相反，针对多个功能的测试目前必须通过单独的宏调用来完成。",
+        "suggest": "相反，现在必须通过单独的宏调用来测试多个特征。",
         "translate": ""
     },
     {
@@ -3456,7 +3456,7 @@
     },
     {
         "source": "CLMUL (Carry-less Multiplication)",
-        "suggest": "CLMUL (无运载乘数)",
+        "suggest": "CLMUL (无进位乘法)",
         "translate": ""
     },
     {
@@ -3516,17 +3516,17 @@
     },
     {
         "source": "AVX-512 CD (Conflict Detection Instructions)",
-        "suggest": "AVX-512 CD (冲突检测说明)",
+        "suggest": "AVX-512 CD (冲突检测指令)",
         "translate": ""
     },
     {
         "source": "AVX-512 ER (Expo nential and Reciprocal Instructions)",
-        "suggest": "AVX-512 ER (指数和对等指令)",
+        "suggest": "AVX-512 ER (指数和倒数指令)",
         "translate": ""
     },
     {
         "source": "AVX-512 PF (Prefetch Instructions)",
-        "suggest": "AVX-512 PF (预取说明)",
+        "suggest": "AVX-512 PF (预取指令)",
         "translate": ""
     },
     {
@@ -3556,7 +3556,7 @@
     },
     {
         "source": "AVX-512 VPOPCNTDQ (Vector Population Count Doubleword and Quadword)",
-        "suggest": "AVX-512 VPOPCNTDQ (Vector 人口计数双字和四字)",
+        "suggest": "AVX-512 VPOPCNTDQ (Vector 总体计数双字和四字)",
         "translate": ""
     },
     {
@@ -3566,7 +3566,7 @@
     },
     {
         "source": "AVX-512 GFNI (Galois Field New Instruction)",
-        "suggest": "AVX-512 GFNI (加卢瓦现场新指令)",
+        "suggest": "AVX-512 GFNI (Galois Field 新指令)",
         "translate": ""
     },
     {
@@ -3591,7 +3591,7 @@
     },
     {
         "source": "AVX-512 BF16 (BFLOAT16 instructions)",
-        "suggest": "AVX-512 BF16 (BFLOAT16 说明)",
+        "suggest": "AVX-512 BF16 (BFLOAT16 指令)",
         "translate": ""
     },
     {
@@ -3621,22 +3621,22 @@
     },
     {
         "source": "ABM (Advanced Bit Manipulation) / LZCNT (Leading Zero Count)",
-        "suggest": "ABM (高级位处理) /LZCNT (领先零计数)",
+        "suggest": "ABM (高级位操作) /LZCNT (前导零计数)",
         "translate": ""
     },
     {
         "source": "TBM (Trailing Bit Manipulation)",
-        "suggest": "TBM (牵引钻头操纵)",
+        "suggest": "TBM (尾随位操作)",
         "translate": ""
     },
     {
         "source": "POPCNT (Population Count)",
-        "suggest": "POPCNT (人口数)",
+        "suggest": "POPCNT (Population 计数)",
         "translate": ""
     },
     {
         "source": "FXSR (Floating-point context fast save and restor)",
-        "suggest": "FXSR (浮点上下文快速保存和还原)",
+        "suggest": "FXSR (浮点上下文快速保存和恢复)",
         "translate": ""
     },
     {
@@ -3646,17 +3646,17 @@
     },
     {
         "source": "XSAVEOPT (Save Processor Extended States Optimized)",
-        "suggest": "XSAVEOPT (优化保存处理器扩展状态)",
+        "suggest": "XSAVEOPT (保存处理器扩展状态优化)",
         "translate": ""
     },
     {
         "source": "XSAVES (Save Processor Extended States Supervisor)",
-        "suggest": "XSAVES (保存处理器扩展状态主管)",
+        "suggest": "XSAVES (保存处理器扩展状态管理器)",
         "translate": ""
     },
     {
         "source": "XSAVEC (Save Processor Extended States Compacted)",
-        "suggest": "XSAVEC (包装的保存的处理器扩展状态)",
+        "suggest": "XSAVEC (保存处理器扩展状态压缩)",
         "translate": ""
     },
     {
@@ -3666,17 +3666,17 @@
     },
     {
         "source": "ADX, Intel ADX (Multi-Precision Add-Carry Instruction Extensions)",
-        "suggest": "ADX，Intel ADX (多精度加载指令扩展)",
+        "suggest": "ADX，Intel ADX (多精度加法进位指令扩展)",
         "translate": ""
     },
     {
         "source": "RTM, Intel (Restricted Transactional Memory)",
-        "suggest": "RTM，英特尔 (受限事务存储器)",
+        "suggest": "RTM，英特尔 (受限事务内存)",
         "translate": ""
     },
     {
         "source": "Bit manipulation utilities.",
-        "suggest": "钻头操纵实用工具。",
+        "suggest": "位操作实用程序。",
         "translate": ""
     },
     {
@@ -3686,7 +3686,7 @@
     },
     {
         "source": "Caches run-time feature detection so that it only needs to be computed once.",
-        "suggest": "缓存运行时功能检测，因此只需要计算一次即可。",
+        "suggest": "缓存运行时特征检测，以便只需要计算一次。",
         "translate": ""
     },
     {
@@ -3696,12 +3696,12 @@
     },
     {
         "source": "Unset the `bit of `x`.",
-        "suggest": "取消 `x` 的位。",
+        "suggest": "取消设置 `x` 的位。",
         "translate": ""
     },
     {
         "source": "Maximum number of features that can be cached.",
-        "suggest": "可以缓存的最大功能数。",
+        "suggest": "可以缓存的最大特征数。",
         "translate": ""
     },
     {
@@ -3711,7 +3711,7 @@
     },
     {
         "source": "the `debug_assert!` would catch that we do not add more Features than the one fitting our cache.",
-        "suggest": "`debug_assert!` 会发现我们添加的功能不超过适合我们缓存的功能。",
+        "suggest": "`debug_assert!` 会发现我们不会添加比适合我们缓存的特征更多的特征。",
         "translate": ""
     },
     {
@@ -3731,7 +3731,7 @@
     },
     {
         "source": "This global variable is a cache of the features supported by the CPU.",
-        "suggest": "该变量是 CPU 支持的功能的缓存。",
+        "suggest": "这个全局变量是 CPU 支持的特征缓存。",
         "translate": ""
     },
     {
@@ -3741,7 +3741,7 @@
     },
     {
         "source": "Feature cache with capacity for `size_of::<usize::MAX>() * 8 - 1` features.",
-        "suggest": "具有 `size_of::<usize::MAX>() * 8 - 1` 功能容量的功能缓存。",
+        "suggest": "具有 `size_of::<usize::MAX>() * 8 - 1` 容量的特征缓存。",
         "translate": ""
     },
     {
@@ -3756,7 +3756,7 @@
     },
     {
         "source": "That is, we only need \"modification order\", and not the full-blown \"happens before\".",
-        "suggest": "也就是说，我们只需要 \"modification order\"，而不需要成熟的 \"happens before\"。",
+        "suggest": "也就是说，我们只需要 \"modification order\"，而不需要完全 \"happens before\"。",
         "translate": ""
     },
     {
@@ -3781,7 +3781,7 @@
     },
     {
         "source": "We only have to detect features once, and it's fairly costly, so hint to LLVM that it should assume that cache hits are more common than misses (which is the point of caching).",
-        "suggest": "我们只需要检测一次功能，这是相当昂贵的，因此向 LLVM 暗示它应该假定缓存命中比未命中更为常见 (这是缓存的重点)。",
+        "suggest": "我们只需要检测一次特征，而且成本相当高，所以向 LLVM 提示它应该假设缓存命中比未命中更常见 (这是缓存的重点)。",
         "translate": ""
     },
     {
@@ -3806,7 +3806,7 @@
     },
     {
         "source": "On its first invocation, it detects the CPU features and caches them in the `CACHE` global variable as an `AtomicU64`.",
-        "suggest": "首次调用时，它将检测到 CPU 功能，并将其作为 `AtomicU64` 缓存在 `CACHE` 变量中。",
+        "suggest": "首次调用时，它将检测到 CPU 特征，并将其作为 `AtomicU64` 缓存在 `CACHE` 变量中。",
         "translate": ""
     },
     {
@@ -3816,12 +3816,12 @@
     },
     {
         "source": "If the bit is set, the feature is enabled, and otherwise it is disabled.",
-        "suggest": "如果该位置 1，则启用该功能，否则禁用该功能。",
+        "suggest": "如果该位置 1，则启用该特征，否则禁用该特征。",
         "translate": ""
     },
     {
         "source": "If the feature `std_detect_env_override` is enabled looks for the env variable `RUST_STD_DETECT_UNSTABLE` and uses its its content to disable Features that would had been otherwise detected.",
-        "suggest": "如果启用了功能 `std_detect_env_override`，则查找 env 变量 `RUST_STD_DETECT_UNSTABLE`，并使用其内容禁用本来可以检测到的功能。",
+        "suggest": "如果启用了特征 `std_detect_env_override`，则查找 env 变量 `RUST_STD_DETECT_UNSTABLE`，并使用其内容禁用本来可以检测到的特征。",
         "translate": ""
     },
     {
@@ -3886,22 +3886,22 @@
     },
     {
         "source": "Each function performs run-time feature detection for a single feature.",
-        "suggest": "每个函数都对单个功能执行运行时功能检测。",
+        "suggest": "每个函数都对单个特征执行运行时特征检测。",
         "translate": ""
     },
     {
         "source": "This allow us to use stability attributes on a per feature basis.",
-        "suggest": "这使我们可以基于每个功能使用稳定性属性。",
+        "suggest": "这使我们可以基于每个特征使用稳定性属性。",
         "translate": ""
     },
     {
         "source": "This module implements run-time feature detection.",
-        "suggest": "此模块实现运行时功能检测。",
+        "suggest": "此模块实现运行时特征检测。",
         "translate": ""
     },
     {
         "source": "The `is_{arch}_feature_detected!(\"feature-name\")` macros take the name of a feature as a string-literal, and return a boolean indicating whether the feature is enabled at run-time or not.",
-        "suggest": "`is_{arch}_feature_detected!(\"feature-name\")` 宏将功能名称命名为字符串 - 字面量，并返回一个布尔值，指示是否在运行时启用该功能。",
+        "suggest": "`is_{arch}_feature_detected!(\"feature-name\")` 宏将特征名称命名为字符串 - 字面量，并返回一个布尔值，指示是否在运行时启用该特征。",
         "translate": ""
     },
     {
@@ -3911,12 +3911,12 @@
     },
     {
         "source": "map the string-literal into an integer stored as a `Feature` enum,",
-        "suggest": "map 将字符串 - 字面量转换为存储为 `Feature` 枚举的整数，",
+        "suggest": "将字符串字面量映射为存储为 `Feature` 枚举的整数，",
         "translate": ""
     },
     {
         "source": "call a `os::check_for(x: Feature)` function that returns `true` if the feature is enabled.",
-        "suggest": "调用一个 `os::check_for(x: Feature)` 函数，如果启用了该功能，则返回 `true`。",
+        "suggest": "调用一个 `os::check_for(x: Feature)` 函数，如果启用了该特征，则返回 `true`。",
         "translate": ""
     },
     {
@@ -3926,12 +3926,12 @@
     },
     {
         "source": "The `check_for` functions are, in general, Operating System dependent.",
-        "suggest": "通常，`check_for` 函数取决于操作系统。",
+        "suggest": "通常，`check_for` 函数通常依赖于操作系统。",
         "translate": ""
     },
     {
         "source": "Most architectures do not allow user-space programs to query the feature bits due to security concerns (x86 is the big exception).",
-        "suggest": "由于安全方面的考虑，大多数体系结构都不允许 user-space 程序查询功能位 (x86 是个大例外)。",
+        "suggest": "由于安全方面的考虑，大多数体系结构都不允许 user-space 程序查询特征位 (x86 是个大例外)。",
         "translate": ""
     },
     {
@@ -3951,47 +3951,47 @@
     },
     {
         "source": "When running under miri all target-features that are not enabled at compile-time are reported as disabled at run-time.",
-        "suggest": "在 miri 下运行时，在编译时未启用的所有目标功能都将在运行时报告为已禁用。",
+        "suggest": "在 miri 下运行时，在编译时未启用的所有目标特征都将在运行时报告为已禁用。",
         "translate": ""
     },
     {
         "source": "For features for which `cfg(target_feature)` returns true, this run-time detection logic is never called.",
-        "suggest": "对于 `cfg(target_feature)` 返回 true 的功能，永远不会调用此运行时检测逻辑。",
+        "suggest": "对于 `cfg(target_feature)` 返回 true 的特征，永远不会调用此运行时检测逻辑。",
         "translate": ""
     },
     {
         "source": "On x86/x86_64 no OS specific functionality is required.",
-        "suggest": "在 x86/x86_64 上，不需要操作系统特定的功能。",
+        "suggest": "在 x86/x86_64 上，不需要特定于操作系统的功能。",
         "translate": ""
     },
     {
         "source": "Performs run-time feature detection.",
-        "suggest": "执行运行时功能检测。",
+        "suggest": "执行运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Returns an `Iterator<Item=(&'static str, bool)>` where `Item.0` is the feature name, and `Item.1` is a `bool` which is `true` if the feature is supported by the host and `false` otherwise.",
-        "suggest": "返回 `Iterator<Item=(&'static str, bool)>`，其中 `Item.0` 是功能名称，`Item.1` 是 `bool`，如果主机支持该功能，则 `true` 是 `true`，否则返回 `false`。",
+        "suggest": "返回 `Iterator<Item=(&'static str, bool)>`，其中 `Item.0` 是特征名称，`Item.1` 是 `bool`，如果主机支持该特征，则 `true` 是 `true`，否则返回 `false`。",
         "translate": ""
     },
     {
         "source": "Run-time feature detection for Aarch64 on any OS that emulates the mrs instruction.",
-        "suggest": "在任何模拟 mrs 指令的 OS 上 Aarch64 的运行时功能检测。",
+        "suggest": "在任何模拟 mrs 指令的 OS 上 Aarch64 的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "On FreeBSD >= 12.0, Linux >= 4.11 and other operating systems, it is possible to use privileged system registers from userspace to check CPU feature support.",
-        "suggest": "在 FreeBSD>= 12.0，Linux>= 4.11 和其他操作系统上，可以使用用户空间中的权限系统寄存器来检查 CPU 功能支持。",
+        "suggest": "在 FreeBSD>= 12.0，Linux>= 4.11 和其他操作系统上，可以使用用户空间中的权限系统寄存器来检查 CPU 特征支持。",
         "translate": ""
     },
     {
         "source": "system registers ID_AA64ISAR0_EL1, ID_AA64PFR0_EL1, ID_AA64ISAR1_EL1 have bits dedicated to features like AdvSIMD, CRC32, AES, atomics (LSE), etc.",
-        "suggest": "系统寄存器 ID_AA64ISAR0_EL1，ID_AA64PFR0_EL1，ID_AA64ISAR1_EL1 具有专用于 AdvSIMD，CRC32，AES，原子 (LSE) 等功能的位。",
+        "suggest": "系统寄存器 ID_AA64ISAR0_EL1，ID_AA64PFR0_EL1，ID_AA64ISAR1_EL1 具有专用于 AdvSIMD，CRC32，AES，原子 (LSE) 等特征的位。",
         "translate": ""
     },
     {
         "source": "Each part of the register indicates the level of support for a certain feature, e.g.",
-        "suggest": "寄存器的每个部分指示对某个功能的支持级别，例如",
+        "suggest": "寄存器的每个部分指示对某个特征的支持级别，例如",
         "translate": ""
     },
     {
@@ -4006,12 +4006,12 @@
     },
     {
         "source": "For proper support of [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb), the OS has to always report only the features supported by all cores, like [FreeBSD does](https://reviews.freebsd.org/D17137#393947).",
-        "suggest": "为了正确支持 [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb)，操作系统必须始终仅报告所有内核所支持的功能，例如 [FreeBSD does](https://reviews.freebsd.org/D17137#393947)。",
+        "suggest": "为了正确支持 [SoCs where different cores have different capabilities](https://medium.com/@jadr2ddude/a-big-little-problem-a-tale-of-big-little-gone-wrong-e7778ce744bb)，操作系统必须始终仅报告所有内核所支持的特征，例如 [FreeBSD does](https://reviews.freebsd.org/D17137#393947)。",
         "translate": ""
     },
     {
         "source": "Try to read the features from the system registers.",
-        "suggest": "尝试从系统寄存器中读取功能。",
+        "suggest": "尝试从系统寄存器中读取特征。",
         "translate": ""
     },
     {
@@ -4031,7 +4031,7 @@
     },
     {
         "source": "ID_AA64PFR0_EL1 - Processor Feature Register 0",
-        "suggest": "ID_AA64PFR0_EL1 - 处理器功能寄存器 0",
+        "suggest": "ID_AA64PFR0_EL1 - 处理器特征寄存器 0",
         "translate": ""
     },
     {
@@ -4051,17 +4051,17 @@
     },
     {
         "source": "Run-time feature detection for Aarch64 on FreeBSD.",
-        "suggest": "FreeBSD 上 Aarch64 的运行时功能检测。",
+        "suggest": "FreeBSD 上 Aarch64 的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Run-time feature detection for ARM on FreeBSD",
-        "suggest": "FreeBSD 上 ARM 的运行时功能检测",
+        "suggest": "FreeBSD 上 ARM 的运行时特征检测",
         "translate": ""
     },
     {
         "source": "Try to read the features from the auxiliary vector",
-        "suggest": "尝试从辅助 vector 读取特征",
+        "suggest": "尝试从辅助 vector 中读取特征",
         "translate": ""
     },
     {
@@ -4091,7 +4091,7 @@
     },
     {
         "source": "This should be interpreted as all the features being disabled.",
-        "suggest": "这应该解释为所有功能都被禁用。",
+        "suggest": "这应该解释为所有特征都被禁用。",
         "translate": ""
     },
     {
@@ -4121,7 +4121,7 @@
     },
     {
         "source": "Note that run-time feature detection is not invoked for features that can be detected at compile-time.",
-        "suggest": "请注意，对于可在编译时检测到的功能，不会调用运行时功能检测。",
+        "suggest": "请注意，对于可在编译时检测到的特征，不会调用运行时特征检测。",
         "translate": ""
     },
     {
@@ -4131,22 +4131,22 @@
     },
     {
         "source": "Run-time feature detection on FreeBSD",
-        "suggest": "FreeBSD 上的运行时功能检测",
+        "suggest": "FreeBSD 上的运行时特征检测",
         "translate": ""
     },
     {
         "source": "Run-time feature detection for PowerPC on FreeBSD.",
-        "suggest": "FreeBSD 上 PowerPC 的运行时功能检测。",
+        "suggest": "FreeBSD 上 PowerPC 的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Run-time feature detection for Aarch64 on Linux.",
-        "suggest": "Linux 上 Aarch64 的运行时功能检测。",
+        "suggest": "Linux 上 Aarch64 的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Try to read the features from the auxiliary vector, and if that fails, try to read them from /proc/cpuinfo.",
-        "suggest": "尝试从辅助 vector 读取功能，如果失败，请尝试从 /proc/cpuinfo 读取功能。",
+        "suggest": "尝试从辅助 vector 读取特征，如果失败，请尝试从 /proc/cpuinfo 读取特征。",
         "translate": ""
     },
     {
@@ -4176,17 +4176,17 @@
     },
     {
         "source": "This does not cover that yet.",
-        "suggest": "这还没有涵盖。",
+        "suggest": "这还没有涵盖那个。",
         "translate": ""
     },
     {
         "source": "Initializes the cache from the feature -bits.",
-        "suggest": "从功能 -bits 初始化缓存。",
+        "suggest": "从特征 -bits 初始化缓存。",
         "translate": ""
     },
     {
         "source": "The features are enabled approximately like in LLVM host feature detection:",
-        "suggest": "这些功能的启用大致类似于 LLVM 主机功能检测:",
+        "suggest": "这些特征的启用大致类似于 LLVM 主机特征检测:",
         "translate": ""
     },
     {
@@ -4196,7 +4196,7 @@
     },
     {
         "source": "Run-time feature detection for ARM on Linux.",
-        "suggest": "Linux 上 ARM 的运行时功能检测。",
+        "suggest": "Linux 上 ARM 的运行时特征检测。",
         "translate": ""
     },
     {
@@ -4216,7 +4216,7 @@
     },
     {
         "source": "If the `std_detect_dlsym_getauxval` cargo feature is enabled, this will use `getauxval` if its linked to the binary, and otherwise proceed to a fallback implementation.",
-        "suggest": "如果启用了 `std_detect_dlsym_getauxval` cargo 功能，则在链接到二进制文件时将使用 `getauxval`，否则将进行后备实现。",
+        "suggest": "如果启用了 `std_detect_dlsym_getauxval` cargo 特征，则在链接到二进制文件时将使用 `getauxval`，否则将进行后备实现。",
         "translate": ""
     },
     {
@@ -4226,7 +4226,7 @@
     },
     {
         "source": "Otherwise, if the `std_detect_file_io` cargo feature is enabled, it will try to read `/proc/self/auxv`.",
-        "suggest": "否则，如果启用了 `std_detect_file_io` cargo 功能，它将尝试读取 `/proc/self/auxv`。",
+        "suggest": "否则，如果启用了 `std_detect_file_io` cargo 特征，它将尝试读取 `/proc/self/auxv`。",
         "translate": ""
     },
     {
@@ -4236,7 +4236,7 @@
     },
     {
         "source": "Also note that if this function returns an error, cpuinfo still can (and will) be used to try to perform run-time feature detecton on some platforms.",
-        "suggest": "还要注意，如果此函数返回错误，则 cpuinfo 仍可以 (并且将) 用于在某些平台上尝试执行运行时功能检测。",
+        "suggest": "还要注意，如果此函数返回错误，则 cpuinfo 仍可以 (并且将) 用于在某些平台上尝试执行运行时特征检测。",
         "translate": ""
     },
     {
@@ -4371,12 +4371,12 @@
     },
     {
         "source": "Run-time feature detection for MIPS on Linux.",
-        "suggest": "Linux 上 MIPS 的运行时功能检测。",
+        "suggest": "Linux 上 MIPS 的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "Try to read the features from the auxiliary vector, and if that fails, try to read them from `/proc/cpuinfo`.",
-        "suggest": "尝试从辅助 vector 读取功能，如果失败，请尝试从 `/proc/cpuinfo` 读取功能。",
+        "suggest": "尝试从辅助 vector 读取特征，如果失败，请尝试从 `/proc/cpuinfo` 中读取它们。",
         "translate": ""
     },
     {
@@ -4386,12 +4386,12 @@
     },
     {
         "source": "Run-time feature detection on Linux",
-        "suggest": "Linux 上的运行时功能检测",
+        "suggest": "Linux 上的运行时特征检测",
         "translate": ""
     },
     {
         "source": "Run-time feature detection for PowerPC on Linux.",
-        "suggest": "Linux 上 PowerPC 的运行时功能检测。",
+        "suggest": "Linux 上 PowerPC 的运行时特征检测。",
         "translate": ""
     },
     {
@@ -4416,7 +4416,7 @@
     },
     {
         "source": "Run-time feature detection for Aarch64 on Windows.",
-        "suggest": "Windows 上 Aarch64 的运行时功能检测。",
+        "suggest": "Windows 上 Aarch64 的运行时特征检测。",
         "translate": ""
     },
     {
@@ -4436,7 +4436,7 @@
     },
     {
         "source": "Some features such Feature::fp may be supported on current CPU, but no way to detect it by OS API.",
-        "suggest": "当前的 CPU 可能支持某些功能，例如 Feature::fp，但无法通过 OS API 进行检测。",
+        "suggest": "当前的 CPU 可能支持某些特征，例如 Feature::fp，但无法通过 OS API 进行检测。",
         "translate": ""
     },
     {
@@ -4451,12 +4451,12 @@
     },
     {
         "source": "run-time feature detection is OS independent.",
-        "suggest": "运行时功能检测与操作系统无关。",
+        "suggest": "运行时特征检测与操作系统无关。",
         "translate": ""
     },
     {
         "source": "Run-time feature detection on x86 works by using the CPUID instruction.",
-        "suggest": "x86 上的运行时功能检测通过使用 CPUID 指令进行。",
+        "suggest": "x86 上的运行时特征检测通过使用 CPUID 指令进行。",
         "translate": ""
     },
     {
@@ -4471,7 +4471,7 @@
     },
     {
         "source": "If the x86 CPU does not support the CPUID instruction then it is too old to support any of the currently-detectable features.",
-        "suggest": "如果 x86 CPU 不支持 CPUID 指令，则它太旧了，无法支持任何当前可检测的功能。",
+        "suggest": "如果 x86 CPU 不支持 CPUID 指令，则它太旧了，无法支持任何当前可检测的特征。",
         "translate": ""
     },
     {
@@ -4501,7 +4501,7 @@
     },
     {
         "source": "Contains information about most x86 features.",
-        "suggest": "包含有关大多数 x86 功能的信息。",
+        "suggest": "包含有关大多数 x86 特征的信息。",
         "translate": ""
     },
     {
@@ -4526,7 +4526,7 @@
     },
     {
         "source": "EAX = 0x8000_0001, ECX=0: Queries \"Extended Processor Info and Feature",
-        "suggest": "EAX = 0x8000_0001，ECX=0: 查询扩展的处理器信息和功能",
+        "suggest": "EAX = 0x8000_0001，ECX=0: 查询扩展的处理器信息和特征",
         "translate": ""
     },
     {
@@ -4586,7 +4586,7 @@
     },
     {
         "source": "\"Software enables the XSAVE feature set by setting CR4.OSXSAVE[bit 18] to 1 (e.g., with the MOV to CR4 instruction).",
-        "suggest": "` 软件通过将 CR4.OSXSAVE [位 18] 设置为 1 (例如，使用 MOV 至 CR4 指令) 来启用 XSAVE 功能集。",
+        "suggest": "` 软件通过将 CR4.OSXSAVE [位 18] 设置为 1 (例如，使用 MOV 至 CR4 指令) 来启用 XSAVE 特征集。",
         "translate": ""
     },
     {
@@ -4626,7 +4626,7 @@
     },
     {
         "source": "On intel CPUs with popcnt, lzcnt implements the \"missing part\" of ABM, so we map both to the same internal feature.",
-        "suggest": "在具有 popcnt 的英特尔 CPU 上，lzcnt 实现了 ABM 的 \"missing part\"，因此我们 map 都具有相同的内部功能。",
+        "suggest": "在具有 popcnt 的英特尔 CPU 上，lzcnt 实现了 ABM 的 \"missing part\"，因此我们 map 都具有相同的内部特征。",
         "translate": ""
     },
     {
@@ -4641,7 +4641,7 @@
     },
     {
         "source": "For CPUID feature bits, Hygon Dhyana(family 18h) share the same definition with AMD family 17h.",
-        "suggest": "对于 CPUID 功能位，Hygon Dhyana(family 18h) 与 AMD 系列 17h 具有相同的定义。",
+        "suggest": "对于 CPUID 特征位，Hygon Dhyana(family 18h) 与 AMD 系列 17h 具有相同的定义。",
         "translate": ""
     },
     {
@@ -4656,17 +4656,17 @@
     },
     {
         "source": "These features are available on AMD arch CPUs:",
-        "suggest": "这些功能在 AMD arch CPU 上可用:",
+        "suggest": "这些特征在 AMD arch CPU 上可用:",
         "translate": ""
     },
     {
         "source": "Run-time feature detection for the Rust standard library.",
-        "suggest": "Rust 标准库的运行时功能检测。",
+        "suggest": "Rust 标准库的运行时特征检测。",
         "translate": ""
     },
     {
         "source": "To detect whether a feature is enabled in the system running the binary use one of the appropriate macro for the target:",
-        "suggest": "若要检测是否在运行二进制文件的系统中启用了功能，请为目标使用适当的宏之一:",
+        "suggest": "若要检测是否在运行二进制文件的系统中启用了特征，请为目标使用适当的宏之一:",
         "translate": ""
     },
     {
@@ -4711,7 +4711,7 @@
     },
     {
         "source": "return 0xff corresponding to the elements > 9, or 0x00 otherwise",
-        "suggest": "返回与元素 > 9 对应的 0xff，否则返回 0x00",
+        "suggest": "返回 0xff 对应于 > 9 的元素，否则返回 0x00",
         "translate": ""
     },
     {
@@ -4881,7 +4881,7 @@
     },
     {
         "source": "Test targets compiled with extra features.",
-        "suggest": "测试具有附加功能的目标。",
+        "suggest": "测试具有附加特征的目标。",
         "translate": ""
     },
     {
@@ -4906,7 +4906,7 @@
     },
     {
         "source": "run by `cargo test --doc` when the CPU supports the feature",
-        "suggest": "当 CPU 支持该功能时，由 `cargo test --doc` 运行",
+        "suggest": "当 CPU 支持该特征时，由 `cargo test --doc` 运行",
         "translate": ""
     },
     {
@@ -4936,7 +4936,7 @@
     },
     {
         "source": "Create a `worker` function that will only be run if the target feature",
-        "suggest": "创建一个 `worker` 函数，该函数仅在目标功能部件下运行",
+        "suggest": "创建一个 `worker` 函数，该函数仅在目标特征部件下运行",
         "translate": ""
     },
     {
@@ -4951,7 +4951,7 @@
     },
     {
         "source": "Feature specific intrinsics will work here!",
-        "suggest": "特定于功能的内联函数将在这里工作!",
+        "suggest": "特定于特征的内联函数将在这里工作!",
         "translate": ""
     },
     {

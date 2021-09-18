@@ -1536,7 +1536,7 @@
     },
     {
         "source": "If we instead pop these scores, they should come back in order.",
-        "suggest": "如果我们改为弹出这些乐谱，则应按顺序返回。",
+        "suggest": "如果我们改为弹出这些分数，它们应该按顺序返回。",
         "translate": ""
     },
     {
@@ -1556,7 +1556,7 @@
     },
     {
         "source": "If we pop these scores now, they should come back in the reverse order.",
-        "suggest": "如果我们现在弹出这些乐谱，它们应该以相反的顺序返回。",
+        "suggest": "如果我们现在弹出这些分数，它们应该以相反的顺序返回。",
         "translate": ""
     },
     {
@@ -3571,7 +3571,7 @@
     },
     {
         "source": "Returns the first entry in the map for in-place manipulation.",
-        "suggest": "返回 map 中的第一个条目以进行就地操纵。",
+        "suggest": "返回 map 中的第一个条目以进行就地操作。",
         "translate": ""
     },
     {

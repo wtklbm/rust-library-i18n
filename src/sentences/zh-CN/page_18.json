@@ -196,7 +196,7 @@
     },
     {
         "source": "A marker trait representing types where a shared reference is considered unwind safe.",
-        "suggest": "标记 trait 表示将 X 表示 unwind 安全的共享引用的类型。",
+        "suggest": "一种标记 trait，表示共享引用被认为是 unwind 安全的类型。",
         "translate": ""
     },
     {
@@ -941,7 +941,7 @@
     },
     {
         "source": "Cross-platform path manipulation.",
-        "suggest": "跨平台路径操纵。",
+        "suggest": "跨平台路径操作。",
         "translate": ""
     },
     {

@@ -2376,27 +2376,27 @@
     },
     {
         "source": "Round packed single-precision (32-bit) floating-point elements in a to the number of fraction bits specified by imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "将 a 中的包装的单精度 (32-bit) 浮点元素四舍五入到 imm8 指定的小数位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时从 src 复制元素)。",
+        "suggest": "将 a 中包装的单精度 (32-bit) 浮点元素四舍五入到 imm8 指定的小数位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Round packed single-precision (32-bit) floating-point elements in a to the number of fraction bits specified by imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "将 a 中的包装单精度 (32-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "将 a 中包装的单精度 (32-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Round packed double-precision (64-bit) floating-point elements in a to the number of fraction bits specified by imm8, and store the results in dst.",
-        "suggest": "将 x 中的包装的双精度 (64-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并将结果存储在 dst 中。",
+        "suggest": "将 a 中包装的双精度 (64-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Round packed double-precision (64-bit) floating-point elements in a to the number of fraction bits specified by imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "将 a 中的包装的双精度 (64-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "将 a 中包装的双精度 (64-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Round packed double-precision (64-bit) floating-point elements in a to the number of fraction bits specified by imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "将 x 中的包装双精度 (64-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "将 a 中包装的双精度 (64-bit) 浮点元素四舍五入到 imm8 指定的分数位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
         "source": "Rotate the bits in each packed 32-bit integer in a to the left by the number of bits specified in imm8, and store the results in dst.",
-        "suggest": "将 X 中每个包装的 32 位整数中的位向左旋转 imm8 中指定的位数，然后将结果存储在 dst 中。",
+        "suggest": "将 a 中每个包装的 32 位整数中的位向左旋转 imm8 中指定的位数，然后将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -3561,22 +3561,22 @@
     },
     {
         "source": "Rotate the bits in each packed 32-bit integer in a to the right by the number of bits specified in imm8, and store the results in dst.",
-        "suggest": "将 X 中每个包装的 32 位整数中的位向右旋转 imm8 中指定的位数，并将结果存储在 dst 中。",
+        "suggest": "将 a 中每个包装的 32 位整数中的位向右旋转 imm8 中指定的位数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Rotate the bits in each packed 32-bit integer in a to the right by the number of bits specified in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "将 X 中每个包装的 32 位整数中的位向右旋转 imm8 中指定的位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "将 a 中每个包装的 32 位整数中的位向右旋转 imm8 中指定的位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Rotate the bits in each packed 32-bit integer in a to the right by the number of bits specified in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "将 X 中每个包装的 32 位整数中的位向右旋转 imm8 中指定的位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "将 a 中每个包装的 32 位整数中的位向右旋转 imm8 中指定的位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Rotate the bits in each packed 64-bit integer in a to the left by the number of bits specified in imm8, and store the results in dst.",
-        "suggest": "将 X 中每个包装的 64 位整数中的位向左旋转 imm8 中指定的位数，然后将结果存储在 dst 中。",
+        "suggest": "将 a 中每个包装的 64 位整数中的位向左旋转 imm8 中指定的位数，然后将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -3591,17 +3591,17 @@
     },
     {
         "source": "Rotate the bits in each packed 64-bit integer in a to the right by the number of bits specified in imm8, and store the results in dst.",
-        "suggest": "将 X 中每个包装的 64 位整数中的位向右旋转 imm8 中指定的位数，然后将结果存储在 dst 中。",
+        "suggest": "将 a 中每个包装的 64 位整数中的位向右旋转 imm8 中指定的位数，然后将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Rotate the bits in each packed 64-bit integer in a to the right by the number of bits specified in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "将 X 中每个包装的 64 位整数中的位向右旋转 imm8 中指定的位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "将 a 中每个包装的 64 位整数中的位向右旋转 imm8 中指定的位数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Rotate the bits in each packed 64-bit integer in a to the right by the number of bits specified in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "将 X 中每个包装的 64 位整数中的位向右旋转 imm8 中指定的位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将清零)。",
+        "suggest": "将 a 中每个包装的 64 位整数中的位向右旋转 imm8 中指定的位数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将清零)。",
         "translate": ""
     },
     {
@@ -4461,7 +4461,7 @@
     },
     {
         "source": "Copy a to dst, then insert 128 bits (composed of 4 packed 32-bit integers) from b into dst at the location specified by imm8.",
-        "suggest": "将 a 复制到 dst，然后在 x00X 指定的位置将 d 的 128 位 (由 4 个包装的 32 位整数组成) 插入 dst。",
+        "suggest": "将 a 复制到 dst，然后将 b 中的 128 位(由 4 个压缩的 32 位整数组成) 插入到 dst 中 imm8 指定的位置。",
         "translate": ""
     },
     {
@@ -4496,22 +4496,22 @@
     },
     {
         "source": "Copy a to dst, then insert 128 bits (composed of 4 packed single-precision (32-bit) floating-point elements) from b into dst at the location specified by imm8.",
-        "suggest": "将 a 复制到 dst，然后在 x00X 指定的位置将 d 的 128 位 (由 4 个包装的单精度 (32-bit) 浮点元素组成) 插入 dst。",
+        "suggest": "将 a 复制到 dst，然后将 b 中的 128 位 (由 4 个压缩单精度 (32 位) 浮点元素组成) 插入到 dst 中 imm8 指定的位置。",
         "translate": ""
     },
     {
         "source": "Copy a to tmp, then insert 128 bits (composed of 4 packed single-precision (32-bit) floating-point elements) from b into tmp at the location specified by imm8.",
-        "suggest": "将 a 复制到 tmp，然后在 x00X 指定的位置将 128 位 (由 4 个包装的单精度 (32-bit) 浮点元素组成) 插入 tmp。",
+        "suggest": "将 a 复制到 tmp，然后将 b 中的 128 位 (由 4 个压缩单精度 (32 位) 浮点元素组成) 插入到 tmp 中 imm8 指定的位置。",
         "translate": ""
     },
     {
         "source": "Copy a to dst, then insert 256 bits (composed of 4 packed double-precision (64-bit) floating-point elements) from b into dst at the location specified by imm8.",
-        "suggest": "将 a 复制到 dst，然后在 x00X 指定的位置将 256 位 (由 4 个包装的双精度 (64-bit) 浮点元素组成) 插入 dst。",
+        "suggest": "将 a 复制到 dst，然后将 b 中的 256 位 (由 4 个压缩双精度 (64 位) 浮点元素组成) 插入到 dst 中 imm8 指定的位置。",
         "translate": ""
     },
     {
         "source": "Copy a to tmp, then insert 256 bits (composed of 4 packed double-precision (64-bit) floating-point elements) from b into tmp at the location specified by imm8.",
-        "suggest": "将 a 复制到 tmp，然后在 x00X 指定的位置将 256 位 (由 4 个包装的双精度 (64-bit) 浮点元素组成) 插入 tmp。",
+        "suggest": "将 a 复制到 tmp，然后将 b 中的 256 位 (由 4 个压缩双精度 (64 位) 浮点元素组成) 插入到 tmp 中 imm8 指定的位置。",
         "translate": ""
     },
     {

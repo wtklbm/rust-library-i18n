@@ -4146,7 +4146,7 @@
     },
     {
         "source": "An iterator that maps each element to an iterator, and yields the elements of the produced iterators.",
-        "suggest": "Z0 将每个元素映射到一个迭代器，并产生所生成的迭代器的元素的迭代器。",
+        "suggest": "将每个元素映射到迭代器的迭代器，并生成生成的迭代器的元素。",
         "translate": ""
     },
     {

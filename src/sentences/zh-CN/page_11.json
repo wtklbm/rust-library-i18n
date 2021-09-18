@@ -1866,7 +1866,7 @@
     },
     {
         "source": "It is only designed to be used by unsafe code that needs to manipulate the low-level details.",
-        "suggest": "它仅设计用于需要操纵脆弱细节的不安全代码。",
+        "suggest": "它仅设计用于需要操作低级细节的不安全代码。",
         "translate": ""
     },
     {
@@ -2181,7 +2181,7 @@
     },
     {
         "source": "Maps a `Result<T, E>` to `U` by applying a function to a contained [`Ok`] value, or a fallback function to a contained [`Err`] value.",
-        "suggest": "通过将函数应用于所包含的 [`Ok`] 值或将回退函数应用于所包含的 [`Err`] 值，将 `Result<T, E>` 转换为 `Result<T, E>` 到 Z01X。",
+        "suggest": "通过将函数应用于所包含的 [`Ok`] 值，或将回退函数应用于所包含的 [`Err`] 值，将 `Result<T, E>` 转换为 `Result<T, E>` 到 `U`。",
         "translate": ""
     },
     {

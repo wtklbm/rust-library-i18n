@@ -3026,7 +3026,7 @@
     },
     {
         "source": "Check if the first character in the slice is equal to c1 or c2.",
-        "suggest": "检查 xX 中的第一个字符是否等于 X01 或 c2。",
+        "suggest": "检查切片中的第一个字符是否等于 c1 或 c2。",
         "translate": ""
     },
     {
@@ -3766,12 +3766,12 @@
     },
     {
         "source": "This uses the trick where every digit is in [0x030, 0x39], and therefore can be parsed in 3 multiplications, much faster than the normal 8.",
-        "suggest": "这使用了每个数字都在 [0x030, 0x39] 中的技巧，因此可以在 3 次乘法中解析，比正常的 8 次要快得多。",
+        "suggest": "这使用了一个技巧，即每个数字都在 [0x030，0x39] 中，因此可以在 3 次乘法中解析，比正常的 8 次乘法要快得多。",
         "translate": ""
     },
     {
         "source": "This is based off the algorithm described in \"Fast numeric string to int\", available here:",
-        "suggest": "这是基于 \"Fast numeric string to int\" 中描述的算法，可在此处获得:",
+        "suggest": "这是基于 \"将数字字符串快速转换为 Int\" 中描述的算法，可在此处获得:",
         "translate": ""
     },
     {
@@ -4861,7 +4861,7 @@
     },
     {
         "source": "takes ownership of the contained value of an [`Option`], if any, replacing the [`Option`] with [`None`]",
-        "suggest": "获取 [`Option`] 的包含值的所有权（如果有），将 [`Option`] 替换为 [`None`]",
+        "suggest": "获取 [`Option`] 的包含值的所有权 (如果有)，将 [`Option`] 替换为 [`None`]",
         "translate": ""
     },
     {

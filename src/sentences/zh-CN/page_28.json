@@ -831,12 +831,12 @@
     },
     {
         "source": "The unfortunate side effect of not being able to do as many runs is automatically handled by the statistical analysis below (i.e., larger error bars).",
-        "suggest": "下面的统计分析自动处理了不能做那么多运行的不幸的副作用（即较大的错误条）。",
+        "suggest": "下面的统计分析自动处理了不能做那么多运行的不幸的副作用 (即较大的错误条)。",
         "translate": ""
     },
     {
         "source": "If we've run for 100ms and seem to have converged to a stable median.",
-        "suggest": "如果我们已经运行了 100 毫秒，并且似乎已经收敛到稳定的中值。",
+        "suggest": "如果我们已经运行了 100 毫秒，并且似乎已经收集到一个稳定的中间值。",
         "translate": ""
     },
     {
@@ -2261,7 +2261,7 @@
     },
     {
         "source": "Subnormals are 0x000m...m where m is the mantissa.",
-        "suggest": "次正规是 0x000m...m，其中 m 是尾数。",
+        "suggest": "Subnormals 是 0x000m...m，其中 m 是尾数。",
         "translate": ""
     },
     {

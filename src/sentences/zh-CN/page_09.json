@@ -421,7 +421,7 @@
     },
     {
         "source": "If the results of this method are only manipulated by the same architecture that produced them, then there is no portability concern.",
-        "suggest": "如果此方法的结果仅由产生它们的相同体系结构来操纵，则无需考虑可移植性。",
+        "suggest": "如果这个方法的结果只由产生它们的同一个架构操纵，那么就没有可移植性的问题。",
         "translate": ""
     },
     {

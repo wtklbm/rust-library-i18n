@@ -3646,7 +3646,7 @@
     },
     {
         "source": "Each iteration gets one unit in the last place closer, which of course takes terribly long to converge if `z0` is even mildly off.",
-        "suggest": "每次迭代都会在最后一个位置获得一个单元，如果 `z0` 稍微关闭，则收敛当然会花费非常长的时间。",
+        "suggest": "每次迭代都会在最后一个位置获得一个单元，如果 `z0` 稍有偏差，则收集当然会花费非常长的时间。",
         "translate": ""
     },
     {

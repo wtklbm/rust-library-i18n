@@ -1481,7 +1481,7 @@
     },
     {
         "source": "is described in [Unicode Standard Annex #29 (Unicode Text Segmentation)][uax29] and specified in the [Unicode Character Database][ucd] [`DerivedCoreProperties.txt`].",
-        "suggest": "在 [Unicode 标准附件 #29（Unicode 文本分割）][uax29] 中进行了说明，并在 [Unicode 字符数据库][ucd] [`DerivedCoreProperties.txt`] 中进行了指定。",
+        "suggest": "在 [Unicode 标准附件 #29 (Unicode 文本分割)][uax29] 中进行了说明，并在 [Unicode 字符数据库][ucd] [`DerivedCoreProperties.txt`] 中进行了指定。",
         "translate": ""
     },
     {

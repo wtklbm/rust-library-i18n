@@ -1021,12 +1021,12 @@
     },
     {
         "source": "Reduce the packed single-precision (32-bit) floating-point elements in a by minimum.",
-        "suggest": "将一个包装的单精度（32位）浮点元素减少到最小。",
+        "suggest": "将一个包装的单精度 (32位) 浮点元素减少到最小。",
         "translate": ""
     },
     {
         "source": "Reduce the packed double-precision (64-bit) floating-point elements in a by minimum.",
-        "suggest": "将一个包装的双精度（64位）浮点元素减少到最小。",
+        "suggest": "将一个包装的双精度 (64位) 浮点元素减少到最小。",
         "translate": ""
     },
     {

@@ -2081,7 +2081,7 @@
     },
     {
         "source": "An order is a total order if it is (for all `a`, `b` and `c`):",
-        "suggest": "如果一个顺序是（对于所有的`a`, `b` 和 `c`），那么它就是一个总体顺序",
+        "suggest": "如果一个顺序是 (对于所有的`a`, `b` 和 `c`)，那么它就是一个总体顺序",
         "translate": ""
     },
     {

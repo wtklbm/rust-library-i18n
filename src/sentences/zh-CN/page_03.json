@@ -296,7 +296,7 @@
     },
     {
         "source": "Due to implementation details, the returned value can be off by 1 in either direction when other threads are manipulating any `Arc`s or `Weak`s pointing to the same allocation.",
-        "suggest": "由于实现细节，当其他线程操纵指向同一分配的任何 `Arc` 或 `Weak` 时，返回的值可以在任一方向上都减 1。",
+        "suggest": "由于实现细节，当其他线程正在操作任何指向相同分配的 `Arc` 或 `Weak` 时，返回值可以在任一方向上关闭 1。",
         "translate": ""
     },
     {
@@ -1306,7 +1306,7 @@
     },
     {
         "source": "It would make it more difficult for unsafe code to correctly manipulate a `Vec`.",
-        "suggest": "对于不安全的代码，正确地操纵 `Vec` 会更加困难。",
+        "suggest": "这将使不安全的代码更难以正确操作 `Vec`。",
         "translate": ""
     },
     {
