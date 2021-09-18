@@ -86,7 +86,7 @@
     },
     {
         "source": "This function takes a string slice and emits it to the internal buffer after applying the relevant formatting flags specified.",
-        "suggest": "应用指定的相关格式设置标志后，此函数将获取一个字符串片段并将其发送到内部缓冲区。",
+        "suggest": "应用指定的相关格式设置标志后，此函数将获取一个字符串切片并将其发送到内部缓冲区。",
         "translate": ""
     },
     {

@@ -3511,7 +3511,7 @@
     },
     {
         "source": "Converts a slice of bytes to a string, including invalid characters.",
-        "suggest": "将字节的片段转换为字符串，包括无效字符。",
+        "suggest": "将字节切片转换为字符串，包括无效字符。",
         "translate": ""
     },
     {
@@ -3691,7 +3691,7 @@
     },
     {
         "source": "Appends a given string slice onto the end of this `String`.",
-        "suggest": "将给定的字符串片段附加到此 `String` 的末尾。",
+        "suggest": "将给定的字符串切片附加到此 `String` 的末尾。",
         "translate": ""
     },
     {
@@ -4026,7 +4026,7 @@
     },
     {
         "source": "Returns a slice of [`u8`]s bytes that were attempted to convert to a `String`.",
-        "suggest": "返回试图转换为 `String` 的 [u8] 个字节的片段。",
+        "suggest": "返回试图转换为 `String` 的 [u8] 个字节切片。",
         "translate": ""
     },
     {

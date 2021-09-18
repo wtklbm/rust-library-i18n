@@ -1976,7 +1976,7 @@
     },
     {
         "source": "Converts a slice of bytes to a string slice.",
-        "suggest": "将字节的片段转换为字符串片段。",
+        "suggest": "将字节切片转换为字符串切片。",
         "translate": ""
     },
     {
@@ -2031,7 +2031,7 @@
     },
     {
         "source": "Converts a slice of bytes to a string slice without checking that the string contains valid UTF-8.",
-        "suggest": "将字节的片段转换为字符串片段，而无需检查字符串是否包含有效的 UTF-8。",
+        "suggest": "将字节切片转换为字符串切片，而无需检查字符串是否包含有效的 UTF-8。",
         "translate": ""
     },
     {
@@ -2056,7 +2056,7 @@
     },
     {
         "source": "Converts a slice of bytes to a string slice without checking that the string contains valid UTF-8;",
-        "suggest": "将字节的片段转换为字符串片段，而无需检查字符串是否包含有效的 UTF-8;",
+        "suggest": "将字节切片转换为字符串切片，而无需检查字符串是否包含有效的 UTF-8;",
         "translate": ""
     },
     {
@@ -2436,7 +2436,7 @@
     },
     {
         "source": "An iterator over the substrings of a string, terminated by a substring matching to a predicate function Unlike `Split`, it contains the matched part as a terminator of the subslice.",
-        "suggest": "字符串子字符串上的迭代器，由与谓词函数匹配的子字符串终止，与 `Split` 不同，它包含匹配的部分作为子片段的终止符。",
+        "suggest": "字符串子字符串上的迭代器，由与谓词函数匹配的子字符串终止，与 `Split` 不同，它包含匹配的部分作为子切片的终止符。",
         "translate": ""
     },
     {
@@ -2691,7 +2691,7 @@
     },
     {
         "source": "Converts a mutable string slice to a mutable byte slice.",
-        "suggest": "将可变字符串片段转换为可变字节片段。",
+        "suggest": "将可变字符串切片转换为可变字节切片。",
         "translate": ""
     },
     {
@@ -2926,7 +2926,7 @@
     },
     {
         "source": "As a string slice consists of valid UTF-8, we can iterate through a string slice by [`char`].",
-        "suggest": "由于字符串片段由有效的 UTF-8 组成，因此我们可以通过 [`char`] 遍历字符串片段。",
+        "suggest": "由于字符串切片由有效的 UTF-8 组成，因此我们可以通过 [`char`] 遍历字符串切片。",
         "translate": ""
     },
     {
@@ -2981,7 +2981,7 @@
     },
     {
         "source": "Splits a string slice by whitespace.",
-        "suggest": "用空格分割字符串片段。",
+        "suggest": "用空格分割字符串切片。",
         "translate": ""
     },
     {
@@ -3006,7 +3006,7 @@
     },
     {
         "source": "Splits a string slice by ASCII whitespace.",
-        "suggest": "用 ASCII 空格分割字符串片段。",
+        "suggest": "用 ASCII 空格分割字符串切片。",
         "translate": ""
     },
     {
@@ -3081,7 +3081,7 @@
     },
     {
         "source": "Returns the byte index of the first character of this string slice that matches the pattern.",
-        "suggest": "返回此字符串片段中与模式匹配的第一个字符的字节索引。",
+        "suggest": "返回此字符串切片中与模式匹配的第一个字符的字节索引。",
         "translate": ""
     },
     {
@@ -3106,7 +3106,7 @@
     },
     {
         "source": "Returns the byte index for the first character of the rightmost match of the pattern in this string slice.",
-        "suggest": "返回此字符串片段中模式最右边匹配的第一个字符的字节索引。",
+        "suggest": "返回此字符串切片中模式最右边匹配的第一个字符的字节索引。",
         "translate": ""
     },
     {
@@ -3116,7 +3116,7 @@
     },
     {
         "source": "An iterator over substrings of this string slice, separated by characters matched by a pattern.",
-        "suggest": "在此字符串片段的子字符串上进行迭代的迭代器，该子字符串由模式匹配的字符分隔。",
+        "suggest": "在此字符串切片的子字符串上进行迭代的迭代器，该子字符串由模式匹配的字符分隔。",
         "translate": ""
     },
     {
@@ -3256,7 +3256,7 @@
     },
     {
         "source": "An iterator over substrings of the given string slice, separated by a pattern, restricted to returning at most `n` items.",
-        "suggest": "给定字符串片段的子字符串上的迭代器 (由模式分隔)，仅限于返回最多 `n` 项。",
+        "suggest": "给定字符串切片的子字符串上的迭代器 (由模式分隔)，仅限于返回最多 `n` 项。",
         "translate": ""
     },
     {
@@ -3391,7 +3391,7 @@
     },
     {
         "source": "Returns a string slice with all prefixes and suffixes that match a pattern repeatedly removed.",
-        "suggest": "返回具有与重复删除的模式匹配的所有前缀和后缀的字符串片段。",
+        "suggest": "返回具有与重复删除的模式匹配的所有前缀和后缀的字符串切片。",
         "translate": ""
     },
     {
@@ -4616,7 +4616,7 @@
     },
     {
         "source": "Returns a slice of the whole string, i.e., returns `&self` or `&mut self`.",
-        "suggest": "返回整个字符串的片段，即返回 `&self` 或 `&mut self`。",
+        "suggest": "返回整个字符串的切片，即返回 `&self` 或 `&mut self`。",
         "translate": ""
     },
     {
@@ -4656,7 +4656,7 @@
     },
     {
         "source": "Returns a slice of the given string from the byte range [`begin`, `end`).",
-        "suggest": "从字节范围 [`begin，`end`) 返回给定字符串的片段。",
+        "suggest": "从字节范围 [`begin，`end`) 返回给定字符串的切片。",
         "translate": ""
     },
     {
@@ -4706,7 +4706,7 @@
     },
     {
         "source": "Returns a slice of the given string from the byte range [`0`, `end`).",
-        "suggest": "从字节范围 [`0`，`end`) 返回给定字符串的片段。",
+        "suggest": "从字节范围 [`0`，`end`) 返回给定字符串的切片。",
         "translate": ""
     },
     {
@@ -4731,7 +4731,7 @@
     },
     {
         "source": "Returns a slice of the given string from the byte range [`begin`, `len`).",
-        "suggest": "从字节范围 [`begin，`len`) 返回给定字符串的片段。",
+        "suggest": "从字节范围 [`begin，`len`) 返回给定字符串的切片。",
         "translate": ""
     },
     {
@@ -4766,7 +4766,7 @@
     },
     {
         "source": "Returns a slice of the given string from the byte range [`begin`, `end`].",
-        "suggest": "从字节范围 [`begin`, `end`] 返回给定字符串的片段。",
+        "suggest": "从字节范围 [`begin`, `end`] 返回给定字符串的切片。",
         "translate": ""
     },
     {
@@ -4796,7 +4796,7 @@
     },
     {
         "source": "Returns a slice of the given string from the byte range [0, `end`].",
-        "suggest": "从字节范围 [0, `end`] 返回给定字符串的片段。",
+        "suggest": "从字节范围 [0, `end`] 返回给定字符串的切片。",
         "translate": ""
     },
     {

@@ -1461,7 +1461,7 @@
     },
     {
         "source": "Returns a slice of the given string for the byte range [`begin`..`end`).",
-        "suggest": "返回给定字符串在字节范围 [`begin ...`end`) 中的片段。",
+        "suggest": "返回给定字符串在字节范围 [`begin ...`end`) 中的切片。",
         "translate": ""
     },
     {
@@ -1476,7 +1476,7 @@
     },
     {
         "source": "Returns a slice of the given string from byte `begin` to its end.",
-        "suggest": "返回给定字符串从字节 `begin` 到结尾的片段。",
+        "suggest": "返回给定字符串从字节 `begin` 到结尾的切片。",
         "translate": ""
     },
     {
@@ -1486,7 +1486,7 @@
     },
     {
         "source": "Returns a slice of the given string from its beginning to byte `end`.",
-        "suggest": "返回给定字符串从其开头到字节 `end` 的片段。",
+        "suggest": "返回给定字符串从其开头到字节 `end` 的切片。",
         "translate": ""
     },
     {

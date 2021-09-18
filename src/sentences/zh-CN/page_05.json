@@ -1386,7 +1386,7 @@
     },
     {
         "source": "Encodes this character as UTF-8 into the provided byte buffer, and then returns the subslice of the buffer that contains the encoded character.",
-        "suggest": "将此字符编码为 UTF-8 到提供的字节缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "suggest": "将此字符编码为 UTF-8 到提供的字节缓冲区中，然后返回包含编码字符的缓冲区的子切片。",
         "translate": ""
     },
     {
@@ -1416,7 +1416,7 @@
     },
     {
         "source": "Encodes this character as UTF-16 into the provided `u16` buffer, and then returns the subslice of the buffer that contains the encoded character.",
-        "suggest": "将此字符编码为 UTF-16 到提供的 `u16` 缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "suggest": "将此字符编码为 UTF-16 到提供的 `u16` 缓冲区中，然后返回包含编码字符的缓冲区的子切片。",
         "translate": ""
     },
     {
@@ -1796,7 +1796,7 @@
     },
     {
         "source": "Encodes a raw u32 value as UTF-8 into the provided byte buffer, and then returns the subslice of the buffer that contains the encoded character.",
-        "suggest": "将原始 u32 值编码为 UTF-8 到提供的字节缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "suggest": "将原始 u32 值编码为 UTF-8 到提供的字节缓冲区中，然后返回包含编码字符的缓冲区的子切片。",
         "translate": ""
     },
     {
@@ -1811,7 +1811,7 @@
     },
     {
         "source": "Encodes a raw u32 value as UTF-16 into the provided `u16` buffer, and then returns the subslice of the buffer that contains the encoded character.",
-        "suggest": "将原始 u32 值编码为 UTF-16 到提供的 `u16` 缓冲区中，然后返回包含编码字符的缓冲区的子片段。",
+        "suggest": "将原始 u32 值编码为 UTF-16 到提供的 `u16` 缓冲区中，然后返回包含编码字符的缓冲区的子切片。",
         "translate": ""
     },
     {
@@ -4691,7 +4691,7 @@
     },
     {
         "source": "Dynamic arguments for interpolation, to be interleaved with string pieces.",
-        "suggest": "用于插值的动态参数，与字符串片段交织。",
+        "suggest": "用于插值的动态参数，与字符串切片交织。",
         "translate": ""
     },
     {
@@ -4961,7 +4961,7 @@
     },
     {
         "source": "There can be only one trailing string piece left.",
-        "suggest": "只能剩下一个尾随的字符串片段。",
+        "suggest": "只能剩下一个尾随的字符串切片。",
         "translate": ""
     },
     {

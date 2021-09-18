@@ -2491,12 +2491,12 @@
     },
     {
         "source": "Converts this slice to its ASCII upper case equivalent in-place.",
-        "suggest": "将该片段原位转换为其 ASCII 大写形式。",
+        "suggest": "将该切片原位转换为其 ASCII 大写形式。",
         "translate": ""
     },
     {
         "source": "Converts this slice to its ASCII lower case equivalent in-place.",
-        "suggest": "将该片段原位转换为其 ASCII 小写等效项。",
+        "suggest": "将该切片原位转换为其 ASCII 小写等效项。",
         "translate": ""
     },
     {
@@ -3116,7 +3116,7 @@
     },
     {
         "source": "Also note that the caller also guarantees that we're never called with the same index again, and that no other methods that will access this subslice are called, so it is valid for the returned reference to be mutable in the case of",
-        "suggest": "还要注意，调用者还保证不会再使用相同的索引来调用我们，并且不会调用将访问此子片段的其他方法，因此对于返回的引用，在以下情况下是可变的是有效的",
+        "suggest": "还要注意，调用者还保证不会再使用相同的索引来调用我们，并且不会调用将访问此子切片的其他方法，因此对于返回的引用，在以下情况下是可变的是有效的",
         "translate": ""
     },
     {
@@ -3376,7 +3376,7 @@
     },
     {
         "source": "An iterator over the mutable subslices of the vector which are separated by elements that match `pred`.",
-        "suggest": "vector 的可变子片段上的迭代器，该子片段由与 `pred` 匹配的元素分隔。",
+        "suggest": "vector 的可变子切片上的迭代器，该子切片由与 `pred` 匹配的元素分隔。",
         "translate": ""
     },
     {
@@ -3431,7 +3431,7 @@
     },
     {
         "source": "An private iterator over subslices separated by elements that match a predicate function, splitting at most a fixed number of times.",
-        "suggest": "在由与谓词函数匹配的元素分隔的子片段上的私有迭代器，最多分裂固定次数。",
+        "suggest": "在由与谓词函数匹配的元素分隔的子切片上的私有迭代器，最多分裂固定次数。",
         "translate": ""
     },
     {
@@ -3521,7 +3521,7 @@
     },
     {
         "source": "Also note that the caller also guarantees that we're never called with the same index again, and that no other methods that will access this subslice are called, so it is valid for the returned slice to be mutable.",
-        "suggest": "还要注意，调用者还保证不会再使用相同的索引来调用我们，并且不会调用将访问此子片段的其他方法，因此对于返回的切片可变是有效的。",
+        "suggest": "还要注意，调用者还保证不会再使用相同的索引来调用我们，并且不会调用将访问此子切片的其他方法，因此对于返回的切片可变是有效的。",
         "translate": ""
     },
     {
@@ -4691,7 +4691,7 @@
     },
     {
         "source": "Returns an iterator over mutable subslices separated by elements that match `pred`.",
-        "suggest": "返回由匹配 `pred` 的元素分隔的可变子片段上的迭代器。",
+        "suggest": "返回由匹配 `pred` 的元素分隔的可变子切片上的迭代器。",
         "translate": ""
     },
     {

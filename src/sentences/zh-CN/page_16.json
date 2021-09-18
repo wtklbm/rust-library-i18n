@@ -1796,7 +1796,7 @@
     },
     {
         "source": "Like [`write`], except that it writes from a slice of buffers.",
-        "suggest": "类似于 [`write`]，不同之处在于它是从缓冲区片段中写入数据的。",
+        "suggest": "类似于 [`write`]，不同之处在于它是从缓冲区切片中写入数据的。",
         "translate": ""
     },
     {

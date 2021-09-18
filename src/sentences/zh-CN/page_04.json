@@ -4621,7 +4621,7 @@
     },
     {
         "source": "It certainly can provide a reference to a string slice via its contained owned string.",
-        "suggest": "它当然可以通过其包含的拥有的字符串为字符串片段提供引用。",
+        "suggest": "它当然可以通过其包含的拥有的字符串为字符串切片提供引用。",
         "translate": ""
     },
     {

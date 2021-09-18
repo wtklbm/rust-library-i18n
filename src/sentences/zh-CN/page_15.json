@@ -451,7 +451,7 @@
     },
     {
         "source": "Extracting a slice of the whole C string",
-        "suggest": "提取整个 C 字符串的片段",
+        "suggest": "提取整个 C 字符串的切片",
         "translate": ""
     },
     {
@@ -646,7 +646,7 @@
     },
     {
         "source": "Returns a slice of [`u8`]s bytes that were attempted to convert to a [`CString`].",
-        "suggest": "返回试图转换为 [`CString`] 的 [u8] 个字节的片段。",
+        "suggest": "返回试图转换为 [`CString`] 的 [u8] 个字节的切片。",
         "translate": ""
     },
     {

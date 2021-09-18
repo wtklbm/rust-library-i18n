@@ -991,7 +991,7 @@
     },
     {
         "source": "a UTF-8 string slice, is a primitive type, and the standard library defines many methods for it.",
-        "suggest": "UTF-8 字符串片段是一种原始类型，标准库为它定义了许多方法。",
+        "suggest": "UTF-8 字符串切片是一种原始类型，标准库为它定义了许多方法。",
         "translate": ""
     },
     {
