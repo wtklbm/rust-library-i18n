@@ -603,5 +603,85 @@
         "source": "Use [`symlink_file`] for other files.",
         "suggest": "对其他文件使用 [`symlink_file`]。",
         "translate": ""
+    },
+    {
+        "source": "Use `panic_str` instead of `panic_display::<&str>` for non_fmt_panic lint.",
+        "suggest": "对于 non_fmt_panic lint，使用 `panic_str` 而不是 `panic_display::<&str>`。",
+        "translate": ""
+    },
+    {
+        "source": "Special-case the single-argument case for const_panic.",
+        "suggest": "特殊情况下 const_panic 的单个参数情况。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`TcpListener::into_incoming`] method.",
+        "suggest": "这个 `struct` 是由 [`TcpListener::into_incoming`] 方法创建的。",
+        "translate": ""
+    },
+    {
+        "source": "Turn this into an iterator over the connections being received on this listener.",
+        "suggest": "在此侦听器上接收到的连接上将其转换为迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "Change the owner and group of the specified path.",
+        "suggest": "更改指定路径的所有者和组。",
+        "translate": ""
+    },
+    {
+        "source": "Specifying either the uid or gid as `None` will leave it unchanged.",
+        "suggest": "将 uid 或 gid 指定为 `None` 将保持不变。",
+        "translate": ""
+    },
+    {
+        "source": "Changing the owner typically requires privileges, such as root or a specific capability.",
+        "suggest": "更改所有者通常需要特权，例如 root 或特定功能。",
+        "translate": ""
+    },
+    {
+        "source": "Changing the group typically requires either being the owner and a member of the group, or having privileges.",
+        "suggest": "更改组通常需要成为组的所有者和成员，或者具有特权。",
+        "translate": ""
+    },
+    {
+        "source": "If called on a symbolic link, this will change the owner and group of the link target.",
+        "suggest": "如果在符号链接上调用，这将更改链接目标的所有者和组。",
+        "translate": ""
+    },
+    {
+        "source": "To change the owner and group of the link itself, see [`lchown`].",
+        "suggest": "要更改链接本身的所有者和组，请参见 [`lchown`]。",
+        "translate": ""
+    },
+    {
+        "source": "Change the owner and group of the file referenced by the specified open file descriptor.",
+        "suggest": "更改指定打开文件描述符引用的文件的所有者和组。",
+        "translate": ""
+    },
+    {
+        "source": "For semantics and required privileges, see [`chown`].",
+        "suggest": "有关语义和所需权限，请参见 [`chown`]。",
+        "translate": ""
+    },
+    {
+        "source": "Change the owner and group of the specified path, without dereferencing symbolic links.",
+        "suggest": "更改指定路径的所有者和组，无需解引用符号链接。",
+        "translate": ""
+    },
+    {
+        "source": "Identical to [`chown`], except that if called on a symbolic link, this will change the owner and group of the link itself rather than the owner and group of the link target.",
+        "suggest": "与 [`chown`] 相同，除了如果在符号链接上调用，这将更改链接本身的所有者和组，而不是链接目标的所有者和组。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `poly64x1_t` vectors.",
+        "suggest": "包含四个 `poly64x1_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "ARM-specific type containing four `poly64x2_t` vectors.",
+        "suggest": "包含四个 `poly64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
     }
 ]
