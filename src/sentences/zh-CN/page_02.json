@@ -3181,7 +3181,7 @@
     },
     {
         "source": "You can append a [`char`] to a `String` with the [`push`] method, and append a [`&str`] with the [`push_str`] method:",
-        "suggest": "您可以使用 [`push`] 方法将 [`char`] 附加到 `String`，并使用 [`push_str`] 方法将 [`&str`] 附加:",
+        "suggest": "您可以使用 [`push`] 方法将 [`char`] 附加到 `String`，并使用 [`push_str`] 方法附加 [`&str`]:",
         "translate": ""
     },
     {
