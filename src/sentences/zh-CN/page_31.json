@@ -2881,7 +2881,7 @@
     },
     {
         "source": "and [`std::prelude::rust_2018`] re-export this prelude.",
-        "suggest": "并且 [`std::prelude::rust_2018`] 重导出了这个 prelude。",
+        "suggest": "和 [`std::prelude::rust_2018`] 重导出了这个 prelude。",
         "translate": ""
     },
     {
