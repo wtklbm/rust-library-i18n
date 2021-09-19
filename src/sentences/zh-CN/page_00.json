@@ -1031,7 +1031,7 @@
     },
     {
         "source": "As with [`MaybeUninit::assume_init`], it is up to the caller to guarantee that the value really is in an initialized state.",
-        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用方负责确保该值确实处于初始化状态。",
+        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用者负责确保该值确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -1046,7 +1046,7 @@
     },
     {
         "source": "As with [`MaybeUninit::assume_init`], it is up to the caller to guarantee that the values really are in an initialized state.",
-        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用方负责确保值确实处于初始化状态。",
+        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用者负责确保值确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -1881,7 +1881,7 @@
     },
     {
         "source": "The caller guarantees that pos < end <= self.len().",
-        "suggest": "调用方保证 pos <end <= self.len()。",
+        "suggest": "调用者保证 pos <end <= self.len()。",
         "translate": ""
     },
     {
@@ -1936,7 +1936,7 @@
     },
     {
         "source": "pos < len is guaranteed by the caller and obviously len = self.len() <= self.len().",
-        "suggest": "`pos < len` 是由调用方保证的，并且显然 `len = self.len() <= self.len()`。",
+        "suggest": "`pos < len` 是由调用者保证的，并且显然 `len = self.len() <= self.len()`。",
         "translate": ""
     },
     {
@@ -1951,7 +1951,7 @@
     },
     {
         "source": "The caller guarantees that pos < self.len().",
-        "suggest": "调用方保证 `pos < self.len()`。",
+        "suggest": "调用者保证 `pos < self.len()`。",
         "translate": ""
     },
     {
@@ -3351,7 +3351,7 @@
     },
     {
         "source": "This provides excellent performance on *small* nodes of elements which are cheap to compare.",
-        "suggest": "这在小的元素节点上提供了很好的性能，而这些节点的比较是很便宜的。",
+        "suggest": "这在比较便宜的元素的 *小* 节点上提供了出色的性能。",
         "translate": ""
     },
     {

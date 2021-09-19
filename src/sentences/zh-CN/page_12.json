@@ -566,7 +566,7 @@
     },
     {
         "source": "now `rest` is definitely aligned, so `from_raw_parts` below is okay, since the caller guarantees that we can transmute `T` to `U` safely.",
-        "suggest": "现在 `rest` 绝对对齐，因此下面的 `from_raw_parts` 没问题，因为调用方保证我们可以安全地将 `T` 转换为 `U`。",
+        "suggest": "现在 `rest` 绝对对齐，因此下面的 `from_raw_parts` 没问题，因为调用者保证我们可以安全地将 `T` 转换为 `U`。",
         "translate": ""
     },
     {
@@ -2196,7 +2196,7 @@
     },
     {
         "source": "`Chars` is only made from a str, which guarantees the iter is valid UTF-8.",
-        "suggest": "`Chars` 仅由 str 制成，这可以确保迭代器是有效的 UTF-8。",
+        "suggest": "`Chars` 仅仅是由 str 制作而成，这可以确保迭代器是有效的 UTF-8。",
         "translate": ""
     },
     {
@@ -4686,7 +4686,7 @@
     },
     {
         "source": "the caller guarantees that `self` is in bounds of `slice` which satisfies all the conditions for `add`.",
-        "suggest": "调用方保证 `self` 在 `slice` 的范围内，该范围满足 `add` 的所有条件。",
+        "suggest": "调用者保证 `self` 在 `slice` 的范围内，该范围满足 `add` 的所有条件。",
         "translate": ""
     },
     {

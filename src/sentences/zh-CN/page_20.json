@@ -306,7 +306,7 @@
     },
     {
         "source": "The caller must ensure the memory range is in user memory, is the correct size and is correctly aligned and points to the right type.",
-        "suggest": "调用方必须确保存储范围在用户存储区中，并且大小正确，对齐正确并指向正确的类型。",
+        "suggest": "调用者必须确保存储范围在用户存储区中，并且大小正确，对齐正确并指向正确的类型。",
         "translate": ""
     },
     {
@@ -346,7 +346,7 @@
     },
     {
         "source": "The caller has guaranteed the pointer is valid",
-        "suggest": "调用方已保证指针有效",
+        "suggest": "调用者已保证指针有效",
         "translate": ""
     },
     {
@@ -1026,7 +1026,7 @@
     },
     {
         "source": "This method does **not** pass ownership of the raw file descriptor to the caller.",
-        "suggest": "此方法不会将原始文件描述符的所有权传递给调用方。",
+        "suggest": "此方法不会将原始文件描述符的所有权传递给调用者。",
         "translate": ""
     },
     {
@@ -3161,7 +3161,7 @@
     },
     {
         "source": "Callers are then the unique owners of the pthread_t and must either detach or join the pthread_t once it's no longer needed.",
-        "suggest": "这样，调用方便是 pthread_t 的唯一所有者，一旦不再需要，则必须分离或加入 pthread_t。",
+        "suggest": "这样，调用者便是 pthread_t 的唯一所有者，一旦不再需要，则必须分离或加入 pthread_t。",
         "translate": ""
     },
     {

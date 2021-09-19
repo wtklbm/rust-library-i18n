@@ -2386,7 +2386,7 @@
     },
     {
         "source": "If that function's caller is annotated then its call location will be returned, and so on up the stack to the first call within a non-tracked function body.",
-        "suggest": "如果该函数的调用方被注释，那么它的调用位置将被返回，以此类推，直到堆栈中第一个未被跟踪的函数体中的调用。",
+        "suggest": "如果该函数的调用者被注释，那么它的调用位置将被返回，以此类推，直到堆栈中第一个未被跟踪的函数体中的调用。",
         "translate": ""
     },
     {
@@ -3056,7 +3056,7 @@
     },
     {
         "source": "If both are done for the same field, that will likely be unsound!",
-        "suggest": "如果两者都在同一个领域完成，那将是不正确的!",
+        "suggest": "如果两者都是针对同一个字段进行的，那很可能是不合理的!",
         "translate": ""
     },
     {
@@ -3586,7 +3586,7 @@
     },
     {
         "source": "the caller is responsible for not moving the value out of this reference.",
-        "suggest": "调用方负责不将值移出该引用。",
+        "suggest": "调用者负责不将值移出该引用。",
         "translate": ""
     },
     {
@@ -4506,7 +4506,7 @@
     },
     {
         "source": "the caller ensures that `self` is dereferencable and `index` in-bounds.",
-        "suggest": "调用方确保 `self` 是可解引用的，并且 `index` 是入站的。",
+        "suggest": "调用者确保 `self` 是可解引用的，并且 `index` 是入站的。",
         "translate": ""
     },
     {

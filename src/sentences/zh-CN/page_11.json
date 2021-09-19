@@ -481,7 +481,7 @@
     },
     {
         "source": "As `i < len`, and as the caller must guarantee that `x` and `y` are valid for `len` bytes, `x + i` and `y + i` must be valid addresses, which fulfills the safety contract for `add`.",
-        "suggest": "作为 `i < len`，并且由于调用方必须保证 `x` 和 `y` 对于 `len` 字节有效，因此 `x + i` 和 `y + i` 必须是有效地址，这满足了 `add` 的安全保证。",
+        "suggest": "作为 `i < len`，并且由于调用者必须保证 `x` 和 `y` 对于 `len` 字节有效，因此 `x + i` 和 `y + i` 必须是有效地址，这满足了 `add` 的安全保证。",
         "translate": ""
     },
     {
@@ -701,7 +701,7 @@
     },
     {
         "source": "cannot overlap `src` because the caller has mutable access to `dst` while `src` is owned by this function.",
-        "suggest": "`src` 不能与 `src` 重叠，因为当 `src` 属于此函数时，调用方可以对其进行灵活访问。",
+        "suggest": "`src` 不能与 `src` 重叠，因为当 `src` 属于此函数时，调用者可以对其进行灵活访问。",
         "translate": ""
     },
     {

@@ -3191,7 +3191,7 @@
     },
     {
         "source": "assumes that the adjustment to the length is done by caller, which we simply ignore.",
-        "suggest": "假设对长度的调整是由调用方完成的，我们将忽略它。",
+        "suggest": "假设对长度的调整是由调用者完成的，我们将忽略它。",
         "translate": ""
     },
     {
@@ -4971,7 +4971,7 @@
     },
     {
         "source": "Hence this is just an aborting stub.",
-        "suggest": "因此，这只是一个终止存根。",
+        "suggest": "因此，这只是一个正在中止的存根。",
         "translate": ""
     },
     {

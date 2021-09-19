@@ -6,7 +6,7 @@
     },
     {
         "source": "ERR_SHOULD_WAIT: The operation cannot be performed currently but potentially could succeed if the caller waits for a prerequisite to be satisfied, for example waiting for a handle to be readable or writable.",
-        "suggest": "ERR_SHOULD_WAIT: 该操作当前无法执行，但是如果调用方等待先决条件得到满足，例如等待句柄可读写，则可能会成功执行该操作。",
+        "suggest": "ERR_SHOULD_WAIT: 该操作当前无法执行，但是如果调用者等待先决条件得到满足，例如等待句柄可读写，则可能会成功执行该操作。",
         "translate": ""
     },
     {
@@ -786,7 +786,7 @@
     },
     {
         "source": "The caller must guarantee `s` points to a valid 0-terminated string.",
-        "suggest": "调用方必须保证 `s` 指向有效的 0 终止的字符串。",
+        "suggest": "调用者必须保证 `s` 指向有效的 0 终止的字符串。",
         "translate": ""
     },
     {
@@ -801,7 +801,7 @@
     },
     {
         "source": "All empty stubs because this platform does not yet support threads, so lock acquisition always succeeds.",
-        "suggest": "所有空的存根，因为该平台尚不支持线程，因此锁获取始终会成功。",
+        "suggest": "所有的存根都是空的，因为这个平台还不支持线程，所以锁获取总是成功的。",
         "translate": ""
     },
     {
@@ -2801,7 +2801,7 @@
     },
     {
         "source": "Callers are then the unique owners of the handle and must close it once it's no longer needed.",
-        "suggest": "这样，调用方便是该句柄的唯一所有者，一旦不再需要该句柄，则必须将其关闭。",
+        "suggest": "这样，调用者便是该句柄的唯一所有者，一旦不再需要该句柄，则必须将其关闭。",
         "translate": ""
     },
     {
@@ -2846,7 +2846,7 @@
     },
     {
         "source": "Callers are then the unique owners of the socket and must close it once it's no longer needed.",
-        "suggest": "这样，调用方便是套接字的唯一所有者，并且在不再需要套接字时必须将其关闭。",
+        "suggest": "这样，调用者便是套接字的唯一所有者，并且在不再需要套接字时必须将其关闭。",
         "translate": ""
     },
     {
@@ -3816,12 +3816,12 @@
     },
     {
         "source": "Add n+1 backslashes to total 2n+1 before internal '\"'.",
-        "suggest": "在内部 '\"' 之前，将 n + 1 个反斜杠加到总计 2n + 1。",
+        "suggest": "在内部 '\"' 之前添加 n+1 个反斜杠，使总数达到 2n+1",
         "translate": ""
     },
     {
         "source": "Add n backslashes to total 2n before ending '\"'.",
-        "suggest": "在结束 '\"' 之前，将 n 个反斜杠加到总计 2n。",
+        "suggest": "在 '\"' 结尾之前，将 n 个反斜杠加到总数 2n。",
         "translate": ""
     },
     {

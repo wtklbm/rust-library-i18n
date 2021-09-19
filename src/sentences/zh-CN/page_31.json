@@ -381,7 +381,7 @@
     },
     {
         "source": "So `x+i` is valid for reading and writing if the caller respected the contract",
-        "suggest": "因此，如果调用方遵守契约，则 `x+i` 对读和写是有效的",
+        "suggest": "因此，如果调用者遵守契约，则 `x+i` 对读和写是有效的",
         "translate": ""
     },
     {

@@ -4901,7 +4901,7 @@
     },
     {
         "source": "Reconstitutes a `RawVec` from a pointer and capacity.",
-        "suggest": "通过指针和容量重构 `RawVec`。",
+        "suggest": "根据指针和容量重构 `RawVec`。",
         "translate": ""
     },
     {

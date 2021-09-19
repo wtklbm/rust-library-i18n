@@ -3096,7 +3096,7 @@
     },
     {
         "source": "The closure either returns successfully, with the value that the accumulator should have for the next iteration, or it returns failure, with an error value that is propagated back to the caller immediately (short-circuiting).",
-        "suggest": "闭包要么成功返回并返回累加器在下一次迭代中应具有的值，要么返回失败，返回错误值并立即将错误值传播回调用方 (short-circuiting)。",
+        "suggest": "闭包要么成功返回并返回累加器在下一次迭代中应具有的值，要么返回失败，返回错误值并立即将错误值传播回调用者 (short-circuiting)。",
         "translate": ""
     },
     {

@@ -346,7 +346,7 @@
     },
     {
         "source": "...other fields",
-        "suggest": "... 其他领域",
+        "suggest": "... 其他字段",
         "translate": ""
     },
     {
@@ -461,7 +461,7 @@
     },
     {
         "source": "more fields",
-        "suggest": "更多领域",
+        "suggest": "更多字段",
         "translate": ""
     },
     {
@@ -916,7 +916,7 @@
     },
     {
         "source": "As with [`MaybeUninit::assume_init`], it is up to the caller to guarantee that the inner value really is in an initialized state.",
-        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用方负责确保内部值确实处于初始化状态。",
+        "suggest": "与 [`MaybeUninit::assume_init`] 一样，由调用者负责确保内部值确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -1006,7 +1006,7 @@
     },
     {
         "source": "Make sure we do not create a dangling Weak",
-        "suggest": "确保我们不会产生悬空的弱点",
+        "suggest": "确保我们不会产生悬空的 Weak",
         "translate": ""
     },
     {
@@ -1111,7 +1111,7 @@
     },
     {
         "source": "Can just steal the data, all that's left is Weaks",
-        "suggest": "只能窃取数据，剩下的就是弱点",
+        "suggest": "只能窃取数据，剩下的就是 Weaks",
         "translate": ""
     },
     {
@@ -1306,7 +1306,7 @@
     },
     {
         "source": "We can only do this when `T: Eq` as a `PartialEq` might be deliberately irreflexive.",
-        "suggest": "仅当 `T: Eq` 作为 `PartialEq` 故意不自反时，我们才能执行此操作。",
+        "suggest": "仅当 `T: Eq` 作为 `PartialEq` 可能是故意非自反时，我们才能执行此操作。",
         "translate": ""
     },
     {
@@ -1486,12 +1486,12 @@
     },
     {
         "source": "We need to ensure that the iterator has an exact length and we have.",
-        "suggest": "我们需要确保迭代器具有正确的长度并且我们有。",
+        "suggest": "我们需要确保迭代器有一个精确的长度，并且我们有。",
         "translate": ""
     },
     {
         "source": "Fall back to normal implementation.",
-        "suggest": "回退到正常实现。",
+        "suggest": "回退到正常的实现。",
         "translate": ""
     },
     {
@@ -1671,7 +1671,7 @@
     },
     {
         "source": "This is a dangling Weak.",
-        "suggest": "这是悬空的弱点。",
+        "suggest": "这是悬空的 Weak。",
         "translate": ""
     },
     {
@@ -1691,7 +1691,7 @@
     },
     {
         "source": "the pointer originated from a Weak, so this offset is safe.",
-        "suggest": "指针源自弱点，因此此偏移量是安全的。",
+        "suggest": "指针源自 Weak，因此此偏移量是安全的。",
         "translate": ""
     },
     {
@@ -2076,7 +2076,7 @@
     },
     {
         "source": "If the ordering is not total, the order of the elements is unspecified.",
-        "suggest": "如果顺序不是总计，则未指定元素的顺序。",
+        "suggest": "如果排序不全，则元素的顺序是未指定的。",
         "translate": ""
     },
     {
@@ -2396,7 +2396,7 @@
     },
     {
         "source": "If elements are big structures (costly to copy), this method will be slow.",
-        "suggest": "如果元素是大结构 (复制成本很高)，则此方法将很慢。",
+        "suggest": "如果元素是大型结构 (复制成本很高)，则此方法的速度会很慢。",
         "translate": ""
     },
     {
@@ -3056,7 +3056,7 @@
     },
     {
         "source": "We can re-build a String out of ptr, len, and capacity.",
-        "suggest": "我们可以根据 ptr，len 和容量重新构建一个 String。",
+        "suggest": "我们可以用 ptr，len 和 capacity 重新构建一个 String。",
         "translate": ""
     },
     {
@@ -3156,7 +3156,7 @@
     },
     {
         "source": "If you have a vector of valid UTF-8 bytes, you can make a [`String`] out of it.",
-        "suggest": "如果您有一个有效的 UTF-8 字节的 vector，则可以用它制成 [`String`]。",
+        "suggest": "如果您有一个有效的 UTF-8 字节 vector，则可以用它制作一个 [`String`]。",
         "translate": ""
     },
     {
@@ -3171,7 +3171,7 @@
     },
     {
         "source": "It has a close relationship with its borrowed counterpart, the primitive [`str`].",
-        "suggest": "它与其借来的对等体 [`str`] 有着密切的关系。",
+        "suggest": "它与其借来的对应物 -- 原语 [`str`] 有着密切的关系。",
         "translate": ""
     },
     {
@@ -3421,7 +3421,7 @@
     },
     {
         "source": "The capacity is the length of that buffer, and can be queried with the [`capacity`] method.",
-        "suggest": "容量是该缓冲区的长度，可以使用 [`capacity`] 方法查询。",
+        "suggest": "容量是该缓冲区的长度，可以使用 [`capacity`] 方法进行查询。",
         "translate": ""
     },
     {
@@ -3486,7 +3486,7 @@
     },
     {
         "source": "The inverse of this method is [`into_bytes`].",
-        "suggest": "此方法的倒数是 [`into_bytes`]。",
+        "suggest": "与此方法的相反的是 [`into_bytes`]。",
         "translate": ""
     },
     {
@@ -3781,7 +3781,7 @@
     },
     {
         "source": "The inverse of this method is [`from_utf8`].",
-        "suggest": "此方法的倒数是 [`from_utf8`]。",
+        "suggest": "与此方法的相反的是 [`from_utf8`]。",
         "translate": ""
     },
     {
@@ -4311,7 +4311,7 @@
     },
     {
         "source": "a, b, and foo are all Arcs that point to the same memory location",
-        "suggest": "a，b 和 foo 都是指向相同内存位置的弧",
+        "suggest": "a、b 和 foo 都是指向同一内存位置的 Arc",
         "translate": ""
     },
     {
@@ -4441,7 +4441,7 @@
     },
     {
         "source": "However, a library might choose `Arc<T>` in order to give library consumers more flexibility.",
-        "suggest": "但是，磁带库可能选择 `Arc<T>`，以便为磁带库使用者提供更大的灵活性。",
+        "suggest": "但是，一个库可能会选择 `Arc<T>`，以便为库使用者提供更大的灵活性。",
         "translate": ""
     },
     {
@@ -4826,12 +4826,12 @@
     },
     {
         "source": "Retain Arc, but don't touch refcount by wrapping in ManuallyDrop",
-        "suggest": "保留弧，但不要通过包裹在 ManuallyDrop 中来接触引用计数",
+        "suggest": "保留 Arc，但不要通过包裹在 ManuallyDrop 中来接触引用计数",
         "translate": ""
     },
     {
         "source": "Now increase refcount, but don't drop new refcount either",
-        "suggest": "现在增加 refcount，但也不要丢弃新的 refcount",
+        "suggest": "现在增加引用计数，但也不要丢弃新的引用计数",
         "translate": ""
     },
     {
@@ -4851,7 +4851,7 @@
     },
     {
         "source": "This unsafety is ok because while this arc is alive we're guaranteed that the inner pointer is valid.",
-        "suggest": "这种不安全的做法是可以的，因为当此弧保持活动状态时，我们可以保证内部指针有效。",
+        "suggest": "这种不安全的做法是可以的，因为当此 Arc 处于活动状态时，我们可以保证内部指针是有效的。",
         "translate": ""
     },
     {
@@ -4926,7 +4926,7 @@
     },
     {
         "source": "Unsafe because the caller must either take ownership or bind `T: Copy`.",
-        "suggest": "不安全，因为调用方必须拥有所有权或绑定 `T: Copy`。",
+        "suggest": "不安全，因为调用者必须拥有所有权或绑定 `T: Copy`。",
         "translate": ""
     },
     {
@@ -4956,12 +4956,12 @@
     },
     {
         "source": "However we need to guard against massive refcounts in case someone is `mem::forget`ing Arcs.",
-        "suggest": "但是，如果有人对 `mem::forgeting Arcs 了，我们需要提防大量引用。",
+        "suggest": "但是，，我们需要防止大量的引用计数，以防有人 `mem::forget` 了 Arc。",
         "translate": ""
     },
     {
         "source": "If we don't do this the count can overflow and users will use-after free.",
-        "suggest": "如果我们不这样做，那么计数可能会溢出，并且用户将免费使用。",
+        "suggest": "如果我们不这样做，那么计数可能会溢出，并且用户将随心所欲的使用。",
         "translate": ""
     },
     {

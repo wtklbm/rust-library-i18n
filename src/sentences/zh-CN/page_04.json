@@ -121,7 +121,7 @@
     },
     {
         "source": "Note that it's trickier than that though because what we're using here, `dbghelp`, *also* needs to be synchronized with all other callers to `dbghelp` in this process.",
-        "suggest": "请注意，这比这要复杂得多，因为在此过程中，我们在此使用的 `dbghelp` 还必须与所有其他调用方同步到 `dbghelp`。",
+        "suggest": "请注意，这比这要复杂得多，因为在此过程中，我们在此使用的 `dbghelp` 还必须与所有其他调用者同步到 `dbghelp`。",
         "translate": ""
     },
     {
@@ -2711,7 +2711,7 @@
     },
     {
         "source": "The memory may or may not have been deallocated, and should be considered unusable (unless of course it was transferred back to the caller again via the return value of this method).",
-        "suggest": "内存可能已释放，也可能尚未释放，应将其视为不可用的 (除非当然已通过此方法的返回值再次将其转移回调用方)。",
+        "suggest": "内存可能已释放，也可能尚未释放，应将其视为不可用的 (除非当然已通过此方法的返回值再次将其转移回调用者)。",
         "translate": ""
     },
     {
@@ -2831,7 +2831,7 @@
     },
     {
         "source": "A caller must either ensure that conditions like this are met, use specific allocators with looser requirements, or use the more lenient `Allocator` interface.)",
-        "suggest": "调用方必须确保满足这样的条件，使用要求较宽松的特定分配器，或者使用更宽松的 `Allocator` 接口。)",
+        "suggest": "调用者必须确保满足这样的条件，使用要求较宽松的特定分配器，或者使用更宽松的 `Allocator` 接口。)",
         "translate": ""
     },
     {
@@ -3411,7 +3411,7 @@
     },
     {
         "source": "The memory may or may not have been freed, and should be considered unusable unless it was transferred back to the caller again via the return value of this method.",
-        "suggest": "内存可能已释放，也可能尚未释放，除非已通过此方法的返回值再次将其转移回调用方，否则应将其视为不可用。",
+        "suggest": "内存可能已释放，也可能尚未释放，除非已通过此方法的返回值再次将其转移回调用者，否则应将其视为不可用。",
         "translate": ""
     },
     {
@@ -4251,7 +4251,7 @@
     },
     {
         "source": "It is up to the caller to guarantee that `iter` yields at least `N` items.",
-        "suggest": "取决于调用方，以确保 `iter` 至少产生 `N` 项。",
+        "suggest": "取决于调用者，以确保 `iter` 至少产生 `N` 项。",
         "translate": ""
     },
     {

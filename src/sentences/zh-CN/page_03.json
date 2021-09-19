@@ -581,12 +581,12 @@
     },
     {
         "source": "Increment the reference count of the arc to clone it.",
-        "suggest": "增加弧的引用计数以克隆它。",
+        "suggest": "增加 Arc 的引用计数以克隆它。",
         "translate": ""
     },
     {
         "source": "Wake by value, moving the Arc into the Wake::wake function",
-        "suggest": "通过值唤醒，将弧移到 Wake::wake 函数中",
+        "suggest": "按值唤醒，将 Arc 移到 Wake::wake 函数中",
         "translate": ""
     },
     {
@@ -1466,12 +1466,12 @@
     },
     {
         "source": "It is important to note that although the returned vector has the *capacity* specified, the vector will have a zero *length*.",
-        "suggest": "重要的是要注意，尽管返回的 vector 具有指定的 *capacity*，但 vector 的长度为零。",
+        "suggest": "重要的是要注意，尽管返回的 vector 具有指定的 *容量*，但 vector 的长度为零。",
         "translate": ""
     },
     {
         "source": "For an explanation of the difference between length and capacity, see *[Capacity and reallocation]*.",
-        "suggest": "有关长度和容量之间差异的说明，请参见 *[Capacity and 重新分配]*。",
+        "suggest": "有关长度和容量之间差异的说明，请参见 *[容量和重新分配][Capacity and reallocation]*。",
         "translate": ""
     },
     {
@@ -1481,7 +1481,7 @@
     },
     {
         "source": "needs to have been previously allocated via [`String`]/`Vec<T>` (at least, it's highly likely to be incorrect if it wasn't).",
-        "suggest": "需要事先通过 [`String`]/`Vec 分配 <T>` (至少，如果不是这样，很可能是不正确的)。",
+        "suggest": "需要事先通过 [`String`]/`Vec<T>` (至少，如果不是这样，很可能是不正确的)。",
         "translate": ""
     },
     {
@@ -4561,7 +4561,7 @@
     },
     {
         "source": "This function is a misnomer: rather than getting this frame's Canonical Frame Address (aka the caller frame's SP) it returns this frame's SP.",
-        "suggest": "此函数用词不当: 它没有获得此框架的规范框架地址 (即调用方框架的 SP)，而是返回了该框架的 SP。",
+        "suggest": "此函数用词不当: 它没有获得此框架的规范框架地址 (即调用者框架的 SP)，而是返回了该框架的 SP。",
         "translate": ""
     },
     {

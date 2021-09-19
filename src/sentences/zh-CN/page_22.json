@@ -441,7 +441,7 @@
     },
     {
         "source": "This function will block the caller until it is available to acquire the mutex.",
-        "suggest": "此函数将阻止调用方，直到可以获取互斥锁为止。",
+        "suggest": "此函数将阻止调用者，直到可以获取互斥锁为止。",
         "translate": ""
     },
     {
@@ -1921,7 +1921,7 @@
     },
     {
         "source": "The caller must ensure no mutable references are ever active to the inner cell or the inner T when this is called.",
-        "suggest": "调用方必须确保在调用此内部 cell 或内部 T 时永远不会对它起作用。",
+        "suggest": "调用者必须确保在调用此内部 cell 或内部 T 时永远不会对它起作用。",
         "translate": ""
     },
     {

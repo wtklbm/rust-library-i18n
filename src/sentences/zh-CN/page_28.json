@@ -1411,7 +1411,7 @@
     },
     {
         "source": "Options for the test run defined by the caller (instead of CLI arguments).",
-        "suggest": "调用方定义的测试运行的选项 (而不是 CLI 参数)。",
+        "suggest": "调用者定义的测试运行的选项 (而不是 CLI 参数)。",
         "translate": ""
     },
     {
@@ -2691,7 +2691,7 @@
     },
     {
         "source": "Safety: The TrustedRandomAccess contract requires that callers only  pass an index that is in bounds.",
-        "suggest": "安全性: TrustedRandomAccess 契约要求调用方只传递一个在边界内的索引。",
+        "suggest": "安全性: TrustedRandomAccess 契约要求调用者只传递一个在边界内的索引。",
         "translate": ""
     },
     {

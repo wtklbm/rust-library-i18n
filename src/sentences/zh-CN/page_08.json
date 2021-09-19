@@ -1521,7 +1521,7 @@
     },
     {
         "source": "This can be useful when it is important for the caller to control how the memory the result is stored in gets allocated, and you want to avoid unnecessary moves.",
-        "suggest": "当对调用方来说，控制结果存储在内存中的分配方式很重要并且您希望避免不必要的移动时，这很有用。",
+        "suggest": "当对调用者来说，控制结果存储在内存中的分配方式很重要并且您希望避免不必要的移动时，这很有用。",
         "translate": ""
     },
     {
@@ -1771,7 +1771,7 @@
     },
     {
         "source": "It is up to the caller to guarantee that the `MaybeUninit<T>` really is in an initialized state.",
-        "suggest": "取决于调用方，以确保 `MaybeUninit<T>` 确实处于初始化状态。",
+        "suggest": "取决于调用者，以确保 `MaybeUninit<T>` 确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -1861,7 +1861,7 @@
     },
     {
         "source": "Calling this when the content is not yet fully initialized causes undefined behavior: it is up to the caller to guarantee that the `MaybeUninit<T>` really is in an initialized state.",
-        "suggest": "在内容尚未完全初始化时调用此方法会导致未定义的行为: 取决于调用方，以确保 `MaybeUninit<T>` 确实处于初始化状态。",
+        "suggest": "在内容尚未完全初始化时调用此方法会导致未定义的行为: 取决于调用者，以确保 `MaybeUninit<T>` 确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -1911,7 +1911,7 @@
     },
     {
         "source": "It is up to the caller to guarantee that all elements of the array are in an initialized state.",
-        "suggest": "调用方有责任保证数组的所有元素都处于初始化状态。",
+        "suggest": "调用者有责任保证数组的所有元素都处于初始化状态。",
         "translate": ""
     },
     {
@@ -1936,7 +1936,7 @@
     },
     {
         "source": "It is up to the caller to guarantee that the `MaybeUninit<T>` elements really are in an initialized state.",
-        "suggest": "取决于调用方，以确保 `MaybeUninit<T>` 元素确实处于初始化状态。",
+        "suggest": "取决于调用者，以确保 `MaybeUninit<T>` 元素确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -1951,7 +1951,7 @@
     },
     {
         "source": "casting slice to a `*const [T]` is safe since the caller guarantees that `slice` is initialized, and`MaybeUninit` is guaranteed to have the same layout as `T`.",
-        "suggest": "将切片转换为 `*const [T]` 是安全的，因为调用方保证已初始化 `slice`，并保证 `MaybeUninit` 具有与 `T` 相同的布局。",
+        "suggest": "将切片转换为 `*const [T]` 是安全的，因为调用者保证已初始化 `slice`，并保证 `MaybeUninit` 具有与 `T` 相同的布局。",
         "translate": ""
     },
     {
@@ -3196,7 +3196,7 @@
     },
     {
         "source": "The caller is responsible to use large enough bignum types.",
-        "suggest": "调用方负责使用足够大的 bignum 类型。",
+        "suggest": "调用者负责使用足够大的 bignum 类型。",
         "translate": ""
     },
     {

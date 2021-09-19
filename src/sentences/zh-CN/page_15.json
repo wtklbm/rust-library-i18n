@@ -1,7 +1,7 @@
 [
     {
         "source": "Positive angles measured counter-clockwise from positive x axis -pi/4 radians (45 deg clockwise)",
-        "suggest": "从正 x 轴 -pi/4 弧度逆时针测量的正角 (顺时针 45 度)",
+        "suggest": "从正 x 轴逆时针测量的正角度 -pi/4 弧度 (顺时针 45 度)",
         "translate": ""
     },
     {
@@ -281,7 +281,7 @@
     },
     {
         "source": "Return value is in radians in the range [-pi/2, pi/2];",
-        "suggest": "返回值的弧度范围为 [-pi/2, pi/2];",
+        "suggest": "返回值以弧度为单位，范围为 [-pi/2, pi/2];",
         "translate": ""
     },
     {
@@ -1096,7 +1096,7 @@
     },
     {
         "source": "The caller has provided a pointer that points to a valid C string with a NUL terminator of size less than `isize::MAX`, whose content remain valid and doesn't change for the lifetime of the returned `CStr`.",
-        "suggest": "调用方提供了一个指针，该指针指向大小小于 `isize::MAX` 的 NUL 终止符的有效 C 字符串，其内容保持有效，并且对于返回的 `CStr` 的生命周期不会更改。",
+        "suggest": "调用者提供了一个指针，该指针指向大小小于 `isize::MAX` 的 NUL 终止符的有效 C 字符串，其内容保持有效，并且对于返回的 `CStr` 的生命周期不会更改。",
         "translate": ""
     },
     {
@@ -4461,7 +4461,7 @@
     },
     {
         "source": "If buffer returns Ok(0), propagate that to the caller without doing additional buffering;",
-        "suggest": "如果缓冲区返回 Ok(0)，则将其传播给调用方，而不进行额外的缓冲; 否则，将其传播给调用方。",
+        "suggest": "如果缓冲区返回 Ok(0)，则将其传播给调用者，而不进行额外的缓冲; 否则，将其传播给调用者。",
         "translate": ""
     },
     {
@@ -4591,7 +4591,7 @@
     },
     {
         "source": "If inner returns Ok(0), propagate that to the caller without doing additional buffering;",
-        "suggest": "如果 inner 返回 Ok(0)，则将其传播给调用方，而不进行其他缓冲; 否则，将其传播给调用方。",
+        "suggest": "如果 inner 返回 Ok(0)，则将其传播给调用者，而不进行其他缓冲; 否则，将其传播给调用者。",
         "translate": ""
     },
     {

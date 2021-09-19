@@ -621,7 +621,7 @@
     },
     {
         "source": "If `f` or `g` panics, the panic is propagated to the caller, and the cell remains uninitialized.",
-        "suggest": "如果为 `f` 或 `g` panics，则 panic 会传播到调用方，并且单元仍保持未初始化状态。",
+        "suggest": "如果为 `f` 或 `g` panics，则 panic 会传播到调用者，并且单元仍保持未初始化状态。",
         "translate": ""
     },
     {
@@ -2781,7 +2781,7 @@
     },
     {
         "source": "interface-, link-, realm-, admin- and site-local multicast addresses",
-        "suggest": "接口，链接，领域，管理和站点本地多播地址",
+        "suggest": "接口，链路，领域，管理和站点本地多播地址",
         "translate": ""
     },
     {
@@ -3871,7 +3871,7 @@
     },
     {
         "source": "See its documentation for concrete examples.",
-        "suggest": "有关具体示例，请参见其文档。",
+        "suggest": "有关具体的例子，请参见其文档。",
         "translate": ""
     },
     {

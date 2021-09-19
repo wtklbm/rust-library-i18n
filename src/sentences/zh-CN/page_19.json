@@ -751,17 +751,17 @@
     },
     {
         "source": "As always with lock-free code, this is a very \"here be dragons\" territory, especially because I'm unaware of any academic papers that have gone into great length about channels of these flavors.",
-        "suggest": "与使用无锁代码一样，这是一个非常 \"here be dragons\" 的领域，尤其是因为我不知道任何有关这些类型的通道的学术论文都花了很多篇幅。",
+        "suggest": "与使用无锁代码一样，这是一个非常 \"here be dragons\" 的领域，特别是因为我不知道有任何关于这些风格的通道的学术论文。",
         "translate": ""
     },
     {
         "source": "Flavors of channels",
-        "suggest": "通道的味道",
+        "suggest": "风格的通道",
         "translate": ""
     },
     {
         "source": "From the perspective of a consumer of this library, there is only one flavor of channel.",
-        "suggest": "从该库的使用者的角度来看，只有一种味道的通道。",
+        "suggest": "从该库的使用者的角度来看，只有一种风格的通道。",
         "translate": ""
     },
     {
@@ -771,7 +771,7 @@
     },
     {
         "source": "Under the hood, however, there are actually three flavors of channels in play.",
-        "suggest": "然而，在引擎盖下，实际上有三种口味的通道在起作用。",
+        "suggest": "然而，在幕后，实际上有三种风格的通道在起作用。",
         "translate": ""
     },
     {
@@ -796,7 +796,7 @@
     },
     {
         "source": "The initial allocation of this flavor of channel is not optimized.",
-        "suggest": "通道的这种风格的初始分配未优化。",
+        "suggest": "这种风格的通道初始分配没有得到优化。",
         "translate": ""
     },
     {
@@ -1086,7 +1086,7 @@
     },
     {
         "source": "This iterator will never block the caller in order to wait for data to become available.",
-        "suggest": "该迭代器永远不会阻塞调用方，以等待数据可用。",
+        "suggest": "该迭代器永远不会阻塞调用者，以等待数据可用。",
         "translate": ""
     },
     {
@@ -1191,12 +1191,12 @@
     },
     {
         "source": "This enumeration is the list of the possible error outcomes for the [`try_send`] method.",
-        "suggest": "此枚举是 [`try_send`] 方法可能出现的错误结果的列表。",
+        "suggest": "此枚举是 [`try_send`] 方法可能的错误结果的列表。",
         "translate": ""
     },
     {
         "source": "The data could not be sent on the [`sync_channel`] because it would require that the callee block to send the data.",
-        "suggest": "无法在 [`sync_channel`] 上发送数据，因为这将要求被调用方块发送数据。",
+        "suggest": "无法在 [`sync_channel`] 上发送数据，因为它需要被调用者阻止发送数据。",
         "translate": ""
     },
     {
@@ -1216,7 +1216,7 @@
     },
     {
         "source": "The data is returned back to the callee in this case.",
-        "suggest": "在这种情况下，数据将返回给被调用方。",
+        "suggest": "在这种情况下，数据将返回给被调用者。",
         "translate": ""
     },
     {
@@ -1396,7 +1396,7 @@
     },
     {
         "source": "This method will never block the caller in order to wait for data to become available.",
-        "suggest": "此方法决不会阻塞调用方，以等待数据可用。",
+        "suggest": "此方法决不会阻塞调用者，以等待数据可用。",
         "translate": ""
     },
     {
@@ -1896,7 +1896,7 @@
     },
     {
         "source": "This is why not using an arc is a little difficult (need the box to stay valid while we take the data).",
-        "suggest": "这就是为什么不使用圆弧会有些困难的原因 (需要 box 才能在获取数据时保持有效)。",
+        "suggest": "这就是为什么不使用 Arc 会有些困难的原因 (需要 box 才能在获取数据时保持有效)。",
         "translate": ""
     },
     {

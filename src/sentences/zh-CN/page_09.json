@@ -286,7 +286,7 @@
     },
     {
         "source": "Converts radians to degrees.",
-        "suggest": "将弧度转换为度。",
+        "suggest": "将弧度转换为度数。",
         "translate": ""
     },
     {
