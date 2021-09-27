@@ -966,7 +966,7 @@
     },
     {
         "source": "Converts an <code>[Option]<[String]></code> into an <code>[Option]<[usize]></code>, preserving the original.",
-        "suggest": "将 <code>[Option]<[String]></code>转换为 <code>[Option]<[usize]></code>，保留原始值。",
+        "suggest": "将 <code>[Option]<[String]></code> 转换为 <code>[Option]<[usize]></code>，保留原始值。",
         "translate": ""
     },
     {
@@ -1121,7 +1121,7 @@
     },
     {
         "source": "If you need a <code>&[[u8]]</code> slice *with* the nul terminator, you can use [`CString::as_bytes_with_nul`] instead.",
-        "suggest": "如果您需要一个带 nul 终止符的 <code>&[[u8]]</code>  切片，您可以使用 [`CString::as_bytes_with_nul`] 代替。",
+        "suggest": "如果您需要一个带 nul 终止符的 <code>&[[u8]]</code> 切片，您可以使用 [`CString::as_bytes_with_nul`] 代替。",
         "translate": ""
     },
     {
