@@ -2456,12 +2456,12 @@
     },
     {
         "source": "In general, the size of a type is not stable across compilations, but specific types such as primitives are.",
-        "suggest": "通常，类型的大小在整个编译过程中不稳定，但是特定类型 (例如基元) 是稳定的。",
+        "suggest": "一般来说，一个类型的大小在不同的编译中是不稳定的，但是特定的类型，比如原语，是稳定的。",
         "translate": ""
     },
     {
         "source": "The following table gives the size for primitives.",
-        "suggest": "下表提供了基元的大小。",
+        "suggest": "下表提供了原语的大小。",
         "translate": ""
     },
     {

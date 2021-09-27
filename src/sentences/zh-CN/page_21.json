@@ -856,17 +856,17 @@
     },
     {
         "source": "WASI-specific extension to the primitives in the `std::ffi` module",
-        "suggest": "WA00 特定于 `std::ffi` 模块中原语的扩展",
+        "suggest": "`std::ffi` 模块中原语的 WASI 特定扩展",
         "translate": ""
     },
     {
         "source": "WASI-specific extensions to primitives in the `std::fs` module.",
-        "suggest": "WA00 特定于 `std::fs` 模块中基元的扩展。",
+        "suggest": "`std::fs` 模块中原语的 WASI 特定扩展。",
         "translate": ""
     },
     {
         "source": "WASI-specific extensions to [`File`].",
-        "suggest": "WA00 特定于 [`File`] 的扩展。",
+        "suggest": "[`File`] 的 WASI 特定扩展。",
         "translate": ""
     },
     {
@@ -1026,7 +1026,7 @@
     },
     {
         "source": "WASI-specific extensions to [`fs::OpenOptions`].",
-        "suggest": "WA00 特定于 [`fs::OpenOptions`] 的扩展。",
+        "suggest": "[`fs::OpenOptions`] 的 WASI 特定扩展。",
         "translate": ""
     },
     {
@@ -1131,7 +1131,7 @@
     },
     {
         "source": "WASI-specific extensions to [`fs::Metadata`].",
-        "suggest": "WA00 特定于 [`fs::Metadata`] 的扩展。",
+        "suggest": "[`fs::Metadata`] 的 WASI 特定扩展。",
         "translate": ""
     },
     {
@@ -1901,7 +1901,7 @@
     },
     {
         "source": "This is only used by atomics primitives when the `atomics` feature is enabled.",
-        "suggest": "仅当启用 `atomics` 功能时，原子基元才使用此功能。",
+        "suggest": "仅当启用 `atomics` 功能时，仅由原子原语使用。",
         "translate": ""
     },
     {

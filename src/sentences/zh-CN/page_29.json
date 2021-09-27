@@ -3856,7 +3856,7 @@
     },
     {
         "source": "When reading this function you might ask \"why is this inlined everywhere other than Windows?\", and that's a very reasonable question to ask.",
-        "suggest": "在阅读这个函数时，你可能会问 \"为什么除了 Windows 之外，其他地方都内联这个函数?\"，这是一个非常合理的问题。",
+        "suggest": "在阅读这个函数时，您可能会问 \"为什么除了 Windows 之外，其他地方都内联这个函数?\"，这是一个非常合理的问题。",
         "translate": ""
     },
     {

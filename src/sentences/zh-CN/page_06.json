@@ -1356,7 +1356,7 @@
     },
     {
         "source": "`ptr` is valid and aligned, as this macro is only used for numeric primitives which have no padding.",
-        "suggest": "`ptr` 有效且已对齐，因为此宏仅用于没有填充的数字基元。",
+        "suggest": "`ptr` 有效且已对齐，因为此宏仅用于没有填充的数字原语。",
         "translate": ""
     },
     {
@@ -3431,7 +3431,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `count_ones` method.",
-        "suggest": "可通过 `count_ones` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `count_ones` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3441,7 +3441,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `leading_zeros` method.",
-        "suggest": "可通过 `leading_zeros` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `leading_zeros` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3461,7 +3461,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `trailing_zeros` method.",
-        "suggest": "可通过 `trailing_zeros` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `trailing_zeros` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3481,7 +3481,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `swap_bytes` method.",
-        "suggest": "可通过 `swap_bytes` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `swap_bytes` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3491,7 +3491,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `reverse_bits` method.",
-        "suggest": "可通过 `reverse_bits` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `reverse_bits` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3501,7 +3501,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `overflowing_add` method.",
-        "suggest": "可通过 `overflowing_add` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `overflowing_add` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3511,7 +3511,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `overflowing_sub` method.",
-        "suggest": "可通过 `overflowing_sub` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `overflowing_sub` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3521,7 +3521,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `overflowing_mul` method.",
-        "suggest": "可通过 `overflowing_mul` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `overflowing_mul` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3536,7 +3536,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_div` method.",
-        "suggest": "可通过 `checked_div` 方法在整数基元上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_div` 方法在整数原语上使用此内联函数的安全包装。",
         "translate": ""
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_rem` method.",
-        "suggest": "可通过 `checked_rem` 方法在整数基元上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_rem` 方法在整数原语上使用此内联函数的安全包装。",
         "translate": ""
     },
     {
@@ -3556,7 +3556,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_shl` method.",
-        "suggest": "可通过 `checked_shl` 方法在整数基元上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_shl` 方法在整数原语上使用此内联函数的安全包装。",
         "translate": ""
     },
     {
@@ -3566,7 +3566,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_shr` method.",
-        "suggest": "可通过 `checked_shr` 方法在整数基元上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_shr` 方法在整数原语上使用此内联函数的安全包装。",
         "translate": ""
     },
     {
@@ -3591,7 +3591,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `rotate_left` method.",
-        "suggest": "可通过 `rotate_left` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `rotate_left` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3601,7 +3601,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `rotate_right` method.",
-        "suggest": "可通过 `rotate_right` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `rotate_right` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3611,7 +3611,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `wrapping_add` method.",
-        "suggest": "可通过 `wrapping_add` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `wrapping_add` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3621,7 +3621,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `wrapping_sub` method.",
-        "suggest": "可通过 `wrapping_sub` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `wrapping_sub` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3631,7 +3631,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `wrapping_mul` method.",
-        "suggest": "可通过 `wrapping_mul` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `wrapping_mul` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3641,7 +3641,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `saturating_add` method.",
-        "suggest": "可通过 `saturating_add` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `saturating_add` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3651,7 +3651,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `saturating_sub` method.",
-        "suggest": "可通过 `saturating_sub` 方法在整数基元上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `saturating_sub` 方法在整数原语上使用此内联函数的稳定版本。",
         "translate": ""
     },
     {

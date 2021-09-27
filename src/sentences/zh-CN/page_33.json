@@ -3288,5 +3288,10 @@
         "source": "core_arch/src/arm_shared/simd32 vst1q_s64_x4_vst1 : #instructions = 40 >= 22 (limit)",
         "suggest": "core_arch/simd32 vst1q_s64_x4_vst1: #instructions =40&gt;=22 (limit)",
         "translate": false
+    },
+    {
+        "source": "[`SocketAddrV6`], <code>([IpAddr], [u16])</code>, <code>([Ipv4Addr], [u16])</code>, <code>([Ipv6Addr], [u16])</code>:",
+        "suggest": "[`SocketAddrV6`], <code>([IpAddr], [u16])</code>, <code>([Ipv4Addr], [u16])</code>, <code>([Ipv6Addr], [u16])</code> :",
+        "translate": false
     }
 ]

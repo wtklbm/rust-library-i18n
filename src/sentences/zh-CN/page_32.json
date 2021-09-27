@@ -491,7 +491,7 @@
     },
     {
         "source": "Like references, function pointers are, among other things, assumed to not be null, so if you want to pass a function pointer over FFI and be able to accommodate null pointers, make your type [`Option<fn()>`](core::option#options-and-pointers-nullable-pointers) with your required signature.",
-        "suggest": "像引用一样，函数指针被假定为不为空，所以如果你想通过 FFI 传递函数指针并能够容纳空指针，请使用所需的签名来创建类型 [`Option<fn()>`](core::option#options-and-pointers-nullable-pointers)。",
+        "suggest": "像引用一样，函数指针被假定为不为空，所以如果您想通过 FFI 传递函数指针并能够容纳空指针，请使用所需的签名来创建类型 [`Option<fn()>`](core::option#options-and-pointers-nullable-pointers)。",
         "translate": ""
     },
     {
@@ -682,6 +682,831 @@
     {
         "source": "ARM-specific type containing four `poly64x2_t` vectors.",
         "suggest": "包含四个 `poly64x2_t` vectors 的 ARM 特定类型。",
+        "translate": ""
+    },
+    {
+        "source": "A binary heap can also be converted to a sorted vector in-place, allowing it to be used for an *O*(*n* * log(*n*)) in-place heapsort.",
+        "suggest": "二元堆也可以就地转换为已排序的 vector，允许它用于 *O*(*n* * log(*n*)) 就地堆排序。",
+        "translate": ""
+    },
+    {
+        "source": "It is a logic error for an item to be modified in such a way that the item's ordering relative to any other item, as determined by the [`Ord`] trait, changes while it is in the heap.",
+        "suggest": "项的修改方式是一个逻辑错误，即项相对于任何其他项的排序 (由 [`Ord`] trait 确定) 在它在堆中时发生变化。",
+        "translate": ""
+    },
+    {
+        "source": "Either [`core::cmp::Reverse`] or a custom [`Ord`] implementation can be used to make `BinaryHeap` a min-heap.",
+        "suggest": "[`core::cmp::Reverse`] 或自定义 [`Ord`] 实现可用于使 `BinaryHeap` 成为最小堆。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by [`BinaryHeap::into_iter()`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 由 [`BinaryHeap::into_iter()`] 创建 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`BTreeMap`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 是通过 [`BTreeMap`] 上的 [`into_iter`] 方法创建的 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`BTreeSet`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 是通过 [`BTreeSet`] 上的 [`into_iter`] 方法创建的 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`LinkedList`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 是通过 [`LinkedList`] 上的 [`into_iter`] 方法创建的 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`VecDeque`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 是通过 [`VecDeque`] 上的 [`into_iter`] 方法创建的 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, the return value of this function is [`fmt::Result`] which is a type alias of <code>[Result]<(), [std::fmt::Error]></code>.",
+        "suggest": "此外，该函数的返回值是 [`fmt::Result`]，它是 <code>[Result]<(), [std::fmt::Error]></code> 的类型别名。",
+        "translate": ""
+    },
+    {
+        "source": "Result \"fmt::Result\"",
+        "suggest": "结果 \"fmt::Result\"",
+        "translate": ""
+    },
+    {
+        "source": "Error \"fmt::Error\"",
+        "suggest": "错误 \"fmt::Error\"",
+        "translate": ""
+    },
+    {
+        "source": "Arguments \"fmt::Arguments\"",
+        "suggest": "参数 \"fmt::Arguments\"",
+        "translate": ""
+    },
+    {
+        "source": "To avoid a memory leak the pointer must be converted back to an `Rc` using [`Rc::from_raw`].",
+        "suggest": "为避免内存泄漏，必须使用 [`Rc::from_raw`] 将指针转换回 `Rc`。",
+        "translate": ""
+    },
+    {
+        "source": "See [`mem::transmute`] for more information on what restrictions apply in this case.",
+        "suggest": "有关在这种情况下适用哪些限制的更多信息，请参见 [`mem::transmute`]。",
+        "translate": ""
+    },
+    {
+        "source": "The allocation is accessed by calling [`upgrade`] on the `Weak` pointer, which returns an <code>[Option]<[Rc]\\<T>></code>.",
+        "suggest": "通过在 `Weak` 指针上调用 [`upgrade`] 来访问分配，它返回一个 <code>[Option]<[Rc]\\<T>></code>。",
+        "translate": ""
+    },
+    {
+        "source": "You can create a `String` from [a literal string][`&str`] with [`String::from`]:",
+        "suggest": "您可以使用 [`String::from`] 从一个 [字面量字符串][`&str`] 创建一个 `String`:",
+        "translate": ""
+    },
+    {
+        "source": "implements <code>[Deref]<Target = [str]></code>, and so inherits all of [`str`]'s methods.",
+        "suggest": "实现 <code>[Deref]<Target = [str]></code>，因此继承了 [`str`] 的所有方法。",
+        "translate": ""
+    },
+    {
+        "source": "In this case we are dereferencing a `String` to a [`str`], then referencing the [`str`] back to [`&str`].",
+        "suggest": "在这种情况下，我们将 `String` 解引用到 [`str`]，然后将 [`str`] 引用回 [`&str`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this `String` into a <code>[Box]<[str]></code>.",
+        "suggest": "将此 `String` 转换为 <code>[Box]<[str]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "Consider <code>Arc<[RefCell\\<T>]></code>.",
+        "suggest": "考虑 <code>Arc<[RefCell\\<T>]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "isn't [`Sync`], and if `Arc<T>` was always [`Send`], <code>Arc<[RefCell\\<T>]></code> would be as well.",
+        "suggest": "不是 [`Sync`]，如果 `Arc<T>` 总是 [`Send`]，则 <code>Arc<[RefCell\\<T>]></code> 也是。",
+        "translate": ""
+    },
+    {
+        "source": "The allocation is accessed by calling [`upgrade`] on the `Weak` pointer, which returns an <code>[Option]<[Arc]\\<T>></code>.",
+        "suggest": "通过在 `Weak` 指针上调用 [`upgrade`] 来访问分配，它返回一个 <code>[Option]<[Arc]\\<T>></code>。",
+        "translate": ""
+    },
+    {
+        "source": "Vectors have *O*(1) indexing, amortized *O*(1) push (to the end) and *O*(1) pop (from the end).",
+        "suggest": "Vectors 有 *O*(1) 索引，摊销 *O*(1) push (到最后) 和 *O*(1) pop (从最后)。",
+        "translate": ""
+    },
+    {
+        "source": "will allocate if and only if <code>[mem::size_of::\\<T>]\\() * [capacity]\\() > 0</code>.",
+        "suggest": "仅当 <code>[mem::size_of::\\<T>]\\() * [capacity]\\() > 0</code> 时，才会分配。",
+        "translate": ""
+    },
+    {
+        "source": "In general, `Vec`'s allocation details are very subtle --- if you intend to allocate memory using a `Vec` and use it for something else (either to pass to unsafe code, or to build your own memory-backed collection), be sure to deallocate this memory by using `from_raw_parts` to recover the `Vec` and then dropping it.",
+        "suggest": "一般来说，`Vec` 的分配细节非常微妙 -- 如果您打算使用 `Vec` 分配内存并将其用于其他用途 (或者传递给不安全的代码，或者构建您自己的内存支持集合)，请务必使用 `from_raw_parts` 处理此内存以恢复 `Vec`，然后丢弃它来释放此内存。",
+        "translate": ""
+    },
+    {
+        "source": "If a `Vec` *has* allocated memory, then the memory it points to is on the heap (as defined by the allocator Rust is configured to use by default), and its pointer points to [`len`] initialized, contiguous elements in order (what you would see if you coerced it to a slice), followed by <code>[capacity] - [len]</code> logically uninitialized, contiguous elements.",
+        "suggest": "如果一个 `Vec` 已分配了内存，那么它指向的内存在堆上（由分配器定义，Rust 被配置为默认使用），它的指针按顺序指向 [`len`] 个已初始化的连续元素（如果将其强制转换为切片，您会看到什么），然后是 <code>[capacity] - [len]</code> 逻辑上未初始化的连续元素。",
+        "translate": ""
+    },
+    {
+        "source": "[`push`] and [`insert`] *will* (re)allocate if <code>[len] == [capacity]</code>. That is, the reported capacity is completely accurate, and can be relied on.",
+        "suggest": "[`push`] 和 [`insert`] 将在 <code>[len] == [capacity]</code> 时(重新)分配。也就是说，报告的容量是完全准确的，并且是可以依赖的。",
+        "translate": ""
+    },
+    {
+        "source": "If <code>[len] == [capacity]</code>, (as is the case for the [`vec!`] macro), then a `Vec<T>` can be converted to and from a [`Box<[T]>`][owned slice] without reallocating or moving the elements.",
+        "suggest": "如果 <code>[len] == [capacity]</code>，(如 [`vec!`] 宏的情况)，则 `Vec<T>` 可以与 [`Box<[T]>`][owned slice] 相互转换，而无需重新分配或移动元素。",
+        "translate": ""
+    },
+    {
+        "source": "This struct represents the unsafety of constructing an `Arguments`.",
+        "suggest": "这个结构体代表了构建 `Arguments` 的不安全性。",
+        "translate": ""
+    },
+    {
+        "source": "It exists, rather than an unsafe function, in order to simplify the expansion of `format_args!(..)` and reduce the scope of the `unsafe` block.",
+        "suggest": "它的存在，而不是一个不安全的函数，是为了简化 `format_args!(..)` 的扩展，并缩小 `unsafe` 块的作用域。",
+        "translate": ""
+    },
+    {
+        "source": "See documentation where `UnsafeArg` is required to know when it is safe to create and use `UnsafeArg`.",
+        "suggest": "请参见 `UnsafeArg` 的文档，需要知道何时可以安全地创建和使用 `UnsafeArg`。",
+        "translate": ""
+    },
+    {
+        "source": "An `UnsafeArg` is required because the following invariants must be held in order for this function to be safe:",
+        "suggest": "`UnsafeArg` 是必需的，因为必须保持以下不可变变量才能使此函数安全:",
+        "translate": ""
+    },
+    {
+        "source": "The `pieces` slice must be at least as long as `fmt`.",
+        "suggest": "`pieces` 必须至少与 `fmt` 一样长。",
+        "translate": ""
+    },
+    {
+        "source": "Every [`rt::v1::Argument::position`] value within `fmt` must be a valid index of `args`.",
+        "suggest": "`fmt` 中的每个 [`rt::v1::Argument::position`] 值都必须是 `args` 的有效索引。",
+        "translate": ""
+    },
+    {
+        "source": "Every [`Count::Param`] within `fmt` must contain a valid index of `args`.",
+        "suggest": "`fmt` 中的每个 [`Count::Param`] 都必须包含一个有效的 `args` 索引。",
+        "translate": ""
+    },
+    {
+        "source": "An iterator has a method, [`next`], which when called, returns an <code>[Option]\\<Item></code>.",
+        "suggest": "迭代器有一个方法 [`next`]，当调用它时，返回一个 <code>[Option]\\<Item></code>.",
+        "translate": ""
+    },
+    {
+        "source": "Calling [`next`] will return [`Some(Item)`] as long as there are elements, and once they've all been exhausted, will return `None` to indicate that iteration is finished.",
+        "suggest": "只要有元素，调用 [`next`] 就会返回 [`Some(Item)`]，一旦它们全部消费完，将返回 `None` 表示迭代完成。",
+        "translate": ""
+    },
+    {
+        "source": "The second half of the tuple that is returned is an <code>[Option]<[usize]></code>.",
+        "suggest": "返回的元组的后半部分是 <code>[Option]<[usize]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "The default implementation returns <code>(0, [None])</code> which is correct for any iterator.",
+        "suggest": "默认实现返回 <code>(0, [None])</code> 这对于任何迭代器都是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Time complexity: *O*(*n*)",
+        "suggest": "时间复杂度: *O*(*n*)",
+        "translate": ""
+    },
+    {
+        "source": "Avoid inlining the initialization closure into the common path that fetches the already initialized value",
+        "suggest": "避免将初始化闭包内联到获取已初始化值的公共路径中",
+        "translate": ""
+    },
+    {
+        "source": "Instead, Rust has *optional* pointers, like the optional owned box, <code>[Option]<[Box\\<T>]></code>.",
+        "suggest": "相反，Rust 有 *optional* 指针，就像可选的拥有所有权的 box，<code>[Option]<[Box\\<T>]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[&][][Option]\\<T></code> to <code>[Option]<[&]T></code>",
+        "suggest": "转换自 <code>[&][][Option]\\<T></code> to <code>[Option]<[&]T></code>",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[&mut] [Option]\\<T></code> to <code>[Option]<[&mut] T></code>",
+        "suggest": "转换自 <code>[&mut] [Option]\\<T></code> to <code>[Option]<[&mut] T></code>",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[&][][Option]\\<T></code> to <code>[Option]<[&]T::[Target]></code>",
+        "suggest": "转换自 <code>[&][][Option]\\<T></code> to <code>[Option]<[&]T::[Target]></code>",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[&mut] [Option]\\<T></code> to <code>[Option]<[&mut] T::[Target]></code>",
+        "suggest": "转换自 <code>[&mut] [Option]\\<T></code> to <code>[Option]<[&mut] T::[Target]></code>",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[Pin]<[&][][Option]\\<T>></code> to <code>[Option]<[Pin]<[&]T>></code>",
+        "suggest": "转换自 <code>[Pin]<[&][][Option]\\<T>></code> to <code>[Option]<[Pin]<[&]T>></code>",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[Pin]<[&mut] [Option]\\<T>></code> to <code>[Option]<[Pin]<[&mut] T>></code>",
+        "suggest": "从 <code>[Pin]<[&mut] [Option]\\<T>></code> to <code>[Option]<[Pin]<[&mut] T>></code>",
+        "translate": ""
+    },
+    {
+        "source": "reference \"shared reference\"",
+        "suggest": "参考 \"共享引用\"",
+        "translate": ""
+    },
+    {
+        "source": "reference \"mutable reference\"",
+        "suggest": "参考 \"可变引用\"",
+        "translate": ""
+    },
+    {
+        "source": "Converts an <code>Option<[String]></code> into an <code>Option<[usize]></code>, preserving the original.",
+        "suggest": "将 <code>Option<[String]></code> 转换为 <code>Option<[usize]></code>，保留原始值。",
+        "translate": ""
+    },
+    {
+        "source": "Converts from <code>[Pin]<[&]Option\\<T>></code> to <code>Option<[Pin]<[&]T>></code>.",
+        "suggest": "从 <code>[Pin]<[&]Option\\<T>></code> 到 <code>Option<[Pin]<[&]T>></code>。",
+        "translate": ""
+    },
+    {
+        "source": "Converts from <code>[Pin]<[&mut] Option\\<T>></code> to <code>Option<[Pin]<[&mut] T>></code>.",
+        "suggest": "转换自 <code>[Pin]<[&mut] Option\\<T>></code> 到 <code>Option<[Pin]<[&mut] T>></code>。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an <code>Option<[String]></code> into an <code>Option<[usize]></code>, consuming the original:",
+        "suggest": "将 <code>Option<[String]></code> 转换为 <code>Option<[usize]></code>，使用原始值:",
+        "translate": ""
+    },
+    {
+        "source": "will be mapped to <code>[Ok]\\([None])</code>.",
+        "suggest": "将被映射到 <code>[Ok]\\([None])</code>。",
+        "translate": ""
+    },
+    {
+        "source": "<code>[Some]\\([Ok]\\(\\_))</code> and <code>[Some]\\([Err]\\(\\_))</code> will be mapped to <code>[Ok]\\([Some]\\(\\_))</code> and <code>[Err]\\(\\_)</code>.",
+        "suggest": "<code>[Some]\\([Ok]\\(\\_))</code> 和 <code>[Some]\\([Err]\\(\\_))</code> 将映射到 <code>[Ok]\\([Some]\\(\\_))</code> 和 <code>[Err]\\(\\_)</code>。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an <code>[Option]<[String]></code> into an <code>[Option]<[usize]></code>, preserving the original.",
+        "suggest": "将 <code>[Option]<[String]></code>转换为 <code>[Option]<[usize]></code>，保留原始值。",
+        "translate": ""
+    },
+    {
+        "source": "The [`map`] method takes the `self` argument by value, consuming the original, so this technique uses `from` to first take an [`Option`] to a reference to the value inside the original.",
+        "suggest": "[`map`] 方法按值取 `self` 参数，消耗原始值，因此该技术使用 `from` 首先将 [`Option`] 用于对原始值内部值的引用。",
+        "translate": ""
+    },
+    {
+        "source": "The actual definition of [`Write`] uses [`io::Result`], which is just a synonym for <code>[Result]<T, [io::Error]></code>.",
+        "suggest": "[`Write`] 的实际定义使用了 [`io::Result`]，它只是 <code>[Result]<T, [io::Error]></code> 的同义词。",
+        "translate": ""
+    },
+    {
+        "source": "The default implementation returns <code>(0, [None])</code> which is correct for any stream.",
+        "suggest": "默认实现返回了 <code>(0, [None])</code>，这对于任何流都是正确的。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a <code>Poll<[String]></code> into a <code>Poll<[usize]></code>, consuming the original:",
+        "suggest": "将 <code>Poll<[String]></code> 转换为 <code>Poll<[usize]></code>，消耗原始值:",
+        "translate": ""
+    },
+    {
+        "source": "A prefix and postfix may be added.",
+        "suggest": "可以添加前缀和后缀。",
+        "translate": ""
+    },
+    {
+        "source": "The whole thing is padded to the formatter's `width`, if specified.",
+        "suggest": "如果指定，整个内容都填充到格式化程序的 `width` 中。",
+        "translate": ""
+    },
+    {
+        "source": "This closure emits the formatted duration without emitting any padding (padding is calculated below).",
+        "suggest": "这个闭包发出格式化的持续时间而不发出任何填充 (填充计算如下)。",
+        "translate": ""
+    },
+    {
+        "source": "Write the decimal point and the fractional part (if any).",
+        "suggest": "写出小数点和小数部分 (如果有)。",
+        "translate": ""
+    },
+    {
+        "source": "No `width` specified.",
+        "suggest": "未指定 `width`。",
+        "translate": ""
+    },
+    {
+        "source": "There's no need to calculate the length of the output in this case, just emit it.",
+        "suggest": "在这种情况下，不需要计算输出的长度，只需发出它。",
+        "translate": ""
+    },
+    {
+        "source": "A `width` was specified.",
+        "suggest": "指定了 `width`。",
+        "translate": ""
+    },
+    {
+        "source": "Calculate the actual width of the output in order to calculate the required padding.",
+        "suggest": "计算输出的实际宽度，以便计算所需的填充。",
+        "translate": ""
+    },
+    {
+        "source": "It consists of 4 parts:",
+        "suggest": "它由 4 个部分组成:",
+        "translate": ""
+    },
+    {
+        "source": "The prefix: is either \"+\" or \"\", so we can just use len().",
+        "suggest": "前缀: 是 \"+\" 或 \"\"，所以我们可以只使用 len()。",
+        "translate": ""
+    },
+    {
+        "source": "The postfix: can be \"µs\" so we have to count UTF8 characters.",
+        "suggest": "后缀: 可以是 \"µs\" 所以我们必须计算 UTF8 字符。",
+        "translate": ""
+    },
+    {
+        "source": "The integer part:",
+        "suggest": "整数部分:",
+        "translate": ""
+    },
+    {
+        "source": "integer_part is > 0, so has length log10(x)+1",
+        "suggest": "integer_part 是 > 0 的，所以长度是 log10(x)+1",
+        "translate": ""
+    },
+    {
+        "source": "integer_part is 0, so has length 1.",
+        "suggest": "integer_part 为 0，因此长度为 1。",
+        "translate": ""
+    },
+    {
+        "source": "The fractional part (if any):",
+        "suggest": "小数部分 (如果有) :",
+        "translate": ""
+    },
+    {
+        "source": "Output is already longer than `width`, so don't pad.",
+        "suggest": "输出已经比 `width` 长，所以不要填充。",
+        "translate": ""
+    },
+    {
+        "source": "We need to add padding.",
+        "suggest": "我们需要添加填充。",
+        "translate": ""
+    },
+    {
+        "source": "Use the `Formatter::padding` helper function.",
+        "suggest": "使用 `Formatter::padding` 帮助函数。",
+        "translate": ""
+    },
+    {
+        "source": "default alignment is left:",
+        "suggest": "默认对齐方式为左对齐:",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`HashMap`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 是通过 [`HashMap`] 上的 [`into_iter`] 方法创建的 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "This `struct` is created by the [`into_iter`] method on [`HashSet`] (provided by the [`IntoIterator`] trait).",
+        "suggest": "这个 `struct` 是通过 [`HashSet`] 上的 [`into_iter`] 方法创建的 (由 [`IntoIterator`] trait 提供)。",
+        "translate": ""
+    },
+    {
+        "source": "automatically calls `into_iter`, and takes any <code>T: [IntoIterator]</code>.",
+        "suggest": "自动调用 `into_iter`，并接受任何 <code>T: [IntoIterator]</code>。",
+        "translate": ""
+    },
+    {
+        "source": "is to <code>&[CStr]</code> as [`String`] is to <code>&[str]</code>: the former in each pair are owned strings;",
+        "suggest": "对 <code>&[CStr]</code> 就像 [`String`] 对 <code>&[str]</code> 一样: 每对中的前者是拥有所有权的字符串;",
+        "translate": ""
+    },
+    {
+        "source": "A `CString` is created from either a byte slice or a byte vector, or anything that implements <code>[Into]<[Vec]<[u8]>></code> (for example, you can build a `CString` straight out of a [`String`] or a <code>&[str]</code>, since both implement that trait).",
+        "suggest": "`CString` 是从字节切片、字节 vector 或任何实现 <code>[Into]<[Vec]<[u8]>></code> 创建的 (例如，您可以直接从 [`String`] 或 <code>&[str]</code>，因为两者都实现了该 trait)。",
+        "translate": ""
+    },
+    {
+        "source": "The [`CString::new`] method will actually check that the provided <code>&[[u8]]</code> does not have 0 bytes in the middle, and return an error if it finds one.",
+        "suggest": "[`CString::new`] 方法实际上会检查提供的 <code>&[[u8]]</code> 中是否没有 0 个字节，如果找到一个，将返回一个错误。",
+        "translate": ""
+    },
+    {
+        "source": "Alternatively, you can obtain a <code>&[[u8]]</code> slice from a `CString` with the [`CString::as_bytes`] method.",
+        "suggest": "或者，您可以使用 [`CString::as_bytes`] 方法从 `CString` 获取 <code>&[[u8]]</code> 切片。",
+        "translate": ""
+    },
+    {
+        "source": "If you need a <code>&[[u8]]</code> slice *with* the nul terminator, you can use [`CString::as_bytes_with_nul`] instead.",
+        "suggest": "如果您需要一个带 nul 终止符的 <code>&[[u8]]</code>  切片，您可以使用 [`CString::as_bytes_with_nul`] 代替。",
+        "translate": ""
+    },
+    {
+        "source": "It can be constructed safely from a <code>&[[u8]]</code> slice, or unsafely from a raw `*const c_char`.",
+        "suggest": "它可以从一个 <code>&[[u8]]</code> 切片安全地构建，或者从原始 `*const c_char` 不安全地构建。",
+        "translate": ""
+    },
+    {
+        "source": "It can then be converted to a Rust <code>&[str]</code> by performing UTF-8 validation, or into an owned [`CString`].",
+        "suggest": "然后可以通过执行 UTF-8 验证将其转换为 Rust <code>&[str]</code>，或转换为拥有所有权的 [`CString`]。",
+        "translate": ""
+    },
+    {
+        "source": "is to [`CString`] as <code>&[str]</code> is to [`String`]: the former in each pair are borrowed references;",
+        "suggest": "对 [`CString`] 就像 <code>&[str]</code> 对 [`String`] 一样: 每对中的前者都是借用的引用;",
+        "translate": ""
+    },
+    {
+        "source": "Converts a <code>[Vec]<[u8]></code> to a [`CString`] without checking the invariants on the given [`Vec`].",
+        "suggest": "将 <code>[Vec]<[u8]></code> 转换为 [`CString`]，而不检查给定的 [`Vec`] 上的不可变变量。",
+        "translate": ""
+    },
+    {
+        "source": "Attempts to converts a <code>[Vec]<[u8]></code> to a [`CString`].",
+        "suggest": "尝试将 <code>[Vec]<[u8]></code> 转换为 [`CString`]。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`CString`] into a <code>[Vec]<[u8]></code>.",
+        "suggest": "将 [`CString`] 转换为 <code>[Vec]<[u8]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a <code>[Box]<[CStr]></code> into a [`CString`] without copying or allocating.",
+        "suggest": "将 <code>[Box]<[CStr]></code> 转换为 [`CString`]，无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a <code>[Vec]<[NonZeroU8]></code> into a [`CString`] without copying nor checking for inner null bytes.",
+        "suggest": "将 <code>[Vec]<[NonZeroU8]></code> 转换为 [`CString`]，无需复制或检查内部空字节。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`CString`] into a <code>[Box]<[CStr]></code> without copying or allocating.",
+        "suggest": "将 [`CString`] 转换为 <code>[Box]<[CStr]></code>，无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`CString`] into an <code>[Arc]<[CStr]></code> without copying or allocating.",
+        "suggest": "将 [`CString`] 转换为 <code>[Arc]<[CStr]></code>，无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a [`CString`] into an <code>[Rc]<[CStr]></code> without copying or allocating.",
+        "suggest": "将 [`CString`] 转换为 <code>[Rc]<[CStr]></code>，无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Yields a <code>&[str]</code> slice if the `CStr` contains valid UTF-8.",
+        "suggest": "如果 `CStr` 包含有效的 UTF-8，则产生 <code>&[str]</code> 切片。",
+        "translate": ""
+    },
+    {
+        "source": "If the contents of the `CStr` are valid UTF-8 data, this function will return the corresponding <code>&[str]</code> slice.",
+        "suggest": "如果 `CStr` 的内容是有效的 UTF-8 数据，该函数将返回相应的 <code>&[str]</code> 切片。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `CStr` into a <code>[Cow]<[str]></code>.",
+        "suggest": "将 `CStr` 转换为 <code>[Cow]<[str]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "If the contents of the `CStr` are valid UTF-8 data, this function will return a <code>[Cow]::[Borrowed]\\(&[str])</code> with the corresponding <code>&[str]</code> slice.",
+        "suggest": "如果 `CStr` 的内容是有效的 UTF-8 数据，该函数将返回一个 <code>[Cow]::[Borrowed]\\(&[str])</code> 和相应的 <code>&[str]</code> 切片。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, it will replace any invalid UTF-8 sequences with [`U+FFFD REPLACEMENT CHARACTER`][U+FFFD] and return a <code>[Cow]::[Owned]\\(&[str])</code> with the result.",
+        "suggest": "否则，它将用 [`U+FFFD 替换字符`][U+FFFD] 替换任何无效的 UTF-8 序列，并返回 <code>[Cow]::[Owned]\\(&[str])</code> 作为结果。",
+        "translate": ""
+    },
+    {
+        "source": "While in Rust accessing a string's length is an *O*(1) operation (because the length is stored);",
+        "suggest": "而在 Rust 中，访问字符串的长度是一个 *O*(1) 操作 (因为长度是被存储的) ;",
+        "translate": ""
+    },
+    {
+        "source": "in C it is an *O*(*n*) operation because the length needs to be computed by scanning the string for the nul terminator.",
+        "suggest": "在 C 中，它是一个 *O*(*n*) 操作，因为需要通过扫描字符串中的 nul 终止符来计算长度。",
+        "translate": ""
+    },
+    {
+        "source": "Rust code can create a [`CString`] out of a normal string (provided that the string doesn't have nul characters in the middle), and then use a variety of methods to obtain a raw <code>\\*mut [u8]</code> that can then be passed as an argument to functions which use the C conventions for strings.",
+        "suggest": "Rust 代码可以从一个普通字符串中创建一个 [`CString`] (前提是该字符串中间没有 nul 字符)，然后使用多种方法获得一个原始的 <code>\\*mut [u8]</code>，然后可以作为参数传递给使用字符串的 C 约定的函数。",
+        "translate": ""
+    },
+    {
+        "source": "it is what you would use to wrap a raw <code>\\*const [u8]</code> that you got from a C function.",
+        "suggest": "它是您用来包装从 C 函数获得的原始 <code>\\*const [u8]</code> 的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Once you have a [`CStr`], you can convert it to a Rust <code>&[str]</code> if it's valid UTF-8, or lossily convert it by adding replacement characters.",
+        "suggest": "一旦您有了 [`CStr`]，您可以将它转换为 Rust <code>&[str]</code>，如果它是有效的 UTF-8，或者通过添加替换字符来有损地转换它。",
+        "translate": ""
+    },
+    {
+        "source": "it returns an <code>[Option]<[OsString]></code>. If the environment variable exists you will get a <code>[Some]\\(os_string)</code>, which you can *then* try to convert to a Rust string.",
+        "suggest": "它返回一个 <code>[Option]<[OsString]></code>。如果环境变量存在，您将得到一个 <code>[Some]\\(os_string)</code>，您可以在那时尝试将其转换为 Rust 字符串。",
+        "translate": ""
+    },
+    {
+        "source": "On Unix, [`OsStr`] implements the <code>std::os::unix::ffi::[OsStrExt][unix.OsStrExt]</code> trait, which augments it with two methods, [`from_bytes`] and [`as_bytes`].",
+        "suggest": "在 Unix 上，[`OsStr`] 实现了 <code>std::os::unix::ffi::[OsStrExt][unix.OsStrExt]</code> trait，它增加了两个方法，[`from_bytes`] 和 [`as_bytes`]。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, on Unix [`OsString`] implements the <code>std::os::unix::ffi::[OsStringExt][unix.OsStringExt]</code> trait, which provides [`from_vec`] and [`into_vec`] methods that consume their arguments, and take or produce vectors of [`u8`].",
+        "suggest": "此外，在 Unix 上，[`OsString`] 实现了 <code>std::os::unix::ffi::[OsStringExt][unix.OsStringExt]</code> trait，它提供了 [`from_vec`] 和 [`into_vec`] 方法，这些方法使用它们的参数，并获取或生成 [`u8`] 的 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "On Windows, [`OsStr`] implements the <code>std::os::windows::ffi::[OsStrExt][windows.OsStrExt]</code> trait, which provides an [`encode_wide`] method.",
+        "suggest": "在 Windows 上，[`OsStr`] 实现了 <code>std::os::windows::ffi::[OsStrExt][windows.OsStrExt]</code> trait，它提供了一个 [`encode_wide`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, on Windows [`OsString`] implements the <code>std::os::windows:ffi::[OsStringExt][windows.OsStringExt]</code> trait, which provides a [`from_wide`] method.",
+        "suggest": "此外，在 Windows 上 [`OsString`] 实现了 <code>std::os::windows:ffi::[OsStringExt][windows.OsStringExt]</code> trait，它提供了一个 [`from_wide`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "is to <code>&[OsStr]</code> as [`String`] is to <code>&[str]</code>: the former in each pair are owned strings;",
+        "suggest": "对 <code>&[OsStr]</code> 就像 [`String`] 对 <code>&[str]</code> 一样: 每对中的前者是拥有所有权的字符串;",
+        "translate": ""
+    },
+    {
+        "source": "**From a Rust string**: `OsString` implements <code>[From]<[String]></code>, so you can use <code>my_string.[into]\\()</code> to create an `OsString` from a normal Rust string.",
+        "suggest": "**来自 Rust 字符串**: `OsString` 实现了 <code>[From]<[String]></code>，因此您可以使用 <code>my_string.[into]\\()</code> 从普通 Rust 字符串创建 `OsString`。",
+        "translate": ""
+    },
+    {
+        "source": "**From slices:** Just like you can start with an empty Rust [`String`] and then [`String::push_str`] some <code>&[str]</code> sub-string slices into it, you can create an empty `OsString` with the [`OsString::new`] method and then push string slices into it with the [`OsString::push`] method.",
+        "suggest": "**从切片: **就像您可以从一个空的 Rust [`String`] 开始，然后用 [`String::push_str`] 将一些 <code>&[str]</code> 子字符串切片放入其中一样，您也可以使用 [`OsString::new`] 方法创建一个空的 `OsString`，然后使用 [`OsString::push`] 方法将字符串切片推入其中。",
+        "translate": ""
+    },
+    {
+        "source": "You can use the [`OsString::as_os_str`] method to get an <code>&[OsStr]</code> from an `OsString`;",
+        "suggest": "您可以使用 [`OsString::as_os_str`] 方法从 `OsString` 获取 <code>&[OsStr]</code> ;",
+        "translate": ""
+    },
+    {
+        "source": "is to [`OsString`] as <code>&[str]</code> is to [`String`]: the former in each pair are borrowed references;",
+        "suggest": "对 [`OsString`] 就像 <code>&[str]</code> 对 [`String`] 一样: 每对中的前者都是借用的引用;",
+        "translate": ""
+    },
+    {
+        "source": "Extends the string with the given <code>&[OsStr]</code> slice.",
+        "suggest": "用给定的 <code>&[OsStr]</code> 切片扩展字符串。",
+        "translate": ""
+    },
+    {
+        "source": "Yields a <code>&[str]</code> slice if the `OsStr` is valid Unicode.",
+        "suggest": "如果 `OsStr` 是有效的 Unicode，则产生 <code>&[str]</code>。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an `OsStr` to a <code>[Cow]<[str]></code>.",
+        "suggest": "将 `OsStr` 转换为 <code>[Cow]<[str]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a <code>[Box]<[OsStr]></code> into an [`OsString`] without copying or allocating.",
+        "suggest": "将 <code>[Box]<[OsStr]></code> 转换为 [`OsString`]，而无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an [`OsString`] into a <code>[Box]<[OsStr]></code> without copying or allocating.",
+        "suggest": "将 [`OsString`] 转换为 <code>[Box]<[OsStr]></code>，而无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an [`OsString`] into an <code>[Arc]<[OsStr]></code> without copying or allocating.",
+        "suggest": "将 [`OsString`] 转换为 <code>[Arc]<[OsStr]></code>，而无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an [`OsString`] into an <code>[Rc]<[OsStr]></code> without copying or allocating.",
+        "suggest": "将 [`OsString`] 转换为 <code>[Rc]<[OsStr]></code>，而无需复制或分配。",
+        "translate": ""
+    },
+    {
+        "source": "This iterator is returned from the [`read_dir`] function of this module and will yield instances of <code>[io::Result]<[DirEntry]></code>.",
+        "suggest": "该迭代器从该模块的 [`read_dir`] 函数返回，将产生一个 <code>[io::Result]<[DirEntry]></code> 实例。",
+        "translate": ""
+    },
+    {
+        "source": "So, before writing, save the current position (using <code>[seek]\\([SeekFrom]::[Current]\\(0))</code>), and restore it before the next read.",
+        "suggest": "所以，在写入之前，保存当前位置 (使用 <code>[seek]\\([SeekFrom]::[Current]\\(0))</code>)，并在下次读取之前恢复它。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator will yield instances of <code>[io::Result]<[DirEntry]></code>.",
+        "suggest": "迭代器将产生 <code>[io::Result]<[DirEntry]></code> 实例。",
+        "translate": ""
+    },
+    {
+        "source": "It also provides no advantage when reading from a source that is already in memory, like a <code>[Vec]\\<u8></code>.",
+        "suggest": "从已经在内存中的源读取时，它也没有任何优势，例如 <code>[Vec]\\<u8></code>.",
+        "translate": ""
+    },
+    {
+        "source": "The position used for seeking with <code>[SeekFrom::Current]\\(_)</code> is the position the underlying reader would be at if the `BufReader<R>` had no internal buffer.",
+        "suggest": "用于使用 <code>[SeekFrom::Current]\\(_)</code> 查找的位置是底层 reader 所在的位置，如果 `BufReader<R>` 没有内部缓冲区。",
+        "translate": ""
+    },
+    {
+        "source": "In the edge case where you're seeking with <code>[SeekFrom::Current]\\(n)</code> where `n` minus the internal buffer length overflows an `i64`, two seeks will be performed instead of one.",
+        "suggest": "在 edge 情况下，您使用 <code>[SeekFrom::Current]\\(n)</code> 进行查找，其中 `n` 减去内部缓冲区长度会溢出 `i64`，将执行两次查找而不是一次查找。",
+        "translate": ""
+    },
+    {
+        "source": "If the second seek returns [`Err`], the underlying reader will be left at the same position it would have if you called `seek` with <code>[SeekFrom::Current]\\(0)</code>.",
+        "suggest": "如果第二个 seek 返回 [`Err`]，则底层 reader 将保留在与使用 <code>[SeekFrom::Current]\\(0)</code> 调用 `seek` 时相同的位置。",
+        "translate": ""
+    },
+    {
+        "source": "It also provides no advantage when writing to a destination that is in memory, like a <code>[Vec]\\<u8></code>.",
+        "suggest": "在写入内存中的目标时，它也没有提供任何优势，例如 <code>[Vec]\\<u8></code>.",
+        "translate": ""
+    },
+    {
+        "source": "`Cursor`s are used with in-memory buffers, anything implementing <code>[AsRef]<\\[u8]></code>, to allow them to implement [`Read`] and/or [`Write`], allowing these buffers to be used anywhere you might use a reader or writer that does actual I/O.",
+        "suggest": "`Cursor`s 与内存缓冲区一起使用，任何实现 <code>[AsRef]<\\[u8]></code>，以允许它们实现 [`Read`] 或者 [`Write`]，从而允许这些缓冲区在您可能使用进行实际 I/O 的读取器或写入器的任何地方使用。",
+        "translate": ""
+    },
+    {
+        "source": "The standard library implements some I/O traits on various types which are commonly used as a buffer, like <code>Cursor<[Vec]\\<u8>></code> and <code>Cursor<[&\\[u8\\]][bytes]></code>.",
+        "suggest": "标准库在通常用作缓冲区的各种类型上实现了一些 I/O traits，例如 <code>Cursor<[Vec]\\<u8>></code> and <code>Cursor<[&\\[u8\\]][bytes]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "The returned type implements [`Iterator`] where the [`Item`] is <code>[Result]<[u8], [io::Error]></code>.",
+        "suggest": "返回的类型实现 [`Iterator`]，其中 [`Item`] 是 <code>[Result]<[u8], [io::Error]></code>。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator returned from this function will return instances of <code>[io::Result]<[Vec]\\<u8>></code>.",
+        "suggest": "这个函数返回的迭代器将返回 <code>[io::Result]<[Vec]\\<u8>></code>。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator returned from this function will yield instances of <code>[io::Result]<[String]></code>.",
+        "suggest": "从这个函数返回的迭代器将产生 <code>[io::Result]<[String]></code> 实例。",
+        "translate": ""
+    },
+    {
+        "source": "All reads from the returned reader will return <code>[Ok]\\(0)</code>.",
+        "suggest": "从返回的读取器中读取的所有内容都将返回 <code>[Ok]\\(0)</code>。",
+        "translate": ""
+    },
+    {
+        "source": "<code>(&[str], [u16])</code>: <code>&[str]</code> should be either a string representation of an [`IpAddr`] address as expected by [`FromStr`] implementation or a host name.",
+        "suggest": "<code>(&[str], [u16])</code>: <code>&[str]</code> 应该是 [`FromStr`] 实现所期望的 [`IpAddr`] 地址的字符串表示或主机名。",
+        "translate": ""
+    },
+    {
+        "source": "[`u16`] is the port number.",
+        "suggest": "[`u16`] 是端口号。",
+        "translate": ""
+    },
+    {
+        "source": "<code>&[str]</code>: the string should be either a string representation of a [`SocketAddr`] as expected by its [`FromStr`] implementation or a string like `<host_name>:<port>` pair where `<port>` is a [`u16`] value.",
+        "suggest": "<code>&[str]</code>: 该字符串应该是 [`SocketAddr`] 的字符串表示形式，正如其 [`FromStr`] 实现所期望的那样，或者是像 `<host_name>:<port>` 这样的字符串，其中 `<port>` 是一个 [`u16`] 值。",
+        "translate": ""
+    },
+    {
+        "source": "Converts this object to an iterator of resolved [`SocketAddr`]s.",
+        "suggest": "将此对象转换为已解析的 [`SocketAddr`] 的迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "All currently blocked and future [reads] will return <code>[Ok]\\(0)</code>.",
+        "suggest": "所有当前被阻止的和未来的 [reads] 将返回 <code>[Ok]\\(0)</code>。",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific extensions to primitives in the [`std::fs`] module.",
+        "suggest": "[`std::fs`] 模块中原语的 Linux 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Linux-specific extensions to primitives in the [`std::process`] module.",
+        "suggest": "[`std::process`] 模块中原语的 Linux 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "On modern architectures this type will always be either [`i8`] or [`u8`], as they use byte-addresses memory with 8-bit bytes.",
+        "suggest": "在现代体系结构中，这种类型将始终是 [`i8`] 或 [`u8`]，因为它们使用具有 8 位字节的字节地址内存。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the [`std::ffi`] module.",
+        "suggest": "[`std::ffi`] 模块中原语的 Unix 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the [`std::fs`] module.",
+        "suggest": "[`std::fs`] 模块中原语的 Unix 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "It exposes more ways to deal with platform-specific strings ([`OsStr`], [`OsString`]), allows to set permissions more granularly, extract low-level file descriptors from files and sockets, and has platform-specific helpers for spawning processes.",
+        "suggest": "它公开了更多处理特定平台字符串的方法 ([`OsStr`]，[`OsString`])，允许更精细地设置权限，从文件和套接字中提取低级文件描述符，并具有特定于平台的帮助程序来生成进程。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific networking functionality.",
+        "suggest": "Unix 特定的网络功能。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the [`std::process`] module.",
+        "suggest": "[`std::process`] 模块中原语的 Unix 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Unix-specific extensions to primitives in the [`std::thread`] module.",
+        "suggest": "[`std::thread`] 模块中原语的 Unix 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "WASI-specific extensions to primitives in the [`std::ffi`] module",
+        "suggest": "[`std::ffi`] 模块中原语的 WASI 特定扩展",
+        "translate": ""
+    },
+    {
+        "source": "WASI-specific extensions to primitives in the [`std::fs`] module.",
+        "suggest": "[`std::fs`] 模块中原语的 WASI 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Windows-specific extensions to primitives in the [`std::ffi`] module.",
+        "suggest": "[`std::ffi`] 模块中原语的 Windows 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Windows-specific extensions to primitives in the [`std::fs`] module.",
+        "suggest": "[`std::fs`] 模块中原语的 Windows 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "use handle with native windows bindings",
+        "suggest": "将句柄与本地 windows 绑定一起使用",
+        "translate": ""
+    },
+    {
+        "source": "Windows-specific extensions to primitives in the [`std::process`] module.",
+        "suggest": "[`std::process`] 模块中原语的 Windows 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Windows-specific extensions to primitives in the [`std::thread`] module.",
+        "suggest": "[`std::thread`] 模块中原语的 Windows 特定扩展。",
+        "translate": ""
+    },
+    {
+        "source": "The iterator will yield instances of <code>[io::Result]<[fs::DirEntry]></code>.",
+        "suggest": "迭代器将产生一个 <code>[io::Result]<[fs::DirEntry]></code> 的实例。",
+        "translate": ""
+    },
+    {
+        "source": "The handle returned from `get_handle` must be valid and non-null.",
+        "suggest": "从 `get_handle` 返回的句柄必须有效且非空。",
+        "translate": ""
+    },
+    {
+        "source": "If successful, <code>[Ok]\\([Duration])</code> is returned where the duration represents the amount of time elapsed from the specified measurement to this one.",
+        "suggest": "如果成功，则返回 <code>[Ok]\\([Duration])</code>，其中持续时间表示从指定测量到此测量所经过的时间。",
+        "translate": ""
+    },
+    {
+        "source": "If successful, <code>[Ok]\\([Duration])</code> is returned where the duration represents the amount of time elapsed from this time measurement to the current time.",
+        "suggest": "如果成功，则返回 <code>[Ok]\\([Duration])</code>，其中持续时间表示从这次时间测量到当前时间所经过的时间。",
         "translate": ""
     }
 ]
