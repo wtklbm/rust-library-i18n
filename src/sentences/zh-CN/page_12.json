@@ -731,7 +731,7 @@
     },
     {
         "source": "Free functions to create `&[T]` and `&mut [T]`.",
-        "suggest": "自由函数来创建 `&[T]` 和 `&mut [T]`。",
+        "suggest": "创建 `&[T]` 和 `&mut [T]` 的 free 函数。",
         "translate": ""
     },
     {

@@ -231,7 +231,7 @@
     },
     {
         "source": "while this type is unstable, the functionality it provides can be accessed through the [free functions in `alloc`](self#functions).",
-        "suggest": "尽管此类型不稳定，但是可以通过 [`alloc` 中的自由函数](self#functions) 访问其提供的功能。",
+        "suggest": "尽管此类型不稳定，但是可以通过 [`alloc` 中的 free 函数](self#functions) 访问其提供的功能。",
         "translate": ""
     },
     {

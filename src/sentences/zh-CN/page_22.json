@@ -2446,12 +2446,12 @@
     },
     {
         "source": "The [`thread::spawn`] free function uses a `Builder` with default configuration and [`unwrap`]s its return value.",
-        "suggest": "[`thread::spawn`] 自由函数使用默认配置的 `Builder`，并返回其值 [`unwrap`]。",
+        "suggest": "[`thread::spawn`] free 函数使用带有默认配置的 `Builder`，并且 [`unwrap`] 是其返回值。",
         "translate": ""
     },
     {
         "source": "You may want to use [`spawn`] instead of [`thread::spawn`], when you want to recover from a failure to launch a thread, indeed the free function will panic where the `Builder` method will return a [`io::Result`].",
-        "suggest": "当您想从启动线程失败中恢复时，您可能想使用 [`spawn`] 而不是 [`thread::spawn`]，实际上，实际上自由函数会在 `Builder` 方法返回 [`io::Result`] 时 panic。",
+        "suggest": "当您想从启动线程失败中恢复时，您可能想使用 [`spawn`] 而不是 [`thread::spawn`]，实际上，free 函数会在 `Builder` 方法返回 [`io::Result`] 时 panic。",
         "translate": ""
     },
     {
@@ -2526,7 +2526,7 @@
     },
     {
         "source": "Unlike the [`spawn`] free function, this method yields an [`io::Result`] to capture any failure to create the thread at the OS level.",
-        "suggest": "与 [`spawn`] 自由函数不同，此方法产生 [`io::Result`] 来捕获在操作系统级别创建线程的任何失败。",
+        "suggest": "与 [`spawn`] 的 free 函数不同，此方法产生 [`io::Result`] 来捕获在操作系统级别创建线程的任何失败。",
         "translate": ""
     },
     {
@@ -2596,7 +2596,7 @@
     },
     {
         "source": "Free functions",
-        "suggest": "自由函数",
+        "suggest": "free 函数",
         "translate": ""
     },
     {
