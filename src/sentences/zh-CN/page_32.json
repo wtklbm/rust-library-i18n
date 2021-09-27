@@ -1371,12 +1371,12 @@
     },
     {
         "source": "The iterator returned from this function will return instances of <code>[io::Result]<[Vec]\\<u8>></code>.",
-        "suggest": "这个函数返回的迭代器将返回 <code>[io::Result]<[Vec]\\<u8>></code>。",
+        "suggest": "这个函数返回的迭代器将返回 <code>[io::Result]<[Vec]\\<u8>></code> 的实例。",
         "translate": ""
     },
     {
         "source": "The iterator returned from this function will yield instances of <code>[io::Result]<[String]></code>.",
-        "suggest": "从这个函数返回的迭代器将产生 <code>[io::Result]<[String]></code> 实例。",
+        "suggest": "从这个函数返回的迭代器将产生 <code>[io::Result]<[String]></code> 的实例。",
         "translate": ""
     },
     {
