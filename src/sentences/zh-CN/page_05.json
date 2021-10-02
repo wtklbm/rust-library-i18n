@@ -1856,7 +1856,7 @@
     },
     {
         "source": "This module exists for technical reasons, the primary documentation for `char` is directly on [the `char` primitive type][char] itself.",
-        "suggest": "存在该模块是出于技术原因，`char` 的主要文档直接在 [`char` 原始类型][char] 本身上。",
+        "suggest": "存在该模块是出于技术原因，`char` 的主要文档直接放在了 [`char` 原始类型][char] 里面。",
         "translate": ""
     },
     {
@@ -2171,7 +2171,7 @@
     },
     {
         "source": "Implementations of `Clone` for primitive types.",
-        "suggest": "`Clone` 的基本类型的实现。",
+        "suggest": "原始类型的 `Clone` 实现。",
         "translate": ""
     },
     {
@@ -2891,7 +2891,7 @@
     },
     {
         "source": "Implementation of PartialEq, Eq, PartialOrd and Ord for primitive types",
-        "suggest": "基本类型的 PartialEq，Eq，PartialOrd 和 Ord 的实现",
+        "suggest": "原始类型的 PartialEq，Eq，PartialOrd 和 Ord 的实现",
         "translate": ""
     },
     {
@@ -3766,7 +3766,7 @@
     },
     {
         "source": "Rust implements `Default` for various primitives types.",
-        "suggest": "Rust 为各种基本类型实现 `Default`。",
+        "suggest": "Rust 为各种原始类型实现 `Default`。",
         "translate": ""
     },
     {

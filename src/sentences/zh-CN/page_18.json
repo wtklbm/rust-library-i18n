@@ -1,7 +1,7 @@
 [
     {
         "source": "VxWorks-specific raw type definitions",
-        "suggest": "VxWorks 特定的原始类型定义",
+        "suggest": "特定于 VxWorks 的原始类型定义",
         "translate": ""
     },
     {
@@ -1426,7 +1426,7 @@
     },
     {
         "source": "Basic types and traits",
-        "suggest": "基本类型和 traits",
+        "suggest": "原始类型和 traits",
         "translate": ""
     },
     {

@@ -626,7 +626,7 @@
     },
     {
         "source": "As one would expect, primitive types like [`u8`] and [`f64`] are all [`Sync`], and so are simple aggregate types containing them, like tuples, structs and enums.",
-        "suggest": "正如人们所期望的那样，原始类型 (如 [`u8`] 和 [`f64`]) 都是 [`Sync`]，包含它们的简单聚合类型 (如元组，结构体和枚举) 也是如此。",
+        "suggest": "正如人们所料，像 [`u8`] 和 [`f64`] 这样的原始类型都是 [`Sync`]，包含它们的简单聚合类型也是如此，比如元组、结构体和枚举。",
         "translate": ""
     },
     {
@@ -951,7 +951,7 @@
     },
     {
         "source": "Implementations of `Copy` for primitive types.",
-        "suggest": "`Copy` 的基本类型的实现。",
+        "suggest": "原始类型的 `Copy` 实现。",
         "translate": ""
     },
     {

@@ -2816,7 +2816,7 @@
     },
     {
         "source": "This includes all the basic types (like [`bool`], [`i32`], and references) as well as types consisting solely of these types.",
-        "suggest": "这包括所有基本类型 (如 [`bool`]，[`i32`] 和引用) 以及仅由这些类型组成的类型。",
+        "suggest": "这包括所有原始类型 (如 [`bool`]，[`i32`] 和引用) 以及仅由这些类型组成的类型。",
         "translate": ""
     },
     {
@@ -3691,7 +3691,7 @@
     },
     {
         "source": "This module reexports the primitive types to allow usage that is not possibly shadowed by other declared types.",
-        "suggest": "此模块重导出基本类型，以允许其他声明的类型不可能掩盖的用法。",
+        "suggest": "此模块重导出原始类型，以允许使用可能不会被其他声明的类型隐藏的类型。",
         "translate": ""
     },
     {

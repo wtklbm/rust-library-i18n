@@ -3806,7 +3806,7 @@
     },
     {
         "source": "Returns the value as a primitive type.",
-        "suggest": "以原始类型返回该值。",
+        "suggest": "将值作为原始类型返回。",
         "translate": ""
     },
     {

@@ -841,7 +841,7 @@
     },
     {
         "source": "While primitives are implemented by the compiler, the standard library implements methods directly on the primitive types (and it is the only library that does so), which are [documented in the section on primitives](#primitives).",
-        "suggest": "虽然原语是由编译器实现的，但标准库是直接在原语类型上实现方法 (而且它是唯一一个这样做的库)。在 [原语](#primitives) 部分中对此进行了说明。",
+        "suggest": "虽然原语是由编译器实现的，但标准库是直接在原始类型上实现方法 (而且它是唯一一个这样做的库)。在 [原语](#primitives) 部分中对此进行了说明。",
         "translate": ""
     },
     {
@@ -856,7 +856,7 @@
     },
     {
         "source": "So for example there is a [page for the primitive type `i32`](primitive::i32) that lists all the methods that can be called on",
-        "suggest": "例如，有一个 [基本类型为 `i32`](primitive::i32) 的页面列出了可以调用的所有方法",
+        "suggest": "例如，有一个 [原始类型为 `i32`](primitive::i32) 的页面列出了可以调用的所有方法",
         "translate": ""
     },
     {
@@ -4421,12 +4421,12 @@
     },
     {
         "source": "Dragonfly-specific definitions",
-        "suggest": "Dragonfly 的特定定义",
+        "suggest": "特定于 Dragonfly 的定义",
         "translate": ""
     },
     {
         "source": "Dragonfly-specific raw type definitions",
-        "suggest": "Dragonfly 特定的原始类型定义",
+        "suggest": "特定于 Dragonfly 的原始类型定义",
         "translate": ""
     },
     {
@@ -4496,32 +4496,32 @@
     },
     {
         "source": "FreeBSD-specific definitions",
-        "suggest": "FreeBSD 特定的定义",
+        "suggest": "特定于 FreeBSD 定义",
         "translate": ""
     },
     {
         "source": "FreeBSD-specific raw type definitions",
-        "suggest": "FreeBSD 特定的原始类型定义",
+        "suggest": "特定于 FreeBSD 的原始类型定义",
         "translate": ""
     },
     {
         "source": "Fuchsia-specific definitions",
-        "suggest": "Fuchsia 的特定定义",
+        "suggest": "特定于 Fuchsia 的定义",
         "translate": ""
     },
     {
         "source": "Fuchsia-specific raw type definitions",
-        "suggest": "Fuchsia 特定的原始类型定义",
+        "suggest": "特定于 Fuchsia 的原始类型定义",
         "translate": ""
     },
     {
         "source": "Haiku-specific definitions",
-        "suggest": "ku 句的特定定义",
+        "suggest": "特定于 Haiku 的定义",
         "translate": ""
     },
     {
         "source": "Haiku-specific raw type definitions",
-        "suggest": "ku 句特定的原始类型定义",
+        "suggest": "特定于 Haiku 的原始类型定义",
         "translate": ""
     },
     {
@@ -4531,7 +4531,7 @@
     },
     {
         "source": "illumos-specific definitions",
-        "suggest": "illumos 特定的定义",
+        "suggest": "特定于 illumos 的定义",
         "translate": ""
     },
     {
@@ -4541,12 +4541,12 @@
     },
     {
         "source": "iOS-specific definitions",
-        "suggest": "iOS 特定的定义",
+        "suggest": "特定于 iOS 的定义",
         "translate": ""
     },
     {
         "source": "iOS-specific raw type definitions",
-        "suggest": "iOS 特定的原始类型定义",
+        "suggest": "特定于 iOS 的原始类型定义",
         "translate": ""
     },
     {
@@ -4661,12 +4661,12 @@
     },
     {
         "source": "macOS-specific definitions",
-        "suggest": "macOS 特定的定义",
+        "suggest": "特定于 macOS 的定义",
         "translate": ""
     },
     {
         "source": "macOS-specific raw type definitions",
-        "suggest": "macOS 特定的原始类型定义",
+        "suggest": "特定于 macOS 的原始类型定义",
         "translate": ""
     },
     {
@@ -4701,7 +4701,7 @@
     },
     {
         "source": "NetBSD-specific raw type definitions",
-        "suggest": "NetBSD 特定的原始类型定义",
+        "suggest": "特定于 NetBSD 的原始类型定义",
         "translate": ""
     },
     {
@@ -4836,7 +4836,7 @@
     },
     {
         "source": "Code that interacts via FFI will almost certainly be using the base types provided by C, which aren't nearly as nicely defined as Rust's primitive types.",
-        "suggest": "通过 FFI 进行交互的代码几乎肯定会使用 C 提供的基本类型，而这些基本类型的定义不如 Rust 的基本类型好。",
+        "suggest": "通过 FFI 进行交互的代码几乎肯定会使用 C 提供的原始类型，而这些原始类型的定义不如 Rust 的原始类型好。",
         "translate": ""
     },
     {
@@ -4986,12 +4986,12 @@
     },
     {
         "source": "Solaris-specific definitions",
-        "suggest": "Solaris 特定的定义",
+        "suggest": "特定于 Solaris 的定义",
         "translate": ""
     },
     {
         "source": "Solaris-specific raw type definitions",
-        "suggest": "Solaris 特定的原始类型定义",
+        "suggest": "特定于 Solaris 的原始类型定义",
         "translate": ""
     },
     {

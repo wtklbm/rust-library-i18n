@@ -3341,7 +3341,7 @@
     },
     {
         "source": "is most commonly used to turn primitive types into other primitive types, but it has other uses that include turning pointers into addresses, addresses into pointers, and pointers into other pointers.",
-        "suggest": "最常用于将基本类型转换为其他基本类型，但它还有其他用途，包括将指针转换为地址、将地址转换为指针以及将指针转换为其他指针。",
+        "suggest": "最常用于将原始类型转换为其他原始类型，但它还有其他用途，包括将指针转换为地址、将地址转换为指针以及将指针转换为其他指针。",
         "translate": ""
     },
     {

@@ -2011,7 +2011,7 @@
     },
     {
         "source": "In fact, `v` is invalid according to basic type layout invariants, so *any* operation touching it is undefined behavior.",
-        "suggest": "实际上，根据基本类型布局不变式，`v` 无效，因此触摸它的 *any* 操作是未定义的行为。",
+        "suggest": "事实上，根据原始类型布局不变性，`v` 是无效的，因此，任何触及它的操作都是未定义的行为。",
         "translate": ""
     },
     {

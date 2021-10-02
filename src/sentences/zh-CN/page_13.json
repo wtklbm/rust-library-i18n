@@ -306,7 +306,7 @@
     },
     {
         "source": "This module defines atomic versions of a select number of primitive types, including [`AtomicBool`], [`AtomicIsize`], [`AtomicUsize`], [`AtomicI8`], [`AtomicU16`], etc.",
-        "suggest": "该模块定义了一些基本类型的原子版本，包括 [`AtomicBool`]，[`AtomicIsize`]，[`AtomicUsize`]，[`AtomicI8`]，[`AtomicU16`] 等。",
+        "suggest": "该模块定义了一些原始类型的原子版本，包括 [`AtomicBool`]，[`AtomicIsize`]，[`AtomicUsize`]，[`AtomicI8`]，[`AtomicU16`] 等。",
         "translate": ""
     },
     {
