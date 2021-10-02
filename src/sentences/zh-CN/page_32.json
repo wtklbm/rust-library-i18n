@@ -1776,7 +1776,7 @@
     },
     {
         "source": "Birrell's paper \"Implementing Condition Variables with Semaphores\"",
-        "suggest":  "Birrell 的论文 \"用信号量实现条件变量\"",
+        "suggest": "Birrell 的论文 \"用信号量实现条件变量\"",
         "translate": ""
     },
     {
