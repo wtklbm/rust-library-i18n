@@ -1986,7 +1986,7 @@
     },
     {
         "source": "Not all byte slices are valid string slices, however: [`&str`] requires that it is valid UTF-8.",
-        "suggest": "并非所有的字节片都是有效的字符串片，但是: [`&str`] 要求它是有效的 UTF-8。",
+        "suggest": "并非所有的字节片都是有效的字符串切片，但是: [`&str`] 要求它是有效的 UTF-8。",
         "translate": ""
     },
     {

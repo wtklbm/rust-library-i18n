@@ -2771,7 +2771,7 @@
     },
     {
         "source": "Unicode string slices.",
-        "suggest": "Unicode 字符串片。",
+        "suggest": "Unicode 字符串切片。",
         "translate": ""
     },
     {

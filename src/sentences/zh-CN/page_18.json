@@ -3151,7 +3151,7 @@
     },
     {
         "source": "String slices.",
-        "suggest": "字符串片。",
+        "suggest": "字符串切片。",
         "translate": ""
     },
     {
@@ -3171,7 +3171,7 @@
     },
     {
         "source": "String slices are always valid UTF-8.",
-        "suggest": "字符串片始终是有效的 UTF-8。",
+        "suggest": "字符串切片始终是有效的 UTF-8。",
         "translate": ""
     },
     {
