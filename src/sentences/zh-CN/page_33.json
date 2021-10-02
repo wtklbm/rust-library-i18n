@@ -3293,5 +3293,40 @@
         "source": "[`SocketAddrV6`], <code>([IpAddr], [u16])</code>, <code>([Ipv4Addr], [u16])</code>, <code>([Ipv6Addr], [u16])</code>:",
         "suggest": "[`SocketAddrV6`], <code>([IpAddr], [u16])</code>, <code>([Ipv4Addr], [u16])</code>, <code>([Ipv6Addr], [u16])</code> :",
         "translate": false
+    },
+    {
+        "source": "[`SocketAddrV6`], <code>([IpAddr], [u16])</code>, <code>([Ipv4Addr], [u16])</code>,",
+        "suggest": "[`SocketAddrV6`]、<code>([IpAddr], [u16])</code>、<code>([Ipv4Addr], [u16])</code>、",
+        "translate": false
+    },
+    {
+        "source": "<P>: parent, <C>: child, (?): don't-care",
+        "suggest": "<P>: 家长，<C>: 子节点，(?): 不在乎",
+        "translate": false
+    },
+    {
+        "source": "DETACHED (-1)  -------------------->  EXITED (?)",
+        "suggest": "分离 (-1)------------------- -> 退出 (?)",
+        "translate": false
+    },
+    {
+        "source": "INIT (0)  ----------------------->  FINISHED (-1)",
+        "suggest": "初始化 (0)---------------------- -> 完成 (-1)",
+        "translate": false
+    },
+    {
+        "source": "JOINING                              JOINED (?)",
+        "suggest": "加入 加入 (?)",
+        "translate": false
+    },
+    {
+        "source": "\\  <C>finish/wup_tsk        / <P>slp_tsk-complete/ter_tsk \\                         /                      & del_tsk",
+        "suggest": "\\<C> 完成 /wup_tsk/<P>slp_tsk-complete/ter_tsk\\/&del_tsk",
+        "translate": false
+    },
+    {
+        "source": "'--> JOIN_FINALIZE ---'",
+        "suggest": "'- -> JOIN_FINALIZE---'",
+        "translate": false
     }
 ]

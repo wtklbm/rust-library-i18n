@@ -1508,5 +1508,1150 @@
         "source": "If successful, <code>[Ok]\\([Duration])</code> is returned where the duration represents the amount of time elapsed from this time measurement to the current time.",
         "suggest": "如果成功，则返回 <code>[Ok]\\([Duration])</code>，其中持续时间表示从这次时间测量到当前时间所经过的时间。",
         "translate": ""
+    },
+    {
+        "source": "Even if you drop a `Vec`, its buffer may simply be reused by another allocation.",
+        "suggest": "即使您丢弃了一个 `Vec`，它的缓冲区也可能会被另一个分配重用。",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[&][][Option]\\<T></code> to",
+        "suggest": "从 <code>[&][][Option]\\<T></code> 转换为",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[&mut] [Option]\\<T></code> to",
+        "suggest": "从 <code>[&mut] [Option]\\<T></code> 转换为",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[Pin]<[&][][Option]\\<T>></code> to",
+        "suggest": "从 <code>[Pin]<[&][][Option]\\<T>></code> 转换为",
+        "translate": ""
+    },
+    {
+        "source": "converts from <code>[Pin]<[&mut] [Option]\\<T>></code> to",
+        "suggest": "从 <code>[Pin]<[&mut] [Option]\\<T>></code> 转换为",
+        "translate": ""
+    },
+    {
+        "source": "and <code>[Some]\\([Err]\\(\\_))</code> will be mapped to <code>[Ok]\\([Some]\\(\\_))</code> and <code>[Err]\\(\\_)</code>.",
+        "suggest": "和 <code>[Some]\\([Err]\\(\\_))</code> 将映射到 <code>[Ok]\\([Some]\\(\\_))</code> 和 <code>[Err]\\(\\_)</code>。",
+        "translate": ""
+    },
+    {
+        "source": "There were the same number of elements to switch on both blocks during the last iteration, so there are no remaining elements on either block.",
+        "suggest": "在上次迭代期间要在两个块上切换的元素数量相同，因此任何一个块上都没有剩余的元素。",
+        "translate": ""
+    },
+    {
+        "source": "Cover the remaining items with roughly equally-sized blocks.",
+        "suggest": "用大致相同大小的块覆盖剩余的项。",
+        "translate": ""
+    },
+    {
+        "source": "while the loop condition holds there are still elements in `offsets_l`, so it is safe to point `end_l` to the previous element.",
+        "suggest": "当循环条件成立时 `offsets_l` 中仍有元素，因此将 `end_l` 指向前一个元素是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "The `ptr::swap` is safe if both its arguments are valid for reads and writes:",
+        "suggest": "如果 `ptr::swap` 的参数对读和写都有效，则它是安全的:",
+        "translate": ""
+    },
+    {
+        "source": "Per the debug assert above, the distance between `l` and `r` is `block_l` elements, so there can be at most `block_l` remaining offsets between `start_l` and `end_l`.",
+        "suggest": "根据上面的调试断言，`l` 和 `r` 之间的距离是 `block_l` 元素，因此 `start_l` 和 `end_l` 之间最多可以有 `block_l` 剩余偏移量。",
+        "translate": ""
+    },
+    {
+        "source": "This means `r` will be moved at most `block_l` steps back, which makes the `r.offset` calls valid (at that point `l == r`).",
+        "suggest": "这意味着 `r` 最多将向后移动 `block_l` 步，这使得 `r.offset` 调用有效 (在那个时候 `l == r`)。",
+        "translate": ""
+    },
+    {
+        "source": "contains valid offsets into `v` collected during the partitioning of the last block, so the `l.offset` calls are valid.",
+        "suggest": "包含在最后一个块的分区过程中收集到的 `v` 的有效偏移量，因此 `l.offset` 调用是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "See the reasoning in [remaining-elements-safety].",
+        "suggest": "请参见 [剩余元素安全][remaining-elements-safety] 中的推理。",
+        "translate": ""
+    },
+    {
+        "source": "`pivot` is a reference to the first element of `v`, so `ptr::read` is safe.",
+        "suggest": "`pivot` 是对 `v` 第一个元素的引用，所以 `ptr::read` 是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "`len >= 8` so there are at least two elements in the neighborhoods of `a`, `b` and `c`.",
+        "suggest": "`len >= 8` 所以在 `a`、`b` 和 `c` 的邻域中至少有两个元素。",
+        "translate": ""
+    },
+    {
+        "source": "This means the three calls to `sort_adjacent` result in corresponding calls to `sort3` with valid 3-item neighborhoods around each pointer, which in turn means the calls to `sort2` are done with valid references.",
+        "suggest": "这意味着对 `sort_adjacent` 的三个调用导致对 `sort3` 的相应调用以及每个指针周围的有效 3 项邻域，这反过来意味着对 `sort2` 的调用是通过有效的引用完成的。",
+        "translate": ""
+    },
+    {
+        "source": "Thus the `v.get_unchecked` calls are safe, as is the `ptr::swap` call.",
+        "suggest": "因此 `v.get_unchecked` 调用是安全的，`ptr::swap` 调用也是安全的。",
+        "translate": ""
+    },
+    {
+        "source": "Trailing 0 byte will be appended by this function.",
+        "suggest": "该函数将追加尾随的 0 字节。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally, on Windows [`OsString`] implements the",
+        "suggest": "此外，在 Windows 上 [`OsString`] 实现了",
+        "translate": ""
+    },
+    {
+        "source": "trait, which provides a [`from_wide`] method.",
+        "suggest": "trait，它提供了一个 [`from_wide`] 方法。",
+        "translate": ""
+    },
+    {
+        "source": "<code>&[str]</code> should be either a string representation of an [`IpAddr`] address as expected by [`FromStr`] implementation or a host name.",
+        "suggest": "<code>&[str]</code> 应该是 [`FromStr`] 实现所期望的 [`IpAddr`] 地址的字符串表示形式或主机名。",
+        "translate": ""
+    },
+    {
+        "source": "SOLID-specific extension to the primitives in the `std::ffi` module",
+        "suggest": "`std::ffi` 模块中原语的 SOLID 特定扩展",
+        "translate": ""
+    },
+    {
+        "source": "SOLID-specific extensions to general I/O primitives",
+        "suggest": "对通用 I/O 原语的 SOLID 特定扩展",
+        "translate": ""
+    },
+    {
+        "source": "A trait to extract the raw SOLID Sockets file descriptor from an underlying object.",
+        "suggest": "从底层对象中提取原始 SOLID 套接字文件描述符的 trait。",
+        "translate": ""
+    },
+    {
+        "source": "various operations for both destructors and overloading `()`.",
+        "suggest": "析构函数和重载 `()` 的各种操作。",
+        "translate": ""
+    },
+    {
+        "source": "the ubiquitous trait that defines [`clone`][Clone::clone], the method for producing a copy of a value.",
+        "suggest": "定义 [`clone`][Clone::clone] 的无处不在的 trait ，即生成一个值副本的方法。",
+        "translate": ""
+    },
+    {
+        "source": "the comparison traits, which implement the comparison operators and are often seen in trait bounds.",
+        "suggest": "比较 traits，它实现了比较相等，经常在 trait bounds 中看到。",
+        "translate": ""
+    },
+    {
+        "source": "generic conversions, used by savvy API authors to create overloaded methods.",
+        "suggest": "泛型转换，由精明的 API 作者用来创建重载方法。",
+        "translate": ""
+    },
+    {
+        "source": "iterators of various kinds.",
+        "suggest": "各种迭代器。",
+        "translate": ""
+    },
+    {
+        "source": "a type which expresses the presence or absence of a value.",
+        "suggest": "表示值存在或不存在的类型。",
+        "translate": ""
+    },
+    {
+        "source": "a type for functions that may succeed or fail.",
+        "suggest": "一种可能成功也可能失败的函数类型。",
+        "translate": ""
+    },
+    {
+        "source": "heap-allocated strings.",
+        "suggest": "堆分配的字符串。",
+        "translate": ""
+    },
+    {
+        "source": "ABI for μITRON derivatives",
+        "suggest": "μITRON 衍生的 ABI",
+        "translate": ""
+    },
+    {
+        "source": "Kernel object ID",
+        "suggest": "内核对象 ID",
+        "translate": ""
+    },
+    {
+        "source": "The current task.",
+        "suggest": "当前任务。",
+        "translate": ""
+    },
+    {
+        "source": "Relative time",
+        "suggest": "相对时间",
+        "translate": ""
+    },
+    {
+        "source": "Timeout (a valid `RELTIM` value or `TMO_FEVR`)",
+        "suggest": "超时 (有效的 `RELTIM` 值或 `TMO_FEVR`)",
+        "translate": ""
+    },
+    {
+        "source": "The infinite timeout value",
+        "suggest": "无限超时的值",
+        "translate": ""
+    },
+    {
+        "source": "The maximum valid value of `RELTIM`",
+        "suggest": "`RELTIM` 的最大有效值",
+        "translate": ""
+    },
+    {
+        "source": "System time",
+        "suggest": "系统时间",
+        "translate": ""
+    },
+    {
+        "source": "Error code type",
+        "suggest": "错误代码类型",
+        "translate": ""
+    },
+    {
+        "source": "Error code type, `ID` on success",
+        "suggest": "错误代码类型，成功时的 `ID`",
+        "translate": ""
+    },
+    {
+        "source": "Task or interrupt priority",
+        "suggest": "任务或中断优先级",
+        "translate": ""
+    },
+    {
+        "source": "The special value of `PRI` representing the current task's priority.",
+        "suggest": "`PRI` 的特殊值，表示当前任务的优先级。",
+        "translate": ""
+    },
+    {
+        "source": "Use the priority inheritance protocol",
+        "suggest": "使用优先继承协议",
+        "translate": ""
+    },
+    {
+        "source": "Activate the task on creation",
+        "suggest": "在创建时激活任务",
+        "translate": ""
+    },
+    {
+        "source": "The maximum count of a semaphore",
+        "suggest": "信号量的最大计数",
+        "translate": ""
+    },
+    {
+        "source": "Callback parameter",
+        "suggest": "回调参数",
+        "translate": ""
+    },
+    {
+        "source": "Task entrypoint",
+        "suggest": "任务入口点",
+        "translate": ""
+    },
+    {
+        "source": "Error codes",
+        "suggest": "错误代码",
+        "translate": ""
+    },
+    {
+        "source": "conditional variable implementation based on user-space wait queues.",
+        "suggest": "基于用户空间等待队列的条件变量实现。",
+        "translate": ""
+    },
+    {
+        "source": "The implementation is inspired by the queue-based implementation shown in Andrew D.",
+        "suggest": "该实现受到了 Andrew D. 中所示的基于队列的实现的启发",
+        "translate": ""
+    },
+    {
+        "source": "Birrell's paper \"Implementing Condition Variables with Semaphores\"",
+        "suggest":  "Birrell 的论文 \"用信号量实现条件变量\"",
+        "translate": ""
+    },
+    {
+        "source": "Unpark the task",
+        "suggest": "Unpark 任务",
+        "translate": ""
+    },
+    {
+        "source": "The task already has a token.",
+        "suggest": "任务已经有一个 token。",
+        "translate": ""
+    },
+    {
+        "source": "Can't undo the effect;",
+        "suggest": "无法撤消效果;",
+        "translate": ""
+    },
+    {
+        "source": "abort the program on failure",
+        "suggest": "失败时中止程序",
+        "translate": ""
+    },
+    {
+        "source": "Construct `Waiter`.",
+        "suggest": "构建 `Waiter`。",
+        "translate": ""
+    },
+    {
+        "source": "Wait until `waiter` is removed from the queue",
+        "suggest": "等待 `waiter` 从队列中移除",
+        "translate": ""
+    },
+    {
+        "source": "Park the current task",
+        "suggest": "Park 当前任务",
+        "translate": ""
+    },
+    {
+        "source": "Construct and pin `Waiter`",
+        "suggest": "构建和固定 `Waiter`",
+        "translate": ""
+    },
+    {
+        "source": "Park the current task and do not wake up until the timeout elapses or the task gets woken up by `notify_*`",
+        "suggest": "Park 当前任务，直到超时或任务被 `notify_*` 唤醒后才唤醒",
+        "translate": ""
+    },
+    {
+        "source": "We were unparked.",
+        "suggest": "我们没有 unpark。",
+        "translate": ""
+    },
+    {
+        "source": "Are we really dequeued?",
+        "suggest": "我们真的出队了吗?",
+        "translate": ""
+    },
+    {
+        "source": "No we are not.",
+        "suggest": "不，我们没有。",
+        "translate": ""
+    },
+    {
+        "source": "Continue waiting.",
+        "suggest": "继续等待。",
+        "translate": ""
+    },
+    {
+        "source": "Remove `waiter` from `self.waiters`.",
+        "suggest": "从 `self.waiters` 上移除 `waiter`。",
+        "translate": ""
+    },
+    {
+        "source": "If `waiter` is still in `waiters`, it means we woke up because of a timeout.",
+        "suggest": "如果 `waiter` 还在 `waiters` 中，则表示我们因为超时而醒来。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, we woke up because of `notify_*`.",
+        "suggest": "否则，我们会因为 `notify_*` 而醒来。",
+        "translate": ""
+    },
+    {
+        "source": "These fields are only accessed through `&[mut] WaiterQueue`.",
+        "suggest": "这些字段只能通过 `&[mut] WaiterQueue` 访问。",
+        "translate": ""
+    },
+    {
+        "source": "The waiting task's ID.",
+        "suggest": "等待任务的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Will be zeroed when the task is woken up and removed from a queue.",
+        "suggest": "当任务被唤醒并从队列中移除时将被清零。",
+        "translate": ""
+    },
+    {
+        "source": "Zeroness of `Waiter::task` indicates whether the `Waiter` is linked to a queue or not.",
+        "suggest": "`Waiter::task` 为零表示 `Waiter` 是否链接到队列。",
+        "translate": ""
+    },
+    {
+        "source": "This invariant is important for the correctness.",
+        "suggest": "这个不可变变量对于正确性很重要。",
+        "translate": ""
+    },
+    {
+        "source": "The caller must own `*waiter_ptr`.",
+        "suggest": "调用者必须拥有 `*waiter_ptr`。",
+        "translate": ""
+    },
+    {
+        "source": "The caller will lose the ownership until `*waiter_ptr` is removed from `self`.",
+        "suggest": "调用者将失去所有权，直到 `*waiter_ptr` 从 `self` 中删除。",
+        "translate": ""
+    },
+    {
+        "source": "must be valid until it's removed from the queue.",
+        "suggest": "在从队列中删除之前必须有效的。",
+        "translate": ""
+    },
+    {
+        "source": "must not have been previously inserted to a `WaiterQueue`.",
+        "suggest": "之前不能插入到 `WaiterQueue` 中。",
+        "translate": ""
+    },
+    {
+        "source": "Find the insertion position and insert `waiter`",
+        "suggest": "找到插入位置并插入 `waiter`",
+        "translate": ""
+    },
+    {
+        "source": "and all previous waiters have the same or higher priority than `current_task_priority`.",
+        "suggest": "并且所有前面的 waiter 都具有与 `current_task_priority` 相同或更高的优先级。",
+        "translate": ""
+    },
+    {
+        "source": "Insert the new waiter right after `cursor`.",
+        "suggest": "在 `cursor` 之后立即插入新的 waiter。",
+        "translate": ""
+    },
+    {
+        "source": "Insert `waiter` after `insert_after`",
+        "suggest": "在 `insert_after` 之后插入 `waiter`",
+        "translate": ""
+    },
+    {
+        "source": "Insert `waiter` to the front",
+        "suggest": "在前面插入 `waiter`",
+        "translate": ""
+    },
+    {
+        "source": "is the only element",
+        "suggest": "是唯一的元素",
+        "translate": ""
+    },
+    {
+        "source": "Given a `Waiter` that was previously inserted to `self`, remove it from `self` if it's still there.",
+        "suggest": "给定一个之前插入到 `self` 的 `Waiter`，如果它仍然存在，请将其从 `self` 中删除。",
+        "translate": ""
+    },
+    {
+        "source": "Given a `Waiter` that was previously inserted to `self`, return a flag indicating whether it's still in `self`.",
+        "suggest": "给定一个先前插入到 `self` 的 `Waiter`，返回一个标志，指示它是否仍在 `self` 中。",
+        "translate": ""
+    },
+    {
+        "source": "Get the ID",
+        "suggest": "获取 ID",
+        "translate": ""
+    },
+    {
+        "source": "Unlink the waiter",
+        "suggest": "断开 waiter 的连接",
+        "translate": ""
+    },
+    {
+        "source": "Wraps a μITRON error code.",
+        "suggest": "包装一个 μITRON 错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "Construct `ItronError` from the specified error code.",
+        "suggest": "根据指定的错误代码构造 `ItronError`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the error code does not represent a failure or warning.",
+        "suggest": "如果错误代码不代表失败或警告，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `Ok(er)` if `er` represents a success or `Err(_)` otherwise.",
+        "suggest": "如果 `er` 表示成功，则返回 `Ok(er)`，否则返回 `Err(_)`。",
+        "translate": ""
+    },
+    {
+        "source": "Get the raw error code.",
+        "suggest": "获取原始错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "Allow the platforms to extend `error_name`",
+        "suggest": "允许平台扩展 `error_name`",
+        "translate": ""
+    },
+    {
+        "source": "Describe the specified μITRON error code.",
+        "suggest": "描述指定的 μITRON 错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if it's an undefined error code.",
+        "suggest": "如果是未定义的错误代码，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "The TOPPERS third generation kernels",
+        "suggest": "TOPPERS 第三代内核",
+        "translate": ""
+    },
+    {
+        "source": "Similar to `ItronError::err_if_negative(er).expect()` except that, while panicking, it prints the message to `panic_output` and aborts the program instead.",
+        "suggest": "与 `ItronError::err_if_negative(er).expect()` 类似，不同之处在于，当 panic 时，它将消息打印到 `panic_output` 并中止程序。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures the error message is not obscured by double panicking.",
+        "suggest": "这确保错误消息不会被双重 panic 所掩盖。",
+        "translate": ""
+    },
+    {
+        "source": "This is useful for diagnosing creation failures of synchronization primitives that are used by `std`'s internal mechanisms.",
+        "suggest": "这对于诊断 `std` 内部机制使用的同步原语的创建失败非常有用。",
+        "translate": ""
+    },
+    {
+        "source": "Such failures are common when the system is mis-configured to provide a too-small pool for kernel objects.",
+        "suggest": "当系统被错误配置为为内核对象提供一个太小的池时，这种故障很常见。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to `ItronError::err_if_negative(er).expect()` but aborts instead.",
+        "suggest": "与 `ItronError::err_if_negative(er).expect()` 类似，但改为中止。",
+        "translate": ""
+    },
+    {
+        "source": "Use this where panicking is not allowed or the effect of the failure would be persistent.",
+        "suggest": "在不允许 panic 或失败的影响将持续存在的情况下使用此选项。",
+        "translate": ""
+    },
+    {
+        "source": "Mutex implementation backed by μITRON mutexes.",
+        "suggest": "μITRON 互斥体支持互斥锁实现。",
+        "translate": ""
+    },
+    {
+        "source": "Assumes `acre_mtx` and `TA_INHERIT` are available.",
+        "suggest": "假设 `acre_mtx` 和 `TA_INHERIT` 可用。",
+        "translate": ""
+    },
+    {
+        "source": "The ID of the underlying mutex object",
+        "suggest": "底层 mutex 对象的 ID",
+        "translate": ""
+    },
+    {
+        "source": "Create a mutex object.",
+        "suggest": "创建一个 mutex 对象。",
+        "translate": ""
+    },
+    {
+        "source": "This function never panics.",
+        "suggest": "这个函数永远不会 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Priority inheritance mutex",
+        "suggest": "优先继承 mutex",
+        "translate": ""
+    },
+    {
+        "source": "Initialize `self.mtx` eagerly",
+        "suggest": "急切地初始化 `self.mtx`",
+        "translate": ""
+    },
+    {
+        "source": "Get the inner mutex's ID, which is lazily created.",
+        "suggest": "获取延迟创建的内部 mutex 的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "The lock count.",
+        "suggest": "锁计数。",
+        "translate": ""
+    },
+    {
+        "source": "Recursive lock",
+        "suggest": "递归锁",
+        "translate": ""
+    },
+    {
+        "source": "counter overflow",
+        "suggest": "计数器溢出",
+        "translate": ""
+    },
+    {
+        "source": "Locked by another thread",
+        "suggest": "被另一个线程锁定",
+        "translate": ""
+    },
+    {
+        "source": "Top-level lock by the current thread",
+        "suggest": "当前线程的顶级锁",
+        "translate": ""
+    },
+    {
+        "source": "A mutex implemented by `dis_dsp` (for intra-core synchronization) and a spinlock (for inter-core synchronization).",
+        "suggest": "由 `dis_dsp` (用于内核内同步) 和自旋锁 (用于内核间同步) 实现的互斥锁。",
+        "translate": ""
+    },
+    {
+        "source": "Acquire a lock.",
+        "suggest": "获得一个锁。",
+        "translate": ""
+    },
+    {
+        "source": "Wait until the current processor acquires a lock.",
+        "suggest": "等待直到当前处理器获得锁。",
+        "translate": ""
+    },
+    {
+        "source": "implemented by `dis_dsp` (for intra-core synchronization) and a spinlock (for inter-core synchronization).",
+        "suggest": "由 `dis_dsp` (用于内核内同步) 和自旋锁 (用于内核间同步) 实现。",
+        "translate": ""
+    },
+    {
+        "source": "It's assumed that `0` is not a valid ID, and all kernel object IDs fall into range `1..=usize::MAX`.",
+        "suggest": "假设 `0` 不是有效 ID，并且所有内核对象 ID 都在 `1..=usize::MAX` 范围内。",
+        "translate": ""
+    },
+    {
+        "source": "Assign the content without checking if it's already initialized or being initialized.",
+        "suggest": "分配内容而不检查它是否已经初始化或正在初始化。",
+        "translate": ""
+    },
+    {
+        "source": "Assumption: A positive `abi::ID` fits in `usize`.",
+        "suggest": "假设: 正的 `abi::ID` 适合 `usize`。",
+        "translate": ""
+    },
+    {
+        "source": "Warning: `f` must not perform a blocking operation, which includes panicking.",
+        "suggest": "警告: `f` 不得执行阻塞操作，包括 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Fast path",
+        "suggest": "快速路径",
+        "translate": ""
+    },
+    {
+        "source": "Safety: The inner value has been initialized",
+        "suggest": "安全: 内部值已经初始化",
+        "translate": ""
+    },
+    {
+        "source": "Store the initialized contents.",
+        "suggest": "存储初始化的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Use the release ordering to make sure the write is visible to the callers of `get`.",
+        "suggest": "使用发布顺序确保写入对 `get` 的调用者可见。",
+        "translate": ""
+    },
+    {
+        "source": "Get the ID of the task in Running state.",
+        "suggest": "获取处于运行状态的任务的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Panics on failure.",
+        "suggest": "Panics 失败。",
+        "translate": ""
+    },
+    {
+        "source": "Aborts on failure.",
+        "suggest": "失败时中止。",
+        "translate": ""
+    },
+    {
+        "source": "Get the specified task's priority.",
+        "suggest": "获取指定任务的优先级。",
+        "translate": ""
+    },
+    {
+        "source": "Thread implementation backed by μITRON tasks.",
+        "suggest": "由 μITRON 任务支持的线程实现。",
+        "translate": ""
+    },
+    {
+        "source": "Assumes `acre_tsk` and `exd_tsk` are available.",
+        "suggest": "假设 `acre_tsk` 和 `exd_tsk` 可用。",
+        "translate": ""
+    },
+    {
+        "source": "The ID of the underlying task.",
+        "suggest": "基础任务的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "State data shared between a parent thread and child thread.",
+        "suggest": "父线程和子线程之间共享的状态数据。",
+        "translate": ""
+    },
+    {
+        "source": "It's dropped on a transition to one of the final states.",
+        "suggest": "它是在过渡到最终状态之一时被丢弃的。",
+        "translate": ""
+    },
+    {
+        "source": "This field is used on thread creation to pass a closure from `Thread::new` to the created task.",
+        "suggest": "该字段用于线程创建以将来自 `Thread::new` 的闭包传递给创建的任务。",
+        "translate": ""
+    },
+    {
+        "source": "A state machine.",
+        "suggest": "状态机。",
+        "translate": ""
+    },
+    {
+        "source": "Each transition is annotated with `[...]` in the source code.",
+        "suggest": "每个转换都在源代码中用 `[...]` 注解。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: The only `!Sync` field, `ThreadInner::start`, is only touched by the task represented by `ThreadInner`.",
+        "suggest": "安全性: 唯一的 `!Sync` 字段，`ThreadInner::start`，仅被 `ThreadInner` 所代表的任务触及。",
+        "translate": ""
+    },
+    {
+        "source": "there's no single value for `JOINING`",
+        "suggest": "`JOINING` 没有单一的值",
+        "translate": ""
+    },
+    {
+        "source": "See `thread::Builder::spawn_unchecked` for safety requirements.",
+        "suggest": "有关安全要求，请参见 `thread::Builder::spawn_unchecked`。",
+        "translate": ""
+    },
+    {
+        "source": "Inherit the current task's priority",
+        "suggest": "继承当前任务的优先级",
+        "translate": ""
+    },
+    {
+        "source": "Safety: `ThreadInner` is alive at this point",
+        "suggest": "安全性: 此时 `ThreadInner` 此时处于活动状态",
+        "translate": ""
+    },
+    {
+        "source": "Safety: Since `trampoline` is called only once for each `ThreadInner` and only `trampoline` touches `start`, `start` contains contents and is safe to mutably borrow.",
+        "suggest": "安全性: 由于每个 `ThreadInner` 只调用一次 `trampoline`，并且只有 `trampoline` 接触 `start`，因此 `start` 包含内容，可以安全地可变借用。",
+        "translate": ""
+    },
+    {
+        "source": "Fix the current thread's state just in case, so that the destructors won't abort Safety: Not really unsafe",
+        "suggest": "修复当前线程的状态以防万一，以便析构函数不会终止安全: 并不是真的不安全",
+        "translate": ""
+    },
+    {
+        "source": "Run TLS destructors now because they are not called automatically for terminated tasks.",
+        "suggest": "现在运行 TLS 析构函数，因为终止的任务不会自动调用它们。",
+        "translate": ""
+    },
+    {
+        "source": "No one will ever join, so we'll ask the collector task to delete the task.",
+        "suggest": "没有人会加入，因此我们将要求收集器任务删除该任务。",
+        "translate": ""
+    },
+    {
+        "source": "In this case, `inner`'s ownership has been moved to us, And we are responsible for dropping it.",
+        "suggest": "在这种情况下，`inner` 的所有权已经转移给我们，我们负责丢弃它。",
+        "translate": ""
+    },
+    {
+        "source": "The acquire ordering is not necessary because the parent thread made no memory acccess needing synchronization since the call to `acre_tsk`.",
+        "suggest": "获取顺序不是必需的，因为当调用 `acre_tsk` 后，父线程没有进行需要同步的内存访问。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: See above.",
+        "suggest": "安全: 见上文。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: There are no pinned references to the stack",
+        "suggest": "安全性: 没有对栈的固定引用",
+        "translate": ""
+    },
+    {
+        "source": "The parent hasn't decided whether to join or detach this thread yet.",
+        "suggest": "父任务还没有决定是加入还是分离这个线程。",
+        "translate": ""
+    },
+    {
+        "source": "Whichever option the parent chooses, it'll have to delete this task.",
+        "suggest": "无论父任务选择哪个选项，它都必须删除此任务。",
+        "translate": ""
+    },
+    {
+        "source": "Since the parent might drop `*inner` as soon as it sees `FINISHED`, the release ordering must be used in the above `swap` call.",
+        "suggest": "由于父任务可能会在看到 `FINISHED` 时立即丢弃 `*inner`，因此必须在上述 `swap` 调用中使用发布顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Since the parent might drop `*inner` and terminate us as soon as it sees `JOIN_FINALIZE`, the release ordering must be used in the above `swap` call.",
+        "suggest": "由于父任务可能会丢弃 `*inner` 并在它看到 `JOIN_FINALIZE` 后立即终止我们，因此必须在上述 `swap` 调用中使用发布顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Wake up the parent task.",
+        "suggest": "唤醒父任务。",
+        "translate": ""
+    },
+    {
+        "source": "indicates there's already a parking token",
+        "suggest": "表示已经 parking token",
+        "translate": ""
+    },
+    {
+        "source": "Activate this task immediately",
+        "suggest": "立即激活此任务",
+        "translate": ""
+    },
+    {
+        "source": "The entry point",
+        "suggest": "入口点",
+        "translate": ""
+    },
+    {
+        "source": "Let the kernel allocate the stack,",
+        "suggest": "让内核分配栈，",
+        "translate": ""
+    },
+    {
+        "source": "Get the current task ID.",
+        "suggest": "获取当前任务的 ID。",
+        "translate": ""
+    },
+    {
+        "source": "Panicking here would cause a resource leak, so just abort on failure.",
+        "suggest": "在这里 panic 会导致资源泄漏，所以只要在失败时中止即可。",
+        "translate": ""
+    },
+    {
+        "source": "The child task will transition the state to `JOIN_FINALIZE` and wake us up.",
+        "suggest": "子任务将状态转换为 `JOIN_FINALIZE` 并唤醒我们。",
+        "translate": ""
+    },
+    {
+        "source": "To synchronize with the child task's memory accesses to `inner` up to the point of the assignment of `JOIN_FINALIZE`, `Ordering::Acquire` must be used for the `load`.",
+        "suggest": "为了与子任务对 `inner` 的内存访问同步到 `JOIN_FINALIZE` 的分配点，`Ordering::Acquire` 必须用于 `load`。",
+        "translate": ""
+    },
+    {
+        "source": "To synchronize with the child task's memory accesses to `inner` up to the point of the assignment of `FINISHED`, `Ordering::Acquire` must be used for the above `swap` call`.",
+        "suggest": "为了与子任务对 `inner` 的内存访问同步到 `FINISHED` 的分配点，`Ordering::Acquire` 必须用于上述 `swap` 调用 `。",
+        "translate": ""
+    },
+    {
+        "source": "Terminate and delete the task Safety: `self.task` still represents a task we own (because this method or `detach_inner` is called only once for each `Thread`).",
+        "suggest": "终止并删除任务 Safety: `self.task` 仍然代表我们拥有所有权的任务 (因为这个方法或 `detach_inner` 对于每个 `Thread` 只调用一次)。",
+        "translate": ""
+    },
+    {
+        "source": "The task indicated that it's safe to delete by entering the `FINISHED` or `JOIN_FINALIZE` state.",
+        "suggest": "该任务表明可以通过进入 `FINISHED` 或 `JOIN_FINALIZE` 状态进行安全删除。",
+        "translate": ""
+    },
+    {
+        "source": "In either case, we are responsible for dropping `inner`.",
+        "suggest": "在任何一种情况下，我们都应对丢弃 `inner` 负责。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: The contents of `self.inner` will not be accessed hereafter",
+        "suggest": "安全: `self.inner` 的内容以后将不会被访问",
+        "translate": ""
+    },
+    {
+        "source": "Skip the destructor (because it would attempt to detach the thread)",
+        "suggest": "跳过析构函数 (因为它会尝试分离线程)",
+        "translate": ""
+    },
+    {
+        "source": "Detach the thread.",
+        "suggest": "分离线程。",
+        "translate": ""
+    },
+    {
+        "source": "When the time comes, the child will figure out that no one will ever join it.",
+        "suggest": "当时机成熟时，子节点会发现没有人会加入。",
+        "translate": ""
+    },
+    {
+        "source": "The ownership of `self.inner` is moved to the child thread.",
+        "suggest": "`self.inner` 的所有权转移到子线程。",
+        "translate": ""
+    },
+    {
+        "source": "However, the release ordering is not necessary because we made no memory acccess needing synchronization since the call to `acre_tsk`.",
+        "suggest": "但是，释放顺序不是必需的，因为自从调用 `acre_tsk` 之后，我们没有进行需要同步的内存访问。",
+        "translate": ""
+    },
+    {
+        "source": "The task has already decided that we should delete the task.",
+        "suggest": "任务已经决定我们应该删除任务。",
+        "translate": ""
+    },
+    {
+        "source": "To synchronize with the child task's memory accesses to `inner` up to the point of the assignment of `FINISHED`, the acquire ordering is required for the above `swap` call.",
+        "suggest": "为了与子任务对 `inner` 的内存访问同步到 `FINISHED` 的分配点，上述 `swap` 调用需要获取排序。",
+        "translate": ""
+    },
+    {
+        "source": "Terminate and delete the task Safety: `self.task` still represents a task we own (because this method or `join_inner` is called only once for each `Thread`).",
+        "suggest": "终止并删除任务安全: `self.task` 仍然代表我们拥有的任务 (因为这个方法或 `join_inner` 对于每个 `Thread` 只调用一次)。",
+        "translate": ""
+    },
+    {
+        "source": "The task  indicated that it's safe to delete by entering the `FINISHED` state.",
+        "suggest": "任务表明可以通过进入 `FINISHED` 状态进行安全删除。",
+        "translate": ""
+    },
+    {
+        "source": "Wwe are responsible for dropping `inner`.",
+        "suggest": "Wwe 负责丢弃 `inner`。",
+        "translate": ""
+    },
+    {
+        "source": "Terminate and delete the specified task.",
+        "suggest": "终止并删除指定的任务。",
+        "translate": ""
+    },
+    {
+        "source": "This function will abort if `deleted_task` refers to the calling task.",
+        "suggest": "如果 `deleted_task` 指的是调用任务，则这个函数将终止。",
+        "translate": ""
+    },
+    {
+        "source": "It is assumed that the specified task is solely managed by the caller - i.e., other threads must not \"resuscitate\" the specified task or delete it prematurely while this function is still in progress.",
+        "suggest": "假设指定的任务是由调用者单独管理的 -- 即，在此函数仍在进行中时，其他线程不得对指定的任务进行 \"resuscitate\" 或过早删除。",
+        "translate": ""
+    },
+    {
+        "source": "It is allowed for the specified task to exit by its own.",
+        "suggest": "允许指定的任务自行退出。",
+        "translate": ""
+    },
+    {
+        "source": "The task must be safe to terminate.",
+        "suggest": "任务必须可以安全终止。",
+        "translate": ""
+    },
+    {
+        "source": "This is in general not true because there might be pinned references to the task's stack.",
+        "suggest": "这通常是不正确的，因为可能存在对任务栈的固定引用。",
+        "translate": ""
+    },
+    {
+        "source": "Terminate the task Safety: Upheld by the caller",
+        "suggest": "终止任务安全: 由调用方支持",
+        "translate": ""
+    },
+    {
+        "source": "Indicates the task is already dormant, ignore it",
+        "suggest": "表示任务已经休眠，请忽略它",
+        "translate": ""
+    },
+    {
+        "source": "Delete the task Safety: Upheld by the caller",
+        "suggest": "删除任务安全: 调用方支持",
+        "translate": ""
+    },
+    {
+        "source": "Terminate and delete the calling task.",
+        "suggest": "终止并删除调用任务。",
+        "translate": ""
+    },
+    {
+        "source": "Atomicity is not required - i.e., it can be assumed that other threads won't `ter_tsk` the calling task while this function is still in progress.",
+        "suggest": "原子性不是必需的 - 即，可以假设其他线程不会在此函数仍在进行中时 `ter_tsk` 调用任务。",
+        "translate": ""
+    },
+    {
+        "source": "(This property makes it easy to implement this operation on μITRON-derived kernels that don't support `exd_tsk`.)",
+        "suggest": "(这个属性使得在不支持 `exd_tsk` 的 μITRON 派生内核上实现这个操作变得很容易。)",
+        "translate": ""
+    },
+    {
+        "source": "Safety: `exd_tsk` never returns on success",
+        "suggest": "安全性: `exd_tsk` 永远不会成功返回",
+        "translate": ""
+    },
+    {
+        "source": "Safety: The provided pointer is valid",
+        "suggest": "安全: 提供的指针有效",
+        "translate": ""
+    },
+    {
+        "source": "There are ways to change the system time",
+        "suggest": "有多种方法可以改变系统时间",
+        "translate": ""
+    },
+    {
+        "source": "is measured in microseconds",
+        "suggest": "以微秒为单位进行测量",
+        "translate": ""
+    },
+    {
+        "source": "Split `Duration` into zero or more `RELTIM`s.",
+        "suggest": "将 `Duration` 拆分为零个或多个 `RELTIM`。",
+        "translate": ""
+    },
+    {
+        "source": "is microseconds",
+        "suggest": "是微秒",
+        "translate": ""
+    },
+    {
+        "source": "Split `Duration` into one or more `TMO`s.",
+        "suggest": "将 `Duration` 拆分为一个或多个 `TMO`。",
+        "translate": ""
+    },
+    {
+        "source": "Split `Duration` into one or more API calls with timeout.",
+        "suggest": "将 `Duration` 拆分为一个或多个带超时的 API 调用。",
+        "translate": ""
+    },
+    {
+        "source": "This function can handle spurious wakeups.",
+        "suggest": "这个函数可以处理虚假唤醒。",
+        "translate": ""
+    },
+    {
+        "source": "and `SYSTIM` are microseconds.",
+        "suggest": "和 `SYSTIM` 是微秒。",
+        "translate": ""
+    },
+    {
+        "source": "Clamp at `SYSTIM::MAX` for performance reasons.",
+        "suggest": "出于性能原因，Clamp 在 `SYSTIM::MAX` 中。",
+        "translate": ""
+    },
+    {
+        "source": "This shouldn't cause a problem in practice.",
+        "suggest": "这在实践中应该不会造成问题。",
+        "translate": ""
+    },
+    {
+        "source": "(`u64::MAX` μs ≈ 584942 years)",
+        "suggest": "(`u64::MAX` μs ≈ 584942 年)",
+        "translate": ""
+    },
+    {
+        "source": "This value can be chosen by an application",
+        "suggest": "该值可以由应用程序选择",
+        "translate": ""
+    },
+    {
+        "source": "Describe the specified SOLID error code.",
+        "suggest": "描述指定的 SOLID 错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "The SOLID error codes are a superset of μITRON error codes.",
+        "suggest": "SOLID 错误代码是 μITRON 错误代码的超集。",
+        "translate": ""
+    },
+    {
+        "source": "A file descriptor.",
+        "suggest": "一个文件描述符。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: we just asserted that the value is in the valid range and isn't `-1` (the only value bigger than `0xFF_FF_FF_FE` unsigned)",
+        "suggest": "安全性: 我们只是断言该值在有效范围内并且不是 `-1` (唯一大于 `0xFF_FF_FF_FE` 的无符号值)",
+        "translate": ""
+    },
+    {
+        "source": "Casting to `i64` is fine, too large values will end up as negative which will cause an error in `SOLID_FS_Lseek`.",
+        "suggest": "强制转换为 `i64` 很好，太大的值最终会变成负数，这将导致 `SOLID_FS_Lseek` 出现错误。",
+        "translate": ""
+    },
+    {
+        "source": "Get the new offset",
+        "suggest": "获取新的偏移量",
+        "translate": ""
+    },
+    {
+        "source": "This target doesn't support symlinks",
+        "suggest": "此目标不支持符号链接",
+        "translate": ""
+    },
+    {
+        "source": "is `pub(crate)` so that it can be accessed by `itron/error.rs` as",
+        "suggest": "是 `pub(crate)`，所以它可以被 `itron/error.rs` 访问为",
+        "translate": ""
+    },
+    {
+        "source": "Judging by the source code, it's unlimited, but specify a lower value just in case.",
+        "suggest": "从源代码来看，它是无限的，但为了以防万一，请指定一个较低的值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the last error from the network subsystem.",
+        "suggest": "从网络子系统返回最后一个错误。",
+        "translate": ""
+    },
+    {
+        "source": "there's no ErrorKind for EINPROGRESS",
+        "suggest": "EINPROGRESS 没有 ErrorKind",
+        "translate": ""
+    },
+    {
+        "source": "This method is used by sys_common code to abstract over targets.",
+        "suggest": "sys_common 代码使用该方法对目标进行抽象。",
+        "translate": ""
+    },
+    {
+        "source": "directly maps `errno`s to μITRON error codes.",
+        "suggest": "直接将 `errno`s 映射为 μITRON 错误代码。",
+        "translate": ""
+    },
+    {
+        "source": "In kmclib, `setenv` and `unsetenv` don't always set `errno`, so this function just returns a generic error.",
+        "suggest": "在 kmclib 中，`setenv` 和 `unsetenv` 并不总是设置 `errno`，所以这个函数只是返回一个通用错误。",
+        "translate": ""
+    },
+    {
+        "source": "A readers-writer lock implementation backed by the SOLID kernel extension.",
+        "suggest": "由 SOLID 内核扩展支持的 readers-writer 锁实现。",
+        "translate": ""
+    },
+    {
+        "source": "Safety: `num_readers` is protected by `mtx_num_readers`",
+        "suggest": "安全: `num_readers` 受 `mtx_num_readers` 保护",
+        "translate": ""
+    },
+    {
+        "source": "Register `tls_dtor` to make sure the TLS destructors are called for tasks created by other means than `std::thread`",
+        "suggest": "注册 `tls_dtor` 以确保为通过 `std::thread` 以外的其他方式创建的任务调用 TLS 析构函数",
+        "translate": ""
+    },
+    {
+        "source": "Swap the destructor list, call all registered destructors, and repeat this until the list becomes permanently empty.",
+        "suggest": "交换析构函数列表，调用所有已注册的析构函数，并重复这个过程，直到列表永久为空。",
+        "translate": ""
+    },
+    {
+        "source": "Drop the destructor list",
+        "suggest": "丢弃析构函数列表",
+        "translate": ""
+    },
+    {
+        "source": "implement on vxWorks, Redox, l4re",
+        "suggest": "在 vxWorks、Redox、l4re 上实现",
+        "translate": ""
+    },
+    {
+        "source": "thread_local with `const {}` triggers this liny",
+        "suggest": "带有 `const {}` 的 thread_local 会触发此 liny",
+        "translate": ""
     }
 ]
