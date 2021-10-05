@@ -416,7 +416,7 @@
     },
     {
         "source": "This means that any payloads encoded in NaNs will be preserved even if the result of this method is sent over the network from an x86 machine to a MIPS one.",
-        "suggest": "这意味着，即使通过网络从 x86 机器向 MIPS 机器发送此方法的结果，所有以 NaNs 编码的有效载荷都将保留。",
+        "suggest": "这意味着，即使此方法的结果通过网络从 x86 机器发送到 MIPS 机器，任何以 NaN 编码的 payload 也将被保留。",
         "translate": ""
     },
     {

@@ -2316,7 +2316,7 @@
     },
     {
         "source": "Returns the payload associated with the panic.",
-        "suggest": "返回与 panic 关联的有效负载。",
+        "suggest": "返回与 panic 关联的 payload。",
         "translate": ""
     },
     {
@@ -2351,7 +2351,7 @@
     },
     {
         "source": "The payload is a String when `std::panic!` is called with multiple arguments, but in that case the message is also available.",
-        "suggest": "当使用多个参数调用 `std::panic!` 时，有效负载为字符串，但是在这种情况下，该消息也可用。",
+        "suggest": "当使用多个参数调用 `std::panic!` 时，payload 是一个字符串，但是在这种情况下，消息也是可用的。",
         "translate": ""
     },
     {

@@ -2831,7 +2831,7 @@
     },
     {
         "source": "A null payload here means that we got here from the catch (...) of __rust_try.",
-        "suggest": "这里的空负载意味着我们从 __rust_try 的 catch (...) 到达这里。",
+        "suggest": "这里的 null payload 意味着我们是从 __rust_try 的 catch (...) 中得到的。",
         "translate": ""
     },
     {

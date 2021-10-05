@@ -551,7 +551,7 @@
     },
     {
         "source": "Creates a new I/O error from a known kind of error as well as an arbitrary error payload.",
-        "suggest": "根据已知的错误以及任意错误有效负载创建新的 I/O 错误。",
+        "suggest": "根据已知的错误以及任意的错误 payload 创建新的 I/O 错误。",
         "translate": ""
     },
     {
@@ -561,7 +561,7 @@
     },
     {
         "source": "The `error` argument is an arbitrary payload which will be contained in this [`Error`].",
-        "suggest": "`error` 参数是将包含在此 [`Error`] 中的任意有效负载。",
+        "suggest": "`error` 参数是将包含在此 [`Error`] 中的任意 payload。",
         "translate": ""
     },
     {

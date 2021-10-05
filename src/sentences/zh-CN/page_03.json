@@ -236,7 +236,7 @@
     },
     {
         "source": "This cannot be a valid payload address, as the payload is at least as aligned as ArcInner (usize).",
-        "suggest": "这不能是有效的有效负载地址，因为有效负载至少与 ArcInner (usize) 对齐。",
+        "suggest": "这不能是有效的 payload 地址，因为 payload 至少与 ArcInner (usize) 对齐。",
         "translate": ""
     },
     {
@@ -466,7 +466,7 @@
     },
     {
         "source": "Get the offset within an `ArcInner` for the payload behind a pointer.",
-        "suggest": "获取 `ArcInner` 内指针后面的有效载荷的偏移量。",
+        "suggest": "获取 `ArcInner` 内指针后面的 payload 的偏移量。",
         "translate": ""
     },
     {

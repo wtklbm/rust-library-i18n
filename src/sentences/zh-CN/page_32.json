@@ -141,7 +141,7 @@
     },
     {
         "source": "Determines the load function for this type.",
-        "suggest": "确定此类型的负载函数。",
+        "suggest": "确定此类型的加载函数。",
         "translate": ""
     },
     {

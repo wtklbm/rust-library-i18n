@@ -1151,7 +1151,7 @@
     },
     {
         "source": "The error contains the data being sent as a payload so it can be recovered.",
-        "suggest": "错误包含正在作为有效负载发送的数据，因此可以对其进行恢复。",
+        "suggest": "该错误包含作为 payload 发送的数据，因此可以对其进行恢复。",
         "translate": ""
     },
     {
@@ -3296,17 +3296,17 @@
     },
     {
         "source": "Testing that the sender cleans up the payload if receiver is closed",
-        "suggest": "如果接收方关闭，则测试发送方清除有效载荷",
+        "suggest": "如果接收方关闭，则测试发送方是否清理了 payload",
         "translate": ""
     },
     {
         "source": "Receiving on a closed chan will panic",
-        "suggest": "panic 在一个封闭的通道上接收",
+        "suggest": "接收一个关闭的通道会产生 panic",
         "translate": ""
     },
     {
         "source": "What is our res?",
-        "suggest": "我们的资源是什么?",
+        "suggest": "我们的 res 是什么?",
         "translate": ""
     },
     {
@@ -3321,12 +3321,12 @@
     },
     {
         "source": "wait on a oneshot",
-        "suggest": "等待一个人",
+        "suggest": "等一下",
         "translate": ""
     },
     {
         "source": "destroy a shared",
-        "suggest": "销毁共享",
+        "suggest": "销毁共享的",
         "translate": ""
     },
     {
@@ -3856,7 +3856,7 @@
     },
     {
         "source": "Note that this state is accompanied with a payload, described below.",
-        "suggest": "注意，该状态伴随有有效载荷，如下所述。",
+        "suggest": "请注意，这种状态伴随着一个 payload，如下所述。",
         "translate": ""
     },
     {

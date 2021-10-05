@@ -1601,7 +1601,7 @@
     },
     {
         "source": "This cannot be a valid payload address, as the payload is at least as aligned as RcBox (usize).",
-        "suggest": "这不能是有效的有效负载地址，因为有效负载至少与 RcBox (usize) 对齐。",
+        "suggest": "这不能是有效的 payload 地址，因为 payload 至少与 RcBox (usize) 对齐。",
         "translate": ""
     },
     {
@@ -1611,7 +1611,7 @@
     },
     {
         "source": "The payload may be dropped at this point, and we have to maintain provenance, so use raw pointer manipulation.",
-        "suggest": "有效载荷可以在此时被丢弃，所以我们必须持有 provenance，因此请使用裸指针操作。",
+        "suggest": "payload 可能会在此时被丢弃，所以我们必须保持出处，因此请使用裸指针操作。",
         "translate": ""
     },
     {
@@ -1816,7 +1816,7 @@
     },
     {
         "source": "Get the offset within an `RcBox` for the payload behind a pointer.",
-        "suggest": "获取 `RcBox` 内指针后面的有效载荷的偏移量。",
+        "suggest": "获取 `RcBox` 内指针后面的 payload 的偏移量。",
         "translate": ""
     },
     {

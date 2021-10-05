@@ -26,7 +26,7 @@
     },
     {
         "source": "Panic the current thread with the given message as the panic payload.",
-        "suggest": "Panic 当前线程，给定消息为 panic 有效负载。",
+        "suggest": "使用给定的消息作为 panic payload 使当前线程 panic。",
         "translate": ""
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "source": "The message is wrapped in a `Box<'static + Any + Send>`, which can be accessed later using [`PanicInfo::payload`].",
-        "suggest": "该消息包装在 `Box<'static + Any + Send>` 中，以后可以使用 [`PanicInfo::payload`] 进行访问。",
+        "suggest": "该消息包装在一个 `Box<'static + Any + Send>` 中，以后可以使用 [`PanicInfo::payload`] 访问它。",
         "translate": ""
     },
     {
@@ -496,7 +496,7 @@
     },
     {
         "source": "The hook is provided with a `PanicInfo` struct which contains information about the origin of the panic, including the payload passed to `panic!` and the source code location from which the panic originated.",
-        "suggest": "hook 提供了一个 `PanicInfo` 结构体，该结构体包含有关 panic 的起源的信息，包括传递给 `panic!` 的有效负载和 panic 起源的源代码位置。",
+        "suggest": "该 hook 提供了一个 `PanicInfo` 结构体，该结构体包含有关 panic 的起源的信息，包括传递给 `panic!` 的 payload 和 panic 起源的源代码位置。",
         "translate": ""
     },
     {
@@ -631,7 +631,7 @@
     },
     {
         "source": "If the closure panics (`do_catch` below), we write the panic payload into field `p`.",
-        "suggest": "如果闭包 panics (下面的 `do_catch`)，我们将 panic 有效负载写入字段 `p`。",
+        "suggest": "如果闭包 panics (下面的 `do_catch`)，我们将 panic payload 写入字段 `p`。",
         "translate": ""
     },
     {
@@ -651,7 +651,7 @@
     },
     {
         "source": "The closure panicked, in which case the panic payload was filled in.",
-        "suggest": "闭包恐慌，在这种情况下，panic 有效负载被填充。",
+        "suggest": "闭包产生 panic 后，在这种情况下，panic payload 会被填充。",
         "translate": ""
     },
     {
@@ -791,7 +791,7 @@
     },
     {
         "source": "In particular, this is the only entry point that supports arbitrary payloads, not just format strings.",
-        "suggest": "特别是，这是唯一支持任意有效载荷的入口点，而不仅仅是格式字符串。",
+        "suggest": "特别是，这是唯一支持任意 payload 的入口点，而不仅仅是格式字符串。",
         "translate": ""
     },
     {
@@ -841,12 +841,12 @@
     },
     {
         "source": "Since string formatting happens lazily when calling `payload` methods, this means we avoid formatting the string at all!",
-        "suggest": "由于调用 `payload` 方法时字符串格式化的发生比较懒惰，因此这意味着我们完全避免格式化字符串!",
+        "suggest": "由于字符串格式化在调用 `payload` 方法时发生延迟，这意味着我们完全避免格式化字符串！",
         "translate": ""
     },
     {
         "source": "(The panic runtime might still call `payload.take_box()` though and trigger formatting.)",
-        "suggest": "(尽管 panic 运行时可能仍然调用 `payload.take_box()` 并触发格式化。)",
+        "suggest": "(不过，panic 运行时可能仍然会调用 `payload.take_box()` 并触发格式化。)",
         "translate": ""
     },
     {
@@ -871,7 +871,7 @@
     },
     {
         "source": "It just forwards the payload to the panic runtime.",
-        "suggest": "它只是将有效负载转发到 panic 运行时。",
+        "suggest": "它只是将 payload 转发到 panic 运行时。",
         "translate": ""
     },
     {

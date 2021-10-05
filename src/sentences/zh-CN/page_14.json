@@ -251,7 +251,7 @@
     },
     {
         "source": "Simplied version of panic payloads, ignoring types other than `&'static str` and `String`.",
-        "suggest": "panic 有效负载的简化版本，忽略 `&'static str` 和 `String` 以外的类型。",
+        "suggest": "panic payload 的简化版本，忽略除了 `&'static str` 和 `String` 以外的类型。",
         "translate": ""
     },
     {
@@ -4356,7 +4356,7 @@
     },
     {
         "source": "The found data is returned as a payload of this variant.",
-        "suggest": "找到的数据作为该成员的有效负载返回。",
+        "suggest": "找到的数据作为该成员的 payload 返回。",
         "translate": ""
     },
     {

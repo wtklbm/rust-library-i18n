@@ -761,7 +761,7 @@
     },
     {
         "source": "Simplified version of panic payloads, ignoring types other than `&'static str` and `String`.",
-        "suggest": "panic 有效载荷的简化版本，忽略 `&'static str` 和 `String` 以外的类型。",
+        "suggest": "panic payload 的简化版本，忽略除了 `&'static str` 和 `String` 以外的类型。",
         "translate": ""
     },
     {
@@ -3916,7 +3916,7 @@
     },
     {
         "source": "The alignment of the load can be configured by doing a manual load without this intrinsic.",
-        "suggest": "负载的对齐可以通过手动加载来配置，没有这个内联函数。",
+        "suggest": "可以通过手动加载来配置负载的对齐，而无需使用这个内联函数。",
         "translate": ""
     },
     {

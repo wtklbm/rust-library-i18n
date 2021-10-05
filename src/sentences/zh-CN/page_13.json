@@ -3996,7 +3996,7 @@
     },
     {
         "source": "the payload and shim to the relevant abort on the platform in question.",
-        "suggest": "有效载荷并填充到相关平台上的相关终端。",
+        "suggest": "payload 和 shim 到相关平台上的相关 abort。",
         "translate": ""
     },
     {
@@ -4641,7 +4641,7 @@
     },
     {
         "source": "The type of the payload that the Miri engine propagates through unwinding for us.",
-        "suggest": "Miri 引擎通过展开传播的有效载荷的类型对我们来说。",
+        "suggest": "Miri 引擎通过展开为我们传播的 payload 的类型。",
         "translate": ""
     },
     {
@@ -4656,7 +4656,7 @@
     },
     {
         "source": "The payload we pass to `miri_start_panic` will be exactly the argument we get in `cleanup` below.",
-        "suggest": "我们传递给 `miri_start_panic` 的有效负载将恰好是我们在下面的 `cleanup` 中获得的参数。",
+        "suggest": "我们传递给 `miri_start_panic` 的 payload 将恰好是我们在下面的 `cleanup` 中获得的参数。",
         "translate": ""
     },
     {
@@ -4741,7 +4741,7 @@
     },
     {
         "source": "Like with Dwarf exceptions these two pointers are stored as a payload in the exception itself.",
-        "suggest": "像 Dwarf 异常一样，这两个指针作为有效载荷存储在异常本身中。",
+        "suggest": "像 Dwarf 异常一样，这两个指针作为 payload 存储在异常自身中。",
         "translate": ""
     },
     {
@@ -4956,7 +4956,7 @@
     },
     {
         "source": "A NULL payload here means that we got here from the catch (...) of __rust_try.",
-        "suggest": "此处的 NULL 负载意味着我们是从 __rust_try 的 (...) 捕获那里到达的。",
+        "suggest": "此处的 NULL payload 意味着我们是从 __rust_try 的 catch (...) 中得到的。",
         "translate": ""
     },
     {

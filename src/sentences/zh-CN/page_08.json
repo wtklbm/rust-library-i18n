@@ -56,12 +56,12 @@
     },
     {
         "source": "When using `panic!()` you can specify a string payload, that is built using the [`format!`] syntax.",
-        "suggest": "使用 `panic!()` 时，可以指定使用 [`format!`] 语法构建的字符串有效负载。",
+        "suggest": "使用 `panic!()` 时，你可以指定一个字符串 payload，它是使用 [`format!`] 语法构建的。",
         "translate": ""
     },
     {
         "source": "That payload is used when injecting the panic into the calling Rust thread, causing the thread to panic entirely.",
-        "suggest": "当将 panic 注入到调用的 Rust 线程中时，将使用该有效负载，从而导致该线程完全变为 panic。",
+        "suggest": "当将 panic 注入到调用的 Rust 线程中时，将使用这个 payload，从而导致该线程完全变为 panic。",
         "translate": ""
     },
     {
@@ -71,7 +71,7 @@
     },
     {
         "source": "the code that runs directly after the panic is invoked, is to print the message payload to `stderr` along with the file/line/column information of the `panic!()` call.",
-        "suggest": "在调用 panic 之后直接运行的代码是将消息有效负载以及 `panic!()` 调用的 file/line/column 信息打印到 `stderr`。",
+        "suggest": "在调用 panic 之后直接运行的代码是将消息 payload 以及 `panic!()` 调用的文件、行、列信息打印到 `stderr`。",
         "translate": ""
     },
     {
