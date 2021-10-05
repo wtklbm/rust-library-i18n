@@ -3328,5 +3328,10 @@
         "source": "'--> JOIN_FINALIZE ---'",
         "suggest": "'- -> JOIN_FINALIZE---'",
         "translate": false
+    },
+    {
+        "source": "(other + o*2^N) - (self + s*2^N)    mod  2^N other - self + (o-s)*2^N            mod  2^N other - self                        mod  2^N",
+        "suggest": "(other + o*2^N) - (self + s*2^N) mod 2^N other-self + (os)*2^N mod 2^N other-self mod 2^N",
+        "translate": false
     }
 ]

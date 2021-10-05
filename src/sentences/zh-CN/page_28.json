@@ -2646,7 +2646,7 @@
     },
     {
         "source": "Any pointer to an `InternalNode` can be directly cast to a pointer to the underlying `LeafNode` portion of the node, allowing code to act on leaf and internal nodes generically without having to even check which of the two a pointer is pointing at.",
-        "suggest": "任何指向 `InternalNode` 的指针都可以直接转换为指向节点底层 `LeafNode` 部分的指针，从而允许代码在一般情况下作用于叶节点和内部节点，甚至无需检查指针指向的两个节点中的哪一个。",
+        "suggest": "任何指向 `InternalNode` 的指针都可以直接转换为指向节点底层 `LeafNode` 部分的指针，从而允许代码在一般情况下作用于叶子节点和内部节点，甚至无需检查指针指向的两个节点中的哪一个。",
         "translate": ""
     },
     {

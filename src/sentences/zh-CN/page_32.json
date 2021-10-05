@@ -2653,5 +2653,310 @@
         "source": "thread_local with `const {}` triggers this liny",
         "suggest": "带有 `const {}` 的 thread_local 会触发此 liny",
         "translate": ""
+    },
+    {
+        "source": "Minimum number of elements in a node that is not a root.",
+        "suggest": "非根节点中的最小元素数。",
+        "translate": ""
+    },
+    {
+        "source": "Every non-leaf node contains at least 1 element (has at least 2 children).",
+        "suggest": "每个非叶子节点至少包含 1 个元素 (至少有 2 个子节点)。",
+        "translate": ""
+    },
+    {
+        "source": "An empty map is represented either by the absence of a root node or by a root node that is an empty leaf.",
+        "suggest": "空的 map 表示不存在根节点或根节点为空叶子。",
+        "translate": ""
+    },
+    {
+        "source": "Making this upper bound more tight during iteration would require an extra field.",
+        "suggest": "在迭代期间使这个上限更紧将需要一个额外的字段。",
+        "translate": ""
+    },
+    {
+        "source": "The returned KV handle is only valid to access the key and value, and only valid until the next call to a `deallocating_` method.",
+        "suggest": "返回的 KV 句柄仅对访问键和值有效，并且仅在下一次调用 `deallocating_` 方法之前有效。",
+        "translate": ""
+    },
+    {
+        "source": "Requires exclusive access to the `NodeRef` object but not to the root node;",
+        "suggest": "需要对 `NodeRef` 对象的独占访问，而不是对根节点的独占访问;",
+        "translate": ""
+    },
+    {
+        "source": "VecDeque::with_capacity ensures that there is enough capacity.",
+        "suggest": "VecDeque::with_capacity 确保有足够的容量。",
+        "translate": ""
+    },
+    {
+        "source": "due to unchecked casts of unsigned amounts to signed offsets the wraparound effectively results in unsigned pointers representing positions 0..usize::MAX, which is valid for ZSTs.",
+        "suggest": "由于未检查的无符号量转换为有符号偏移，环绕有效地导致表示位置 0..usize::MAX 的无符号指针，这对 ZST 有效。",
+        "translate": ""
+    },
+    {
+        "source": "the min() above ensures that step_size is in bounds",
+        "suggest": "上面的 min() 确保 step_size 在界限内",
+        "translate": ""
+    },
+    {
+        "source": "same as for advance_by()",
+        "suggest": "与 advance_by() 相同",
+        "translate": ""
+    },
+    {
+        "source": "TrustedRandomAccess (without NoCoerce) must not be implemented because subtypes/supertypes of `T` might not be `NonDrop`",
+        "suggest": "不得实现 TrustedRandomAccess (无 NoCoerce)，因为 `T` 的 subtypes/supertypes 可能不是 `NonDrop`",
+        "translate": ""
+    },
+    {
+        "source": "process_one return a bool indicates whether the processing element should be retained.",
+        "suggest": "process_one 返回一个 bool 指示是否应保留处理元素。",
+        "translate": ""
+    },
+    {
+        "source": "Stage 1: Nothing was deleted.",
+        "suggest": "第 1 阶段: 没有删除任何内容。",
+        "translate": ""
+    },
+    {
+        "source": "Stage 2: Some elements were deleted.",
+        "suggest": "第 2 阶段: 删除了一些元素。",
+        "translate": ""
+    },
+    {
+        "source": "If you only need to resize to a smaller size, use [`Vec::truncate`].",
+        "suggest": "如果您只需要调整到更小的尺寸，请使用 [`Vec::truncate`]。",
+        "translate": ""
+    },
+    {
+        "source": "If hashed by iteration alone, `(x, y)` and `(y, x)` would visit the same order of elements, resulting in the same hash.",
+        "suggest": "如果单独通过迭代进行散列，`(x, y)` 和 `(y, x)` 将访问相同顺序的元素，从而产生相同的散列。",
+        "translate": ""
+    },
+    {
+        "source": "But now that we also hash the length, they get distinct sequences of hashed data.",
+        "suggest": "但是现在我们也对长度进行了散列，他们得到了不同的散列数据序列。",
+        "translate": ""
+    },
+    {
+        "source": "we do not need to update the count since that only tallies the number of items consumed from the front.",
+        "suggest": "我们不需要更新计数，因为它只计算从前面消耗的 item 数量。",
+        "translate": ""
+    },
+    {
+        "source": "consuming items from the back can never reduce that.",
+        "suggest": "从后面消费项永远不能减少。",
+        "translate": ""
+    },
+    {
+        "source": "step_one calculation may have saturated",
+        "suggest": "step_one 计算可能已经饱和",
+        "translate": ""
+    },
+    {
+        "source": "the conditions above ensure that the count is in bounds.",
+        "suggest": "上述条件确保计数在界限内。",
+        "translate": ""
+    },
+    {
+        "source": "If start <= end then steps_between either returns a bound to which we clamp or returns None which together with the initial inequality implies more than usize::MAX steps.",
+        "suggest": "如果 start <= end 那么 steps_between 要么返回一个我们钳制的界限，要么返回 None，这与初始不等式一起意味着超过 usize::MAX 个步骤。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise 0 is returned which always safe to use.",
+        "suggest": "否则返回 0，这始终可以安全使用。",
+        "translate": ""
+    },
+    {
+        "source": "same as the spec_advance_by() implementation",
+        "suggest": "与 spec_advance_by() 实现相同",
+        "translate": ""
+    },
+    {
+        "source": "Calling `advance_back_by(0)` can do meaningful work, for example [`Flatten`] can advance its outer iterator until it finds an inner iterator that is not empty, which then often allows it to return a more accurate `size_hint()` than in its initial state.",
+        "suggest": "调用 `advance_back_by(0)` 可以做有意义的工作，例如 [`Flatten`] 可以推进它的外部迭代器，直到它找到一个不为空的内部迭代器，然后通常允许它返回一个比初始状态更准确的 `size_hint()`。",
+        "translate": ""
+    },
+    {
+        "source": "may either return `Ok()` or `Err(0)`.",
+        "suggest": "可能返回 `Ok()` 或 `Err(0)`。",
+        "translate": ""
+    },
+    {
+        "source": "The former conveys no information whether the iterator is or is not exhausted, the latter can be treated as if [`next_back`] had returned `None`.",
+        "suggest": "前者不传达迭代器是否已耗尽的信息，后者可以被视为 [`next_back`] 返回了 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Replacing a `Err(0)` with `Ok` is only correct for `n = 0`.",
+        "suggest": "用 `Ok` 替换 `Err(0)` 仅适用于 `n = 0`。",
+        "translate": ""
+    },
+    {
+        "source": "Calling `advance_by(0)` can do meaningful work, for example [`Flatten`] can advance its outer iterator until it finds an inner iterator that is not empty, which then often allows it to return a more accurate `size_hint()` than in its initial state.",
+        "suggest": "调用 `advance_by(0)` 可以做有意义的工作，例如 [`Flatten`] 可以推进它的外部迭代器，直到它找到一个不为空的内部迭代器，然后通常允许它返回一个比初始状态更准确的 `size_hint()`。",
+        "translate": ""
+    },
+    {
+        "source": "The former conveys no information whether the iterator is or is not exhausted, the latter can be treated as if [`next`] had returned `None`.",
+        "suggest": "前者不传达迭代器是否已耗尽的信息，后者可以被视为 [`next`] 返回了 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Using `&` helps LLVM see that it is the same check made in division.",
+        "suggest": "使用 `&` 有助于 LLVM 看到它是在除法中进行的相同检查。",
+        "translate": ""
+    },
+    {
+        "source": "Computes the absolute difference between `self` and `other`.",
+        "suggest": "计算 `self` 和 `other` 之间的绝对差。",
+        "translate": ""
+    },
+    {
+        "source": "This function always returns the correct answer without overflow or panics by returning an unsigned integer.",
+        "suggest": "这个函数总是通过返回一个无符号整数来返回没有溢出或 panics 的正确答案。",
+        "translate": ""
+    },
+    {
+        "source": "Converting a non-negative x from signed to unsigned by using `x as U` is left unchanged, but a negative x is converted to value x + 2^N.",
+        "suggest": "使用 `x as U` 将非负 x 从有符号转换为无符号保持不变，但负 x 转换为值 x + 2^N。",
+        "translate": ""
+    },
+    {
+        "source": "Thus if `s` and `o` are binary variables respectively indicating whether `self` and `other` are negative, we are computing the mathematical value:",
+        "suggest": "因此如果 `s` 和 `o` 分别是二元变量变量，表示 `self` 和 `other` 是否为负，我们正在计算数学值:",
+        "translate": ""
+    },
+    {
+        "source": "Finally, taking the mod 2^N of the mathematical value of `other - self` does not change it as it already is in the range [0, 2^N).",
+        "suggest": "最后，取 `other - self` 的数学值的 mod 2^N 不会改变它，因为它已经在 [0, 2^N) 范围内。",
+        "translate": ""
+    },
+    {
+        "source": "Trick LLVM into generating the psadbw instruction when SSE2 is available and this function is autovectorized for u8's.",
+        "suggest": "当 SSE2 可用时，诱使 LLVM 生成 psadbw 指令，并且此函数为 u8 自动向量化。",
+        "translate": ""
+    },
+    {
+        "source": "FIXME replace `mem::replace` by `mem::take` when the latter is const ready",
+        "suggest": "当 `mem::take` 准备好常量时，FIXME 用 `mem::take` 替换 `mem::replace`",
+        "translate": ""
+    },
+    {
+        "source": "this implementation, which sidesteps using `Option::map` since it's not const ready yet, should be reverted when possible to avoid code repetition",
+        "suggest": "此实现避开使用 `Option::map`，因为它尚未准备好常量，应尽可能还原以避免代码重复",
+        "translate": ""
+    },
+    {
+        "source": "applies the provided function to the contained value of [`Ok`], or applies the provided default fallback function to the contained value of [`Err`]",
+        "suggest": "将提供的函数应用于 [`Ok`] 的包含值，或将提供的默认回退函数应用于 [`Err`] 的包含值",
+        "translate": ""
+    },
+    {
+        "source": "Maps a `Result<T, E>` to `U` by applying a provided default fallback function to a contained [`Err`] value, or a provided function to a contained [`Ok`] value.",
+        "suggest": "通过将提供的默认回退函数应用于包含的 [`Err`] 值，或将提供的函数应用于包含的 [`Ok`] 值，Maps 将 `Result<T, E>` 转换为 `U`。",
+        "translate": ""
+    },
+    {
+        "source": "test that the methods of `Option` that take mutable references are usable in a const context",
+        "suggest": "测试 `Option` 的方法在 const 上下文中是否可用",
+        "translate": ""
+    },
+    {
+        "source": "If we've read all the way up to the capacity, reserve more space.",
+        "suggest": "如果我们一直读到容量，请保留更多空间。",
+        "translate": ""
+    },
+    {
+        "source": "Initialize any excess capacity and adjust the length so we can write to it.",
+        "suggest": "初始化任何多余的容量并调整长度，以便我们可以写入它。",
+        "translate": ""
+    },
+    {
+        "source": "The buffer might be an exact fit.",
+        "suggest": "缓冲区可能是完全合适的。",
+        "translate": ""
+    },
+    {
+        "source": "Let's read into a probe buffer and see if it returns `Ok(0)`.",
+        "suggest": "让我们读入一个探测缓冲区，看看它是否返回 `Ok(0)`。",
+        "translate": ""
+    },
+    {
+        "source": "If so, we've avoided an unnecessary doubling of the capacity.",
+        "suggest": "如果是这样，我们就避免了不必要的容量翻倍。",
+        "translate": ""
+    },
+    {
+        "source": "But if not, append the probe buffer to the primary buffer and let its capacity grow.",
+        "suggest": "但如果没有，请将探测缓冲区附加到主缓冲区并让它容量增长。",
+        "translate": ""
+    },
+    {
+        "source": "takes care not to over-allocate when a buffer is the exact size needed.",
+        "suggest": "当缓冲区是所需的确切大小时，注意不要过度分配。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this address is in a range designated for benchmarking.",
+        "suggest": "如果此地址在为基准测试指定的范围内，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "See the documentation for [`Ipv4Addr::is_benchmarking()`] and [`Ipv6Addr::is_benchmarking()`] for more details.",
+        "suggest": "有关更多详细信息，请参见 [`Ipv4Addr::is_benchmarking()`] 和 [`Ipv6Addr::is_benchmarking()`] 的文档。",
+        "translate": ""
+    },
+    {
+        "source": "Returns [`true`] if this is an address reserved for benchmarking (`2001:2::/48`).",
+        "suggest": "如果这是为基准测试 (`2001:2::/48`) 保留的地址，则返回 [`true`]。",
+        "translate": ""
+    },
+    {
+        "source": "This property is defined in [IETF RFC 5180], where it is mistakenly specified as covering the range `2001:0200::/48`.",
+        "suggest": "此属性在 [IETF RFC 5180] 中定义，其中错误地将其指定为覆盖范围 `2001:0200::/48`。",
+        "translate": ""
+    },
+    {
+        "source": "This is corrected in [IETF RFC Errata 1752] to `2001:0002::/48`.",
+        "suggest": "这在 [IETF RFC Errata 1752] 到 `2001:0002::/48` 中得到纠正。",
+        "translate": ""
+    },
+    {
+        "source": "verbatim paths need . and ..",
+        "suggest": "verbatim 路径需要 . 和 ..",
+        "translate": ""
+    },
+    {
+        "source": "removed",
+        "suggest": "移除",
+        "translate": ""
+    },
+    {
+        "source": "system_info cpu_count field gets the static data set at boot time with `smp_set_num_cpus` `get_system_info` calls then `smp_get_num_cpus`",
+        "suggest": "system_info cpu_count 字段在启动时使用 `smp_set_num_cpus` `get_system_info` 调用然后 `smp_get_num_cpus` 获取静态数据集",
+        "translate": ""
+    },
+    {
+        "source": "Only register `WSACleanup` if `WSAStartup` is actually ever called.",
+        "suggest": "仅当 `WSAStartup` 被实际调用过时才注册 `WSACleanup`。",
+        "translate": ""
+    },
+    {
+        "source": "Workaround to prevent linking to `WS2_32.dll` when no network functionality is used.",
+        "suggest": "在不使用网络功能时防止链接到 `WS2_32.dll` 的解决方法。",
+        "translate": ""
+    },
+    {
+        "source": "See issue #85441.",
+        "suggest": "请参见 issue #85441。",
+        "translate": ""
+    },
+    {
+        "source": "only perform cleanup if network functionality was actually initialized",
+        "suggest": "仅在实际初始化网络功能时才执行清理",
+        "translate": ""
     }
 ]

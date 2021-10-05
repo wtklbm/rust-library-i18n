@@ -2321,7 +2321,7 @@
     },
     {
         "source": "Try to push key-value pair into the current leaf node.",
-        "suggest": "尝试将键值对推入当前的叶节点。",
+        "suggest": "尝试将键值对推入当前的叶子节点。",
         "translate": ""
     },
     {
@@ -2721,12 +2721,12 @@
     },
     {
         "source": "Capacity of a tree with a single level, i.e., a tree who's root is a leaf node at height 0.",
-        "suggest": "具有单层的树的容量，即，树的根是高度为 0 的叶节点。",
+        "suggest": "具有单层的树的容量，即，树的根是高度为 0 的叶子节点。",
         "translate": ""
     },
     {
         "source": "Minimum number of elements to insert, to guarantee a tree with 2 levels, i.e., a tree who's root is an internal node at height 1, with edges to leaf nodes.",
-        "suggest": "插入的最小元素数量，以保证具有 2 个级别的树，即，树的根是高度为 1 的内部节点，edges 到叶节点。",
+        "suggest": "插入的最小元素数量，以保证具有 2 个级别的树，即，树的根是高度为 1 的内部节点，edges 到叶子节点。",
         "translate": ""
     },
     {
@@ -3136,7 +3136,7 @@
     },
     {
         "source": "In a tree with 3 levels, if only part of the last leaf node is split off, make sure fix_top eliminates both top levels.",
-        "suggest": "在具有 3 个级别的树中，如果仅拆分了最后一个叶节点的一部分，请确保 fix_top 消除了两个顶级。",
+        "suggest": "在具有 3 个级别的树中，如果仅拆分了最后一个叶子节点的一部分，请确保 fix_top 消除了两个顶级。",
         "translate": ""
     },
     {
@@ -4146,7 +4146,7 @@
     },
     {
         "source": "Given a leaf edge handle into a dying tree, returns the next leaf edge on the right side, and the key-value pair in between, which is either in the same leaf node, in an ancestor node, or non-existent.",
-        "suggest": "给定一个即将死去的树的叶子 edge 句柄，则返回右侧的下一个叶子 edge，以及位于两者之间的键值对，它们在同一叶节点中，在祖先节点中或不存在。",
+        "suggest": "给定一个即将死去的树的叶子 edge 句柄，则返回右侧的下一个叶子 edge，以及位于两者之间的键值对，它们在同一叶子节点中，在祖先节点中或不存在。",
         "translate": ""
     },
     {
@@ -4166,7 +4166,7 @@
     },
     {
         "source": "Given a leaf edge handle into a dying tree, returns the next leaf edge on the left side, and the key-value pair in between, which is either in the same leaf node, in an ancestor node, or non-existent.",
-        "suggest": "给定一个即将死去的树的叶子 edge 句柄，则返回左侧的下一个叶子 edge，并返回位于两者之间的键 / 值对，它们在同一叶节点中，在祖先节点中或不存在。",
+        "suggest": "给定一个即将死去的树的叶子 edge 句柄，则返回左侧的下一个叶子 edge，并返回位于两者之间的键 / 值对，它们在同一叶子节点中，在祖先节点中或不存在。",
         "translate": ""
     },
     {
@@ -4256,7 +4256,7 @@
     },
     {
         "source": "Visits leaf nodes and internal KVs in order of ascending keys, and also visits internal nodes as a whole in a depth first order, meaning that internal nodes precede their individual KVs and their child nodes.",
-        "suggest": "按键升序访问叶节点和内部 KV，还按深度优先顺序访问整个内部节点，这意味着内部节点先于其各个 KV 和其子节点。",
+        "suggest": "按键升序访问叶子节点和内部 KV，还按深度优先顺序访问整个内部节点，这意味着内部节点先于其各个 KV 和其子节点。",
         "translate": ""
     },
     {
@@ -4336,7 +4336,7 @@
     },
     {
         "source": "For a leaf node, \"having an edge\" only means we can identify a position in the node, since leaf edges are empty and need no data representation.",
-        "suggest": "对于叶节点，\"有一个 edge\" 仅意味着我们可以标识节点中的位置，因为叶 edges 为空并且不需要数据表示。",
+        "suggest": "对于叶子节点，\"有一个 edge\" 仅意味着我们可以标识节点中的位置，因为叶 edges 为空并且不需要数据表示。",
         "translate": ""
     },
     {
@@ -4346,7 +4346,7 @@
     },
     {
         "source": "The underlying representation of leaf nodes and part of the representation of internal nodes.",
-        "suggest": "叶节点的基础表示和内部节点的部分表示。",
+        "suggest": "叶子节点的基础表示和内部节点的部分表示。",
         "translate": ""
     },
     {
@@ -4416,7 +4416,7 @@
     },
     {
         "source": "Any pointer to an `InternalNode` can be directly casted to a pointer to the underlying `LeafNode` portion of the node, allowing code to act on leaf and internal nodes generically without having to even check which of the two a pointer is pointing at.",
-        "suggest": "任何指向 `InternalNode` 的指针都可以直接转换为指向节点的基础 `LeafNode` 部分的指针，从而使代码可以一般地作用于叶节点和内部节点，而不必检查指针指向的是哪两个。",
+        "suggest": "任何指向 `InternalNode` 的指针都可以直接转换为指向节点的基础 `LeafNode` 部分的指针，从而使代码可以一般地作用于叶子节点和内部节点，而不必检查指针指向的是哪两个。",
         "translate": ""
     },
     {
@@ -4651,7 +4651,7 @@
     },
     {
         "source": "When this is `Leaf`, the `NodeRef` points to a leaf node, when this is `Internal` the `NodeRef` points to an internal node, and when this is `LeafOrInternal` the `NodeRef` could be pointing to either type of node.",
-        "suggest": "当这是 `Leaf` 时，`NodeRef` 指向叶节点; 当这是 `Internal` 时，`NodeRef` 指向内部节点; 当这是 `LeafOrInternal` 时，`NodeRef` 可能指向任一类型的节点。",
+        "suggest": "当这是 `Leaf` 时，`NodeRef` 指向叶子节点; 当这是 `Internal` 时，`NodeRef` 指向内部节点; 当这是 `LeafOrInternal` 时，`NodeRef` 可能指向任一类型的节点。",
         "translate": ""
     },
     {
@@ -4936,7 +4936,7 @@
     },
     {
         "source": "Borrows exclusive access to the leaf portion of any leaf or internal node.",
-        "suggest": "借用独占访问任何叶节点或内部节点的叶部分。",
+        "suggest": "借用独占访问任何叶子节点或内部节点的叶部分。",
         "translate": ""
     },
     {
@@ -4946,7 +4946,7 @@
     },
     {
         "source": "Offers exclusive access to the leaf portion of any leaf or internal node.",
-        "suggest": "提供对任何叶节点或内部节点的叶部分的独占访问权。",
+        "suggest": "提供对任何叶子节点或内部节点的叶部分的独占访问权。",
         "translate": ""
     },
     {
