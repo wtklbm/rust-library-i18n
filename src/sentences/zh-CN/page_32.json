@@ -2958,5 +2958,10 @@
         "source": "only perform cleanup if network functionality was actually initialized",
         "suggest": "仅在实际初始化网络功能时才执行清理",
         "translate": ""
+    },
+    {
+        "source": "see issue #88585",
+        "suggest": "请参见 issue #88585",
+        "translate": ""
     }
 ]
