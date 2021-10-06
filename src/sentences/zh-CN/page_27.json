@@ -671,7 +671,7 @@
     },
     {
         "source": "This intrinsic may perform better than `_mm_loadu_si128` when the data crosses a cache line boundary.",
-        "suggest": "当数据越过缓存行边界时，此内联函数可能比 `_mm_loadu_si128` 更好。",
+        "suggest": "当数据越过高速缓存行边界时，此内部函数的性能可能比 `_mm_loadu_si128` 更好。",
         "translate": ""
     },
     {
@@ -1171,7 +1171,7 @@
     },
     {
         "source": "This intrinsic corresponds to the `VPHMINPOSUW` / `PHMINPOSUW` instruction.",
-        "suggest": "该内联函数对应于 `VPHMINPOSUW`/`PHMINPOSUW` 指令。",
+        "suggest": "该内部函数对应于 `VPHMINPOSUW`/`PHMINPOSUW` 指令。",
         "translate": ""
     },
     {
@@ -1501,7 +1501,7 @@
     },
     {
         "source": "The `_mm_cmpistri` intrinsic may also be used to find the existance of one or more of a given set of characters in the haystack.",
-        "suggest": "`_mm_cmpistri` 内联函数还可以用于查找 haystack 中一个或多个给定字符集的存在。",
+        "suggest": "`_mm_cmpistri` 内部函数还可以用于查找 haystack 中一个或多个给定字符集的存在。",
         "translate": ""
     },
     {
@@ -1976,22 +1976,22 @@
     },
     {
         "source": "Utilities used in testing the x86 intrinsics",
-        "suggest": "测试 x86 内联函数中使用的实用工具",
+        "suggest": "测试 x86 内部函数中使用的实用工具",
         "translate": ""
     },
     {
         "source": "not actually an intrinsic but useful in various tests as we proted from `i64x2::new` which is backwards from `_mm_set_epi64x`",
-        "suggest": "实际上不是内联函数，而是在各种测试中有用的，正如我们从 `i64x2::new` 推论出的那样 (从 `_mm_set_epi64x` 向后推)",
+        "suggest": "实际上不是内部函数，而是在各种测试中有用的，正如我们从 `i64x2::new` 推论出的那样 (从 `_mm_set_epi64x` 向后推)",
         "translate": ""
     },
     {
         "source": "These intrinsics doesn't exist on x86 b/c it requires a 64-bit register, which doesn't exist on x86!",
-        "suggest": "这些内联函数在 x86 b/c 上不存在，它需要一个 64 位寄存器，而 x86 上不存在!",
+        "suggest": "这些内部函数在 x86 b/c 上不存在，它需要一个 64 位寄存器，而 x86 上不存在!",
         "translate": ""
     },
     {
         "source": "`i586`'s `xsave` and `xsaveopt` target feature intrinsics",
-        "suggest": "i586 的 `xsave` 和 `xsaveopt` 目标特征的内联函数",
+        "suggest": "i586 的 `xsave` 和 `xsaveopt` 目标特征的内部函数",
         "translate": ""
     },
     {
@@ -2156,7 +2156,7 @@
     },
     {
         "source": "calls an intrinsic",
-        "suggest": "调用一个内联函数",
+        "suggest": "调用一个内部函数",
         "translate": ""
     },
     {
@@ -2166,7 +2166,7 @@
     },
     {
         "source": "This intrinsic corresponds to the `cmpxchg16b` instruction on `x86_64` processors.",
-        "suggest": "此内联函数对应于 `x86_64` 处理器上的 `cmpxchg16b` 指令。",
+        "suggest": "此内部函数对应于 `x86_64` 处理器上的 `cmpxchg16b` 指令。",
         "translate": ""
     },
     {
@@ -2291,7 +2291,7 @@
     },
     {
         "source": "This intrinsic corresponds to the `CVTSI2SS` instruction (with 64 bit input).",
-        "suggest": "此内联函数对应于 `CVTSI2SS` 指令 (具有 64 位输入)。",
+        "suggest": "此内部函数对应于 `CVTSI2SS` 指令 (具有 64 位输入)。",
         "translate": ""
     },
     {
@@ -2351,7 +2351,7 @@
     },
     {
         "source": "`x86_64`'s `xsave` and `xsaveopt` target feature intrinsics",
-        "suggest": "x86_64 的 `xsave` 和 `xsaveopt` 目标特征的内联函数",
+        "suggest": "x86_64 的 `xsave` 和 `xsaveopt` 目标特征的内部函数",
         "translate": ""
     },
     {
@@ -2406,7 +2406,7 @@
     },
     {
         "source": "A small tool that allows to quickly generate intrinsics for the NEON architecture.",
-        "suggest": "一个小型工具，可以快速生成 NEON 体系结构的内联函数。",
+        "suggest": "一个小工具，可以快速生成 NEON 体系结构的内部函数。",
         "translate": ""
     },
     {
@@ -2526,7 +2526,7 @@
     },
     {
         "source": "If the expected intrinsic is a nop it is compiled away so we can't check for it - aka the intrinsic is not generating any code",
-        "suggest": "如果期望的内联函数是 nop，它将被编译掉，所以我们无法对其进行检查 - 内联函数不会生成任何代码",
+        "suggest": "如果期望的内部函数是 nop，它将被编译掉，所以我们无法对其进行检查 - 内部函数不会生成任何代码",
         "translate": ""
     },
     {
@@ -2536,7 +2536,7 @@
     },
     {
         "source": "Look for `call` instructions in the disassembly to detect whether inlining failed: all intrinsics are `#[inline(always)]`, so calling one intrinsic from another should not generate `call` instructions.",
-        "suggest": "在反汇编中查找 `call` 指令以检测内联是否失败: 所有内联函数都为 `#[inline(always)]`，因此从另一个内联函数调用一个内联函数不应生成 `call` 指令。",
+        "suggest": "在反汇编中查找 `call` 指令以检测内联是否失败: 所有内部函数都为 `#[inline(always)]`，因此从另一个内部函数调用一个内部函数不应生成 `call` 指令。",
         "translate": ""
     },
     {
@@ -2566,7 +2566,7 @@
     },
     {
         "source": "Intrinsics using `cvtpi2ps` are typically \"composites\" and in some cases exceed the limit.",
-        "suggest": "使用 `cvtpi2ps` 的内联函数通常是 \"composites\"，在某些情况下会超出限制。",
+        "suggest": "使用 `cvtpi2ps` 的内部函数通常是 \"composites\"，在某些情况下会超出限制。",
         "translate": ""
     },
     {
@@ -2801,17 +2801,17 @@
     },
     {
         "source": "Skip some intrinsics that aren't NEON and are located in different places than the whitelists below.",
-        "suggest": "跳过一些不是 NEON 且与下面的白名单不同的地方的内联函数。",
+        "suggest": "跳过一些不是 NEON 且与下面的白名单不同的地方的内部函数。",
         "translate": ""
     },
     {
         "source": "Skip all these intrinsics as they're not listed in NEON descriptions online.",
-        "suggest": "跳过所有这些内联函数，因为它们未在线上在 NEON 说明中列出。",
+        "suggest": "跳过所有这些内部函数，因为它们未在线上在 NEON 说明中列出。",
         "translate": ""
     },
     {
         "source": "we still need to verify these intrinsics or find a reference for them, need to figure out where though!",
-        "suggest": "我们仍然需要验证这些内联函数或为它们找到引用，但是需要弄清楚在哪里!",
+        "suggest": "我们仍然需要验证这些内部函数或为它们找到引用，但是需要弄清楚在哪里!",
         "translate": ""
     },
     {
@@ -2841,7 +2841,7 @@
     },
     {
         "source": "Verification of MIPS MSA intrinsics",
-        "suggest": "MIPS MSA 内联函数的验证",
+        "suggest": "验证 MIPS MSA 内部函数",
         "translate": ""
     },
     {
@@ -2851,7 +2851,7 @@
     },
     {
         "source": "The intrinsics are just C function declarations of the form:",
-        "suggest": "内联函数只是以下形式的 C 函数声明:",
+        "suggest": "内部函数只是以下形式的 C 函数声明:",
         "translate": ""
     },
     {
@@ -2871,7 +2871,7 @@
     },
     {
         "source": "Skip some intrinsics that aren't part of MSA",
-        "suggest": "跳过一些不属于 MSA 的内联函数",
+        "suggest": "跳过一些不属于 MSA 的内部函数",
         "translate": ""
     },
     {
@@ -2886,7 +2886,7 @@
     },
     {
         "source": "To update this you can visit intel's intrinsics guide online documentation:",
-        "suggest": "要对此进行更新，您可以访问 intel 的内联函数指南在线文档:",
+        "suggest": "要对此进行更新，您可以访问 intel 的内部函数指南在线文档:",
         "translate": ""
     },
     {
@@ -2921,7 +2921,7 @@
     },
     {
         "source": "The UD2 intrinsic is not defined by Intel, but it was agreed on in the RFC Issue 2512:",
-        "suggest": "UD2 内联函数不是由 Intel 定义的，但是在 RFC Issue 2512 中已达成共识:",
+        "suggest": "UD2 内部函数不是由 Intel 定义的，但是在 RFC Issue 2512 中已达成共识:",
         "translate": ""
     },
     {
@@ -2931,7 +2931,7 @@
     },
     {
         "source": "intrinsics take a signed-integer.",
-        "suggest": "内联函数采用带符号整数。",
+        "suggest": "内部函数采用带符号整数。",
         "translate": ""
     },
     {
@@ -2941,12 +2941,12 @@
     },
     {
         "source": "these are all AMD-specific intrinsics",
-        "suggest": "这些都是 AMD 特有的内联函数",
+        "suggest": "这些都是 AMD 特有的内部函数",
         "translate": ""
     },
     {
         "source": "currently focused mainly on missing SIMD intrinsics, but there's definitely some other assorted ones that we're missing.",
-        "suggest": "目前主要集中在缺少 SIMD 内联函数上，但是肯定还有其他一些我们缺少的。",
+        "suggest": "目前主要集中在缺少 SIMD 内部函数上，但是肯定还有其他一些我们缺少的。",
         "translate": ""
     },
     {
@@ -2956,12 +2956,12 @@
     },
     {
         "source": "generate a bulleted list of missing intrinsics",
-        "suggest": "生成缺少内联函数的项目符号列表",
+        "suggest": "生成缺少内部函数的项目符号列表",
         "translate": ""
     },
     {
         "source": "Verify that all `#[target_feature]` annotations are correct, ensuring that we've actually enabled the right instruction set for this intrinsic.",
-        "suggest": "验证所有 `#[target_feature]` 批注是否正确，以确保我们实际上已为此内联函数启用了正确的指令集。",
+        "suggest": "验证所有 `#[target_feature]` 批注是否正确，以确保我们实际上已为此内部函数启用了正确的指令集。",
         "translate": ""
     },
     {
@@ -2976,12 +2976,12 @@
     },
     {
         "source": "this is needed by _xsave and probably some related intrinsics, but let's just skip it for now.",
-        "suggest": "这是 _xsave 和一些相关的内联函数所需要的，但现在让我们跳过它。",
+        "suggest": "这是 _xsave 和一些相关的内部函数所需要的，但现在让我们跳过它。",
         "translate": ""
     },
     {
         "source": "these flags on the rdtsc/rtdscp intrinsics we don't test for right now, but we may wish to add these one day!",
-        "suggest": "我们暂时不测试 rdtsc/rtdscp 内联函数上的这些标志，但我们可能希望添加这些天!",
+        "suggest": "我们暂时不测试 rdtsc/rtdscp 内部函数上的这些标志，但我们可能希望添加这些天!",
         "translate": ""
     },
     {
@@ -3006,7 +3006,7 @@
     },
     {
         "source": "Some AVX512f intrinsics are also supported by Knight's Corner.",
-        "suggest": "Knight's Corner 还支持某些 AVX512f 内联函数。",
+        "suggest": "Knight's Corner 还支持某些 AVX512f 内部函数。",
         "translate": ""
     },
     {
@@ -3016,7 +3016,7 @@
     },
     {
         "source": "The intrinsics guide calls `f16c` `fp16c` in disagreement with Intel's architecture manuals.",
-        "suggest": "内联函数指南将 `f16c` `fp16c` 称为与英特尔的体系结构手册不同的地方。",
+        "suggest": "内部函数指南将 `f16c` 称为 `fp16c`，这与英特尔的体系结构手册不一致。",
         "translate": ""
     },
     {
@@ -3041,12 +3041,12 @@
     },
     {
         "source": "These intrinsics have all been manually verified against Clang's headers to be available on x86, and the u64 arguments seem spurious I guess?",
-        "suggest": "这些内联函数都已针对 Clang 的标头进行了手动验证，以在 x86 上可用，并且 u64 参数似乎是虚假的，我猜吗?",
+        "suggest": "这些内部函数都已针对 Clang 的标头进行了手动验证，以在 x86 上可用，我猜 u64 的参数看起来是假的?",
         "translate": ""
     },
     {
         "source": "Apparently all of clang/msvc/gcc accept these intrinsics on",
-        "suggest": "显然，所有 clang/msvc/gcc 都接受这些内联函数。",
+        "suggest": "显然，所有 clang/msvc/gcc 都接受这些内部函数。",
         "translate": ""
     },
     {
@@ -3091,12 +3091,12 @@
     },
     {
         "source": "The _rdtsc intrinsic uses a __int64 return type, but this is a bug in",
-        "suggest": "_rdtsc 内联函数使用 __int64 返回类型，但这是一个错误",
+        "suggest": "_rdtsc 内部函数使用 __int64 返回类型，但这是一个错误",
         "translate": ""
     },
     {
         "source": "the intrinsics guide:",
-        "suggest": "内联函数指南:",
+        "suggest": "内部函数指南:",
         "translate": ""
     },
     {
@@ -3106,12 +3106,12 @@
     },
     {
         "source": "The _bittest and _bittest64 intrinsics takes a mutable pointer in the intrinsics guide even though it never writes through the pointer:",
-        "suggest": "_bittest 和 _bittest64 内联函数在内联函数指南中使用一个可变指针，即使它从未通过指针写入:",
+        "suggest": "_bittest 和 _bittest64 内部函数在内部函数指南中使用一个可变指针，即使它从未通过指针写入:",
         "translate": ""
     },
     {
         "source": "The _xrstor, _fxrstor, _xrstor64, _fxrstor64 intrinsics take a mutable pointer in the intrinsics guide even though they never write through the pointer:",
-        "suggest": "_xrstor，_fxrstor，_xrstor64，_fxrstor64 内联函数在内联函数指南中使用一个可变指针，即使它们从不编写指针:",
+        "suggest": "_xrstor，_fxrstor，_xrstor64，_fxrstor64 内部函数在内部函数指南中使用一个可变指针，即使它们从不编写指针:",
         "translate": ""
     },
     {
@@ -4911,7 +4911,7 @@
     },
     {
         "source": "We need target_feature for the intrinsic to work",
-        "suggest": "我们需要 target_feature 才能使内联函数正常工作",
+        "suggest": "我们需要 target_feature 才能使内部函数正常工作",
         "translate": ""
     },
     {
@@ -4951,7 +4951,7 @@
     },
     {
         "source": "Feature specific intrinsics will work here!",
-        "suggest": "特定于特征的内联函数将在这里工作!",
+        "suggest": "特定于特征的内部函数将在这里工作!",
         "translate": ""
     },
     {

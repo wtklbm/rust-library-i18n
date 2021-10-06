@@ -2026,7 +2026,7 @@
     },
     {
         "source": "Compiler intrinsics.",
-        "suggest": "编译器内联函数。",
+        "suggest": "编译器内部函数。",
         "translate": ""
     },
     {
@@ -2041,12 +2041,12 @@
     },
     {
         "source": "Const intrinsics",
-        "suggest": "常量内联函数",
+        "suggest": "常量内部函数",
         "translate": ""
     },
     {
         "source": "any changes to the constness of intrinsics should be discussed with the language team.",
-        "suggest": "对内联函数常量的任何更改都应与语言团队讨论。",
+        "suggest": "对内部函数常量的任何更改都应与语言团队讨论。",
         "translate": ""
     },
     {
@@ -2056,12 +2056,12 @@
     },
     {
         "source": "In order to make an intrinsic usable at compile-time, one needs to copy the implementation from <https://github.com/rust-lang/miri/blob/master/src/shims/intrinsics.rs> to `compiler/rustc_mir/src/interpret/intrinsics.rs` and add a `#[rustc_const_unstable(feature = \"foo\", issue = \"01234\")]` to the intrinsic.",
-        "suggest": "为了使内联函数在编译时可用，需要将实现从 <https://github.com/rust-lang/miri/blob/master/src/shims/intrinsics.rs> 复制到 `compiler/rustc_mir/src/interpret/intrinsics.rs` 并将 `#[rustc_const_unstable(feature = \"foo\", issue = \"01234\")]` 添加到内联函数。",
+        "suggest": "为了使内部函数在编译时可用，需要将实现从 <https://github.com/rust-lang/miri/blob/master/src/shims/intrinsics.rs> 复制到 `compiler/rustc_mir/src/interpret/intrinsics.rs` 并将 `#[rustc_const_unstable(feature = \"foo\", issue = \"01234\")]` 添加到内部函数。",
         "translate": ""
     },
     {
         "source": "If an intrinsic is supposed to be used from a `const fn` with a `rustc_const_stable` attribute, the intrinsic's attribute must be `rustc_const_stable`, too.",
-        "suggest": "如果应该从具有 `rustc_const_stable` 属性的 `const fn` 使用内联函数，则内联函数的属性也必须为 `rustc_const_stable`。",
+        "suggest": "如果应该从具有 `rustc_const_stable` 属性的 `const fn` 使用内部函数，则内部函数的属性也必须为 `rustc_const_stable`。",
         "translate": ""
     },
     {
@@ -2071,7 +2071,7 @@
     },
     {
         "source": "The volatile intrinsics provide operations intended to act on I/O memory, which are guaranteed to not be reordered by the compiler across other volatile intrinsics.",
-        "suggest": "易失性内联函数提供旨在作用于 I/O 内存的操作，并保证编译器不会在其他易失性内联函数之间对它们进行重新排序。",
+        "suggest": "volatile 内部函数提供旨在作用于 I/O 内存的操作，并保证编译器不会在其他 volatile 内部函数之间对它们进行重新排序。",
         "translate": ""
     },
     {
@@ -2081,7 +2081,7 @@
     },
     {
         "source": "The atomic intrinsics provide common atomic operations on machine words, with multiple possible memory orderings.",
-        "suggest": "原子内联函数对机器字提供常见的原子操作，并具有多种可能的存储顺序。",
+        "suggest": "原子内部函数对机器字提供常见的原子操作，并具有多种可能的存储顺序。",
         "translate": ""
     },
     {
@@ -2141,7 +2141,7 @@
     },
     {
         "source": "N.B., these intrinsics take raw pointers because they mutate aliased memory, which is not valid for either `&` or `&mut`.",
-        "suggest": "注意，这些内联函数采用裸指针，因为它们会使别名内存发生可变的，这对于 `&` 或 `&mut` 均无效。",
+        "suggest": "注意，这些内部函数采用裸指针，因为它们会使别名内存发生可变的，这对于 `&` 或 `&mut` 均无效。",
         "translate": ""
     },
     {
@@ -2151,7 +2151,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::SeqCst`] as both the `success` and `failure` parameters.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2161,87 +2161,87 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::Acquire`] as both the `success` and `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Acquire`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::Release`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::AcqRel`] as the `success` and [`Ordering::Acquire`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::Relaxed`] as both the `success` and `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::SeqCst`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::SeqCst`] as the `success` and [`Ordering::Acquire`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::Acquire`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange` method by passing [`Ordering::AcqRel`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::SeqCst`] as both the `success` and `failure` parameters.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::Acquire`] as both the `success` and `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Acquire`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::Release`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::AcqRel`] as the `success` and [`Ordering::Acquire`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::Relaxed`] as both the `success` and `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 用作 `success` 和 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::SeqCst`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::SeqCst`] as the `success` and [`Ordering::Acquire`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `success` 和 [`Ordering::Acquire`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::Acquire`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `compare_exchange_weak` method by passing [`Ordering::AcqRel`] as the `success` and [`Ordering::Relaxed`] as the `failure` parameters.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `success` 和 [`Ordering::Relaxed`] 作为 `failure` 参数，可以通过 `compare_exchange_weak` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2251,17 +2251,17 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `load` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `load` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `load` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `load` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `load` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `load` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `load` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `load` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `load` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2271,17 +2271,17 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `store` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `store` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `store` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `store` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `store` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `store` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `store` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `store` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `store` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2291,27 +2291,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `swap` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `swap` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `swap` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `swap` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `swap` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `swap` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2321,27 +2321,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_add` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_add` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_add` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_add` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_add` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_add` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2351,27 +2351,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_sub` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_sub` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_sub` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_sub` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_sub` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_sub` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2381,27 +2381,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_and` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_and` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_and` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_and` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_and` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_and` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2411,27 +2411,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`AtomicBool`] type via the `fetch_nand` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`AtomicBool`] type via the `fetch_nand` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`AtomicBool`] type via the `fetch_nand` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`AtomicBool`] type via the `fetch_nand` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`AtomicBool`] type via the `fetch_nand` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_nand` 方法在 [`AtomicBool`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2441,27 +2441,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_or` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_or` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_or` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_or` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_or` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_or` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2471,27 +2471,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_xor` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_xor` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_xor` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_xor` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] types via the `fetch_xor` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 作为 `order` 传递，可以通过 `fetch_xor` 方法在 [`atomic`] 类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2501,22 +2501,22 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_max` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_max` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_max` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_max` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2526,7 +2526,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_max` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2536,27 +2536,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_min` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_min` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_min` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_min` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] signed integer types via the `fetch_min` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 有符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2566,27 +2566,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_min` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_min` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_min` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_min` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_min` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_min` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2596,32 +2596,32 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_max` method by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_max` method by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_max` method by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_max` method by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available on the [`atomic`] unsigned integer types via the `fetch_max` method by passing [`Ordering::Relaxed`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Relaxed`] 传递为 `order`，可以通过 `fetch_max` 方法在 [`atomic`] 无符号整数类型上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The `prefetch` intrinsic is a hint to the code generator to insert a prefetch instruction if supported;",
-        "suggest": "`prefetch` 内联函数是对代码生成器的提示，如果支持的话，它会插入一个预取指令。",
+        "suggest": "`prefetch` 内部函数是对代码生成器的提示，如果支持的话，它会插入一个预取指令。",
         "translate": ""
     },
     {
@@ -2641,7 +2641,7 @@
     },
     {
         "source": "This intrinsic does not have a stable counterpart.",
-        "suggest": "此内联函数没有稳定的对应对象。",
+        "suggest": "此内部函数没有稳定的对应对象。",
         "translate": ""
     },
     {
@@ -2651,22 +2651,22 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::fence`] by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::fence`] by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::fence`] by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::fence`] by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以在 [`atomic::fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -2686,27 +2686,27 @@
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::compiler_fence`] by passing [`Ordering::SeqCst`] as the `order`.",
-        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::SeqCst`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::compiler_fence`] by passing [`Ordering::Acquire`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Acquire`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::compiler_fence`] by passing [`Ordering::Release`] as the `order`.",
-        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::Release`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "The stabilized version of this intrinsic is available in [`atomic::compiler_fence`] by passing [`Ordering::AcqRel`] as the `order`.",
-        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内联函数的稳定版本。",
+        "suggest": "通过将 [`Ordering::AcqRel`] 传递为 `order`，可以在 [`atomic::compiler_fence`] 中获得此内部函数的稳定版本。",
         "translate": ""
     },
     {
         "source": "Magic intrinsic that derives its meaning from attributes attached to the function.",
-        "suggest": "从函数附带的属性中获取其含义的魔术内联函数。",
+        "suggest": "从函数附带的属性中获取其含义的 magic 内部函数。",
         "translate": ""
     },
     {
@@ -2716,7 +2716,7 @@
     },
     {
         "source": "This intrinsic should not be used outside of the compiler.",
-        "suggest": "不应在编译器外部使用此内联函数。",
+        "suggest": "不应在编译器外部使用此内部函数。",
         "translate": ""
     },
     {
@@ -2741,7 +2741,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::hint::unreachable_unchecked`](crate::hint::unreachable_unchecked).",
-        "suggest": "此内联函数的稳定版本为 [`core::hint::unreachable_unchecked`](crate::hint::unreachable_unchecked)。",
+        "suggest": "此内部函数的稳定版本为 [`core::hint::unreachable_unchecked`](crate::hint::unreachable_unchecked)。",
         "translate": ""
     },
     {
@@ -2756,7 +2756,7 @@
     },
     {
         "source": "No code is generated for this intrinsic, but the optimizer will try to preserve it (and its condition) between passes, which may interfere with optimization of surrounding code and reduce performance.",
-        "suggest": "没有为该内联函数生成任何代码，但是优化器将尝试在通过之间保留它 (及其条件)，这可能会干扰周围代码的优化并降低性能。",
+        "suggest": "没有为该内部函数生成任何代码，但是优化器将尝试在通过之间保留它 (及其条件)，这可能会干扰周围代码的优化并降低性能。",
         "translate": ""
     },
     {
@@ -2801,7 +2801,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::mem::size_of`](crate::mem::size_of).",
-        "suggest": "此内联函数的稳定版本为 [`core::mem::size_of`](crate::mem::size_of)。",
+        "suggest": "此内部函数的稳定版本为 [`core::mem::size_of`](crate::mem::size_of)。",
         "translate": ""
     },
     {
@@ -2811,7 +2811,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::mem::align_of`](crate::mem::align_of).",
-        "suggest": "此内联函数的稳定版本为 [`core::mem::align_of`](crate::mem::align_of)。",
+        "suggest": "此内部函数的稳定版本为 [`core::mem::align_of`](crate::mem::align_of)。",
         "translate": ""
     },
     {
@@ -2826,7 +2826,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`mem::size_of_val`].",
-        "suggest": "此内联函数的稳定版本为 [`mem::size_of_val`]。",
+        "suggest": "此内部函数的稳定版本为 [`mem::size_of_val`]。",
         "translate": ""
     },
     {
@@ -2836,7 +2836,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::mem::align_of_val`](crate::mem::align_of_val).",
-        "suggest": "此内联函数的稳定版本为 [`core::mem::align_of_val`](crate::mem::align_of_val)。",
+        "suggest": "此内部函数的稳定版本为 [`core::mem::align_of_val`](crate::mem::align_of_val)。",
         "translate": ""
     },
     {
@@ -2846,7 +2846,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::any::type_name`](crate::any::type_name).",
-        "suggest": "此内联函数的稳定版本为 [`core::any::type_name`](crate::any::type_name)。",
+        "suggest": "此内部函数的稳定版本为 [`core::any::type_name`](crate::any::type_name)。",
         "translate": ""
     },
     {
@@ -2861,7 +2861,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::any::TypeId::of`](crate::any::TypeId::of).",
-        "suggest": "此内联函数的稳定版本为 [`core::any::TypeId::of`](crate::any::TypeId::of)。",
+        "suggest": "此内部函数的稳定版本为 [`core::any::TypeId::of`](crate::any::TypeId::of)。",
         "translate": ""
     },
     {
@@ -3081,7 +3081,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`mem::needs_drop`](crate::mem::needs_drop).",
-        "suggest": "此内联函数的稳定版本为 [`mem::needs_drop`](crate::mem::needs_drop)。",
+        "suggest": "此内部函数的稳定版本为 [`mem::needs_drop`](crate::mem::needs_drop)。",
         "translate": ""
     },
     {
@@ -3091,7 +3091,7 @@
     },
     {
         "source": "This is implemented as an intrinsic to avoid converting to and from an integer, since the conversion would throw away aliasing information.",
-        "suggest": "这被实现为内联函数，以避免与整数进行转换，因为转换会丢弃别名信息。",
+        "suggest": "这被实现为内部函数，以避免与整数进行转换，因为转换会丢弃别名信息。",
         "translate": ""
     },
     {
@@ -3106,7 +3106,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`pointer::offset`].",
-        "suggest": "此内联函数的稳定版本为 [`pointer::offset`]。",
+        "suggest": "此内部函数的稳定版本为 [`pointer::offset`]。",
         "translate": ""
     },
     {
@@ -3116,12 +3116,12 @@
     },
     {
         "source": "This is implemented as an intrinsic to avoid converting to and from an integer, since the conversion inhibits certain optimizations.",
-        "suggest": "这被实现为内联函数，以避免与整数进行相互转换，因为该转换会禁止某些优化。",
+        "suggest": "这被实现为内部函数，以避免与整数进行相互转换，因为该转换会禁止某些优化。",
         "translate": ""
     },
     {
         "source": "Unlike the `offset` intrinsic, this intrinsic does not restrict the resulting pointer to point into or one byte past the end of an allocated object, and it wraps with two's complement arithmetic.",
-        "suggest": "与 `offset` 内联函数不同，此内联函数不会限制结果指针指向已分配对象的末尾或指向该对象末尾一个字节，并且使用二进制补码算法进行换行。",
+        "suggest": "与 `offset` 内部函数不同，此内部函数不会限制结果指针指向已分配对象的末尾或指向该对象末尾一个字节，并且使用二进制补码算法进行换行。",
         "translate": ""
     },
     {
@@ -3131,7 +3131,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`pointer::wrapping_offset`].",
-        "suggest": "此内联函数的稳定版本为 [`pointer::wrapping_offset`]。",
+        "suggest": "此内部函数的稳定版本为 [`pointer::wrapping_offset`]。",
         "translate": ""
     },
     {
@@ -3151,7 +3151,7 @@
     },
     {
         "source": "Equivalent to the appropriate `llvm.memset.p0i8.*` intrinsic, with a size of `count * size_of::<T>()` and an alignment of `min_align_of::<T>()`.",
-        "suggest": "等效于适当的 `llvm.memset.p0i8.*` 内联函数，其大小为 `count* size_of::<T>()`，并且对齐方式为 `min_align_of::<T>()`。",
+        "suggest": "等效于适当的 `llvm.memset.p0i8.*` 内部函数，其大小为 `count* size_of::<T>()`，并且对齐方式为 `min_align_of::<T>()`。",
         "translate": ""
     },
     {
@@ -3161,7 +3161,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::ptr::read_volatile`](crate::ptr::read_volatile).",
-        "suggest": "此内联函数的稳定版本为 [`core::ptr::read_volatile`](crate::ptr::read_volatile)。",
+        "suggest": "此内部函数的稳定版本为 [`core::ptr::read_volatile`](crate::ptr::read_volatile)。",
         "translate": ""
     },
     {
@@ -3171,7 +3171,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::ptr::write_volatile`](crate::ptr::write_volatile).",
-        "suggest": "此内联函数的稳定版本为 [`core::ptr::write_volatile`](crate::ptr::write_volatile)。",
+        "suggest": "此内部函数的稳定版本为 [`core::ptr::write_volatile`](crate::ptr::write_volatile)。",
         "translate": ""
     },
     {
@@ -3191,7 +3191,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is",
-        "suggest": "此内联函数的稳定版本是",
+        "suggest": "此内部函数的稳定版本是",
         "translate": ""
     },
     {
@@ -3431,7 +3431,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `count_ones` method.",
-        "suggest": "可通过 `count_ones` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `count_ones` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3441,7 +3441,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `leading_zeros` method.",
-        "suggest": "可通过 `leading_zeros` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `leading_zeros` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3461,7 +3461,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `trailing_zeros` method.",
-        "suggest": "可通过 `trailing_zeros` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `trailing_zeros` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3481,7 +3481,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `swap_bytes` method.",
-        "suggest": "可通过 `swap_bytes` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `swap_bytes` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3491,7 +3491,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `reverse_bits` method.",
-        "suggest": "可通过 `reverse_bits` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `reverse_bits` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3501,7 +3501,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `overflowing_add` method.",
-        "suggest": "可通过 `overflowing_add` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `overflowing_add` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3511,7 +3511,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `overflowing_sub` method.",
-        "suggest": "可通过 `overflowing_sub` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `overflowing_sub` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3521,7 +3521,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `overflowing_mul` method.",
-        "suggest": "可通过 `overflowing_mul` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `overflowing_mul` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3536,7 +3536,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_div` method.",
-        "suggest": "可通过 `checked_div` 方法在整数原语上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_div` 方法在整数原语上使用此内部函数的安全包装。",
         "translate": ""
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_rem` method.",
-        "suggest": "可通过 `checked_rem` 方法在整数原语上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_rem` 方法在整数原语上使用此内部函数的安全包装。",
         "translate": ""
     },
     {
@@ -3556,7 +3556,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_shl` method.",
-        "suggest": "可通过 `checked_shl` 方法在整数原语上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_shl` 方法在整数原语上使用此内部函数的安全包装。",
         "translate": ""
     },
     {
@@ -3566,7 +3566,7 @@
     },
     {
         "source": "Safe wrappers for this intrinsic are available on the integer primitives via the `checked_shr` method.",
-        "suggest": "可通过 `checked_shr` 方法在整数原语上使用此内联函数的安全包装。",
+        "suggest": "可通过 `checked_shr` 方法在整数原语上使用此内部函数的安全包装。",
         "translate": ""
     },
     {
@@ -3591,7 +3591,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `rotate_left` method.",
-        "suggest": "可通过 `rotate_left` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `rotate_left` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3601,7 +3601,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `rotate_right` method.",
-        "suggest": "可通过 `rotate_right` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `rotate_right` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3611,7 +3611,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `wrapping_add` method.",
-        "suggest": "可通过 `wrapping_add` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `wrapping_add` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3621,7 +3621,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `wrapping_sub` method.",
-        "suggest": "可通过 `wrapping_sub` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `wrapping_sub` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3631,7 +3631,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `wrapping_mul` method.",
-        "suggest": "可通过 `wrapping_mul` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `wrapping_mul` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3641,7 +3641,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `saturating_add` method.",
-        "suggest": "可通过 `saturating_add` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `saturating_add` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3651,7 +3651,7 @@
     },
     {
         "source": "The stabilized versions of this intrinsic are available on the integer primitives via the `saturating_sub` method.",
-        "suggest": "可通过 `saturating_sub` 方法在整数原语上使用此内联函数的稳定版本。",
+        "suggest": "可通过 `saturating_sub` 方法在整数原语上使用此内部函数的稳定版本。",
         "translate": ""
     },
     {
@@ -3666,7 +3666,7 @@
     },
     {
         "source": "The stabilized version of this intrinsic is [`core::mem::discriminant`](crate::mem::discriminant).",
-        "suggest": "此内联函数的稳定版本为 [`core::mem::discriminant`](crate::mem::discriminant)。",
+        "suggest": "此内部函数的稳定版本为 [`core::mem::discriminant`](crate::mem::discriminant)。",
         "translate": ""
     },
     {
@@ -3686,7 +3686,7 @@
     },
     {
         "source": "The to-be-stabilized version of this intrinsic is [`mem::variant_count`].",
-        "suggest": "此内联函数的稳定版本为 [`mem::variant_count`]。",
+        "suggest": "此内部函数的稳定版本为 [`mem::variant_count`]。",
         "translate": ""
     },
     {

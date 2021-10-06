@@ -1,7 +1,7 @@
 [
     {
         "source": "You may be most interested in [#40][vendor], implementing all vendor intrinsics on x86.",
-        "suggest": "您可能对 [#40][vendor] 最感兴趣，并在 x86 上实现了所有供应商内联函数。",
+        "suggest": "您可能最感兴趣的是 [#40][vendor]，并在 x86 上实现了所有供应商内部函数。",
         "translate": ""
     },
     {
@@ -21,12 +21,12 @@
     },
     {
         "source": "How to write examples for stdarch intrinsics",
-        "suggest": "如何为 stdarch 内联函数编写示例",
+        "suggest": "如何为 stdarch 内部函数编写示例",
         "translate": ""
     },
     {
         "source": "There are a few features that must be enabled for the given intrinsic to work properly and the example must only be run by `cargo test --doc` when the feature is supported by the CPU.",
-        "suggest": "为了使给定的内联函数正常工作，必须启用一些功能，并且该示例仅在 CPU 支持该功能时才可以由 `cargo test --doc` 运行。",
+        "suggest": "为了使给定的内部函数正常工作，必须启用一些功能，并且该示例仅在 CPU 支持该功能时才可以由 `cargo test --doc` 运行。",
         "translate": ""
     },
     {
@@ -121,7 +121,7 @@
     },
     {
         "source": "implements `core::arch` - Rust's core library architecture-specific intrinsics, and",
-        "suggest": "实现 `core::arch`-Rust 的核心库体系结构特定的内联函数，以及",
+        "suggest": "实现 `core::arch` - Rust 的核心库体系结构特定的内部函数，以及",
         "translate": ""
     },
     {
@@ -2506,7 +2506,7 @@
     },
     {
         "source": "This intrinsic is identical to _mm512_mask_permutexvar_epi32, and it is recommended that you use that intrinsic name.",
-        "suggest": "此内联函数与 _mm512_mask_permutexvar_epi32 相同，建议您使用该内联函数名称。",
+        "suggest": "此内部函数与 _mm512_mask_permutexvar_epi32 相同，建议您使用该内部函数名称。",
         "translate": ""
     },
     {
@@ -3991,7 +3991,7 @@
     },
     {
         "source": "the block optimization also prevents MIR optimizations from understanding `mem::replace`, `Option::take`, etc. - a better overall solution might be to make `swap_nonoverlapping` into an intrinsic, which a backend can choose to implement using the block optimization, or not.",
-        "suggest": "块优化还阻止 MIR 优化理解 `mem::replace`、`Option::take` 等 - 更好的整体解决方案可能是使 `swap_nonoverlapping` 成为内联函数，后端可以选择使用块优化来实现或不实现。",
+        "suggest": "块优化还阻止 MIR 优化理解 `mem::replace`、`Option::take` 等 - 更好的整体解决方案可能是使 `swap_nonoverlapping` 成为内部函数，后端可以选择使用块优化来实现或不实现。",
         "translate": ""
     },
     {

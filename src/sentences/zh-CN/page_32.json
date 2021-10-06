@@ -1,17 +1,17 @@
 [
     {
         "source": "Generates a std::cout for the intrinsics results that will match the rust debug output format for the return type.",
-        "suggest": "为内联函数结果生成一个 std::cout，该结果将匹配 Rust 调试输出格式的返回类型。",
+        "suggest": "为内部函数结果生成一个 std::cout，该结果将匹配 Rust 调试输出格式的返回类型。",
         "translate": ""
     },
     {
         "source": "Only perform the test for intrinsics that are enabled...",
-        "suggest": "只对启用的内联函数进行测试...",
+        "suggest": "只对启用的内部函数进行测试...",
         "translate": ""
     },
     {
         "source": "Not sure how we would compare intrinsic that returns void.",
-        "suggest": "不知道我们如何比较返回 void 的内联函数。",
+        "suggest": "不知道我们如何比较返回 void 的内部函数。",
         "translate": ""
     },
     {
@@ -21,12 +21,12 @@
     },
     {
         "source": "intrinsics with a lane parameter have constraints, deal with them later.",
-        "suggest": "带有 lane 参数的内联函数有约束，以后再处理。",
+        "suggest": "带有 lane 参数的内部函数有约束，以后再处理。",
         "translate": ""
     },
     {
         "source": "fails to compile this intrinsic due to an error.",
-        "suggest": "由于错误，无法编译此内联函数。",
+        "suggest": "由于错误，无法编译此内部函数。",
         "translate": ""
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "source": "Generates a comma list of values that can be used to initialize an argument for the intrinsic call.",
-        "suggest": "生成一个逗号值列表，可用于初始化内联函数调用的参数。",
+        "suggest": "生成一个逗号值列表，可用于初始化内部函数调用的参数。",
         "translate": ""
     },
     {
@@ -121,7 +121,7 @@
     },
     {
         "source": "The pass index, i.e. the iteration index for the call to an intrinsic",
-        "suggest": "通过索引，即调用到内联函数的迭代索引",
+        "suggest": "通过索引，即调用到内部函数的迭代索引",
         "translate": ""
     },
     {
@@ -261,7 +261,7 @@
     },
     {
         "source": "Look for subroutine call instructions in the disassembly to detect whether inlining failed: all intrinsics are `#[inline(always)]`, so calling one intrinsic from another should not generate subroutine call instructions.",
-        "suggest": "在反汇编中查找子程序调用指令来检测是否内联失败: 所有内联函数都是 `#[inline(always)]`，所以从另一个调用一个内联函数不应生成子程序调用指令。",
+        "suggest": "在反汇编中查找子程序调用指令来检测是否内联失败: 所有内部函数都是 `#[inline(always)]`，所以从另一个调用一个内部函数不应生成子程序调用指令。",
         "translate": ""
     },
     {

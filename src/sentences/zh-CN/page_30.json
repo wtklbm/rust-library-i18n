@@ -66,7 +66,7 @@
     },
     {
         "source": "this produces an extraneous `i32.and` instruction against a mask of 65535 when converting from the native intrinsic's i32 return value to our desired u16.",
-        "suggest": "当从原生内联函数的 i32 返回值转换为我们想要的 u16 时，这会针对掩码 65535 生成一个无关的 `i32.and` 指令。",
+        "suggest": "当从原生内部函数的 i32 返回值转换为我们想要的 u16 时，这会针对掩码 65535 生成一个无关的 `i32.and` 指令。",
         "translate": ""
     },
     {
@@ -766,7 +766,7 @@
     },
     {
         "source": "The expected intrinsic is compiled away so we can't check for it - aka the intrinsic is not generating any code.",
-        "suggest": "预期的内联函数被编译掉了，所以我们不能检查它 -- 也就是内联函数没有生成任何代码。",
+        "suggest": "预期的内部函数被编译掉了，所以我们不能检查它 -- 也就是内部函数没有生成任何代码。",
         "translate": ""
     },
     {
@@ -781,12 +781,12 @@
     },
     {
         "source": "Skip some intrinsics that are present in GCC and Clang but are missing from the official documentation.",
-        "suggest": "跳过 GCC 和 Clang 中存在但官方文档中缺少的一些内联函数。",
+        "suggest": "跳过 GCC 和 Clang 中存在但官方文档中缺少的一些内部函数。",
         "translate": ""
     },
     {
         "source": "The _bittest intrinsics claim to only accept immediates but actually accept run-time values as well.",
-        "suggest": "_bittest 内联函数声称只接受立即数，但实际上也接受运行时值。",
+        "suggest": "_bittest 内部函数声称只接受立即数，但实际上也接受运行时值。",
         "translate": ""
     },
     {
@@ -2421,7 +2421,7 @@
     },
     {
         "source": "Note that, unlike most intrinsics, this is safe to call;",
-        "suggest": "请注意，与大多数内联函数不同，这对调用是安全的;",
+        "suggest": "请注意，与大多数内部函数不同，这对调用是安全的;",
         "translate": ""
     },
     {
@@ -2491,7 +2491,7 @@
     },
     {
         "source": "Note that this is a stricter criterion than just the *values* being fully-initialized: if `T` has padding, it's UB to call this intrinsic.",
-        "suggest": "请注意，这是一个比完全初始化 *values* 更严格的标准: 如果 `T` 有填充，它是 UB 到调用这个内联函数。",
+        "suggest": "请注意，这是一个比完全初始化 *values* 更严格的标准: 如果 `T` 有填充，它是 UB 到调用这个内部函数。",
         "translate": ""
     },
     {
@@ -4151,7 +4151,7 @@
     },
     {
         "source": "longer-term this should be done via an intrinsic, but for now we can deal without an impl for u128/i128",
-        "suggest": "从长远来看，这应该通过内联函数来完成，但现在我们可以不用 u128/i128 的实现",
+        "suggest": "从长远来看，这应该通过内部函数来实现，但目前我们可以不使用 impl 来处理 u128/i128",
         "translate": ""
     },
     {
@@ -4441,7 +4441,7 @@
     },
     {
         "source": "longer-term this should be done via an intrinsic, but this has been shown to generate optimal code for now, and LLVM doesn't have an equivalent intrinsic",
-        "suggest": "从长远来看，这应该通过内联函数来完成，但目前已经证明这可以生成最佳代码，并且 LLVM 没有等效的内联函数",
+        "suggest": "从长远来看，这应该通过内部函数来完成，但目前已经证明这可以生成最佳代码，并且 LLVM 没有等效的内部函数",
         "translate": ""
     },
     {

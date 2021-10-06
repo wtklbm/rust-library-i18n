@@ -1556,7 +1556,7 @@
     },
     {
         "source": "The avx512 intrinsic can do 32 pattern matching at one time.",
-        "suggest": "avx512 内联函数一次可以进行 32 个模式匹配。",
+        "suggest": "avx512 内部函数一次可以进行 32 个模式匹配。",
         "translate": ""
     },
     {
@@ -4576,7 +4576,7 @@
     },
     {
         "source": "Replace this with the standard ACLE __pld/__pldx/__pli/__plix intrinsics",
-        "suggest": "将其替换为标准的 ACLE __pld/__pldx/__pli/__plix 内联函数",
+        "suggest": "将其替换为标准的 ACLE __pld/__pldx/__pli/__plix 内部函数",
         "translate": ""
     },
     {
@@ -4741,7 +4741,7 @@
     },
     {
         "source": "Tests for ARM+v7+neon store (vst1) intrinsics.",
-        "suggest": "ARM+v7+neon 存储 (vst1) 内联函数测试。",
+        "suggest": "测试 ARM+v7+neon 存储 (vst1) 内部函数。",
         "translate": ""
     },
     {
@@ -4751,12 +4751,12 @@
     },
     {
         "source": "Here you'll find intrinsics specific to WebAssembly that aren't otherwise surfaced somewhere in a cross-platform abstraction of `std`, and you'll also find functions for leveraging WebAssembly proposals such as [atomics] and [simd].",
-        "suggest": "在这里，您会发现特定于 WebAssembly 的内联函数，它们不会在 `std` 的跨平台抽象中以其他方式出现，您还会发现利用 WebAssembly 提案 (如 [原子性][atomics] 和 [simd]) 的函数。",
+        "suggest": "在这里，您会发现特定于 WebAssembly 的内部函数，它们不会在 `std` 的跨平台抽象中以其他方式出现，您还会发现利用 WebAssembly 提案 (如 [原子性][atomics] 和 [simd]) 的函数。",
         "translate": ""
     },
     {
         "source": "Intrinsics in the `wasm32` module are modeled after the WebAssembly instructions that they represent.",
-        "suggest": "`wasm32` 模块中的内联函数是根据它们所代表的 WebAssembly 指令建模的。",
+        "suggest": "`wasm32` 模块中的内部函数是根据它们所代表的 WebAssembly 指令建模的。",
         "translate": ""
     },
     {
@@ -4776,7 +4776,7 @@
     },
     {
         "source": "As the proposal itself stabilizes the intrinsics in this module should stabilize as well.",
-        "suggest": "由于提案本身稳定，该模块中的内联函数也应该稳定。",
+        "suggest": "由于提案本身具有稳定性，该模块中的内部函数也应该是稳定的。",
         "translate": ""
     },
     {
@@ -4796,7 +4796,7 @@
     },
     {
         "source": "These intrinsics are always available in the standard library, but you likely won't be able to use them too productively unless you recompile the standard library (and all your code) with `-Ctarget-feature=+atomics`.",
-        "suggest": "这些内联函数始终在标准库中可用，但除非您使用 `-Ctarget-feature=+atomics` 重新编译标准库 (和所有代码)，否则您可能无法高效地使用它们。",
+        "suggest": "这些内部函数始终在标准库中可用，但除非您使用 `-Ctarget-feature=+atomics` 重新编译标准库 (和所有代码)，否则您可能无法高效地使用它们。",
         "translate": ""
     },
     {

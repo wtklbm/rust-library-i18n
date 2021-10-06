@@ -3906,7 +3906,7 @@
     },
     {
         "source": "This intrinsic will emit a load with an alignment of 1.",
-        "suggest": "这个内联函数将发出一个对齐为 1 的负载。",
+        "suggest": "这个内部函数将发出一个对齐为 1 的负载。",
         "translate": ""
     },
     {
@@ -3916,62 +3916,62 @@
     },
     {
         "source": "The alignment of the load can be configured by doing a manual load without this intrinsic.",
-        "suggest": "可以通过手动加载来配置负载的对齐，而无需使用这个内联函数。",
+        "suggest": "可以通过手动加载来配置负载的对齐，而无需使用这个内部函数。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 16 bytes from.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 16 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 16 个字节。",
         "translate": ""
     },
     {
         "source": "Note that there is no alignment requirement on this pointer since this intrinsic performs a",
-        "suggest": "注意这个指针没有对齐要求，因为这个内联函数执行了一个",
+        "suggest": "注意这个指针没有对齐要求，因为这个内部函数执行了一个",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 8 bytes from.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 8 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 8 个字节。",
         "translate": ""
     },
     {
         "source": "While this intrinsic is provided for completeness it can also be replaced with `u8x16_splat(*m)` and it should generate equivalent code (and also not require `unsafe`).",
-        "suggest": "虽然这个内联函数是为了完整性而提供的，但它也可以用 `u8x16_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
+        "suggest": "虽然这个内部函数是为了完整性而提供的，但它也可以用 `u8x16_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 1 byte from.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 1 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 1 个字节。",
         "translate": ""
     },
     {
         "source": "While this intrinsic is provided for completeness it can also be replaced with `u16x8_splat(*m)` and it should generate equivalent code (and also not require `unsafe`).",
-        "suggest": "虽然这个内联函数是为了完整性而提供的，但它也可以用 `u16x8_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
+        "suggest": "虽然这个内部函数是为了完整性而提供的，但它也可以用 `u16x8_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 2 bytes from.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 2 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 2 个字节。",
         "translate": ""
     },
     {
         "source": "While this intrinsic is provided for completeness it can also be replaced with `u32x4_splat(*m)` and it should generate equivalent code (and also not require `unsafe`).",
-        "suggest": "虽然这个内联函数是为了完整性而提供的，但它也可以用 `u32x4_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
+        "suggest": "虽然这个内部函数是为了完整性而提供的，但它也可以用 `u32x4_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 4 bytes from.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 4 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 4 个字节。",
         "translate": ""
     },
     {
         "source": "While this intrinsic is provided for completeness it can also be replaced with `u64x2_splat(*m)` and it should generate equivalent code (and also not require `unsafe`).",
-        "suggest": "虽然这个内联函数是为了完整性而提供的，但它也可以用 `u64x2_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
+        "suggest": "虽然这个内部函数是为了完整性而提供的，但它也可以用 `u64x2_splat(*m)` 替换，它应该生成等效的代码 (也不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `u32x4(*m,",
-        "suggest": "这个内联函数是为了完整性而提供的，等价于 `u32x4 (*m,",
+        "suggest": "这个内部函数是为了完整性而提供的，等价于 `u32x4 (*m,",
         "translate": ""
     },
     {
@@ -3981,12 +3981,12 @@
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `u64x2_replace_lane::<0>(u64x2(0, 0), *m)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `u64x2_replace_lane::<0>(u64x2(0, 0), *m)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `u64x2_replace_lane::<0>(u64x2(0, 0), *m)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic will emit a store with an alignment of 1.",
-        "suggest": "这个内联函数会发出一个对齐为 1 的 store。",
+        "suggest": "这个内部函数会发出一个对齐为 1 的 store。",
         "translate": ""
     },
     {
@@ -3996,72 +3996,72 @@
     },
     {
         "source": "The alignment of the store can be configured by doing a manual store without this intrinsic.",
-        "suggest": "store 的对齐方式可以通过做一个没有这个内联函数的手动 store 来配置。",
+        "suggest": "store 的对齐方式可以通过做一个没有这个内部函数的手动 store 来配置。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 16 bytes to.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 16 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 16 个字节。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `u8x16_replace_lane::<L>(v, *m)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `u8x16_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `u8x16_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `u16x8_replace_lane::<L>(v, *m)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `u16x8_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `u16x8_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `u32x4_replace_lane::<L>(v, *m)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `u32x4_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `u32x4_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `u64x2_replace_lane::<L>(v, *m)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `u64x2_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `u64x2_replace_lane::<L>(v, *m)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `*m = u8x16_extract_lane::<L>(v)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `*m = u8x16_extract_lane::<L>(v)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `*m = u8x16_extract_lane::<L>(v)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 1 byte to.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 1 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 1 个字节。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `*m = u16x8_extract_lane::<L>(v)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `*m = u16x8_extract_lane::<L>(v)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `*m = u16x8_extract_lane::<L>(v)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 2 bytes to.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 2 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 2 个字节。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `*m = u32x4_extract_lane::<L>(v)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `*m = u32x4_extract_lane::<L>(v)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `*m = u32x4_extract_lane::<L>(v)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 4 bytes to.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 4 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 4 个字节。",
         "translate": ""
     },
     {
         "source": "This intrinsic is provided for completeness and is equivalent to `*m = u64x2_extract_lane::<L>(v)` (which doesn't require `unsafe`).",
-        "suggest": "这个内联函数是为了完整性而提供的，等效于 `*m = u64x2_extract_lane::<L>(v)` (不需要 `unsafe`)。",
+        "suggest": "这个内部函数是为了完整性而提供的，等效于 `*m = u64x2_extract_lane::<L>(v)` (不需要 `unsafe`)。",
         "translate": ""
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 8 bytes to.",
-        "suggest": "这个内联函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 8 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 8 个字节。",
         "translate": ""
     },
     {
@@ -4071,12 +4071,12 @@
     },
     {
         "source": "Its purpose is for bf16 related intrinsic implementations.",
-        "suggest": "它的目的是用于 bf16 相关的内联函数实现。",
+        "suggest": "它的目的是用于 bf16 相关的内部函数实现。",
         "translate": ""
     },
     {
         "source": "is supposed to take an `i32` instead of a `u32` as is the case for [other shuffle intrinsics](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_).",
-        "suggest": "应该像 [其他 shuffle 内联函数](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_) 一样采用 `i32` 而不是 `u32`。",
+        "suggest": "应该像 [其他 shuffle 内部函数](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_) 一样采用 `i32` 而不是 `u32`。",
         "translate": ""
     },
     {
@@ -4086,7 +4086,7 @@
     },
     {
         "source": "Temporary, currently the fptosi.sat and fptoui.sat LLVM intrinsics emit unnecessary code on arm.",
-        "suggest": "暂时的，目前 fptosi.sat 和 fptoui.sat LLVM 内联函数会在 arm 上发出不必要的代码。",
+        "suggest": "暂时的，目前 fptosi.sat 和 fptoui.sat LLVM 内部函数会在 arm 上发出不必要的代码。",
         "translate": ""
     },
     {
@@ -4896,12 +4896,12 @@
     },
     {
         "source": "Generate and run programs using equivalent C and Rust intrinsics, checking that each produces the same result from random inputs.",
-        "suggest": "使用等效的 C 和 Rust 内联函数生成并运行程序，检查每个程序是否从随机输入产生相同的结果。",
+        "suggest": "使用等效的 C 和 Rust 内部函数生成并运行程序，检查每个程序是否从随机输入产生相同的结果。",
         "translate": ""
     },
     {
         "source": "The intrinsic.csv is the arm neon tracking google sheet (https://docs.google.com/spreadsheets/d/1MqW1g8c7tlhdRWQixgdWvR4uJHNZzCYAf4V0oHjZkwA/edit#gid=0) that contains the intrinsic list.",
-        "suggest": "intrinsic.csv 是包含内联函数列表的 arm neon 跟踪谷歌表 (https://docs.google.com/spreadsheets/d/1MqW1g8c7tlhdRWQixgdWvR4uJHNZzCYAf4V0oHjZkwA/edit#gid=0)。",
+        "suggest": "intrinsic.csv 是包含内部函数列表的 arm neon 跟踪谷歌表 (https://docs.google.com/spreadsheets/d/1MqW1g8c7tlhdRWQixgdWvR4uJHNZzCYAf4V0oHjZkwA/edit#gid=0)。",
         "translate": ""
     },
     {
@@ -4911,12 +4911,12 @@
     },
     {
         "source": "An argument for the intrinsic.",
-        "suggest": "内联函数的一个参数。",
+        "suggest": "内部函数的一个参数。",
         "translate": ""
     },
     {
         "source": "The argument's index in the intrinsic function call.",
-        "suggest": "参数在内联函数调用中的索引。",
+        "suggest": "参数在内部函数调用中的索引。",
         "translate": ""
     },
     {
@@ -4976,17 +4976,17 @@
     },
     {
         "source": "An intrinsic",
-        "suggest": "一个内联函数",
+        "suggest": "一个内部函数",
         "translate": ""
     },
     {
         "source": "If the intrinsic should be tested.",
-        "suggest": "如果内联函数应该被测试。",
+        "suggest": "如果内部函数应该被测试。",
         "translate": ""
     },
     {
         "source": "The function name of this intrinsic.",
-        "suggest": "这个内联函数的函数名。",
+        "suggest": "这个内部函数的函数名。",
         "translate": ""
     },
     {
@@ -4996,7 +4996,7 @@
     },
     {
         "source": "The return type of this intrinsic.",
-        "suggest": "这个内联函数的返回类型。",
+        "suggest": "这个内部函数的返回类型。",
         "translate": ""
     }
 ]

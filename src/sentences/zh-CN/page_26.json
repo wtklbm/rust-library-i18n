@@ -1426,7 +1426,7 @@
     },
     {
         "source": "This intrinsic essentially calculates floor(log2(x)) for the lower element.",
-        "suggest": "本质上，此内联函数计算下部元素的 floor(log2(x))。",
+        "suggest": "本质上，此内部函数计算下层元素的 floor(log2(x))。",
         "translate": ""
     },
     {
@@ -2266,7 +2266,7 @@
     },
     {
         "source": "Byte swap intrinsics.",
-        "suggest": "字节交换内联函数。",
+        "suggest": "字节交换内部函数。",
         "translate": ""
     },
     {
@@ -2691,7 +2691,7 @@
     },
     {
         "source": "The contents of this memory region should have been written to by a previous `_fxsave` or `_fxsave64` intrinsic.",
-        "suggest": "该存储区的内容应该已经由以前的 `_fxsave` 或 `_fxsave64` 内联函数写入。",
+        "suggest": "该存储区的内容应该已经由以前的 `_fxsave` 或 `_fxsave64` 内部函数写入。",
         "translate": ""
     },
     {
@@ -2751,7 +2751,7 @@
     },
     {
         "source": "and `x86_64` intrinsics.",
-        "suggest": "和 `x86_64` 内联函数。",
+        "suggest": "和 `x86_64` 内部函数。",
         "translate": ""
     },
     {
@@ -2801,7 +2801,7 @@
     },
     {
         "source": "Each intrinsic may interpret the internal bits differently, check the documentation of the intrinsic to see how it's being used.",
-        "suggest": "每个内联函数可能对内部位的解释不同，请查看内联函数的文档以了解其用法。",
+        "suggest": "每个内部函数可能会以不同的方式解释内部位，请查看内部函数的文档以了解它是如何使用的。",
         "translate": ""
     },
     {
@@ -2811,7 +2811,7 @@
     },
     {
         "source": "Most intrinsics using `__m128i` are prefixed with `_mm_` and the integer types tend to correspond to suffixes like \"epi8\" or \"epi32\".",
-        "suggest": "使用 `__m128i` 的大多数内联函数都以 `_mm_` 作为前缀，并且整数类型往往对应于后缀，例如 \"epi8\" 或 \"epi32\"。",
+        "suggest": "大多数使用 `__m128i` 的内部函数都以 `_mm_` 作为前缀，并且整数类型往往对应于像 \"epi8\" 或 \"epi32\" 这样的后缀。",
         "translate": ""
     },
     {
@@ -2836,7 +2836,7 @@
     },
     {
         "source": "Most intrinsics using `__m128` are prefixed with `_mm_` and are suffixed with \"ps\" (or otherwise contain \"ps\").",
-        "suggest": "使用 `__m128` 的大多数内联函数都以 `_mm_` 为前缀，并以 \"ps\" 为后缀 (或另外包含 \"ps\")。",
+        "suggest": "大多数使用 `__m128` 的内部函数都以 `_mm_` 为前缀，并以 \"ps\" 为后缀 (或另外包含 \"ps\")。",
         "translate": ""
     },
     {
@@ -2866,7 +2866,7 @@
     },
     {
         "source": "Most intrinsics using `__m128d` are prefixed with `_mm_` and are suffixed with \"pd\" (or otherwise contain \"pd\").",
-        "suggest": "使用 `__m128d` 的大多数内联函数都以 `_mm_` 为前缀，并以 \"pd\" 为后缀 (或另外包含 \"pd\")。",
+        "suggest": "大多数使用 `__m128d` 的内部函数都以 `_mm_` 为前缀，并以 \"pd\" 为后缀 (或另外包含 \"pd\")。",
         "translate": ""
     },
     {
@@ -2936,7 +2936,7 @@
     },
     {
         "source": "Most intrinsics using `__m256` are prefixed with `_mm256_` and are suffixed with \"ps\" (or otherwise contain \"ps\").",
-        "suggest": "使用 `__m256` 的大多数内联函数都以 `_mm256_` 为前缀，并以 \"ps\" 为后缀 (或另外包含 \"ps\")。",
+        "suggest": "大多数使用 `__m256` 的内部函数都以 `_mm256_` 为前缀，并以 \"ps\" 为后缀 (或另外包含 \"ps\")。",
         "translate": ""
     },
     {
@@ -2966,7 +2966,7 @@
     },
     {
         "source": "Most intrinsics using `__m256d` are prefixed with `_mm256_` and are suffixed with \"pd\" (or otherwise contain \"pd\").",
-        "suggest": "使用 `__m256d` 的大多数内联函数都以 `_mm256_` 为前缀，并以 \"pd\" 为后缀 (或另外包含 \"pd\")。",
+        "suggest": "大多数使用 `__m256d` 的内部函数都以 `_mm256_` 为前缀，并以 \"pd\" 为后缀 (或另外包含 \"pd\")。",
         "translate": ""
     },
     {
@@ -3036,7 +3036,7 @@
     },
     {
         "source": "Most intrinsics using `__m512` are prefixed with `_mm512_` and are suffixed with \"ps\" (or otherwise contain \"ps\").",
-        "suggest": "使用 `__m512` 的大多数内联函数都以 `_mm512_` 为前缀，并以 \"ps\" 为后缀 (或另外包含 \"ps\")。",
+        "suggest": "大多数使用 `__m512` 的内部函数都以 `_mm512_` 为前缀，并以 \"ps\" 为后缀 (或另外包含 \"ps\")。",
         "translate": ""
     },
     {
@@ -3066,7 +3066,7 @@
     },
     {
         "source": "Most intrinsics using `__m512d` are prefixed with `_mm512_` and are suffixed with \"pd\" (or otherwise contain \"pd\").",
-        "suggest": "使用 `__m512d` 的大多数内联函数都以 `_mm512_` 为前缀，并以 \"pd\" 为后缀 (或另外包含 \"pd\")。",
+        "suggest": "大多数使用 `__m512d` 的内部函数都以 `_mm512_` 为前缀，并以 \"pd\" 为后缀 (或另外包含 \"pd\")。",
         "translate": ""
     },
     {
@@ -3076,42 +3076,42 @@
     },
     {
         "source": "The `__mmask64` type used in AVX-512 intrinsics, a 64-bit integer",
-        "suggest": "AVX-512 内联函数中使用的 `__mmask64` 类型，一个 64 位整数",
+        "suggest": "AVX-512 内部函数中使用的 `__mmask64` 类型，一个 64 位整数",
         "translate": ""
     },
     {
         "source": "The `__mmask32` type used in AVX-512 intrinsics, a 32-bit integer",
-        "suggest": "AVX-512 内联函数中使用的 `__mmask32` 类型，一个 32 位整数",
+        "suggest": "AVX-512 内部函数中使用的 `__mmask32` 类型，一个 32 位整数",
         "translate": ""
     },
     {
         "source": "The `__mmask16` type used in AVX-512 intrinsics, a 16-bit integer",
-        "suggest": "AVX-512 内联函数中使用的 `__mmask16` 类型，一个 16 位整数",
+        "suggest": "AVX-512 内部函数中使用的 `__mmask16` 类型，一个 16 位整数",
         "translate": ""
     },
     {
         "source": "The `__mmask8` type used in AVX-512 intrinsics, a 8-bit integer",
-        "suggest": "AVX-512 内联函数中使用的 `__mmask8` 类型，一个 8 位整数",
+        "suggest": "AVX-512 内部函数中使用的 `__mmask8` 类型，一个 8 位整数",
         "translate": ""
     },
     {
         "source": "The `_MM_CMPINT_ENUM` type used to specify comparison operations in AVX-512 intrinsics.",
-        "suggest": "`_MM_CMPINT_ENUM` 类型用于在 AVX-512 内联函数中指定比较操作。",
+        "suggest": "`_MM_CMPINT_ENUM` 类型用于在 AVX-512 内部函数中指定比较操作。",
         "translate": ""
     },
     {
         "source": "The `MM_MANTISSA_NORM_ENUM` type used to specify mantissa normalized operations in AVX-512 intrinsics.",
-        "suggest": "`MM_MANTISSA_NORM_ENUM` 类型用于指定 AVX-512 内联函数中的尾数归一化操作。",
+        "suggest": "`MM_MANTISSA_NORM_ENUM` 类型用于指定 AVX-512 内部函数中的尾数归一化操作。",
         "translate": ""
     },
     {
         "source": "The `MM_MANTISSA_SIGN_ENUM` type used to specify mantissa signed operations in AVX-512 intrinsics.",
-        "suggest": "`MM_MANTISSA_SIGN_ENUM` 类型用于指定 AVX-512 内联函数中的尾数签名操作。",
+        "suggest": "`MM_MANTISSA_SIGN_ENUM` 类型用于指定 AVX-512 内部函数中的尾数签名操作。",
         "translate": ""
     },
     {
         "source": "The `MM_PERM_ENUM` type used to specify shuffle operations in AVX-512 intrinsics.",
-        "suggest": "`MM_PERM_ENUM` 类型用于在 AVX-512 内联函数中指定重排操作。",
+        "suggest": "`MM_PERM_ENUM` 类型用于指定在 AVX-512 内部函数中的重排操作。",
         "translate": ""
     },
     {
@@ -3841,7 +3841,7 @@
     },
     {
         "source": "This intrinsic corresponds to the `CVTSI2SS` instruction (with 32 bit input).",
-        "suggest": "此内联函数对应于 `CVTSI2SS` 指令 (具有 32 位输入)。",
+        "suggest": "此内部函数对应于 `CVTSI2SS` 指令 (具有 32 位输入)。",
         "translate": ""
     },
     {
@@ -3901,7 +3901,7 @@
     },
     {
         "source": "A utility function for creating masks to use with Intel shuffle and permute intrinsics.",
-        "suggest": "一个实用程序函数，用于创建与 Intel 重排和置换内联函数一起使用的掩码。",
+        "suggest": "一个实用程序函数，用于创建与 Intel 重排和置换内部函数一起使用的掩码。",
         "translate": ""
     },
     {
@@ -3926,7 +3926,7 @@
     },
     {
         "source": "is supposed to take an `i32` instead of an `u32` as is the case for [other shuffle intrinsics](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_).",
-        "suggest": "应该像 [其他 shuffle 内联函数](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_) 那样使用 `i32` 而不是 `u32`。",
+        "suggest": "应该像 [其他 shuffle 内部函数](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_shuffle_) 那样使用 `i32` 而不是 `u32`。",
         "translate": ""
     },
     {
@@ -4096,7 +4096,7 @@
     },
     {
         "source": "This intrinsic corresponds to the `MOVSS` instruction.",
-        "suggest": "此内联函数对应于 `MOVSS` 指令。",
+        "suggest": "此内部函数对应于 `MOVSS` 指令。",
         "translate": ""
     },
     {
@@ -4546,7 +4546,7 @@
     },
     {
         "source": "can **not** be implemented using the `simd_min` rust intrinsic.",
-        "suggest": "不能使用 `simd_min` rust 内联函数实现。",
+        "suggest": "不能使用 `simd_min` rust 内部函数实现。",
         "translate": ""
     },
     {
@@ -4556,7 +4556,7 @@
     },
     {
         "source": "This intrinsic doesn't specify how -0.0 is handled.",
-        "suggest": "此内联函数未指定如何处理 -0.0。",
+        "suggest": "此内部函数未指定如何处理 -0.0。",
         "translate": ""
     },
     {
@@ -4566,7 +4566,7 @@
     },
     {
         "source": "The `llvm.minnum.v*` llvm intrinsic equals `r1` to `a` and `r2` to `b`.",
-        "suggest": "`llvm.minnum.v*` llvm 内联函数等于 `r1` 到 `a`，并且 `r2` 到 `b`。",
+        "suggest": "`llvm.minnum.v*` llvm 内部函数等于 `r1` 到 `a`，并且 `r2` 到 `b`。",
         "translate": ""
     },
     {
@@ -4771,7 +4771,7 @@
     },
     {
         "source": "Implementation detail: converts the immediate argument of the `_mm_slli_si128` intrinsic into a compile-time constant.",
-        "suggest": "实现细节: 将 `_mm_slli_si128` 内联函数的立即参数转换为编译时常量。",
+        "suggest": "实现细节: 将 `_mm_slli_si128` 内部函数的立即参数转换为编译时常量。",
         "translate": ""
     },
     {
@@ -4811,7 +4811,7 @@
     },
     {
         "source": "Implementation detail: converts the immediate argument of the `_mm_srli_si128` intrinsic into a compile-time constant.",
-        "suggest": "实现细节: 将 `_mm_srli_si128` 内联函数的立即参数转换为编译时常量。",
+        "suggest": "实现细节: 将 `_mm_srli_si128` 内部函数的立即参数转换为编译时常量。",
         "translate": ""
     },
     {
