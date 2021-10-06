@@ -2596,7 +2596,7 @@
     },
     {
         "source": "This struct is a helper to be used with functions like [`Vec::sort_by_key`] and can be used to reverse order a part of a key.",
-        "suggest": "该结构体是与 [`Vec::sort_by_key`] 等函数一起使用的助手，并且可以用于对键的一部分进行反向排序。",
+        "suggest": "该结构是一个帮助器，可与 [`Vec::sort_by_key`] 等函数一起使用，并且可以用于对键的一部分进行反向排序。",
         "translate": ""
     },
     {

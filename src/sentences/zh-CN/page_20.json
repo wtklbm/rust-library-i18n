@@ -2286,7 +2286,7 @@
     },
     {
         "source": "It exposes more ways to deal with platform-specific strings (`OsStr`, `OsString`), allows to set permissions more granularly, extract low-level file descriptors from files and sockets, and has platform-specific helpers for spawning processes.",
-        "suggest": "它提供了更多方式来处理特定于平台的字符串 (`OsStr`，`OsString`)，允许更精细地设置权限，从文件和套接字中提取托管文件描述符，并具有用于生成程序的特定于平台的助手。",
+        "suggest": "它提供了更多方式来处理特定于平台的字符串 (`OsStr`，`OsString`)，允许更精细地设置权限，从文件和套接字中提取托管文件描述符，并具有用于生成程序的特定于平台的帮助程序。",
         "translate": ""
     },
     {

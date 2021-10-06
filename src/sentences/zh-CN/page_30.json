@@ -2511,7 +2511,7 @@
     },
     {
         "source": "Instead of this helper trait there should be multiple impl TrustedLen for Flatten<> blocks with different bounds on Iterator::Item but the compiler erroneously considers them overlapping",
-        "suggest": "而不是这个助手 trait 应该有多个 impl TrustedLen for Flatten <> 块在 Iterator::Item 上具有不同的边界，但编译器错误地认为它们重叠",
+        "suggest": " 应该有多个 `impl TrustedLen for Flatten<>` 块在 `Iterator::Item` 上具有不同的界限，而不是这个 helper trait，但是编译器错误地认为它们是重叠的",
         "translate": ""
     },
     {

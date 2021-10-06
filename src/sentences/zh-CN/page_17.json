@@ -3216,7 +3216,7 @@
     },
     {
         "source": "Helper for reading separators in an indexed loop.",
-        "suggest": "在索引循环中读取分隔符的助手。",
+        "suggest": "用于在索引循环中读取分隔符的帮助程序。",
         "translate": ""
     },
     {

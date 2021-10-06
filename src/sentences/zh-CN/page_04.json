@@ -2481,12 +2481,12 @@
     },
     {
         "source": "Helper to benchmark `sum` for iterators taken by value which can optimize `fold`, and by reference which cannot.",
-        "suggest": "可以根据可以优化 `fold` 的值和不能使用引用的迭代器对 `sum` 进行基准测试的助手。",
+        "suggest": "帮助器对 `sum` 进行基准测试，以通过可以优化 `fold` 的值和不能优化的引用来获取迭代器。",
         "translate": ""
     },
     {
         "source": "Checks whether Skip<Zip<A,B>> is as fast as Zip<Skip<A>, Skip<B>>, from",
-        "suggest": "从以下位置检查 Skip<Zip<A,B>> 是否与 Zip<Skip<A>，Skip<B>> 一样快",
+        "suggest": "从以下位置检查 `Skip<Zip<A, B>>` 是否与 `Zip<Skip<A>, Skip<B>>` 一样快",
         "translate": ""
     },
     {

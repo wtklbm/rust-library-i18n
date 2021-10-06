@@ -2481,7 +2481,7 @@
     },
     {
         "source": "Helper to repeat `l` copies of `b0` followed by `l` copies of `b1`.",
-        "suggest": "助手重复 `b0` 的 `l` 副本，然后是 `b1` 的 `l` 副本。",
+        "suggest": "帮助器重复 `b0` 的 `l` 副本，然后是 `b1` 的 `l` 副本。",
         "translate": ""
     },
     {
