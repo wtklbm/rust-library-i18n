@@ -41,7 +41,7 @@
     },
     {
         "source": "Gets a raw pointer to the start of the allocation.",
-        "suggest": "获取分配开始处的裸指针。",
+        "suggest": "获取分配开始处的原始指针。",
         "translate": ""
     },
     {
@@ -936,7 +936,7 @@
     },
     {
         "source": "Provides a raw pointer to the data.",
-        "suggest": "为数据提供裸指针。",
+        "suggest": "为数据提供原始指针。",
         "translate": ""
     },
     {
@@ -961,12 +961,12 @@
     },
     {
         "source": "Constructs an `Rc<T>` from a raw pointer.",
-        "suggest": "从裸指针构造 `Rc<T>`。",
+        "suggest": "从原始指针构造 `Rc<T>`。",
         "translate": ""
     },
     {
         "source": "The raw pointer must have been previously returned by a call to [`Rc<U>::into_raw`][into_raw] where `U` must have the same size and alignment as `T`.",
-        "suggest": "裸指针必须事先由调用返回到 [`Rc<U>::into_raw`][into_raw]，其中 `U` 的大小和对齐方式必须与 `T` 相同。",
+        "suggest": "原始指针必须事先由调用返回到 [`Rc<U>::into_raw`][into_raw]，其中 `U` 的大小和对齐方式必须与 `T` 相同。",
         "translate": ""
     },
     {
@@ -1581,7 +1581,7 @@
     },
     {
         "source": "Returns a raw pointer to the object `T` pointed to by this `Weak<T>`.",
-        "suggest": "返回对此 `Weak<T>` 指向的对象 `T` 的裸指针。",
+        "suggest": "返回对此 `Weak<T>` 指向的对象 `T` 的原始指针。",
         "translate": ""
     },
     {
@@ -1611,17 +1611,17 @@
     },
     {
         "source": "The payload may be dropped at this point, and we have to maintain provenance, so use raw pointer manipulation.",
-        "suggest": "payload 可能会在此时被丢弃，所以我们必须保持出处，因此请使用裸指针操作。",
+        "suggest": "payload 可能会在此时被丢弃，所以我们必须保持出处，因此请使用原始指针操作。",
         "translate": ""
     },
     {
         "source": "Consumes the `Weak<T>` and turns it into a raw pointer.",
-        "suggest": "消耗 `Weak<T>` 并将其转换为裸指针。",
+        "suggest": "消耗 `Weak<T>` 并将其转换为原始指针。",
         "translate": ""
     },
     {
         "source": "This converts the weak pointer into a raw pointer, while still preserving the ownership of one weak reference (the weak count is not modified by this operation).",
-        "suggest": "这会将弱指针转换为裸指针，同时仍保留一个弱引用的所有权 (此操作不会修改弱引用计数)。",
+        "suggest": "这会将弱指针转换为原始指针，同时仍保留一个弱引用的所有权 (此操作不会修改弱引用计数)。",
         "translate": ""
     },
     {
@@ -1636,7 +1636,7 @@
     },
     {
         "source": "Converts a raw pointer previously created by [`into_raw`] back into `Weak<T>`.",
-        "suggest": "将先前由 [`into_raw`] 创建的裸指针转换回 `Weak<T>`。",
+        "suggest": "将先前由 [`into_raw`] 创建的原始指针转换回 `Weak<T>`。",
         "translate": ""
     },
     {
@@ -1661,7 +1661,7 @@
     },
     {
         "source": "Nevertheless, this takes ownership of one weak reference currently represented as a raw pointer (the weak count is not modified by this operation) and therefore it must be paired with a previous call to [`into_raw`].",
-        "suggest": "不过，这需要当前表示为裸指针的弱引用的所有权 (该操作不会修改弱引用计数)，因此必须与 [`into_raw`] 的先前调用配对。",
+        "suggest": "不过，这需要当前表示为原始指针的弱引用的所有权 (该操作不会修改弱引用计数)，因此必须与 [`into_raw`] 的先前调用配对。",
         "translate": ""
     },
     {
@@ -3586,7 +3586,7 @@
     },
     {
         "source": "Returns the raw pointer to the underlying data, the length of the string (in bytes), and the allocated capacity of the data (in bytes).",
-        "suggest": "返回基础数据的裸指针，字符串的长度 (以字节为单位) 和数据的已分配容量 (以字节为单位)。",
+        "suggest": "返回基础数据的原始指针，字符串的长度 (以字节为单位) 和数据的已分配容量 (以字节为单位)。",
         "translate": ""
     },
     {
@@ -3601,7 +3601,7 @@
     },
     {
         "source": "The only way to do this is to convert the raw pointer, length, and capacity back into a `String` with the [`from_raw_parts`] function, allowing the destructor to perform the cleanup.",
-        "suggest": "唯一的方法是使用 [`from_raw_parts`] 函数将裸指针，长度和容量转换回 `String`，从而允许析构函数执行清除操作。",
+        "suggest": "唯一的方法是使用 [`from_raw_parts`] 函数将原始指针，长度和容量转换回 `String`，从而允许析构函数执行清除操作。",
         "translate": ""
     },
     {
@@ -4736,12 +4736,12 @@
     },
     {
         "source": "Constructs an `Arc<T>` from a raw pointer.",
-        "suggest": "从裸指针构造 `Arc<T>`。",
+        "suggest": "从原始指针构造 `Arc<T>`。",
         "translate": ""
     },
     {
         "source": "The raw pointer must have been previously returned by a call to [`Arc<U>::into_raw`][into_raw] where `U` must have the same size and alignment as `T`.",
-        "suggest": "裸指针必须事先由调用返回到 [`Arc<U>::into_raw`][into_raw]，其中 `U` 的大小和对齐方式必须与 `T` 相同。",
+        "suggest": "原始指针必须事先由调用返回到 [`Arc<U>::into_raw`][into_raw]，其中 `U` 的大小和对齐方式必须与 `T` 相同。",
         "translate": ""
     },
     {

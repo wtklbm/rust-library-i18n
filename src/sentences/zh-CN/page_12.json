@@ -181,7 +181,7 @@
     },
     {
         "source": "Avoid bounds checks by using raw pointers.",
-        "suggest": "通过使用裸指针避免边界检查。",
+        "suggest": "通过使用原始指针避免边界检查。",
         "translate": ""
     },
     {
@@ -2716,12 +2716,12 @@
     },
     {
         "source": "Converts a string slice to a raw pointer.",
-        "suggest": "将字符串切片转换为裸指针。",
+        "suggest": "将字符串切片转换为原始指针。",
         "translate": ""
     },
     {
         "source": "As string slices are a slice of bytes, the raw pointer points to a [`u8`].",
-        "suggest": "由于字符串切片是字节的切片，所以裸指针指向 [`u8`]。",
+        "suggest": "由于字符串切片是字节的切片，所以原始指针指向 [`u8`]。",
         "translate": ""
     },
     {
@@ -2741,7 +2741,7 @@
     },
     {
         "source": "Converts a mutable string slice to a raw pointer.",
-        "suggest": "将可变字符串切片转换为裸指针。",
+        "suggest": "将可变字符串切片转换为原始指针。",
         "translate": ""
     },
     {
