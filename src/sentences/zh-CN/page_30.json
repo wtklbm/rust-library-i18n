@@ -2101,7 +2101,7 @@
     },
     {
         "source": "This uses try_fold(&mut iter) instead of fold(iter) because the latter would go through the blanket `impl Iterator for &mut I` implementation which lacks inline annotations on its methods and adding those would be a larger perturbation than using try_fold here.",
-        "suggest": "这使用 try_fold(&mut iter) 而不是 fold(iter)，因为后者将通过全面的 `impl Iterator for &mut I` 实现，该实现缺乏对其方法的内联注释，并且添加这些将比在此处使用 try_fold 造成更大的扰动。",
+        "suggest": "这使用 try_fold(&mut iter) 而不是 fold(iter)，因为后者将通过全面的 `impl Iterator for &mut I` 实现，该实现缺乏对其方法的内联注解，并且添加这些将比在此处使用 try_fold 造成更大的扰动。",
         "translate": ""
     },
     {

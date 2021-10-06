@@ -2961,7 +2961,7 @@
     },
     {
         "source": "Verify that all `#[target_feature]` annotations are correct, ensuring that we've actually enabled the right instruction set for this intrinsic.",
-        "suggest": "验证所有 `#[target_feature]` 批注是否正确，以确保我们实际上已为此内部函数启用了正确的指令集。",
+        "suggest": "验证所有 `#[target_feature]` 注解是否正确，以确保我们实际上已为此内部函数启用了正确的指令集。",
         "translate": ""
     },
     {
