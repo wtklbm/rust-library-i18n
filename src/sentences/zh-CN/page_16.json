@@ -856,7 +856,7 @@
     },
     {
         "source": "Traits, helpers, and type definitions for core I/O functionality.",
-        "suggest": "core I/O 功能的 Traits，助手和类型定义。",
+        "suggest": "核心 I/O 功能的 Traits，帮助程序和类型定义。",
         "translate": ""
     },
     {
@@ -866,7 +866,7 @@
     },
     {
         "source": "The most core part of this module is the [`Read`] and [`Write`] traits, which provide the most general interface for reading and writing input and output.",
-        "suggest": "该模块中最 core 的部分是 [`Read`] 和 [`Write`] traits，它们提供用于读取和写入输入和输出的最通用接口。",
+        "suggest": "该模块中最核心的部分是 [`Read`] 和 [`Write`] traits，它们提供用于读取和写入输入和输出的最通用接口。",
         "translate": ""
     },
     {

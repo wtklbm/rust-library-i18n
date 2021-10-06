@@ -1261,7 +1261,7 @@
     },
     {
         "source": "Provides access to platform-level information on WASI, and exposes WASI-specific functions that would otherwise be inappropriate as part of the core `std` library.",
-        "suggest": "提供对 WASI 上平台级信息的访问，并公开特定于 WASI 的函数，否则该函数不适合作为 core `std` 库的一部分。",
+        "suggest": "提供对 WASI 上平台级信息的访问，并公开特定于 WASI 的函数，否则该函数不适合作为核心 `std` 库的一部分。",
         "translate": ""
     },
     {
@@ -2856,7 +2856,7 @@
     },
     {
         "source": "Provides access to platform-level information for Windows, and exposes Windows-specific idioms that would otherwise be inappropriate as part the core `std` library.",
-        "suggest": "提供对 Windows 的平台级信息的访问，并公开 Windows 特定的习惯用法，否则这些习惯用法作为 core `std` 库的一部分将是不合适的。",
+        "suggest": "提供对 Windows 的平台级信息的访问，并公开 Windows 特定的习惯用法，否则这些习惯用法作为核心 `std` 库的一部分将是不合适的。",
         "translate": ""
     },
     {

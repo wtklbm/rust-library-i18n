@@ -4001,7 +4001,7 @@
     },
     {
         "source": "Creates a new core for an iterator merging a pair of sources.",
-        "suggest": "为合并一对源的迭代器创建新的 core。",
+        "suggest": "为合并一对源的迭代器创建新的核心。",
         "translate": ""
     },
     {

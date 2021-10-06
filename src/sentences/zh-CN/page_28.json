@@ -4291,7 +4291,7 @@
     },
     {
         "source": "Some methods of core are on purpose avoided (such as try_reserve) as these rely on the correct resolution of rust_eh_personality which is loosely defined in panic_abort.",
-        "suggest": "core 的一些方法是故意避免的 (例如 try_reserve)，因为这些方法依赖于 rust_eh_personality 的正确解析，它在 panic_abort 中松散地定义。",
+        "suggest": "核心的一些方法是故意避免的 (例如 try_reserve)，因为这些方法依赖于 rust_eh_personality 的正确解析，它在 panic_abort 中松散地定义。",
         "translate": ""
     },
     {
