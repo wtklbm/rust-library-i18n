@@ -3726,7 +3726,7 @@
     },
     {
         "source": "Disable assert_instr for x86 targets compiled with avx enabled, which causes LLVM to generate different intrinsics that the ones we are testing for.",
-        "suggest": "对于启用了 avx 的 x86 目标，请禁用 assert_instr，这将导致 LLVM 生成我们要测试的内联函数。",
+        "suggest": "对于启用了 avx 编译的 x86 目标，请禁用 assert_instr，这将导致 LLVM 生成与我们测试的不同的内部函数。",
         "translate": ""
     },
     {
@@ -3751,7 +3751,7 @@
     },
     {
         "source": "Turns out some intrinsics produce identical code and they're folded together, meaning that one just jumps to another.",
-        "suggest": "事实证明，某些内联函数会生成相同的代码，并将它们折叠在一起，这意味着一个内联函数会跳转到另一个。",
+        "suggest": "事实证明，某些内部函数会生成相同的代码，并将它们 fold 在一起，这意味着一个内部函数会跳转到另一个。",
         "translate": ""
     },
     {
@@ -3766,7 +3766,7 @@
     },
     {
         "source": "This is avoided on Wasm32 right now since these functions aren't inlined which breaks our tests since each intrinsic looks like it calls functions.",
-        "suggest": "现在在 Wasm32 上避免了这种情况，因为没有内联这些函数，因为每个内联函数看起来都像调用函数一样，这破坏了我们的测试。",
+        "suggest": "现在在 Wasm32 上避免了这种情况，因为没有内联这些函数，这会破坏我们的测试，因为每个内部函数看起来都像是在调用函数。",
         "translate": ""
     },
     {
@@ -3781,17 +3781,17 @@
     },
     {
         "source": "Used to tell our `#[assert_instr]` annotations that all simd intrinsics are available to test their codegen, since some are gated behind an extra `-Ctarget-feature=+unimplemented-simd128` that doesn't have any equivalent in `#[target_feature]` right now.",
-        "suggest": "用来告诉我们的 `#[assert_instr]` 批注，所有 simd 内联函数都可以用来测试其代码生成，因为其中一些是封闭在当前 `#[target_feature]` 中没有任何等效项的额外 `-Ctarget-feature=+unimplemented-simd128` 后面的。",
+        "suggest": "用来告诉我们的 `#[assert_instr]` 注解，所有 simd 内部函数都可以用来测试其代码生成，因为其中一些是封闭在当前 `#[target_feature]` 中没有任何等效项的额外 `-Ctarget-feature=+unimplemented-simd128` 后面的。",
         "translate": ""
     },
     {
         "source": "Rust's core library architecture-specific intrinsics",
-        "suggest": "Rust 的核心库体系结构特定的内联函数",
+        "suggest": "Rust 的核心库架构特有的内部函数",
         "translate": ""
     },
     {
         "source": "The `core::arch` module implements architecture-dependent intrinsics (e.g. SIMD).",
-        "suggest": "`core::arch` 模块实现了与体系结构相关的内联函数 (例如 SIMD)。",
+        "suggest": "`core::arch` 模块实现了依赖于体系结构的内部函数 (例如 SIMD)。",
         "translate": ""
     },
     {
@@ -3981,7 +3981,7 @@
     },
     {
         "source": "ASIMD intrinsics",
-        "suggest": "ASIMD 内联函数",
+        "suggest": "ASIMD 内部函数",
         "translate": ""
     },
     {
@@ -4371,7 +4371,7 @@
     },
     {
         "source": "Otherwise, this intrinsic returns the depth of the transaction.",
-        "suggest": "否则，此内联函数将返回事务的深度。",
+        "suggest": "否则，此内部函数将返回事务的深度。",
         "translate": ""
     },
     {
@@ -4451,7 +4451,7 @@
     },
     {
         "source": "The __dmb() intrinsic also acts as a compiler memory barrier of the appropriate type.",
-        "suggest": "__dmb() 内联函数还充当适当类型的编译器内存屏障。",
+        "suggest": "__dmb() 内部函数还充当适当类型的编译器内存屏障。",
         "translate": ""
     },
     {
@@ -4476,7 +4476,7 @@
     },
     {
         "source": "The __dsb() intrinsic also acts as a compiler memory barrier of the appropriate type.",
-        "suggest": "__dsb() 内联函数还充当适当类型的编译器内存屏障。",
+        "suggest": "__dsb() 内部函数还充当适当类型的编译器内存屏障。",
         "translate": ""
     },
     {
@@ -4506,7 +4506,7 @@
     },
     {
         "source": "The only supported argument for the __isb() intrinsic is 15, corresponding to the SY (full system) scope of the ISB instruction.",
-        "suggest": "__isb() 内联函数唯一支持的参数是 15，对应于 ISB 指令的 SY (完整系统) 作用域。",
+        "suggest": "__isb() 内部函数唯一支持的参数是 15，对应于 ISB 指令的 SY (完整系统) 作用域。",
         "translate": ""
     },
     {
@@ -4586,7 +4586,7 @@
     },
     {
         "source": "Intrinsics that could live here:",
-        "suggest": "可以在这里生存的内联函数:",
+        "suggest": "可以在这里生存的内部函数:",
         "translate": ""
     },
     {
@@ -4986,7 +4986,7 @@
     },
     {
         "source": "On those that do, it is unspecified whether this intrinsic generates it or another instruction.",
-        "suggest": "在执行此操作的对象上，不确定此内联函数是生成它还是其他指令。",
+        "suggest": "在执行此操作的对象上，不确定此内部函数是生成它还是其他指令。",
         "translate": ""
     },
     {

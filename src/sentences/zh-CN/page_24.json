@@ -451,7 +451,7 @@
     },
     {
         "source": "Platform-specific intrinsics for the `x86` platform.",
-        "suggest": "`x86` 平台的平台特定的内联函数。",
+        "suggest": "`x86` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
@@ -461,32 +461,32 @@
     },
     {
         "source": "Platform-specific intrinsics for the `x86_64` platform.",
-        "suggest": "`x86_64` 平台的平台特定的内联函数。",
+        "suggest": "`x86_64` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `arm` platform.",
-        "suggest": "`arm` 平台的平台特定的内联函数。",
+        "suggest": "`arm` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `aarch64` platform.",
-        "suggest": "`aarch64` 平台的平台特定的内联函数。",
+        "suggest": "`aarch64` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `wasm32` platform.",
-        "suggest": "`wasm32` 平台的平台特定的内联函数。",
+        "suggest": "`wasm32` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "This module provides intrinsics specific to the WebAssembly architecture.",
-        "suggest": "该模块提供特定于 WebAssembly 体系结构的内联函数。",
+        "suggest": "该模块提供特定于 WebAssembly 体系结构的内部函数。",
         "translate": ""
     },
     {
         "source": "Here you'll find intrinsics necessary for leveraging WebAssembly proposals such as [atomics] and [simd].",
-        "suggest": "在这里，您将发现利用 [原子性][atomics] 和 [simd] 等 WebAssembly 建议所必需的内联函数。",
+        "suggest": "在这里，您将发现利用 [原子性][atomics] 和 [simd] 等 WebAssembly 建议所必需的内部函数。",
         "translate": ""
     },
     {
@@ -501,7 +501,7 @@
     },
     {
         "source": "See the [module documentation](../index.html) for general information about the `arch` module and platform intrinsics.",
-        "suggest": "有关 `arch` 模块和平台内联函数的一般信息，请参见 [模块级文档](../index.html)。",
+        "suggest": "有关 `arch` 模块和平台内部函数的一般信息，请参见 [模块级文档](../index.html)。",
         "translate": ""
     },
     {
@@ -511,12 +511,12 @@
     },
     {
         "source": "Atomic instructions can all be generated through `std::sync::atomic` types, but some instructions have no equivalent in Rust such as `memory.atomic.notify` so this module will provide these intrinsics.",
-        "suggest": "原子指令都可以通过 `std::sync::atomic` 类型生成，但是某些指令在 Rust 中没有等效项，例如 `memory.atomic.notify`，因此该模块将提供这些内联函数。",
+        "suggest": "原子指令都可以通过 `std::sync::atomic` 类型生成，但是某些指令在 Rust 中没有等效项，例如 `memory.atomic.notify`，因此该模块将提供这些内部函数。",
         "translate": ""
     },
     {
         "source": "At this time, however, these intrinsics are only available **when the standard library itself is compiled with atomics**.",
-        "suggest": "但是，此时，这些内联函数仅在 **标准库本身使用原子编译时才可用**。",
+        "suggest": "但是，此时，这些内部函数仅在 **标准库本身使用原子编译时才可用**。",
         "translate": ""
     },
     {
@@ -531,7 +531,7 @@
     },
     {
         "source": "To get access to these intrinsics you'll need to compile the standard library from source with the requisite compiler flags.",
-        "suggest": "要访问这些内联函数，您需要使用必需的编译器标志从源代码编译标准库。",
+        "suggest": "要访问这些内部函数，您需要使用必需的编译器标志从源代码编译标准库。",
         "translate": ""
     },
     {
@@ -616,7 +616,7 @@
     },
     {
         "source": "This causes just that one function to have SIMD support available to it, and intrinsics will get inlined as usual in this situation.",
-        "suggest": "这将导致仅一个函数可以使用 SIMD 支持，并且在这种情况下，内联函数将像往常一样被内联。",
+        "suggest": "这将导致仅一个函数可以使用 SIMD 支持，并且在这种情况下，内部函数将像往常一样被内联。",
         "translate": ""
     },
     {
@@ -641,12 +641,12 @@
     },
     {
         "source": "Also note that if you call SIMD intrinsics but don't enable SIMD via either of these mechanisms, you'll still have SIMD generated in your program.",
-        "suggest": "还要注意，如果您调用 SIMD 内联函数但未通过这两种机制之一启用 SIMD，则程序中仍将生成 SIMD。",
+        "suggest": "还要注意，如果您调用 SIMD 内部函数但未通过这两种机制之一启用 SIMD，则程序中仍将生成 SIMD。",
         "translate": ""
     },
     {
         "source": "This means to generate a binary without SIMD you'll need to avoid both options above plus calling into any intrinsics in this module.",
-        "suggest": "这意味着要生成没有 SIMD 的二进制文件，您将需要避免上述两个选项以及调用此模块中的任何内联函数。",
+        "suggest": "这意味着要生成没有 SIMD 的二进制文件，您将需要避免上述两个选项以及调用此模块中的任何内部函数。",
         "translate": ""
     },
     {
@@ -711,37 +711,37 @@
     },
     {
         "source": "Platform-specific intrinsics for the `mips` platform.",
-        "suggest": "`mips` 平台的平台特定的内联函数。",
+        "suggest": "`mips` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `mips64` platform.",
-        "suggest": "`mips64` 平台的平台特定的内联函数。",
+        "suggest": "`mips64` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `PowerPC` platform.",
-        "suggest": "`PowerPC` 平台的平台特定的内联函数。",
+        "suggest": "`PowerPC` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `PowerPC64` platform.",
-        "suggest": "`PowerPC64` 平台的平台特定的内联函数。",
+        "suggest": "`PowerPC64` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "Platform-specific intrinsics for the `NVPTX` platform.",
-        "suggest": "`NVPTX` 平台的平台特定的内联函数。",
+        "suggest": "`NVPTX` 平台的特定于平台的内部函数。",
         "translate": ""
     },
     {
         "source": "NVPTX intrinsics (experimental)",
-        "suggest": "NVPTX 内联函数 (experimental)",
+        "suggest": "NVPTX 内部函数 (experimental)",
         "translate": ""
     },
     {
         "source": "These intrinsics form the foundation of the CUDA programming model.",
-        "suggest": "这些内联函数构成了 CUDA 编程模型的基础。",
+        "suggest": "这些内部函数构成了 CUDA 编程模型的基础。",
         "translate": ""
     },
     {
@@ -961,7 +961,7 @@
     },
     {
         "source": "AltiVec intrinsics.",
-        "suggest": "AltiVec 内联函数。",
+        "suggest": "AltiVec 内部函数。",
         "translate": ""
     },
     {
@@ -1141,7 +1141,7 @@
     },
     {
         "source": "Endian-biased intrinsics",
-        "suggest": "偏于尾数的内联函数",
+        "suggest": "Endian-biased 内部函数",
         "translate": ""
     },
     {
@@ -1231,7 +1231,7 @@
     },
     {
         "source": "Vector Scalar eXtensions (VSX) intrinsics.",
-        "suggest": "Vector 标量扩展 (VSX) 内联函数。",
+        "suggest": "Vector 标量扩展 (VSX) 内部函数。",
         "translate": ""
     },
     {
@@ -1306,7 +1306,7 @@
     },
     {
         "source": "LLVM's SIMD platform intrinsics",
-        "suggest": "LLVM 的 SIMD 平台内联函数",
+        "suggest": "LLVM 的 SIMD 平台内部函数",
         "translate": ""
     },
     {
@@ -1331,7 +1331,7 @@
     },
     {
         "source": "These intrinsics are all unstable because they're not actually stable in WebAssembly itself yet.",
-        "suggest": "这些内联函数都是不稳定的，因为它们实际上在 WebAssembly 本身中还不稳定。",
+        "suggest": "这些内部函数都是不稳定的，因为它们实际上在 WebAssembly 本身中还不稳定。",
         "translate": ""
     },
     {
@@ -1361,7 +1361,7 @@
     },
     {
         "source": "The calling thread can only be woken up with a call to the `wake` intrinsic once it has been blocked.",
-        "suggest": "一旦被阻塞，调用线程只能用 `wake` 内联函数的调用来唤醒。",
+        "suggest": "一旦调用线程被阻塞，调用线程只能通过调用 `wake` 内部函数来唤醒。",
         "translate": ""
     },
     {
@@ -1386,7 +1386,7 @@
     },
     {
         "source": "This intrinsic is only available **when the standard library itself is compiled with the `atomics` target feature**.",
-        "suggest": "仅在 使用 `atomics` 目标功能编译标准库本身时，此内联函数才可用。",
+        "suggest": "仅在使用 `atomics` 目标功能编译标准库本身时，此内部函数才可用。",
         "translate": ""
     },
     {
@@ -2376,7 +2376,7 @@
     },
     {
         "source": "The intrinsics here correspond to those in the `wmmintrin.h` C header.",
-        "suggest": "这里的内联函数对应于 `wmmintrin.h` C 头文件中的内联函数。",
+        "suggest": "这里的内部函数对应于 `wmmintrin.h` C 头文件中的内部函数。",
         "translate": ""
     },
     {
@@ -3131,7 +3131,7 @@
     },
     {
         "source": "This intrinsic has no corresponding instruction.",
-        "suggest": "此内联函数没有相应的指令。",
+        "suggest": "此内部函数没有相应的指令。",
         "translate": ""
     },
     {
@@ -3246,7 +3246,7 @@
     },
     {
         "source": "This intrinsic may perform better than `_mm256_loadu_si256` when the data crosses a cache line boundary.",
-        "suggest": "当数据越过缓存行边界时，此内联函数可能比 `_mm256_loadu_si256` 更好。",
+        "suggest": "当数据越过高速缓存行边界时，此内部函数的性能可能比 `_mm256_loadu_si256` 更好。",
         "translate": ""
     },
     {
@@ -3466,7 +3466,7 @@
     },
     {
         "source": "This intrinsic may generate the `vpbroadcastb`.",
-        "suggest": "此内联函数可能会生成 `vpbroadcastb`。",
+        "suggest": "此内部函数可能会生成 `vpbroadcastb`。",
         "translate": ""
     },
     {
@@ -3476,7 +3476,7 @@
     },
     {
         "source": "This intrinsic may generate the `vpbroadcastw`.",
-        "suggest": "此内联函数可能会生成 `vpbroadcastw`。",
+        "suggest": "此内部函数可能会生成 `vpbroadcastw`。",
         "translate": ""
     },
     {
@@ -3486,7 +3486,7 @@
     },
     {
         "source": "This intrinsic may generate the `vpbroadcastd`.",
-        "suggest": "此内联函数可能会生成 `vpbroadcastd`。",
+        "suggest": "此内部函数可能会生成 `vpbroadcastd`。",
         "translate": ""
     },
     {
@@ -3496,7 +3496,7 @@
     },
     {
         "source": "This intrinsic may generate the `vpbroadcastq`.",
-        "suggest": "此内联函数可能会生成 `vpbroadcastq`。",
+        "suggest": "此内部函数可能会生成 `vpbroadcastq`。",
         "translate": ""
     },
     {
@@ -3506,7 +3506,7 @@
     },
     {
         "source": "This intrinsic is only used for compilation and does not generate any instructions, thus it has zero latency.",
-        "suggest": "此内联函数仅用于编译，不会生成任何指令，因此延迟为零。",
+        "suggest": "此内部函数仅用于编译，不会生成任何指令，因此具有零延迟。",
         "translate": ""
     },
     {
@@ -3686,7 +3686,7 @@
     },
     {
         "source": "LLVM intrinsics used in the above functions",
-        "suggest": "以上函数中使用的 LLVM 内联函数",
+        "suggest": "以上函数中使用的 LLVM 内部函数",
         "translate": ""
     },
     {
@@ -4681,7 +4681,7 @@
     },
     {
         "source": "The intrinsics here correspond to those in the `immintrin.h` C header.",
-        "suggest": "这里的内联函数对应于 `immintrin.h` C 头文件中的内联函数。",
+        "suggest": "这里的内部函数对应于 `immintrin.h` C 头文件中的那些。",
         "translate": ""
     },
     {

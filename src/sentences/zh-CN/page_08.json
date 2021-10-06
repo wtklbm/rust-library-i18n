@@ -4616,7 +4616,7 @@
     },
     {
         "source": "It's easier to hard code than juggling intrinsics and hoping LLVM constant folds it.",
-        "suggest": "硬编码比杂凑内联函数和希望 LLVM 常量将其折叠起来容易。",
+        "suggest": "硬编码比处理内部函数并希望 LLVM 常量 folds 它更容易。",
         "translate": ""
     },
     {

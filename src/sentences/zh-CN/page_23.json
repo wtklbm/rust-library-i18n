@@ -206,17 +206,17 @@
     },
     {
         "source": "Section 8.4 \"Saturating intrinsics\"",
-        "suggest": "8.4 \"饱和内联函数\" 部分",
+        "suggest": "第 8.4 节 \"饱和内部函数\"",
         "translate": ""
     },
     {
         "source": "Section 8.5 \"32-bit SIMD intrinsics\" of ACLE",
-        "suggest": "ACLE 的 8.5 \"32 位 SIMD 内联函数\" 部分",
+        "suggest": "第 8.5 节 \"32 位 SIMD 内部函数\"",
         "translate": ""
     },
     {
         "source": "Intrinsics that could live here",
-        "suggest": "可以在这里生存的内联函数",
+        "suggest": "可以在这里生存的内部函数",
         "translate": ""
     },
     {
@@ -396,7 +396,7 @@
     },
     {
         "source": "compiler specific intrinsics",
-        "suggest": "编译器特定的内联函数",
+        "suggest": "编译器特定的内部函数",
         "translate": ""
     },
     {
@@ -461,7 +461,7 @@
     },
     {
         "source": "We can't `panic!` inside this intrinsic, so we can't really validate the arguments here.",
-        "suggest": "我们无法在此内联函数内进行 `panic!` 运算，因此我们无法在此处真正验证参数。",
+        "suggest": "我们无法在此内部函数内进行 `panic!` 运算，因此我们无法在此处真正验证参数。",
         "translate": ""
     },
     {
@@ -616,7 +616,7 @@
     },
     {
         "source": "Tests for ARM+v7+neon load (vld1) intrinsics.",
-        "suggest": "测试分区 + v7 + 氖气负载 (vld1) 内联函数。",
+        "suggest": "测试 ARM+v7+neon load (vld1) 内部函数。",
         "translate": ""
     },
     {
@@ -626,7 +626,7 @@
     },
     {
         "source": "NEON intrinsics",
-        "suggest": "NEON 内联函数",
+        "suggest": "NEON 内部函数",
         "translate": ""
     },
     {
@@ -951,7 +951,7 @@
     },
     {
         "source": "seems to be an acceptable intrinsic to compile to",
-        "suggest": "似乎是可以接受编译的内联函数",
+        "suggest": "似乎是可以接受编译的内部函数",
         "translate": ""
     },
     {
@@ -1016,12 +1016,12 @@
     },
     {
         "source": "Tests for ARM+v7+neon shift and insert (vsli[q]_n, vsri[q]_n) intrinsics.",
-        "suggest": "测试 ARM+v7+neon 移位并插入 (vsli[q]_n，vsri[q]_n) 内联函数。",
+        "suggest": "测试 ARM+v7+neon 移位并插入 (vsli[q]_n, vsri[q]_n) 内部函数。",
         "translate": ""
     },
     {
         "source": "Tests for ARM+v7+neon table lookup (vtbl, vtbx) intrinsics.",
-        "suggest": "测试 ARM+v7+neon 表查找 (vtbl，vtbx) 内联函数。",
+        "suggest": "测试 ARM+v7+neon 表查找 (vtbl, vtbx) 内部函数。",
         "translate": ""
     },
     {
@@ -1101,12 +1101,12 @@
     },
     {
         "source": "This module exposes vendor-specific intrinsics that typically correspond to a single machine instruction.",
-        "suggest": "该模块公开了特定于供应商的内联函数，这些内联函数通常对应于一条机器指令。",
+        "suggest": "该模块公开了特定于供应商的内部函数，这些内部函数通常对应于单个机器指令。",
         "translate": ""
     },
     {
         "source": "These intrinsics are not portable: their availability is architecture-dependent, and not all machines of that architecture might provide the intrinsic.",
-        "suggest": "这些内联函数不是可移植的: 它们的可用性取决于体系结构，并且并非该体系结构的所有机器都可以提供该内联函数。",
+        "suggest": "这些内部函数不是可移植的: 它们的可用性取决于体系结构，并且并非该体系结构的所有机器都可以提供该内部函数。",
         "translate": ""
     },
     {
@@ -1146,7 +1146,7 @@
     },
     {
         "source": "As a result of the latter of these guarantees all intrinsics in this module are `unsafe` and extra care needs to be taken when calling them!",
-        "suggest": "由于后者的保证，该模块中的所有内联函数都是 `unsafe`，因此在调用它们时要格外小心!",
+        "suggest": "由于后者的保证，该模块中的所有内部函数都是 `unsafe`，因此在调用它们时要格外小心!",
         "translate": ""
     },
     {
@@ -1156,12 +1156,12 @@
     },
     {
         "source": "In order to call these APIs in a safe fashion there's a number of mechanisms available to ensure that the correct CPU feature is available to call an intrinsic.",
-        "suggest": "为了以一种安全的方式调用这些 API，有许多机制可用来确保正确的 CPU 功能可用于调用内联函数。",
+        "suggest": "为了以一种安全的方式调用这些 API，有许多机制可用来确保正确的 CPU 功能可用于调用内部函数。",
         "translate": ""
     },
     {
         "source": "Let's consider, for example, the `_mm256_add_epi64` intrinsics on the `x86` and `x86_64` architectures.",
-        "suggest": "例如，让我们考虑 `x86` 和 `x86_64` 体系结构上的 `_mm256_add_epi64` 内联函数。",
+        "suggest": "例如，让我们考虑 `x86` 和 `x86_64` 体系结构上的 `_mm256_add_epi64` 内部函数。",
         "translate": ""
     },
     {
@@ -1306,7 +1306,7 @@
     },
     {
         "source": "This is because the function can only be correctly called on systems which have the AVX2 (like the intrinsics themselves).",
-        "suggest": "这是因为只能在具有 AVX2 的系统上正确调用该函数 (例如内联函数本身)。",
+        "suggest": "这是因为只能在具有 AVX2 的系统上正确调用该函数 (例如内部函数本身)。",
         "translate": ""
     },
     {
@@ -1331,7 +1331,7 @@
     },
     {
         "source": "Over time these abstractions may also move into the standard library itself, but for now this module is tasked with providing the bare minimum necessary to use vendor intrinsics on stable Rust.",
-        "suggest": "随着时间的流逝，这些抽象也可能会移入标准库本身，但是目前，此模块的任务是提供在稳定的 Rust 上使用供应商内联函数所需的最低限度的最低要求。",
+        "suggest": "随着时间的流逝，这些抽象也可能会移入标准库本身，但是目前，此模块的任务是提供在稳定的 Rust 上使用供应商内部函数所需的最低限度的最低要求。",
         "translate": ""
     },
     {
@@ -1346,12 +1346,12 @@
     },
     {
         "source": "First let's take a look at not actually using any intrinsics but instead using LLVM's auto-vectorization to produce optimized vectorized code for AVX2 and also for the default platform.",
-        "suggest": "首先，让我们看一下实际上不使用任何内联函数，而是使用 LLVM 的自动矢量化为 AVX2 和默认平台生成优化的矢量化代码。",
+        "suggest": "首先，让我们看看实际上没有使用任何内部函数，而是使用 LLVM 的自动矢量化为 AVX2 和默认平台生成优化的矢量化代码。",
         "translate": ""
     },
     {
         "source": "Next up let's take a look at an example of manually using intrinsics.",
-        "suggest": "接下来，让我们来看一个手动使用内联函数的示例。",
+        "suggest": "接下来，让我们来看一个手动使用内部函数的示例。",
         "translate": ""
     },
     {
@@ -1436,7 +1436,7 @@
     },
     {
         "source": "SIMD Architecture intrinsics",
-        "suggest": "SIMD 体系结构内联函数",
+        "suggest": "SIMD 架构内部函数",
         "translate": ""
     },
     {

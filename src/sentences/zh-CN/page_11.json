@@ -691,7 +691,7 @@
     },
     {
         "source": "We are calling the intrinsics directly to avoid function calls in the generated code as `intrinsics::copy_nonoverlapping` is a wrapper function.",
-        "suggest": "我们直接调用内联函数是为了避免在生成的代码中调用函数，因为 `intrinsics::copy_nonoverlapping` 是包装函数。",
+        "suggest": "我们直接调用内部函数是为了避免在生成的代码中调用函数，因为 `intrinsics::copy_nonoverlapping` 是一个包装函数。",
         "translate": ""
     },
     {
@@ -726,7 +726,7 @@
     },
     {
         "source": "We are calling the intrinsic directly to avoid function calls in the generated code.",
-        "suggest": "我们直接调用内联函数以避免在生成的代码中进行函数调用。",
+        "suggest": "我们直接调用内部函数以避免在生成的代码中进行函数调用。",
         "translate": ""
     },
     {
@@ -831,7 +831,7 @@
     },
     {
         "source": "If we ever decide to make it possible to call the intrinsic with `a` that is not a power-of-two, it will probably be more prudent to just change to a naive implementation rather than trying to adapt this to accommodate that change.",
-        "suggest": "如果我们决定允许使用非 2 的幂的 `a` 调用内联函数，那么仅更改为幼稚的实现而不是尝试使其适应这种变化可能会更明智。",
+        "suggest": "如果我们决定可以使用不是二次幂的 `a` 来调用内部函数，那么可能更谨慎的做法是只更改为一个简单的实现，而不是尝试调整它以适应这种更改。",
         "translate": ""
     },
     {
@@ -841,7 +841,7 @@
     },
     {
         "source": "Direct use of these intrinsics improves codegen significantly at opt-level <=",
-        "suggest": "在 opt 级别 <= 上，直接使用这些内联函数可显着改善代码生成",
+        "suggest": "直接使用这些内部函数可显着改善 opt-level <= 的代码生成",
         "translate": ""
     },
     {
@@ -4261,7 +4261,7 @@
     },
     {
         "source": "Use the llvm.bswap intrinsic to reverse u8s in a usize",
-        "suggest": "使用 llvm.bswap 内联函数在 usize 中反转 u8",
+        "suggest": "使用 llvm.bswap 内部函数在 usize 中反转 u8",
         "translate": ""
     },
     {

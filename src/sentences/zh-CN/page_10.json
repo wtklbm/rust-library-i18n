@@ -4036,7 +4036,7 @@
     },
     {
         "source": "the `arith_offset` intrinsic has no prerequisites to be called.",
-        "suggest": "`arith_offset` 内联函数没有先决条件。",
+        "suggest": "`arith_offset` 内部函数没有要调用的先决条件。",
         "translate": ""
     },
     {

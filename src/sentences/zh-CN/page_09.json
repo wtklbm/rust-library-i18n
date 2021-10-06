@@ -4171,7 +4171,7 @@
     },
     {
         "source": "That means the shift is always in-bounds, and some processors (such as intel pre-haswell) have more efficient ctlz intrinsics when the argument is non-zero.",
-        "suggest": "这意味着移位始终是边界内的，并且当参数为非零值时，某些处理器 (例如 intel pre-haswell) 具有更有效的 ctlz 内联函数。",
+        "suggest": "这意味着移位始终是边界内的，并且当参数为非零值时，某些处理器 (例如 intel pre-haswell) 具有更高效的 ctlz 内部函数。",
         "translate": ""
     },
     {

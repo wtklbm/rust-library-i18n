@@ -636,7 +636,7 @@
     },
     {
         "source": "Finally, when we come back out of the `try` intrinsic we're in one of two states:",
-        "suggest": "最后，当我们退出 `try` 内联函数时，我们处于以下两种状态之一:",
+        "suggest": "最后，当我们从 `try` 内部函数返回时，我们处于以下两种状态之一:",
         "translate": ""
     },
     {
@@ -666,7 +666,7 @@
     },
     {
         "source": "Access to the union's fields: this is `std` and we know that the `r#try` intrinsic fills in the `r` or `p` union field based on its return value.",
-        "suggest": "访问 union 的字段: 这是 `std`，我们知道 `r#try` 内联函数根据其返回值填充 `r` 或 `p` union 字段。",
+        "suggest": "访问 union 的字段: 这是 `std`，我们知道 `r#try` 内部函数根据其返回值填充 `r` 或 `p` union 字段。",
         "translate": ""
     },
     {
