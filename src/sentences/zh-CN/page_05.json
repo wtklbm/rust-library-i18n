@@ -76,7 +76,7 @@
     },
     {
         "source": "Returns a raw pointer to the underlying data in this cell.",
-        "suggest": "返回此 cell 中基础数据的裸指针。",
+        "suggest": "返回此 cell 中基础数据的原始指针。",
         "translate": ""
     },
     {
@@ -681,12 +681,12 @@
     },
     {
         "source": "The `UnsafeCell` API itself is technically very simple: [`.get()`] gives you a raw pointer `*mut T` to its contents.",
-        "suggest": "`UnsafeCell` API 本身在技术上非常简单: [`.get()`] 为其内容提供了裸指针 `*mut T`。",
+        "suggest": "`UnsafeCell` API 本身在技术上非常简单: [`.get()`] 为其内容提供了原始指针 `*mut T`。",
         "translate": ""
     },
     {
         "source": "It is up to _you_ as the abstraction designer to use that raw pointer correctly.",
-        "suggest": "正确使用该裸指针取决于您。",
+        "suggest": "正确使用该原始指针取决于您。",
         "translate": ""
     },
     {
@@ -811,7 +811,7 @@
     },
     {
         "source": "The difference to [`get`] is that this function accepts a raw pointer, which is useful to avoid the creation of temporary references.",
-        "suggest": "与 [`get`] 的不同之处在于此函数接受裸指针，这对于避免创建临时引用很有用。",
+        "suggest": "与 [`get`] 的不同之处在于此函数接受原始指针，这对于避免创建临时引用很有用。",
         "translate": ""
     },
     {

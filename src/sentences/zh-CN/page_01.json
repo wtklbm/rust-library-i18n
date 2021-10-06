@@ -2721,7 +2721,7 @@
     },
     {
         "source": "Hence the raw pointer we created above, for `deque`, remains valid.",
-        "suggest": "因此，我们上面为 `deque` 创建的裸指针仍然有效。",
+        "suggest": "因此，我们上面为 `deque` 创建的原始指针仍然有效。",
         "translate": ""
     },
     {

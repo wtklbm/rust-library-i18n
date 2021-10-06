@@ -976,12 +976,12 @@
     },
     {
         "source": "a) Generators cannot implement `for<'a, 'b> Generator<&'a mut Context<'b>>`, so we need to pass a raw pointer (see <https://github.com/rust-lang/rust/issues/68923>).",
-        "suggest": "a) 生成器无法实现 `for<'a, 'b> Generator<&'a mut Context<'b>>`，因此我们需要传递一个裸指针 (请参见 <https://github.com/rust-lang/rust/issues/68923>)。",
+        "suggest": "a) 生成器无法实现 `for<'a, 'b> Generator<&'a mut Context<'b>>`，因此我们需要传递一个原始指针 (请参见 <https://github.com/rust-lang/rust/issues/68923>)。",
         "translate": ""
     },
     {
         "source": "b) Raw pointers and `NonNull` aren't `Send` or `Sync`, so that would make every single future non-Send/Sync as well, and we don't want that.",
-        "suggest": "b) 裸指针和 `NonNull` 既不是 `Send` 也不是 `Sync`，所以这也会使每个 future non-Send/Sync 都一样，我们不希望这样。",
+        "suggest": "b) 原始指针和 `NonNull` 既不是 `Send` 也不是 `Sync`，所以这也会使每个 future non-Send/Sync 都一样，我们不希望这样。",
         "translate": ""
     },
     {
@@ -1016,7 +1016,7 @@
     },
     {
         "source": "Resume the generator, turning the `&mut Context` into a `NonNull` raw pointer.",
-        "suggest": "恢复生成器，将 `&mut Context` 变成 `NonNull` 裸指针。",
+        "suggest": "恢复生成器，将 `&mut Context` 变成 `NonNull` 原始指针。",
         "translate": ""
     },
     {
@@ -2141,7 +2141,7 @@
     },
     {
         "source": "N.B., these intrinsics take raw pointers because they mutate aliased memory, which is not valid for either `&` or `&mut`.",
-        "suggest": "注意，这些内部函数采用裸指针，因为它们会使别名内存发生可变的，这对于 `&` 或 `&mut` 均无效。",
+        "suggest": "注意，这些内部函数采用原始指针，因为它们会使别名内存发生可变的，这对于 `&` 或 `&mut` 均无效。",
         "translate": ""
     },
     {

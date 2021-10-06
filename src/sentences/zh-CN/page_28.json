@@ -2081,7 +2081,7 @@
     },
     {
         "source": "Raw pointers and `NonNull` aren't `Send` or `Sync`, so that would make every single future non-Send/Sync as well, and we don't want that.",
-        "suggest": "裸指针和 `NonNull` 不是 `Send` 或 `Sync`，因此每个 future non-Send/Sync 也是如此，我们不想要那样。",
+        "suggest": "原始指针和 `NonNull` 不是 `Send` 或 `Sync`，因此每个 future non-Send/Sync 也是如此，我们不想要那样。",
         "translate": ""
     },
     {
