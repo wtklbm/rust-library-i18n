@@ -46,7 +46,7 @@
     },
     {
         "source": "Dereference [raw pointers]",
-        "suggest": "解引用 [原始指针][raw pointers]",
+        "suggest": "解引用 [裸指针][raw pointers]",
         "translate": ""
     },
     {

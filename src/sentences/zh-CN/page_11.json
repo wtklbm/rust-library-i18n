@@ -6,7 +6,7 @@
     },
     {
         "source": "Casting to a raw pointer doesn't help;",
-        "suggest": "强制转换为原始指针无济于事;",
+        "suggest": "强制转换为裸指针无济于事;",
         "translate": ""
     },
     {
@@ -41,12 +41,12 @@
     },
     {
         "source": "Manually manage memory through raw pointers.",
-        "suggest": "通过原始指针手动管理内存。",
+        "suggest": "通过裸指针手动管理内存。",
         "translate": ""
     },
     {
         "source": "Many functions in this module take raw pointers as arguments and read from or write to them.",
-        "suggest": "该模块中的许多函数都将原始指针作为参数，并对其进行读取或写入。",
+        "suggest": "该模块中的许多函数都将裸指针作为参数，并对其进行读取或写入。",
         "translate": ""
     },
     {
@@ -121,7 +121,7 @@
     },
     {
         "source": "The result of casting a reference to a pointer is valid for as long as the underlying object is live and no reference (just raw pointers) is used to access the same memory.",
-        "suggest": "只要基础对象处于活动状态，并且不使用引用 (仅原始指针) 来访问同一内存，则对指针进行强制引用的结果是有效的。",
+        "suggest": "只要基础对象处于活动状态，并且不使用引用 (仅裸指针) 来访问同一内存，则对指针进行强制引用的结果是有效的。",
         "translate": ""
     },
     {
@@ -141,7 +141,7 @@
     },
     {
         "source": "Valid raw pointers as defined above are not necessarily properly aligned (where \"proper\" alignment is defined by the pointee type, i.e., `*const T` must be aligned to `mem::align_of::<T>()`).",
-        "suggest": "上面定义的有效原始指针不一定正确对齐 (其中 \"proper\" 对齐由 pointee 类型定义，即 `*const T` 必须与 `mem::align_of::<T>()` 对齐)。",
+        "suggest": "上面定义的有效裸指针不一定正确对齐 (其中 \"proper\" 对齐由 pointee 类型定义，即 `*const T` 必须与 `mem::align_of::<T>()` 对齐)。",
         "translate": ""
     },
     {
@@ -256,7 +256,7 @@
     },
     {
         "source": "Creates a null raw pointer.",
-        "suggest": "创建一个空的原始指针。",
+        "suggest": "创建一个空的裸指针。",
         "translate": ""
     },
     {
@@ -321,7 +321,7 @@
     },
     {
         "source": "It operates on raw pointers instead of references.",
-        "suggest": "它对原始指针而不是引用进行操作。",
+        "suggest": "它对裸指针而不是引用进行操作。",
         "translate": ""
     },
     {
@@ -511,7 +511,7 @@
     },
     {
         "source": "This function is semantically equivalent to [`mem::replace`] except that it operates on raw pointers instead of references.",
-        "suggest": "该函数在语义上等效于 [`mem::replace`]，除了它在原始指针上而不是在引用上运行。",
+        "suggest": "该函数在语义上等效于 [`mem::replace`]，除了它在裸指针上而不是在引用上运行。",
         "translate": ""
     },
     {
@@ -616,12 +616,12 @@
     },
     {
         "source": "It is currently impossible to create raw pointers to unaligned fields of a packed struct.",
-        "suggest": "当前无法为包装结构体的未对齐字段创建原始指针。",
+        "suggest": "当前无法为包装结构体的未对齐字段创建裸指针。",
         "translate": ""
     },
     {
         "source": "Attempting to create a raw pointer to an `unaligned` struct field with an expression such as `&packed.unaligned as *const FieldType` creates an intermediate unaligned reference before converting that to a raw pointer.",
-        "suggest": "尝试使用诸如 `&packed.unaligned as *const FieldType` 的表达式创建指向 `unaligned` 结构体字段的原始指针，然后再将其转换为原始指针，这会产生一个中间未对齐的引用。",
+        "suggest": "尝试使用诸如 `&packed.unaligned as *const FieldType` 的表达式创建指向 `unaligned` 结构体字段的裸指针，然后再将其转换为裸指针，这会产生一个中间未对齐的引用。",
         "translate": ""
     },
     {
@@ -1051,7 +1051,7 @@
     },
     {
         "source": "Compares raw pointers for equality.",
-        "suggest": "比较原始指针是否相等。",
+        "suggest": "比较裸指针是否相等。",
         "translate": ""
     },
     {
@@ -1061,7 +1061,7 @@
     },
     {
         "source": "the arguments have to be `*const T` raw pointers, not anything that implements `PartialEq`.",
-        "suggest": "参数必须是 `*const T` 原始指针，而不是任何实现 `PartialEq` 的东西。",
+        "suggest": "参数必须是 `*const T` 裸指针，而不是任何实现 `PartialEq` 的东西。",
         "translate": ""
     },
     {
@@ -1081,7 +1081,7 @@
     },
     {
         "source": "Hash a raw pointer.",
-        "suggest": "散列一个原始指针。",
+        "suggest": "散列一个裸指针。",
         "translate": ""
     },
     {
@@ -1106,7 +1106,7 @@
     },
     {
         "source": "Create a `const` raw pointer to a place, without creating an intermediate reference.",
-        "suggest": "创建一个 `const` 原始指针到一个位置，而无需创建中间引用。",
+        "suggest": "创建一个 `const` 裸指针到一个位置，而无需创建中间引用。",
         "translate": ""
     },
     {
@@ -1116,27 +1116,27 @@
     },
     {
         "source": "For cases where those requirements do not hold, raw pointers should be used instead.",
-        "suggest": "对于那些不满足要求的情况，应改用原始指针。",
+        "suggest": "对于那些不满足要求的情况，应改用裸指针。",
         "translate": ""
     },
     {
         "source": "However, `&expr as *const _` creates a reference before casting it to a raw pointer, and that reference is subject to the same rules as all other references.",
-        "suggest": "但是，`&expr as *const _` 在将其强制转换为原始指针之前会创建一个引用，并且该引用与所有其他引用都遵循相同的规则。",
+        "suggest": "但是，`&expr as *const _` 在将其强制转换为裸指针之前会创建一个引用，并且该引用与所有其他引用都遵循相同的规则。",
         "translate": ""
     },
     {
         "source": "This macro can create a raw pointer *without* creating a reference first.",
-        "suggest": "该宏可以创建一个原始指针，而无需先创建一个引用。",
+        "suggest": "该宏可以创建一个裸指针，而无需先创建一个引用。",
         "translate": ""
     },
     {
         "source": "Create a `mut` raw pointer to a place, without creating an intermediate reference.",
-        "suggest": "创建一个 `mut` 原始指针到一个位置，而无需创建中间引用。",
+        "suggest": "创建一个 `mut` 裸指针到一个位置，而无需创建中间引用。",
         "translate": ""
     },
     {
         "source": "However, `&mut expr as *mut _` creates a reference before casting it to a raw pointer, and that reference is subject to the same rules as all other references.",
-        "suggest": "但是，`&mut expr as *mut _` 在将其强制转换为原始指针之前会创建一个引用，并且该引用与所有其他引用都遵循相同的规则。",
+        "suggest": "但是，`&mut expr as *mut _` 在将其强制转换为裸指针之前会创建一个引用，并且该引用与所有其他引用都遵循相同的规则。",
         "translate": ""
     },
     {
@@ -1371,7 +1371,7 @@
     },
     {
         "source": "This is often the correct thing to use when building data structures using raw pointers, but is ultimately more dangerous to use because of its additional properties.",
-        "suggest": "在使用原始指针构建数据结构时，这通常是正确的选择，但由于其额外的属性，最终使用起来更加危险。",
+        "suggest": "在使用裸指针构建数据结构时，这通常是正确的选择，但由于其额外的属性，最终使用起来更加危险。",
         "translate": ""
     },
     {
@@ -4116,7 +4116,7 @@
     },
     {
         "source": "Returns the two raw pointers spanning the slice.",
-        "suggest": "返回跨越切片的两个原始指针。",
+        "suggest": "返回跨越切片的两个裸指针。",
         "translate": ""
     },
     {
@@ -4216,7 +4216,7 @@
     },
     {
         "source": "Can't take two mutable loans from one vector, so instead use raw pointers.",
-        "suggest": "不能从一个 vector 借两笔可变贷款，所以改用原始指针。",
+        "suggest": "不能从一个 vector 借两笔可变贷款，所以改用裸指针。",
         "translate": ""
     },
     {

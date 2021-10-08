@@ -736,7 +736,7 @@
     },
     {
         "source": "Implementations will likely, however, contain unsafe code as this type only operates on `*mut u8`, a raw pointer.",
-        "suggest": "但是，实现可能会包含不安全的代码，因为此类型仅在 `*mut u8` (原始指针) 上运行。",
+        "suggest": "但是，实现可能会包含不安全的代码，因为此类型仅在 `*mut u8` (裸指针) 上运行。",
         "translate": ""
     },
     {

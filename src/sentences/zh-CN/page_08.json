@@ -1231,7 +1231,7 @@
     },
     {
         "source": "Thus using raw pointer assignment instead of `ptr::write` does not cause the old uninitialized value to be dropped.",
-        "suggest": "因此，使用原始指针分配代替 `ptr::write` 不会导致旧的未初始化值被丢弃。",
+        "suggest": "因此，使用裸指针分配代替 `ptr::write` 不会导致旧的未初始化值被丢弃。",
         "translate": ""
     },
     {
@@ -2291,7 +2291,7 @@
     },
     {
         "source": "If you want to obtain a raw pointer to the memory, see [`Box::into_raw`].",
-        "suggest": "如果要获取内存的原始指针，请参见 [`Box::into_raw`]。",
+        "suggest": "如果要获取内存的裸指针，请参见 [`Box::into_raw`]。",
         "translate": ""
     },
     {
@@ -2601,7 +2601,7 @@
     },
     {
         "source": "`val` is a reference, so it's a valid raw pointer",
-        "suggest": "`val` 是引用，因此它是有效的原始指针",
+        "suggest": "`val` 是引用，因此它是有效的裸指针",
         "translate": ""
     },
     {
@@ -2621,7 +2621,7 @@
     },
     {
         "source": "the caller must provide a valid raw pointer",
-        "suggest": "调用者必须提供有效的原始指针",
+        "suggest": "调用者必须提供有效的裸指针",
         "translate": ""
     },
     {
@@ -2651,7 +2651,7 @@
     },
     {
         "source": "val is a reference, so it's a valid raw pointer",
-        "suggest": "val 是一个引用，因此它是有效的原始指针",
+        "suggest": "val 是一个引用，因此它是有效的裸指针",
         "translate": ""
     },
     {
@@ -2831,7 +2831,7 @@
     },
     {
         "source": "the raw pointers have been created from safe mutable references satisfying all the constraints on `ptr::swap_nonoverlapping_one`",
-        "suggest": "原始指针是根据安全可变引用创建的，满足 `ptr::swap_nonoverlapping_one` 上的所有约束",
+        "suggest": "裸指针是根据安全可变引用创建的，满足 `ptr::swap_nonoverlapping_one` 上的所有约束",
         "translate": ""
     },
     {

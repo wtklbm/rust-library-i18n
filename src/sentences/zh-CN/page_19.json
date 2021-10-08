@@ -3991,7 +3991,7 @@
     },
     {
         "source": "The `PhantomData` of a raw pointer removes these two auto traits, but we enforce both below in the implementation so this should be safe to add.",
-        "suggest": "原始指针的 `PhantomData` 删除了这两个自动 traits，但是我们在实现中强制执行以下两项，因此添加起来应该很安全。",
+        "suggest": "裸指针的 `PhantomData` 删除了这两个自动 traits，但是我们在实现中强制执行以下两项，因此添加起来应该很安全。",
         "translate": ""
     },
     {

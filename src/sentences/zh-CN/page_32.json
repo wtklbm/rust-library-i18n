@@ -551,7 +551,7 @@
     },
     {
         "source": "Compile-time constants, compile-time evaluable functions, and raw pointers.",
-        "suggest": "编译时常量、编译时可评估函数和原始指针。",
+        "suggest": "编译时常量、编译时可评估函数和裸指针。",
         "translate": ""
     },
     {

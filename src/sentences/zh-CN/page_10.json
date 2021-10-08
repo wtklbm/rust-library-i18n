@@ -1,7 +1,7 @@
 [
     {
         "source": "In immutable contexts, `*x` (where `T` is neither a reference nor a raw pointer) is equivalent to `*Deref::deref(&x)`.",
-        "suggest": "在不可变的上下文中，`*x` (其中 `T` 既不是引用也不是原始指针) 等效于 `* Deref::deref(&x)`。",
+        "suggest": "在不可变的上下文中，`*x` (其中 `T` 既不是引用也不是裸指针) 等效于 `* Deref::deref(&x)`。",
         "translate": ""
     },
     {
@@ -71,7 +71,7 @@
     },
     {
         "source": "In mutable contexts, `*x` (where `T` is neither a reference nor a raw pointer) is equivalent to `*DerefMut::deref_mut(&mut x)`.",
-        "suggest": "在可变上下文中，`*x` (其中 `T` 既不是引用也不是原始指针) 等效于 `* DerefMut::deref_mut(&mut x)`。",
+        "suggest": "在可变上下文中，`*x` (其中 `T` 既不是引用也不是裸指针) 等效于 `* DerefMut::deref_mut(&mut x)`。",
         "translate": ""
     },
     {
@@ -2616,7 +2616,7 @@
     },
     {
         "source": "Instead we use a raw pointer, though one which is known not to be null, as we know it's pointing at the string.",
-        "suggest": "取而代之的是，我们使用一个原始指针，尽管我们知道它指向的是一个不为 null 的指针。",
+        "suggest": "取而代之的是，我们使用一个裸指针，尽管我们知道它指向的是一个不为 null 的指针。",
         "translate": ""
     },
     {
@@ -3716,7 +3716,7 @@
     },
     {
         "source": "Iterate using a raw pointer in increments of two elements",
-        "suggest": "使用原始指针以两个元素为增量进行迭代",
+        "suggest": "使用裸指针以两个元素为增量进行迭代",
         "translate": ""
     },
     {
@@ -3741,7 +3741,7 @@
     },
     {
         "source": "Iterate using a raw pointer in increments of two elements (backwards)",
-        "suggest": "使用原始指针以两个元素 (backwards) 为增量进行迭代",
+        "suggest": "使用裸指针以两个元素 (backwards) 为增量进行迭代",
         "translate": ""
     },
     {
@@ -4486,7 +4486,7 @@
     },
     {
         "source": "Returns a raw pointer to the slice's buffer.",
-        "suggest": "将原始指针返回到切片的缓冲区。",
+        "suggest": "将裸指针返回到切片的缓冲区。",
         "translate": ""
     },
     {
@@ -4496,7 +4496,7 @@
     },
     {
         "source": "Returns a raw pointer to an element or subslice, without doing bounds checking.",
-        "suggest": "将原始指针返回到元素或子切片，而不进行边界检查。",
+        "suggest": "将裸指针返回到元素或子切片，而不进行边界检查。",
         "translate": ""
     },
     {
@@ -4591,7 +4591,7 @@
     },
     {
         "source": "Raw pointer types and reference types in Rust can be thought of as made of two parts:",
-        "suggest": "Rust 中的原始指针类型和引用类型可以认为是由两部分组成:",
+        "suggest": "Rust 中的裸指针类型和引用类型可以认为是由两部分组成:",
         "translate": ""
     },
     {
@@ -4656,7 +4656,7 @@
     },
     {
         "source": "Raw pointers can be decomposed into the data address and metadata components with their [`to_raw_parts`] method.",
-        "suggest": "可以使用 [`to_raw_parts`] 方法将原始指针分解为数据地址和元数据组件。",
+        "suggest": "可以使用 [`to_raw_parts`] 方法将裸指针分解为数据地址和元数据组件。",
         "translate": ""
     },
     {
@@ -4721,7 +4721,7 @@
     },
     {
         "source": "Forms a (possibly-wide) raw pointer from a data address and metadata.",
-        "suggest": "根据数据地址和元数据形成 (possibly-wide) 原始指针。",
+        "suggest": "根据数据地址和元数据形成 (possibly-wide) 裸指针。",
         "translate": ""
     },
     {
@@ -4851,7 +4851,7 @@
     },
     {
         "source": "Get a raw pointer to the last element in `v`.",
-        "suggest": "获取指向 `v` 中最后一个元素的原始指针。",
+        "suggest": "获取指向 `v` 中最后一个元素的裸指针。",
         "translate": ""
     },
     {

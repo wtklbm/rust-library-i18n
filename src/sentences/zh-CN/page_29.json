@@ -3546,12 +3546,12 @@
     },
     {
         "source": "Instead of coercing a reference to a raw pointer, you can use the macros [`ptr::addr_of!`] (for `*const T`) and [`ptr::addr_of_mut!`] (for `*mut T`).",
-        "suggest": "您可以使用宏 [`ptr::addr_of!`] (对于 `*const T`) 和 [`ptr::addr_of_mut!`] (对于 `*mut T`)，而不是强制引用原始指针。",
+        "suggest": "您可以使用宏 [`ptr::addr_of!`] (对于 `*const T`) 和 [`ptr::addr_of_mut!`] (对于 `*mut T`)，而不是强制引用裸指针。",
         "translate": ""
     },
     {
         "source": "These macros allow you to create raw pointers to fields to which you cannot create a reference (without causing undefined behaviour), such as an unaligned field.",
-        "suggest": "这些宏允许您创建原始指针指向您无法创建引用的字段 (不会导致未定义的行为)，例如未对齐的字段。",
+        "suggest": "这些宏允许您创建裸指针指向您无法创建引用的字段 (不会导致未定义的行为)，例如未对齐的字段。",
         "translate": ""
     },
     {

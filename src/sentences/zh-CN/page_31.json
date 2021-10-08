@@ -2341,7 +2341,7 @@
     },
     {
         "source": "Just like raw pointers, raw file descriptors point to resources with dynamic lifetimes, and they can dangle if they outlive their resources or be forged if they're created from invalid values.",
-        "suggest": "就像原始指针针一样，原始文件描述符指向具有动态生命周期的资源，如果它们比它们的资源生命周期更长，它们可以悬垂，如果它们是由无效值创建的，则它们可以被伪造。",
+        "suggest": "就像裸指针一样，原始文件描述符指向具有动态生命周期的资源，如果它们比它们的资源生命周期更长，它们可以悬垂，如果它们是由无效值创建的，则它们可以被伪造。",
         "translate": ""
     },
     {
@@ -2351,7 +2351,7 @@
     },
     {
         "source": "Like raw pointers, `RawFd` values are primitive values.",
-        "suggest": "和原始指针一样，`RawFd` 值是原始值。",
+        "suggest": "和裸指针一样，`RawFd` 值是原始值。",
         "translate": ""
     },
     {
@@ -2656,7 +2656,7 @@
     },
     {
         "source": "Just like raw pointers, raw Windows handles and sockets point to resources with dynamic lifetimes, and they can dangle if they outlive their resources or be forged if they're created from invalid values.",
-        "suggest": "就像原始指针一样，原始的 Windows 句柄和套接字指向具有动态生命周期的资源，如果它们比它们的资源生命周期更长，它们可以悬垂，如果它们是由无效值创建的，则它们可以被伪造。",
+        "suggest": "就像裸指针一样，原始的 Windows 句柄和套接字指向具有动态生命周期的资源，如果它们比它们的资源生命周期更长，它们可以悬垂，如果它们是由无效值创建的，则它们可以被伪造。",
         "translate": ""
     },
     {
@@ -2666,7 +2666,7 @@
     },
     {
         "source": "Like raw pointers, `RawHandle` and `RawSocket` values are primitive values.",
-        "suggest": "和原始指针一样，`RawHandle` 和 `RawSocket` 值都是原始值。",
+        "suggest": "和裸指针一样，`RawHandle` 和 `RawSocket` 值都是原始值。",
         "translate": ""
     },
     {
@@ -3921,7 +3921,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 16 bytes from.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能从中加载 16 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 16 个字节。",
         "translate": ""
     },
     {
@@ -3931,7 +3931,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 8 bytes from.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能从中加载 8 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 8 个字节。",
         "translate": ""
     },
     {
@@ -3941,7 +3941,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 1 byte from.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能从中加载 1 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 1 个字节。",
         "translate": ""
     },
     {
@@ -3951,7 +3951,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 2 bytes from.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能从中加载 2 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 2 个字节。",
         "translate": ""
     },
     {
@@ -3961,7 +3961,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to load 4 bytes from.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能从中加载 4 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能从中加载 4 个字节。",
         "translate": ""
     },
     {
@@ -4001,7 +4001,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 16 bytes to.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能存储 16 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 16 个字节。",
         "translate": ""
     },
     {
@@ -4031,7 +4031,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 1 byte to.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能存储 1 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 1 个字节。",
         "translate": ""
     },
     {
@@ -4041,7 +4041,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 2 bytes to.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能存储 2 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 2 个字节。",
         "translate": ""
     },
     {
@@ -4051,7 +4051,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 4 bytes to.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能存储 4 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 4 个字节。",
         "translate": ""
     },
     {
@@ -4061,7 +4061,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it takes a raw pointer as an argument, and the pointer must be valid to store 8 bytes to.",
-        "suggest": "这个内部函数是不安全的，因为它需要一个原始指针作为参数，并且指针必须有效才能存储 8 个字节。",
+        "suggest": "这个内部函数是不安全的，因为它需要一个裸指针作为参数，并且指针必须有效才能存储 8 个字节。",
         "translate": ""
     },
     {
@@ -4151,7 +4151,7 @@
     },
     {
         "source": "The difference from [`get`] is that this function accepts a raw pointer, which is useful to avoid the creation of temporary references.",
-        "suggest": "与 [`get`] 的不同之处在于该函数接受一个原始指针，这有助于避免创建临时引用。",
+        "suggest": "与 [`get`] 的不同之处在于该函数接受一个裸指针，这有助于避免创建临时引用。",
         "translate": ""
     },
     {

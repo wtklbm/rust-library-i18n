@@ -461,7 +461,7 @@
     },
     {
         "source": "Creates an owned `User<T>` from a raw pointer.",
-        "suggest": "从原始指针创建一个拥有的 `User<T>`。",
+        "suggest": "从裸指针创建一个拥有的 `User<T>`。",
         "translate": ""
     },
     {
@@ -491,7 +491,7 @@
     },
     {
         "source": "Converts this value into a raw pointer.",
-        "suggest": "将此值转换为原始指针。",
+        "suggest": "将此值转换为裸指针。",
         "translate": ""
     },
     {
@@ -526,7 +526,7 @@
     },
     {
         "source": "Creates a `&UserRef<[T]>` from a raw pointer.",
-        "suggest": "从原始指针创建 `&UserRef<[T]>`。",
+        "suggest": "从裸指针创建 `&UserRef<[T]>`。",
         "translate": ""
     },
     {
@@ -541,7 +541,7 @@
     },
     {
         "source": "Creates a `&mut UserRef<[T]>` from a raw pointer.",
-        "suggest": "从原始指针创建 `&mut UserRef<[T]>`。",
+        "suggest": "从裸指针创建 `&mut UserRef<[T]>`。",
         "translate": ""
     },
     {
@@ -576,7 +576,7 @@
     },
     {
         "source": "Obtain a raw pointer from this reference.",
-        "suggest": "从此引用中获取一个原始指针。",
+        "suggest": "从此引用中获取一个裸指针。",
         "translate": ""
     },
     {
@@ -611,7 +611,7 @@
     },
     {
         "source": "Obtain a raw pointer to the first element of this user slice.",
-        "suggest": "获取对此用户切片的第一个元素的原始指针。",
+        "suggest": "获取对此用户切片的第一个元素的裸指针。",
         "translate": ""
     },
     {

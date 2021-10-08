@@ -3356,7 +3356,7 @@
     },
     {
         "source": "explicitly using `as` allows a few more coercions that aren't allowed implicitly, such as changing the type of a raw pointer or turning closures into raw pointers.",
-        "suggest": "显式使用 `as` 可以允许更多隐式不允许的强制，例如更改原始指针的类型或将闭包转换为原始指针。",
+        "suggest": "显式使用 `as` 可以允许更多隐式不允许的强制，例如更改裸指针的类型或将闭包转换为裸指针。",
         "translate": ""
     },
     {
@@ -3556,12 +3556,12 @@
     },
     {
         "source": "The `const` keyword is also used in raw pointers in combination with `mut`, as seen in `*const T` and `*mut T`.",
-        "suggest": "`const` 关键字也与 `mut` 一起用于原始指针中，如 `*const T` 和 `* mut T` 所示。",
+        "suggest": "`const` 关键字也与 `mut` 一起用于裸指针中，如 `*const T` 和 `* mut T` 所示。",
         "translate": ""
     },
     {
         "source": "More about `const` as used in raw pointers can be read at the Rust docs for the [pointer primitive].",
-        "suggest": "可以在 [指针原语][pointer primitive] 的 Rust 文档中阅读有关原始指针中使用的 `const` 的更多信息。",
+        "suggest": "可以在 [指针原语][pointer primitive] 的 Rust 文档中阅读有关裸指针中使用的 `const` 的更多信息。",
         "translate": ""
     },
     {
@@ -4336,7 +4336,7 @@
     },
     {
         "source": "Mutable raw pointers work much like mutable references, with the added possibility of not pointing to a valid object.",
-        "suggest": "可变原始指针的工作方式与可变引用非常相似，但有可能无法指向有效的 object。",
+        "suggest": "可变裸指针的工作方式与可变引用非常相似，但有可能无法指向有效的 object。",
         "translate": ""
     },
     {

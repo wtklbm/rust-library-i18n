@@ -2936,7 +2936,7 @@
     },
     {
         "source": "With `write`, we can avoid the need to write through a raw pointer:",
-        "suggest": "有了 `write`，我们就可以避免通过原始指针路径来写:",
+        "suggest": "有了 `write`，我们就可以避免通过裸指针路径来写:",
         "translate": ""
     },
     {

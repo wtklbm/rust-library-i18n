@@ -426,7 +426,7 @@
     },
     {
         "source": "Extracting a raw pointer to the whole C string",
-        "suggest": "将原始指针提取到整个 C 字符串",
+        "suggest": "将裸指针提取到整个 C 字符串",
         "translate": ""
     },
     {
@@ -481,12 +481,12 @@
     },
     {
         "source": "Once you have the kind of slice you need (with or without a nul terminator), you can call the slice's own [`as_ptr`][slice::as_ptr] method to get a read-only raw pointer to pass to extern functions.",
-        "suggest": "一旦有了所需的切片类型 (带或不带 nul 终止符)，就可以调用切片自己的 [`as_ptr`][slice::as_ptr] 方法来获取只读的原始指针，以将其传递给 extern 函数。",
+        "suggest": "一旦有了所需的切片类型 (带或不带 nul 终止符)，就可以调用切片自己的 [`as_ptr`][slice::as_ptr] 方法来获取只读的裸指针，以将其传递给 extern 函数。",
         "translate": ""
     },
     {
         "source": "See the documentation for that function for a discussion on ensuring the lifetime of the raw pointer.",
-        "suggest": "有关确保原始指针的生命周期的讨论，请参见该函数的文档。",
+        "suggest": "有关确保裸指针的生命周期的讨论，请参见该函数的文档。",
         "translate": ""
     },
     {
@@ -781,7 +781,7 @@
     },
     {
         "source": "Creates a `CString`, pass ownership to an `extern` function (via raw pointer), then retake ownership with `from_raw`:",
-        "suggest": "创建一个 `CString`，将所有权传递给 `extern` 函数 (通过原始指针)，然后使用 `from_raw` 重新获得所有权:",
+        "suggest": "创建一个 `CString`，将所有权传递给 `extern` 函数 (通过裸指针)，然后使用 `from_raw` 重新获得所有权:",
         "translate": ""
     },
     {

@@ -486,7 +486,7 @@
     },
     {
         "source": "A raw pointer type which can be safely shared between threads.",
-        "suggest": "可以在线程之间安全共享的原始指针类型。",
+        "suggest": "可以在线程之间安全共享的裸指针类型。",
         "translate": ""
     },
     {
@@ -711,7 +711,7 @@
     },
     {
         "source": "any data races are prevented by atomic intrinsics and the raw pointer passed in is valid because we got it from a reference.",
-        "suggest": "原子内部函数可以防止任何数据竞争，并且传入的原始指针是有效的，因为我们是从引用中获得的。",
+        "suggest": "原子内部函数可以防止任何数据竞争，并且传入的裸指针是有效的，因为我们是从引用中获得的。",
         "translate": ""
     },
     {
@@ -931,7 +931,7 @@
     },
     {
         "source": "Any use of the returned raw pointer requires an `unsafe` block and still has to uphold the same restriction: operations on it must be atomic.",
-        "suggest": "对返回的原始指针的任何使用都需要一个 `unsafe` 块，并且仍然必须遵守相同的限制: 对其进行的操作必须是原子的。",
+        "suggest": "对返回的裸指针的任何使用都需要一个 `unsafe` 块，并且仍然必须遵守相同的限制: 对其进行的操作必须是原子的。",
         "translate": ""
     },
     {
@@ -1021,7 +1021,7 @@
     },
     {
         "source": "This intrinsic is unsafe because it operates on a raw pointer but we know for sure that the pointer is valid (we just got it from an `UnsafeCell` that we have by reference) and the atomic operation itself allows us to safely mutate the `UnsafeCell` contents.",
-        "suggest": "这个内部函数是不安全的，因为它在原始指针上操作，但是我们可以肯定该指针是有效的 (我们只是从引用中获得了 `UnsafeCell` 来获取它)，而原子操作本身允许我们安全地对 `UnsafeCell` 的内容进行可变。",
+        "suggest": "这个内部函数是不安全的，因为它在裸指针上操作，但是我们可以肯定该指针是有效的 (我们只是从引用中获得了 `UnsafeCell` 来获取它)，而原子操作本身允许我们安全地对 `UnsafeCell` 的内容进行可变。",
         "translate": ""
     },
     {

@@ -2201,7 +2201,7 @@
     },
     {
         "source": "This method is unsafe because it takes a raw pointer and will attempt to read and possibly write the memory at the pointer.",
-        "suggest": "此方法是不安全的，因为它使用原始指针，并且将尝试读取并可能在指针处写入内存。",
+        "suggest": "此方法是不安全的，因为它使用裸指针，并且将尝试读取并可能在指针处写入内存。",
         "translate": ""
     },
     {

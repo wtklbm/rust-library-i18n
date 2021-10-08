@@ -451,7 +451,7 @@
     },
     {
         "source": "is passed through another layer of raw pointers as `&mut dyn Trait` is not FFI-safe.",
-        "suggest": "由于 `&mut dyn Trait` 并非 FFI 安全，因此会通过另一层原始指针传递。",
+        "suggest": "由于 `&mut dyn Trait` 并非 FFI 安全，因此会通过另一层裸指针传递。",
         "translate": ""
     },
     {
@@ -2956,22 +2956,22 @@
     },
     {
         "source": "Working with raw pointers in Rust is uncommon, typically limited to a few patterns.",
-        "suggest": "在 Rust 中使用原始指针并不常见，通常仅限于几种模式。",
+        "suggest": "在 Rust 中使用裸指针并不常见，通常仅限于几种模式。",
         "translate": ""
     },
     {
         "source": "Raw pointers can be unaligned or [`null`].",
-        "suggest": "原始指针可以是未对齐的或 [`null`]。",
+        "suggest": "裸指针可以是未对齐的或 [`null`]。",
         "translate": ""
     },
     {
         "source": "However, when a raw pointer is dereferenced (using the `*` operator), it must be non-null and aligned.",
-        "suggest": "但是，当解引用原始指针 (使用 `*` 运算符) 时，它必须为非 null 并对齐。",
+        "suggest": "但是，当解引用裸指针 (使用 `*` 运算符) 时，它必须为非 null 并对齐。",
         "translate": ""
     },
     {
         "source": "Storing through a raw pointer using `*ptr = data` calls `drop` on the old value, so [`write`] must be used if the type has drop glue and memory is not already initialized - otherwise `drop` would be called on the uninitialized memory.",
-        "suggest": "使用 `*ptr = data` 通过原始指针存储会在旧值上调用 `drop`，因此，如果该类型具有 drop glue 并且尚未初始化内存，则必须使用 [`write`]; 否则，将在未初始化的内存上调用 `drop`。",
+        "suggest": "使用 `*ptr = data` 通过裸指针存储会在旧值上调用 `drop`，因此，如果该类型具有 drop glue 并且尚未初始化内存，则必须使用 [`write`]; 否则，将在未初始化的内存上调用 `drop`。",
         "translate": ""
     },
     {
@@ -2986,7 +2986,7 @@
     },
     {
         "source": "Common ways to create raw pointers",
-        "suggest": "创建原始指针的常用方法",
+        "suggest": "创建裸指针的常用方法",
         "translate": ""
     },
     {
@@ -3011,7 +3011,7 @@
     },
     {
         "source": "The [`into_raw`] function consumes a box and returns the raw pointer.",
-        "suggest": "[`into_raw`] 函数使用 box 并返回原始指针。",
+        "suggest": "[`into_raw`] 函数使用 box 并返回裸指针。",
         "translate": ""
     },
     {
@@ -3031,7 +3031,7 @@
     },
     {
         "source": "Usually you wouldn't literally use `malloc` and `free` from Rust, but C APIs hand out a lot of pointers generally, so are a common source of raw pointers in Rust.",
-        "suggest": "通常，您实际上不会使用 Rust 中的 `malloc` 和 `free`，但是 C API 通常会发出很多指针，因此 Rust 中的原始指针常见来源。",
+        "suggest": "通常，您实际上不会使用 Rust 中的 `malloc` 和 `free`，但是 C API 通常会发出很多指针，因此 Rust 中的裸指针常见来源。",
         "translate": ""
     },
     {
@@ -3536,7 +3536,7 @@
     },
     {
         "source": "Reference equality by address, instead of comparing the values pointed to, is accomplished via implicit reference-pointer coercion and raw pointer equality via [`ptr::eq`], while [`PartialEq`] compares values.",
-        "suggest": "通过地址引用相等，而不是比较所指向的值，是通过 [`ptr::eq`] 通过隐式引用指针强制和原始指针相等来实现的，而 [`PartialEq`] 则是对值进行比较。",
+        "suggest": "通过地址引用相等，而不是比较所指向的值，是通过 [`ptr::eq`] 通过隐式引用指针强制和裸指针相等来实现的，而 [`PartialEq`] 则是对值进行比较。",
         "translate": ""
     },
     {
