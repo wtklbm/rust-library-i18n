@@ -296,7 +296,7 @@
     },
     {
         "source": "Rust enforces that there can only be one mutable reference with no immutable references to a particular piece of data in a particular scope.",
-        "suggest": "Rust 强制只对一个特定作用域中的特定数据进行一个变量引用，而没有不可变引用。",
+        "suggest": "Rust 强制规定在特定范围内只能有一个可变引用，而没有对特定数据段的不可变引用。",
         "translate": ""
     },
     {
@@ -401,7 +401,7 @@
     },
     {
         "source": "Rust enforces that there can only be one mutable reference to a particular piece of data in a particular scope.",
-        "suggest": "Rust 强制要求特定作用域中的特定数据只能有一个可变引用。",
+        "suggest": "Rust 强制规定在特定范围内只能有一个对特定数据的可变引用。",
         "translate": ""
     },
     {

@@ -3031,7 +3031,7 @@
     },
     {
         "source": "Used only internally to construct a thread object without spawning Panics if the name contains nuls.",
-        "suggest": "如果名称包含 nul，则仅在内部用于构造线程 object，而不会产生 Panics。",
+        "suggest": "如果名称包含 nul，则仅在内部用于构造线程 object，而不会发生 panics。",
         "translate": ""
     },
     {

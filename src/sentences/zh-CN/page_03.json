@@ -1726,7 +1726,7 @@
     },
     {
         "source": "The caller must ensure that the vector outlives the pointer this function returns, or else it will end up pointing to garbage.",
-        "suggest": "调用者必须确保 vector 超过此函数返回的指针，否则它将最终指向垃圾。",
+        "suggest": "调用者必须确保 vector 比该函数返回的指针寿命更长，否则它将最终指向垃圾。",
         "translate": ""
     },
     {

@@ -3611,7 +3611,7 @@
     },
     {
         "source": "This is highly unsafe, due to the number of invariants that aren't checked:",
-        "suggest": "由于未检查的不可变变量数量，这是非常不安全的:",
+        "suggest": "这是非常不安全的，因为有许多不可变变量的数量没有被检查:",
         "translate": ""
     },
     {

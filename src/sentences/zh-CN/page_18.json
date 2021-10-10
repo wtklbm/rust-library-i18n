@@ -651,7 +651,7 @@
     },
     {
         "source": "The closure panicked, in which case the panic payload was filled in.",
-        "suggest": "闭包产生 panic 后，在这种情况下，panic payload 会被填充。",
+        "suggest": "闭包发生 panic 后，在这种情况下，panic payload 会被填充。",
         "translate": ""
     },
     {

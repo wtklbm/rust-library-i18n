@@ -2316,7 +2316,7 @@
     },
     {
         "source": "Panics if the value is an [`Ok`], with a custom panic message provided by the [`Ok`]'s value.",
-        "suggest": "如果该值为 [`Ok`]，则会产生 panic，[`Ok`] 的值提供自定义 panic 消息。",
+        "suggest": "如果该值为 [`Ok`]，则会发生 panic，[`Ok`] 的值提供自定义 panic 消息。",
         "translate": ""
     },
     {

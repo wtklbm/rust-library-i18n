@@ -3936,7 +3936,7 @@
     },
     {
         "source": "Iterators are a powerful and robust mechanism used throughout Rust's standard libraries.",
-        "suggest": "迭代器是 Rust 的标准库中使用的强大而强大的机制。",
+        "suggest": "迭代器是 Rust 的标准库中使用的一种强大而健壮的机制。",
         "translate": ""
     },
     {

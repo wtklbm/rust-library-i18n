@@ -2231,7 +2231,7 @@
     },
     {
         "source": "Implementing them overloads the `==` and `!=` operators.",
-        "suggest": "实现它们会使 `==` 和 `!=` 运算符过载。",
+        "suggest": "实现它们会使 `==` 和 `!=` 运算符重载。",
         "translate": ""
     },
     {
@@ -2241,7 +2241,7 @@
     },
     {
         "source": "Implementing them overloads the `<`, `<=`, `>`, and `>=` operators.",
-        "suggest": "实现它们会使 `<`，`<=`，`>` 和 `>=` 运算符过载。",
+        "suggest": "实现它们会使 `<`，`<=`，`>` 和 `>=` 运算符重载。",
         "translate": ""
     },
     {
@@ -2636,7 +2636,7 @@
     },
     {
         "source": "The first mismatching element defines which sequence is lexicographically less or greater than the other.",
-        "suggest": "在字典上，第一个错配元素定义哪个序列比另一个序列小或大。",
+        "suggest": "第一个不匹配元素定义了哪个序列在词典上小于或大于另一个序列。",
         "translate": ""
     },
     {
@@ -2691,7 +2691,7 @@
     },
     {
         "source": "Here's an example where you want to sort people by height only, disregarding `id` and `name`:",
-        "suggest": "这是一个示例，您只想按身高对人进行排序，而不考虑 `id` 和 `name`:",
+        "suggest": "这是一个示例，您只想按高度对人员进行排序，而不考虑 `id` 和 `name`:",
         "translate": ""
     },
     {

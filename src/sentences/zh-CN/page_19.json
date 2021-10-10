@@ -3301,7 +3301,7 @@
     },
     {
         "source": "Receiving on a closed chan will panic",
-        "suggest": "接收一个关闭的通道会产生 panic",
+        "suggest": "接收一个关闭的通道会发生 panic",
         "translate": ""
     },
     {
