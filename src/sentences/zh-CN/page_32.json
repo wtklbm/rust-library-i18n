@@ -2963,5 +2963,400 @@
         "source": "see issue #88585",
         "suggest": "请参见 issue #88585",
         "translate": ""
+    },
+    {
+        "source": "Converts a `Cow<'_, [T]>` into a `Box<[T]>`",
+        "suggest": "将 `Cow<'_, [T]>` 转换为 `Box<[T]>`",
+        "translate": ""
+    },
+    {
+        "source": "When `cow` is the `Cow::Borrowed` variant, this conversion allocates on the heap and copies the underlying slice.",
+        "suggest": "当 `cow` 是 `Cow::Borrowed` 成员时，此转换在堆上分配并复制底层切片。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, it will try to reuse the owned `Vec`'s allocation.",
+        "suggest": "否则，它将尝试重用拥有所有权的 `Vec` 的分配。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a `Cow<'_, str>` into a `Box<str>`",
+        "suggest": "将 `Cow<'_, str>` 转换为 `Box<str>`",
+        "translate": ""
+    },
+    {
+        "source": "When `cow` is the `Cow::Borrowed` variant, this conversion allocates on the heap and copies the underlying `str`.",
+        "suggest": "当 `cow` 是 `Cow::Borrowed` 成员时，此转换在堆上分配并复制底层 `str`。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, it will try to reuse the owned `String`'s allocation.",
+        "suggest": "否则，它将尝试重用拥有所有权的 `String` 的分配。",
+        "translate": ""
+    },
+    {
+        "source": "Attempts to convert a `Box<[T]>` into a `Box<[T; N]>`.",
+        "suggest": "尝试将 `Box<[T]>` 转换为 `Box<[T; N]>`。",
+        "translate": ""
+    },
+    {
+        "source": "The conversion occurs in-place and does not require a new memory allocation.",
+        "suggest": "转换就地发生，不需要新的内存分配。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the old `Box<[T]>` in the `Err` variant if `boxed_slice.len()` does not equal `N`.",
+        "suggest": "如果 `boxed_slice.len()` 不等于 `N`，则返回 `Err` 成员中的旧 `Box<[T]>`。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an array `[T; N]` where each array element `T` is returned by the `cb` call.",
+        "suggest": "创建一个数组 `[T; N]`，其中每个数组元素 `T` 都由 `cb` 调用返回。",
+        "translate": ""
+    },
+    {
+        "source": "Callback where the passed argument is the current array index.",
+        "suggest": "回调，其中传递的参数是当前数组索引。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an array `[T; N]` where each fallible array element `T` is returned by the `cb` call.",
+        "suggest": "创建一个数组 `[T; N]`，其中每个易出错的数组元素 `T` 由 `cb` 调用返回。",
+        "translate": ""
+    },
+    {
+        "source": "Unlike `core::array::from_fn`, where the element creation can't fail, this version will return an error if any element creation was unsuccessful.",
+        "suggest": "与 `core::array::from_fn` 不同，元素创建不能失败，如果任何元素创建失败，此版本将返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "Infallible version of `collect_into_array_rslt_unchecked`.",
+        "suggest": "`collect_into_array_rslt_unchecked` 的可靠版本。",
+        "translate": ""
+    },
+    {
+        "source": "The same safety considerations w.r.t.",
+        "suggest": "相同的安全注意事项",
+        "translate": ""
+    },
+    {
+        "source": "the iterator length apply for `collect_into_array_rslt_unchecked` as for",
+        "suggest": "迭代器长度适用于 `collect_into_array_rslt_unchecked`",
+        "translate": ""
+    },
+    {
+        "source": "this slice will contain only initialized objects.",
+        "suggest": "这个切片将只包含初始化的对象。",
+        "translate": ""
+    },
+    {
+        "source": "Swaps the values of two `Cell`s.",
+        "suggest": "交换两个 `Cell` 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Prefix collisions",
+        "suggest": "前缀冲突",
+        "translate": ""
+    },
+    {
+        "source": "Implementations of `hash` should ensure that the data they pass to the `Hasher` are prefix-free.",
+        "suggest": "`hash` 的实现应该确保它们传递给 `Hasher` 的数据是无前缀的。",
+        "translate": ""
+    },
+    {
+        "source": "That is, unequal values should cause two different sequences of values to be written, and neither of the two sequences should be a prefix of the other.",
+        "suggest": "也就是说，不相等的值应该导致写入两个不同的值序列，并且两个序列中的任何一个都不应该是另一个的前缀。",
+        "translate": ""
+    },
+    {
+        "source": "For example, the standard implementation of [`Hash` for `&str`][impl] passes an extra `0xFF` byte to the `Hasher` so that the values `(\"ab\", \"c\")` and `(\"a\", \"bc\")` hash differently.",
+        "suggest": "例如，[`Hash` for `&str`][impl] 的标准实现将额外的 `0xFF` 字节传递给 `Hasher`，以便值 `(\"ab\", \"c\")` 和 `(\"a\", \"bc\")` 哈希不同。",
+        "translate": ""
+    },
+    {
+        "source": "Checked addition with an unsigned integer.",
+        "suggest": "用无符号整数检查加法。",
+        "translate": ""
+    },
+    {
+        "source": "Checked subtraction with an unsigned integer.",
+        "suggest": "用无符号整数检查减法。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating addition with an unsigned integer.",
+        "suggest": "使用无符号整数进行饱和加法。",
+        "translate": ""
+    },
+    {
+        "source": "Overflow can only happen at the upper bound We cannot use `unwrap_or` here because it is not `const`",
+        "suggest": "溢出只能发生在上限，我们不能在这里使用 `unwrap_or`，因为它不是 `const`",
+        "translate": ""
+    },
+    {
+        "source": "Saturating subtraction with an unsigned integer.",
+        "suggest": "使用无符号整数进行饱和减法。",
+        "translate": ""
+    },
+    {
+        "source": "Overflow can only happen at the lower bound We cannot use `unwrap_or` here because it is not `const`",
+        "suggest": "溢出只能发生在下限，我们不能在这里使用 `unwrap_or`，因为它不是 `const`",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) addition with an unsigned integer.",
+        "suggest": "用无符号整数包装 (modular) 加法。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) subtraction with an unsigned integer.",
+        "suggest": "用无符号整数包装 (modular) 减法。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self` + `rhs` with an unsigned `rhs`",
+        "suggest": "使用无符号 `rhs` 计算 `self` + `rhs`",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self` - `rhs` with an unsigned `rhs`",
+        "suggest": "使用无符号 `rhs` 计算 `self`-`rhs`",
+        "translate": ""
+    },
+    {
+        "source": "Returns the logarithm of the number with respect to an arbitrary base, rounded down.",
+        "suggest": "返回数字相对于任意底数的对数，向下取整。",
+        "translate": ""
+    },
+    {
+        "source": "it panics in debug mode and the return value is 0 in release mode.",
+        "suggest": "它在调试模式下为 panics，在发布模式下返回值为 0。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the base 2 logarithm of the number, rounded down.",
+        "suggest": "返回数字的以 2 为底的对数，向下取整。",
+        "translate": ""
+    },
+    {
+        "source": "When the number is zero it panics in debug mode and the return value is 0 in release mode.",
+        "suggest": "当数字为零时，它在调试模式下为 panics，在发布模式下返回值为 0。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the base 10 logarithm of the number, rounded down.",
+        "suggest": "返回数字的以 10 为底的对数，向下取整。",
+        "translate": ""
+    },
+    {
+        "source": "NaN (not a number): this value results from calculations like `(-1.0).sqrt()`.",
+        "suggest": "NaN (不是数字) : 这个值来自于类似于 `(-1.0).sqrt()` 等的计算得出。",
+        "translate": ""
+    },
+    {
+        "source": "See [the documentation for `f32`](f32) for more information on the unusual properties of NaN.",
+        "suggest": "有关 NaN 的独特属性的更多信息，请参见 [`f32` 的文档](f32)。",
+        "translate": ""
+    },
+    {
+        "source": "Positive or negative infinity, which often results from dividing a nonzero number by zero.",
+        "suggest": "正无穷大或负无穷大，通常由非零数除以零产生。",
+        "translate": ""
+    },
+    {
+        "source": "See [the documentation for `f32`](f32) for more information on the signedness of zeroes.",
+        "suggest": "有关零的符号性的更多信息，请参见 [`f32` 的文档](f32)。",
+        "translate": ""
+    },
+    {
+        "source": "Subnormal” or “denormal” floating point representation (less precise, relative to their magnitude, than [`Normal`]).",
+        "suggest": "subnormal” 或 “denormal” 浮点表示 (相对于它们的大小，不如 [`Normal`] 精确)。",
+        "translate": ""
+    },
+    {
+        "source": "Subnormal numbers are larger in magnitude than [`Zero`] but smaller in magnitude than all [`Normal`] numbers.",
+        "suggest": "subnormal 数在数量级上比 [`Zero`] 大，但在数量级上小于所有 [`Normal`] 数。",
+        "translate": ""
+    },
+    {
+        "source": "A regular floating point number, not any of the exceptional categories.",
+        "suggest": "常规浮点数，不是任何特殊类别。",
+        "translate": ""
+    },
+    {
+        "source": "The smallest positive normal numbers are [`f32::MIN_POSITIVE`] and [`f64::MIN_POSITIVE`], and the largest positive normal numbers are [`f32::MAX`] and [`f64::MAX`].",
+        "suggest": "最小的 positive normal 数是 [`f32::MIN_POSITIVE`] 和 [`f64::MIN_POSITIVE`]，最大的 positive normal 数是 [`f32::MAX`] 和 [`f64::MAX`]。",
+        "translate": ""
+    },
+    {
+        "source": "(Unlike signed integers, floating point numbers are symmetric in their range, so negating any of these constants will produce their negative counterpart.)",
+        "suggest": "(与有符号整数不同，浮点数在其范围内是对称的，因此否定这些常量中的任何一个都会产生它们的负对应项。)",
+        "translate": ""
+    },
+    {
+        "source": "Checked addition with a signed integer.",
+        "suggest": "用有符号整数检查加法。",
+        "translate": ""
+    },
+    {
+        "source": "When the number is negative or zero it panics in debug mode and the return value is 0 in release mode.",
+        "suggest": "当数字为负数或零时，它在调试模式下为 panics，在发布模式下的返回值为 0。",
+        "translate": ""
+    },
+    {
+        "source": "Saturating addition with a signed integer.",
+        "suggest": "带符号整数的饱和加法。",
+        "translate": ""
+    },
+    {
+        "source": "Wrapping (modular) addition with a signed integer.",
+        "suggest": "用有符号整数包装 (modular) 加法。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates `self` + `rhs` with a signed `rhs`",
+        "suggest": "使用带符号的 `rhs` 计算 `self` + `rhs`",
+        "translate": ""
+    },
+    {
+        "source": "When return value overflows (i.e., `self > (1 << (N-1))` for type `uN`), it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which method can return 0).",
+        "suggest": "当返回值溢出 (即 `uN` 类型为 `self > (1 << (N-1))`) 时，它在调试模式下为 panics，在生产模式下返回值被包装为 0 (方法可以返回 0 的唯一情况)。",
+        "translate": ""
+    },
+    {
+        "source": "Maps a `Result<T, E>` to `U` by applying fallback function `default` to a contained [`Err`] value, or function `f` to a contained [`Ok`] value.",
+        "suggest": "通过将 fallback 函数 `default` 应用于包含的 [`Err`] 值，或将函数 `f` 应用于包含的 [`Ok`] 值，将 `Result<T, E>` 映射为 `U`。",
+        "translate": ""
+    },
+    {
+        "source": "When combined with the `?` operator, this function will propogate any [`Poll::Pending`] values to the caller, and extract the `T` from [`Poll::Ready`].",
+        "suggest": "当与 `?` 运算符结合使用时，该函数会将任何 [`Poll::Pending`] 值传播给调用者，并从 [`Poll::Ready`] 中提取 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "See [`Poll::ready`] for details.",
+        "suggest": "有关详细信息，请参见 [`Poll::ready`]。",
+        "translate": ""
+    },
+    {
+        "source": "Indicates how much extra capacity is needed to read the rest of the file.",
+        "suggest": "指示读取文件的其余部分需要多少额外容量。",
+        "translate": ""
+    },
+    {
+        "source": "Reserves space in the buffer based on the file size when available.",
+        "suggest": "根据可用的文件大小在缓冲区中保留空间。",
+        "translate": ""
+    },
+    {
+        "source": "The inner reader might have an optimized `read_to_end`.",
+        "suggest": "内部 reader 可能具有优化的 `read_to_end`。",
+        "translate": ""
+    },
+    {
+        "source": "Drain our buffer and then delegate to the inner implementation.",
+        "suggest": "耗尽我们的缓冲区，然后委托给内部实现。",
+        "translate": ""
+    },
+    {
+        "source": "In the general `else` case below we must read bytes into a side buffer, check that they are valid UTF-8, and then append them to `buf`.",
+        "suggest": "在下面的一般 `else` 情况下，我们必须将字节读入一个 side 缓冲区，检查它们是否是有效的 UTF-8，然后将它们附加到 `buf`。",
+        "translate": ""
+    },
+    {
+        "source": "This requires a potentially large memcpy.",
+        "suggest": "这需要一个潜在的大型 memcpy。",
+        "translate": ""
+    },
+    {
+        "source": "If `buf` is empty--the most common case--we can leverage `append_to_string` to read directly into `buf`'s internal byte buffer, saving an allocation and a memcpy.",
+        "suggest": "如果 `buf` 为空 -- 最常见的情况 -- 我们可以利用 `append_to_string` 直接读入 `buf` 的内部字节缓冲区，从而保存分配和 memcpy。",
+        "translate": ""
+    },
+    {
+        "source": "`append_to_string`'s safety relies on the buffer only being appended to since it only checks the UTF-8 validity of new data.",
+        "suggest": "`append_to_string` 的安全性仅依赖于被附加到的缓冲区，因为它只检查新数据的 UTF-8 有效性。",
+        "translate": ""
+    },
+    {
+        "source": "If there were existing content in `buf` then an untrustworthy reader (i.e.",
+        "suggest": "如果 `buf` 中存在现有内容，那么不可信的 reader (即",
+        "translate": ""
+    },
+    {
+        "source": "`self.inner`) could not only append bytes but also modify existing bytes and render them invalid.",
+        "suggest": "`self.inner`) 不仅可以追加字节，还可以修改现有字节并使它们无效。",
+        "translate": ""
+    },
+    {
+        "source": "On the other hand, if `buf` is empty then by definition any writes must be appends and `append_to_string` will validate all of the new bytes.",
+        "suggest": "另一方面，如果 `buf` 为空，则根据定义，任何写入都必须附加，并且 `append_to_string` 将验证所有新字节。",
+        "translate": ""
+    },
+    {
+        "source": "We cannot append our byte buffer directly onto the `buf` String as there could be an incomplete UTF-8 sequence that has only been partially read.",
+        "suggest": "我们不能将字节缓冲区直接附加到 `buf` 字符串上，因为可能存在仅部分读取的不完整 UTF-8 序列。",
+        "translate": ""
+    },
+    {
+        "source": "We must read everything into a side buffer first and then call `from_utf8` on the complete buffer.",
+        "suggest": "我们必须首先将所有内容读入 side 缓冲区，然后在整个缓冲区上调用 `from_utf8`。",
+        "translate": ""
+    },
+    {
+        "source": "Several `read_to_string` and `read_line` methods in the standard library will append data into a `String` buffer, but we need to be pretty careful when doing this.",
+        "suggest": "标准库中的几个 `read_to_string` 和 `read_line` 方法会将数据附加到 `String` 缓冲区中，但我们在执行此操作时需要非常小心。",
+        "translate": ""
+    },
+    {
+        "source": "Note that we do *not* call `r.read_to_end()` here.",
+        "suggest": "请注意，我们在这里不调用 `r.read_to_end()`。",
+        "translate": ""
+    },
+    {
+        "source": "To prevent extraneously checking the UTF-8-ness of the entire buffer we pass it to our hardcoded `default_read_to_end` implementation which we know is guaranteed to only read data into the end of the buffer.",
+        "suggest": "为了防止额外检查整个缓冲区的 UTF-8-ness，我们将它传递给我们的硬编码 `default_read_to_end` 实现，我们知道它保证只将数据读入缓冲区的末尾。",
+        "translate": ""
+    },
+    {
+        "source": "Note that in some special cases, such as when reading files, this function will pre-allocate memory based on the size of the input it is reading.",
+        "suggest": "请注意，在某些特殊情况下，例如读取文件时，该函数会根据正在读取的输入的大小预先分配内存。",
+        "translate": ""
+    },
+    {
+        "source": "In those cases, the performance should be as good as if you had used [`Read::read_to_string`] with a manually pre-allocated buffer.",
+        "suggest": "在这些情况下，性能应该与您使用手动预分配缓冲区的 [`Read::read_to_string`] 一样好。",
+        "translate": ""
+    },
+    {
+        "source": "requires this flag for stack mapping otherwise the said mapping will fail as a no-op on most systems and has a different meaning on FreeBSD",
+        "suggest": "需要这个标志来进行堆栈映射，否则所述映射将在大多数系统上作为空操作失败，并且在 FreeBSD 上具有不同的含义",
+        "translate": ""
+    },
+    {
+        "source": "The caller has to ensure that the spawned thread does not outlive any references in the supplied thread closure and its return type.",
+        "suggest": "调用者必须确保新建线程的生命周期不会超过所提供线程闭包及其返回类型中的任何引用。",
+        "translate": ""
+    },
+    {
+        "source": "Alias for C++ `std::thread::hardware_concurrency`.",
+        "suggest": "C++ `std::thread::hardware_concurrency` 的别名。",
+        "translate": ""
+    },
+    {
+        "source": "Alias for a name we gave this API on unstable.",
+        "suggest": "我们为这个 API 命名的别名是不稳定的。",
+        "translate": ""
+    },
+    {
+        "source": "is from `rust-analyzer/src/cli/analysis_stats.rs`.",
+        "suggest": "是来自于 `rust-analyzer/src/cli/analysis_stats.rs`。",
+        "translate": ""
+    },
+    {
+        "source": "is from `core/src/hash/mod.rs`.",
+        "suggest": "是来自于 `core/src/hash/mod.rs`。",
+        "translate": ""
     }
 ]
