@@ -4096,7 +4096,7 @@
     },
     {
         "source": "it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which the method can return 0).",
-        "suggest": "它在调试模式下为 panics，在发布模式下返回值被包装为 0 (该方法可以返回 0 的唯一情况)。",
+        "suggest": "它在调试模式下为 panics，在生产模式下返回值被包装为 0 (该方法可以返回 0 的唯一情况)。",
         "translate": ""
     },
     {
@@ -4106,7 +4106,7 @@
     },
     {
         "source": "When the number is zero it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which the method can return 0).",
-        "suggest": "当数字为零时，它在调试模式下为 panics，在发布模式下返回值包装为 0 (该方法可以返回 0 的唯一情况)。",
+        "suggest": "当数字为零时，它在调试模式下为 panics，在生产模式下返回值包装为 0 (该方法可以返回 0 的唯一情况)。",
         "translate": ""
     },
     {
@@ -4421,7 +4421,7 @@
     },
     {
         "source": "When the number is negative or zero it panics in debug mode and the return value is wrapped to 0 in release mode (the only situation in which the method can return 0).",
-        "suggest": "当数字为负数或零时，它在调试模式下为 panics，在发布模式下返回值包装为 0 (该方法可以返回 0 的唯一情况)。",
+        "suggest": "当数字为负数或零时，它在调试模式下为 panics，在生产模式下返回值包装为 0 (该方法可以返回 0 的唯一情况)。",
         "translate": ""
     },
     {

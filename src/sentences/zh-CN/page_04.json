@@ -2346,7 +2346,7 @@
     },
     {
         "source": "in release mode names get weird as functions can get merged together with `mergefunc`, so only assert this in debug mode",
-        "suggest": "在发布模式下，名称变得很奇怪，因为函数可以与 `mergefunc` 合并在一起，因此只能在调试模式下声明此名称",
+        "suggest": "在生产模式下，名称变得很奇怪，因为函数可以与 `mergefunc` 合并在一起，因此只能在调试模式下声明此名称",
         "translate": ""
     },
     {

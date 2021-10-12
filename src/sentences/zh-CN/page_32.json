@@ -3131,7 +3131,7 @@
     },
     {
         "source": "it panics in debug mode and the return value is 0 in release mode.",
-        "suggest": "它在调试模式下为 panics，在发布模式下返回值为 0。",
+        "suggest": "它在调试模式下为 panics，在生产模式下返回值为 0。",
         "translate": ""
     },
     {
@@ -3141,7 +3141,7 @@
     },
     {
         "source": "When the number is zero it panics in debug mode and the return value is 0 in release mode.",
-        "suggest": "当数字为零时，它在调试模式下为 panics，在发布模式下返回值为 0。",
+        "suggest": "当数字为零时，它在调试模式下为 panics，在生产模式下返回值为 0。",
         "translate": ""
     },
     {
@@ -3201,7 +3201,7 @@
     },
     {
         "source": "When the number is negative or zero it panics in debug mode and the return value is 0 in release mode.",
-        "suggest": "当数字为负数或零时，它在调试模式下为 panics，在发布模式下的返回值为 0。",
+        "suggest": "当数字为负数或零时，它在调试模式下为 panics，在生产模式下的返回值为 0。",
         "translate": ""
     },
     {

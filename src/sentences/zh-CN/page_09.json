@@ -4181,7 +4181,7 @@
     },
     {
         "source": "When return value overflows (i.e., `self > (1 << (N-1))` for type `uN`), it panics in debug mode and return value is wrapped to 0 in release mode (the only situation in which method can return 0).",
-        "suggest": "当返回值溢出时 (即 `uN` 类型为 `self > (1 << (N-1))`)，它在调试模式下为 panics，在释放模式下返回值为 0 (这是唯一的方法可以返回 0 的情况)。",
+        "suggest": "当返回值溢出时 (即 `uN` 类型为 `self > (1 << (N-1))`)，它在调试模式下为 panics，在生产模式下返回值为 0 (这是唯一的方法可以返回 0 的情况)。",
         "translate": ""
     },
     {
