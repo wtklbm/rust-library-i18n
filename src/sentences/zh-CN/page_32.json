@@ -3331,7 +3331,7 @@
     },
     {
         "source": "requires this flag for stack mapping otherwise the said mapping will fail as a no-op on most systems and has a different meaning on FreeBSD",
-        "suggest": "需要这个标志来进行堆栈映射，否则所述映射将在大多数系统上作为空操作失败，并且在 FreeBSD 上具有不同的含义",
+        "suggest": "需要这个标志来进行栈映射，否则所述映射将在大多数系统上作为空操作失败，并且在 FreeBSD 上具有不同的含义",
         "translate": ""
     },
     {
