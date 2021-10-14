@@ -3358,5 +3358,150 @@
         "source": "is from `core/src/hash/mod.rs`.",
         "suggest": "是来自于 `core/src/hash/mod.rs`。",
         "translate": ""
+    },
+    {
+        "source": "Specifically, it is possible to have implementations for two different function pointer types:",
+        "suggest": "具体来说，可以实现两种不同的函数指针类型:",
+        "translate": ""
+    },
+    {
+        "source": "For better performance, avoid branches by assembling the solution in the bits above the low 8 bits.",
+        "suggest": "为了获得更好的性能，通过在低 8 位以上的位中组合解决方案来避免分支。",
+        "translate": ""
+    },
+    {
+        "source": "Adding c1 to val gives 10 in the top bits for val < 10, 11 for val >= 10",
+        "suggest": "将 c1 添加到 val 时，val < 10 的最高位为 10，val> = 10 时为 11",
+        "translate": ""
+    },
+    {
+        "source": "Adding c2 to val gives 01 in the top bits for val < 100, 10 for val >= 100",
+        "suggest": "将 c2 添加到 val 时，val < 100 的最高位为 01，val >= 100 时为 10",
+        "translate": ""
+    },
+    {
+        "source": "Value of top bits:",
+        "suggest": "最高位的值:",
+        "translate": ""
+    },
+    {
+        "source": "Similar to u8, when adding one of these constants to val, we get two possible bit patterns above the low 17 bits, depending on whether val is below or above the threshold.",
+        "suggest": "与 u8 类似，当将这些常量之一添加到 val 时，我们会根据 val 是否低于或高于阈值，在低 17 位上获得两种可能的位模式。",
+        "translate": ""
+    },
+    {
+        "source": "When combined with the `?` operator, this function will propagate any [`Poll::Pending`] values to the caller, and extract the `T` from [`Poll::Ready`].",
+        "suggest": "当与 `?` 运算符结合使用时，该函数会将任何 [`Poll::Pending`] 值传播给调用者，并从 [`Poll::Ready`] 中提取 `T`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an estimate of the default amount of parallelism a program should use.",
+        "suggest": "返回程序应该使用的默认并行量的估计值。",
+        "translate": ""
+    },
+    {
+        "source": "Parallelism is a resource.",
+        "suggest": "并行性是一种资源。",
+        "translate": ""
+    },
+    {
+        "source": "A given machine provides a certain capacity for parallelism, i.e., a bound on the number of computations it can perform simultaneously.",
+        "suggest": "给定的机器提供一定的并行能力，即它可以同时执行的计算数量的界限。",
+        "translate": ""
+    },
+    {
+        "source": "This number often corresponds to the amount of CPUs or computer has, but it may diverge in various cases.",
+        "suggest": "这个数字通常对应于 CPU 或计算机的数量，但在各种情况下可能会有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "Host environments such as VMs or container orchestrators may want to restrict the amount of parallelism made available to programs in them.",
+        "suggest": "虚拟机或容器编排器等主机环境可能希望限制其中的程序可用的并行量。",
+        "translate": ""
+    },
+    {
+        "source": "This is often done to limit the potential impact of (unintentionally) resource-intensive programs on other programs running on the same machine.",
+        "suggest": "这样做通常是为了限制 (非故意地) 资源密集型程序对同一台机器上运行的其他程序的潜在影响。",
+        "translate": ""
+    },
+    {
+        "source": "The purpose of this API is to provide an easy and portable way to query the default amount of parallelism the program should use.",
+        "suggest": "此 API 的目的是提供一种简单且可移植的方式来查询程序应使用的默认并行量。",
+        "translate": ""
+    },
+    {
+        "source": "Among other things it does not expose information on NUMA regions, does not account for differences in (co)processor capabilities, and will not modify the program's global state in order to more accurately query the amount of available parallelism.",
+        "suggest": "除其他外，它不公开有关 NUMA 区域的信息，不考虑 (协同) 处理器功能的差异，并且不会为了更准确地查询可用并行度的数量而修改程序的整体状态。",
+        "translate": ""
+    },
+    {
+        "source": "The value returned by this function should be considered a simplified approximation of the actual amount of parallelism available at any given time.",
+        "suggest": "这个函数返回的值应该被认为是任何给定时间可用的实际并行量的简化近似值。",
+        "translate": ""
+    },
+    {
+        "source": "To get a more detailed or precise overview of the amount of parallelism available to the program, you may wish to use platform-specific APIs as well.",
+        "suggest": "要更详细或更准确地了解程序可用的并行量，您可能还希望使用特定于平台的 API。",
+        "translate": ""
+    },
+    {
+        "source": "The following platform limitations currently apply to `available_parallelism`:",
+        "suggest": "以下平台限制目前适用于 `available_parallelism`:",
+        "translate": ""
+    },
+    {
+        "source": "It may undercount the amount of parallelism available on systems with more than 64 logical CPUs.",
+        "suggest": "它可能会低估具有超过 64 个逻辑 CPU 的系统上可用的并行量。",
+        "translate": ""
+    },
+    {
+        "source": "However, programs typically need specific support to take advantage of more than 64 logical CPUs, and in the absence of such support, the number returned by this function accurately reflects the number of logical CPUs the program can use by default.",
+        "suggest": "但是，程序通常需要特定的支持才能利用超过 64 个逻辑 CPU，而在没有这种支持的情况下，此函数返回的数字准确地反映了程序默认可以使用的逻辑 CPU 的数量。",
+        "translate": ""
+    },
+    {
+        "source": "It may overcount the amount of parallelism available on systems limited by process-wide affinity masks, or job object limitations.",
+        "suggest": "它可能会过度计算系统上可用的并行量，这些并行量受到进程范围的相似性屏蔽或作业对象限制的限制。",
+        "translate": ""
+    },
+    {
+        "source": "It may overcount the amount of parallelism available when limited by a process-wide affinity mask, or when affected by cgroup limits.",
+        "suggest": "当受到进程范围的相似性掩码限制时，或者受到组限制的影响时，它可能会过度计算可用的并行量。",
+        "translate": ""
+    },
+    {
+        "source": "On all targets:",
+        "suggest": "在所有目标上:",
+        "translate": ""
+    },
+    {
+        "source": "It may overcount the amount of parallelism available when running in a VM with CPU usage limits (e.g. an overcommitted host).",
+        "suggest": "当在具有 CPU 使用限制的 VM 中运行时 (例如过载的主机)，它可能会过度计算可用的并行量。",
+        "translate": ""
+    },
+    {
+        "source": "This function will, but is not limited to, return errors in the following cases:",
+        "suggest": "在以下情况下，此函数将返回错误，但不限于此:",
+        "translate": ""
+    },
+    {
+        "source": "If the amount of parallelism is not known for the target platform.",
+        "suggest": "如果目标平台的并行量未知。",
+        "translate": ""
+    },
+    {
+        "source": "If the program lacks permission to query the amount of parallelism made available to it.",
+        "suggest": "如果程序没有查询可用的并行量的权限。",
+        "translate": ""
+    },
+    {
+        "source": "Alias for a previous name we gave this API on unstable.",
+        "suggest": "我们为这个 API 提供了不稳定的前一个名称的别名。",
+        "translate": ""
+    },
+    {
+        "source": "Alias for a popular ecosystem crate which provides similar functionality.",
+        "suggest": "提供类似功能的流行生态系统 crate 的别名。",
+        "translate": ""
     }
 ]

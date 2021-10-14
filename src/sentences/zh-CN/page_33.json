@@ -3333,5 +3333,55 @@
         "source": "(other + o*2^N) - (self + s*2^N)    mod  2^N other - self + (o-s)*2^N            mod  2^N other - self                        mod  2^N",
         "suggest": "(other + o*2^N) - (self + s*2^N) mod 2^N other-self + (os)*2^N mod 2^N other-self mod 2^N",
         "translate": false
+    },
+    {
+        "source": "+c1  +c2  1&2",
+        "suggest": "+c1 +c2 1&2",
+        "translate": false
+    },
+    {
+        "source": "10   01   00 = 0",
+        "suggest": "10 01 00=0",
+        "translate": false
+    },
+    {
+        "source": "11   01   01 = 1",
+        "suggest": "11 01 01=1",
+        "translate": false
+    },
+    {
+        "source": "11   10   10 = 2",
+        "suggest": "11 10 10=2",
+        "translate": false
+    },
+    {
+        "source": "+c1  +c2  1&2  +c3  +c4  3&4   ^",
+        "suggest": "+c1 +c2 1&2 +c3 +c4 3&4 ^",
+        "translate": false
+    },
+    {
+        "source": "010  011  010  110  011  010  000 = 0",
+        "suggest": "010 011 010 110 011 010 000=0",
+        "translate": false
+    },
+    {
+        "source": "011  011  011  110  011  010  001 = 1",
+        "suggest": "011 011 011 110 011 010 001=1",
+        "translate": false
+    },
+    {
+        "source": "011  100  000  110  011  010  010 = 2",
+        "suggest": "011 100 000 110 011 010 010=2",
+        "translate": false
+    },
+    {
+        "source": "011  100  000  111  011  011  011 = 3",
+        "suggest": "011 100 000 111 011 011 011=3",
+        "translate": false
+    },
+    {
+        "source": "011  100  000  111  100  100  100 = 4",
+        "suggest": "011 100 000 111 100 100 100=4",
+        "translate": false
     }
 ]
