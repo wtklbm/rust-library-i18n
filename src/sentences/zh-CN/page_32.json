@@ -3503,5 +3503,250 @@
         "source": "Alias for a popular ecosystem crate which provides similar functionality.",
         "suggest": "提供类似功能的流行生态系统 crate 的别名。",
         "translate": ""
+    },
+    {
+        "source": "Copies all values from `src` to `dst`, wrapping around if needed.",
+        "suggest": "将所有值从 `src` 复制到 `dst`，并在需要时进行包装。",
+        "translate": ""
+    },
+    {
+        "source": "Assumes capacity is sufficient.",
+        "suggest": "假设容量足够。",
+        "translate": ""
+    },
+    {
+        "source": "Update pointers after copying to avoid leaving doppelganger in case of panics.",
+        "suggest": "复制后更新指针，以避免在 panics 的情况下留下分身。",
+        "translate": ""
+    },
+    {
+        "source": "Silently drop values in `other`.",
+        "suggest": "默默地丢弃 `other` 中的值。",
+        "translate": ""
+    },
+    {
+        "source": "Consumes and leaks the `Vec`, returning a mutable reference to the contents, `&'a mut [T]`.",
+        "suggest": "消耗并泄漏 `Vec`，返回对内容的可变引用，`&'a mut [T]`。",
+        "translate": ""
+    },
+    {
+        "source": "As of Rust 1.57, this method does not reallocate or shrink the `Vec`, so the leaked allocation may include unused capacity that is not part of the returned slice.",
+        "suggest": "从 Rust 1.57 开始，此方法不会重新分配或收缩 `Vec`，因此泄漏的分配可能包括不属于返回切片的未使用的容量。",
+        "translate": ""
+    },
+    {
+        "source": "Selects which function to call depending on the context.",
+        "suggest": "根据上下文选择要调用的函数。",
+        "translate": ""
+    },
+    {
+        "source": "If this function is evaluated at compile-time, then a call to this intrinsic will be replaced with a call to `called_in_const`.",
+        "suggest": "如果在编译时对该函数求值，那么这个内部函数的调用将被替换为 `called_in_const` 的调用。",
+        "translate": ""
+    },
+    {
+        "source": "It gets replaced with a call to `called_at_rt` otherwise.",
+        "suggest": "否则，它会被替换为对 `called_at_rt` 的调用。",
+        "translate": ""
+    },
+    {
+        "source": "Type Requirements",
+        "suggest": "类型要求",
+        "translate": ""
+    },
+    {
+        "source": "The two functions must be both function items.",
+        "suggest": "这两个函数必须都是函数项。",
+        "translate": ""
+    },
+    {
+        "source": "They cannot be function pointers or closures.",
+        "suggest": "它们不能是函数指针或闭包。",
+        "translate": ""
+    },
+    {
+        "source": "will be the arguments that will be passed to either one of the two functions, therefore, both functions must accept the same type of arguments.",
+        "suggest": "将是将传递给两个函数之一的参数，因此，两个函数必须接受相同类型的参数。",
+        "translate": ""
+    },
+    {
+        "source": "Both functions must return RET.",
+        "suggest": "两个函数都必须返回 RET。",
+        "translate": ""
+    },
+    {
+        "source": "This intrinsic allows breaking [referential transparency] in `const fn` and is therefore `unsafe`.",
+        "suggest": "这个内部函数允许在 `const fn` 中破坏 [引用透明性][referential transparency]，因此是 `unsafe` 的。",
+        "translate": ""
+    },
+    {
+        "source": "Code that uses this intrinsic must be extremely careful to ensure that `const fn`s remain referentially-transparent independently of when they are evaluated.",
+        "suggest": "使用这个内部函数的代码必须非常小心，以确保 `const fn`s 在它们被计算时保持引用透明。",
+        "translate": ""
+    },
+    {
+        "source": "The Rust compiler assumes that it is sound to replace a call to a `const fn` with the result produced by evaluating it at compile-time.",
+        "suggest": "Rust 编译器假定将调用替换为 `const fn` 是合理的，它是在编译时对其求值所产生的结果。",
+        "translate": ""
+    },
+    {
+        "source": "If evaluating the function at run-time were to produce a different result, or have any other observable side-effects, the behavior is undefined.",
+        "suggest": "如果在运行时评估函数会产生不同的结果，或者有任何其他可观察到的副作用，则行为是未定义的。",
+        "translate": ""
+    },
+    {
+        "source": "we know that 1 and 3 are both indices of the slice",
+        "suggest": "我们知道 1 和 3 都是切片的索引",
+        "translate": ""
+    },
+    {
+        "source": "we just checked that both `a` and `b` are in bounds",
+        "suggest": "我们刚刚检查了 `a` 和 `b` 都在边界内",
+        "translate": ""
+    },
+    {
+        "source": "Swaps two elements in the slice, without doing bounds checking.",
+        "suggest": "在不做边界检查的情况下交换切片中的两个元素。",
+        "translate": ""
+    },
+    {
+        "source": "For a safe alternative see [`swap`].",
+        "suggest": "有关安全的替代方案，请参见 [`swap`]。",
+        "translate": ""
+    },
+    {
+        "source": "Calling this method with an out-of-bounds index is *[undefined behavior]*.",
+        "suggest": "使用越界索引调用此方法是 [未定义的行为][undefined behavior]。",
+        "translate": ""
+    },
+    {
+        "source": "The caller has to ensure that `a < self.len()` and `b < self.len()`.",
+        "suggest": "调用者必须保证 `a < self.len()` 和 `b < self.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "caller has to guarantee that `a < self.len()` and `b < self.len()`",
+        "suggest": "调用者必须保证 `a < self.len()` 和 `b < self.len()`",
+        "translate": ""
+    },
+    {
+        "source": "The error type is specific to the implementation of the trait.",
+        "suggest": "错误类型特定于 trait 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "For reference, the `std` library requires `AtomicBool`s and pointer-sized atomics, although `core` does not.",
+        "suggest": "作为参考，`std` 库需要 `AtomicBool`s 和 pointer-sized atomics，尽管 `core` 不需要。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the contents of this address if it is an abstract namespace without the leading null byte.",
+        "suggest": "如果它是一个没有前导空字节的抽象命名空间，则返回此地址的内容。",
+        "translate": ""
+    },
+    {
+        "source": "Creates an abstract domain socket address from a namespace",
+        "suggest": "从命名空间创建抽象域套接字地址",
+        "translate": ""
+    },
+    {
+        "source": "An abstract address does not create a file unlike traditional path-based Unix sockets.",
+        "suggest": "与传统的基于路径的 Unix 套接字不同，抽象地址不会创建文件。",
+        "translate": ""
+    },
+    {
+        "source": "The advantage of this is that the address will disappear when the socket bound to it is closed, so no filesystem clean up is required.",
+        "suggest": "这样做的好处是当绑定到它的套接字关闭时，地址将消失，因此不需要清理文件系统。",
+        "translate": ""
+    },
+    {
+        "source": "The leading null byte for the abstract namespace is automatically added.",
+        "suggest": "自动添加抽象命名空间的前导空字节。",
+        "translate": ""
+    },
+    {
+        "source": "This is a Linux-specific extension.",
+        "suggest": "这是一个特定于 Linux 的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "See more at [`unix(7)`].",
+        "suggest": "有关详细信息，请参见 [`unix(7)`]。",
+        "translate": ""
+    },
+    {
+        "source": "This will return an error if the given namespace is too long",
+        "suggest": "如果给定的命名空间太长，这将返回一个错误",
+        "translate": ""
+    },
+    {
+        "source": "Creates a Unix datagram socket bound to an address.",
+        "suggest": "创建绑定到地址的 Unix 数据报套接字。",
+        "translate": ""
+    },
+    {
+        "source": "Connects the socket to the specified path address.",
+        "suggest": "将套接字连接到指定的路径地址。",
+        "translate": ""
+    },
+    {
+        "source": "Connects the socket to an address.",
+        "suggest": "将套接字连接到一个地址。",
+        "translate": ""
+    },
+    {
+        "source": "Sends data on the socket to the specified [SocketAddr].",
+        "suggest": "将套接字上的数据发送到指定的 [SocketAddr]。",
+        "translate": ""
+    },
+    {
+        "source": "Creates a new `UnixListener` bound to the specified [`socket address`].",
+        "suggest": "创建绑定到指定 [套接字地址][`socket address`] 的新 `UnixListener`。",
+        "translate": ""
+    },
+    {
+        "source": "Connects to the socket specified by [`address`].",
+        "suggest": "连接到 [`address`] 指定的套接字。",
+        "translate": ""
+    },
+    {
+        "source": "set by connect_addr",
+        "suggest": "由 connect_addr 设置",
+        "translate": ""
+    },
+    {
+        "source": "The upper four bits gives the minor version.",
+        "suggest": "高四位给出了次要版本。",
+        "translate": ""
+    },
+    {
+        "source": "ReadConsoleW returns success with ERROR_OPERATION_ABORTED for Ctrl-C or Ctrl-Break.",
+        "suggest": "对于 Ctrl-C 或 Ctrl-Break，ReadConsoleW 使用 ERROR_OPERATION_ABORTED 返回成功。",
+        "translate": ""
+    },
+    {
+        "source": "Explicitly check for that case here and try again.",
+        "suggest": "在此处明确检查该情况，并进行重试",
+        "translate": ""
+    },
+    {
+        "source": "While issues have been seen on arm64 platforms the Arm architecture requires that the counter monotonically increases and that it must provide a uniform view of system time (e.g.",
+        "suggest": "虽然在 arm64 平台上已经发现问题，但 Arm 架构要求计数器单调增加，并且必须提供系统时间的统一视图 (例如",
+        "translate": ""
+    },
+    {
+        "source": "it must not be possible for a core to recieve a message from another core with a time stamp and observe time going backwards (ARM DDI 0487G.b D11.1.2).",
+        "suggest": "一个核心不可能接收到来自另一个具有时间戳的核心的消息，并观察到时间倒流 (ARM DDI 0487G.b D11.1.2)。",
+        "translate": ""
+    },
+    {
+        "source": "While there have been a few 64bit SoCs that have bugs which cause time to not monoticially increase, these have been fixed in the Linux kernel and we shouldn't penalize all Arm SoCs for those who refuse to update their kernels:",
+        "suggest": "虽然有一些 64 位 SoC 存在错误，导致时间不会单方面增加，但这些问题已在 Linux 内核中得到解决，我们不应该对那些拒绝更新内核的人而惩罚所有的 Arm SoC:",
+        "translate": ""
+    },
+    {
+        "source": "SUN50I_ERRATUM_UNKNOWN1 - Allwinner A64 / Pine A64 - fixed in 5.1 FSL_ERRATUM_A008585 - Freescale LS2080A/LS1043A - fixed in 4.10 HISILICON_ERRATUM_161010101 - Hisilicon 1610 - fixed in 4.11 ARM64_ERRATUM_858921 - Cortex A73 - fixed in 4.12",
+        "suggest": "SUN50I_ERRATUM_UNKNOWN1 - Allwinner A64 / Pine A64 - 在 5.1 中修复 FSL_ERRATUM_A008585 - Freescale LS2080A/LS1043A - 在 4.10 中修复 HISILICON_ERRATUM_161010101 - Hisilicon 1610 - 在 4.11 中修复 ARM64_ERRATUM_858921 - Cortex A73 - 在 4.12 中修复",
+        "translate": ""
     }
 ]
