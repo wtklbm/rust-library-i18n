@@ -3748,5 +3748,45 @@
         "source": "SUN50I_ERRATUM_UNKNOWN1 - Allwinner A64 / Pine A64 - fixed in 5.1 FSL_ERRATUM_A008585 - Freescale LS2080A/LS1043A - fixed in 4.10 HISILICON_ERRATUM_161010101 - Hisilicon 1610 - fixed in 4.11 ARM64_ERRATUM_858921 - Cortex A73 - fixed in 4.12",
         "suggest": "SUN50I_ERRATUM_UNKNOWN1 - Allwinner A64 / Pine A64 - 在 5.1 中修复 FSL_ERRATUM_A008585 - Freescale LS2080A/LS1043A - 在 4.10 中修复 HISILICON_ERRATUM_161010101 - Hisilicon 1610 - 在 4.11 中修复 ARM64_ERRATUM_858921 - Cortex A73 - 在 4.12 中修复",
         "translate": ""
+    },
+    {
+        "source": "Library features:",
+        "suggest": "库特征:",
+        "translate": ""
+    },
+    {
+        "source": "Not necessary, but here to test the `nll` feature.",
+        "suggest": "没有必要，但在这里测试 `nll` 特征。",
+        "translate": ""
+    },
+    {
+        "source": "Rustdoc features:",
+        "suggest": "Rustdoc 特征:",
+        "translate": ""
+    },
+    {
+        "source": "Determines if a value should use exponential based on its magnitude, given the precondition that it will not be rounded any further before it is displayed.",
+        "suggest": "确定一个值是否应该基于其大小使用指数，前提是它在显示之前不会进一步四舍五入。",
+        "translate": ""
+    },
+    {
+        "source": "this behavior of {:.PREC?} predates exponential formatting for {:?}",
+        "suggest": "{:.PREC?} 的这种行为早于 {:?} 的指数格式",
+        "translate": ""
+    },
+    {
+        "source": "since there is no precision, there will be no rounding",
+        "suggest": "因为没有精度，就不会有四舍五入",
+        "translate": ""
+    },
+    {
+        "source": "Since SourceIter forwards the left hand side we do the same here",
+        "suggest": "由于 SourceIter 转发到了左手边，所以我们在这里也这样做",
+        "translate": ""
+    },
+    {
+        "source": "If this is changed to sometimes return None, deal with that case in std::panicking::default_hook and core::panicking::panic_fmt.",
+        "suggest": "如果将其更改为有时返回 None，请在 std::panicking::default_hook 和 core::panicking::panic_fmt 中处理这种情况。",
+        "translate": ""
     }
 ]
