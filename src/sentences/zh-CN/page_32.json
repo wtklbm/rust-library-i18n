@@ -3788,5 +3788,30 @@
         "source": "If this is changed to sometimes return None, deal with that case in std::panicking::default_hook and core::panicking::panic_fmt.",
         "suggest": "如果将其更改为有时返回 None，请在 std::panicking::default_hook 和 core::panicking::panic_fmt 中处理这种情况。",
         "translate": ""
+    },
+    {
+        "source": "Bypassing libc for `clone3` can make further libc calls unsafe, so we use it sparingly for now.",
+        "suggest": "为 `clone3` 绕过 libc 会使进一步的 libc 调用变得不安全，所以我们现在很少使用它。",
+        "translate": ""
+    },
+    {
+        "source": "See #89522 for details.",
+        "suggest": "有关详细信息，请参见 #89522。",
+        "translate": ""
+    },
+    {
+        "source": "Some tools (e.g. sandboxing tools) may also expect `fork` rather than `clone3`.",
+        "suggest": "一些工具 (例如沙箱工具) 也可能期望 `fork` 而不是 `clone3`。",
+        "translate": ""
+    },
+    {
+        "source": "Generally, we just call `fork`.",
+        "suggest": "通常，我们只是调用 `fork`。",
+        "translate": ""
+    },
+    {
+        "source": "If we get here after wanting `clone3`, then the syscall does not exist or we do not have permission to call it.",
+        "suggest": "如果我们在想要 `clone3` 之后到达这里，那么系统调用不存在，或者我们没有调用它的权限。",
+        "translate": ""
     }
 ]
