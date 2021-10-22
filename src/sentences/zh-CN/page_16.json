@@ -96,7 +96,7 @@
     },
     {
         "source": "A naive implementation of LineWriter::write_all results in two writes: one of the buffered data, and another of the final substring in the formatted set",
-        "suggest": "LineWriter::write_all 的简单实现会导致两次写入: 一次缓冲的数据，另一次写入格式化集中的最后一个子字符串",
+        "suggest": "LineWriter::write_all 的简单实现会导致两次写入：一次缓冲的数据，另一次写入格式化集中的最后一个子字符串",
         "translate": ""
     },
     {
@@ -681,7 +681,7 @@
     },
     {
         "source": "If the number of bytes to be written exceeds the size of the slice, write operations will return short writes: ultimately, `Ok(0)`;",
-        "suggest": "如果要写入的字节数超过了切片的大小，则写入操作将返回短写入: 最终为 `Ok(0)`; 否则为 `Ok(0)`。",
+        "suggest": "如果要写入的字节数超过了切片的大小，则写入操作将返回短写入：最终为 `Ok(0)`; 否则为 `Ok(0)`。",
         "translate": ""
     },
     {
@@ -736,7 +736,7 @@
     },
     {
         "source": "and more!",
-        "suggest": "和更多!",
+        "suggest": "和更多！",
         "translate": ""
     },
     {
@@ -746,7 +746,7 @@
     },
     {
         "source": "etc... it works exactly as a File does!",
-        "suggest": "等等... 它的工作原理与文件一样!",
+        "suggest": "等等... 它的工作原理与文件一样！",
         "translate": ""
     },
     {
@@ -901,7 +901,7 @@
     },
     {
         "source": "Much easier!",
-        "suggest": "容易得多!",
+        "suggest": "容易得多！",
         "translate": ""
     },
     {
@@ -931,7 +931,7 @@
     },
     {
         "source": "Keep reading!",
-        "suggest": "继续阅读!",
+        "suggest": "继续阅读！",
         "translate": ""
     },
     {
@@ -2116,7 +2116,7 @@
     },
     {
         "source": "to the rescue!",
-        "suggest": "抢救!",
+        "suggest": "抢救！",
         "translate": ""
     },
     {
@@ -2196,7 +2196,7 @@
     },
     {
         "source": "This function is blocking and should be used carefully: it is possible for an attacker to continuously send bytes without ever sending the delimiter or EOF.",
-        "suggest": "该函数正在阻塞，应谨慎使用: 攻击者有可能连续发送字节而无需发送定界符或 EOF。",
+        "suggest": "该函数正在阻塞，应谨慎使用：攻击者有可能连续发送字节而无需发送定界符或 EOF。",
         "translate": ""
     },
     {
@@ -2236,7 +2236,7 @@
     },
     {
         "source": "This function is blocking and should be used carefully: it is possible for an attacker to continuously send bytes without ever sending a newline or EOF.",
-        "suggest": "该函数正在阻塞，应谨慎使用: 攻击者有可能连续发送字节而无需发送换行符或 EOF。",
+        "suggest": "该函数正在阻塞，应谨慎使用：攻击者有可能连续发送字节而无需发送换行符或 EOF。",
         "translate": ""
     },
     {
@@ -2496,12 +2496,12 @@
     },
     {
         "source": "Note about memory ordering: This contains information about whether a thread local variable might be in use.",
-        "suggest": "有关内存排序的注意事项: 它包含有关是否可能正在使用线程局部变量的信息。",
+        "suggest": "有关内存排序的注意事项：它包含有关是否可能正在使用线程局部变量的信息。",
         "translate": ""
     },
     {
         "source": "Although this is a global flag, the memory ordering between threads does not matter: we only want this flag to have a consistent order between set_output_capture and print_to *within the same thread*.",
-        "suggest": "尽管这是一个 γ 标志，但线程之间的内存顺序无关紧要: 我们只希望此标志在 set_output_capture 和 print_to *within the 相同线程* 之间具有一致的顺序。",
+        "suggest": "尽管这是一个 γ 标志，但线程之间的内存顺序无关紧要：我们只希望此标志在 set_output_capture 和 print_to *within the 相同线程* 之间具有一致的顺序。",
         "translate": ""
     },
     {
@@ -3181,7 +3181,7 @@
     },
     {
         "source": "so it's available here!",
-        "suggest": "所以可以在这里!",
+        "suggest": "所以可以在这里！",
         "translate": ""
     },
     {
@@ -3311,7 +3311,7 @@
     },
     {
         "source": "Does not compile !",
-        "suggest": "不编译!",
+        "suggest": "不编译！",
         "translate": ""
     },
     {
@@ -3346,7 +3346,7 @@
     },
     {
         "source": "In general, any cast that can be performed via ascribing the type can also be done using `as`, so instead of writing `let x: u32 = 123`, you can write `let x = 123 as u32` (note: `let x: u32 = 123` would be best in that situation).",
-        "suggest": "通常，任何可以通过指定类型执行的强制转换也可以使用 `as` 完成，因此，除了编写 `let x: u32 = 123` 之外，您还可以编写 `let x = 123 as u32` (注意: 在这种情况下，`let x: u32 = 123` 最好)。",
+        "suggest": "通常，任何可以通过指定类型执行的强制转换也可以使用 `as` 完成，因此，除了编写 `let x: u32 = 123` 之外，您还可以编写 `let x = 123 as u32` (注意：在这种情况下，`let x: u32 = 123` 最好)。",
         "translate": ""
     },
     {
@@ -4331,7 +4331,7 @@
     },
     {
         "source": "They can be created from `mut` variables and must be unique: no other variables can have a mutable reference, nor a shared reference.",
-        "suggest": "它们可以从 `mut` 变量创建，并且必须唯一: 其他变量不能具有变量引用，也不能具有共享引用。",
+        "suggest": "它们可以从 `mut` 变量创建，并且必须唯一：其他变量不能具有变量引用，也不能具有共享引用。",
         "translate": ""
     },
     {
@@ -4386,7 +4386,7 @@
     },
     {
         "source": "It is **not** a part of the pattern as far as matching is concerned: it does not affect *whether* a value is matched, only *how* it is matched.",
-        "suggest": "就匹配而言，它不是模式的一部分: 不影响 *是否* 匹配值，仅 *如何* 匹配。",
+        "suggest": "就匹配而言，它不是模式的一部分：不影响 *是否* 匹配值，仅 *如何* 匹配。",
         "translate": ""
     },
     {
@@ -4456,7 +4456,7 @@
     },
     {
         "source": "is used in two situations: referencing the current module and marking the receiver of a method.",
-        "suggest": "在两种情况下使用: 引用当前模块和标记方法的接收者。",
+        "suggest": "在两种情况下使用：引用当前模块和标记方法的接收者。",
         "translate": ""
     },
     {
@@ -4531,7 +4531,7 @@
     },
     {
         "source": "On the surface, `static` items seem very similar to [`const`]s: both contain a value, both require type annotations and both can only be initialized with constant functions and values.",
-        "suggest": "从表面上看，`static` 项与 [`const`] 非常相似: 两者都包含一个值，都需要类型注解，并且都只能使用常量函数和值进行初始化。",
+        "suggest": "从表面上看，`static` 项与 [`const`] 非常相似：两者都包含一个值，都需要类型注解，并且都只能使用常量函数和值进行初始化。",
         "translate": ""
     },
     {
@@ -4551,7 +4551,7 @@
     },
     {
         "source": "There are two types of `static` items: those declared in association with the [`mut`] keyword and those without.",
-        "suggest": "`static` 项有两种类型: 与 [`mut`] 关键字关联声明的 `static` 项和没有 [`mut`] 关键字的 `static` 项。",
+        "suggest": "`static` 项有两种类型：与 [`mut`] 关键字关联声明的 `static` 项和没有 [`mut`] 关键字的 `static` 项。",
         "translate": ""
     },
     {
@@ -4621,7 +4621,7 @@
     },
     {
         "source": "Structs in Rust come in three flavors: Structs with named fields, tuple structs, and unit structs.",
-        "suggest": "Rust 中的结构体有三种风格: 带有命名字段的结构体，元组结构体和单元结构体。",
+        "suggest": "Rust 中的结构体有三种风格：带有命名字段的结构体，元组结构体和单元结构体。",
         "translate": ""
     },
     {
@@ -4996,7 +4996,7 @@
     },
     {
         "source": "The `unsafe` keyword has two uses: to declare the existence of contracts the compiler can't check (`unsafe fn` and `unsafe trait`), and to declare that a programmer has checked that these contracts have been upheld (`unsafe {}` and `unsafe impl`, but also `unsafe fn` -- see below).",
-        "suggest": "`unsafe` 关键字有两个用途: 声明编译器无法检查的契约的存在 (`unsafe fn` 和 `unsafe trait`)，以及声明程序员检查了这些契约是否得到遵守 (`unsafe {}` 和 `unsafe impl`，还有 `unsafe fn` - 见下文)。",
+        "suggest": "`unsafe` 关键字有两个用途：声明编译器无法检查的契约的存在 (`unsafe fn` 和 `unsafe trait`)，以及声明程序员检查了这些契约是否得到遵守 (`unsafe {}` 和 `unsafe impl`，还有 `unsafe fn` - 见下文)。",
         "translate": ""
     }
 ]

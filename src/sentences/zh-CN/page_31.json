@@ -31,17 +31,17 @@
     },
     {
         "source": "Important: don't try to access the value of `ptr` without initializing it first!",
-        "suggest": "重要提示: 不要尝试访问 `ptr` 的值而不先初始化它!",
+        "suggest": "重要提示：不要尝试访问 `ptr` 的值而不先初始化它！",
         "translate": ""
     },
     {
         "source": "The pointer is not null but isn't valid either!",
-        "suggest": "指针不为空，但也无效!",
+        "suggest": "指针不为空，但也无效！",
         "translate": ""
     },
     {
         "source": "NEVER DO THAT!!!",
-        "suggest": "永远不要这样做! ! !",
+        "suggest": "永远不要这样做！! !",
         "translate": ""
     },
     {
@@ -56,7 +56,7 @@
     },
     {
         "source": "Challenge: explain how this captures only the `Err` values",
-        "suggest": "挑战: 解释这如何仅捕获 `Err` 值",
+        "suggest": "挑战：解释这如何仅捕获 `Err` 值",
         "translate": ""
     },
     {
@@ -191,7 +191,7 @@
     },
     {
         "source": "There are two categories of these methods: ones that take a [`Result`] as input, and ones that take a function as input (to be lazily evaluated).",
-        "suggest": "这些方法有两类: 一类以 [`Result`] 作为输入，一类以函数作为输入 (延迟评估)。",
+        "suggest": "这些方法有两类：一类以 [`Result`] 作为输入，一类以函数作为输入 (延迟评估)。",
         "translate": ""
     },
     {
@@ -871,7 +871,7 @@
     },
     {
         "source": "If you make a change that causes this line to no longer infer, that's a problem!",
-        "suggest": "如果您进行更改导致此行不再推断，那就是一个问题!",
+        "suggest": "如果您进行更改导致此行不再推断，那就是一个问题！",
         "translate": ""
     },
     {
@@ -2346,7 +2346,7 @@
     },
     {
         "source": "This module provides three types for representing file descriptors, with different ownership properties: raw, borrowed, and owned, which are analogous to types used for representing pointers:",
-        "suggest": "该模块提供了三种用于表示文件描述符的类型，具有不同的所有权属性: 原始、借用和拥有，类似于用于表示指针的类型:",
+        "suggest": "该模块提供了三种用于表示文件描述符的类型，具有不同的所有权属性：原始、借用和拥有，类似于用于表示指针的类型:",
         "translate": ""
     },
     {
@@ -2401,7 +2401,7 @@
     },
     {
         "source": "That said, `mmap` is unsafe for other reasons: it operates on raw pointers, and it can have undefined behavior if the underlying storage is mutated.",
-        "suggest": "也就是说，`mmap` 是不安全的还有其他原因: 它在裸体疗法上运行，如果底层存储发生可变，它可能会有未定义的行为。",
+        "suggest": "也就是说，`mmap` 是不安全的还有其他原因：它在裸体疗法上运行，如果底层存储发生可变，它可能会有未定义的行为。",
         "translate": ""
     },
     {
@@ -2576,7 +2576,7 @@
     },
     {
         "source": "But who knows?",
-        "suggest": "但谁知道呢?",
+        "suggest": "但谁知道呢？",
         "translate": ""
     },
     {
@@ -2661,7 +2661,7 @@
     },
     {
         "source": "This module provides three types for representing raw handles and sockets with different ownership properties: raw, borrowed, and owned, which are analogous to types used for representing pointers:",
-        "suggest": "该模块提供了三种类型来表示具有不同所有权属性的原始句柄和套接字: 原始、借用和拥有，类似于用于表示指针的类型:",
+        "suggest": "该模块提供了三种类型来表示具有不同所有权属性的原始句柄和套接字：原始、借用和拥有，类似于用于表示指针的类型:",
         "translate": ""
     },
     {
@@ -3116,7 +3116,7 @@
     },
     {
         "source": "not movable: see UnsafeList implementation",
-        "suggest": "不可移动: 请参见 UnsafeList 实现",
+        "suggest": "不可移动：请参见 UnsafeList 实现",
         "translate": ""
     },
     {
@@ -3126,7 +3126,7 @@
     },
     {
         "source": "self-referential struct!",
-        "suggest": "自引用结构体!",
+        "suggest": "自引用结构体！",
         "translate": ""
     },
     {
@@ -3266,7 +3266,7 @@
     },
     {
         "source": "91e7cf982d01 `abort: Do not flush stdio streams [BZ #15436]' by Florian Weimer.",
-        "suggest": "91e7cf982d01 `关于: 不要刷新标准输入输出流 [BZ #15436] by Florian Weimer。",
+        "suggest": "91e7cf982d01 `关于：不要刷新标准输入输出流 [BZ #15436] by Florian Weimer。",
         "translate": ""
     },
     {
@@ -3326,7 +3326,7 @@
     },
     {
         "source": "Safety: We obtained the pidfd from calling `clone3` with `CLONE_PIDFD` so it's valid an otherwise unowned.",
-        "suggest": "安全性: 我们通过使用 `CLONE_PIDFD` 调用 `clone3` 获得了 pidfd，因此它是有效的，否则是无主的。",
+        "suggest": "安全性：我们通过使用 `CLONE_PIDFD` 调用 `clone3` 获得了 pidfd，因此它是有效的，否则是无主的。",
         "translate": ""
     },
     {
@@ -3401,7 +3401,7 @@
     },
     {
         "source": "Safety: If `pidfd` is nonnegative, we assume it's valid and otherwise unowned.",
-        "suggest": "安全性: 如果 `pidfd` 是非负的，我们假设它是有效的，否则是无主的。",
+        "suggest": "安全性：如果 `pidfd` 是非负的，我们假设它是有效的，否则是无主的。",
         "translate": ""
     },
     {
@@ -4431,7 +4431,7 @@
     },
     {
         "source": "Push `cur` even if empty, which we do by breaking while `in_quotes` is still set.",
-        "suggest": "即使是空的，也要推送 `cur`,当 `in_quotes` 仍然设置时，我们通过中断来实现。",
+        "suggest": "即使是空的，也要推送 `cur`，当 `in_quotes` 仍然设置时，我们通过中断来实现。",
         "translate": ""
     },
     {

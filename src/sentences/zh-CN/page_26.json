@@ -1021,12 +1021,12 @@
     },
     {
         "source": "Reduce the packed single-precision (32-bit) floating-point elements in a by minimum.",
-        "suggest": "将一个包装的单精度 (32位) 浮点元素减少到最小。",
+        "suggest": "将一个包装的单精度 (32 位) 浮点元素减少到最小。",
         "translate": ""
     },
     {
         "source": "Reduce the packed double-precision (64-bit) floating-point elements in a by minimum.",
-        "suggest": "将一个包装的双精度 (64位) 浮点元素减少到最小。",
+        "suggest": "将一个包装的双精度 (64 位) 浮点元素减少到最小。",
         "translate": ""
     },
     {
@@ -2106,7 +2106,7 @@
     },
     {
         "source": "The reference is [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2: Instruction Set Reference, A-Z][intel64_ref] (p. 4-241).",
-        "suggest": "引用的是 [Intel 64 和 IA-32 架构软件开发人员手册第 2 卷: 指令集参考, A-Z][intel64_ref] (第 4-241 页)。",
+        "suggest": "引用的是 [Intel 64 和 IA-32 架构软件开发人员手册第 2 卷：指令集参考，A-Z][intel64_ref] (第 4-241 页)。",
         "translate": ""
     },
     {
@@ -2361,7 +2361,7 @@
     },
     {
         "source": "Does the host support the `cpuid` instruction?",
-        "suggest": "主机是否支持 `cpuid` 指令?",
+        "suggest": "主机是否支持 `cpuid` 指令？",
         "translate": ""
     },
     {
@@ -3956,7 +3956,7 @@
     },
     {
         "source": "TODO; figure why this is a different instruction on Windows?",
-        "suggest": "TODO; 为何在 Windows 上这是一条不同的指令?",
+        "suggest": "TODO; 为何在 Windows 上这是一条不同的指令？",
         "translate": ""
     },
     {
@@ -4326,7 +4326,7 @@
     },
     {
         "source": "Warning: an unmasked exception will cause an exception handler to be called.",
-        "suggest": "警告: 未屏蔽的异常将导致调用异常处理程序。",
+        "suggest": "警告：未屏蔽的异常将导致调用异常处理程序。",
         "translate": ""
     },
     {
@@ -4611,7 +4611,7 @@
     },
     {
         "source": "Should comieq_ss signal an exception?",
-        "suggest": "comieq_ss 是否应该发出异常信号?",
+        "suggest": "comieq_ss 是否应该发出异常信号？",
         "translate": ""
     },
     {
@@ -4771,7 +4771,7 @@
     },
     {
         "source": "Implementation detail: converts the immediate argument of the `_mm_slli_si128` intrinsic into a compile-time constant.",
-        "suggest": "实现细节: 将 `_mm_slli_si128` 内部函数的立即参数转换为编译时常量。",
+        "suggest": "实现细节：将 `_mm_slli_si128` 内部函数的立即参数转换为编译时常量。",
         "translate": ""
     },
     {
@@ -4811,7 +4811,7 @@
     },
     {
         "source": "Implementation detail: converts the immediate argument of the `_mm_srli_si128` intrinsic into a compile-time constant.",
-        "suggest": "实现细节: 将 `_mm_srli_si128` 内部函数的立即参数转换为编译时常量。",
+        "suggest": "实现细节：将 `_mm_srli_si128` 内部函数的立即参数转换为编译时常量。",
         "translate": ""
     },
     {

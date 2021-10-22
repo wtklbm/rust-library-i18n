@@ -731,7 +731,7 @@
     },
     {
         "source": "This is an internal module used by the ifmt!",
-        "suggest": "这是 ifmt 使用的内部模块!",
+        "suggest": "这是 ifmt 使用的内部模块！",
         "translate": ""
     },
     {
@@ -941,7 +941,7 @@
     },
     {
         "source": "However, as the `poll` method is not marked `unsafe`, Rust's usual rules apply: calls must never cause undefined behavior (memory corruption, incorrect use of `unsafe` functions, or the like), regardless of the future's state.",
-        "suggest": "但是，由于 `poll` 方法未标记为 `unsafe`，因此适用 Rust 的通常规则: 调用绝不能引起未定义的行为 (内存损坏，`unsafe` 函数的错误使用等)，而与 future 的状态无关。",
+        "suggest": "但是，由于 `poll` 方法未标记为 `unsafe`，因此适用 Rust 的通常规则：调用绝不能引起未定义的行为 (内存损坏，`unsafe` 函数的错误使用等)，而与 future 的状态无关。",
         "translate": ""
     },
     {
@@ -1081,7 +1081,7 @@
     },
     {
         "source": "Your hashing algorithm goes here!",
-        "suggest": "您的哈希算法就在这里!",
+        "suggest": "您的哈希算法就在这里！",
         "translate": ""
     },
     {
@@ -1411,7 +1411,7 @@
     },
     {
         "source": "SipHash is a general-purpose hashing function: it runs at a good speed (competitive with Spooky and City) and permits strong _keyed_ hashing.",
-        "suggest": "SipHash 是通用的哈希函数: 它以良好的速度运行 (与 Spooky 和 City 竞争)，并允许强大的 _keyed_ 哈希。",
+        "suggest": "SipHash 是通用的哈希函数：它以良好的速度运行 (与 Spooky 和 City 竞争)，并允许强大的 _keyed_ 哈希。",
         "translate": ""
     },
     {
@@ -1471,7 +1471,7 @@
     },
     {
         "source": "Unsafe because: unchecked indexing at i..i+size_of(int_ty)",
-        "suggest": "不安全，因为: 未经检查的索引在 i..i + size_of (int_ty)",
+        "suggest": "不安全，因为：未经检查的索引在 i..i + size_of (int_ty)",
         "translate": ""
     },
     {
@@ -1486,7 +1486,7 @@
     },
     {
         "source": "Unsafe because: unchecked indexing at start..start+len",
-        "suggest": "不安全的原因是: 启动时未检查索引 start..start+len",
+        "suggest": "不安全的原因是：启动时未检查索引 start..start+len",
         "translate": ""
     },
     {
@@ -1871,7 +1871,7 @@
     },
     {
         "source": "first: transmute is not type safe;",
-        "suggest": "第一: 转换不是安全类型;",
+        "suggest": "第一：转换不是安全类型;",
         "translate": ""
     },
     {
@@ -2736,7 +2736,7 @@
     },
     {
         "source": "N.B., this is very different from the `unreachable!()` macro: Unlike the macro, which panics when it is executed, it is *undefined behavior* to reach code marked with this function.",
-        "suggest": "注意，这与 `unreachable!()` 宏非常不同: 与执行 panics 的宏不同，到达带有此函数标记的代码是 *undefined 行为*。",
+        "suggest": "注意，这与 `unreachable!()` 宏非常不同：与执行 panics 的宏不同，到达带有此函数标记的代码是 *undefined 行为*。",
         "translate": ""
     },
     {
@@ -2876,12 +2876,12 @@
     },
     {
         "source": "A guard for unsafe functions that cannot ever be executed if `T` does not permit zero-initialization: This will statically either panic, or do nothing.",
-        "suggest": "如果 `T` 不允许零初始化，则永远不能执行的不安全函数的守卫: 这将静态 panic，或者什么也不做。",
+        "suggest": "如果 `T` 不允许零初始化，则永远不能执行的不安全函数的守卫：这将静态 panic，或者什么也不做。",
         "translate": ""
     },
     {
         "source": "A guard for unsafe functions that cannot ever be executed if `T` has invalid bit patterns: This will statically either panic, or do nothing.",
-        "suggest": "如果 `T` 具有无效的位模式，则永远不能执行的不安全函数的守卫: 这将静态地 panic，或者什么也不做。",
+        "suggest": "如果 `T` 具有无效的位模式，则永远不能执行的不安全函数的守卫：这将静态地 panic，或者什么也不做。",
         "translate": ""
     },
     {
@@ -4846,7 +4846,7 @@
     },
     {
         "source": "Limited to Item: Copy since interaction between Zip's use of TrustedRandomAccess and Drop implementation of the source is unclear.",
-        "suggest": "限制于以下项: 复制，因为不清楚 Zip 对 TrustedRandomAccess 的使用与源的 Drop 实现之间的交互。",
+        "suggest": "限制于以下项：复制，因为不清楚 Zip 对 TrustedRandomAccess 的使用与源的 Drop 实现之间的交互。",
         "translate": ""
     },
     {

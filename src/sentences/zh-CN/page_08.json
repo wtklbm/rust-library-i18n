@@ -116,12 +116,12 @@
     },
     {
         "source": "// error: Sized is not implemented for [i32]",
-        "suggest": "// 错误: 没有为 [i32] 实现大小调整",
+        "suggest": "// 错误：没有为 [i32] 实现大小调整",
         "translate": ""
     },
     {
         "source": "// error: the trait `Bar` cannot be made into an object",
-        "suggest": "// 错误: 无法将 trait `Bar` 创建成对象",
+        "suggest": "// 错误：无法将 trait `Bar` 创建成对象",
         "translate": ""
     },
     {
@@ -421,7 +421,7 @@
     },
     {
         "source": "What's the difference between `Copy` and `Clone`?",
-        "suggest": "`Copy` 和 `Clone` 有什么区别?",
+        "suggest": "`Copy` 和 `Clone` 有什么区别？",
         "translate": ""
     },
     {
@@ -616,7 +616,7 @@
     },
     {
         "source": "The precise definition is: a type `T` is [`Sync`] if and only if `&T` is [`Send`].",
-        "suggest": "精确的定义是: 当且仅当 `&T` 是 [`Send`] 时，类型 `T` 才是 [`Sync`]。",
+        "suggest": "精确的定义是：当且仅当 `&T` 是 [`Send`] 时，类型 `T` 才是 [`Sync`]。",
         "translate": ""
     },
     {
@@ -1161,7 +1161,7 @@
     },
     {
         "source": "undefined behavior!",
-        "suggest": "未定义的行为!",
+        "suggest": "未定义的行为！",
         "translate": ""
     },
     {
@@ -1196,7 +1196,7 @@
     },
     {
         "source": "Extract the initialized data -- this is only allowed *after* properly initializing `x`!",
-        "suggest": "提取已初始化的数据 - 仅在正确初始化 `x` 之后 * 才允许这样做!",
+        "suggest": "提取已初始化的数据 - 仅在正确初始化 `x` 之后 * 才允许这样做！",
         "translate": ""
     },
     {
@@ -1206,7 +1206,7 @@
     },
     {
         "source": "Now we know `v` is initialized!",
-        "suggest": "现在我们知道 `v` 已初始化!",
+        "suggest": "现在我们知道 `v` 已初始化！",
         "translate": ""
     },
     {
@@ -1301,7 +1301,7 @@
     },
     {
         "source": "We have created a reference to an uninitialized vector!",
-        "suggest": "我们创建了对未初始化的 vector 的引用!",
+        "suggest": "我们创建了对未初始化的 vector 的引用！",
         "translate": ""
     },
     {
@@ -1326,7 +1326,7 @@
     },
     {
         "source": "We now created two copies of the same vector, leading to a double-free ⚠️ when they both get dropped!",
-        "suggest": "现在，我们创建了同一 vector 的两个副本，当它们都被丢弃时，将导致双重释放!",
+        "suggest": "现在，我们创建了同一 vector 的两个副本，当它们都被丢弃时，将导致双重释放！",
         "translate": ""
     },
     {
@@ -1396,7 +1396,7 @@
     },
     {
         "source": "reference to uninitialized memory!",
-        "suggest": "引用未初始化的内存!",
+        "suggest": "引用未初始化的内存！",
         "translate": ""
     },
     {
@@ -1686,12 +1686,12 @@
     },
     {
         "source": "Correct usage of this function: initializing a struct with zero, where all fields of the struct can hold the bit-pattern 0 as a valid value.",
-        "suggest": "此函数的正确用法: 用零初始化结构体，其中结构体的所有字段都可以将位模式 0 保留为有效值。",
+        "suggest": "此函数的正确用法：用零初始化结构体，其中结构体的所有字段都可以将位模式 0 保留为有效值。",
         "translate": ""
     },
     {
         "source": "*Incorrect* usage of this function: calling `x.zeroed().assume_init()` when `0` is not a valid bit-pattern for the type:",
-        "suggest": "该函数的 *错误* 用法: 当 `0` 不是该类型的有效位模式时，调用 `x.zeroed().assume_init()`:",
+        "suggest": "该函数的 *错误* 用法：当 `0` 不是该类型的有效位模式时，调用 `x.zeroed().assume_init()`:",
         "translate": ""
     },
     {
@@ -1861,7 +1861,7 @@
     },
     {
         "source": "Calling this when the content is not yet fully initialized causes undefined behavior: it is up to the caller to guarantee that the `MaybeUninit<T>` really is in an initialized state.",
-        "suggest": "在内容尚未完全初始化时调用此方法会导致未定义的行为: 取决于调用者，以确保 `MaybeUninit<T>` 确实处于初始化状态。",
+        "suggest": "在内容尚未完全初始化时调用此方法会导致未定义的行为：取决于调用者，以确保 `MaybeUninit<T>` 确实处于初始化状态。",
         "translate": ""
     },
     {
@@ -2091,7 +2091,7 @@
     },
     {
         "source": "Before we disassemble `v` into its raw parts, make sure it does not get dropped!",
-        "suggest": "在将 `v` 拆解为原始零件之前，请确保它不会丢弃掉!",
+        "suggest": "在将 `v` 拆解为原始零件之前，请确保它不会丢弃掉！",
         "translate": ""
     },
     {
@@ -2206,17 +2206,17 @@
     },
     {
         "source": "Undefined behavior!",
-        "suggest": "未定义的行为!",
+        "suggest": "未定义的行为！",
         "translate": ""
     },
     {
         "source": "And again!",
-        "suggest": "然后再次!",
+        "suggest": "然后再次！",
         "translate": ""
     },
     {
         "source": "error: cannot move out of dereference of `&mut`-pointer",
-        "suggest": "错误: 无法移出 & mut-pointer 指针的解引用",
+        "suggest": "错误：无法移出 & mut-pointer 指针的解引用",
         "translate": ""
     },
     {
@@ -2756,12 +2756,12 @@
     },
     {
         "source": "Correct usage of this function: initializing an integer with zero.",
-        "suggest": "此函数的正确用法: 用零初始化一个整数。",
+        "suggest": "此函数的正确用法：用零初始化一个整数。",
         "translate": ""
     },
     {
         "source": "*Incorrect* usage of this function: initializing a reference with zero.",
-        "suggest": "该函数的 *错误* 用法: 用零初始化引用。",
+        "suggest": "该函数的 *错误* 用法：用零初始化引用。",
         "translate": ""
     },
     {
@@ -2781,7 +2781,7 @@
     },
     {
         "source": "The reason for deprecation is that the function basically cannot be used correctly: it has the same effect as [`MaybeUninit::uninit().assume_init()`][uninit].",
-        "suggest": "弃用的原因是该函数基本上不能正确使用: 它具有与 [`MaybeUninit::uninit().assume_init()`][uninit] 相同的作用。",
+        "suggest": "弃用的原因是该函数基本上不能正确使用：它具有与 [`MaybeUninit::uninit().assume_init()`][uninit] 相同的作用。",
         "translate": ""
     },
     {
@@ -3136,7 +3136,7 @@
     },
     {
         "source": "will LLVM optimize this into ADC or similar?",
-        "suggest": "LLVM 会将其优化到 ADC 或类似产品中吗?",
+        "suggest": "LLVM 会将其优化到 ADC 或类似产品中吗？",
         "translate": ""
     },
     {
@@ -3566,7 +3566,7 @@
     },
     {
         "source": "Negative powers result in a repeating fractional part in binary, which are rounded, which causes real (and occasionally quite significant!) errors in the final result.",
-        "suggest": "负幂会导致二进制中重复的小数部分四舍五入，这会在最终结果中引起实际的 (有时是相当大的! ) 错误。",
+        "suggest": "负幂会导致二进制中重复的小数部分四舍五入，这会在最终结果中引起实际的 (有时是相当大的！) 错误。",
         "translate": ""
     },
     {
@@ -3636,7 +3636,7 @@
     },
     {
         "source": "Is the slop large enough to make a difference when rounding to n bits?",
-        "suggest": "舍入到 n 位时，斜率是否足够大以产生影响?",
+        "suggest": "舍入到 n 位时，斜率是否足够大以产生影响？",
         "translate": ""
     },
     {
@@ -3751,7 +3751,7 @@
     },
     {
         "source": "Detecting underflow and overflow is easy: The ratio still isn't an in-range significand, yet the minimum/maximum exponent has been reached.",
-        "suggest": "检测下溢和上溢很容易: 该比率仍然不是有效范围，但已达到 minimum/maximum 指数。",
+        "suggest": "检测下溢和上溢很容易：该比率仍然不是有效范围，但已达到 minimum/maximum 指数。",
         "translate": ""
     },
     {
@@ -3776,7 +3776,7 @@
     },
     {
         "source": "FIXME possible optimization: generalize big_to_fp so that we can do the equivalent of fp_to_float(big_to_fp(u)) here, only without the double rounding.",
-        "suggest": "FIXME 可能的优化: 泛化 big_to_fp，以便我们可以在这里执行 fp_to_float(big_to_fp(u)) 的等效功能，而无需进行双取整。",
+        "suggest": "FIXME 可能的优化：泛化 big_to_fp，以便我们可以在这里执行 fp_to_float(big_to_fp(u)) 的等效功能，而无需进行双取整。",
         "translate": ""
     },
     {
@@ -3791,7 +3791,7 @@
     },
     {
         "source": "FIXME find a more elegant formulation, but run the `tiny-pow10` test to make sure that it's actually correct!",
-        "suggest": "FIXME 找到了一个更优雅的公式，但是运行 `tiny-pow10` 测试以确保它实际上是正确的!",
+        "suggest": "FIXME 找到了一个更优雅的公式，但是运行 `tiny-pow10` 测试以确保它实际上是正确的！",
         "translate": ""
     },
     {
@@ -3856,7 +3856,7 @@
     },
     {
         "source": "Therefore, when the rounded-off bits are != 0.5 ULP, they decide the rounding on their own.",
-        "suggest": "因此，当舍入位为! = 0.5 ULP 时，它们将自行决定舍入。",
+        "suggest": "因此，当舍入位为！= 0.5 ULP 时，它们将自行决定舍入。",
         "translate": ""
     },
     {
@@ -3936,7 +3936,7 @@
     },
     {
         "source": "Then we remove the decimal point by adjusting the exponent: Conceptually, `12.34e56` turns into `1234e54`, which we describe with a positive integer `f = 1234` and an integer `e = 54`.",
-        "suggest": "然后，我们通过调整指数来删除小数点: 从概念上讲，`12.34e56` 变为 `1234e54`，我们用正整数 `f = 1234` 和整数 `e = 54` 对其进行描述。",
+        "suggest": "然后，我们通过调整指数来删除小数点：从概念上讲，`12.34e56` 变为 `1234e54`，我们用正整数 `f = 1234` 和整数 `e = 54` 对其进行描述。",
         "translate": ""
     },
     {
@@ -4051,12 +4051,12 @@
     },
     {
         "source": "A note on integer overflow: Many parts of this file perform arithmetic with the decimal exponent `e`.",
-        "suggest": "关于整型溢出的注意事项: 该文件的许多部分都使用十进制指数 `e` 来执行算术运算。",
+        "suggest": "关于整型溢出的注意事项：该文件的许多部分都使用十进制指数 `e` 来执行算术运算。",
         "translate": ""
     },
     {
         "source": "Primarily, we shift the decimal point around: Before the first decimal digit, after the last decimal digit, and so on.",
-        "suggest": "首先，我们将小数点移动: 在第一个十进制数字之前，在最后一个十进制数字之后，依此类推。",
+        "suggest": "首先，我们将小数点移动：在第一个十进制数字之前，在最后一个十进制数字之后，依此类推。",
         "translate": ""
     },
     {
@@ -4171,7 +4171,7 @@
     },
     {
         "source": "The main workhorse for the decimal-to-float conversion: Orchestrate all the preprocessing and figure out which algorithm should do the actual conversion.",
-        "suggest": "十进制到浮点转换的主要动力: 统筹所有预处理并确定哪种算法应进行实际转换。",
+        "suggest": "十进制到浮点转换的主要动力：统筹所有预处理并确定哪种算法应进行实际转换。",
         "translate": ""
     },
     {
@@ -4391,7 +4391,7 @@
     },
     {
         "source": "In other words, standard floating-point syntax, with two exceptions: No sign, and no handling of \"inf\" and \"NaN\".",
-        "suggest": "换句话说，是标准的浮点语法，但有两个例外: 无符号，并且不处理 \"inf\" 和 \"NaN\"。",
+        "suggest": "换句话说，是标准的浮点语法，但有两个例外：无符号，并且不处理 \"inf\" 和 \"NaN\"。",
         "translate": ""
     },
     {
@@ -4851,7 +4851,7 @@
     },
     {
         "source": "Because of the hidden bit convention, this too is exactly what we want!",
-        "suggest": "由于隐藏的位约定，这正是我们想要的!",
+        "suggest": "由于隐藏的位约定，这正是我们想要的！",
         "translate": ""
     },
     {
@@ -4866,7 +4866,7 @@
     },
     {
         "source": "DO NOT MODIFY: Generated by `src/etc/dec2flt_table.py`",
-        "suggest": "不修改: 由 `src/etc/dec2flt_table.py` 生成",
+        "suggest": "不修改：由 `src/etc/dec2flt_table.py` 生成",
         "translate": ""
     },
     {

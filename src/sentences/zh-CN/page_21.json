@@ -11,7 +11,7 @@
     },
     {
         "source": "Example: Attempting to read from a message pipe that has no messages waiting but has an open remote will return ERR_SHOULD_WAIT.",
-        "suggest": "示例: 尝试从没有等待消息但具有打开的远程消息的消息管道中读取，将返回 ERR_SHOULD_WAIT。",
+        "suggest": "示例：尝试从没有等待消息但具有打开的远程消息的消息管道中读取，将返回 ERR_SHOULD_WAIT。",
         "translate": ""
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "source": "Example: Attempting to create a file when a file already exists with that name.",
-        "suggest": "示例: 当已经存在具有该名称的文件时，尝试创建一个文件。",
+        "suggest": "示例：当已经存在具有该名称的文件时，尝试创建一个文件。",
         "translate": ""
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "source": "Example: A disk block is irrecoverably damaged.",
-        "suggest": "示例: 磁盘块不可恢复地损坏。",
+        "suggest": "示例：磁盘块不可恢复地损坏。",
         "translate": ""
     },
     {
@@ -451,7 +451,7 @@
     },
     {
         "source": "Ensure stackaddr is page aligned!",
-        "suggest": "确保 stackaddr 是页面对齐的!",
+        "suggest": "确保 stackaddr 是页面对齐的！",
         "translate": ""
     },
     {
@@ -526,7 +526,7 @@
     },
     {
         "source": "FIXME does freebsd really fault *below* the guard addr?",
-        "suggest": "FIXME freebsd 是否真的在 *保护地址以下* 故障?",
+        "suggest": "FIXME freebsd 是否真的在 *保护地址以下* 故障？",
         "translate": ""
     },
     {
@@ -576,7 +576,7 @@
     },
     {
         "source": "Since what appears to be glibc 2.18 this symbol has been shipped which GCC and clang both use to invoke destructors in thread_local globals, so let's do the same!",
-        "suggest": "由于看起来好像是 glibc 2.18，因此已经发布了该符号，GCC 和 clang 都使用它们在 thread_local 全局变量中调用析构函数，所以我们做同样的事情!",
+        "suggest": "由于看起来好像是 glibc 2.18，因此已经发布了该符号，GCC 和 clang 都使用它们在 thread_local 全局变量中调用析构函数，所以我们做同样的事情！",
         "translate": ""
     },
     {
@@ -721,7 +721,7 @@
     },
     {
         "source": "Relaxed is fine here because we fence before reading through the pointer (see the comment below).",
-        "suggest": "在这里放宽是可以的，因为在读取指针之前设置了障碍(请参见下面的注释)。",
+        "suggest": "在这里放宽是可以的，因为在读取指针之前设置了障碍 (请参见下面的注释)。",
         "translate": ""
     },
     {
@@ -781,7 +781,7 @@
     },
     {
         "source": "May want to consider making it part of the spec definition?",
-        "suggest": "可能要考虑使其成为规格定义的一部分?",
+        "suggest": "可能要考虑使其成为规格定义的一部分？",
         "translate": ""
     },
     {
@@ -996,7 +996,7 @@
     },
     {
         "source": "bind fd_filestat_set_times maybe?",
-        "suggest": "绑定 fd_filestat_set_times 也许?",
+        "suggest": "绑定 fd_filestat_set_times 也许？",
         "translate": ""
     },
     {
@@ -1006,12 +1006,12 @@
     },
     {
         "source": "bind path_filestat_set_times maybe?",
-        "suggest": "绑定 path_filestat_set_times 也许?",
+        "suggest": "绑定 path_filestat_set_times 也许？",
         "translate": ""
     },
     {
         "source": "bind poll_oneoff maybe?",
-        "suggest": "绑定 poll_oneoff 也许?",
+        "suggest": "绑定 poll_oneoff 也许？",
         "translate": ""
     },
     {
@@ -1021,7 +1021,7 @@
     },
     {
         "source": "bind random_get maybe?",
-        "suggest": "绑定 random_get 也许?",
+        "suggest": "绑定 random_get 也许？",
         "translate": ""
     },
     {
@@ -1276,7 +1276,7 @@
     },
     {
         "source": "can we handle the return code here even though we can't on unix?",
-        "suggest": "即使不能在 unix 上运行，我们也可以在这里处理返回码吗?",
+        "suggest": "即使不能在 unix 上运行，我们也可以在这里处理返回码吗？",
         "translate": ""
     },
     {
@@ -1471,7 +1471,7 @@
     },
     {
         "source": "precision... seems ignored though?",
-        "suggest": "精度... 虽然似乎被忽略了?",
+        "suggest": "精度... 虽然似乎被忽略了？",
         "translate": ""
     },
     {
@@ -1481,7 +1481,7 @@
     },
     {
         "source": "In that situation there's no actual runtime for us to lean on for allocation, so instead we provide our own!",
-        "suggest": "在这种情况下，我们没有实际的运行时可以依靠分配，因此我们提供了自己的运行时!",
+        "suggest": "在这种情况下，我们没有实际的运行时可以依靠分配，因此我们提供了自己的运行时！",
         "translate": ""
     },
     {
@@ -1491,7 +1491,7 @@
     },
     {
         "source": "These instructions are the foundation on which we're able to build an allocator, so we do so!",
-        "suggest": "这些说明是我们能够构建分配器的基础，所以我们做到了!",
+        "suggest": "这些说明是我们能够构建分配器的基础，所以我们做到了！",
         "translate": ""
     },
     {
@@ -1506,7 +1506,7 @@
     },
     {
         "source": "The crate itself provides a global allocator which on wasm has no synchronization as there are no threads!",
-        "suggest": "crate 本身提供了一个分配器，该分配器在 wasm 上没有同步，因为没有线程!",
+        "suggest": "crate 本身提供了一个分配器，该分配器在 wasm 上没有同步，因为没有线程！",
         "translate": ""
     },
     {
@@ -1696,7 +1696,7 @@
     },
     {
         "source": "no atomics, no threads, that's easy!",
-        "suggest": "没有原子，没有线程，这很容易!",
+        "suggest": "没有原子，没有线程，这很容易！",
         "translate": ""
     },
     {
@@ -1921,7 +1921,7 @@
     },
     {
         "source": "This strategy doesn't handled what happens when the counter overflows, however, so just abort everything once the counter overflows and eventually we could have some sort of recycling scheme (or maybe this is all totally irrelevant by that point!).",
-        "suggest": "但是，该策略无法处理计数器溢出时发生的情况，因此，一旦计数器溢出，只需终止所有操作，最终我们就可以采用某种回收方案 (或者到那时为止这完全不相关! )。",
+        "suggest": "但是，该策略无法处理计数器溢出时发生的情况，因此，一旦计数器溢出，只需终止所有操作，最终我们就可以采用某种回收方案 (或者到那时为止这完全不相关！)。",
         "translate": ""
     },
     {
@@ -1976,7 +1976,7 @@
     },
     {
         "source": "Implement quirk: when they say whitespace here, they include the entire ASCII control plane:",
-        "suggest": "实现怪癖: 当他们在此处说空白时，它们包括整个 ASCII 控制平面:",
+        "suggest": "实现怪癖：当他们在此处说空白时，它们包括整个 ASCII 控制平面:",
         "translate": ""
     },
     {
@@ -2121,7 +2121,7 @@
     },
     {
         "source": "This has an additional advantage: Because the DLL import lookup happens at module initialization, the cost of these lookups is deterministic, and is removed from the code paths that actually call the DLL imports.",
-        "suggest": "这还有一个额外的优势: 因为 DLL 导入查找是在模块初始化时发生的，所以这些查找的开销是确定性的，并且从实际上调用 DLL 导入的代码路径中删除了。",
+        "suggest": "这还有一个额外的优势：因为 DLL 导入查找是在模块初始化时发生的，所以这些查找的开销是确定性的，并且从实际上调用 DLL 导入的代码路径中删除了。",
         "translate": ""
     },
     {
@@ -2231,7 +2231,7 @@
     },
     {
         "source": "DO NOT do anything interesting or complicated in this function!",
-        "suggest": "不要在此函数中做任何有趣或复杂的事情!",
+        "suggest": "不要在此函数中做任何有趣或复杂的事情！",
         "translate": ""
     },
     {
@@ -2356,7 +2356,7 @@
     },
     {
         "source": "This is lossless: calling [`OsStrExt::encode_wide`] on the resulting string will always return the original code units.",
-        "suggest": "这是无损的: 在结果字符串上调用 [`OsStrExt::encode_wide`] 将始终返回原始代码单元。",
+        "suggest": "这是无损的：在结果字符串上调用 [`OsStrExt::encode_wide`] 将始终返回原始代码单元。",
         "translate": ""
     },
     {
@@ -2371,7 +2371,7 @@
     },
     {
         "source": "This is lossless: calling [`OsStringExt::from_wide`] and then `encode_wide` on the result will yield the original code units.",
-        "suggest": "这是无损的: 在结果上调用 [`OsStringExt::from_wide`]，然后调用 `encode_wide`，将产生原始代码单元。",
+        "suggest": "这是无损的：在结果上调用 [`OsStringExt::from_wide`]，然后调用 `encode_wide`，将产生原始代码单元。",
         "translate": ""
     },
     {
@@ -2901,7 +2901,7 @@
     },
     {
         "source": "This is useful for passing arguments to [MSYS2/Cygwin][1] based executables: these programs will expand unquoted arguments containing wildcard characters (`?` and `*`) by searching for any file paths matching the wildcard pattern.",
-        "suggest": "这对于将参数传递给基于 [MSYS2/Cygwin][1] 的可执行文件很有用: 这些程序将通过搜索与通配符模式匹配的任何文件路径来扩展包含通配符 (`?` 和 `*`) 的不带引号的参数。",
+        "suggest": "这对于将参数传递给基于 [MSYS2/Cygwin][1] 的可执行文件很有用：这些程序将通过搜索与通配符模式匹配的任何文件路径来扩展包含通配符 (`?` 和 `*`) 的不带引号的参数。",
         "translate": ""
     },
     {
@@ -3416,7 +3416,7 @@
     },
     {
         "source": "only parse two bytes: the drive letter and the drive separator",
-        "suggest": "仅解析两个字节: 驱动器号和驱动器分隔符",
+        "suggest": "仅解析两个字节：驱动器号和驱动器分隔符",
         "translate": ""
     },
     {
@@ -3521,7 +3521,7 @@
     },
     {
         "source": "This should hopefully shield us from child processes which assume their stdout is a named pipe, which would indeed be odd!",
-        "suggest": "希望这可以使我们免受子进程的影响，这些子进程假设其 stdout 是命名管道，这确实是奇怪的!",
+        "suggest": "希望这可以使我们免受子进程的影响，这些子进程假设其 stdout 是命名管道，这确实是奇怪的！",
         "translate": ""
     },
     {
@@ -4041,7 +4041,7 @@
     },
     {
         "source": "Turns out, like pretty much everything, Windows is pretty close the functionality that Unix provides, but slightly different!",
-        "suggest": "事实证明，与几乎所有内容一样，Windows 与 Unix 提供的功能非常接近，但略有不同!",
+        "suggest": "事实证明，与几乎所有内容一样，Windows 与 Unix 提供的功能非常接近，但略有不同！",
         "translate": ""
     },
     {
@@ -4056,7 +4056,7 @@
     },
     {
         "source": "The solution here ended up being a little obscure, but fear not, the internet has informed me [1][2] that this solution is not unique (no way I could have thought of it as well!).",
-        "suggest": "这里的解决方案最终有点晦涩难懂，但是请不要担心，互联网已经通知我 [1][2] 这个解决方案不是唯一的 (我也无法想到它! )。",
+        "suggest": "这里的解决方案最终有点晦涩难懂，但是请不要担心，互联网已经通知我 [1][2] 这个解决方案不是唯一的 (我也无法想到它！)。",
         "translate": ""
     },
     {
@@ -4066,7 +4066,7 @@
     },
     {
         "source": "With this in place we'll be able to run anything we like, including all TLS destructors!",
-        "suggest": "有了这个，我们将能够运行任何我们喜欢的东西，包括所有 TLS 析构函数!",
+        "suggest": "有了这个，我们将能够运行任何我们喜欢的东西，包括所有 TLS 析构函数！",
         "translate": ""
     },
     {
@@ -4106,7 +4106,7 @@
     },
     {
         "source": "For more details and nitty-gritty, see the code sections below!",
-        "suggest": "有关更多细节和细节，请参见下面的代码部分!",
+        "suggest": "有关更多细节和细节，请参见下面的代码部分！",
         "translate": ""
     },
     {
@@ -4171,7 +4171,7 @@
     },
     {
         "source": "An optimization for another day!",
-        "suggest": "改天再优化!",
+        "suggest": "改天再优化！",
         "translate": ""
     },
     {
@@ -4196,7 +4196,7 @@
     },
     {
         "source": "What's up with CRT$XLB?",
-        "suggest": "CRT $ XLB 怎么了?",
+        "suggest": "CRT $ XLB 怎么了？",
         "translate": ""
     },
     {
@@ -4211,12 +4211,12 @@
     },
     {
         "source": "If this is encoded in just the right way, the kernel's loader is apparently nice enough to run some function of ours whenever a thread exits!",
-        "suggest": "如果以正确的方式对此进行编码，则内核的加载器显然足够好，以便在线程退出时运行我们的某些函数!",
+        "suggest": "如果以正确的方式对此进行编码，则内核的加载器显然足够好，以便在线程退出时运行我们的某些函数！",
         "translate": ""
     },
     {
         "source": "How nice of the kernel!",
-        "suggest": "内核真好!",
+        "suggest": "内核真好！",
         "translate": ""
     },
     {
@@ -4236,7 +4236,7 @@
     },
     {
         "source": "What's up with this callback?",
-        "suggest": "这个回调是怎么回事?",
+        "suggest": "这个回调是怎么回事？",
         "translate": ""
     },
     {
@@ -4246,12 +4246,12 @@
     },
     {
         "source": "someone!",
-        "suggest": "有人!",
+        "suggest": "有人！",
         "translate": ""
     },
     {
         "source": "(the kernel? the runtime? I'm not quite sure!) There are a few events that this gets invoked for, but we're currently only interested on when a thread or a process \"detaches\" (exits).",
-        "suggest": "(内核? 运行时? 我不太确定! ) 有一些事件被调用，但是我们目前仅对线程或进程 \"detaches\" (exits) 感兴趣。",
+        "suggest": "(内核？运行时？我不太确定！) 有一些事件被调用，但是我们目前仅对线程或进程 \"detaches\" (exits) 感兴趣。",
         "translate": ""
     },
     {
@@ -4261,7 +4261,7 @@
     },
     {
         "source": "Ok, what's up with running all these destructors?",
-        "suggest": "好的，运行所有这些析构函数是怎么回事?",
+        "suggest": "好的，运行所有这些析构函数是怎么回事？",
         "translate": ""
     },
     {
@@ -4291,7 +4291,7 @@
     },
     {
         "source": "It sure does!",
-        "suggest": "当然可以!",
+        "suggest": "当然可以！",
         "translate": ""
     },
     {
@@ -4771,7 +4771,7 @@
     },
     {
         "source": "If we never called init, not need to cleanup!",
-        "suggest": "如果我们从未调用过 init，则无需清理!",
+        "suggest": "如果我们从未调用过 init，则无需清理！",
         "translate": ""
     },
     {
@@ -4951,7 +4951,7 @@
     },
     {
         "source": "Gee, seeing how we're testing the fs module I sure hope that we at least implement this correctly!",
-        "suggest": "e，看看我们如何测试 fs 模块，我当然希望我们至少能正确实现它!",
+        "suggest": "e，看看我们如何测试 fs 模块，我当然希望我们至少能正确实现它！",
         "translate": ""
     },
     {

@@ -71,7 +71,7 @@
     },
     {
         "source": "However, this extra power comes with extra responsibilities: it is now up to you to ensure soundness.",
-        "suggest": "但是，这种额外的权力还伴随着额外的责任: 现在要确保声音的完整性。",
+        "suggest": "但是，这种额外的权力还伴随着额外的责任：现在要确保声音的完整性。",
         "translate": ""
     },
     {
@@ -86,7 +86,7 @@
     },
     {
         "source": "Not all uses of `unsafe` are equivalent: some are here to mark the existence of a contract the programmer must check, others are to say \"I have checked the contract, go ahead and do this\".",
-        "suggest": "并非 `unsafe` 的所有用法都是等效的: 这里有些标记是程序员必须检查的契约的存在，而另一些是 \"我已经检查了契约，继续做这个吧\"。",
+        "suggest": "并非 `unsafe` 的所有用法都是等效的：这里有些标记是程序员必须检查的契约的存在，而另一些是 \"我已经检查了契约，继续做这个吧\"。",
         "translate": ""
     },
     {
@@ -316,7 +316,7 @@
     },
     {
         "source": "On the other hand, this will not compile because the `where 'b: 'a` clause is missing: the `'b` lifetime is not known to live at least as long as `'a` which means this function cannot ensure it always returns a valid reference:",
-        "suggest": "另一方面，由于缺少 `where 'b: 'a` 子句，因此无法编译: 未知 `'b` 生命周期的生存时间至少与 `'a` 一样长，这意味着该函数无法确保其始终返回有效的引用:",
+        "suggest": "另一方面，由于缺少 `where 'b: 'a` 子句，因此无法编译：未知 `'b` 生命周期的生存时间至少与 `'a` 一样长，这意味着该函数无法确保其始终返回有效的引用:",
         "translate": ""
     },
     {
@@ -781,7 +781,7 @@
     },
     {
         "source": "Still, there are important bits you don't want to miss, so read on for a tour of the standard library and its documentation!",
-        "suggest": "尽管如此，您还是不想错过一些重要的内容，因此请继续阅读标准库及其文档!",
+        "suggest": "尽管如此，您还是不想错过一些重要的内容，因此请继续阅读标准库及其文档！",
         "translate": ""
     },
     {
@@ -811,7 +811,7 @@
     },
     {
         "source": "What is in the standard library documentation?",
-        "suggest": "标准库文档中有什么?",
+        "suggest": "标准库文档中有什么？",
         "translate": ""
     },
     {
@@ -916,7 +916,7 @@
     },
     {
         "source": "Contributions are appreciated!",
-        "suggest": "感谢您的贡献!",
+        "suggest": "感谢您的贡献！",
         "translate": ""
     },
     {
@@ -1256,7 +1256,7 @@
     },
     {
         "source": "error!",
-        "suggest": "错误!",
+        "suggest": "错误！",
         "translate": ""
     },
     {
@@ -1576,7 +1576,7 @@
     },
     {
         "source": "This form of the test is more robust: even when the DNS server returns its own address, it is still an error to bind a UDP socket to a non-local address, and so we still get an error here in that case.",
-        "suggest": "这种测试形式更加可靠: 即使 DNS 服务器返回自己的地址，将 UDP 套接字绑定到非本地地址仍然是错误的，因此在这种情况下，我们仍然会收到错误消息。",
+        "suggest": "这种测试形式更加可靠：即使 DNS 服务器返回自己的地址，将 UDP 套接字绑定到非本地地址仍然是错误的，因此在这种情况下，我们仍然会收到错误消息。",
         "translate": ""
     },
     {
@@ -1736,7 +1736,7 @@
     },
     {
         "source": "This information corresponds to the `sin6_flowinfo` field in C's `netinet/in.h`, as specified in [IETF RFC 2553, Section 3.3].",
-        "suggest": "该信息对应于 [IETF RFC 2553, 第 3.3 节][IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_flowinfo` 字段。",
+        "suggest": "该信息对应于 [IETF RFC 2553，第 3.3 节][IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_flowinfo` 字段。",
         "translate": ""
     },
     {
@@ -1761,7 +1761,7 @@
     },
     {
         "source": "This information corresponds to the `sin6_scope_id` field in C's `netinet/in.h`, as specified in [IETF RFC 2553, Section 3.3].",
-        "suggest": "该信息对应于 [IETF RFC 2553, 第 3.3 节][IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_scope_id` 字段。",
+        "suggest": "该信息对应于 [IETF RFC 2553，第 3.3 节][IETF RFC 2553, Section 3.3] 中指定的 C 的 `netinet/in.h` 中的 `sin6_scope_id` 字段。",
         "translate": ""
     },
     {
@@ -1801,7 +1801,7 @@
     },
     {
         "source": "Fast path: if there's no alignment stuff, write to the output buffer directly",
-        "suggest": "快速路径: 如果没有对齐内容，则直接写入输出缓冲区",
+        "suggest": "快速路径：如果没有对齐内容，则直接写入输出缓冲区",
         "translate": ""
     },
     {
@@ -1896,7 +1896,7 @@
     },
     {
         "source": "It is needed because sometimes one type is more appropriate than the other: for simple uses a string like `\"localhost:12345\"` is much nicer than manual construction of the corresponding [`SocketAddr`], but sometimes [`SocketAddr`] value is *the* main source of the address, and converting it to some other type (e.g., a string) just for it to be converted back to [`SocketAddr`] in constructor methods is pointless.",
-        "suggest": "之所以需要它，是因为有时一种类型比另一种类型更合适: 对于简单的用法，像 `\"localhost:12345\"` 这样的字符串比相应的 [`SocketAddr`] 的手工构造好得多，但是有时 [`SocketAddr`] 值是地址的 * 主要来源，并将其转换为其他一些类型 (例如，字符串) 仅用于在构造函数方法中将其转换回 [`SocketAddr`] 是没有意义的。",
+        "suggest": "之所以需要它，是因为有时一种类型比另一种类型更合适：对于简单的用法，像 `\"localhost:12345\"` 这样的字符串比相应的 [`SocketAddr`] 的手工构造好得多，但是有时 [`SocketAddr`] 值是地址的 * 主要来源，并将其转换为其他一些类型 (例如，字符串) 仅用于在构造函数方法中将其转换回 [`SocketAddr`] 是没有意义的。",
         "translate": ""
     },
     {
@@ -2651,7 +2651,7 @@
     },
     {
         "source": "Fast Path: if there's no alignment stuff, write directly to the buffer",
-        "suggest": "快速路径: 如果没有对齐内容，则直接写入缓冲区",
+        "suggest": "快速路径：如果没有对齐内容，则直接写入缓冲区",
         "translate": ""
     },
     {
@@ -3006,7 +3006,7 @@
     },
     {
         "source": "Slow path: write the address to a local buffer, the use f.pad.",
-        "suggest": "慢路径: 将地址写入本地缓冲区，使用 f.pad。",
+        "suggest": "慢路径：将地址写入本地缓冲区，使用 f.pad。",
         "translate": ""
     },
     {
@@ -4326,7 +4326,7 @@
     },
     {
         "source": "Unlike in the TCP case, passing an array of addresses to the `connect` function of a UDP socket is not a useful thing to do: The OS will be unable to determine whether something is listening on the remote address without the application sending data.",
-        "suggest": "与 TCP 情况不同，将地址数组传递给 UDP 套接字的 `connect` 函数不是一件有用的事情: 在没有应用程序发送数据的情况下，操作系统将无法确定是否有人在监听远程地址。",
+        "suggest": "与 TCP 情况不同，将地址数组传递给 UDP 套接字的 `connect` 函数不是一件有用的事情：在没有应用程序发送数据的情况下，操作系统将无法确定是否有人在监听远程地址。",
         "translate": ""
     },
     {

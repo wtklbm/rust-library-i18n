@@ -6,12 +6,12 @@
     },
     {
         "source": "That issue's got some good pointers about where to get started!",
-        "suggest": "这个问题对于从哪里开始有一些很好的指示!",
+        "suggest": "这个问题对于从哪里开始有一些很好的指示！",
         "translate": ""
     },
     {
         "source": "If you've got general questions feel free to [join us on gitter][gitter] and ask around!",
-        "suggest": "如果您有一般性问题，请随时向 [加入我们的 gitter][gitter] 询问!",
+        "suggest": "如果您有一般性问题，请随时向 [加入我们的 gitter][gitter] 询问！",
         "translate": ""
     },
     {
@@ -46,7 +46,7 @@
     },
     {
         "source": "As always, feel free to [join us on gitter][gitter] and ask us if you hit any snags, and thank you for helping to improve the documentation of `stdarch`!",
-        "suggest": "与往常一样，请随时使用 [加入我们的 gitter][gitter]，并询问我们是否遇到任何障碍，并感谢您帮助改善 `stdarch` 的文档!",
+        "suggest": "与往常一样，请随时使用 [加入我们的 gitter][gitter]，并询问我们是否遇到任何障碍，并感谢您帮助改善 `stdarch` 的文档！",
         "translate": ""
     },
     {
@@ -461,7 +461,7 @@
     },
     {
         "source": "are there any terminals that have color/attrs and not sgr0?",
-        "suggest": "是否有带有 color/attrs 而不是 sgr0 的端子?",
+        "suggest": "是否有带有 color/attrs 而不是 sgr0 的端子？",
         "translate": ""
     },
     {
@@ -681,7 +681,7 @@
     },
     {
         "source": "Does not support hashed database, only filesystem!",
-        "suggest": "不支持哈希数据库，仅支持文件系统!",
+        "suggest": "不支持哈希数据库，仅支持文件系统！",
         "translate": ""
     },
     {
@@ -861,7 +861,7 @@
     },
     {
         "source": "error in this case?",
-        "suggest": "在这种情况下的错误?",
+        "suggest": "在这种情况下的错误？",
         "translate": ""
     },
     {
@@ -1466,7 +1466,7 @@
     },
     {
         "source": "Median of the samples: value separating the lower half of the samples from the higher half.",
-        "suggest": "样本中位数: 将样本下半部分与样本上半部分分开的值。",
+        "suggest": "样本中位数：将样本下半部分与样本上半部分分开的值。",
         "translate": ""
     },
     {
@@ -1476,7 +1476,7 @@
     },
     {
         "source": "Variance of the samples: bias-corrected mean of the squares of the differences of each sample from the sample mean.",
-        "suggest": "样本方差: 每个样本与样本均值之差的平方的偏差校正后的平均值。",
+        "suggest": "样本方差：每个样本与样本均值之差的平方的偏差校正后的平均值。",
         "translate": ""
     },
     {
@@ -1491,7 +1491,7 @@
     },
     {
         "source": "Standard deviation: the square root of the sample variance.",
-        "suggest": "标准偏差: 样本方差的平方根。",
+        "suggest": "标准偏差：样本方差的平方根。",
         "translate": ""
     },
     {
@@ -1566,7 +1566,7 @@
     },
     {
         "source": "Quartiles of the sample: three values that divide the sample into four equal groups, each with 1/4 of the data.",
-        "suggest": "样本四分位数: 将样本分为四个相等组的三个值，每个组的数据为 1/4。",
+        "suggest": "样本四分位数：将样本分为四个相等组的三个值，每个组的数据为 1/4。",
         "translate": ""
     },
     {
@@ -1586,7 +1586,7 @@
     },
     {
         "source": "Inter-quartile range: the difference between the 25th percentile (1st quartile) and the 75th percentile (3rd quartile).",
-        "suggest": "四分位间距: 第 25 个百分位数 (第 1 个四分位数) 和第 75 个百分位数 (第 3 个四分位数) 之间的差。",
+        "suggest": "四分位间距：第 25 个百分位数 (第 1 个四分位数) 和第 75 个百分位数 (第 3 个四分位数) 之间的差。",
         "translate": ""
     },
     {
@@ -1641,7 +1641,7 @@
     },
     {
         "source": "Helper function: extract a value representing the `pct` percentile of a sorted sample-set, using linear interpolation.",
-        "suggest": "Helper 函数: 使用线性插值提取代表排序后的样本集的 `pct` 百分位数的值。",
+        "suggest": "Helper 函数：使用线性插值提取代表排序后的样本集的 `pct` 百分位数的值。",
         "translate": ""
     },
     {
@@ -3066,7 +3066,7 @@
     },
     {
         "source": "We'll try to fix ones where we can over time, but otherwise it's important to be aware of the limitations of unwinding-based backtraces!",
-        "suggest": "随着时间的推移，我们将尝试修复那些可以修复的问题，但除此之外，重要的是要注意基于展开的回溯的局限性!",
+        "suggest": "随着时间的推移，我们将尝试修复那些可以修复的问题，但除此之外，重要的是要注意基于展开的回溯的局限性！",
         "translate": ""
     },
     {
@@ -3196,17 +3196,17 @@
     },
     {
         "source": "Escape Extended Grapheme codepoints?",
-        "suggest": "转义扩展字素代码点?",
+        "suggest": "转义扩展字素代码点？",
         "translate": ""
     },
     {
         "source": "Escape single quotes?",
-        "suggest": "转义单引号?",
+        "suggest": "转义单引号？",
         "translate": ""
     },
     {
         "source": "Escape double quotes?",
-        "suggest": "转义双引号?",
+        "suggest": "转义双引号？",
         "translate": ""
     },
     {
@@ -3296,7 +3296,7 @@
     },
     {
         "source": "Safety: This macro must only be used on types that are `Copy` and result in ranges which have an exact `size_hint()` where the upper bound must not be `None`.",
-        "suggest": "安全性: 这个宏只能用于 `Copy` 的类型，并导致具有精确 `size_hint()` 的范围，其中上限不能是 `None`。",
+        "suggest": "安全性：这个宏只能用于 `Copy` 的类型，并导致具有精确 `size_hint()` 的范围，其中上限不能是 `None`。",
         "translate": ""
     },
     {
@@ -3346,7 +3346,7 @@
     },
     {
         "source": "Note that the underlying iterator is still advanced when [`peek`] or [`peek_mut`] are called for the first time: In order to retrieve the next element, [`next`] is called on the underlying iterator, hence any side effects (i.e.",
-        "suggest": "注意，第一次调用 [`peek`] 或 [`peek_mut`] 时，底层迭代器仍然在前进: 为了检索下一个元素，在底层迭代器上调用 [`next`]，因此会产生任何副作用 (即",
+        "suggest": "注意，第一次调用 [`peek`] 或 [`peek_mut`] 时，底层迭代器仍然在前进：为了检索下一个元素，在底层迭代器上调用 [`next`]，因此会产生任何副作用 (即",
         "translate": ""
     },
     {
@@ -3596,7 +3596,7 @@
     },
     {
         "source": "If you're making a generic type `Foo<T>` that implements `Try<Output = T>`, then typically you can use `Foo<std::convert::Infallible>` as its `Residual` type: that type will have a \"hole\" in the correct place, and will maintain the \"foo-ness\" of the residual so other types need to opt-in to interconversion.",
-        "suggest": "如果您正在创建实现 `Try<Output = T>` 的泛型 `Foo<T>`，那么通常您可以使用 `Foo<std::convert::Infallible>` 作为它的 `Residual` 类型: 该类型将在正确位置有一个 \"hole\"，并将保留 residual 的 \"foo-ness\"，因此其他类型需要选择加入到相互转换中。",
+        "suggest": "如果您正在创建实现 `Try<Output = T>` 的泛型 `Foo<T>`，那么通常您可以使用 `Foo<std::convert::Infallible>` 作为它的 `Residual` 类型：该类型将在正确位置有一个 \"hole\"，并将保留 residual 的 \"foo-ness\"，因此其他类型需要选择加入到相互转换中。",
         "translate": ""
     },
     {
@@ -3611,7 +3611,7 @@
     },
     {
         "source": "Used in `?` to decide whether the operator should produce a value (because this returned [`ControlFlow::Continue`]) or propagate a value back to the caller (because this returned [`ControlFlow::Break`]).",
-        "suggest": "在 `?` 来决定操作符是应该生成一个值 (因为它返回了 [`ControlFlow::Continue`])，还是将一个值传播回调用者(因为它返回了 [`ControlFlow::Break`])。",
+        "suggest": "在 `?` 来决定操作符是应该生成一个值 (因为它返回了 [`ControlFlow::Continue`])，还是将一个值传播回调用者 (因为它返回了 [`ControlFlow::Break`])。",
         "translate": ""
     },
     {
@@ -3671,7 +3671,7 @@
     },
     {
         "source": "Rust allows passing all types by-value, and common smart-pointer types such as <code>[Box]\\<T></code> and <code>[&mut] T</code> allow replacing and moving the values they contain: you can move out of a <code>[Box]\\<T></code>, or you can use [`mem::swap`].",
-        "suggest": "Rust 允许按值传递所有类型，以及常见的智能指针类型，例如 <code>[Box]\\</code><T> 和 <code>[&mut] T</code> 允许替换和移动它们包含的值: 您可以移出 <code>[Box]\\</code><T>，或者您可以使用 [`mem::swap`]。",
+        "suggest": "Rust 允许按值传递所有类型，以及常见的智能指针类型，例如 <code>[Box]\\</code><T> 和 <code>[&mut] T</code> 允许替换和移动它们包含的值：您可以移出 <code>[Box]\\</code><T>，或者您可以使用 [`mem::swap`]。",
         "translate": ""
     },
     {
@@ -3771,12 +3771,12 @@
     },
     {
         "source": "The [`drop`] function takes <code>[&mut] self</code>, but this is called *even if your type was previously pinned*!",
-        "suggest": "[`drop`] 函数采用 <code>[&mut] self</code>，但这被称为即使您的类型之前已固定!</code>",
+        "suggest": "[`drop`] 函数采用 <code>[&mut] self</code>，但这被称为即使您的类型之前已固定！</code>",
         "translate": ""
     },
     {
         "source": "This can never cause a problem in safe code because implementing a type that relies on pinning requires unsafe code, but be aware that deciding to make use of pinning in your type (for example by implementing some operation on <code>[Pin]<[&]Self></code> or <code>[Pin]<[&mut] Self></code>) has consequences for your [`Drop`][Drop]implementation as well: if an element of your type could have been pinned, you must treat [`Drop`][Drop] as implicitly taking <code>[Pin]<[&mut] Self></code>.",
-        "suggest": "这永远不会在安全代码中导致问题，因为实现依赖于固定的类型需要不安全的代码，但请注意决定在您的类型中使用固定 (例如通过对 <code>[Pin]<[&] Self></code> 或 <code>[Pin]<[&mut] Self></code>) 对您的 [`Drop`][Drop] 实现也有影响: 如果您的类型的元素可以被固定，则您必须将 [`Drop`][Drop] 视为隐式使用 <code>[Pin]<[&mut] Self></code> .",
+        "suggest": "这永远不会在安全代码中导致问题，因为实现依赖于固定的类型需要不安全的代码，但请注意决定在您的类型中使用固定 (例如通过对 <code>[Pin]<[&] Self></code> 或 <code>[Pin]<[&mut] Self></code>) 对您的 [`Drop`][Drop] 实现也有影响：如果您的类型的元素可以被固定，则您必须将 [`Drop`][Drop] 视为隐式使用 <code>[Pin]<[&mut] Self></code> .",
         "translate": ""
     },
     {
@@ -3791,7 +3791,7 @@
     },
     {
         "source": "The usual approach is to write helper methods (so called *projections*) that turn <code>[Pin]<[&mut] Struct></code> into a reference to the field, but what type should that reference have?",
-        "suggest": "通常的方法是编写辅助方法 (所谓的 *projections*)，将 <code>[Pin]<[&mut] 结构体 ></code> 转换为对字段的引用，但该引用应该具有什么类型?",
+        "suggest": "通常的方法是编写辅助方法 (所谓的 *projections*)，将 <code>[Pin]<[&mut] 结构体 ></code> 转换为对字段的引用，但该引用应该具有什么类型？",
         "translate": ""
     },
     {
@@ -3801,7 +3801,7 @@
     },
     {
         "source": "The same question arises with the fields of an `enum`, and also when considering container/wrapper types such as <code>[Vec]\\<T></code>, <code>[Box]\\<T></code>, or <code>[RefCell]\\<T></code>.",
-        "suggest": "`enum` 的字段以及在考虑 container/wrapper 类型 (例如 <code>[Vec]\\</code><T>, <code>[Box]\\</code><T>, 或 <code>[RefCell]\\</code><T>.",
+        "suggest": "`enum` 的字段以及在考虑 container/wrapper 类型 (例如 <code>[Vec]\\</code><T>, <code>[Box]\\</code><T>，或 <code>[RefCell]\\</code><T>.",
         "translate": ""
     },
     {
@@ -3811,7 +3811,7 @@
     },
     {
         "source": "It may seem counter-intuitive that the field of a pinned struct might not be pinned, but that is actually the easiest choice: if a <code>[Pin]<[&mut] Field></code> is never created, nothing can go wrong!",
-        "suggest": "固定结构体的字段可能不被固定似乎违反直觉，但这实际上是最简单的选择: 如果从未创建 <code>[Pin]<[&mut] Field></code> 则不会出错!",
+        "suggest": "固定结构体的字段可能不被固定似乎违反直觉，但这实际上是最简单的选择：如果从未创建 <code>[Pin]<[&mut] Field></code> 则不会出错！",
         "translate": ""
     },
     {
@@ -3896,7 +3896,7 @@
     },
     {
         "source": "However, it could *not* allow calling [`pop`][Vec::pop] on a pinned <code>[Vec]\\<T></code> because that would move the (structurally pinned) contents!",
-        "suggest": "但是，它可能*不允许*在固定的 <code>[Vec]\\</code> 上调用 [`pop`][Vec::pop]<T> 因为那会移动 (结构固定的) 内容!",
+        "suggest": "但是，它可能*不允许*在固定的 <code>[Vec]\\</code> 上调用 [`pop`][Vec::pop]<T> 因为那会移动 (结构固定的) 内容！",
         "translate": ""
     },
     {
@@ -3956,12 +3956,12 @@
     },
     {
         "source": "The entire memory range of this slice must be contained within a single [allocated object]!",
-        "suggest": "整个内存范围必须包含在单个 [分配对象][allocated object] 内!",
+        "suggest": "整个内存范围必须包含在单个 [分配对象][allocated object] 内！",
         "translate": ""
     },
     {
         "source": "would create a reference to an uninitialized `bool`, and thus be Undefined Behavior!",
-        "suggest": "将创建对未初始化的 `bool` 的引用，因此是未定义的行为!",
+        "suggest": "将创建对未初始化的 `bool` 的引用，因此是未定义的行为！",
         "translate": ""
     },
     {
@@ -4571,7 +4571,7 @@
     },
     {
         "source": "<code>[std::convert]::{[AsRef], [AsMut], [Into], [From]}</code>, generic conversions, used by savvy API authors to create overloaded methods.",
-        "suggest": "<code>[std::convert]::{[AsRef], [AsMut], [Into], [From]}</code>, 泛型转换，由精明的 API 作者用来创建重载方法。",
+        "suggest": "<code>[std::convert]::{[AsRef], [AsMut], [Into], [From]}</code>，泛型转换，由精明的 API 作者用来创建重载方法。",
         "translate": ""
     },
     {

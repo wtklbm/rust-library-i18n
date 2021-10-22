@@ -26,7 +26,7 @@
     },
     {
         "source": "Relaxed suffices in the above because this is fundamentally an optimization: we are always racing with weak pointers being dropped.",
-        "suggest": "上面的内容足以满足需要，因为这从根本上来说是一种优化: 我们一直在争夺被丢弃的弱指针。",
+        "suggest": "上面的内容足以满足需要，因为这从根本上来说是一种优化：我们一直在争夺被丢弃的弱指针。",
         "translate": ""
     },
     {
@@ -881,7 +881,7 @@
     },
     {
         "source": "and that's all!",
-        "suggest": "就这样!",
+        "suggest": "就这样！",
         "translate": ""
     },
     {
@@ -1116,7 +1116,7 @@
     },
     {
         "source": "However be careful: if you try to access an index which isn't in the `Vec`, your software will panic!",
-        "suggest": "但是要小心: 如果您尝试访问 `Vec` 中没有的索引，则您的软件将为 panic!",
+        "suggest": "但是要小心：如果您尝试访问 `Vec` 中没有的索引，则您的软件将为 panic!",
         "translate": ""
     },
     {
@@ -1421,7 +1421,7 @@
     },
     {
         "source": "There is one case which we will not break, however: using `unsafe` code to write to the excess capacity, and then increasing the length to match, is always valid.",
-        "suggest": "但是，有一种情况我们不会中断: 使用 `unsafe` 代码写入多余的容量，然后增加长度以匹配，始终是有效的。",
+        "suggest": "但是，有一种情况我们不会中断：使用 `unsafe` 代码写入多余的容量，然后增加长度以匹配，始终是有效的。",
         "translate": ""
     },
     {
@@ -1901,7 +1901,7 @@
     },
     {
         "source": "Unchecked: Unchecked valid elements.",
-        "suggest": "未检查: 未检查的有效元素。",
+        "suggest": "未检查：未检查的有效元素。",
         "translate": ""
     },
     {
@@ -2191,7 +2191,7 @@
     },
     {
         "source": "Safety: changing returned .2 (&mut usize) is considered the same as calling `.set_len(_)`.",
-        "suggest": "安全性: 更改返回的.2 (&mut usize) 与调用 `.set_len(_)` 相同。",
+        "suggest": "安全性：更改返回的.2 (&mut usize) 与调用 `.set_len(_)` 相同。",
         "translate": ""
     },
     {
@@ -2571,7 +2571,7 @@
     },
     {
         "source": "some less important impls are omitted to reduce code bloat FIXME(Centril): Reconsider this?",
-        "suggest": "省略一些不太重要的提示，以减少代码膨胀 FIXME(Centril): 重新考虑这一点吗?",
+        "suggest": "省略一些不太重要的提示，以减少代码膨胀 FIXME(Centril): 重新考虑这一点吗？",
         "translate": ""
     },
     {
@@ -2681,7 +2681,7 @@
     },
     {
         "source": "check if SourceIter contract was upheld caveat: if they weren't we may not even make it to this point",
-        "suggest": "检查 SourceIter 契约是否被维护: 如果不是，我们甚至可能无法做到这一点",
+        "suggest": "检查 SourceIter 契约是否被维护：如果不是，我们甚至可能无法做到这一点",
         "translate": ""
     },
     {
@@ -2821,12 +2821,12 @@
     },
     {
         "source": "Is the upper bound a better guess?",
-        "suggest": "上限是更好的猜测吗?",
+        "suggest": "上限是更好的猜测吗？",
         "translate": ""
     },
     {
         "source": "Or something else?",
-        "suggest": "或者是其他东西?",
+        "suggest": "或者是其他东西？",
         "translate": ""
     },
     {
@@ -3061,7 +3061,7 @@
     },
     {
         "source": "make sure that format!",
-        "suggest": "确保该格式!",
+        "suggest": "确保该格式！",
         "translate": ""
     },
     {
@@ -3441,7 +3441,7 @@
     },
     {
         "source": "Make sure the macro can actually detect bugs, because if it can't, then what are we even doing here?",
-        "suggest": "确保宏可以实际检测到错误，因为如果无法检测到错误，那么我们在这里还要做什么?",
+        "suggest": "确保宏可以实际检测到错误，因为如果无法检测到错误，那么我们在这里还要做什么？",
         "translate": ""
     },
     {
@@ -4076,7 +4076,7 @@
     },
     {
         "source": "(Vec grows to next power of two) good- [9, 12, 15, X, X, X, X, |6] bug-  [15, 12, X, X, X, |6, X, X]",
-        "suggest": "(Vec 成长为下一个 2 的幂) 好 - [9, 12, 15, X, X, X, X, |6] 错误 - [15, 12, X, X, X, |6, X, X]",
+        "suggest": "(Vec 成长为下一个 2 的幂) 好 - [9, 12, 15, X, X, X, X，|6] 错误 - [15, 12, X, X, X，|6, X, X]",
         "translate": ""
     },
     {
@@ -4086,7 +4086,7 @@
     },
     {
         "source": "bug-  [15, 12, X, X, X, X, |X, X]",
-        "suggest": "错误 - [15, 12, X, X, X, X, |X, X]",
+        "suggest": "错误 - [15, 12, X, X, X, X，|X, X]",
         "translate": ""
     },
     {
@@ -4481,7 +4481,7 @@
     },
     {
         "source": "It's not entirely clear how it does it (frame pointers? eh_frame info? both?) but it seems to work!",
-        "suggest": "尚不清楚它是如何工作的 (帧指针? eh_frame 信息? 两者? )，但似乎可行!",
+        "suggest": "尚不清楚它是如何工作的 (帧指针？eh_frame 信息？两者？)，但似乎可行！",
         "translate": ""
     },
     {
@@ -4531,7 +4531,7 @@
     },
     {
         "source": "Note the `skip_inner_frames.rs` test is skipped on OSX due to this clause, and if this is fixed that test in theory can be run on OSX!",
-        "suggest": "请注意，由于有此条款，OSX 上的 `skip_inner_frames.rs` 测试已被跳过，如果此问题已解决，则理论上该测试可以在 OSX 上运行!",
+        "suggest": "请注意，由于有此条款，OSX 上的 `skip_inner_frames.rs` 测试已被跳过，如果此问题已解决，则理论上该测试可以在 OSX 上运行！",
         "translate": ""
     },
     {
@@ -4561,7 +4561,7 @@
     },
     {
         "source": "This function is a misnomer: rather than getting this frame's Canonical Frame Address (aka the caller frame's SP) it returns this frame's SP.",
-        "suggest": "此函数用词不当: 它没有获得此框架的规范框架地址 (即调用者框架的 SP)，而是返回了该框架的 SP。",
+        "suggest": "此函数用词不当：它没有获得此框架的规范框架地址 (即调用者框架的 SP)，而是返回了该框架的 SP。",
         "translate": ""
     },
     {

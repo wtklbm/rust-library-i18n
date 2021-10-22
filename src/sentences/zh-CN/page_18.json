@@ -61,7 +61,7 @@
     },
     {
         "source": "What is unwind safety?",
-        "suggest": "什么是 unwind 安全性?",
+        "suggest": "什么是 unwind 安全性？",
         "translate": ""
     },
     {
@@ -96,7 +96,7 @@
     },
     {
         "source": "It is possible, however, for **logical** invariants to be broken in Rust, which can end up causing behavioral bugs.",
-        "suggest": "然而，在Rust中，**logical** 不可变变量被破坏是有可能的，这最终会导致行为 Bug。",
+        "suggest": "然而，在 Rust 中，**logical** 不可变变量被破坏是有可能的，这最终会导致行为 Bug。",
         "translate": ""
     },
     {
@@ -446,7 +446,7 @@
     },
     {
         "source": "One day this may look a little less ad-hoc with the compiler helping out to hook up these functions, but it is not this day!",
-        "suggest": "有一天，编译器可以帮助这些函数 hook 临时看起来不那么特别，但这不是今天!",
+        "suggest": "有一天，编译器可以帮助这些函数 hook 临时看起来不那么特别，但这不是今天！",
         "translate": ""
     },
     {
@@ -571,7 +571,7 @@
     },
     {
         "source": "Fast path: if `GLOBAL_PANIC_COUNT` is zero, all threads (including the current one) will have `LOCAL_PANIC_COUNT` equal to zero, so TLS access can be avoided.",
-        "suggest": "快速路径: 如果 `GLOBAL_PANIC_COUNT` 为零，则所有线程 (包括当前线程) 的 `LOCAL_PANIC_COUNT` 均等于零，因此可以避免 TLS 访问。",
+        "suggest": "快速路径：如果 `GLOBAL_PANIC_COUNT` 为零，则所有线程 (包括当前线程) 的 `LOCAL_PANIC_COUNT` 均等于零，因此可以避免 TLS 访问。",
         "translate": ""
     },
     {
@@ -666,7 +666,7 @@
     },
     {
         "source": "Access to the union's fields: this is `std` and we know that the `r#try` intrinsic fills in the `r` or `p` union field based on its return value.",
-        "suggest": "访问 union 的字段: 这是 `std`，我们知道 `r#try` 内部函数根据其返回值填充 `r` 或 `p` union 字段。",
+        "suggest": "访问 union 的字段：这是 `std`，我们知道 `r#try` 内部函数根据其返回值填充 `r` 或 `p` union 字段。",
         "translate": ""
     },
     {
@@ -726,7 +726,7 @@
     },
     {
         "source": "We *do* want this part of the catch to be inlined: this allows the compiler to properly track accesses to the Data union and optimize it away most of the time.",
-        "suggest": "我们 *确实* 希望这部分的 catch 被内联: 这允许编译器正确跟踪对 Data union 的访问，并在大多数情况下对其进行优化。",
+        "suggest": "我们 *确实* 希望这部分的 catch 被内联：这允许编译器正确跟踪对 Data union 的访问，并在大多数情况下对其进行优化。",
         "translate": ""
     },
     {
@@ -1356,17 +1356,17 @@
     },
     {
         "source": "how much of the prefix is left from the point of view of iteration?",
-        "suggest": "从迭代的角度来看，还剩下多少前缀?",
+        "suggest": "从迭代的角度来看，还剩下多少前缀？",
         "translate": ""
     },
     {
         "source": "Given the iteration so far, how much of the pre-State::Body path is left?",
-        "suggest": "给定到目前为止的迭代，还剩下多少 pre-State::Body 路径?",
+        "suggest": "给定到目前为止的迭代，还剩下多少 pre-State::Body 路径？",
         "translate": ""
     },
     {
         "source": "is the iteration complete?",
-        "suggest": "迭代完成了吗?",
+        "suggest": "迭代完成了吗？",
         "translate": ""
     },
     {
@@ -1376,7 +1376,7 @@
     },
     {
         "source": "Is the *original* path rooted?",
-        "suggest": "*原始* 路径是否扎根?",
+        "suggest": "*原始* 路径是否扎根？",
         "translate": ""
     },
     {
@@ -1466,7 +1466,7 @@
     },
     {
         "source": "We can still do better than this!",
-        "suggest": "我们仍然可以做得更好!",
+        "suggest": "我们仍然可以做得更好！",
         "translate": ""
     },
     {
@@ -2521,7 +2521,7 @@
     },
     {
         "source": "error: the trait bound `[i32; 3]: std::iter::Iterator` is not satisfied",
-        "suggest": "错误: 不满足 trait bound `[i32; 3]: std::iter::Iterator`",
+        "suggest": "错误：不满足 trait bound `[i32; 3]: std::iter::Iterator`",
         "translate": ""
     },
     {
@@ -2566,7 +2566,7 @@
     },
     {
         "source": "mismatched types: expected normal fn, found unsafe fn let bad_ptr: fn(usize) -> usize = add_one_unsafely;",
-        "suggest": "不匹配的类型: 预期正常 fn，发现不安全 fn let bad_ptr: fn(usize) -> usize=add_one_unsafely;",
+        "suggest": "不匹配的类型：预期正常 fn，发现不安全 fn let bad_ptr: fn(usize) -> usize=add_one_unsafely;",
         "translate": ""
     },
     {
@@ -2776,7 +2776,7 @@
     },
     {
         "source": "Now, we can use `?` instead of `match`, and the return type makes a lot more sense: if the loop ever stops, it means that an error occurred.",
-        "suggest": "现在，我们可以使用 `?` 代替 `match`，并且返回类型更有意义: 如果循环停止，则意味着发生了错误。",
+        "suggest": "现在，我们可以使用 `?` 代替 `match`，并且返回类型更有意义：如果循环停止，则意味着发生了错误。",
         "translate": ""
     },
     {
@@ -2941,7 +2941,7 @@
     },
     {
         "source": "is most commonly seen implicitly: functions without a `-> ...` implicitly have return type `()`, that is, these are equivalent:",
-        "suggest": "最常见的隐含形式: 没有 `-> ...` 的函数隐含具有返回类型 `()`，即，它们是等效的:",
+        "suggest": "最常见的隐含形式：没有 `-> ...` 的函数隐含具有返回类型 `()`，即，它们是等效的:",
         "translate": ""
     },
     {
@@ -3186,7 +3186,7 @@
     },
     {
         "source": "A `&str` is made up of two components: a pointer to some bytes, and a length.",
-        "suggest": "`&str` 由两个部分组成: 一个指向某些字节的指针和一个长度。",
+        "suggest": "`&str` 由两个部分组成：一个指向某些字节的指针和一个长度。",
         "translate": ""
     },
     {
@@ -3326,7 +3326,7 @@
     },
     {
         "source": "However, being able to represent this wide range of numbers comes at the cost of precision: floats can only represent some of the real numbers and calculation with floats round to a nearby representable number.",
-        "suggest": "但是，能够表示这么广泛的数字是以牺牲精度为代价的: 浮点数只能表示某些实数，并且计算时会将浮点数舍入到附近的可表示数字。",
+        "suggest": "但是，能够表示这么广泛的数字是以牺牲精度为代价的：浮点数只能表示某些实数，并且计算时会将浮点数舍入到附近的可表示数字。",
         "translate": ""
     },
     {
@@ -3366,7 +3366,7 @@
     },
     {
         "source": "NaN has some potentially unexpected behavior: it is unequal to any float, including itself!",
-        "suggest": "NaN 有一些潜在的意外行为: 它不等于任何浮点数，包括它本身!",
+        "suggest": "NaN 有一些潜在的意外行为：它不等于任何浮点数，包括它本身！",
         "translate": ""
     },
     {
@@ -3551,7 +3551,7 @@
     },
     {
         "source": "\\(Note that this will not defer to `T`'s `Clone` implementation if it exists!)",
-        "suggest": "\\(请注意，如果存在，这不会遵循 T 的 `Clone` 实现! )",
+        "suggest": "\\(请注意，如果存在，这不会遵循 T 的 `Clone` 实现！)",
         "translate": ""
     },
     {
@@ -3591,7 +3591,7 @@
     },
     {
         "source": "Note that due to method call deref coercion, simply calling a trait method will act like they work on references as well as they do on owned values!",
-        "suggest": "请注意，由于采用了调用解引用强制多态方法，只需调用 trait 方法就可以像处理引用一样，也可以使用其拥有的值!",
+        "suggest": "请注意，由于采用了调用解引用强制多态方法，只需调用 trait 方法就可以像处理引用一样，也可以使用其拥有的值！",
         "translate": ""
     },
     {
@@ -3631,7 +3631,7 @@
     },
     {
         "source": "In addition to varying based on their signature, function pointers come in two flavors: safe and unsafe.",
-        "suggest": "除了根据其签名而有所不同外，函数指针还具有两种形式: 安全和不安全。",
+        "suggest": "除了根据其签名而有所不同外，函数指针还具有两种形式：安全和不安全。",
         "translate": ""
     },
     {
@@ -4501,7 +4501,7 @@
     },
     {
         "source": "Was termination successful?",
-        "suggest": "终止成功了吗?",
+        "suggest": "终止成功了吗？",
         "translate": ""
     },
     {
@@ -4516,7 +4516,7 @@
     },
     {
         "source": "In Unix terms the return value is the **exit status**: the value passed to `exit`, if the process finished by calling `exit`.",
-        "suggest": "用 Unix 的术语来说，返回值是退出状态: 如果进程通过调用 `exit` 完成，则传递给 `exit` 的值。",
+        "suggest": "用 Unix 的术语来说，返回值是退出状态：如果进程通过调用 `exit` 完成，则传递给 `exit` 的值。",
         "translate": ""
     },
     {
@@ -4616,7 +4616,7 @@
     },
     {
         "source": "This helps avoid deadlock: it ensures that the child does not block waiting for input from the parent, while the parent waits for the child to exit.",
-        "suggest": "这有助于避免死锁: 它确保子进程在父进程等待子进程退出时不会阻止其等待父进程的输入。",
+        "suggest": "这有助于避免死锁：它确保子进程在父进程等待子进程退出时不会阻止其等待父进程的输入。",
         "translate": ""
     },
     {
@@ -4831,7 +4831,7 @@
     },
     {
         "source": "Let's run some code!",
-        "suggest": "让我们运行一些代码!",
+        "suggest": "让我们运行一些代码！",
         "translate": ""
     },
     {
@@ -4971,7 +4971,7 @@
     },
     {
         "source": "10 milliseconds have passed, or maybe the value changed!",
-        "suggest": "10 毫秒已过去，或者值已更改!",
+        "suggest": "10 毫秒已过去，或者值已更改！",
         "translate": ""
     },
     {

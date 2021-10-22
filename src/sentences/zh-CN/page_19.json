@@ -331,7 +331,7 @@
     },
     {
         "source": "The **compiler** reordering instructions: If the compiler can issue an instruction at an earlier point, it will try to do so.",
-        "suggest": "**编译器** 重新排序指令: 如果编译器可以在较早的时候发出指令，它将尝试这样做。",
+        "suggest": "**编译器** 重新排序指令：如果编译器可以在较早的时候发出指令，它将尝试这样做。",
         "translate": ""
     },
     {
@@ -366,7 +366,7 @@
     },
     {
         "source": "A **multiprocessor** system executing multiple hardware threads at the same time: In multi-threaded scenarios, you can use two kinds of primitives to deal with synchronization:",
-        "suggest": "同时执行多个硬件线程的 **多处理器** 系统: 在多线程方案中，可以使用两种原语来处理同步:",
+        "suggest": "同时执行多个硬件线程的 **多处理器** 系统：在多线程方案中，可以使用两种原语来处理同步:",
         "translate": ""
     },
     {
@@ -971,7 +971,7 @@
     },
     {
         "source": "The implication of this is that if a sender sees a -1 count, then there's guaranteed to be a waiter waiting!",
-        "suggest": "这意味着如果发送方看到 -1 计数，那么肯定有一个等待者在等!",
+        "suggest": "这意味着如果发送方看到 -1 计数，那么肯定有一个等待者在等！",
         "translate": ""
     },
     {
@@ -1036,12 +1036,12 @@
     },
     {
         "source": "Select is now removed, so these factors are ready to be cleaned up!",
-        "suggest": "Select 现在已删除，因此可以清除这些因素!",
+        "suggest": "Select 现在已删除，因此可以清除这些因素！",
         "translate": ""
     },
     {
         "source": "And now that you've seen all the races that I found and attempted to fix, here's the code for you to find some more!",
-        "suggest": "现在，您已经看到了我发现并尝试解决的所有问题，下面是为您找到更多代码的代码!",
+        "suggest": "现在，您已经看到了我发现并尝试解决的所有问题，下面是为您找到更多代码的代码！",
         "translate": ""
     },
     {
@@ -1716,7 +1716,7 @@
     },
     {
         "source": "initial state: no data, no blocked receiver",
-        "suggest": "初始状态: 无数据，无阻塞接收者",
+        "suggest": "初始状态：无数据，无阻塞接收者",
         "translate": ""
     },
     {
@@ -1991,7 +1991,7 @@
     },
     {
         "source": "You'll also note that the implementation of the shared and stream channels are quite similar, and this is no coincidence!",
-        "suggest": "您还将注意到，共享通道和流通道的实现非常相似，这绝非偶然!",
+        "suggest": "您还将注意到，共享通道和流通道的实现非常相似，这绝非偶然！",
         "translate": ""
     },
     {
@@ -2001,7 +2001,7 @@
     },
     {
         "source": "How many times has a port received without blocking?",
-        "suggest": "一个端口收到多少次无阻塞?",
+        "suggest": "一个端口收到多少次无阻塞？",
         "translate": ""
     },
     {
@@ -2416,7 +2416,7 @@
     },
     {
         "source": "is it worth it?",
-        "suggest": "这值得么?",
+        "suggest": "这值得么？",
         "translate": ""
     },
     {
@@ -2706,7 +2706,7 @@
     },
     {
         "source": "Otherwise we just sent some data on a non-waiting queue, so just make sure the world is sane and carry on!",
-        "suggest": "否则，我们只是在非等待队列中发送了一些数据，因此只需确保世界保持理智并继续前进即可!",
+        "suggest": "否则，我们只是在非等待队列中发送了一些数据，因此只需确保世界保持理智并继续前进即可！",
         "translate": ""
     },
     {
@@ -3041,7 +3041,7 @@
     },
     {
         "source": "Is the channel disconnected yet?",
-        "suggest": "通道是否断开连接?",
+        "suggest": "通道是否断开连接？",
         "translate": ""
     },
     {
@@ -3136,7 +3136,7 @@
     },
     {
         "source": "are we ready to go?",
-        "suggest": "我们准备好出发了吗?",
+        "suggest": "我们准备好出发了吗？",
         "translate": ""
     },
     {
@@ -3306,7 +3306,7 @@
     },
     {
         "source": "What is our res?",
-        "suggest": "我们的 res 是什么?",
+        "suggest": "我们的 res 是什么？",
         "translate": ""
     },
     {
@@ -3436,7 +3436,7 @@
     },
     {
         "source": "Here the mutex guard is not assigned to a variable and so, even if the scope does not end after this line, the mutex is still released: there is no deadlock.",
-        "suggest": "这里互斥锁防护未分配给变量，因此，即使作用域在此行之后没有结束，互斥锁仍被释放: 没有死锁。",
+        "suggest": "这里互斥锁防护未分配给变量，因此，即使作用域在此行之后没有结束，互斥锁仍被释放：没有死锁。",
         "translate": ""
     },
     {
@@ -3731,7 +3731,7 @@
     },
     {
         "source": "Accessing a `static mut` is unsafe much of the time, but if we do so in a synchronized fashion (e.g., write once or read all) then we're good to go!",
-        "suggest": "在很多情况下，访问 `static mut` 是不安全的，但是如果我们以同步方式进行操作 (例如，一次写入或全部读取)，那么我们就可以开始了!",
+        "suggest": "在很多情况下，访问 `static mut` 是不安全的，但是如果我们以同步方式进行操作 (例如，一次写入或全部读取)，那么我们就可以开始了！",
         "translate": ""
     },
     {
@@ -3781,7 +3781,7 @@
     },
     {
         "source": "Consequently, let's explain how this primitive works now!",
-        "suggest": "因此，让我们解释一下该原语现在是如何工作的!",
+        "suggest": "因此，让我们解释一下该原语现在是如何工作的！",
         "translate": ""
     },
     {
@@ -3816,12 +3816,12 @@
     },
     {
         "source": "All in all, this is instead implemented with atomics and lock-free operations!",
-        "suggest": "总而言之，这是通过原子和无锁操作实现的!",
+        "suggest": "总而言之，这是通过原子和无锁操作实现的！",
         "translate": ""
     },
     {
         "source": "Whee! Each `Once` has one word of atomic state, and this state is CAS'd on to determine what to do.",
-        "suggest": "呜! 每个 `Once` 都有一个原子状态的字，此状态已通过 CAS 确定要做什么。",
+        "suggest": "呜！每个 `Once` 都有一个原子状态的字，此状态已通过 CAS 确定要做什么。",
         "translate": ""
     },
     {
@@ -3881,7 +3881,7 @@
     },
     {
         "source": "You'll find a few more details in the implementation, but that's the gist of it!",
-        "suggest": "您会在实现中找到更多细节，但这就是要点!",
+        "suggest": "您会在实现中找到更多细节，但这就是要点！",
         "translate": ""
     },
     {
@@ -3936,7 +3936,7 @@
     },
     {
         "source": "There is just one store where `state_and_queue` is used only as a state flag, without having to synchronize data: switching the state from INCOMPLETE to RUNNING in `call_inner`.",
-        "suggest": "只有一个存储区，其中 `state_and_queue` 仅用作状态标志，而不必同步数据: 在 `call_inner` 中将状态从 INCOMPLETE 切换为 RUNNING。",
+        "suggest": "只有一个存储区，其中 `state_and_queue` 仅用作状态标志，而不必同步数据：在 `call_inner` 中将状态从 INCOMPLETE 切换为 RUNNING。",
         "translate": ""
     },
     {
@@ -4711,7 +4711,7 @@
     },
     {
         "source": "That way it's a compile time error for something that's guaranteed to be a runtime error!",
-        "suggest": "这样一来，就可以保证它是运行时错误，这是一个编译时错误!",
+        "suggest": "这样一来，就可以保证它是运行时错误，这是一个编译时错误！",
         "translate": ""
     },
     {

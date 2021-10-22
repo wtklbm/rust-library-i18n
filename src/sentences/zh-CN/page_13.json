@@ -76,7 +76,7 @@
     },
     {
         "source": "are the core portion: these traits define what kind of streams exist and what you can do with them.",
-        "suggest": "是核心部分: 这些 traits 定义了存在哪种类型的流以及可以对其进行处理。",
+        "suggest": "是核心部分：这些 traits 定义了存在哪种类型的流以及可以对其进行处理。",
         "translate": ""
     },
     {
@@ -141,7 +141,7 @@
     },
     {
         "source": "Creating a stream of your own involves two steps: creating a `struct` to hold the stream's state, and then implementing [`Stream`] for that `struct`.",
-        "suggest": "创建自己的流涉及两个步骤: 创建一个 `struct` 来保存流的状态，然后为该 `struct` 实现 [`Stream`]。",
+        "suggest": "创建自己的流涉及两个步骤：创建一个 `struct` 来保存流的状态，然后为该 `struct` 实现 [`Stream`]。",
         "translate": ""
     },
     {
@@ -236,7 +236,7 @@
     },
     {
         "source": "However, as the `poll_next` method is not marked `unsafe`, Rust's usual rules apply: calls must never cause undefined behavior (memory corruption, incorrect use of `unsafe` functions, or the like), regardless of the stream's state.",
-        "suggest": "但是，由于 `poll_next` 方法未标记为 `unsafe`，因此适用 Rust 的通常规则: 调用决不能引起未定义的行为 (内存损坏，对 `unsafe` 函数的错误使用等)，而与流的状态无关。",
+        "suggest": "但是，由于 `poll_next` 方法未标记为 `unsafe`，因此适用 Rust 的通常规则：调用决不能引起未定义的行为 (内存损坏，对 `unsafe` 函数的错误使用等)，而与流的状态无关。",
         "translate": ""
     },
     {
@@ -561,7 +561,7 @@
     },
     {
         "source": "Notice that using this ordering for an operation that combines loads and stores leads to a [`Relaxed`] load operation!",
-        "suggest": "请注意，对组合加载和存储的操作使用此顺序将导致 [`Relaxed`] 加载操作!",
+        "suggest": "请注意，对组合加载和存储的操作使用此顺序将导致 [`Relaxed`] 加载操作！",
         "translate": ""
     },
     {
@@ -586,7 +586,7 @@
     },
     {
         "source": "Notice that using this ordering for an operation that combines loads and stores leads to a [`Relaxed`] store operation!",
-        "suggest": "请注意，对组合加载和存储的操作使用此顺序将导致 [`Relaxed`] 存储操作!",
+        "suggest": "请注意，对组合加载和存储的操作使用此顺序将导致 [`Relaxed`] 存储操作！",
         "translate": ""
     },
     {
@@ -931,7 +931,7 @@
     },
     {
         "source": "Any use of the returned raw pointer requires an `unsafe` block and still has to uphold the same restriction: operations on it must be atomic.",
-        "suggest": "对返回的裸指针的任何使用都需要一个 `unsafe` 块，并且仍然必须遵守相同的限制: 对其进行的操作必须是原子的。",
+        "suggest": "对返回的裸指针的任何使用都需要一个 `unsafe` 块，并且仍然必须遵守相同的限制：对其进行的操作必须是原子的。",
         "translate": ""
     },
     {
@@ -2266,7 +2266,7 @@
     },
     {
         "source": "Determine the end of the buffer: if precision is set, we just use as many digits from the buffer (capped to 9).",
-        "suggest": "确定缓冲区的末尾: 如果设置了精度，我们将使用缓冲区中的尽可能多的数字 (上限为 9)。",
+        "suggest": "确定缓冲区的末尾：如果设置了精度，我们将使用缓冲区中的尽可能多的数字 (上限为 9)。",
         "translate": ""
     },
     {
@@ -2331,7 +2331,7 @@
     },
     {
         "source": "do not edit directly!",
-        "suggest": "不要直接编辑!",
+        "suggest": "不要直接编辑！",
         "translate": ""
     },
     {
@@ -2346,7 +2346,7 @@
     },
     {
         "source": "do not edit manually!",
-        "suggest": "不要手动编辑!",
+        "suggest": "不要手动编辑！",
         "translate": ""
     },
     {
@@ -2401,7 +2401,7 @@
     },
     {
         "source": "Simple: drop new iterator.",
-        "suggest": "简单的: 丢弃新的迭代器。",
+        "suggest": "简单的：丢弃新的迭代器。",
         "translate": ""
     },
     {
@@ -2616,12 +2616,12 @@
     },
     {
         "source": "Our custom eq allows numbers which are near each other to be equal!",
-        "suggest": "我们的自定义 eq 允许彼此接近的数字相等!",
+        "suggest": "我们的自定义 eq 允许彼此接近的数字相等！",
         "translate": ""
     },
     {
         "source": "Now these binary operators will work when applied!",
-        "suggest": "现在，这些二进制运算符将在应用时起作用!",
+        "suggest": "现在，这些二进制运算符将在应用时起作用！",
         "translate": ""
     },
     {
@@ -2946,7 +2946,7 @@
     },
     {
         "source": "You're probably viewing this file because you're adding a test (or you might just be browsing, in that case, hey there!).",
-        "suggest": "您可能正在查看此文件，因为您要添加测试 (或者可能只是在浏览，在这种情况下，嘿! )。",
+        "suggest": "您可能正在查看此文件，因为您要添加测试 (或者可能只是在浏览，在这种情况下，嘿！)。",
         "translate": ""
     },
     {
@@ -3326,7 +3326,7 @@
     },
     {
         "source": "we have only 2^23 * (2^8 - 1) - 1 = 2,139,095,039 positive finite f32 values, so why not simply testing all of them?",
-        "suggest": "我们只有 2 ^ 23 * (2 ^ 8-1) -1=2,139,095,039 个正有限 f32 值，那么为什么不简单地测试所有这些值呢?",
+        "suggest": "我们只有 2 ^ 23 * (2 ^ 8-1) -1=2,139,095,039 个正有限 f32 值，那么为什么不简单地测试所有这些值呢？",
         "translate": ""
     },
     {
@@ -3516,7 +3516,7 @@
     },
     {
         "source": "unary ops: op T and op &T",
-        "suggest": "一元运算符: 运算符 T 和运算符 &T",
+        "suggest": "一元运算符：运算符 T 和运算符 &T",
         "translate": ""
     },
     {
@@ -3630,8 +3630,10 @@
         "translate": ""
     },
     {
+        // autocorrect: false
         "source": "Á, 각, ก, 😀 all end in 0x81 🁀, ᘀ do not end in 0x81 but contain the byte ꁁ has 0x81 as its second and third bytes.",
-        "suggest": "Á，각，ก，😀全部以 0x81 结尾，🁀不是以 0x81 结尾，但包含字节ꁁ以 0x81 作为第二和第三字节。",
+        "suggest": "Á, 각, ก，😀全部以 0x81 结尾，🁀不是以 0x81 结尾，但包含字节ꁁ以 0x81 作为第二和第三字节。",
+        // autocorrect: true
         "translate": ""
     },
     {
@@ -3791,7 +3793,7 @@
     },
     {
         "source": "can this line be shared with the same in `value_ptr()` without upsetting Stacked Borrows?",
-        "suggest": "这一行是否可以与 `value_ptr ()` 中的同一行共享而不会影响栈上的借用?",
+        "suggest": "这一行是否可以与 `value_ptr ()` 中的同一行共享而不会影响栈上的借用？",
         "translate": ""
     },
     {
@@ -3986,12 +3988,12 @@
     },
     {
         "source": "When compared to the implementation via unwinding, this crate is *much* simpler!",
-        "suggest": "与通过展开的实现相比，此 crate 简单得多!",
+        "suggest": "与通过展开的实现相比，此 crate 简单得多！",
         "translate": ""
     },
     {
         "source": "That being said, it's not quite as versatile, but here goes!",
-        "suggest": "话虽这么说，它不是很通用，但是可以了!",
+        "suggest": "话虽这么说，它不是很通用，但是可以了！",
         "translate": ""
     },
     {
@@ -4056,12 +4058,12 @@
     },
     {
         "source": "why not just define that lang item here?",
-        "suggest": "为什么不在这里定义该 lang 项?",
+        "suggest": "为什么不在这里定义该 lang 项？",
         "translate": ""
     },
     {
         "source": "Good question!",
-        "suggest": "好问题!",
+        "suggest": "好问题！",
         "translate": ""
     },
     {
@@ -4321,7 +4323,7 @@
     },
     {
         "source": "This needs to be an Option because the object's lifetime follows C++ semantics: when catch_unwind moves the Box out of the exception it must still leave the exception object in a valid state because its destructor is still going to be called by __cxa_end_catch.",
-        "suggest": "这必须是一个选项，因为对象的生命周期遵循 C++ 语义: 当 catch_unwind 将 Box 移出异常时，它仍必须保持异常对象处于有效状态，因为它的析构函数仍将由 __cxa_end_catch 调用。",
+        "suggest": "这必须是一个选项，因为对象的生命周期遵循 C++ 语义：当 catch_unwind 将 Box 移出异常时，它仍必须保持异常对象处于有效状态，因为它的析构函数仍将由 __cxa_end_catch 调用。",
         "translate": ""
     },
     {
@@ -4356,7 +4358,7 @@
     },
     {
         "source": "Exception handling happens in two phases: a search phase and a cleanup phase.",
-        "suggest": "异常处理分为两个阶段: 搜索阶段和清理阶段。",
+        "suggest": "异常处理分为两个阶段：搜索阶段和清理阶段。",
         "translate": ""
     },
     {
@@ -4791,7 +4793,7 @@
     },
     {
         "source": "Pretty easy to find!",
-        "suggest": "很容易找到!",
+        "suggest": "很容易找到！",
         "translate": ""
     },
     {
@@ -4841,7 +4843,7 @@
     },
     {
         "source": "Note that we intentionally ignore name mangling rules here: we don't want C++ to be able to catch Rust panics by simply declaring a `struct rust_panic`.",
-        "suggest": "请注意，我们在这里有意忽略名称处理规则: 我们不希望 C++ 能够通过简单地声明 `struct rust_panic` 来捕获 Rust panics。",
+        "suggest": "请注意，我们在这里有意忽略名称处理规则：我们不希望 C++ 能够通过简单地声明 `struct rust_panic` 来捕获 Rust panics。",
         "translate": ""
     },
     {
@@ -4881,7 +4883,7 @@
     },
     {
         "source": "The exception_copy function is a bit special here: it is invoked by the MSVC runtime under a try/catch block and the panic that we generate here will be used as the result of the exception copy.",
-        "suggest": "exception_copy 函数在这里有点特殊: 它由 MSVC 运行时在 try/catch 块下调用，我们在此处生成的 panic 将用作异常副本的结果。",
+        "suggest": "exception_copy 函数在这里有点特殊：它由 MSVC 运行时在 try/catch 块下调用，我们在此处生成的 panic 将用作异常副本的结果。",
         "translate": ""
     },
     {

@@ -301,7 +301,7 @@
     },
     {
         "source": "However be cautious: this method expects `self` to be mutable, which is generally not the case when using a `RefCell`.",
-        "suggest": "但是要小心: 此方法期望 `self` 是可变的，使用 `RefCell` 时通常不是这种情况。",
+        "suggest": "但是要小心：此方法期望 `self` 是可变的，使用 `RefCell` 时通常不是这种情况。",
         "translate": ""
     },
     {
@@ -381,7 +381,7 @@
     },
     {
         "source": "It was isize::MAX (the max amount of reading borrows) and it overflowed into isize::MIN (the max amount of writing borrows) so we can't allow an additional read borrow because isize can't represent so many read borrows (this can only happen if you mem::forget more than a small constant amount of `Ref`s, which is not good practice)",
-        "suggest": "它是 isize::MAX (最大读取借用量)，并且溢出到 isize::MIN (最大写入借用量) 中，因此我们不允许额外的读取借用，因为 isize 不能表示那么多读取借用 (这只能在以下情况下发生: 您的 mem::forget 大于常量的少量常量，这不是很好的做法)",
+        "suggest": "它是 isize::MAX (最大读取借用量)，并且溢出到 isize::MIN (最大写入借用量) 中，因此我们不允许额外的读取借用，因为 isize 不能表示那么多读取借用 (这只能在以下情况下发生：您的 mem::forget 大于常量的少量常量，这不是很好的做法)",
         "translate": ""
     },
     {
@@ -651,7 +651,7 @@
     },
     {
         "source": "opts-out of the immutability guarantee for `&T`: a shared reference `&UnsafeCell<T>` may point to data that is being mutated.",
-        "suggest": "选择不使用 `&T` 的不可替代保证: 共享的 `&UnsafeCell<T>` 可能指向正在可变的的数据。",
+        "suggest": "选择不使用 `&T` 的不可替代保证：共享的 `&UnsafeCell<T>` 可能指向正在可变的的数据。",
         "translate": ""
     },
     {
@@ -801,7 +801,7 @@
     },
     {
         "source": "This exploits libstd's special status, there is no guarantee for user code that this will work in future versions of the compiler!",
-        "suggest": "这利用了 libstd 的特殊状态，无法保证用户代码可以在 future 版本的编译器中正常工作!",
+        "suggest": "这利用了 libstd 的特殊状态，无法保证用户代码可以在 future 版本的编译器中正常工作！",
         "translate": ""
     },
     {
@@ -861,7 +861,7 @@
     },
     {
         "source": "However, the reverse is not true: not all valid [`u32`]s are valid [`char`]s.",
-        "suggest": "但是，事实并非如此: 并非所有有效的 [u32] 都是有效的 [char]。",
+        "suggest": "但是，事实并非如此：并非所有有效的 [u32] 都是有效的 [char]。",
         "translate": ""
     },
     {
@@ -1216,7 +1216,7 @@
     },
     {
         "source": "However, the reverse is not true: not all valid [`u32`]s are valid `char`s.",
-        "suggest": "但是，相反的情况并非如此: 并非所有有效的 [u32] 都是有效的 char。",
+        "suggest": "但是，相反的情况并非如此：并非所有有效的 [u32] 都是有效的 char。",
         "translate": ""
     },
     {
@@ -1571,7 +1571,7 @@
     },
     {
         "source": "The value of `upper_i` here relies on the language of the text: if we're in `en-US`, it should be `\"I\"`, but if we're in `tr_TR`, it should be `\"İ\"`.",
-        "suggest": "`upper_i` 的值在此取决于文本的语言: 如果我们在 `en-US` 中，则应为 `\"I\"`，但如果我们在 `tr_TR` 中，则应为 `\"İ\"`。",
+        "suggest": "`upper_i` 的值在此取决于文本的语言：如果我们在 `en-US` 中，则应为 `\"I\"`，但如果我们在 `tr_TR` 中，则应为 `\"İ\"`。",
         "translate": ""
     },
     {
@@ -1981,7 +1981,7 @@
     },
     {
         "source": "and now we can clone it!",
-        "suggest": "现在我们可以克隆它了!",
+        "suggest": "现在我们可以克隆它了！",
         "translate": ""
     },
     {
@@ -2361,7 +2361,7 @@
     },
     {
         "source": "How can I compare two different types?",
-        "suggest": "如何比较两种不同的类型?",
+        "suggest": "如何比较两种不同的类型？",
         "translate": ""
     },
     {
@@ -2761,7 +2761,7 @@
     },
     {
         "source": "asymmetry: if `a < b` then `!(a > b)`, as well as `a > b` implying `!(a < b)`;",
-        "suggest": "不对称: 如果 `a < b` 则 `!(a > b)`，以及 `a > b` 表示 `!(a < b)`;",
+        "suggest": "不对称：如果 `a < b` 则 `!(a > b)`，以及 `a > b` 表示 `!(a < b)`;",
         "translate": ""
     },
     {
@@ -2771,7 +2771,7 @@
     },
     {
         "source": "Note that these requirements mean that the trait itself must be implemented symmetrically and transitively: if `T: PartialOrd<U>` and `U: PartialOrd<V>` then `U: PartialOrd<T>` and `T: PartialOrd<V>`.",
-        "suggest": "请注意，这些要求意味着 trait 本身必须对称且可传递地实现: 如果 `T: PartialOrd<U>` 和 `U: PartialOrd<V>`，则 `U: PartialOrd<T>` 和 `T: PartialOrd<V>`。",
+        "suggest": "请注意，这些要求意味着 trait 本身必须对称且可传递地实现：如果 `T: PartialOrd<U>` 和 `U: PartialOrd<V>`，则 `U: PartialOrd<T>` 和 `T: PartialOrd<V>`。",
         "translate": ""
     },
     {
@@ -3116,7 +3116,7 @@
     },
     {
         "source": "**Note: This trait must not fail**.",
-        "suggest": "**注意: 此 trait 一定不能失败**。",
+        "suggest": "**注意：此 trait 一定不能失败**。",
         "translate": ""
     },
     {
@@ -3126,7 +3126,7 @@
     },
     {
         "source": "auto-dereferences if the inner type is a reference or a mutable reference (e.g.: `foo.as_ref()` will work the same if `foo` has type `&mut Foo` or `&&mut Foo`)",
-        "suggest": "如果内部类型是引用或变量引用，则自动引用 (例如: 如果 `foo` 具有 `&mut Foo` 或 `&&mut Foo` 类型，则 `foo.as_ref()` 将工作相同)",
+        "suggest": "如果内部类型是引用或变量引用，则自动引用 (例如：如果 `foo` 具有 `&mut Foo` 或 `&&mut Foo` 类型，则 `foo.as_ref()` 将工作相同)",
         "translate": ""
     },
     {
@@ -3136,7 +3136,7 @@
     },
     {
         "source": "For example: By creating a generic function that takes an `AsRef<str>` we express that we want to accept all references that can be converted to [`&str`] as an argument.",
-        "suggest": "例如: 通过创建一个采用 `AsRef<str>` 的泛型函数，我们表示我们希望接受所有可以转换为 [`&str`] 的引用作为参数。",
+        "suggest": "例如：通过创建一个采用 `AsRef<str>` 的泛型函数，我们表示我们希望接受所有可以转换为 [`&str`] 的引用作为参数。",
         "translate": ""
     },
     {
@@ -3166,7 +3166,7 @@
     },
     {
         "source": "auto-dereferences if the inner type is a mutable reference (e.g.: `foo.as_mut()` will work the same if `foo` has type `&mut Foo` or `&mut &mut Foo`)",
-        "suggest": "如果内部类型是可变引用，则自动引用 (例如: 如果 `foo` 具有 `&mut Foo` 或 `&mut &mut Foo` 类型，则 `foo.as_mut()` 将工作相同)",
+        "suggest": "如果内部类型是可变引用，则自动引用 (例如：如果 `foo` 具有 `&mut Foo` 或 `&mut &mut Foo` 类型，则 `foo.as_mut()` 将工作相同)",
         "translate": ""
     },
     {
@@ -3266,7 +3266,7 @@
     },
     {
         "source": "For example: The function `is_hello` takes all arguments that can be converted into a [`Vec`]`<`[`u8`]`>`.",
-        "suggest": "例如: 函数 `is_hello` 接受所有可以转换为 [`Vec`]`<`[`u8`]`>` 的参数。",
+        "suggest": "例如：函数 `is_hello` 接受所有可以转换为 [`Vec`]`<`[`u8`]`>` 的参数。",
         "translate": ""
     },
     {
@@ -3581,7 +3581,7 @@
     },
     {
         "source": "However there is one case where `!` syntax can be used before `!` is stabilized as a full-fledged type: in the position of a function’s return type.",
-        "suggest": "但是，在一种情况下，可以在将 `!` 稳定为完整类型之前使用 `!` 语法: 在函数的返回类型位置。",
+        "suggest": "但是，在一种情况下，可以在将 `!` 稳定为完整类型之前使用 `!` 语法：在函数的返回类型位置。",
         "translate": ""
     },
     {
@@ -3751,7 +3751,7 @@
     },
     {
         "source": "How can we define some default values?",
-        "suggest": "我们如何定义一些默认值?",
+        "suggest": "我们如何定义一些默认值？",
         "translate": ""
     },
     {
@@ -4026,12 +4026,12 @@
     },
     {
         "source": "We even add a field which doesn't exist (because why not?).",
-        "suggest": "我们甚至添加了一个不存在的字段 (因为为什么不呢? )。",
+        "suggest": "我们甚至添加了一个不存在的字段 (因为为什么不呢？)。",
         "translate": ""
     },
     {
         "source": "We're good to go!",
-        "suggest": "我们很高兴去!",
+        "suggest": "我们很高兴去！",
         "translate": ""
     },
     {
@@ -4371,7 +4371,7 @@
     },
     {
         "source": "Have one!",
-        "suggest": "有一个!",
+        "suggest": "有一个！",
         "translate": ""
     },
     {

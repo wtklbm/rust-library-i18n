@@ -176,7 +176,7 @@
     },
     {
         "source": "The underlying OsString/OsStr implementation on Unix and many other systems: just a `Vec<u8>`/`[u8]`.",
-        "suggest": "Unix 和许多其他系统上的基础 OsString/OsStr 实现: 只是 `Vec<u8>`/`[u8]`。",
+        "suggest": "Unix 和许多其他系统上的基础 OsString/OsStr 实现：只是 `Vec<u8>`/`[u8]`。",
         "translate": ""
     },
     {
@@ -606,7 +606,7 @@
     },
     {
         "source": "The fallback implementation uses a vanilla OS-based TLS key to track the list of destructors that need to be run for this thread.",
-        "suggest": "回退实现使用一个普通的基于操作系统的TLS密钥来跟踪这个线程需要运行的析构函数列表。",
+        "suggest": "回退实现使用一个普通的基于操作系统的 TLS 密钥来跟踪这个线程需要运行的析构函数列表。",
         "translate": ""
     },
     {
@@ -866,7 +866,7 @@
     },
     {
         "source": "This is not just a store, because we need to establish a release-acquire ordering with unpark().",
-        "suggest": "这不仅仅是一个存储，因为我们需要用 `unpark()` 建立一个 `释放-获取` 的顺序。",
+        "suggest": "这不仅仅是一个存储，因为我们需要用 `unpark()` 建立一个 `释放 - 获取` 的顺序。",
         "translate": ""
     },
     {
@@ -951,7 +951,7 @@
     },
     {
         "source": "got a notification, hurray!",
-        "suggest": "收到通知，欢呼!",
+        "suggest": "收到通知，欢呼！",
         "translate": ""
     },
     {
@@ -1066,7 +1066,7 @@
     },
     {
         "source": "A Unicode code point: from U+0000 to U+10FFFF.",
-        "suggest": "Unicode 代码点: 从 U+0000 到 U+10FFFF。",
+        "suggest": "Unicode 代码点：从 U+0000 到 U+10FFFF。",
         "translate": ""
     },
     {
@@ -1201,7 +1201,7 @@
     },
     {
         "source": "This is lossless: calling `.encode_wide()` on the resulting string will always return the original code units.",
-        "suggest": "这是无损的: 在结果字符串上调用 `.encode_wide()` 将始终返回原始代码单元。",
+        "suggest": "这是无损的：在结果字符串上调用 `.encode_wide()` 将始终返回原始代码单元。",
         "translate": ""
     },
     {
@@ -1356,7 +1356,7 @@
     },
     {
         "source": "Example: `\"a\\u{D800}\"` for a slice with code points [U+0061, U+D800]",
-        "suggest": "示例: 代码点为 [U+0061, U+D800] 的切片的 `\"a\\u{D800}\"`",
+        "suggest": "示例：代码点为 [U+0061, U+D800] 的切片的 `\"a\\u{D800}\"`",
         "translate": ""
     },
     {
@@ -1706,7 +1706,7 @@
     },
     {
         "source": "The lifetime here is actually slightly shorter than the currently running thread!",
-        "suggest": "此处的生命周期实际上比当前正在运行的线程短一些!",
+        "suggest": "此处的生命周期实际上比当前正在运行的线程短一些！",
         "translate": ""
     },
     {
@@ -1801,7 +1801,7 @@
     },
     {
         "source": "The caller must ensure that no reference is active: this method needs unique access.",
-        "suggest": "调用者必须确保没有激活引用: 此方法需要唯一的访问权限。",
+        "suggest": "调用者必须确保没有激活引用：此方法需要唯一的访问权限。",
         "translate": ""
     },
     {
@@ -1861,7 +1861,7 @@
     },
     {
         "source": "On some platforms like wasm32 there's no threads, so no need to generate thread locals and we can instead just use plain statics!",
-        "suggest": "在诸如 wasm32 的某些平台上，没有线程，因此无需生成线程本地变量，而我们可以只使用纯静态变量!",
+        "suggest": "在诸如 wasm32 的某些平台上，没有线程，因此无需生成线程本地变量，而我们可以只使用纯静态变量！",
         "translate": ""
     },
     {
@@ -2066,7 +2066,7 @@
     },
     {
         "source": "caller has to ensure `join()` is called, otherwise it is possible to access freed memory if `x` gets dropped before the thread closure is executed!",
-        "suggest": "调用者必须确保已调用 `join()`，否则，如果在执行线程闭包之前 `x` 被丢弃，则可以访问释放的内存!",
+        "suggest": "调用者必须确保已调用 `join()`，否则，如果在执行线程闭包之前 `x` 被丢弃，则可以访问释放的内存！",
         "translate": ""
     },
     {
@@ -2091,7 +2091,7 @@
     },
     {
         "source": "We *could* get here spuriously, i.e., way before the 10ms below are over!",
-        "suggest": "我们可以伪装地到达这里，即在下面的 10ms 结束之前!",
+        "suggest": "我们可以伪装地到达这里，即在下面的 10ms 结束之前！",
         "translate": ""
     },
     {
@@ -2386,7 +2386,7 @@
     },
     {
         "source": "The types used by the thread_local!",
-        "suggest": "thread_local 使用的类型!",
+        "suggest": "thread_local 使用的类型！",
         "translate": ""
     },
     {
@@ -2406,7 +2406,7 @@
     },
     {
         "source": "Note that the OS TLS type is always available: on macOS the standard library is compiled with support for older platform versions where fast TLS was not available;",
-        "suggest": "请注意，OS TLS 类型始终可用: 在 macOS 上，标准库的编译是对较早的平台版本 (不提供快速 TLS 的支持) 的支持;",
+        "suggest": "请注意，OS TLS 类型始终可用：在 macOS 上，标准库的编译是对较早的平台版本 (不提供快速 TLS 的支持) 的支持;",
         "translate": ""
     },
     {
@@ -3166,7 +3166,7 @@
     },
     {
         "source": "Due to platform restrictions, it is not possible to [`Clone`] this handle: the ability to join a thread is a uniquely-owned permission.",
-        "suggest": "由于平台的限制，无法使用 [`Clone`] 此句柄: 加入线程的能力是唯一拥有的权限。",
+        "suggest": "由于平台的限制，无法使用 [`Clone`] 此句柄：加入线程的能力是唯一拥有的权限。",
         "translate": ""
     },
     {
@@ -3306,7 +3306,7 @@
     },
     {
         "source": "Should give us ~70 years to fix this!",
-        "suggest": "应该给我们 ~70 年来解决这个问题!",
+        "suggest": "应该给我们 ~70 年来解决这个问题！",
         "translate": ""
     },
     {
@@ -3321,7 +3321,7 @@
     },
     {
         "source": "an error occurred!",
-        "suggest": "发生错误!",
+        "suggest": "发生错误！",
         "translate": ""
     },
     {
@@ -3996,7 +3996,7 @@
     },
     {
         "source": "check this!",
-        "suggest": "检查一下!",
+        "suggest": "检查一下！",
         "translate": ""
     },
     {
@@ -4871,7 +4871,7 @@
     },
     {
         "source": "Section 10.1 of ACLE says that the supported arches are: 8, 6K, 6-M LLVM says \"instruction requires: armv6k\"",
-        "suggest": "ACLE 的 10.1 部分说受支持的 arches是: 8、6K，6-M LLVM 说 \"instruction requires: armv6k\"",
+        "suggest": "ACLE 的 10.1 部分说受支持的 arches 是: 8、6K，6-M LLVM 说 \"instruction requires: armv6k\"",
         "translate": ""
     },
     {
@@ -4901,7 +4901,7 @@
     },
     {
         "source": "Section 10.1 of ACLE says that the supported arches are: 8, 6K, 6-M, 7-M LLVM says \"instruction requires: armv6k\"",
-        "suggest": "ACLE 的 10.1 部分说受支持的 arches是: 8，6K，6-M，7-M LLVM 说 \"instruction requires: armv6k\"",
+        "suggest": "ACLE 的 10.1 部分说受支持的 arches 是: 8，6K，6-M，7-M LLVM 说 \"instruction requires: armv6k\"",
         "translate": ""
     },
     {
@@ -4966,7 +4966,7 @@
     },
     {
         "source": "Section 10.1 of ACLE says that the supported arches are: 7, 7-M \"The DBG hint instruction is added in ARMv7.",
-        "suggest": "ACLE 的 10.1 部分说，支持的 arches是: 7、7-M` 在 ARMv7 中添加了 DBG 提示指令。",
+        "suggest": "ACLE 的 10.1 部分说，支持的 arches 是: 7、7-M` 在 ARMv7 中添加了 DBG 提示指令。",
         "translate": ""
     },
     {

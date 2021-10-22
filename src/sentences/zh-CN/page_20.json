@@ -1,7 +1,7 @@
 [
     {
         "source": "Do not remove inline: will result in relocation failure",
-        "suggest": "不要删除内联: 将导致重定位失败",
+        "suggest": "不要删除内联：将导致重定位失败",
         "translate": ""
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "source": "Do not remove inline: will result in relocation failure For the same reason we use inline ASM here instead of an extern static to locate the base",
-        "suggest": "不要删除内联: 将导致重定位失败出于同样的原因，我们在这里使用内联 ASM 而不是外部静态变量来定位基址。",
+        "suggest": "不要删除内联：将导致重定位失败出于同样的原因，我们在这里使用内联 ASM 而不是外部静态变量来定位基址。",
         "translate": ""
     },
     {
@@ -71,7 +71,7 @@
     },
     {
         "source": "Be very careful when changing this code: it runs before the binary has been relocated.",
-        "suggest": "更改此代码时要非常小心: 它在二进制文件重定位之前运行。",
+        "suggest": "更改此代码时要非常小心：它在二进制文件重定位之前运行。",
         "translate": ""
     },
     {
@@ -301,7 +301,7 @@
     },
     {
         "source": "N.B., this takes a size, not a length!",
-        "suggest": "N.B.，这需要一个大小，而不是一个长度!",
+        "suggest": "N.B.，这需要一个大小，而不是一个长度！",
         "translate": ""
     },
     {
@@ -416,7 +416,7 @@
     },
     {
         "source": "The two different reference types are used solely to indicate intent: a mutable reference is for writing to user memory, an immutable reference for reading from user memory.",
-        "suggest": "两种不同的引用类型仅用于表示意图: 可变引用用于写入用户存储器，不可变引用用于从用户存储器读取。",
+        "suggest": "两种不同的引用类型仅用于表示意图：可变引用用于写入用户存储器，不可变引用用于从用户存储器读取。",
         "translate": ""
     },
     {
@@ -636,7 +636,7 @@
     },
     {
         "source": "should be implied by [T]: UserSafe?",
-        "suggest": "[T]: UserSafe 应该暗示什么?",
+        "suggest": "[T]: UserSafe 应该暗示什么？",
         "translate": ""
     },
     {
@@ -741,7 +741,7 @@
     },
     {
         "source": "without forcing coercion?",
-        "suggest": "没有强迫?",
+        "suggest": "没有强迫？",
         "translate": ""
     },
     {
@@ -901,7 +901,7 @@
     },
     {
         "source": "In this macro: using `$r:tt` because `$r:ty` doesn't match ! in `return_type_is_abort`",
-        "suggest": "在此宏中: 使用 `$r:tt`，因为 `$r:ty` 不匹配! 在 `return_type_is_abort` 中",
+        "suggest": "在此宏中：使用 `$r:tt`，因为 `$r:ty` 不匹配！在 `return_type_is_abort` 中",
         "translate": ""
     },
     {
@@ -1166,7 +1166,7 @@
     },
     {
         "source": "Implementation according to “Operating Systems: Three Easy Pieces”, chapter 28",
-        "suggest": "根据 `操作系统: 三大要素` 的实现，第 28 章",
+        "suggest": "根据 `操作系统：三大要素` 的实现，第 28 章",
         "translate": ""
     },
     {
@@ -1336,12 +1336,12 @@
     },
     {
         "source": "why is this necessary?",
-        "suggest": "为什么这是必要的?",
+        "suggest": "为什么这是必要的？",
         "translate": ""
     },
     {
         "source": "unsafe: see thread::Builder::spawn_unchecked for safety requirements",
-        "suggest": "不安全: 有关安全要求，请参见 thread::Builder::spawn_unchecked",
+        "suggest": "不安全：有关安全要求，请参见 thread::Builder::spawn_unchecked",
         "translate": ""
     },
     {
@@ -1411,7 +1411,7 @@
     },
     {
         "source": "unwrap ok: always `Some` on non-dummy entries",
-        "suggest": "好的解包: 在非虚拟条目上总是 `Some`",
+        "suggest": "好的解包：在非虚拟条目上总是 `Some`",
         "translate": ""
     },
     {
@@ -1486,7 +1486,7 @@
     },
     {
         "source": "Perhaps use Intel TSX to avoid locking?",
-        "suggest": "也许使用 Intel TSX 避免锁定?",
+        "suggest": "也许使用 Intel TSX 避免锁定？",
         "translate": ""
     },
     {
@@ -1576,7 +1576,7 @@
     },
     {
         "source": "very unsafe: check requirements of UnsafeList::push",
-        "suggest": "非常不安全: 检查 UnsafeList::push 的要求",
+        "suggest": "非常不安全：检查 UnsafeList::push 的要求",
         "translate": ""
     },
     {
@@ -1656,7 +1656,7 @@
     },
     {
         "source": "Instead we use `memalign`, but this unfortunately has the property on some systems where the memory returned cannot be deallocated by `free`!",
-        "suggest": "相反，我们使用 `memalign`，但是不幸的是，这在某些系统上具有 `free` 无法释放返回的内存的属性!",
+        "suggest": "相反，我们使用 `memalign`，但是不幸的是，这在某些系统上具有 `free` 无法释放返回的内存的属性！",
         "translate": ""
     },
     {
@@ -1701,7 +1701,7 @@
     },
     {
         "source": "We then in theory want to work on that and all future versions of Android!",
-        "suggest": "从理论上讲，我们接下来要研究所有 Android 的 future 版本!",
+        "suggest": "从理论上讲，我们接下来要研究所有 Android 的 future 版本！",
         "translate": ""
     },
     {
@@ -2291,7 +2291,7 @@
     },
     {
         "source": "Make libc adapt #[doc(cfg(...))] so we don't need these fake definitions here?",
-        "suggest": "使 libc 适应 #[doc (cfg (...) ) ]，所以我们在这里不需要这些假的定义吗?",
+        "suggest": "使 libc 适应 #[doc (cfg (...) ) ]，所以我们在这里不需要这些假的定义吗？",
         "translate": ""
     },
     {
@@ -2836,7 +2836,7 @@
     },
     {
         "source": "must be moved in or the test will hang!",
-        "suggest": "必须移入，否则测试将挂起!",
+        "suggest": "必须移入，否则测试将挂起！",
         "translate": ""
     },
     {
@@ -2861,7 +2861,7 @@
     },
     {
         "source": "This trait is sealed: it cannot be implemented outside the standard library.",
-        "suggest": "trait 是密封的: 不能在标准库之外实现。",
+        "suggest": "trait 是密封的：不能在标准库之外实现。",
         "translate": ""
     },
     {
@@ -3271,7 +3271,7 @@
     },
     {
         "source": "The maximum read limit on most POSIX-like systems is `SSIZE_MAX`, with the man page quoting that if the count of bytes to read is greater than `SSIZE_MAX` the result is \"unspecified\".",
-        "suggest": "在大多数类似 POSIX 的系统上，最大读取限制为 `SSIZE_MAX`，手册页中引用了以下内容: 如果要读取的字节数大于 `SSIZE_MAX`，则结果为 \"unspecified\"。",
+        "suggest": "在大多数类似 POSIX 的系统上，最大读取限制为 `SSIZE_MAX`，手册页中引用了以下内容：如果要读取的字节数大于 `SSIZE_MAX`，则结果为 \"unspecified\"。",
         "translate": ""
     },
     {
@@ -4031,7 +4031,7 @@
     },
     {
         "source": "This runtime doesn't install a SIGPIPE handler, causing it to kill the program, which isn't exactly what we want!",
-        "suggest": "此运行时未安装 SIGPIPE 处理程序，导致它终止了程序，这不正是我们想要的!",
+        "suggest": "此运行时未安装 SIGPIPE 处理程序，导致它终止了程序，这不正是我们想要的！",
         "translate": ""
     },
     {
@@ -4106,7 +4106,7 @@
     },
     {
         "source": "Be very careful using this newly constructed `Mutex`, reentrant locking is undefined behavior until `init` is called!",
-        "suggest": "使用此新构造的 `Mutex` 时要格外小心，在调用 `init` 之前，可重入锁定是未定义的行为!",
+        "suggest": "使用此新构造的 `Mutex` 时要格外小心，在调用 `init` 之前，可重入锁定是未定义的行为！",
         "translate": ""
     },
     {
@@ -4276,7 +4276,7 @@
     },
     {
         "source": "needed for readdir and syscall!",
-        "suggest": "readdir 和 syscall 所需!",
+        "suggest": "readdir 和 syscall 所需！",
         "translate": ""
     },
     {
@@ -4351,7 +4351,7 @@
     },
     {
         "source": "Set both pipes into nonblocking mode as we're gonna be reading from both in the `select` loop below, and we wouldn't want one to block the other!",
-        "suggest": "将两个管道都设置为非阻塞模式，因为我们将在下面的 `select` 循环中读取这两个管道，并且我们不希望其中一个阻塞另一个!",
+        "suggest": "将两个管道都设置为非阻塞模式，因为我们将在下面的 `select` 循环中读取这两个管道，并且我们不希望其中一个阻塞另一个！",
         "translate": ""
     },
     {
@@ -4401,7 +4401,7 @@
     },
     {
         "source": "The easiest way is to write something to cat, and try to read it back: if SIGINT is unmasked, it'll get delivered when cat is next scheduled.",
-        "suggest": "最简单的方法是写一些东西给 cat，然后试着读回去: 如果 SIGINT 被取消屏蔽，它将在下次安排 cat 时交付。",
+        "suggest": "最简单的方法是写一些东西给 cat，然后试着读回去：如果 SIGINT 被取消屏蔽，它将在下次安排 cat 时交付。",
         "translate": ""
     },
     {
@@ -4761,7 +4761,7 @@
     },
     {
         "source": "This situation looks a lot like deadlock, right?",
-        "suggest": "这种情况看起来很像僵局，对吗?",
+        "suggest": "这种情况看起来很像僵局，对吗？",
         "translate": ""
     },
     {
@@ -4971,7 +4971,7 @@
     },
     {
         "source": "Example: Attempting a message_read on a thread handle.",
-        "suggest": "示例: 尝试在线程句柄上进行 message_read。",
+        "suggest": "示例：尝试在线程句柄上进行 message_read。",
         "translate": ""
     },
     {

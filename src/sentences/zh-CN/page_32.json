@@ -31,7 +31,7 @@
     },
     {
         "source": "fatal error: error in backend: Cannot select: 0x2b99c30: i64 = AArch64ISD::VSHL Constant:i64<1>, Constant:i32<1>",
-        "suggest": "致命错误: 后端错误: 无法选择: 0x2b99c30: i64 = AArch64ISD::VSHL Constant:i64<1>, Constant:i32<1>",
+        "suggest": "致命错误：后端错误：无法选择: 0x2b99c30: i64 = AArch64ISD::VSHL Constant:i64<1>, Constant:i32<1>",
         "translate": ""
     },
     {
@@ -261,7 +261,7 @@
     },
     {
         "source": "Look for subroutine call instructions in the disassembly to detect whether inlining failed: all intrinsics are `#[inline(always)]`, so calling one intrinsic from another should not generate subroutine call instructions.",
-        "suggest": "在反汇编中查找子程序调用指令来检测是否内联失败: 所有内部函数都是 `#[inline(always)]`，所以从另一个调用一个内部函数不应生成子程序调用指令。",
+        "suggest": "在反汇编中查找子程序调用指令来检测是否内联失败：所有内部函数都是 `#[inline(always)]`，所以从另一个调用一个内部函数不应生成子程序调用指令。",
         "translate": ""
     },
     {
@@ -346,7 +346,7 @@
     },
     {
         "source": "The reducing function is a closure with two arguments: an 'accumulator', and an element.",
-        "suggest": "Reduce 函数是一个闭包，有两个参数: 一个 'accumulator' 和一个元素。",
+        "suggest": "Reduce 函数是一个闭包，有两个参数：一个 'accumulator' 和一个元素。",
         "translate": ""
     },
     {
@@ -816,7 +816,7 @@
     },
     {
         "source": "[`push`] and [`insert`] *will* (re)allocate if <code>[len] == [capacity]</code>. That is, the reported capacity is completely accurate, and can be relied on.",
-        "suggest": "[`push`] 和 [`insert`] 将在 <code>[len] == [capacity]</code> 时(重新)分配。也就是说，报告的容量是完全准确的，并且是可以依赖的。",
+        "suggest": "[`push`] 和 [`insert`] 将在 <code>[len] == [capacity]</code> 时 (重新) 分配。也就是说，报告的容量是完全准确的，并且是可以依赖的。",
         "translate": ""
     },
     {
@@ -1036,12 +1036,12 @@
     },
     {
         "source": "The prefix: is either \"+\" or \"\", so we can just use len().",
-        "suggest": "前缀: 是 \"+\" 或 \"\"，所以我们可以只使用 len()。",
+        "suggest": "前缀：是 \"+\" 或 \"\"，所以我们可以只使用 len()。",
         "translate": ""
     },
     {
         "source": "The postfix: can be \"µs\" so we have to count UTF8 characters.",
-        "suggest": "后缀: 可以是 \"µs\" 所以我们必须计算 UTF8 字符。",
+        "suggest": "后缀：可以是 \"µs\" 所以我们必须计算 UTF8 字符。",
         "translate": ""
     },
     {
@@ -1101,7 +1101,7 @@
     },
     {
         "source": "is to <code>&[CStr]</code> as [`String`] is to <code>&[str]</code>: the former in each pair are owned strings;",
-        "suggest": "对 <code>&[CStr]</code> 就像 [`String`] 对 <code>&[str]</code> 一样: 每对中的前者是拥有所有权的字符串;",
+        "suggest": "对 <code>&[CStr]</code> 就像 [`String`] 对 <code>&[str]</code> 一样：每对中的前者是拥有所有权的字符串;",
         "translate": ""
     },
     {
@@ -1136,7 +1136,7 @@
     },
     {
         "source": "is to [`CString`] as <code>&[str]</code> is to [`String`]: the former in each pair are borrowed references;",
-        "suggest": "对 [`CString`] 就像 <code>&[str]</code> 对 [`String`] 一样: 每对中的前者都是借用的引用;",
+        "suggest": "对 [`CString`] 就像 <code>&[str]</code> 对 [`String`] 一样：每对中的前者都是借用的引用;",
         "translate": ""
     },
     {
@@ -1256,7 +1256,7 @@
     },
     {
         "source": "is to <code>&[OsStr]</code> as [`String`] is to <code>&[str]</code>: the former in each pair are owned strings;",
-        "suggest": "对 <code>&[OsStr]</code> 就像 [`String`] 对 <code>&[str]</code> 一样: 每对中的前者是拥有所有权的字符串;",
+        "suggest": "对 <code>&[OsStr]</code> 就像 [`String`] 对 <code>&[str]</code> 一样：每对中的前者是拥有所有权的字符串;",
         "translate": ""
     },
     {
@@ -1276,7 +1276,7 @@
     },
     {
         "source": "is to [`OsString`] as <code>&[str]</code> is to [`String`]: the former in each pair are borrowed references;",
-        "suggest": "对 [`OsString`] 就像 <code>&[str]</code> 对 [`String`] 一样: 每对中的前者都是借用的引用;",
+        "suggest": "对 [`OsString`] 就像 <code>&[str]</code> 对 [`String`] 一样：每对中的前者都是借用的引用;",
         "translate": ""
     },
     {
@@ -1831,7 +1831,7 @@
     },
     {
         "source": "Are we really dequeued?",
-        "suggest": "我们真的出队了吗?",
+        "suggest": "我们真的出队了吗？",
         "translate": ""
     },
     {
@@ -2126,7 +2126,7 @@
     },
     {
         "source": "Assumption: A positive `abi::ID` fits in `usize`.",
-        "suggest": "假设: 正的 `abi::ID` 适合 `usize`。",
+        "suggest": "假设：正的 `abi::ID` 适合 `usize`。",
         "translate": ""
     },
     {
@@ -2141,7 +2141,7 @@
     },
     {
         "source": "Safety: The inner value has been initialized",
-        "suggest": "安全: 内部值已经初始化",
+        "suggest": "安全：内部值已经初始化",
         "translate": ""
     },
     {
@@ -2216,7 +2216,7 @@
     },
     {
         "source": "Safety: The only `!Sync` field, `ThreadInner::start`, is only touched by the task represented by `ThreadInner`.",
-        "suggest": "安全性: 唯一的 `!Sync` 字段，`ThreadInner::start`，仅被 `ThreadInner` 所代表的任务触及。",
+        "suggest": "安全性：唯一的 `!Sync` 字段，`ThreadInner::start`，仅被 `ThreadInner` 所代表的任务触及。",
         "translate": ""
     },
     {
@@ -2236,17 +2236,17 @@
     },
     {
         "source": "Safety: `ThreadInner` is alive at this point",
-        "suggest": "安全性: 此时 `ThreadInner` 此时处于活动状态",
+        "suggest": "安全性：此时 `ThreadInner` 此时处于活动状态",
         "translate": ""
     },
     {
         "source": "Safety: Since `trampoline` is called only once for each `ThreadInner` and only `trampoline` touches `start`, `start` contains contents and is safe to mutably borrow.",
-        "suggest": "安全性: 由于每个 `ThreadInner` 只调用一次 `trampoline`，并且只有 `trampoline` 接触 `start`，因此 `start` 包含内容，可以安全地可变借用。",
+        "suggest": "安全性：由于每个 `ThreadInner` 只调用一次 `trampoline`，并且只有 `trampoline` 接触 `start`，因此 `start` 包含内容，可以安全地可变借用。",
         "translate": ""
     },
     {
         "source": "Fix the current thread's state just in case, so that the destructors won't abort Safety: Not really unsafe",
-        "suggest": "修复当前线程的状态以防万一，以便析构函数不会终止安全: 并不是真的不安全",
+        "suggest": "修复当前线程的状态以防万一，以便析构函数不会终止安全：并不是真的不安全",
         "translate": ""
     },
     {
@@ -2271,12 +2271,12 @@
     },
     {
         "source": "Safety: See above.",
-        "suggest": "安全: 见上文。",
+        "suggest": "安全：见上文。",
         "translate": ""
     },
     {
         "source": "Safety: There are no pinned references to the stack",
-        "suggest": "安全性: 没有对栈的固定引用",
+        "suggest": "安全性：没有对栈的固定引用",
         "translate": ""
     },
     {
@@ -2451,7 +2451,7 @@
     },
     {
         "source": "Terminate the task Safety: Upheld by the caller",
-        "suggest": "终止任务安全: 由调用方支持",
+        "suggest": "终止任务安全：由调用方支持",
         "translate": ""
     },
     {
@@ -2461,7 +2461,7 @@
     },
     {
         "source": "Delete the task Safety: Upheld by the caller",
-        "suggest": "删除任务安全: 调用方支持",
+        "suggest": "删除任务安全：调用方支持",
         "translate": ""
     },
     {
@@ -2486,7 +2486,7 @@
     },
     {
         "source": "Safety: The provided pointer is valid",
-        "suggest": "安全: 提供的指针有效",
+        "suggest": "安全：提供的指针有效",
         "translate": ""
     },
     {
@@ -2566,7 +2566,7 @@
     },
     {
         "source": "Safety: we just asserted that the value is in the valid range and isn't `-1` (the only value bigger than `0xFF_FF_FF_FE` unsigned)",
-        "suggest": "安全性: 我们只是断言该值在有效范围内并且不是 `-1` (唯一大于 `0xFF_FF_FF_FE` 的无符号值)",
+        "suggest": "安全性：我们只是断言该值在有效范围内并且不是 `-1` (唯一大于 `0xFF_FF_FF_FE` 的无符号值)",
         "translate": ""
     },
     {
@@ -2716,12 +2716,12 @@
     },
     {
         "source": "Stage 1: Nothing was deleted.",
-        "suggest": "第 1 阶段: 没有删除任何内容。",
+        "suggest": "第 1 阶段：没有删除任何内容。",
         "translate": ""
     },
     {
         "source": "Stage 2: Some elements were deleted.",
-        "suggest": "第 2 阶段: 删除了一些元素。",
+        "suggest": "第 2 阶段：删除了一些元素。",
         "translate": ""
     },
     {

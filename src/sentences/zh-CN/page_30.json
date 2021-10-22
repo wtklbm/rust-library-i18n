@@ -496,7 +496,7 @@
     },
     {
         "source": "Helper struct used to trigger const eval errors when the const generic immediate value `SCALE` is not valid for gather instructions: the only valid scale values are 1, 2, 4 and 8.",
-        "suggest": "辅助结构体用于在 const 泛型 immediate 值 `SCALE` 对收集指令无效时触发 const eval 错误: 唯一有效的比例值为 1、2、4 和 8。",
+        "suggest": "辅助结构体用于在 const 泛型 immediate 值 `SCALE` 对收集指令无效时触发 const eval 错误：唯一有效的比例值为 1、2、4 和 8。",
         "translate": ""
     },
     {
@@ -1411,7 +1411,7 @@
     },
     {
         "source": "Safety: We know that `push_front` does not change the position in memory of other nodes.",
-        "suggest": "安全性: 我们知道 `push_front` 不会改变其他节点在内存中的位置。",
+        "suggest": "安全性：我们知道 `push_front` 不会改变其他节点在内存中的位置。",
         "translate": ""
     },
     {
@@ -1426,7 +1426,7 @@
     },
     {
         "source": "Safety: We know that `push_back` does not change the position in memory of other nodes.",
-        "suggest": "安全性: 我们知道 `push_back` 不会改变其他节点在内存中的位置。",
+        "suggest": "安全性：我们知道 `push_back` 不会改变其他节点在内存中的位置。",
         "translate": ""
     },
     {
@@ -1546,17 +1546,17 @@
     },
     {
         "source": "Stage 1: All values are retained.",
-        "suggest": "第 1 阶段: 保留所有值。",
+        "suggest": "第 1 阶段：保留所有值。",
         "translate": ""
     },
     {
         "source": "Stage 2: Swap retained value into current idx.",
-        "suggest": "第 2 阶段: 将保留值交换为当前 idx。",
+        "suggest": "第 2 阶段：将保留值交换为当前 idx。",
         "translate": ""
     },
     {
         "source": "Stage 3: Trancate all values after idx.",
-        "suggest": "第 3 阶段: 在 idx 之后转换所有值。",
+        "suggest": "第 3 阶段：在 idx 之后转换所有值。",
         "translate": ""
     },
     {
@@ -1701,7 +1701,7 @@
     },
     {
         "source": "check if SourceIter contract was upheld caveat: if they weren't we might not even make it to this point",
-        "suggest": "检查 SourceIter 合同是否得到维护警告: 如果不是，我们甚至可能无法做到这一点",
+        "suggest": "检查 SourceIter 合同是否得到维护警告：如果不是，我们甚至可能无法做到这一点",
         "translate": ""
     },
     {
@@ -1751,7 +1751,7 @@
     },
     {
         "source": "On the other hand, it won't give a false negative: If it fails, then the memory was definitely not reused.",
-        "suggest": "另一方面，它不会给出错误否定: 如果失败，那么内存肯定没有被重用。",
+        "suggest": "另一方面，它不会给出错误否定：如果失败，那么内存肯定没有被重用。",
         "translate": ""
     },
     {
@@ -2176,7 +2176,7 @@
     },
     {
         "source": "However be cautious: this method expects `self` to be mutable, which is generally not the case when using a `Cell`.",
-        "suggest": "但是要小心: 此方法要求 `self` 为附属 0，而使用 `Cell` 时通常不是这种情况。",
+        "suggest": "但是要小心：此方法要求 `self` 为附属 0，而使用 `Cell` 时通常不是这种情况。",
         "translate": ""
     },
     {
@@ -2356,7 +2356,7 @@
     },
     {
         "source": "transitivity of `>`: if `a > b` and `b > c` then `a > c`",
-        "suggest": "`>` 的传递性: 如果 `a > b` 和 `b > c` 则 `a > c`",
+        "suggest": "`>` 的传递性：如果 `a > b` 和 `b > c` 则 `a > c`",
         "translate": ""
     },
     {
@@ -2491,7 +2491,7 @@
     },
     {
         "source": "Note that this is a stricter criterion than just the *values* being fully-initialized: if `T` has padding, it's UB to call this intrinsic.",
-        "suggest": "请注意，这是一个比完全初始化 *values* 更严格的标准: 如果 `T` 有填充，它是 UB 到调用这个内部函数。",
+        "suggest": "请注意，这是一个比完全初始化 *values* 更严格的标准：如果 `T` 有填充，它是 UB 到调用这个内部函数。",
         "translate": ""
     },
     {
@@ -2556,7 +2556,7 @@
     },
     {
         "source": "However, we must still be prepared for the possibility that it was already cleared!",
-        "suggest": "不过，我们还是要做好准备，它已经被清除了!",
+        "suggest": "不过，我们还是要做好准备，它已经被清除了！",
         "translate": ""
     },
     {
@@ -2686,7 +2686,7 @@
     },
     {
         "source": "Like [`TrustedRandomAccess`] but without any of the requirements / guarantees around coercions to subtypes after `__iterator_get_unchecked` (they aren’t allowed here!), and without the requirement that subtypes / supertypes implement `TrustedRandomAccessNoCoerce`.",
-        "suggest": "与 [`TrustedRandomAccess`] 类似，但没有任何要求 / 保证对 `__iterator_get_unchecked` 之后的子类型进行强制 (这里不允许! )，并且没有子类型 / 超类型实现 `TrustedRandomAccessNoCoerce` 的要求。",
+        "suggest": "与 [`TrustedRandomAccess`] 类似，但没有任何要求 / 保证对 `__iterator_get_unchecked` 之后的子类型进行强制 (这里不允许！)，并且没有子类型 / 超类型实现 `TrustedRandomAccessNoCoerce` 的要求。",
         "translate": ""
     },
     {
@@ -3576,7 +3576,7 @@
     },
     {
         "source": "Or, we may fall between two floats: we are exactly halfway.",
-        "suggest": "或者，我们可能介于两个浮动之间: 我们正好在一半。",
+        "suggest": "或者，我们可能介于两个浮动之间：我们正好在一半。",
         "translate": ""
     },
     {
@@ -3741,7 +3741,7 @@
     },
     {
         "source": "There is an exception: disguised fast-path cases, where we can shift powers-of-10 from the exponent to the significant digits.",
-        "suggest": "有一个例外: 伪装的快速路径情况，我们可以将 10 的幂从指数转移到有效数字。",
+        "suggest": "有一个例外：伪装的快速路径情况，我们可以将 10 的幂从指数转移到有效数字。",
         "translate": ""
     },
     {
@@ -4301,7 +4301,7 @@
     },
     {
         "source": "FIXME: add once Neg is implemented?",
-        "suggest": "FIXME: 添加一次 Neg 实现?",
+        "suggest": "FIXME: 添加一次 Neg 实现？",
         "translate": ""
     },
     {
@@ -4386,7 +4386,7 @@
     },
     {
         "source": "FIXME what is the correct implementation here?",
-        "suggest": "FIXME 这里的正确实现是什么?",
+        "suggest": "FIXME 这里的正确实现是什么？",
         "translate": ""
     },
     {
@@ -4681,7 +4681,7 @@
     },
     {
         "source": "There are two categories of these methods: ones that take an [`Option`] as input, and ones that take a function as input (to be lazily evaluated).",
-        "suggest": "这些方法有两类: 一类以 [`Option`] 作为输入，一类以函数作为输入 (延迟评估)。",
+        "suggest": "这些方法有两类：一类以 [`Option`] 作为输入，一类以函数作为输入 (延迟评估)。",
         "translate": ""
     },
     {
@@ -4791,7 +4791,7 @@
     },
     {
         "source": "(It's not always necessary to explicitly call an iterator constructor: many [`Iterator`] methods that accept other iterators will also accept iterable types that implement [`IntoIterator`], which includes [`Option`].)",
-        "suggest": "(并不总是需要显式调用迭代器构造函数: 许多接受其他迭代器的 [`Iterator`] 方法也将接受实现 [`IntoIterator`] 的可迭代类型，其中包括 [`Option`]。)",
+        "suggest": "(并不总是需要显式调用迭代器构造函数：许多接受其他迭代器的 [`Iterator`] 方法也将接受实现 [`IntoIterator`] 的可迭代类型，其中包括 [`Option`]。)",
         "translate": ""
     },
     {
@@ -4986,7 +4986,7 @@
     },
     {
         "source": "For #2, we need to ensure that code given a `Pin<&mut P::Target>` cannot cause the `Pin<P>` to move?",
-        "suggest": "对于 #2，我们需要确保给定 `Pin<&mut P::Target>` 的代码不会导致 `Pin<P>` 移动?",
+        "suggest": "对于 #2，我们需要确保给定 `Pin<&mut P::Target>` 的代码不会导致 `Pin<P>` 移动？",
         "translate": ""
     },
     {
