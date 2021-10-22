@@ -1266,7 +1266,7 @@
     },
     {
         "source": "supported tokens are a subset of the real `quote!`, but unquoting is different: instead of `$x`, this uses `(@ expr)`.",
-        "suggest": "支持的 tokens 是实际 `quote!` 的子集，但解引用是不同的: 它使用 `(@ expr)` 代替 `$x`。",
+        "suggest": "支持的 tokens 是实际 `quote!` 的子集，但解引用是不同的：它使用 `(@ expr)` 代替 `$x`。",
         "translate": ""
     },
     {
@@ -1751,7 +1751,7 @@
     },
     {
         "source": "Accuracy is attempted on a best-effort basis, however, and bugs are always welcome to indicate areas of improvement!",
-        "suggest": "尽力而为，力求做到准确，但是，始终欢迎欢迎带错误的地方指出改进的地方!",
+        "suggest": "尽力而为，力求做到准确，但是，始终欢迎欢迎带错误的地方指出改进的地方！",
         "translate": ""
     },
     {
@@ -1796,7 +1796,7 @@
     },
     {
         "source": "Please feel free to report issues with platforms where a backtrace cannot be captured though!",
-        "suggest": "请随时报告平台无法捕获回溯的问题!",
+        "suggest": "请随时报告平台无法捕获回溯的问题！",
         "translate": ""
     },
     {
@@ -2056,7 +2056,7 @@
     },
     {
         "source": "If we're already resolved, nothing to do!",
-        "suggest": "如果我们已经解决，则无事可做!",
+        "suggest": "如果我们已经解决，则无事可做！",
         "translate": ""
     },
     {
@@ -3461,7 +3461,7 @@
     },
     {
         "source": "It takes time to order and drink a beer!",
-        "suggest": "订购和喝啤酒需要时间!",
+        "suggest": "订购和喝啤酒需要时间！",
         "translate": ""
     },
     {
@@ -3481,7 +3481,7 @@
     },
     {
         "source": "Have another!",
-        "suggest": "有另外一个!",
+        "suggest": "有另外一个！",
         "translate": ""
     },
     {
@@ -3526,7 +3526,7 @@
     },
     {
         "source": "To get this out of the way: you should probably just use [`Vec`] or [`HashMap`].",
-        "suggest": "为了避免这种情况: 您可能应该只使用 [`Vec`] 或 [`HashMap`]。",
+        "suggest": "为了避免这种情况：您可能应该只使用 [`Vec`] 或 [`HashMap`]。",
         "translate": ""
     },
     {
@@ -3556,7 +3556,7 @@
     },
     {
         "source": "When Should You Use Which Collection?",
-        "suggest": "什么时候应该使用哪个集合?",
+        "suggest": "什么时候应该使用哪个集合？",
         "translate": ""
     },
     {
@@ -4131,7 +4131,7 @@
     },
     {
         "source": "In this case, the user has several options: they can `get`, `insert` or `remove` the value of the occupied entry.",
-        "suggest": "在这种情况下，用户有几个选项: 他们可以 `get`，`insert` 或 `remove` 占用的条目的值。",
+        "suggest": "在这种情况下，用户有几个选项：他们可以 `get`，`insert` 或 `remove` 占用的条目的值。",
         "translate": ""
     },
     {

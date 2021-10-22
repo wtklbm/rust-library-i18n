@@ -276,7 +276,7 @@
     },
     {
         "source": "The test has no false positives (meaning: if the test fails, there's actually an ordering problem).",
-        "suggest": "测试没有误报 (意思是: 如果测试失败，实际上存在排序问题)。",
+        "suggest": "测试没有误报 (意思是：如果测试失败，实际上存在排序问题)。",
         "translate": ""
     },
     {
@@ -421,7 +421,7 @@
     },
     {
         "source": "For each of the 128-bit low and high halves of the vectors, the last",
-        "suggest": "对于 vectors的 128 位低半部分和高半部分中，最后一个",
+        "suggest": "对于 vectors 的 128 位低半部分和高半部分中，最后一个",
         "translate": ""
     },
     {
@@ -1616,7 +1616,7 @@
     },
     {
         "source": "//! You can test out this program via:",
-        "suggest": "//! 您可以通过以下方式测试此程序:",
+        "suggest": "//！您可以通过以下方式测试此程序:",
         "translate": ""
     },
     {
@@ -1711,7 +1711,7 @@
     },
     {
         "source": "The first dimension is color: Black, White and Empty.",
-        "suggest": "第一个维度是颜色: 黑色、白色和空。",
+        "suggest": "第一个维度是颜色：黑色、白色和空。",
         "translate": ""
     },
     {
@@ -1831,7 +1831,7 @@
     },
     {
         "source": "Evaluation function: give different scores to different patterns after a fixed depth.",
-        "suggest": "评价函数: 在固定深度后，给不同的图案赋予不同的分数。",
+        "suggest": "评价函数：在固定深度后，给不同的图案赋予不同的分数。",
         "translate": ""
     },
     {
@@ -2251,7 +2251,7 @@
     },
     {
         "source": "~~~~~~~~ borrowed value does not live long enough",
-        "suggest": "~~~~~~~~ 借来的值活不长",
+        "suggest": "～～～～～～ 借来的值活不长",
         "translate": ""
     },
     {
@@ -2366,7 +2366,7 @@
     },
     {
         "source": "Safety: All invariants are upheld.",
-        "suggest": "安全性: 所有不可变变量均得到支持。",
+        "suggest": "安全性：所有不可变变量均得到支持。",
         "translate": ""
     },
     {
@@ -2426,7 +2426,7 @@
     },
     {
         "source": "Safety: See above implementation for `ops::Range<A>`",
-        "suggest": "安全性: 请参见上面的 `ops::Range<A>` 实现",
+        "suggest": "安全性：请参见上面的 `ops::Range<A>` 实现",
         "translate": ""
     },
     {

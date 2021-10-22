@@ -21,7 +21,7 @@
     },
     {
         "source": "is not casting!",
-        "suggest": "没有铸造!",
+        "suggest": "没有铸造！",
         "translate": ""
     },
     {
@@ -271,7 +271,7 @@
     },
     {
         "source": "IEEE754 says: isSignMinus(x) is true if and only if x has negative sign.",
-        "suggest": "IEEE754 说: 当且仅当 x 具有负号时，isSignMinus(x) 才为 true。",
+        "suggest": "IEEE754 说：当且仅当 x 具有负号时，isSignMinus(x) 才为 true。",
         "translate": ""
     },
     {
@@ -396,7 +396,7 @@
     },
     {
         "source": "However there is one caveat: prior to the 2008 version of IEEE-754, how to interpret the NaN signaling bit wasn't actually specified.",
-        "suggest": "但是，有一个警告: 在 2008 年版本的 IEEE-754 之前，实际上并未指定如何解释 NaN 信令位。",
+        "suggest": "但是，有一个警告：在 2008 年版本的 IEEE-754 之前，实际上并未指定如何解释 NaN 信令位。",
         "translate": ""
     },
     {
@@ -436,12 +436,12 @@
     },
     {
         "source": "`u32` is a plain old datatype so we can always transmute from it It turns out the safety issues with sNaN were overblown!",
-        "suggest": "`u32` 是一个普通的旧数据类型，因此我们可以随时对其进行转换事实证明 sNaN 的安全性问题被夸大了!",
+        "suggest": "`u32` 是一个普通的旧数据类型，因此我们可以随时对其进行转换事实证明 sNaN 的安全性问题被夸大了！",
         "translate": ""
     },
     {
         "source": "Hooray!",
-        "suggest": "万岁!",
+        "suggest": "万岁！",
         "translate": ""
     },
     {
@@ -586,7 +586,7 @@
     },
     {
         "source": "Why does this work?",
-        "suggest": "为什么这样做?",
+        "suggest": "为什么这样做？",
         "translate": ""
     },
     {
@@ -601,7 +601,7 @@
     },
     {
         "source": "The set of exponent and mantissa fields as a whole have the property that their bitwise order is equal to the numeric magnitude where the magnitude is defined.",
-        "suggest": "整个指数和尾数字段具有以下属性: 它们的按位顺序等于定义大小的数字大小。",
+        "suggest": "整个指数和尾数字段具有以下属性：它们的按位顺序等于定义大小的数字大小。",
         "translate": ""
     },
     {
@@ -616,7 +616,7 @@
     },
     {
         "source": "However, the representation of magnitude is the same for negative and positive numbers – only the sign bit is different.",
-        "suggest": "但是，对于负数和正数，幅值的表示是相同的-仅符号位不同。",
+        "suggest": "但是，对于负数和正数，幅值的表示是相同的 - 仅符号位不同。",
         "translate": ""
     },
     {
@@ -806,7 +806,7 @@
     },
     {
         "source": "`u64` is a plain old datatype so we can always transmute from it It turns out the safety issues with sNaN were overblown!",
-        "suggest": "`u64` 是一个普通的旧数据类型，因此我们可以随时对其进行转换事实证明 sNaN 的安全性问题被夸大了!",
+        "suggest": "`u64` 是一个普通的旧数据类型，因此我们可以随时对其进行转换事实证明 sNaN 的安全性问题被夸大了！",
         "translate": ""
     },
     {
@@ -1356,7 +1356,7 @@
     },
     {
         "source": "Why do we need this?",
-        "suggest": "我们为什么需要这个?",
+        "suggest": "我们为什么需要这个？",
         "translate": ""
     },
     {
@@ -1641,7 +1641,7 @@
     },
     {
         "source": "(bijectivity: digits round to `v`);",
-        "suggest": "(双射性: 数字四舍五入为 `v`) ;",
+        "suggest": "(双射性：数字四舍五入为 `v`) ;",
         "translate": ""
     },
     {
@@ -1676,7 +1676,7 @@
     },
     {
         "source": "this is enough for restoring that condition: we already know that the digit generation guarantees `0 <= v / 10^(k-n) - d[0..n-1] < 1`.",
-        "suggest": "这足以恢复该条件: 我们已经知道数字生成可以保证 `0 <= v / 10^(k-n) - d[0..n-1] < 1`。",
+        "suggest": "这足以恢复该条件：我们已经知道数字生成可以保证 `0 <= v / 10^(k-n) - d[0..n-1] < 1`。",
         "translate": ""
     },
     {
@@ -1781,7 +1781,7 @@
     },
     {
         "source": "note that we have to enlarge the buffer again when rounding up happens!",
-        "suggest": "请注意，在进行舍入操作时，我们必须再次扩大缓冲区!",
+        "suggest": "请注意，在进行舍入操作时，我们必须再次扩大缓冲区！",
         "translate": ""
     },
     {
@@ -1806,7 +1806,7 @@
     },
     {
         "source": "following digits are all zeroes, we stop here do *not* try to perform rounding!",
-        "suggest": "以下数字全为零，我们在这里停止 *不要* 尝试进行舍入!",
+        "suggest": "以下数字全为零，我们在这里停止 *不要* 尝试进行舍入！",
         "translate": ""
     },
     {
@@ -2471,7 +2471,7 @@
     },
     {
         "source": "is the buffer full?",
-        "suggest": "缓冲区是否已满?",
+        "suggest": "缓冲区是否已满？",
         "translate": ""
     },
     {
@@ -2751,7 +2751,7 @@
     },
     {
         "source": "Please note this isn't the same operation as the `<<` shifting operator!",
-        "suggest": "请注意，此操作与 `<<` 移位运算符不同!",
+        "suggest": "请注意，此操作与 `<<` 移位运算符不同！",
         "translate": ""
     },
     {
@@ -2761,7 +2761,7 @@
     },
     {
         "source": "Please note this isn't the same operation as the `>>` shifting operator!",
-        "suggest": "请注意，此操作与 `>>` 移位运算符不同!",
+        "suggest": "请注意，此操作与 `>>` 移位运算符不同！",
         "translate": ""
     },
     {
@@ -2816,7 +2816,7 @@
     },
     {
         "source": "or not to be?",
-        "suggest": "还是不是?",
+        "suggest": "还是不是？",
         "translate": ""
     },
     {

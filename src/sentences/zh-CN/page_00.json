@@ -176,7 +176,7 @@
     },
     {
         "source": "Short strings: 65 bytes each",
-        "suggest": "短字符串: 每个 65 字节",
+        "suggest": "短字符串：每个 65 字节",
         "translate": ""
     },
     {
@@ -591,7 +591,7 @@
     },
     {
         "source": "The type `Cow` is a smart pointer providing clone-on-write functionality: it can enclose and provide immutable access to borrowed data, and clone the data lazily when mutation or ownership is required.",
-        "suggest": "`Cow` 类型是一种智能指针，提供了写时克隆功能: 它可以封装并提供对借用数据的不可变访问，并在需要可变的或所有权时懒惰地克隆数据。",
+        "suggest": "`Cow` 类型是一种智能指针，提供了写时克隆功能：它可以封装并提供对借用数据的不可变访问，并在需要可变的或所有权时懒惰地克隆数据。",
         "translate": ""
     },
     {
@@ -2731,7 +2731,7 @@
     },
     {
         "source": "It's not the minimum size: removing an element from such a tree does not always reduce height.",
-        "suggest": "这不是最小大小: 从这样的树中删除元素并不总是会降低高度。",
+        "suggest": "这不是最小大小：从这样的树中删除元素并不总是会降低高度。",
         "translate": ""
     },
     {
@@ -3446,7 +3446,7 @@
     },
     {
         "source": "A simplified version of `IntoIter` that is not double-ended and has only one purpose: to drop the remainder of an `IntoIter`.",
-        "suggest": "`IntoIter` 的简化版本，不是双端的，只有一个目的: 丢弃 `IntoIter` 的其余部分。",
+        "suggest": "`IntoIter` 的简化版本，不是双端的，只有一个目的：丢弃 `IntoIter` 的其余部分。",
         "translate": ""
     },
     {
@@ -3706,7 +3706,7 @@
     },
     {
         "source": "Do we have to append anything at all?",
-        "suggest": "我们是否必须附加任何内容?",
+        "suggest": "我们是否必须附加任何内容？",
         "translate": ""
     },
     {

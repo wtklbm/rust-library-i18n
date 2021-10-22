@@ -401,7 +401,7 @@
     },
     {
         "source": "is to [`&CStr`] as [`String`] is to [`&str`]: the former in each pair are owned strings;",
-        "suggest": "对 [`&CStr`] 就像对 [`String`] 对 [`&str`] 一样: 每对中的前者是拥有的字符串;",
+        "suggest": "对 [`&CStr`] 就像对 [`String`] 对 [`&str`] 一样：每对中的前者是拥有的字符串;",
         "translate": ""
     },
     {
@@ -1441,7 +1441,7 @@
     },
     {
         "source": "**From Rust to C:** [`CString`] represents an owned, C-friendly string: it is nul-terminated, and has no internal nul characters.",
-        "suggest": "**从 Rust 到 C:**[`CString`] 表示一个拥有的，对 C 友好的字符串: 它是 nul 终止的，并且没有内部 nul 字符。",
+        "suggest": "**从 Rust 到 C:**[`CString`] 表示一个拥有的，对 C 友好的字符串：它是 nul 终止的，并且没有内部 nul 字符。",
         "translate": ""
     },
     {
@@ -1641,7 +1641,7 @@
     },
     {
         "source": "is to [`&OsStr`] as [`String`] is to [`&str`]: the former in each pair are owned strings;",
-        "suggest": "对 [`&OsStr`] 就像对 [`String`] 对 [`&str`] 一样: 每对中的前者是拥有的字符串;",
+        "suggest": "对 [`&OsStr`] 就像对 [`String`] 对 [`&str`] 一样：每对中的前者是拥有的字符串;",
         "translate": ""
     },
     {
@@ -2221,12 +2221,12 @@
     },
     {
         "source": "Now let's show our entry's permissions!",
-        "suggest": "现在，让我们显示条目的权限!",
+        "suggest": "现在，让我们显示条目的权限！",
         "translate": ""
     },
     {
         "source": "Now let's show our entry's file type!",
-        "suggest": "现在，让我们显示条目的文件类型!",
+        "suggest": "现在，让我们显示条目的文件类型！",
         "translate": ""
     },
     {
@@ -2796,12 +2796,12 @@
     },
     {
         "source": "For most filesystems, the operating system guarantees that all writes are atomic: no writes get mangled because another process writes at the same time.",
-        "suggest": "对于大多数文件系统，操作系统保证所有写操作都是原子的: 不会浪费任何写操作，因为另一个进程会同时进行写操作。",
+        "suggest": "对于大多数文件系统，操作系统保证所有写操作都是原子的：不会浪费任何写操作，因为另一个进程会同时进行写操作。",
         "translate": ""
     },
     {
         "source": "One maybe obvious note when using append-mode: make sure that all data that belongs together is written to the file in one operation.",
-        "suggest": "使用追加模式时，可能有一个明显的注意事项: 确保一次完成将所有在一起的数据写入文件。",
+        "suggest": "使用追加模式时，可能有一个明显的注意事项：确保一次完成将所有在一起的数据写入文件。",
         "translate": ""
     },
     {
@@ -2946,7 +2946,7 @@
     },
     {
         "source": "Filesystem-level errors: full disk, write permission requested on a read-only file system, exceeded disk quota, too many open files, too long filename, too many symbolic links in the specified path (Unix-like systems only), etc.",
-        "suggest": "文件系统级错误: 已满磁盘，对只读文件系统请求的写许可权，超出磁盘配额，打开的文件过多，文件名太长，指定路径中的符号链接太多 (仅适用于 Unix 系统)，等等。",
+        "suggest": "文件系统级错误：已满磁盘，对只读文件系统请求的写许可权，超出磁盘配额，打开的文件过多，文件名太长，指定路径中的符号链接太多 (仅适用于 Unix 系统)，等等。",
         "translate": ""
     },
     {
@@ -3556,7 +3556,7 @@
     },
     {
         "source": "Use carefully!",
-        "suggest": "小心使用!",
+        "suggest": "小心使用！",
         "translate": ""
     },
     {
@@ -4186,12 +4186,12 @@
     },
     {
         "source": "Why no len > capacity?",
-        "suggest": "为什么没有 len > 容量?",
+        "suggest": "为什么没有 len > 容量？",
         "translate": ""
     },
     {
         "source": "Why not buffer len == capacity?",
-        "suggest": "为什么不缓冲 len == 容量?",
+        "suggest": "为什么不缓冲 len == 容量？",
         "translate": ""
     },
     {
@@ -4496,7 +4496,7 @@
     },
     {
         "source": "If not, does the data out to the last unwritten newline fit in the buffer?",
-        "suggest": "如果不是，则输出到最后未写入的换行符的数据是否适合缓冲区?",
+        "suggest": "如果不是，则输出到最后未写入的换行符的数据是否适合缓冲区？",
         "translate": ""
     },
     {

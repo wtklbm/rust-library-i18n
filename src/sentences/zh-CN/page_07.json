@@ -6,7 +6,7 @@
     },
     {
         "source": "And now we can use it!",
-        "suggest": "现在我们可以使用它了!",
+        "suggest": "现在我们可以使用它了！",
         "translate": ""
     },
     {
@@ -26,17 +26,17 @@
     },
     {
         "source": "Oh no!",
-        "suggest": "不好了!",
+        "suggest": "不好了！",
         "translate": ""
     },
     {
         "source": "An infinite loop!",
-        "suggest": "无限循环!",
+        "suggest": "无限循环！",
         "translate": ""
     },
     {
         "source": "causes an infinite loop, so we won't reach this point!",
-        "suggest": "导致无限循环，所以我们不会达到这一点!",
+        "suggest": "导致无限循环，所以我们不会达到这一点！",
         "translate": ""
     },
     {
@@ -66,7 +66,7 @@
     },
     {
         "source": "are the core portion: these traits define what kind of iterators exist and what you can do with them.",
-        "suggest": "是核心部分: 这些 traits 定义了存在哪种迭代器，以及可以使用它们进行哪些操作。",
+        "suggest": "是核心部分：这些 traits 定义了存在哪种迭代器，以及可以使用它们进行哪些操作。",
         "translate": ""
     },
     {
@@ -96,7 +96,7 @@
     },
     {
         "source": "That's it!",
-        "suggest": "就是这样!",
+        "suggest": "就是这样！",
         "translate": ""
     },
     {
@@ -181,12 +181,12 @@
     },
     {
         "source": "Creating an iterator of your own involves two steps: creating a `struct` to hold the iterator's state, and then implementing [`Iterator`] for that `struct`.",
-        "suggest": "创建自己的迭代器涉及两个步骤: 创建一个 `struct` 来保存迭代器的状态，然后为该 `struct` 实现 [`Iterator`]。",
+        "suggest": "创建自己的迭代器涉及两个步骤：创建一个 `struct` 来保存迭代器的状态，然后为该 `struct` 实现 [`Iterator`]。",
         "translate": ""
     },
     {
         "source": "This is why there are so many `struct`s in this module: there is one for each iterator and iterator adapter.",
-        "suggest": "这就是为什么此模块中有这么多 `struct` 的原因: 每个迭代器和迭代器适配器都有一个。",
+        "suggest": "这就是为什么此模块中有这么多 `struct` 的原因：每个迭代器和迭代器适配器都有一个。",
         "translate": ""
     },
     {
@@ -241,12 +241,12 @@
     },
     {
         "source": "But you'll notice something here: we never called anything on our vector to produce an iterator.",
-        "suggest": "但是您会在这里注意到: 我们从未在 vector 上调用任何东西来产生迭代器。",
+        "suggest": "但是您会在这里注意到：我们从未在 vector 上调用任何东西来产生迭代器。",
         "translate": ""
     },
     {
         "source": "What gives?",
-        "suggest": "是什么赋予了?",
+        "suggest": "是什么赋予了？",
         "translate": ""
     },
     {
@@ -286,7 +286,7 @@
     },
     {
         "source": "There's one more subtle bit here: the standard library contains an interesting implementation of [`IntoIterator`]:",
-        "suggest": "这里还有一点微妙之处: 标准库包含一个有趣的 [`IntoIterator`] 实现:",
+        "suggest": "这里还有一点微妙之处：标准库包含一个有趣的 [`IntoIterator`] 实现:",
         "translate": ""
     },
     {
@@ -1161,7 +1161,7 @@
     },
     {
         "source": "Takes each element in the [`Iterator`]: if it is an [`Err`], no further elements are taken, and the [`Err`] is returned.",
-        "suggest": "接受 [`Iterator`] 中的每个元素: 如果它是 [`Err`]，则不再获取其他元素，并返回 [`Err`]。",
+        "suggest": "接受 [`Iterator`] 中的每个元素：如果它是 [`Err`]，则不再获取其他元素，并返回 [`Err`]。",
         "translate": ""
     },
     {
@@ -1181,7 +1181,7 @@
     },
     {
         "source": "Takes each element in the [`Iterator`]: if it is a [`None`], no further elements are taken, and the [`None`] is returned.",
-        "suggest": "接受 [`Iterator`] 中的每个元素: 如果它是 [`None`]，则不再获取其他元素，并返回 [`None`]。",
+        "suggest": "接受 [`Iterator`] 中的每个元素：如果它是 [`None`]，则不再获取其他元素，并返回 [`None`]。",
         "translate": ""
     },
     {
@@ -1226,7 +1226,7 @@
     },
     {
         "source": "collect works too!",
-        "suggest": "也收集作品!",
+        "suggest": "也收集作品！",
         "translate": ""
     },
     {
@@ -1261,7 +1261,7 @@
     },
     {
         "source": "This is a bit simpler with the concrete type signature: we can call extend on anything which can be turned into an Iterator which gives us i32s.",
-        "suggest": "使用具体的类型签名，这要简单一些: 我们可以调用扩展为可转换为 It32 的 Iterator 的任何内容。",
+        "suggest": "使用具体的类型签名，这要简单一些：我们可以调用扩展为可转换为 It32 的 Iterator 的任何内容。",
         "translate": ""
     },
     {
@@ -1271,7 +1271,7 @@
     },
     {
         "source": "The implementation is very straightforward: loop through the iterator, and add() each element to ourselves.",
-        "suggest": "实现非常简单: 遍历迭代器，然后将每个元素 add() 传递给我们自己。",
+        "suggest": "实现非常简单：遍历迭代器，然后将每个元素 add() 传递给我们自己。",
         "translate": ""
     },
     {
@@ -1371,7 +1371,7 @@
     },
     {
         "source": "Which kind of iterator are we turning this into?",
-        "suggest": "我们将其变成哪种迭代器?",
+        "suggest": "我们将其变成哪种迭代器？",
         "translate": ""
     },
     {
@@ -1456,12 +1456,12 @@
     },
     {
         "source": "Something that implements `DoubleEndedIterator` has one extra capability over something that implements [`Iterator`]: the ability to also take `Item`s from the back, as well as the front.",
-        "suggest": "实现 `DoubleEndedIterator` 的东西比实现 [`Iterator`] 的东西具有一项额外的功能: 既可以从后面也可以从前面获得 `item` 的功能。",
+        "suggest": "实现 `DoubleEndedIterator` 的东西比实现 [`Iterator`] 的东西具有一项额外的功能：既可以从后面也可以从前面获得 `item` 的功能。",
         "translate": ""
     },
     {
         "source": "It is important to note that both back and forth work on the same range, and do not cross: iteration is over when they meet in the middle.",
-        "suggest": "重要的是要注意，来回运动都在相同的范围内，并且不会交叉: 当它们在中间相遇时，迭代就结束了。",
+        "suggest": "重要的是要注意，来回运动都在相同的范围内，并且不会交叉：当它们在中间相遇时，迭代就结束了。",
         "translate": ""
     },
     {
@@ -1571,7 +1571,7 @@
     },
     {
         "source": "This is the reverse version of [`Iterator::try_fold()`]: it takes elements starting from the back of the iterator.",
-        "suggest": "这是 [`Iterator::try_fold()`] 的反向版本: 它从迭代器的后面开始接收元素。",
+        "suggest": "这是 [`Iterator::try_fold()`] 的反向版本：它从迭代器的后面开始接收元素。",
         "translate": ""
     },
     {
@@ -1581,12 +1581,12 @@
     },
     {
         "source": "This is the reverse version of [`Iterator::fold()`]: it takes elements starting from the back of the iterator.",
-        "suggest": "这是 [`Iterator::fold()`] 的反向版本: 它从迭代器的后面开始接收元素。",
+        "suggest": "这是 [`Iterator::fold()`] 的反向版本：它从迭代器的后面开始接收元素。",
         "translate": ""
     },
     {
         "source": "takes two arguments: an initial value, and a closure with two arguments: an 'accumulator', and an element.",
-        "suggest": "接受两个参数: 一个初始值和一个带有两个参数的闭包: 一个 'accumulator' 和一个元素。",
+        "suggest": "接受两个参数：一个初始值和一个带有两个参数的闭包：一个 'accumulator' 和一个元素。",
         "translate": ""
     },
     {
@@ -1781,7 +1781,7 @@
     },
     {
         "source": "assert_eq! will check all Rust user implementations too.",
-        "suggest": "assert_eq! 还将检查所有 Rust 用户实现。",
+        "suggest": "assert_eq！还将检查所有 Rust 用户实现。",
         "translate": ""
     },
     {
@@ -2011,7 +2011,7 @@
     },
     {
         "source": "The following line gives \"error: use of moved value:",
-        "suggest": "下面的行给出了 ` 错误: 移动值的使用:",
+        "suggest": "下面的行给出了 ` 错误：移动值的使用:",
         "translate": ""
     },
     {
@@ -2636,7 +2636,7 @@
     },
     {
         "source": "Note that the underlying iterator is still advanced when [`peek`] is called for the first time: In order to retrieve the next element, [`next`] is called on the underlying iterator, hence any side effects (i.e.",
-        "suggest": "请注意，首次调用 [`peek`] 时，基础迭代器仍处于高级状态: 为了检索下一个元素，在基础迭代器上调用 [`next`]，因此会产生任何副作用 (即，",
+        "suggest": "请注意，首次调用 [`peek`] 时，基础迭代器仍处于高级状态：为了检索下一个元素，在基础迭代器上调用 [`next`]，因此会产生任何副作用 (即，",
         "translate": ""
     },
     {
@@ -2781,7 +2781,7 @@
     },
     {
         "source": "takes two arguments: an initial value which seeds the internal state, and a closure with two arguments, the first being a mutable reference to the internal state and the second an iterator element.",
-        "suggest": "接受两个参数: 一个初始值，该初始值填充内部状态; 一个闭包，包含两个参数，第一个是对内部状态的变量引用，第二个是迭代器元素。",
+        "suggest": "接受两个参数：一个初始值，该初始值填充内部状态; 一个闭包，包含两个参数，第一个是对内部状态的变量引用，第二个是迭代器元素。",
         "translate": ""
     },
     {
@@ -3056,7 +3056,7 @@
     },
     {
         "source": "should we worry about the count overflowing?",
-        "suggest": "我们应该担心计数溢出吗?",
+        "suggest": "我们应该担心计数溢出吗？",
         "translate": ""
     },
     {
@@ -3376,7 +3376,7 @@
     },
     {
         "source": "consumes an entire iterator of pairs, producing two collections: one from the left elements of the pairs, and one from the right elements.",
-        "suggest": "使用整个对的迭代器，产生两个集合: 一个来自对的左侧元素，另一个来自右侧的元素。",
+        "suggest": "使用整个对的迭代器，产生两个集合：一个来自对的左侧元素，另一个来自右侧的元素。",
         "translate": ""
     },
     {
@@ -3671,7 +3671,7 @@
     },
     {
         "source": "Invariant: written to at most once.",
-        "suggest": "不变式: 最多写入一次。",
+        "suggest": "不变式：最多写入一次。",
         "translate": ""
     },
     {
@@ -3986,7 +3986,7 @@
     },
     {
         "source": "depends on libcore, but the contents of this module are set up in such a way that directly pulling it here works such that the crate uses the this crate as its libcore.",
-        "suggest": "依赖于 libcore，但是这个模块的内容是这样设置的: 直接将它 pull 到这里，这样 crate 就可以使用这个 crate 作为它的 libcore。",
+        "suggest": "依赖于 libcore，但是这个模块的内容是这样设置的：直接将它 pull 到这里，这样 crate 就可以使用这个 crate 作为它的 libcore。",
         "translate": ""
     },
     {
@@ -4056,7 +4056,7 @@
     },
     {
         "source": "We have some logic here, We can add a message to unimplemented!",
-        "suggest": "我们这里有一些逻辑，我们可以向未实现中添加一条消息!",
+        "suggest": "我们这里有一些逻辑，我们可以向未实现中添加一条消息！",
         "translate": ""
     },
     {
@@ -4091,7 +4091,7 @@
     },
     {
         "source": "fn concat_idents!(new, fun, name) { } // not usable in this way!",
-        "suggest": "fn concat_idents!(new, fun, name) { } // 无法以这种方式使用!",
+        "suggest": "fn concat_idents!(new, fun, name) { } // 无法以这种方式使用！",
         "translate": ""
     },
     {
@@ -4176,7 +4176,7 @@
     },
     {
         "source": "Replacing [`assert!`] with `debug_assert!` is thus only encouraged after thorough profiling, and more importantly, only in safe code!",
-        "suggest": "因此，仅在经过全面分析后才鼓励使用 `debug_assert!` 替换 [`assert!`]，更重要的是，仅使用安全代码!",
+        "suggest": "因此，仅在经过全面分析后才鼓励使用 `debug_assert!` 替换 [`assert!`]，更重要的是，仅使用安全代码！",
         "translate": ""
     },
     {

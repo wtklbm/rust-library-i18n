@@ -476,7 +476,7 @@
     },
     {
         "source": "The memory was freed when `x` went out of scope above, so `x_ptr` is now dangling!",
-        "suggest": "当 `x` 离开作用域时，内存被释放，所以 `x_ptr` 现在悬空了!",
+        "suggest": "当 `x` 离开作用域时，内存被释放，所以 `x_ptr` 现在悬空了！",
         "translate": ""
     },
     {
@@ -581,7 +581,7 @@
     },
     {
         "source": "Shared references in Rust disallow mutation by default, and [`Rc`] is no exception: you cannot generally obtain a mutable reference to something inside an [`Rc`].",
-        "suggest": "默认情况下，Rust 中的共享引用不允许可变的，[`Rc`] 也不例外: 您通常无法获得 [`Rc`] 内部内容的可变引用。",
+        "suggest": "默认情况下，Rust 中的共享引用不允许可变的，[`Rc`] 也不例外：您通常无法获得 [`Rc`] 内部内容的可变引用。",
         "translate": ""
     },
     {
@@ -2681,7 +2681,7 @@
     },
     {
         "source": "That might seem like a strange decision, but consider the fact that merges more often go in the opposite direction (forwards).",
-        "suggest": "这看起来似乎是一个奇怪的决定，但请考虑以下事实: 合并更多是朝相反的方向 (forwards) 进行。",
+        "suggest": "这看起来似乎是一个奇怪的决定，但请考虑以下事实：合并更多是朝相反的方向 (forwards) 进行。",
         "translate": ""
     },
     {
@@ -2746,7 +2746,7 @@
     },
     {
         "source": "The gist of the story is: we must enforce the invariants on the top four runs on the stack.",
-        "suggest": "故事的要旨是: 我们必须在栈的前四个运行中强制执行不变式。",
+        "suggest": "故事的要旨是：我们必须在栈的前四个运行中强制执行不变式。",
         "translate": ""
     },
     {
@@ -3216,7 +3216,7 @@
     },
     {
         "source": "Furthermore, it's not clear what sort of thing the index should return: a byte, a codepoint, or a grapheme cluster.",
-        "suggest": "此外，尚不清楚索引应返回哪种类型: 字节，代码点或字形簇。",
+        "suggest": "此外，尚不清楚索引应返回哪种类型：字节，代码点或字形簇。",
         "translate": ""
     },
     {
@@ -3291,7 +3291,7 @@
     },
     {
         "source": "A `String` is made up of three components: a pointer to some bytes, a length, and a capacity.",
-        "suggest": "`String` 由三个部分组成: 指向某些字节的指针，长度和容量。",
+        "suggest": "`String` 由三个部分组成：指向某些字节的指针，长度和容量。",
         "translate": ""
     },
     {
@@ -3521,7 +3521,7 @@
     },
     {
         "source": "Not all byte slices are valid strings, however: strings are required to be valid UTF-8.",
-        "suggest": "并非所有的字节片都是有效的字符串，但是: 字符串必须是有效的 UTF-8。",
+        "suggest": "并非所有的字节片都是有效的字符串，但是：字符串必须是有效的 UTF-8。",
         "translate": ""
     },
     {
@@ -4401,7 +4401,7 @@
     },
     {
         "source": "Shared references in Rust disallow mutation by default, and `Arc` is no exception: you cannot generally obtain a mutable reference to something inside an `Arc`.",
-        "suggest": "默认情况下，Rust 中的共享引用不允许可变的，`Arc` 也不例外: 您通常无法获得 `Arc` 内部内容的可变引用。",
+        "suggest": "默认情况下，Rust 中的共享引用不允许可变的，`Arc` 也不例外：您通常无法获得 `Arc` 内部内容的可变引用。",
         "translate": ""
     },
     {
@@ -4451,12 +4451,12 @@
     },
     {
         "source": "Why can't you put a non-thread-safe type `T` in an `Arc<T>` to make it thread-safe?",
-        "suggest": "为什么不能在 `Arc<T>` 中放置非线程安全类型 `T` 使其成为线程安全的?",
+        "suggest": "为什么不能在 `Arc<T>` 中放置非线程安全类型 `T` 使其成为线程安全的？",
         "translate": ""
     },
     {
         "source": "This may be a bit counter-intuitive at first: after all, isn't the point of `Arc<T>` thread safety?",
-        "suggest": "起初这可能有点违反直觉: 毕竟，`Arc<T>` 线程安全性不是重点吗?",
+        "suggest": "起初这可能有点违反直觉：毕竟，`Arc<T>` 线程安全性不是重点吗？",
         "translate": ""
     },
     {
@@ -4951,7 +4951,7 @@
     },
     {
         "source": "As explained in the [Boost documentation][1], Increasing the reference counter can always be done with memory_order_relaxed: New references to an object can only be formed from an existing reference, and passing an existing reference from one thread to another must already provide any required synchronization.",
-        "suggest": "如 [Boost 文档][1] 中所述，可以始终通过 memory_order_relaxed 来完成增加引用计数器的操作: 对对象的新引用只能由现有引用形成，并且将现有引用从一个线程传递到另一个线程必须已经提供了所需的同步。",
+        "suggest": "如 [Boost 文档][1] 中所述，可以始终通过 memory_order_relaxed 来完成增加引用计数器的操作：对对象的新引用只能由现有引用形成，并且将现有引用从一个线程传递到另一个线程必须已经提供了所需的同步。",
         "translate": ""
     },
     {

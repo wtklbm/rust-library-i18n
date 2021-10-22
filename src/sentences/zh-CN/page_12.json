@@ -21,7 +21,7 @@
     },
     {
         "source": "It returns a triplet of the following values: all elements less than the one at the given index, the value at the given index, and all elements greater than the one at the given index, using the provided comparator function.",
-        "suggest": "它使用提供的比较器函数返回以下值的三元组: 所有元素小于给定索引处的元素，给定索引处的值以及所有元素大于给定索引处的元素。",
+        "suggest": "它使用提供的比较器函数返回以下值的三元组：所有元素小于给定索引处的元素，给定索引处的值以及所有元素大于给定索引处的元素。",
         "translate": ""
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "source": "It returns a triplet of the following values: all elements less than the one at the given index, the value at the given index, and all elements greater than the one at the given index, using the provided key extraction function.",
-        "suggest": "它使用提供的键提取函数返回以下值的三元组: 所有元素小于给定索引处的元素，给定索引处的值以及所有元素大于给定索引处的元素。",
+        "suggest": "它使用提供的键提取函数返回以下值的三元组：所有元素小于给定索引处的元素，给定索引处的值以及所有元素大于给定索引处的元素。",
         "translate": ""
     },
     {
@@ -106,7 +106,7 @@
     },
     {
         "source": "Example: We start in this state, where `r` represents \"next read\" and `w` represents \"next_write`.",
-        "suggest": "示例: 我们从这种状态开始，其中 `r` 代表 \"next read\"，`w` 代表 `next_write`。",
+        "suggest": "示例：我们从这种状态开始，其中 `r` 代表 \"next read\"，`w` 代表 `next_write`。",
         "translate": ""
     },
     {
@@ -476,7 +476,7 @@
     },
     {
         "source": "performance here matters not!",
-        "suggest": "这里的表现无关紧要!",
+        "suggest": "这里的表现无关紧要！",
         "translate": ""
     },
     {
@@ -516,7 +516,7 @@
     },
     {
         "source": "This method splits the slice into three distinct slices: prefix, correctly aligned middle slice of a new type, and the suffix slice.",
-        "suggest": "此方法将切片分为三个不同的切片: 前缀，正确对齐的新类型的中间切片和后缀切片。",
+        "suggest": "此方法将切片分为三个不同的切片：前缀，正确对齐的新类型的中间切片和后缀切片。",
         "translate": ""
     },
     {
@@ -546,7 +546,7 @@
     },
     {
         "source": "handle ZSTs specially, which is – don't handle them at all.",
-        "suggest": "专门处理 ZST，这是-根本不处理它们。",
+        "suggest": "专门处理 ZST，这是 - 根本不处理它们。",
         "translate": ""
     },
     {
@@ -586,7 +586,7 @@
     },
     {
         "source": "We can't use `rest` again after this, that would invalidate its alias `mut_ptr`!",
-        "suggest": "此后我们将无法再次使用 `rest`，这将使其别名 `mut_ptr` 失效!",
+        "suggest": "此后我们将无法再次使用 `rest`，这将使其别名 `mut_ptr` 失效！",
         "translate": ""
     },
     {
@@ -726,7 +726,7 @@
     },
     {
         "source": "which may nevertheless be laid out contiguously in memory: | a | b |",
-        "suggest": "但这可能会连续地放在内存中: 一个 | b |",
+        "suggest": "但这可能会连续地放在内存中：一个 | b |",
         "translate": ""
     },
     {
@@ -931,7 +931,7 @@
     },
     {
         "source": "This is possibly due to the fact that swapping or replacing temporaries uses only one memory address in the loop instead of needing to manage two.",
-        "suggest": "这可能是由于以下事实: 交换或替换临时节点在循环中仅使用一个内存地址，而不需要管理两个。",
+        "suggest": "这可能是由于以下事实：交换或替换临时节点在循环中仅使用一个内存地址，而不需要管理两个。",
         "translate": ""
     },
     {
@@ -1161,7 +1161,7 @@
     },
     {
         "source": "Are we done?",
-        "suggest": "我们完了吗?",
+        "suggest": "我们完了吗？",
         "translate": ""
     },
     {
@@ -1566,12 +1566,12 @@
     },
     {
         "source": "For the first one: We already do the bounds checking here with `l < r`.",
-        "suggest": "对于第一个: 我们已经在这里使用 `l < r` 进行了边界检查。",
+        "suggest": "对于第一个：我们已经在这里使用 `l < r` 进行了边界检查。",
         "translate": ""
     },
     {
         "source": "For the second one: We initially have `l == 0` and `r == v.len()` and we checked that `l < r` at every indexing operation.",
-        "suggest": "对于第二个: 我们最初有 `l == 0` 和 `r == v.len()`，我们在每次索引操作中都检查了 `l < r`。",
+        "suggest": "对于第二个：我们最初有 `l == 0` 和 `r == v.len()`，我们在每次索引操作中都检查了 `l < r`。",
         "translate": ""
     },
     {
@@ -1596,7 +1596,7 @@
     },
     {
         "source": "This step is critical in ensuring safety!",
-        "suggest": "这一步对于确保安全至关重要!",
+        "suggest": "这一步对于确保安全至关重要！",
         "translate": ""
     },
     {
@@ -2826,7 +2826,7 @@
     },
     {
         "source": "This is generally not recommended, use with caution!",
-        "suggest": "通常不建议这样做，请谨慎使用!",
+        "suggest": "通常不建议这样做，请谨慎使用！",
         "translate": ""
     },
     {
@@ -3511,7 +3511,7 @@
     },
     {
         "source": "We can treat each byte as character here: all multibyte characters start with a byte that is not in the ascii range, so we will stop there already.",
-        "suggest": "我们可以在这里将每个字节视为字符: 所有多字节字符都以一个不在 ascii 范围内的字节开头，因此我们将在此停止。",
+        "suggest": "我们可以在这里将每个字节视为字符：所有多字节字符都以一个不在 ascii 范围内的字节开头，因此我们将在此停止。",
         "translate": ""
     },
     {
@@ -4301,7 +4301,7 @@
     },
     {
         "source": "short period case -- the period is exact compute a separate critical factorization for the reversed needle x = u' v' where |v'| < period(x).",
-        "suggest": "短期情况下-周期是精确的，需要为倒针 x=u'v' 计算一个单独的临界分解，其中 | v'|<period(x)。",
+        "suggest": "短期情况下 - 周期是精确的，需要为倒针 x=u'v' 计算一个单独的临界分解，其中 | v'|<period(x)。",
         "translate": ""
     },
     {
@@ -4326,7 +4326,7 @@
     },
     {
         "source": "Approximate the period by lower bound max(|u|, |v|) + 1.",
-        "suggest": "用下限 `max(|u|, |v|) + 1` 估算周期。",
+        "suggest": "用下限 `max(|u|，|v|) + 1` 估算周期。",
         "translate": ""
     },
     {
@@ -4381,7 +4381,7 @@
     },
     {
         "source": "We have found a match!",
-        "suggest": "我们找到了一个匹配!",
+        "suggest": "我们找到了一个匹配！",
         "translate": ""
     },
     {
@@ -4971,7 +4971,7 @@
     },
     {
         "source": "we needed data, but there was none: error!",
-        "suggest": "我们需要数据，但没有数据: 错误!",
+        "suggest": "我们需要数据，但没有数据：错误！",
         "translate": ""
     },
     {

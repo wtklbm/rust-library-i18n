@@ -1071,17 +1071,17 @@
     },
     {
         "source": "This module is intended to be the gateway to architecture-specific intrinsic functions, typically related to SIMD (but not always!).",
-        "suggest": "此模块旨在用作特定于体系结构的固有函数的门户，该固有函数通常与 SIMD 相关 (但并非总是如此! )。",
+        "suggest": "此模块旨在用作特定于体系结构的固有函数的门户，该固有函数通常与 SIMD 相关 (但并非总是如此！)。",
         "translate": ""
     },
     {
         "source": "Each architecture that Rust compiles to may contain a submodule here, which means that this is not a portable module!",
-        "suggest": "Rust 编译到的每个体系结构都可能在此处包含一个子模块，这意味着这不是便携式模块!",
+        "suggest": "Rust 编译到的每个体系结构都可能在此处包含一个子模块，这意味着这不是便携式模块！",
         "translate": ""
     },
     {
         "source": "If you're writing a portable library take care when using these APIs!",
-        "suggest": "如果您要编写可移植的库，请在使用这些 API 时多加注意!",
+        "suggest": "如果您要编写可移植的库，请在使用这些 API 时多加注意！",
         "translate": ""
     },
     {
@@ -1106,7 +1106,7 @@
     },
     {
         "source": "These intrinsics are not portable: their availability is architecture-dependent, and not all machines of that architecture might provide the intrinsic.",
-        "suggest": "这些内部函数不是可移植的: 它们的可用性取决于体系结构，并且并非该体系结构的所有机器都可以提供该内部函数。",
+        "suggest": "这些内部函数不是可移植的：它们的可用性取决于体系结构，并且并非该体系结构的所有机器都可以提供该内部函数。",
         "translate": ""
     },
     {
@@ -1146,7 +1146,7 @@
     },
     {
         "source": "As a result of the latter of these guarantees all intrinsics in this module are `unsafe` and extra care needs to be taken when calling them!",
-        "suggest": "由于后者的保证，该模块中的所有内部函数都是 `unsafe`，因此在调用它们时要格外小心!",
+        "suggest": "由于后者的保证，该模块中的所有内部函数都是 `unsafe`，因此在调用它们时要格外小心！",
         "translate": ""
     },
     {
@@ -1251,7 +1251,7 @@
     },
     {
         "source": "There's a couple of components in play here, so let's go through them in detail!",
-        "suggest": "这里有几个组件在起作用，所以让我们详细研究它们!",
+        "suggest": "这里有几个组件在起作用，所以让我们详细研究它们！",
         "translate": ""
     },
     {
@@ -1311,7 +1311,7 @@
     },
     {
         "source": "And with all that we should have a working program!",
-        "suggest": "有了所有这些，我们应该有一个有效的程序!",
+        "suggest": "有了所有这些，我们应该有一个有效的程序！",
         "translate": ""
     },
     {
@@ -1321,7 +1321,7 @@
     },
     {
         "source": "It's important to note that using the `arch` module is not the easiest thing in the world, so if you're curious to try it out you may want to brace yourself for some wordiness!",
-        "suggest": "重要的是要注意，使用 `arch` 模块并不是世界上最简单的事情，因此，如果您想尝试一下，您可能会想方设法为自己做好准备!",
+        "suggest": "重要的是要注意，使用 `arch` 模块并不是世界上最简单的事情，因此，如果您想尝试一下，您可能会想方设法为自己做好准备！",
         "translate": ""
     },
     {
@@ -3011,17 +3011,17 @@
     },
     {
         "source": "Bits 0 and 1 indicate NaN values: signaling NaN (bit 0) and quiet NaN (bit 1).",
-        "suggest": "位 0 和 1 表示 NaN 值: 发信号通知 NaN (位 0) 和静默 NaN (位 1)。",
+        "suggest": "位 0 和 1 表示 NaN 值：发信号通知 NaN (位 0) 和静默 NaN (位 1)。",
         "translate": ""
     },
     {
         "source": "Bits 2, 3, 4, 5 classify negative values: infinity (bit 2), normal (bit 3), subnormal (bit 4), and zero (bit 5).",
-        "suggest": "位 2、3、4、5 对负值进行分类: 无限 (位 2)，正常 (位 3)，正常以下 (位 4) 和零 (位 5)。",
+        "suggest": "位 2、3、4、5 对负值进行分类：无限 (位 2)，正常 (位 3)，正常以下 (位 4) 和零 (位 5)。",
         "translate": ""
     },
     {
         "source": "Bits 6, 7, 8, 9 classify positive values: infinity (bit 6), normal (bit 7), subnormal (bit 8), and zero (bit 9).",
-        "suggest": "位 6、7、8、9 对正值进行分类: 无穷大 (位 6)，正常 (位 7)，正常以下 (位 8) 和零 (位 9)。",
+        "suggest": "位 6、7、8、9 对正值进行分类：无穷大 (位 6)，正常 (位 7)，正常以下 (位 8) 和零 (位 9)。",
         "translate": ""
     },
     {
@@ -4786,7 +4786,7 @@
     },
     {
         "source": "All sets are shuffled in the same way: the element i82i+1..2i in `a` (sixteen signed 8-bit integer numbers) is copied over the element i in result vector (sixteen signed 8-bit integer numbers), where i is 0, 1, 2, 3.",
-        "suggest": "所有集合都以相同的方式洗牌: 将 `a` 中的元素 i82i + 1..2i (十六个带符号的 8 位整数) 复制到元素 i 的结果 vector (十六个带符号的 8 位整数) 中，其中 i 为 0、1、2、3。",
+        "suggest": "所有集合都以相同的方式洗牌：将 `a` 中的元素 i82i + 1..2i (十六个带符号的 8 位整数) 复制到元素 i 的结果 vector (十六个带符号的 8 位整数) 中，其中 i 为 0、1、2、3。",
         "translate": ""
     },
     {
@@ -4796,7 +4796,7 @@
     },
     {
         "source": "All sets are shuffled in the same way: the element i82i+1..2i in `a` (four signed 32-bit integer numbers) is copied over the element i in result vector (four signed 32-bit integer numbers), where i is 0, 1, 2, 3.",
-        "suggest": "所有集合都以相同的方式洗牌: 将 `a` 中的元素 i82i + 1..2i (四个带符号的 32 位整数) 复制到元素 i 的结果 vector (四个带符号的 32 位整数) 中，其中 i 为 0、1、2、3。",
+        "suggest": "所有集合都以相同的方式洗牌：将 `a` 中的元素 i82i + 1..2i (四个带符号的 32 位整数) 复制到元素 i 的结果 vector (四个带符号的 32 位整数) 中，其中 i 为 0、1、2、3。",
         "translate": ""
     },
     {

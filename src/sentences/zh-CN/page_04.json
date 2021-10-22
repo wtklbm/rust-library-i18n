@@ -966,7 +966,7 @@
     },
     {
         "source": "symbols correspond to data, and maybe someone's crazy enough to have a function go into static data?",
-        "suggest": "符号与数据相对应，也许有人疯了以至于有一个函数进入静态数据?",
+        "suggest": "符号与数据相对应，也许有人疯了以至于有一个函数进入静态数据？",
         "translate": ""
     },
     {
@@ -1206,7 +1206,7 @@
     },
     {
         "source": "(presumably something else may be loaded there?) This is where the `bias` field comes into play, and we need to figure out the value of `bias` here.",
-        "suggest": "(大概在那里可能还有其他内容吗? ) 这是 `bias` 字段起作用的地方，我们需要在这里计算 `bias` 的值。",
+        "suggest": "(大概在那里可能还有其他内容吗？) 这是 `bias` 字段起作用的地方，我们需要在这里计算 `bias` 的值。",
         "translate": ""
     },
     {
@@ -1501,7 +1501,7 @@
     },
     {
         "source": "Invariant: after this conditional completes without early returning from an error, the cache entry for this path is at index 0.",
-        "suggest": "不变式: 此条件完成后又没有从错误中尽早返回，此路径的缓存条目位于索引 0。",
+        "suggest": "不变式：此条件完成后又没有从错误中尽早返回，此路径的缓存条目位于索引 0。",
         "translate": ""
     },
     {
@@ -1731,7 +1731,7 @@
     },
     {
         "source": "If we don't tell libbacktrace anything though then it won't do anything on platforms that don't support paths like /proc/self/exe!",
-        "suggest": "如果我们不告诉 libbacktrace 任何东西，那么它将在不支持 /proc/self/exe 之类的平台上不做任何事情!",
+        "suggest": "如果我们不告诉 libbacktrace 任何东西，那么它将在不支持 /proc/self/exe 之类的平台上不做任何事情！",
         "translate": ""
     },
     {
@@ -2636,7 +2636,7 @@
     },
     {
         "source": "(Specifically: it is *legal* to implement this trait atop an underlying native allocation library that aborts on memory exhaustion.)",
-        "suggest": "(具体来说: 在一个底层的原生分配库上实现此 trait 是 *合法的*，该本地分配库在内存耗尽时中止。)",
+        "suggest": "(具体来说：在一个底层的原生分配库上实现此 trait 是 *合法的*，该本地分配库在内存耗尽时中止。)",
         "translate": ""
     },
     {
@@ -2791,7 +2791,7 @@
     },
     {
         "source": "Remember to finalize with `pad_to_align`!",
-        "suggest": "记得用 `pad_to_align` 来完成!",
+        "suggest": "记得用 `pad_to_align` 来完成！",
         "translate": ""
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
         "source": "If not, it's a different type: just print it out unadorned.",
-        "suggest": "如果不是，那是另一种类型: 只需将其打印出来而没有装饰。",
+        "suggest": "如果不是，那是另一种类型：只需将其打印出来而没有装饰。",
         "translate": ""
     },
     {
@@ -3621,7 +3621,7 @@
     },
     {
         "source": "We want to give special treatment to certain types: in this case printing out the length of String values prior to their value.",
-        "suggest": "我们要对某些类型进行特殊处理: 在这种情况下，应先打印 String 值的长度，然后再打印它们的值。",
+        "suggest": "我们要对某些类型进行特殊处理：在这种情况下，应先打印 String 值的长度，然后再打印它们的值。",
         "translate": ""
     },
     {
@@ -3761,7 +3761,7 @@
     },
     {
         "source": "Beware of relying on them inside of your code!",
-        "suggest": "当心在代码中依赖它们!",
+        "suggest": "当心在代码中依赖它们！",
         "translate": ""
     },
     {
@@ -3796,7 +3796,7 @@
     },
     {
         "source": "Similarly, there is no guarantee that all parts of a type will appear in the returned string: for example, lifetime specifiers are currently not included.",
-        "suggest": "同样，不能保证类型的所有部分都将出现在返回的字符串中: 例如，当前不包括生命周期说明符。",
+        "suggest": "同样，不能保证类型的所有部分都将出现在返回的字符串中：例如，当前不包括生命周期说明符。",
         "translate": ""
     },
     {
@@ -3871,12 +3871,12 @@
     },
     {
         "source": "Elements with indices `i < alive.start` or `i >= alive.end` have been yielded already and must not be accessed anymore!",
-        "suggest": "索引为 `i < alive.start` 或 `i >= alive.end` 的元素已经产生，不能再访问了!",
+        "suggest": "索引为 `i < alive.start` 或 `i >= alive.end` 的元素已经产生，不能再访问了！",
         "translate": ""
     },
     {
         "source": "Those dead elements might even be in a completely uninitialized state!",
-        "suggest": "那些死元素甚至可能处于完全未初始化的状态!",
+        "suggest": "那些死元素甚至可能处于完全未初始化的状态！",
         "translate": ""
     },
     {
@@ -3891,7 +3891,7 @@
     },
     {
         "source": "and `data[alive.end..]` are dead (i.e. the elements were already read and must not be touched anymore!)",
-        "suggest": "和 `data[alive.end..]` 已死 (即，元素已被读取，不能再触摸! )",
+        "suggest": "和 `data[alive.end..]` 已死 (即，元素已被读取，不能再触摸！)",
         "translate": ""
     },
     {
@@ -4076,12 +4076,12 @@
     },
     {
         "source": "Only print the elements that were not yielded yet: we cannot access the yielded elements anymore.",
-        "suggest": "只打印尚未产生的元素: 我们不能再访问产生的元素。",
+        "suggest": "只打印尚未产生的元素：我们不能再访问产生的元素。",
         "translate": ""
     },
     {
         "source": "We can still access the original array: it has not been moved.",
-        "suggest": "我们仍然可以访问原始数组: 它尚未移动。",
+        "suggest": "我们仍然可以访问原始数组：它尚未移动。",
         "translate": ""
     },
     {
@@ -4496,7 +4496,7 @@
     },
     {
         "source": "If it wishes to mutably borrow as the type – allowing the underlying data to be modified, it can additionally implement [`BorrowMut<T>`].",
-        "suggest": "如果希望将类型可变为借用-允许修改基础数据，则可以另外实现 [`BorrowMut<T>`]。",
+        "suggest": "如果希望将类型可变为借用 - 允许修改基础数据，则可以另外实现 [`BorrowMut<T>`]。",
         "translate": ""
     },
     {
@@ -4616,7 +4616,7 @@
     },
     {
         "source": "Can `CaseInsensitiveString` implement `Borrow<str>`?",
-        "suggest": "`CaseInsensitiveString` 可以实现 `Borrow<str>` 吗?",
+        "suggest": "`CaseInsensitiveString` 可以实现 `Borrow<str>` 吗？",
         "translate": ""
     },
     {
@@ -4756,7 +4756,7 @@
     },
     {
         "source": "Rust memory safety is based on this rule: Given an object `T`, it is only possible to have one of the following:",
-        "suggest": "Rust 内存安全基于以下规则: 给定对象 `T`，则只能具有以下之一:",
+        "suggest": "Rust 内存安全基于以下规则：给定对象 `T`，则只能具有以下之一:",
         "translate": ""
     },
     {

@@ -1381,7 +1381,7 @@
     },
     {
         "source": "We do *not* exclusively own the entire list here, references to node's `element` have been handed out by the iterator!",
-        "suggest": "我们不是在这里独占整个列表，而是由迭代器分发了节点 `element` 的引用!",
+        "suggest": "我们不是在这里独占整个列表，而是由迭代器分发了节点 `element` 的引用！",
         "translate": ""
     },
     {
@@ -1446,7 +1446,7 @@
     },
     {
         "source": "Warning: this will not check that the provided node belongs to the current list.",
-        "suggest": "警告: 这不会检查提供的节点是否属于当前列表。",
+        "suggest": "警告：这不会检查提供的节点是否属于当前列表。",
         "translate": ""
     },
     {
@@ -1476,7 +1476,7 @@
     },
     {
         "source": "Warning: this will not check that the provided node belongs to the two existing lists.",
-        "suggest": "警告: 这不会检查提供的节点是否属于两个现有列表。",
+        "suggest": "警告：这不会检查提供的节点是否属于两个现有列表。",
         "translate": ""
     },
     {
@@ -2146,7 +2146,7 @@
     },
     {
         "source": "Internal safety invariant: the entire slice is dereferencable.",
-        "suggest": "内部安全不变性: 整个切片都是可取的。",
+        "suggest": "内部安全不变性：整个切片都是可取的。",
         "translate": ""
     },
     {
@@ -2776,7 +2776,7 @@
     },
     {
         "source": "Should we consider `head == 0` to mean that `self` is contiguous?",
-        "suggest": "我们是否应该认为 `head == 0` 表示 `self` 是连续的?",
+        "suggest": "我们是否应该认为 `head == 0` 表示 `self` 是连续的？",
         "translate": ""
     },
     {
@@ -3176,7 +3176,7 @@
     },
     {
         "source": "then restart the algorithm with a new (smaller) store Sometimes the temp store is reached when the right edge is at the end of the buffer - this means we've hit the right order with fewer swaps!",
-        "suggest": "然后使用新的 (smaller) 存储区重新启动算法。有时，当正确的 edge 位于缓冲区的末尾时，便达到了临时存储区 - 这意味着我们以更少的交换找到了正确的顺序!",
+        "suggest": "然后使用新的 (smaller) 存储区重新启动算法。有时，当正确的 edge 位于缓冲区的末尾时，便达到了临时存储区 - 这意味着我们以更少的交换找到了正确的顺序！",
         "translate": ""
     },
     {
@@ -3561,12 +3561,12 @@
     },
     {
         "source": "Test cases where block at end of buffer is bigger than block at start",
-        "suggest": "测试用例: 缓冲区末尾的块大于起始块",
+        "suggest": "测试用例：缓冲区末尾的块大于起始块",
         "translate": ""
     },
     {
         "source": "Test cases where block at start of buffer is bigger than block at end",
-        "suggest": "测试用例: 缓冲区开始处的块大于结束处的块",
+        "suggest": "测试用例：缓冲区开始处的块大于结束处的块",
         "translate": ""
     },
     {
@@ -3611,7 +3611,7 @@
     },
     {
         "source": "The `f` value implements the `Write` trait, which is what the write!",
-        "suggest": "`f` 值实现 `Write` trait，这就是写内容!",
+        "suggest": "`f` 值实现 `Write` trait，这就是写内容！",
         "translate": ""
     },
     {
@@ -4011,7 +4011,7 @@
     },
     {
         "source": "When used together with the `#` flag, a similar rule applies: padding zeros are inserted after the prefix but before the digits.",
-        "suggest": "当与 `#` 标志一起使用时，将应用类似的规则: 将填充零插入在前缀之后但在数字之前。",
+        "suggest": "当与 `#` 标志一起使用时，将应用类似的规则：将填充零插入在前缀之后但在数字之前。",
         "translate": ""
     },
     {
@@ -4071,7 +4071,7 @@
     },
     {
         "source": "means that this `{...}` is associated with *two* format inputs rather than one: the first input holds the `usize` precision, and the second holds the value to print.",
-        "suggest": "表示此 `{...}` 与 *两个* 格式输入相关联，而不是与一个输入相关联: 第一个输入保存 `usize` 精度，第二个输入保存要打印的值。",
+        "suggest": "表示此 `{...}` 与 *两个* 格式输入相关联，而不是与一个输入相关联：第一个输入保存 `usize` 精度，第二个输入保存要打印的值。",
         "translate": ""
     },
     {

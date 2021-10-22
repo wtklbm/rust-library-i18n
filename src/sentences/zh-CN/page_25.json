@@ -4461,7 +4461,7 @@
     },
     {
         "source": "Copy a to dst, then insert 128 bits (composed of 4 packed 32-bit integers) from b into dst at the location specified by imm8.",
-        "suggest": "将 a 复制到 dst，然后将 b 中的 128 位(由 4 个压缩的 32 位整数组成) 插入到 dst 中 imm8 指定的位置。",
+        "suggest": "将 a 复制到 dst，然后将 b 中的 128 位 (由 4 个压缩的 32 位整数组成) 插入到 dst 中 imm8 指定的位置。",
         "translate": ""
     },
     {

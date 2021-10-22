@@ -936,7 +936,7 @@
     },
     {
         "source": "Bits `[3:0]`: If any of these bits are set, the corresponding result element is cleared.",
-        "suggest": "`[3:0]` 位: 如果这些位中的任何一位被置位，则相应的结果元素将被清除。",
+        "suggest": "`[3:0]` 位：如果这些位中的任何一位被置位，则相应的结果元素将被清除。",
         "translate": ""
     },
     {
@@ -1881,7 +1881,7 @@
     },
     {
         "source": "LLVM-CODEGEN ERROR: LLVM ERROR: Cannot select:",
-        "suggest": "LLVM-CODEGEN 错误: LLVM 错误: 无法选择:",
+        "suggest": "LLVM-CODEGEN 错误: LLVM 错误：无法选择:",
         "translate": ""
     },
     {
@@ -1986,7 +1986,7 @@
     },
     {
         "source": "These intrinsics doesn't exist on x86 b/c it requires a 64-bit register, which doesn't exist on x86!",
-        "suggest": "这些内部函数在 x86 b/c 上不存在，它需要一个 64 位寄存器，而 x86 上不存在!",
+        "suggest": "这些内部函数在 x86 b/c 上不存在，它需要一个 64 位寄存器，而 x86 上不存在！",
         "translate": ""
     },
     {
@@ -2536,7 +2536,7 @@
     },
     {
         "source": "Look for `call` instructions in the disassembly to detect whether inlining failed: all intrinsics are `#[inline(always)]`, so calling one intrinsic from another should not generate `call` instructions.",
-        "suggest": "在反汇编中查找 `call` 指令以检测内联是否失败: 所有内部函数都为 `#[inline(always)]`，因此从另一个内部函数调用一个内部函数不应生成 `call` 指令。",
+        "suggest": "在反汇编中查找 `call` 指令以检测内联是否失败：所有内部函数都为 `#[inline(always)]`，因此从另一个内部函数调用一个内部函数不应生成 `call` 指令。",
         "translate": ""
     },
     {
@@ -2561,7 +2561,7 @@
     },
     {
         "source": "As it seems dictated by Windows's ABI (I believe?), we probably can't do much about it.",
-        "suggest": "正如 Windows 的 ABI (我相信吗? ) 所规定的那样，我们可能对此无能为力。",
+        "suggest": "正如 Windows 的 ABI (我相信吗？) 所规定的那样，我们可能对此无能为力。",
         "translate": ""
     },
     {
@@ -2811,7 +2811,7 @@
     },
     {
         "source": "we still need to verify these intrinsics or find a reference for them, need to figure out where though!",
-        "suggest": "我们仍然需要验证这些内部函数或为它们找到引用，但是需要弄清楚在哪里!",
+        "suggest": "我们仍然需要验证这些内部函数或为它们找到引用，但是需要弄清楚在哪里！",
         "translate": ""
     },
     {
@@ -2966,7 +2966,7 @@
     },
     {
         "source": "These don't actually have a target feature unlike their brethren with the `x` inside the name which requires adx",
-        "suggest": "这些实际上没有目标特征，不像他们的兄弟，名字里面有 `x`, 需要 adx",
+        "suggest": "这些实际上没有目标特征，不像他们的兄弟，名字里面有 `x`，需要 adx",
         "translate": ""
     },
     {
@@ -2981,7 +2981,7 @@
     },
     {
         "source": "these flags on the rdtsc/rtdscp intrinsics we don't test for right now, but we may wish to add these one day!",
-        "suggest": "我们暂时不测试 rdtsc/rtdscp 内部函数上的这些标志，但我们可能希望添加这些天!",
+        "suggest": "我们暂时不测试 rdtsc/rtdscp 内部函数上的这些标志，但我们可能希望添加这些天！",
         "translate": ""
     },
     {
@@ -3041,7 +3041,7 @@
     },
     {
         "source": "These intrinsics have all been manually verified against Clang's headers to be available on x86, and the u64 arguments seem spurious I guess?",
-        "suggest": "这些内部函数都已针对 Clang 的标头进行了手动验证，以在 x86 上可用，我猜 u64 的参数看起来是假的?",
+        "suggest": "这些内部函数都已针对 Clang 的标头进行了手动验证，以在 x86 上可用，我猜 u64 的参数看起来是假的？",
         "translate": ""
     },
     {
@@ -3766,7 +3766,7 @@
     },
     {
         "source": "Is the `bit` in the cache set?",
-        "suggest": "缓存中的 `bit` 是否已设置?",
+        "suggest": "缓存中的 `bit` 是否已设置？",
         "translate": ""
     },
     {
@@ -4206,7 +4206,7 @@
     },
     {
         "source": "Is the CPU known to have a broken NEON unit?",
-        "suggest": "已知 CPU 的 NEON 单元损坏了吗?",
+        "suggest": "已知 CPU 的 NEON 单元损坏了吗？",
         "translate": ""
     },
     {
@@ -4291,7 +4291,7 @@
     },
     {
         "source": "The auxiliary vector contains at most 32 (key,value) fields: from `AT_EXECFN = 31` to `AT_NULL = 0`.",
-        "suggest": "辅助 vector 最多包含 32 个 (key,value) 字段: 从 `AT_EXECFN = 31` 到 `AT_NULL = 0`。",
+        "suggest": "辅助 vector 最多包含 32 个 (key,value) 字段：从 `AT_EXECFN = 31` 到 `AT_NULL = 0`。",
         "translate": ""
     },
     {
@@ -4361,7 +4361,7 @@
     },
     {
         "source": "Does the field exist?",
-        "suggest": "字段是否存在?",
+        "suggest": "字段是否存在？",
         "translate": ""
     },
     {
@@ -4866,7 +4866,7 @@
     },
     {
         "source": "If you can remove it and CI passes, please feel free to do so!",
-        "suggest": "如果您可以删除它并通过 CI 认证，请随时这样做!",
+        "suggest": "如果您可以删除它并通过 CI 认证，请随时这样做！",
         "translate": ""
     },
     {
@@ -4951,12 +4951,12 @@
     },
     {
         "source": "Feature specific intrinsics will work here!",
-        "suggest": "特定于特征的内部函数将在这里工作!",
+        "suggest": "特定于特征的内部函数将在这里工作！",
         "translate": ""
     },
     {
         "source": "Go wild!",
-        "suggest": "去野外!",
+        "suggest": "去野外！",
         "translate": ""
     },
     {
@@ -4966,7 +4966,7 @@
     },
     {
         "source": "The `stdarch` crate is more than willing to accept contributions!",
-        "suggest": "`stdarch` crate 非常愿意接受捐款!",
+        "suggest": "`stdarch` crate 非常愿意接受捐款！",
         "translate": ""
     },
     {
@@ -4981,7 +4981,7 @@
     },
     {
         "source": "Also remember that this repository requires the nightly channel of Rust!",
-        "suggest": "还请记住，该仓库需要 Rust 的每晚通道!",
+        "suggest": "还请记住，该仓库需要 Rust 的每晚通道！",
         "translate": ""
     },
     {

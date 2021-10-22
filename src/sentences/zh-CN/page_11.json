@@ -31,7 +31,7 @@
     },
     {
         "source": "would create an unaligned reference, and thus be Undefined Behavior!",
-        "suggest": "会导致未对齐的引用，从而成为未定义的行为!",
+        "suggest": "会导致未对齐的引用，从而成为未定义的行为！",
         "translate": ""
     },
     {
@@ -96,7 +96,7 @@
     },
     {
         "source": "This corresponds to writing your own allocator: allocating zero-sized objects is not very hard.",
-        "suggest": "这相当于编写自己的分配器: 分配零大小的对象不是很困难。",
+        "suggest": "这相当于编写自己的分配器：分配零大小的对象不是很困难。",
         "translate": ""
     },
     {
@@ -916,7 +916,7 @@
     },
     {
         "source": "Note, that we use wrapping operations here intentionally – the original formula uses e.g., subtraction `mod n`.",
-        "suggest": "注意，这里我们有意使用包装操作-原始公式使用减法 `mod n`。",
+        "suggest": "注意，这里我们有意使用包装操作 - 原始公式使用减法 `mod n`。",
         "translate": ""
     },
     {
@@ -951,7 +951,7 @@
     },
     {
         "source": "Yay!",
-        "suggest": "耶!",
+        "suggest": "耶！",
         "translate": ""
     },
     {
@@ -1436,7 +1436,7 @@
     },
     {
         "source": "However, this does not change the fact that mutating through a (pointer derived from a) shared reference is undefined behavior unless the mutation happens inside an [`UnsafeCell<T>`].",
-        "suggest": "但是，这不会改变以下事实: 除非通过 [`UnsafeCell<T>`] 内部发生可变的，否则通过 (从 a 派生的指针) 进行共享引用的可变的是未定义的行为。",
+        "suggest": "但是，这不会改变以下事实：除非通过 [`UnsafeCell<T>`] 内部发生可变的，否则通过 (从 a 派生的指针) 进行共享引用的可变的是未定义的行为。",
         "translate": ""
     },
     {
@@ -2066,7 +2066,7 @@
     },
     {
         "source": "It's much nicer!",
-        "suggest": "好多了!",
+        "suggest": "好多了！",
         "translate": ""
     },
     {
@@ -2451,7 +2451,7 @@
     },
     {
         "source": "Takes each element in the `Iterator`: if it is an `Err`, no further elements are taken, and the `Err` is returned.",
-        "suggest": "接受 `Iterator` 中的每个元素: 如果它是 `Err`，则不再获取其他元素，并返回 `Err`。",
+        "suggest": "接受 `Iterator` 中的每个元素：如果它是 `Err`，则不再获取其他元素，并返回 `Err`。",
         "translate": ""
     },
     {
@@ -3221,7 +3221,7 @@
     },
     {
         "source": "import iterator!",
-        "suggest": "导入迭代器!",
+        "suggest": "导入迭代器！",
         "translate": ""
     },
     {
@@ -3951,7 +3951,7 @@
     },
     {
         "source": "compile fail!",
-        "suggest": "编译失败!",
+        "suggest": "编译失败！",
         "translate": ""
     },
     {
@@ -4256,7 +4256,7 @@
     },
     {
         "source": "(Hypothesis: reverse is troublesome because the sides can be aligned differently -- will be, when the length is odd -- so there's no way of emitting pre- and postludes to use fully-aligned SIMD in the middle.)",
-        "suggest": "(假设: 反向是麻烦的，因为当长度为奇数时，边的对齐方式可能会有所不同 - 因此，无法在中间使用完全对齐的 SIMD 发出前奏和后奏的方式。)",
+        "suggest": "(假设：反向是麻烦的，因为当长度为奇数时，边的对齐方式可能会有所不同 - 因此，无法在中间使用完全对齐的 SIMD 发出前奏和后奏的方式。)",
         "translate": ""
     },
     {
@@ -4771,7 +4771,7 @@
     },
     {
         "source": "`String: Borrow<str>`), you can use `iter().any`:",
-        "suggest": "`字符串: 借用 <str>`)，则可以使用 `iter().any`:",
+        "suggest": "`字符串：借用 <str>`)，则可以使用 `iter().any`:",
         "translate": ""
     },
     {
@@ -4991,7 +4991,7 @@
     },
     {
         "source": "It returns a triplet of the following values: all elements less than the one at the given index, the value at the given index, and all elements greater than the one at the given index.",
-        "suggest": "它返回以下值的三元组: 所有元素在给定索引处小于一个，在给定索引处的值，以及所有在给定索引处大于一个的元素。",
+        "suggest": "它返回以下值的三元组：所有元素在给定索引处小于一个，在给定索引处的值，以及所有在给定索引处大于一个的元素。",
         "translate": ""
     },
     {

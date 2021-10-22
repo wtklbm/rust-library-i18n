@@ -571,7 +571,7 @@
     },
     {
         "source": "There's a number of pitfalls and gotchas in various places, which will attempt to be documented here, but there may be others lurking!",
-        "suggest": "在不同的地方有许多缺陷和陷阱，将在此处进行记录，但可能还有其他隐患!",
+        "suggest": "在不同的地方有许多缺陷和陷阱，将在此处进行记录，但可能还有其他隐患！",
         "translate": ""
     },
     {
@@ -2381,7 +2381,7 @@
     },
     {
         "source": "The reference is [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 2: Instruction Set Reference, A-Z][intel64_ref].",
-        "suggest": "引用的是 [英特尔 64 位和 IA-32 架构软件开发人员手册第 2 卷: 指令集参考, A-Z][intel64_ref]。",
+        "suggest": "引用的是 [英特尔 64 位和 IA-32 架构软件开发人员手册第 2 卷：指令集参考，A-Z][intel64_ref]。",
         "translate": ""
     },
     {
@@ -2416,7 +2416,7 @@
     },
     {
         "source": "Assist in expanding the AES cipher key by computing steps towards generating a round key for encryption cipher using data from `a` and an",
-        "suggest": "通过计算以下步骤来协助扩展 AES 密码密钥: 使用 `a` 和",
+        "suggest": "通过计算以下步骤来协助扩展 AES 密码密钥：使用 `a` 和",
         "translate": ""
     },
     {
@@ -2581,12 +2581,12 @@
     },
     {
         "source": "Alternatively adds and subtracts packed double-precision (64-bit) floating-point elements in `a` to/from packed elements in `b`.",
-        "suggest": "或者，将`a`中的包装双精度 (64位) 浮点元素与`b`中的包装元素进行加减。",
+        "suggest": "或者，将`a`中的包装双精度 (64 位) 浮点元素与`b`中的包装元素进行加减。",
         "translate": ""
     },
     {
         "source": "Alternatively adds and subtracts packed single-precision (32-bit) floating-point elements in `a` to/from packed elements in `b`.",
-        "suggest": "或者，将`a`中的包装的单精度 (32位) 浮点元素与`b`中的包装的元素进行加减。",
+        "suggest": "或者，将`a`中的包装的单精度 (32 位) 浮点元素与`b`中的包装的元素进行加减。",
         "translate": ""
     },
     {
@@ -4481,7 +4481,7 @@
     },
     {
         "source": "Shifts packed 32-bit integers in `a` right by the amount specified by the corresponding element in `count` while shifting in sign bits.",
-        "suggest": "将 `a` 中的32位整数向右移动，移动量由 `count` 中的相应元素指定，同时移入符号位。",
+        "suggest": "将 `a` 中的 32 位整数向右移动，移动量由 `count` 中的相应元素指定，同时移入符号位。",
         "translate": ""
     },
     {
