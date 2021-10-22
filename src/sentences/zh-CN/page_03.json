@@ -26,7 +26,7 @@
     },
     {
         "source": "Relaxed suffices in the above because this is fundamentally an optimization: we are always racing with weak pointers being dropped.",
-        "suggest": "上面的内容足以满足需要，因为这从根本上来说是一种优化：我们一直在争夺被丢弃的弱指针。",
+        "suggest": "上面的 relaxed 足以满足需要，因为这从根本上来说是一种优化：我们总是在与被丢弃的弱指针赛跑。",
         "translate": ""
     },
     {
@@ -306,7 +306,7 @@
     },
     {
         "source": "Returns `None` when the pointer is dangling and there is no allocated `ArcInner`, (i.e., when this `Weak` was created by `Weak::new`).",
-        "suggest": "当指针悬空并且没有分配的 `ArcInner` 时 (即，当 `Weak` 由 `Weak::new` 创建时)，返回 `None`。",
+        "suggest": "当指针悬垂并且没有分配的 `ArcInner` 时 (即，当 `Weak` 由 `Weak::new` 创建时)，返回 `None`。",
         "translate": ""
     },
     {
@@ -881,7 +881,7 @@
     },
     {
         "source": "and that's all!",
-        "suggest": "就这样！",
+        "suggest": "仅此而已！",
         "translate": ""
     },
     {
@@ -4076,7 +4076,7 @@
     },
     {
         "source": "(Vec grows to next power of two) good- [9, 12, 15, X, X, X, X, |6] bug-  [15, 12, X, X, X, |6, X, X]",
-        "suggest": "(Vec 成长为下一个 2 的幂) 好 - [9, 12, 15, X, X, X, X，|6] 错误 - [15, 12, X, X, X，|6, X, X]",
+        "suggest": "(Vec 增长到二的次方) good- `[9, 12, 15, X, X, X, X, |6]` bug- `[15, 12, X, X, X, |6, X, X]`",
         "translate": ""
     },
     {
@@ -4086,7 +4086,7 @@
     },
     {
         "source": "bug-  [15, 12, X, X, X, X, |X, X]",
-        "suggest": "错误 - [15, 12, X, X, X, X，|X, X]",
+        "suggest": "bug- `[15, 12, X, X, X, X, |X, X]`",
         "translate": ""
     },
     {
@@ -4481,7 +4481,7 @@
     },
     {
         "source": "It's not entirely clear how it does it (frame pointers? eh_frame info? both?) but it seems to work!",
-        "suggest": "尚不清楚它是如何工作的 (帧指针？eh_frame 信息？两者？)，但似乎可行！",
+        "suggest": "尚不清楚它是如何工作的 (帧指针？eh_frame 信息？两者都有？)，但似乎可行！",
         "translate": ""
     },
     {

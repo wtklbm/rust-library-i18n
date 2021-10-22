@@ -1071,7 +1071,7 @@
     },
     {
         "source": "A literal string (`\"hello\"`), byte string (`b\"hello\"`), character (`'a'`), byte character (`b'a'`), an integer or floating point number with or without a suffix (`1`, `1u8`, `2.3`, `2.3f32`).",
-        "suggest": "字面量字符串 (`\"hello\"`)，字节字符串 (`b\"hello\"`)，字符 (`'a'`)，字节字符 (`b'a'`)，带或不带后缀 ('1'，`1u8`，`2.3`，`2.3f32`) 的整数或浮点数。",
+        "suggest": "字符串字面量 (`\"hello\"`)，字节字符串 (`b\"hello\"`)，字符 (`'a'`)，字节字符 (`b'a'`)，带或不带后缀 ('1'，`1u8`，`2.3`，`2.3f32`) 的整数或浮点数。",
         "translate": ""
     },
     {
@@ -2056,7 +2056,7 @@
     },
     {
         "source": "If we're already resolved, nothing to do!",
-        "suggest": "如果我们已经解决，则无事可做！",
+        "suggest": "如果我们已经解决了，那就什么都不用做！",
         "translate": ""
     },
     {
@@ -3461,7 +3461,7 @@
     },
     {
         "source": "It takes time to order and drink a beer!",
-        "suggest": "订购和喝啤酒需要时间！",
+        "suggest": "点餐和喝啤酒需要时间！",
         "translate": ""
     },
     {
@@ -3476,12 +3476,12 @@
     },
     {
         "source": "for now.",
-        "suggest": "目前。",
+        "suggest": "现在。",
         "translate": ""
     },
     {
         "source": "Have another!",
-        "suggest": "有另外一个！",
+        "suggest": "再来一杯！",
         "translate": ""
     },
     {

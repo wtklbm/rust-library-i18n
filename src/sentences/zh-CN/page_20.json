@@ -301,7 +301,7 @@
     },
     {
         "source": "N.B., this takes a size, not a length!",
-        "suggest": "N.B.，这需要一个大小，而不是一个长度！",
+        "suggest": "注意，这需要一个大小，而不是一个长度！",
         "translate": ""
     },
     {
@@ -1411,7 +1411,7 @@
     },
     {
         "source": "unwrap ok: always `Some` on non-dummy entries",
-        "suggest": "好的解包：在非虚拟条目上总是 `Some`",
+        "suggest": "展开 ok：在非虚拟条目上总是 `Some`",
         "translate": ""
     },
     {
@@ -2291,7 +2291,7 @@
     },
     {
         "source": "Make libc adapt #[doc(cfg(...))] so we don't need these fake definitions here?",
-        "suggest": "使 libc 适应 #[doc (cfg (...) ) ]，所以我们在这里不需要这些假的定义吗？",
+        "suggest": "使 libc 适应 `#[doc(cfg(...))]`，所以我们在这里不需要这些假的定义吗？",
         "translate": ""
     },
     {
@@ -2861,7 +2861,7 @@
     },
     {
         "source": "This trait is sealed: it cannot be implemented outside the standard library.",
-        "suggest": "trait 是密封的：不能在标准库之外实现。",
+        "suggest": "这个 trait 是封闭的：它不能在标准库之外实现。",
         "translate": ""
     },
     {
@@ -4276,7 +4276,7 @@
     },
     {
         "source": "needed for readdir and syscall!",
-        "suggest": "readdir 和 syscall 所需！",
+        "suggest": "需要 readdir 和 syscall！",
         "translate": ""
     },
     {

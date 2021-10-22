@@ -4206,7 +4206,7 @@
     },
     {
         "source": "Is the CPU known to have a broken NEON unit?",
-        "suggest": "已知 CPU 的 NEON 单元损坏了吗？",
+        "suggest": "是否已知 CPU 有损坏的 NEON unit 吗？",
         "translate": ""
     },
     {
@@ -4956,7 +4956,7 @@
     },
     {
         "source": "Go wild!",
-        "suggest": "去野外！",
+        "suggest": "狂野起来！",
         "translate": ""
     },
     {

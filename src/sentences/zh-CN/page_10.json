@@ -2841,7 +2841,7 @@
     },
     {
         "source": "Example: self-referential struct",
-        "suggest": "示例：自我参照结构体",
+        "suggest": "示例：自引用结构体",
         "translate": ""
     },
     {
@@ -2856,7 +2856,7 @@
     },
     {
         "source": "Example: intrusive doubly-linked list",
-        "suggest": "示例：侵入式双向链表",
+        "suggest": "示例：侵入式双向链表列表",
         "translate": ""
     },
     {
@@ -2946,7 +2946,7 @@
     },
     {
         "source": "Notice that this guarantee does *not* mean that memory does not leak!",
-        "suggest": "请注意，此保证不 `*`* 表示内存不会泄漏！",
+        "suggest": "请注意，此保证不代表内存不会泄漏！",
         "translate": ""
     },
     {

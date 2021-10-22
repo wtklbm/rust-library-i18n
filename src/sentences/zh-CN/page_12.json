@@ -476,7 +476,7 @@
     },
     {
         "source": "performance here matters not!",
-        "suggest": "这里的表现无关紧要！",
+        "suggest": "这里的性能无关紧要！",
         "translate": ""
     },
     {
@@ -1161,7 +1161,7 @@
     },
     {
         "source": "Are we done?",
-        "suggest": "我们完了吗？",
+        "suggest": "我们完成了吗？",
         "translate": ""
     },
     {
@@ -4326,7 +4326,7 @@
     },
     {
         "source": "Approximate the period by lower bound max(|u|, |v|) + 1.",
-        "suggest": "用下限 `max(|u|，|v|) + 1` 估算周期。",
+        "suggest": "用下限 `max(|u|, |v|) + 1` 概略估算周期。",
         "translate": ""
     },
     {

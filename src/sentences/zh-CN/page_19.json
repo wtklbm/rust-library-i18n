@@ -2001,7 +2001,7 @@
     },
     {
         "source": "How many times has a port received without blocking?",
-        "suggest": "一个端口收到多少次无阻塞？",
+        "suggest": "一个端口在没有阻塞的情况下接收了多少次？",
         "translate": ""
     },
     {
@@ -3041,7 +3041,7 @@
     },
     {
         "source": "Is the channel disconnected yet?",
-        "suggest": "通道是否断开连接？",
+        "suggest": "通道断开了吗？",
         "translate": ""
     },
     {
@@ -3141,7 +3141,7 @@
     },
     {
         "source": "no room;",
-        "suggest": "没地儿;",
+        "suggest": "没有房间;",
         "translate": ""
     },
     {

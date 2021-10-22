@@ -326,7 +326,7 @@
     },
     {
         "source": "Produces: None, Some(2), Some(3), None, ...",
-        "suggest": "产生：无，Some(2)，Some(3)，无，...",
+        "suggest": "产生: 无，Some(2)，Some(3)，无，...",
         "translate": false
     },
     {
@@ -356,7 +356,7 @@
     },
     {
         "source": "pathological case: high = 10^23 (exact).",
-        "suggest": "病理情况：高 = 10 ^ 23 (exact)。",
+        "suggest": "病理情况: 高 = 10 ^ 23 (exact)。",
         "translate": false
     },
     {
@@ -796,7 +796,7 @@
     },
     {
         "source": "res\\[0\\] = GE\\[0\\] ? a\\[0\\] : b\\[0\\] res\\[1\\] = GE\\[1\\] ? a\\[1\\] : b\\[1\\] res\\[2\\] = GE\\[2\\] ? a\\[2\\] : b\\[2\\] res\\[3\\] = GE\\[3\\] ? a\\[3\\] : b\\[3\\]",
-        "suggest": "res\\[0\\]=GE\\[0\\]? a\\[0\\]: b\\[0\\] res\\[1\\]=GE\\[1\\] a\\[1\\]: b\\[1\\] res\\[2\\]=GE\\[2\\] 吗？a\\[2\\]: b\\[2\\] res\\[3\\]=GE\\[3\\]? a\\[3\\]: b\\[3\\]",
+        "suggest": "res\\[0\\]=GE\\[0\\]? a\\[0\\]: b\\[0\\] res\\[1\\]=GE\\[1\\] a\\[1\\]: b\\[1\\] res\\[2\\]=GE\\[2\\] 吗? a\\[2\\]: b\\[2\\] res\\[3\\]=GE\\[3\\]? a\\[3\\]: b\\[3\\]",
         "translate": false
     },
     {
@@ -1171,7 +1171,7 @@
     },
     {
         "source": "|<-              original_len                          ->| Kept: Elements which predicate returns true on.",
-        "suggest": "| <-original_len -> | 保留：谓词在其上返回 true 的元素。",
+        "suggest": "| <-original_len -> | 保留: 谓词在其上返回 true 的元素。",
         "translate": false
     },
     {
@@ -1386,7 +1386,7 @@
     },
     {
         "source": "[A o o o o o o . . . . . . .",
-        "suggest": "[噢！。。。。。。",
+        "suggest": "[噢!。。。。。。",
         "translate": false
     },
     {

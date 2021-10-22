@@ -3446,7 +3446,7 @@
     },
     {
         "source": "A simplified version of `IntoIter` that is not double-ended and has only one purpose: to drop the remainder of an `IntoIter`.",
-        "suggest": "`IntoIter` 的简化版本，不是双端的，只有一个目的：丢弃 `IntoIter` 的其余部分。",
+        "suggest": "`IntoIter` 的简化版本，它不是双端的，只有一个目的：丢弃 `IntoIter` 的其余部分。",
         "translate": ""
     },
     {
@@ -4436,7 +4436,7 @@
     },
     {
         "source": "of these are considered initialized and valid, except that near the end, while the tree is held through borrow type `Dying`, some of these pointers are dangling.",
-        "suggest": "这些树中的所有树被认为是初始化的和有效的，除了在末尾附近，虽然树是通过借用类型 `Dying` 保留的，但是其中一些指针悬空了。",
+        "suggest": "这些树中的所有树被认为是初始化的和有效的，除了在末尾附近，虽然树是通过借用类型 `Dying` 保留的，但是其中一些指针悬垂了。",
         "translate": ""
     },
     {
@@ -4926,7 +4926,7 @@
     },
     {
         "source": "Because mutable pointers can roam anywhere around the tree, the returned pointer can easily be used to make the original pointer dangling, out of bounds, or invalid under stacked borrow rules.",
-        "suggest": "因为可变指针可以在树的任何位置漫游，所以返回的指针可以很容易地用于使原始指针悬空，越界或在堆叠借用规则下无效。",
+        "suggest": "因为可变指针可以在树的任何位置漫游，所以返回的指针可以很容易地用于使原始指针悬垂，越界或在堆叠借用规则下无效。",
         "translate": ""
     },
     {

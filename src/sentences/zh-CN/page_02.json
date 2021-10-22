@@ -476,7 +476,7 @@
     },
     {
         "source": "The memory was freed when `x` went out of scope above, so `x_ptr` is now dangling!",
-        "suggest": "当 `x` 离开作用域时，内存被释放，所以 `x_ptr` 现在悬空了！",
+        "suggest": "当 `x` 超出上面的作用域时，其内存将被释放，所以 `x_ptr` 现在悬垂了！",
         "translate": ""
     },
     {
@@ -581,7 +581,7 @@
     },
     {
         "source": "Shared references in Rust disallow mutation by default, and [`Rc`] is no exception: you cannot generally obtain a mutable reference to something inside an [`Rc`].",
-        "suggest": "默认情况下，Rust 中的共享引用不允许可变的，[`Rc`] 也不例外：您通常无法获得 [`Rc`] 内部内容的可变引用。",
+        "suggest": "默认情况下，Rust 中的共享引用不允许可变，[`Rc`] 也不例外：您通常无法获得 [`Rc`] 内部内容的可变引用。",
         "translate": ""
     },
     {
@@ -1006,7 +1006,7 @@
     },
     {
         "source": "Make sure we do not create a dangling Weak",
-        "suggest": "确保我们不会产生悬空的 Weak",
+        "suggest": "确保我们不会创建悬垂的 Weak",
         "translate": ""
     },
     {
@@ -1591,12 +1591,12 @@
     },
     {
         "source": "The pointer may be dangling, unaligned or even [`null`] otherwise.",
-        "suggest": "指针可能悬空，未对齐，或者甚至 [`null`]。",
+        "suggest": "指针可能是悬垂的，未对齐的，甚至是 [`null`]。",
         "translate": ""
     },
     {
         "source": "If the pointer is dangling, we return the sentinel directly.",
-        "suggest": "如果指针悬空，我们将直接返回哨兵。",
+        "suggest": "如果指针悬垂，我们将直接返回哨兵。",
         "translate": ""
     },
     {
@@ -1671,7 +1671,7 @@
     },
     {
         "source": "This is a dangling Weak.",
-        "suggest": "这是悬空的 Weak。",
+        "suggest": "这是悬垂的 Weak。",
         "translate": ""
     },
     {
@@ -1736,7 +1736,7 @@
     },
     {
         "source": "Returns `None` when the pointer is dangling and there is no allocated `RcBox`, (i.e., when this `Weak` was created by `Weak::new`).",
-        "suggest": "当指针悬空并且没有分配的 `RcBox` 时 (即，当 `Weak` 由 `Weak::new` 创建时)，返回 `None`。",
+        "suggest": "当指针悬垂并且没有分配的 `RcBox` 时 (即，当 `Weak` 由 `Weak::new` 创建时)，返回 `None`。",
         "translate": ""
     },
     {
@@ -2746,7 +2746,7 @@
     },
     {
         "source": "The gist of the story is: we must enforce the invariants on the top four runs on the stack.",
-        "suggest": "故事的要旨是：我们必须在栈的前四个运行中强制执行不变式。",
+        "suggest": "这个故事的重点是：我们必须在栈的前四次运行中强制执行不变量。",
         "translate": ""
     },
     {
@@ -3176,7 +3176,7 @@
     },
     {
         "source": "You can create a `String` from [a literal string][`str`] with [`String::from`]:",
-        "suggest": "您可以使用 [`String::from`] 从 [字面量字符串][`str`] 创建 `String`:",
+        "suggest": "您可以使用 [`String::from`] 从 [字符串字面量][`str`] 创建 `String`:",
         "translate": ""
     },
     {
@@ -3521,7 +3521,7 @@
     },
     {
         "source": "Not all byte slices are valid strings, however: strings are required to be valid UTF-8.",
-        "suggest": "并非所有的字节片都是有效的字符串，但是：字符串必须是有效的 UTF-8。",
+        "suggest": "然而，并非所有的字节片都是有效的字符串，字符串必须是有效的 UTF-8。",
         "translate": ""
     },
     {
@@ -4456,7 +4456,7 @@
     },
     {
         "source": "This may be a bit counter-intuitive at first: after all, isn't the point of `Arc<T>` thread safety?",
-        "suggest": "起初这可能有点违反直觉：毕竟，`Arc<T>` 线程安全性不是重点吗？",
+        "suggest": "起初这可能有点违反直觉：毕竟，`Arc<T>` 的重点不就是线程安全吗？",
         "translate": ""
     },
     {

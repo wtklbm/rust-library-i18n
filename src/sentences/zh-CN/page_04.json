@@ -1206,7 +1206,7 @@
     },
     {
         "source": "(presumably something else may be loaded there?) This is where the `bias` field comes into play, and we need to figure out the value of `bias` here.",
-        "suggest": "(大概在那里可能还有其他内容吗？) 这是 `bias` 字段起作用的地方，我们需要在这里计算 `bias` 的值。",
+        "suggest": "(可能在那里加载了其他内容？) 这是 `bias` 字段起作用的地方，我们需要在这里计算 `bias` 的值。",
         "translate": ""
     },
     {
@@ -1501,7 +1501,7 @@
     },
     {
         "source": "Invariant: after this conditional completes without early returning from an error, the cache entry for this path is at index 0.",
-        "suggest": "不变式：此条件完成后又没有从错误中尽早返回，此路径的缓存条目位于索引 0。",
+        "suggest": "不变量：此此条件完成后，如果没有从错误中提前返回，则此路径的缓存项位于索引 0 处。",
         "translate": ""
     },
     {
@@ -3011,7 +3011,7 @@
     },
     {
         "source": "Creates a `NonNull` that is dangling, but well-aligned for this Layout.",
-        "suggest": "创建一个悬空的 `NonNull`，但此 Layout 非常适合该 `NonNull`。",
+        "suggest": "创建一个悬垂的 `NonNull`，但此 Layout 非常适合该 `NonNull`。",
         "translate": ""
     },
     {
@@ -3546,7 +3546,7 @@
     },
     {
         "source": "If not, it's a different type: just print it out unadorned.",
-        "suggest": "如果不是，那是另一种类型：只需将其打印出来而没有装饰。",
+        "suggest": "如果不是，那就是另一种类型：只需将其打印出来即可。",
         "translate": ""
     },
     {
@@ -3761,7 +3761,7 @@
     },
     {
         "source": "Beware of relying on them inside of your code!",
-        "suggest": "当心在代码中依赖它们！",
+        "suggest": "注意不要在代码中依赖它们！",
         "translate": ""
     },
     {
@@ -3891,7 +3891,7 @@
     },
     {
         "source": "and `data[alive.end..]` are dead (i.e. the elements were already read and must not be touched anymore!)",
-        "suggest": "和 `data[alive.end..]` 已死 (即，元素已被读取，不能再触摸！)",
+        "suggest": "和 `data[alive.end..]` 已失效 (即，元素已被读取，不能再接触到了！)",
         "translate": ""
     },
     {
@@ -4756,7 +4756,7 @@
     },
     {
         "source": "Rust memory safety is based on this rule: Given an object `T`, it is only possible to have one of the following:",
-        "suggest": "Rust 内存安全基于以下规则：给定对象 `T`，则只能具有以下之一:",
+        "suggest": "Rust 内存安全基于以下规则：给定一个对象 `T`，它只能具有以下之一:",
         "translate": ""
     },
     {

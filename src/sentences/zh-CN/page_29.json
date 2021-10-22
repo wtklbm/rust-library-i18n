@@ -1616,7 +1616,7 @@
     },
     {
         "source": "//! You can test out this program via:",
-        "suggest": "//！您可以通过以下方式测试此程序:",
+        "suggest": "/// 您可以通过以下方式测试此程序:",
         "translate": ""
     },
     {
@@ -1831,7 +1831,7 @@
     },
     {
         "source": "Evaluation function: give different scores to different patterns after a fixed depth.",
-        "suggest": "评价函数：在固定深度后，给不同的图案赋予不同的分数。",
+        "suggest": "评估函数：在固定深度后，给不同的图案赋予不同的分数。",
         "translate": ""
     },
     {
@@ -2251,7 +2251,7 @@
     },
     {
         "source": "~~~~~~~~ borrowed value does not live long enough",
-        "suggest": "～～～～～～ 借来的值活不长",
+        "suggest": "～～～～～～ 借来的值活得不够长",
         "translate": ""
     },
     {

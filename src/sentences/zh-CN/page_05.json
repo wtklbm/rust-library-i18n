@@ -651,7 +651,7 @@
     },
     {
         "source": "opts-out of the immutability guarantee for `&T`: a shared reference `&UnsafeCell<T>` may point to data that is being mutated.",
-        "suggest": "选择不使用 `&T` 的不可替代保证：共享的 `&UnsafeCell<T>` 可能指向正在可变的的数据。",
+        "suggest": "选择不使用 `&T` 的不变性保证：共享引用 `&UnsafeCell<T>` 可能指向正在可变的数据。",
         "translate": ""
     },
     {
@@ -2761,7 +2761,7 @@
     },
     {
         "source": "asymmetry: if `a < b` then `!(a > b)`, as well as `a > b` implying `!(a < b)`;",
-        "suggest": "不对称：如果 `a < b` 则 `!(a > b)`，以及 `a > b` 表示 `!(a < b)`;",
+        "suggest": "不对称性：如果 `a < b` 则 `!(a > b)`，以及 `a > b` 表示 `!(a < b)`;",
         "translate": ""
     },
     {

@@ -1466,7 +1466,7 @@
     },
     {
         "source": "Creates a new `NonNull` that is dangling, but well-aligned.",
-        "suggest": "创建一个悬空但对齐良好的新 `NonNull`。",
+        "suggest": "创建一个悬垂但对齐良好的新 `NonNull`。",
         "translate": ""
     },
     {
@@ -1736,7 +1736,7 @@
     },
     {
         "source": "Creates a new `Unique` that is dangling, but well-aligned.",
-        "suggest": "创建一个悬空但对齐良好的新 `Unique`。",
+        "suggest": "创建一个悬垂但对齐良好的新 `Unique`。",
         "translate": ""
     },
     {
@@ -2806,7 +2806,7 @@
     },
     {
         "source": "Calling this method with an out-of-bounds index or a dangling `slice` pointer is *[undefined behavior]* even if the resulting reference is not used.",
-        "suggest": "即使未使用所得的引用，使用越界索引或悬空的 `slice` 指针调用此方法也是 *[undefined 行为]*。",
+        "suggest": "即使未使用所得的引用，使用越界索引或悬垂的 `slice` 指针调用此方法也是 *[undefined 行为]*。",
         "translate": ""
     },
     {
@@ -2831,7 +2831,7 @@
     },
     {
         "source": "the caller guarantees that `slice` is not dangling, so it cannot be longer than `isize::MAX`.",
-        "suggest": "调用者保证 `slice` 没有悬空，因此长度不能超过 `isize::MAX`。",
+        "suggest": "调用者保证 `slice` 没有悬垂，因此长度不能超过 `isize::MAX`。",
         "translate": ""
     },
     {

@@ -3006,7 +3006,7 @@
     },
     {
         "source": "Slow path: write the address to a local buffer, the use f.pad.",
-        "suggest": "慢路径：将地址写入本地缓冲区，使用 f.pad。",
+        "suggest": "慢速路径：将地址写入本地缓冲区，使用 f.pad。",
         "translate": ""
     },
     {

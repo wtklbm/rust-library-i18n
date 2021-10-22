@@ -451,7 +451,7 @@
     },
     {
         "source": "Ensure stackaddr is page aligned!",
-        "suggest": "确保 stackaddr 是页面对齐的！",
+        "suggest": "确保 stackaddr 是页对齐的！",
         "translate": ""
     },
     {
@@ -526,7 +526,7 @@
     },
     {
         "source": "FIXME does freebsd really fault *below* the guard addr?",
-        "suggest": "FIXME freebsd 是否真的在 *保护地址以下* 故障？",
+        "suggest": "FIXME 难道 freebsd 真的会在守卫地址下面出错吗？",
         "translate": ""
     },
     {
@@ -1976,7 +1976,7 @@
     },
     {
         "source": "Implement quirk: when they say whitespace here, they include the entire ASCII control plane:",
-        "suggest": "实现怪癖：当他们在此处说空白时，它们包括整个 ASCII 控制平面:",
+        "suggest": "实现 quirk：当他们在此处说空白时，它们包括整个 ASCII 控制平面:",
         "translate": ""
     },
     {
@@ -4196,7 +4196,7 @@
     },
     {
         "source": "What's up with CRT$XLB?",
-        "suggest": "CRT $ XLB 怎么了？",
+        "suggest": "`CRT$XLB` 怎么了？",
         "translate": ""
     },
     {
@@ -4216,7 +4216,7 @@
     },
     {
         "source": "How nice of the kernel!",
-        "suggest": "内核真好！",
+        "suggest": "多好的内核啊！",
         "translate": ""
     },
     {

@@ -761,7 +761,7 @@
     },
     {
         "source": "You can create a `String` from [a literal string][`&str`] with [`String::from`]:",
-        "suggest": "您可以使用 [`String::from`] 从一个 [字面量字符串][`&str`] 创建一个 `String`:",
+        "suggest": "您可以使用 [`String::from`] 从一个 [字符串字面量][`&str`] 创建一个 `String`:",
         "translate": ""
     },
     {

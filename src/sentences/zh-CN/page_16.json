@@ -3281,7 +3281,7 @@
     },
     {
         "source": "must be aligned and must not be dangling.",
-        "suggest": "必须对齐并且不能悬空。",
+        "suggest": "必须对齐并且不能悬垂。",
         "translate": ""
     },
     {

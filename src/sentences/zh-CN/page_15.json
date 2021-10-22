@@ -4186,12 +4186,12 @@
     },
     {
         "source": "Why no len > capacity?",
-        "suggest": "为什么没有 len > 容量？",
+        "suggest": "为什么不是 `len > capacity`？",
         "translate": ""
     },
     {
         "source": "Why not buffer len == capacity?",
-        "suggest": "为什么不缓冲 len == 容量？",
+        "suggest": "为什么不缓冲 `len == capacity`？",
         "translate": ""
     },
     {

@@ -2211,12 +2211,12 @@
     },
     {
         "source": "And again!",
-        "suggest": "然后再次！",
+        "suggest": "然后再一次！",
         "translate": ""
     },
     {
         "source": "error: cannot move out of dereference of `&mut`-pointer",
-        "suggest": "错误：无法移出 & mut-pointer 指针的解引用",
+        "suggest": "错误：无法移出 `&mut` 指针的解引用",
         "translate": ""
     },
     {
@@ -2391,7 +2391,7 @@
     },
     {
         "source": "Even when a value is just moved to `mem::forget` (which won't inspect it), some types have strict requirements on their values that make them invalid when dangling or no longer owned.",
-        "suggest": "即使将值仅移动到 `mem::forget` (不会检查它)，某些类型对其值也有严格的要求，以使它们在悬空或不再拥有时无效。",
+        "suggest": "即使将值仅移动到 `mem::forget` (不会检查它)，某些类型对其值也有严格的要求，以使它们在悬垂或不再拥有时无效。",
         "translate": ""
     },
     {
@@ -3856,7 +3856,7 @@
     },
     {
         "source": "Therefore, when the rounded-off bits are != 0.5 ULP, they decide the rounding on their own.",
-        "suggest": "因此，当舍入位为！= 0.5 ULP 时，它们将自行决定舍入。",
+        "suggest": "因此，当舍入位为 `!= 0.5` ULP 时，它们将自行决定舍入。",
         "translate": ""
     },
     {
@@ -4176,7 +4176,7 @@
     },
     {
         "source": "out the decimal point.",
-        "suggest": "掉小数点",
+        "suggest": "去掉小数点",
         "translate": ""
     },
     {
