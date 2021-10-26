@@ -16,6 +16,7 @@ git clone https://github.com.cnpmjs.org/rust-lang/rust.git rust
 cd rust
 
 # 切换版本号
+# NOTE：这里的版本号应该与当前中文文档的版本号保持一致
 git checkout 1.55.0
 
 # 删除 `rust/library` 目录
@@ -31,6 +32,7 @@ git clone https://github.com.cnpmjs.org/rust-lang/backtrace-rs.git library/backt
 git clone https://github.com.cnpmjs.org/rust-lang/libbacktrace library/backtrace/crates/backtrace-sys/src/libbacktrace
 
 # 替换中文文档
+# 文档下载地址：https://github.com/wtklbm/rust-library-i18n/tree/main/dist
 # 将中文文档复制到 `rust/library` 目录下，已经存在的，直接选择替换
 
 # 本地提交一次
