@@ -3383,5 +3383,10 @@
         "source": "011  100  000  111  100  100  100 = 4",
         "suggest": "011 100 000 111 100 100 100=4",
         "translate": false
+    },
+    {
+        "source": "Panics if `M > N`.",
+        "suggest": "Panics 如果 `M > N`。",
+        "translate": false
     }
 ]
