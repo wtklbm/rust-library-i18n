@@ -3813,5 +3813,445 @@
         "source": "If we get here after wanting `clone3`, then the syscall does not exist or we do not have permission to call it.",
         "suggest": "如果我们在想要 `clone3` 之后到达这里，那么系统调用不存在，或者我们没有调用它的权限。",
         "translate": ""
+    },
+    {
+        "source": "The behavior resulting from such a logic error is not specified (it could include panics, incorrect results, aborts, memory leaks, or non-termination) but will not be undefined behavior.",
+        "suggest": "没有指定由此类逻辑错误导致的行为 (可能包括 panics、不正确的结果、中止、内存泄漏或未终止)，但不会是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "Using linear search, searching for a random element is expected to take B * log(n) comparisons, which is generally worse than a BST.",
+        "suggest": "使用线性搜索，搜索随机元素预计需要进行` B * log(n)` 次比较，这通常比 `BST` 差。",
+        "translate": ""
+    },
+    {
+        "source": "This function is unsafe because the returned `&mut Vec` allows writing bytes which are not valid UTF-8.",
+        "suggest": "这个函数是不安全的，因为返回的 `&mut Vec` 允许写入无效的 UTF-8 字节。",
+        "translate": ""
+    },
+    {
+        "source": "If this constraint is violated, using the original `String` after dropping the `&mut Vec` may violate memory safety, as the rest of the standard library assumes that `String`s are valid UTF-8.",
+        "suggest": "如果违反此约束，则在丢弃 `&mut Vec` 后使用原始 `String` 可能会违反内存安全，因为标准库的其余部分假定 `String` 是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "The macOS linker emits a \"compact\" unwind table that only includes an entry for a function if that function either has an LSDA or its encoding differs from that of the previous entry.",
+        "suggest": "macOS 链接器发出一个 \"compact\" 展开表，如果函数有 LSDA 或其编码与前一个条目不同，则该表只包含该函数的一个条目。",
+        "translate": ""
+    },
+    {
+        "source": "Consequently, on macOS, `_Unwind_FindEnclosingFunction` is unreliable (it can return a pointer to some totally unrelated function).",
+        "suggest": "因此，在 macOS 上，`_Unwind_FindEnclosingFunction` 是不可靠的 (它可以返回一个指向一些完全不相关的函数的指针)。",
+        "translate": ""
+    },
+    {
+        "source": "Instead, we just always return the ip.",
+        "suggest": "相反，我们总是返回 ip。",
+        "translate": ""
+    },
+    {
+        "source": "Note the `skip_inner_frames.rs` test is skipped on macOS due to this clause, and if this is fixed that test in theory can be run on macOS!",
+        "suggest": "请注意，由于此条款，在 macOS 上跳过了 `skip_inner_frames.rs` 测试，如果修复了该问题，理论上可以在 macOS 上运行该测试！",
+        "translate": ""
+    },
+    {
+        "source": "This function performs the same function as `resolve` except that it takes a `Frame` as an argument instead of an address.",
+        "suggest": "该函数执行与 `resolve` 相同的函数，只是它将 `Frame` 作为参数而不是地址。",
+        "translate": ""
+    },
+    {
+        "source": "Divides one array reference into two at an index.",
+        "suggest": "在一个索引处将一个数组的引用分成两个。",
+        "translate": ""
+    },
+    {
+        "source": "The first will contain all indices from `[0, M)` (excluding the index `M` itself) and the second will contain all indices from `[M, N)` (excluding the index `N` itself).",
+        "suggest": "第一个将包含来自 `[0, M)` 的所有索引 (不包括索引 `M` 本身)，第二个将包含来自 `[M, N)` 的所有索引 (不包括索引 `N` 本身)。",
+        "translate": ""
+    },
+    {
+        "source": "Divides one mutable array reference into two at an index.",
+        "suggest": "在一个索引处将一个可变数组的引用分成两个。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to the non-const version, with the addition of `rustc_const_unstable`",
+        "suggest": "与非常量版本相同，增加了 `rustc_const_unstable`",
+        "translate": ""
+    },
+    {
+        "source": "needed for `non-fmt-panics` lint",
+        "suggest": "`non-fmt-panics` lint 需要",
+        "translate": ""
+    },
+    {
+        "source": "hooked by const-eval",
+        "suggest": "被 const-eval hook 了",
+        "translate": ""
+    },
+    {
+        "source": "Divides one slice into an array and a remainder slice at an index.",
+        "suggest": "将一个切片分成一个数组和一个索引处的剩余切片。",
+        "translate": ""
+    },
+    {
+        "source": "The array will contain all indices from `[0, N)` (excluding the index `N` itself) and the slice will contain all indices from `[N, len)` (excluding the index `len` itself).",
+        "suggest": "该数组将包含来自 `[0, N)` 的所有索引 (不包括索引 `N` 本身)，并且切片将包含来自 `[N, len)` 的所有索引 (不包括索引 `len` 本身)。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `N > len`.",
+        "suggest": "如果 `N > len`，则产生 panics。",
+        "translate": ""
+    },
+    {
+        "source": "a points to [T; N]?",
+        "suggest": "一个指针指向了 [T; N]？",
+        "translate": ""
+    },
+    {
+        "source": "Yes it's [T] of length N (checked by split_at)",
+        "suggest": "是的，它是长度 N 的 [T] (由 split_at 检查)",
+        "translate": ""
+    },
+    {
+        "source": "Divides one mutable slice into an array and a remainder slice at an index.",
+        "suggest": "将一个可变切片分成一个数组和一个索引处的剩余切片。",
+        "translate": ""
+    },
+    {
+        "source": "Yes it's [T] of length N (checked by split_at_mut)",
+        "suggest": "是的，它是长度 N 的 [T] (由 split_at_mut 检查)",
+        "translate": ""
+    },
+    {
+        "source": "In debug builds checks that `data` pointer is aligned and non-null and that slice with given `len` would cover less than half the address space",
+        "suggest": "在调试版本中，检查 `data` 指针是否对齐且不为 null，并且具有给定 `len` 的切片将覆盖不到一半的地址空间",
+        "translate": ""
+    },
+    {
+        "source": "is just a debug assert to hint users that they are causing UB, it is not required for safety (the safety must be guatanteed by the `from_raw_parts[_mut]` caller).",
+        "suggest": "只是一个调试断言来提示用户他们正在导致未定义的行为，它不是安全所必需的 (安全性必须由 `from_raw_parts[_mut]` 调用者保证)。",
+        "translate": ""
+    },
+    {
+        "source": "Since the checks are not required, we ignore them in CTFE as they can't be done there (alignment does not make much sense there).",
+        "suggest": "由于不需要检查，我们在 CTFE 中忽略了它们，因为它们不能在那里完成 (在那里对齐没有多大意义)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range \\[0, `end`).",
+        "suggest": "返回字节范围 \\[0, `end`) 中返回给定字符串的切片。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range \\[`begin`, `len`).",
+        "suggest": "从字节范围 \\[`begin`, `len`) 中返回给定字符串的切片。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to `&self[begin .. len]` or `&mut self[begin .. len]`.",
+        "suggest": "相当于 `&self[begin .. len]` 或 `&mut self[begin .. len]`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string from the byte range \\[0, `end`\\].",
+        "suggest": "返回字节范围 \\[0, `end`\\] 中返回给定字符串的切片。",
+        "translate": ""
+    },
+    {
+        "source": "Value is not a finite value (either + or - infinity or NaN).",
+        "suggest": "值不是一个有限的值 (+ 或 - 无穷大或 NaN)。",
+        "translate": ""
+    },
+    {
+        "source": "Value is negative.",
+        "suggest": "值是负数。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure `fs::create_dir` works on Windows with longer paths.",
+        "suggest": "确保 `fs::create_dir` 在具有更长路径的 Windows 上工作。",
+        "translate": ""
+    },
+    {
+        "source": "Skip the test in the unlikely event the local user has a long temp directory path.",
+        "suggest": "如果本地用户有很长的临时目录路径，请跳过测试。",
+        "translate": ""
+    },
+    {
+        "source": "This should not affect CI.",
+        "suggest": "这不应该影响 CI。",
+        "translate": ""
+    },
+    {
+        "source": "Increase the length of the path.",
+        "suggest": "增加路径的长度。",
+        "translate": ""
+    },
+    {
+        "source": "This should succeed.",
+        "suggest": "这应该会成功。",
+        "translate": ""
+    },
+    {
+        "source": "This will fail if the path isn't converted to verbatim.",
+        "suggest": "如果路径没有被一字不差地转换，这将会失败。",
+        "translate": ""
+    },
+    {
+        "source": "octal zero",
+        "suggest": "八进制零",
+        "translate": ""
+    },
+    {
+        "source": "all octets are in octal",
+        "suggest": "所有八位字节都是八进制的",
+        "translate": ""
+    },
+    {
+        "source": "first octet is a zero in octal",
+        "suggest": "第一个八位字节是八进制中的零",
+        "translate": ""
+    },
+    {
+        "source": "all octets are in hex",
+        "suggest": "所有八位字节都是十六进制的",
+        "translate": ""
+    },
+    {
+        "source": "Notably, octal numbers (which are indicated with a leading `0`) and hexadecimal numbers (which are indicated with a leading `0x`) are not allowed per [IETF RFC 6943].",
+        "suggest": "值得注意的是，每个 [IETF RFC 6943] 不允许使用八进制数 (以 `0` 开头) 和十六进制数 (以 `0x` 开头)。",
+        "translate": ""
+    },
+    {
+        "source": "don't try to parse if too long",
+        "suggest": "如果太长的话，就不要尝试解析",
+        "translate": ""
+    },
+    {
+        "source": "if `self` has a verbatim prefix (e.g.",
+        "suggest": "如果 `self` 有 verbatim 前缀 (例如",
+        "translate": ""
+    },
+    {
+        "source": "`\\\\?\\C:\\windows`) and `path` is not empty, the new path is normalized: all references to `.` and `..` are removed.",
+        "suggest": "`\\\\?\\C:\\windows`) 并且 `path` 不为空，新路径被规范化：所有对 `.` 和 `..` 的引用都被删除。",
+        "translate": ""
+    },
+    {
+        "source": "The magic constant -4 can be used as the token passed to GetUserProfileDirectoryW below instead of us having to go through these multiple steps to get a token.",
+        "suggest": "魔术常量 -4 可以用作传递给下面的 GetUserProfileDirectoryW 的 token，而不是我们必须通过这些多个步骤来获得 token。",
+        "translate": ""
+    },
+    {
+        "source": "However this is not implemented on Windows 7, only Windows 8 and up.",
+        "suggest": "然而，没有在 Windows 7 上实现，只在 Windows 8 和更高版本上实现了。",
+        "translate": ""
+    },
+    {
+        "source": "When we drop support for Windows 7 we can simplify this code.",
+        "suggest": "当我们支持 Windows 7 时，我们可以简化此代码。",
+        "translate": ""
+    },
+    {
+        "source": "See #90144 for details.",
+        "suggest": "有关详细信息，请参见 #90144。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure long paths are correctly prefixed.",
+        "suggest": "确保长路径的前缀正确。",
+        "translate": ""
+    },
+    {
+        "source": "prefixed paths are left unchanged...",
+        "suggest": "前缀路径保持不变...",
+        "translate": ""
+    },
+    {
+        "source": "But `//?/` is not a verbatim prefix so it will be normalized.",
+        "suggest": "但是 `//?/` 不是 verbatim 前缀，因此它将被规范化。",
+        "translate": ""
+    },
+    {
+        "source": "For performance, short absolute paths are left unchanged.",
+        "suggest": "为了性能，短绝对路径保持不变。",
+        "translate": ""
+    },
+    {
+        "source": "Check that paths of length 247 are converted to verbatim.",
+        "suggest": "检查长度为 247 的路径是否已逐字转换。",
+        "translate": ""
+    },
+    {
+        "source": "This is necessary for `CreateDirectory`.",
+        "suggest": "这对于 `CreateDirectory` 是必需的。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure opening a drive will work.",
+        "suggest": "确保打开驱动器可以正常工作。",
+        "translate": ""
+    },
+    {
+        "source": "An empty path or a path that contains null are not valid paths.",
+        "suggest": "空路径或包含 null 的路径不是有效路径。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a UTF-16 encoded path capable of bypassing the legacy `MAX_PATH` limits.",
+        "suggest": "返回能够绕过传统 `MAX_PATH` 限制的 UTF-16 编码路径。",
+        "translate": ""
+    },
+    {
+        "source": "This path may or may not have a verbatim prefix.",
+        "suggest": "此路径可能有也可能没有 verbatim 前缀。",
+        "translate": ""
+    },
+    {
+        "source": "Normally the MAX_PATH is 260 UTF-16 code units (including the NULL).",
+        "suggest": "通常 MAX_PATH 是 260 个 UTF-16 代码单元 (包括 NULL)。",
+        "translate": ""
+    },
+    {
+        "source": "However, for APIs such as CreateDirectory[1], the limit is 248.",
+        "suggest": "但是，对于 CreateDirectory[1] 等 API，限制为 248 个。",
+        "translate": ""
+    },
+    {
+        "source": "encoded code points, used in parsing and building UTF-16 paths.",
+        "suggest": "编码的代码点，用于解析和构建 UTF-16 路径。",
+        "translate": ""
+    },
+    {
+        "source": "All of these are in the ASCII range so they can be cast directly to `u16`.",
+        "suggest": "所有这些都在 ASCII 范围内，因此它们可以直接转换为 `u16`。",
+        "translate": ""
+    },
+    {
+        "source": "Early return for paths that are already verbatim.",
+        "suggest": "提前返回已经逐字记录的路径。",
+        "translate": ""
+    },
+    {
+        "source": "Early return if an absolute path is less < 260 UTF-16 code units.",
+        "suggest": "如果绝对路径小于 260 个 UTF-16 代码单元，则提前返回。",
+        "translate": ""
+    },
+    {
+        "source": "This is an optimization to avoid calling `GetFullPathNameW` unnecessarily.",
+        "suggest": "这是为了避免不必要地调用 `GetFullPathNameW` 的优化。",
+        "translate": ""
+    },
+    {
+        "source": "Starts with `D:`, `D:\\`, `D:/`, etc.",
+        "suggest": "以 `D:`、`D:\\`、`D:/` 等开头。",
+        "translate": ""
+    },
+    {
+        "source": "Does not match if the path starts with a `\\` or `/`.",
+        "suggest": "如果路径以 `\\` 或 `/` 开头，则不匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Starts with `\\\\`, `//`, etc",
+        "suggest": "以 `\\\\`、`//` 等开头",
+        "translate": ""
+    },
+    {
+        "source": "Firstly, get the absolute path using `GetFullPathNameW`.",
+        "suggest": "首先，使用 `GetFullPathNameW` 获取绝对路径。",
+        "translate": ""
+    },
+    {
+        "source": "`fill_utf16_buf` ensures the `buffer` and `size` are valid.",
+        "suggest": "`fill_utf16_buf` 确保 `buffer` 和 `size` 有效。",
+        "translate": ""
+    },
+    {
+        "source": "is a pointer to a null terminated string that is not invalidated until after `GetFullPathNameW` returns successfully.",
+        "suggest": "是一个指向 null 终止字符串的指针，该字符串直到 `GetFullPathNameW` 成功返回后才会失效。",
+        "translate": ""
+    },
+    {
+        "source": "While the docs for `GetFullPathNameW` have the standard note about needing a `\\\\?\\` path for a long lpfilename, this does not appear to be true in practice.",
+        "suggest": "虽然 `GetFullPathNameW` 的文档有关于需要一个 `\\\\?\\` 路径来获取 long lpfilename 的标准说明，但这在实践中似乎并不正确。",
+        "translate": ""
+    },
+    {
+        "source": "Secondly, add the verbatim prefix.",
+        "suggest": "其次，添加 verbatim 前缀。",
+        "translate": ""
+    },
+    {
+        "source": "This is easier here because we know the path is now absolute and fully normalized (e.g.",
+        "suggest": "这在这里更容易，因为我们知道路径现在是绝对的并且完全标准化 (例如",
+        "translate": ""
+    },
+    {
+        "source": "has been changed to `\\`).",
+        "suggest": "已更改为 `\\`)。",
+        "translate": ""
+    },
+    {
+        "source": "Leave \\\\?\\ and \\??\\ as-is.",
+        "suggest": "保留 \\\\?\\ 和 \\??\\ 原样。",
+        "translate": ""
+    },
+    {
+        "source": "Anything else we leave alone.",
+        "suggest": "任何其他的事我们都不去管了。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a slice of the given string for the byte range \\[`begin`..`end`).",
+        "suggest": "返回字节范围 \\[`begin`..`end`) 的给定字符串的切片。",
+        "translate": ""
+    },
+    {
+        "source": "Resource limits can be changed during the runtime of a program, therefore the value is not cached and instead recomputed every time this function is called.",
+        "suggest": "资源限制可以在程序运行时更改，因此该值不会被缓存，而是在每次调用此函数时重新计算。",
+        "translate": ""
+    },
+    {
+        "source": "It should not be called from hot code.",
+        "suggest": "不应从热代码中调用它。",
+        "translate": ""
+    },
+    {
+        "source": "Disable dedup guard.",
+        "suggest": "禁用重复数据保护。",
+        "translate": ""
+    },
+    {
+        "source": "Only works if the LLVM MergeFunctions pass is disabled, e.g.",
+        "suggest": "仅当 LLVM 合并函数传递被禁用时有效，例如",
+        "translate": ""
+    },
+    {
+        "source": "with `-Z merge-functions=disabled` in RUSTFLAGS.",
+        "suggest": "使用 RUSTFLAGS 中的 `-Z merge-functions=disabled`。",
+        "translate": ""
+    },
+    {
+        "source": "Private vfp4 version used by FMA intriniscs because LLVM does not inline the non-vfp4 version in vfp4 functions.",
+        "suggest": "FMA intriniscs 使用了私有的 vfp4 版本，因为 LLVM 不会在 vfp4 函数中内联非 vfp4 版本。",
+        "translate": ""
+    },
+    {
+        "source": "should be vpmovb2m but compiled to vpmovmskb in the test shim because that takes less cycles than",
+        "suggest": "应该是 vpmovb2m 但在测试垫片中编译为 vpmovmskb，因为这比",
+        "translate": ""
+    },
+    {
+        "source": "using vpmovb2m plus converting the mask register to a standard register.",
+        "suggest": "使用 vpmovb2m plus 将掩码寄存器转换为标准寄存器。",
+        "translate": ""
+    },
+    {
+        "source": "generate normal lea/add code instead of kaddd",
+        "suggest": "生成普通 lea/add 代码而不是 kaddd",
+        "translate": ""
     }
 ]
