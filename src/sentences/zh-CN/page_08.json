@@ -2611,7 +2611,7 @@
     },
     {
         "source": "a [trait object], then the vtable part of the pointer must point to a valid vtable acquired by an unsizing coercion, and the size of the *entire value* (dynamic tail length + statically sized prefix) must fit in `isize`.",
-        "suggest": "[trait object]，则指针的 vtable 部分必须指向通过取消大小调整强制获取的有效 vtable，并且 *entire 值*(动态尾部长度 + 静态大小的前缀) 的大小必须适合 `isize`。",
+        "suggest": "[trait 对象][trait object]，则指针的 vtable 部分必须指向通过取消大小调整强制获取的有效 vtable，并且 *entire 值*(动态尾部长度 + 静态大小的前缀) 的大小必须适合 `isize`。",
         "translate": ""
     },
     {

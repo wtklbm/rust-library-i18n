@@ -1016,7 +1016,7 @@
     },
     {
         "source": "A trait to extract the raw SGX file descriptor from an underlying object.",
-        "suggest": "trait，用于从基础 object 提取原始 SGX 文件描述符。",
+        "suggest": "trait，用于从基础对象提取原始 SGX 文件描述符。",
         "translate": ""
     },
     {
@@ -1031,7 +1031,7 @@
     },
     {
         "source": "The descriptor is only guaranteed to be valid while the original object has not yet been destroyed.",
-        "suggest": "仅当原始 object 尚未销毁时，才保证描述符是有效的。",
+        "suggest": "仅当原始对象尚未销毁时，才保证描述符是有效的。",
         "translate": ""
     },
     {
@@ -1056,7 +1056,7 @@
     },
     {
         "source": "The returned object will take responsibility for closing it when the object goes out of scope.",
-        "suggest": "当 object 离开作用域时，返回的 object 将负责关闭它。",
+        "suggest": "当对象离开作用域时，返回的对象将负责关闭它。",
         "translate": ""
     },
     {
@@ -1071,12 +1071,12 @@
     },
     {
         "source": "A trait to express the ability to consume an object and acquire ownership of its raw file descriptor.",
-        "suggest": "trait 表示使用 object 并获取其原始文件描述符所有权的能力。",
+        "suggest": "trait 表示使用对象并获取其原始文件描述符所有权的能力。",
         "translate": ""
     },
     {
         "source": "Consumes this object, returning the raw underlying file descriptor, if this object is not cloned.",
-        "suggest": "如果未克隆此 object，则使用此 object，并返回原始基础文件描述符。",
+        "suggest": "如果未克隆此对象，则使用此对象，并返回原始基础文件描述符。",
         "translate": ""
     },
     {
@@ -1091,7 +1091,7 @@
     },
     {
         "source": "Unlike other platforms, on SGX, the file descriptor is shared between all clones of an object.",
-        "suggest": "与其他平台不同，在 SGX 上，文件描述符在 object 的所有克隆之间共享。",
+        "suggest": "与其他平台不同，在 SGX 上，文件描述符在对象的所有克隆之间共享。",
         "translate": ""
     },
     {
@@ -2246,7 +2246,7 @@
     },
     {
         "source": "A trait to extract the raw unix file descriptor from an underlying object.",
-        "suggest": "trait，用于从基础 object 中提取原始 unix 文件描述符。",
+        "suggest": "trait，用于从基础对象中提取原始 unix 文件描述符。",
         "translate": ""
     },
     {
@@ -2266,7 +2266,7 @@
     },
     {
         "source": "Consumes this object, returning the raw underlying file descriptor.",
-        "suggest": "使用此 object，返回原始基础文件描述符。",
+        "suggest": "使用此对象，返回原始基础文件描述符。",
         "translate": ""
     },
     {
@@ -2581,7 +2581,7 @@
     },
     {
         "source": "The returned `UnixDatagram` is a reference to the same socket that this object references.",
-        "suggest": "返回的 `UnixDatagram` 是与此 object 引用相同的套接字的引用。",
+        "suggest": "返回的 `UnixDatagram` 是与此对象引用相同的套接字的引用。",
         "translate": ""
     },
     {
@@ -2751,7 +2751,7 @@
     },
     {
         "source": "The returned `UnixListener` is a reference to the same socket that this object references.",
-        "suggest": "返回的 `UnixListener` 是与此 object 引用相同的套接字的引用。",
+        "suggest": "返回的 `UnixListener` 是与此对象引用相同的套接字的引用。",
         "translate": ""
     },
     {
@@ -2806,7 +2806,7 @@
     },
     {
         "source": "The returned `UnixStream` is a reference to the same stream that this object references.",
-        "suggest": "返回的 `UnixStream` 是与此 object 引用相同的流的引用。",
+        "suggest": "返回的 `UnixStream` 是与此对象引用相同的流的引用。",
         "translate": ""
     },
     {
@@ -4996,7 +4996,7 @@
     },
     {
         "source": "ERR_BAD_STATE: operation failed because the current state of the object does not allow it, or a precondition of the operation is not satisfied",
-        "suggest": "ERR_BAD_STATE: 操作失败，因为 object 的当前状态不允许它，或者不满足该操作的前提条件",
+        "suggest": "ERR_BAD_STATE: 操作失败，因为对象的当前状态不允许它，或者不满足该操作的前提条件",
         "translate": ""
     }
 ]

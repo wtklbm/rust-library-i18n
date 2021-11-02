@@ -1241,7 +1241,7 @@
     },
     {
         "source": "A filesystem object is, unexpectedly, not a directory.",
-        "suggest": "出乎意料的是，文件系统 object 不是目录。",
+        "suggest": "出乎意料的是，文件系统对象不是目录。",
         "translate": ""
     },
     {
@@ -1251,7 +1251,7 @@
     },
     {
         "source": "The filesystem object is, unexpectedly, a directory.",
-        "suggest": "文件系统 object 出乎意料地是一个目录。",
+        "suggest": "出乎意料的是，文件系统对象是一个目录。",
         "translate": ""
     },
     {
@@ -1281,7 +1281,7 @@
     },
     {
         "source": "There was a loop (or excessively long chain) resolving a filesystem object or file IO object.",
-        "suggest": "有一个循环 (或过长的链) 解析文件系统 object 或文件 IO object。",
+        "suggest": "有一个循环 (或过长的链) 解析文件系统对象或文件 IO 对象。",
         "translate": ""
     },
     {
@@ -1386,7 +1386,7 @@
     },
     {
         "source": "Too many (hard) links to the same filesystem object.",
-        "suggest": "太多 (hard) 链接到同一个文件系统 object。",
+        "suggest": "太多 (hard) 链接到同一个文件系统对象。",
         "translate": ""
     },
     {
@@ -1766,7 +1766,7 @@
     },
     {
         "source": "More information on mutable references and pointers can be found in the [Reference].",
-        "suggest": "可以在 [Reference] 中找到更多关于资源 0 引用和指针的信息。",
+        "suggest": "更多关于可变引用和指针的信息可以在 [Reference] 中找到。",
         "translate": ""
     },
     {
@@ -2161,7 +2161,7 @@
     },
     {
         "source": "A trait to borrow the file descriptor from an underlying object.",
-        "suggest": "一个 trait 来借用来自底层 object 的文件描述符。",
+        "suggest": "一个 trait 来借用来自底层对象的文件描述符。",
         "translate": ""
     },
     {
@@ -2186,7 +2186,7 @@
     },
     {
         "source": "A trait to extract the raw file descriptor from an underlying object.",
-        "suggest": "trait 从底层 object 中提取原始文件描述符。",
+        "suggest": "trait 从底层对象中提取原始文件描述符。",
         "translate": ""
     },
     {
@@ -2641,7 +2641,7 @@
     },
     {
         "source": "A trait to borrow the handle from an underlying object.",
-        "suggest": "A trait 借用底层 object 的句柄。",
+        "suggest": "从底层对象借用句柄的 trait。",
         "translate": ""
     },
     {
@@ -2766,7 +2766,7 @@
     },
     {
         "source": "A trait to borrow the socket from an underlying object.",
-        "suggest": "一个 trait 从底层 object 借用套接字。",
+        "suggest": " 从底层对象借用套接字的 trait。",
         "translate": ""
     },
     {
@@ -3626,7 +3626,7 @@
     },
     {
         "source": "To learn when a thread completes, it is necessary to capture the [`JoinHandle`] object that is returned by the call to [`spawn`], which provides a `join` method that allows the caller to wait for the completion of the spawned thread:",
-        "suggest": "要了解线程何时完成，需要捕获调用返回给 [`spawn`] 的 [`JoinHandle`] object，它提供了一个 `join` 方法，允许调用者等待新建线程的完成:",
+        "suggest": "要了解线程何时完成，需要捕获调用返回给 [`spawn`] 的 [`JoinHandle`] 对象，它提供了一个 `join` 方法，允许调用者等待新建线程的完成:",
         "translate": ""
     },
     {

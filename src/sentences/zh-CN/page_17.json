@@ -441,7 +441,7 @@
     },
     {
         "source": "Read more about `object safety` and [trait object]s.",
-        "suggest": "阅读有关 `object safety` 和 [trait 对象][trait object] 的更多信息。",
+        "suggest": "阅读有关对象安全和 [trait 对象][trait object] 的更多信息。",
         "translate": ""
     },
     {
@@ -1936,7 +1936,7 @@
     },
     {
         "source": "Converts this object to an iterator of resolved `SocketAddr`s.",
-        "suggest": "将此 object 转换为解析的 `SocketAddr` 的迭代器。",
+        "suggest": "将此对象转换为解析的 `SocketAddr` 的迭代器。",
         "translate": ""
     },
     {
@@ -3646,7 +3646,7 @@
     },
     {
         "source": "The returned `TcpStream` is a reference to the same stream that this object references.",
-        "suggest": "返回的 `TcpStream` 是与此 object 引用相同的流的引用。",
+        "suggest": "返回的 `TcpStream` 是与此对象引用相同的流的引用。",
         "translate": ""
     },
     {
@@ -3906,7 +3906,7 @@
     },
     {
         "source": "The returned [`TcpListener`] is a reference to the same socket that this object references.",
-        "suggest": "返回的 [`TcpListener`] 是与此 object 引用相同的套接字的引用。",
+        "suggest": "返回的 [`TcpListener`] 是与此对象引用相同的套接字的引用。",
         "translate": ""
     },
     {
@@ -4141,7 +4141,7 @@
     },
     {
         "source": "The returned `UdpSocket` is a reference to the same socket that this object references.",
-        "suggest": "返回的 `UdpSocket` 是与此 object 引用相同的套接字的引用。",
+        "suggest": "返回的 `UdpSocket` 是与此对象引用相同的套接字的引用。",
         "translate": ""
     },
     {

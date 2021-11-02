@@ -2336,7 +2336,7 @@
     },
     {
         "source": "Note that, although read and write methods require a `&mut File`, because of the interfaces for [`Read`] and [`Write`], the holder of a `&File` can still modify the file, either through methods that take `&File` or by retrieving the underlying OS object and modifying the file that way.",
-        "suggest": "请注意，尽管读写方法需要 `&mut File`，但是由于 [`Read`] 和 [`Write`] 的接口，`&File` 的持有者仍可以通过采用 `&File` 的方法或通过检索基础 OS object 并修改该文件来修改文件。办法。",
+        "suggest": "请注意，尽管读写方法需要 `&mut File`，但是由于 [`Read`] 和 [`Write`] 的接口，`&File` 的持有者仍可以通过采用 `&File` 的方法或通过检索基础 OS 对象并修改该文件来修改文件。办法。",
         "translate": ""
     },
     {
@@ -2576,12 +2576,12 @@
     },
     {
         "source": "Returns a new OpenOptions object.",
-        "suggest": "返回一个新的 OpenOptions object。",
+        "suggest": "返回一个新的 OpenOptions 对象。",
         "translate": ""
     },
     {
         "source": "This function returns a new OpenOptions object that you can use to open or create a file with specific options if `open()` or `create()` are not appropriate.",
-        "suggest": "如果不适合使用 `open()` 或 `create()`，则此函数返回一个新的 OpenOptions object，可用于打开或创建具有特定选项的文件。",
+        "suggest": "如果不适合使用 `open()` 或 `create()`，则此函数返回一个新的 OpenOptions 对象，可用于打开或创建具有特定选项的文件。",
         "translate": ""
     },
     {
@@ -4671,7 +4671,7 @@
     },
     {
         "source": "An error returned by [`BufWriter::into_inner`] which combines an error that happened while writing out the buffer, and the buffered writer object which may be used to recover from the condition.",
-        "suggest": "[`BufWriter::into_inner`] 返回的错误，将写出缓冲区时发生的错误与缓冲的 writer object 结合在一起，可用于从条件中恢复。",
+        "suggest": "[`BufWriter::into_inner`] 返回的错误，将写出缓冲区时发生的错误与缓冲的 writer 对象结合在一起，可用于从条件中恢复。",
         "translate": ""
     },
     {
@@ -4706,7 +4706,7 @@
     },
     {
         "source": "The returned object can be used for error recovery, such as re-inspecting the buffer.",
-        "suggest": "返回的 object 可用于错误恢复，例如重新检查缓冲区。",
+        "suggest": "返回的对象可用于错误恢复，例如重新检查缓冲区。",
         "translate": ""
     },
     {

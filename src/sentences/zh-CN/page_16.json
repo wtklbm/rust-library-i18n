@@ -1191,7 +1191,7 @@
     },
     {
         "source": "This function does not provide any guarantees about whether it blocks waiting for data, but if an object needs to block for a read and cannot, it will typically signal this via an [`Err`] return value.",
-        "suggest": "该函数不提供有关是否阻塞等待数据的任何保证，但是如果 object 需要阻塞读取而不能阻塞，则通常会通过 [`Err`] 返回值来发出信号。",
+        "suggest": "该函数不提供有关是否阻塞等待数据的任何保证，但是如果对象需要阻塞读取而不能阻塞，则通常会通过 [`Err`] 返回值来发出信号。",
         "translate": ""
     },
     {
@@ -1516,7 +1516,7 @@
     },
     {
         "source": "The returned `Read` instance will first read all bytes from this object until EOF is encountered.",
-        "suggest": "返回的 `Read` 实例将首先从该 object 读取所有字节，直到遇到 EOF。",
+        "suggest": "返回的 `Read` 实例将首先从该对象读取所有字节，直到遇到 EOF。",
         "translate": ""
     },
     {
@@ -1721,7 +1721,7 @@
     },
     {
         "source": "The [`write`] method will attempt to write some data into the object, returning how many bytes were successfully written.",
-        "suggest": "[`write`] 方法将尝试将一些数据写入 object，返回成功写入的字节数。",
+        "suggest": "[`write`] 方法将尝试将一些数据写入对象，返回成功写入的字节数。",
         "translate": ""
     },
     {
@@ -1756,7 +1756,7 @@
     },
     {
         "source": "A call to `write` represents *at most one* attempt to write to any wrapped object.",
-        "suggest": "对 `write` 的调用表示 *at most 对任何包装的 object 进行写操作的尝试。",
+        "suggest": "对 `write` 的调用表示 *at most 对任何包装的对象进行写操作的尝试。",
         "translate": ""
     },
     {
@@ -1771,7 +1771,7 @@
     },
     {
         "source": "A return value of `0` typically means that the underlying object is no longer able to accept bytes and will likely not be able to in the future as well, or that the buffer provided is empty.",
-        "suggest": "`0` 的返回值通常意味着基础 object 不再能够接受字节，并且可能也无法在 future 中接收，或者提供的缓冲区为空。",
+        "suggest": "`0` 的返回值通常意味着基础对象不再能够接受字节，并且可能也无法在 future 中接收，或者提供的缓冲区为空。",
         "translate": ""
     },
     {
@@ -2061,7 +2061,7 @@
     },
     {
         "source": "Enumeration of possible methods to seek within an I/O object.",
-        "suggest": "列举可能在 I/O object 中进行搜索的方法。",
+        "suggest": "列举可能在 I/O 对象中进行搜索的方法。",
         "translate": ""
     },
     {
@@ -2076,12 +2076,12 @@
     },
     {
         "source": "Sets the offset to the size of this object plus the specified number of bytes.",
-        "suggest": "将偏移量设置为此 object 的大小加上指定的字节数。",
+        "suggest": "将偏移量设置为此对象的大小加上指定的字节数。",
         "translate": ""
     },
     {
         "source": "It is possible to seek beyond the end of an object, but it's an error to seek before byte 0.",
-        "suggest": "可以在 object 的末尾进行查找，但是在字节 0 之前进行查找是错误的。",
+        "suggest": "可以在对象的末尾进行查找，但是在字节 0 之前进行查找是错误的。",
         "translate": ""
     },
     {
@@ -2161,7 +2161,7 @@
     },
     {
         "source": "This function does not perform any I/O, it simply informs this object that some amount of its buffer, returned from [`fill_buf`], has been consumed and should no longer be returned.",
-        "suggest": "该函数不执行任何 I/O，它只是通知 object 从 [`fill_buf`] 返回的某些缓冲区已被消耗，不应再返回。",
+        "suggest": "该函数不执行任何 I/O，它只是通知对象从 [`fill_buf`] 返回的某些缓冲区已被消耗，不应再返回。",
         "translate": ""
     },
     {
@@ -4006,7 +4006,7 @@
     },
     {
         "source": "If the function takes `self`, `&self`, or `&mut self` as its first argument, it can also be called using method-call syntax, a familiar feature to any object oriented programmer, like `foo.bar()`.",
-        "suggest": "如果该函数将 `self`，`&self` 或 `&mut self` 作为它的第一个参数，则也可以使用方法调用语法来调用它，这是任何面向 object 的程序员 (如 `foo.bar()`) 都熟悉的功能。",
+        "suggest": "如果该函数将 `self`，`&self` 或 `&mut self` 作为它的第一个参数，则也可以使用方法调用语法来调用它，这是任何面向对象的程序员 (如 `foo.bar()`) 都熟悉的功能。",
         "translate": ""
     },
     {
@@ -4336,7 +4336,7 @@
     },
     {
         "source": "Mutable raw pointers work much like mutable references, with the added possibility of not pointing to a valid object.",
-        "suggest": "可变裸指针的工作方式与可变引用非常相似，但有可能无法指向有效的 object。",
+        "suggest": "可变裸指针的工作方式与可变引用非常相似，但有可能无法指向有效的对象。",
         "translate": ""
     },
     {
@@ -4401,7 +4401,7 @@
     },
     {
         "source": "denotes that your pattern expects a reference to an object.",
-        "suggest": "表示您的模式需要 object 的引用。",
+        "suggest": "表示您的模式需要对象的引用。",
         "translate": ""
     },
     {
@@ -4861,7 +4861,7 @@
     },
     {
         "source": "A trait object implements all specified traits as well as their supertraits (if any).",
-        "suggest": "trait object 实现所有指定的 traits 及其上级特征 (如果有)。",
+        "suggest": "trait 对象实现所有指定的 traits 及其上级特征 (如果有)。",
         "translate": ""
     },
     {

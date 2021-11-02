@@ -1511,7 +1511,7 @@
     },
     {
         "source": "You can use this to implement a completely custom global allocator to route all default allocation requests to a custom object.",
-        "suggest": "您可以使用它来实现一个完全自定义的 alloc 分配器，以将所有默认分配请求路由到自定义 object。",
+        "suggest": "您可以使用它来实现一个完全自定义的 alloc 分配器，以将所有默认分配请求路由到自定义对象。",
         "translate": ""
     },
     {
@@ -4931,7 +4931,7 @@
     },
     {
         "source": "Get `TypeId` of the type in the trait object.",
-        "suggest": "在 trait object 中获取类型的 `TypeId`。",
+        "suggest": "在 trait 对象中获取类型的 `TypeId`。",
         "translate": ""
     },
     {

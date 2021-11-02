@@ -1561,7 +1561,7 @@
     },
     {
         "source": "If interpreted as the available concurrency for that process, it may overcount on Windows systems when limited by a process wide affinity mask or job object limitations, and it may overcount on Linux systems when limited by a process wide affinity mask or affected by cgroups limits.",
-        "suggest": "如果将其解释为该进程的可用并发性，则在受进程范围的亲和力掩码或作业 object 限制的情况下，它可能在 Windows 系统上计数过多，而在受到进程范围的亲和力掩码的限制或 cgroups 限制的影响下，它在 Linux 系统上可能计数过多。",
+        "suggest": "如果将其解释为该进程的可用并发性，则在受进程范围的亲和力掩码或作业对象限制的情况下，它可能在 Windows 系统上计数过多，而在受到进程范围的亲和力掩码的限制或 cgroups 限制的影响下，它在 Linux 系统上可能计数过多。",
         "translate": ""
     },
     {
@@ -2961,7 +2961,7 @@
     },
     {
         "source": "A `ThreadId` is an opaque object that has a unique value for each thread that creates one.",
-        "suggest": "`ThreadId` 是不透明的 object，对于创建一个线程的每个线程，它具有唯一的值。",
+        "suggest": "`ThreadId` 是不透明的对象，对于创建一个线程的每个线程，它具有唯一的值。",
         "translate": ""
     },
     {
@@ -3031,7 +3031,7 @@
     },
     {
         "source": "Used only internally to construct a thread object without spawning Panics if the name contains nuls.",
-        "suggest": "如果名称包含 nul，则仅在内部用于构造线程 object，而不会发生 panics。",
+        "suggest": "如果名称包含 nul，则仅在内部用于构造线程对象，而不会发生 panics。",
         "translate": ""
     },
     {

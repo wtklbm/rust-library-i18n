@@ -311,7 +311,7 @@
     },
     {
         "source": "The `cause` returned is the object with which panic was originally invoked.",
-        "suggest": "返回的 `cause` 是最初调用 panic 的 object。",
+        "suggest": "返回的 `cause` 是最初调用 panic 的对象。",
         "translate": ""
     },
     {
@@ -471,7 +471,7 @@
     },
     {
         "source": "This function is called by the panic runtime if it catches an exception object which does not correspond to a Rust panic.",
-        "suggest": "如果 panic 运行时捕获到一个与 Rust panic 不对应的异常 object，则该函数由 panic 运行时调用。",
+        "suggest": "如果 panic 运行时捕获到一个与 Rust panic 不对应的异常对象，则该函数由 panic 运行时调用。",
         "translate": ""
     },
     {
@@ -2116,7 +2116,7 @@
     },
     {
         "source": "Returns an object that implements [`Display`] for safely printing paths that may contain non-Unicode data.",
-        "suggest": "返回实现 [`Display`] 的 object，以安全地打印可能包含非 Unicode 数据的路径。",
+        "suggest": "返回实现 [`Display`] 的对象，以安全地打印可能包含非 Unicode 数据的路径。",
         "translate": ""
     },
     {

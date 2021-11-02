@@ -4831,7 +4831,7 @@
     },
     {
         "source": "This function is useful for representing a backtrace as an object in Rust.",
-        "suggest": "此函数对于将回溯表示为 Rust 中的 object 很有用。",
+        "suggest": "此函数对于将回溯表示为 Rust 中的对象很有用。",
         "translate": ""
     },
     {

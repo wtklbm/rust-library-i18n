@@ -541,7 +541,7 @@
     },
     {
         "source": "Represents an ELF DSO (Dynamic Shared Object).",
-        "suggest": "表示 ELF DSO (动态共享 Object)。",
+        "suggest": "表示 ELF DSO (动态共享对象)。",
         "translate": ""
     },
     {
@@ -561,7 +561,7 @@
     },
     {
         "source": "In the case of a shared object it will be the soname (see DT_SONAME).",
-        "suggest": "如果是共享的 object，则为 soname (请参见 DT_SONAME)。",
+        "suggest": "如果是共享的对象，则为 soname (请参见 DT_SONAME)。",
         "translate": ""
     },
     {
@@ -1051,7 +1051,7 @@
     },
     {
         "source": "Look for files in the `DWARF` directory which have a matching uuid to the original object file.",
-        "suggest": "在 `DWARF` 目录中查找具有与原始 object 文件匹配的 uuid 的文件。",
+        "suggest": "在 `DWARF` 目录中查找具有与原始对象 文件匹配的 uuid 的文件。",
         "translate": ""
     },
     {
@@ -1061,7 +1061,7 @@
     },
     {
         "source": "This is used both for executables/libraries and source object files.",
-        "suggest": "executables/libraries 和 object 源文件都使用此文件。",
+        "suggest": "executables/libraries 和对象源文件都使用此文件。",
         "translate": ""
     },
     {
@@ -1081,12 +1081,12 @@
     },
     {
         "source": "We never search object file symbols by address.",
-        "suggest": "我们从不按地址搜索 object 文件符号。",
+        "suggest": "我们从不按地址搜索对象文件符号。",
         "translate": ""
     },
     {
         "source": "Instead, we already know the symbol name from the executable, and we need to search by name to find the matching symbol in the object file.",
-        "suggest": "相反，我们已经从可执行文件中知道了符号名称，我们需要按名称搜索以在 object 文件中找到匹配的符号。",
+        "suggest": "相反，我们已经从可执行文件中知道了符号名称，我们需要按名称搜索以在对象文件中找到匹配的符号。",
         "translate": ""
     },
     {
@@ -1096,7 +1096,7 @@
     },
     {
         "source": "If dsymutil was not run, then the DWARF may be found in the source object files.",
-        "suggest": "如果没有运行 dsymutil，则可能在源 object 文件中找到 DWARF。",
+        "suggest": "如果没有运行 dsymutil，则可能在源对象文件中找到 DWARF。",
         "translate": ""
     },
     {
@@ -1106,7 +1106,7 @@
     },
     {
         "source": "Look up the address and get a mapping for the object.",
-        "suggest": "查找地址并获取 object 的映射。",
+        "suggest": "查找地址并获取对象的映射。",
         "translate": ""
     },
     {
@@ -1121,7 +1121,7 @@
     },
     {
         "source": "We must translate the address in order to be able to look it up in the DWARF in the object file.",
-        "suggest": "我们必须转换该地址，以便能够在 object 文件的 DWARF 中查找该地址。",
+        "suggest": "我们必须转换该地址，以便能够在对象文件的 DWARF 中查找该地址。",
         "translate": ""
     },
     {
@@ -1346,7 +1346,7 @@
     },
     {
         "source": "Linux) platforms use ELF as an object file format and typically implement an API called `dl_iterate_phdr` to load native libraries.",
-        "suggest": "Linux) 平台使用 ELF 作为 object 文件格式，并且通常实现称为 `dl_iterate_phdr` 的 API 来加载原生库。",
+        "suggest": "Linux) 平台使用 ELF 作为对象文件格式，并且通常实现称为 `dl_iterate_phdr` 的 API 来加载原生库。",
         "translate": ""
     },
     {
@@ -1421,7 +1421,7 @@
     },
     {
         "source": "The stated address of this segment in the object file.",
-        "suggest": "object 文件中此段的指定地址。",
+        "suggest": "对象文件中此段的指定地址。",
         "translate": ""
     },
     {
@@ -1966,7 +1966,7 @@
     },
     {
         "source": "This trait is yielded as a trait object to the closure given to the `backtrace::resolve` function, and it is virtually dispatched as it's unknown which implementation is behind it.",
-        "suggest": "trait 作为给 `backtrace::resolve` 函数的闭包的 trait object 产生，并且实际上是分派的，因为未知其背后是哪种实现。",
+        "suggest": "trait 作为给 `backtrace::resolve` 函数的闭包的 trait 对象产生，并且实际上是分派的，因为未知其背后是哪种实现。",
         "translate": ""
     },
     {

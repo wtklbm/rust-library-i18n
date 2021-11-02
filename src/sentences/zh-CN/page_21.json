@@ -36,7 +36,7 @@
     },
     {
         "source": "ERR_ALREADY_EXISTS: An object with the specified identifier already exists.",
-        "suggest": "ERR_ALREADY_EXISTS: 具有指定标识符的 object 已经存在。",
+        "suggest": "ERR_ALREADY_EXISTS: 具有指定标识符的对象已经存在。",
         "translate": ""
     },
     {
@@ -1246,7 +1246,7 @@
     },
     {
         "source": "A trait to extract the raw WASI file descriptor from an underlying object.",
-        "suggest": "trait，用于从基础 object 提取原始 WASI 文件描述符。",
+        "suggest": "trait，用于从基础对象提取原始 WASI 文件描述符。",
         "translate": ""
     },
     {
@@ -2791,7 +2791,7 @@
     },
     {
         "source": "Consumes this object, returning the raw underlying handle.",
-        "suggest": "消费此 object，返回原始基础句柄。",
+        "suggest": "消费此对象，返回原始基础句柄。",
         "translate": ""
     },
     {
@@ -2811,7 +2811,7 @@
     },
     {
         "source": "Extracts the underlying raw socket from this object.",
-        "suggest": "从此 object 中提取基础原始套接字。",
+        "suggest": "从此对象中提取基础原始套接字。",
         "translate": ""
     },
     {
@@ -2821,7 +2821,7 @@
     },
     {
         "source": "Creates a new I/O object from the given raw socket.",
-        "suggest": "从给定的原始套接字创建一个新的 I/O object。",
+        "suggest": "从给定的原始套接字创建一个新的 I/O 对象。",
         "translate": ""
     },
     {
@@ -3021,7 +3021,7 @@
     },
     {
         "source": "An owned container for `HANDLE` object, closing them on Drop.",
-        "suggest": "`HANDLE` object 的拥有所有权的容器，在 Drop 上将其关闭。",
+        "suggest": "`HANDLE` 对象的拥有所有权的容器，在 Drop 上将其关闭。",
         "translate": ""
     },
     {

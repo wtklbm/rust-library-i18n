@@ -2246,7 +2246,7 @@
     },
     {
         "source": "However, when `T` *has* no statically-known size, e.g., a slice [`[T]`][slice] or a [trait object], then `size_of_val_raw` can be used to get the dynamically-known size.",
-        "suggest": "然而，当 `T`*没有* 静态大小时，例如，[`[T]`][slice] 或 [trait 对象][trait object]，那么 `size_of_val_raw` 可用于获取动态已知大小。",
+        "suggest": "然而，当 `T` 没有静态已知大小时，例如，[`[T]`][slice] 或 [trait 对象][trait object]，那么 `size_of_val_raw` 可用于获取动态已知大小。",
         "translate": ""
     },
     {
