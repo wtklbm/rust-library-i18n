@@ -4253,5 +4253,125 @@
         "source": "generate normal lea/add code instead of kaddd",
         "suggest": "生成普通 lea/add 代码而不是 kaddd",
         "translate": ""
+    },
+    {
+        "source": "Panics if `M > N`.",
+        "suggest": "如果 `M > N`，则为 panics。",
+        "translate": ""
+    },
+    {
+        "source": "Similar to [`Option`] and [`Result`], this enum can be used with the `?` operator to return immediately if the [`Break`] variant is present or otherwise continue normally with the value inside the [`Continue`] variant.",
+        "suggest": "与 [`Option`] 和 [`Result`] 类似，此枚举可与 `?` 运算符一起使用，以便在 [`Break`] 成员存在时立即返回，或者以其他方式正常继续使用 [`Continue`] 成员中的值。",
+        "translate": ""
+    },
+    {
+        "source": "array of chars pattern",
+        "suggest": "字符模式数组",
+        "translate": ""
+    },
+    {
+        "source": "Associated type for `<[char; N] as Pattern<'a>>::Searcher`.",
+        "suggest": "`<[char; N] as Pattern<'a>>::Searcher` 的关联类型。",
+        "translate": ""
+    },
+    {
+        "source": "Associated type for `<&[char; N] as Pattern<'a>>::Searcher`.",
+        "suggest": "`<&[char; N] as Pattern<'a>>::Searcher` 的关联类型。",
+        "translate": ""
+    },
+    {
+        "source": "Searches for chars that are equal to any of the [`char`]s in the array.",
+        "suggest": "搜索等于数组中任何 [`char`] 的字符。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `ptrdiff_t` type, from `stddef.h` (or `cstddef` for C++).",
+        "suggest": "相当于 C 的 `ptrdiff_t` 类型，来自 `stddef.h` (或 C++ 的 `cstddef`)。",
+        "translate": ""
+    },
+    {
+        "source": "Equivalent to C's `ssize_t` (on POSIX) or `SSIZE_T` (on Windows) type.",
+        "suggest": "相当于 C 的 `ssize_t` (在 POSIX 上) 或 `SSIZE_T` 类型 (在 Windows 上)。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the path exists on disk and is pointing at a symbolic link.",
+        "suggest": "如果路径存在于磁盘上并且指向符号链接，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "If you want to check errors, call [`fs::symlink_metadata`] and handle its [`Result`].",
+        "suggest": "如果要检查错误，请调用 [`fs::symlink_metadata`] 并处理其 [`Result`]。",
+        "translate": ""
+    },
+    {
+        "source": "Then call [`fs::Metadata::is_symlink`] if it was [`Ok`].",
+        "suggest": "如果是 [`Ok`]，则调用 [`fs::Metadata::is_symlink`]。",
+        "translate": ""
+    },
+    {
+        "source": "Implements thread-local destructors that are not associated with any particular data.",
+        "suggest": "实现与任何特定数据无关的线程本地析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "Using a per-thread list avoids the problems in synchronizing global state.",
+        "suggest": "使用每个线程的列表避免了同步全局状态的问题。",
+        "translate": ""
+    },
+    {
+        "source": "Runs destructors.",
+        "suggest": "运行析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "This should not be called until thread exit.",
+        "suggest": "在线程退出之前不应该调用它。",
+        "translate": ""
+    },
+    {
+        "source": "Drop all the destructors.",
+        "suggest": "删除所有的析构函数。",
+        "translate": ""
+    },
+    {
+        "source": "While this is potentially an infinite loop, it *should* be the case that this loop always terminates because we provide the guarantee that a TLS key cannot be set after it is flagged for destruction.",
+        "suggest": "虽然这可能是一个无限循环，但它应该总是终止，因为我们保证在标记为销毁后无法设置 TLS 密钥。",
+        "translate": ""
+    },
+    {
+        "source": "We're done so free the memory.",
+        "suggest": "我们完成了内存的释放。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the the associated thread is still running its main function.",
+        "suggest": "检查关联的线程是否仍在运行其对应的 `main` 函数。",
+        "translate": ""
+    },
+    {
+        "source": "This might return `false` for a brief moment after the thread's main function has returned, but before the thread itself has stopped running.",
+        "suggest": "这可能会在线程的 `main` 函数返回后的一小段时间内返回 `false`，但在线程本身停止运行之前。",
+        "translate": ""
+    },
+    {
+        "source": "Thread is definitely running here, since it's still waiting for the barrier.",
+        "suggest": "线程肯定在这里运行，因为它仍在等待 barrier。",
+        "translate": ""
+    },
+    {
+        "source": "Unblock the barrier.",
+        "suggest": "对 barrier 解锁。",
+        "translate": ""
+    },
+    {
+        "source": "Now check that t.is_running() becomes false within a reasonable time.",
+        "suggest": "现在检查 t.is_running() 是否在合理的时间内变为 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "Joining the thread should not block for a significant time now.",
+        "suggest": "现在加入的线程不应该阻塞很长时间。",
+        "translate": ""
     }
 ]

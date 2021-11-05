@@ -3385,8 +3385,8 @@
         "translate": false
     },
     {
-        "source": "Panics if `M > N`.",
-        "suggest": "Panics 如果 `M > N`。",
+        "source": "789_u16.carrying_mul(456, 123).0, 789_u16.wrapping_mul(456).wrapping_add(123), );",
+        "suggest": "789_u16.carrying_mul (456, 123).0, 789_u16.wrapping_mul (456).wrapping_add (123),);",
         "translate": false
     }
 ]
