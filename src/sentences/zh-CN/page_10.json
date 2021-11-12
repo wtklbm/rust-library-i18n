@@ -2481,7 +2481,7 @@
     },
     {
         "source": "This means that the functions inside of libcore are allowed to panic, but to be useful an upstream crate must define panicking for libcore to use.",
-        "suggest": "这意味着 libcore 内部的函数被允许用于 panic，但上游 crate 有用时必须定义恐慌以供 libcore 使用。",
+        "suggest": "这意味着 libcore 内部的函数被允许用于 panic，但上游 crate 有用时必须定义 panic 以供 libcore 使用。",
         "translate": ""
     },
     {

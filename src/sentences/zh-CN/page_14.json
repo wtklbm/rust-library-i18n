@@ -121,7 +121,7 @@
     },
     {
         "source": "Note that panics should be impossible beyond this point, but this is defensively trying to avoid any accidental panicking reaching the `extern \"C\"` (which should `abort` but may not at the moment, so this is also potentially preventing UB).",
-        "suggest": "请注意，panics 超出此范围应该是不可能的，但这是为了避免任何意外的恐慌而到达 `extern \"C\"` (`extern \"C\"` 应该是 `abort`，但目前可能不会，所以这也有可能阻止 UB)。",
+        "suggest": "请注意，panics 超出此范围应该是不可能的，但这是为了避免任何意外的 panic 而到达 `extern \"C\"` (`extern \"C\"` 应该是 `abort`，但目前可能不会，所以这也有可能阻止 UB)。",
         "translate": ""
     },
     {

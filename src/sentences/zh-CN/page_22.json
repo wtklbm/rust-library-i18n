@@ -251,7 +251,7 @@
     },
     {
         "source": "Note that the Ordering uses to access the `failed` field of `Flag` below is always `Relaxed`, and that's because this isn't actually protecting any data, it's just a flag whether we've panicked or not.",
-        "suggest": "请注意，订购用于访问下面的 `Flag` 的 `failed` 字段始终是 `Relaxed`，这是因为这实际上并没有保护任何数据，它只是我们是否恐慌的标志。",
+        "suggest": "请注意，订购用于访问下面的 `Flag` 的 `failed` 字段始终是 `Relaxed`，这是因为这实际上并没有保护任何数据，它只是我们是否 panic 的标志。",
         "translate": ""
     },
     {
@@ -456,7 +456,7 @@
     },
     {
         "source": "If another user of this mutex panicked while holding the mutex, then this call will return failure if the mutex would otherwise be acquired.",
-        "suggest": "如果此互斥锁的另一个用户在握住互斥锁时恐慌，那么如果以其他方式获取互斥锁，则此调用将返回失败。",
+        "suggest": "如果此互斥锁的另一个用户在持有互斥锁时 panic，那么如果以其他方式获取互斥锁，则此调用将返回失败。",
         "translate": ""
     },
     {
@@ -1841,7 +1841,7 @@
     },
     {
         "source": "While we could use `unwrap` here and it should always work it empirically doesn't seem to always get optimized away, which means that using something like `try_with` can pull in panicking code and cause a large size bloat.",
-        "suggest": "尽管我们可以在这里使用 `unwrap`，并且它应该始终有效，但是根据经验，似乎并没有总是对其进行优化，这意味着使用 `try_with` 之类的东西可能会拉入恐慌代码并造成较大的膨胀。",
+        "suggest": "尽管我们可以在这里使用 `unwrap`，并且它应该始终有效，但是根据经验，似乎并没有总是对其进行优化，这意味着使用 `try_with` 之类的东西可能会引入 panic 代码并导致大规模的膨胀。",
         "translate": ""
     },
     {
@@ -3081,7 +3081,7 @@
     },
     {
         "source": "The value contained in the `Result::Err` variant is the value the thread panicked with;",
-        "suggest": "`Result::Err` 成员中包含的值是被恐慌的线程的值;",
+        "suggest": "`Result::Err` 成员中包含的值是被 panic 的线程的值;",
         "translate": ""
     },
     {
@@ -3111,7 +3111,7 @@
     },
     {
         "source": "A thread that completes without panicking is considered to exit successfully.",
-        "suggest": "没有恐慌地完成的线程被认为已成功退出。",
+        "suggest": "一个线程在没有 panic 的情况下完成被认为是成功退出。",
         "translate": ""
     },
     {
@@ -3511,7 +3511,7 @@
     },
     {
         "source": "We're seeing panics across various platforms where consecutive calls to `Instant::now`, such as via the `elapsed` function, are panicking as they're going backwards.",
-        "suggest": "我们正在各种平台上看到 panics，在这些平台上，通过 `elapsed` 函数对 `Instant::now` 的连续调用在向后倒退时会感到恐慌。",
+        "suggest": "我们正在各种平台上看到 panics，在这些平台上，通过 `elapsed` 函数对 `Instant::now` 的连续调用在向后倒退时会 panic。",
         "translate": ""
     },
     {

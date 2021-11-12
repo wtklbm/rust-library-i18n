@@ -4736,7 +4736,7 @@
     },
     {
         "source": "reserve would have aborted or panicked if the len exceeded `isize::MAX` so this is safe to do unchecked now.",
-        "suggest": "如果 len 超过 `isize::MAX`，则储备金将中止或恐慌，因此现在可以安全地取消选中该复选框。",
+        "suggest": "如果 len 超过 `isize::MAX`，则 reserve 将中止或 panic，所以现在不检查是安全的。",
         "translate": ""
     },
     {

@@ -1941,7 +1941,7 @@
     },
     {
         "source": "See information on `resolve` for caveats on `cb` panicking.",
-        "suggest": "有关 `cb` 恐慌的注意事项，请参见 `resolve` 上的信息。",
+        "suggest": "有关 `cb` panic 的警告，请参见 `resolve` 上的信息。",
         "translate": ""
     },
     {
@@ -1956,7 +1956,7 @@
     },
     {
         "source": "See information on `resolve_frame` for caveats on `cb` panicking.",
-        "suggest": "有关 `cb` 恐慌的注意事项，请参见 `resolve_frame` 上的信息。",
+        "suggest": "有关 `cb` panic 的警告，请参见 `resolve_frame` 上的信息。",
         "translate": ""
     },
     {
@@ -2631,7 +2631,7 @@
     },
     {
         "source": "Implementations are encouraged to return null on memory exhaustion rather than aborting, but this is not a strict requirement.",
-        "suggest": "鼓励实现在内存耗尽时返回 null 而不是终止，但这不是严格的要求。",
+        "suggest": "鼓励实现在内存耗尽时返回 null 而不是中止，但这不是严格的要求。",
         "translate": ""
     },
     {
@@ -2761,7 +2761,7 @@
     },
     {
         "source": "Implementations are encouraged to return null on memory exhaustion rather than panicking or aborting, but this is not a strict requirement.",
-        "suggest": "鼓励实现在内存耗尽时返回 null 而不是恐慌或终止，但是这不是严格的要求。",
+        "suggest": "鼓励实现在内存耗尽时返回 null 而不是 panic 或中止，但是这不是严格的要求。",
         "translate": ""
     },
     {
@@ -3356,7 +3356,7 @@
     },
     {
         "source": "Implementations are encouraged to return `Err` on memory exhaustion rather than panicking or aborting, but this is not a strict requirement.",
-        "suggest": "鼓励实现在内存耗尽时返回 `Err`，而不是恐慌或终止，但是这不是严格的要求。",
+        "suggest": "鼓励实现在内存耗尽时返回 `Err`，而不是 panic 或中止，但是这不是严格的要求。",
         "translate": ""
     },
     {

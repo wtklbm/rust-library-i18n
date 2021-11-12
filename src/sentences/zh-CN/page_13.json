@@ -4936,7 +4936,7 @@
     },
     {
         "source": "The next best thing, then is to fill in these structures at runtime (panicking is already the \"slow path\" anyway).",
-        "suggest": "接下来的第二件事是在运行时填充这些结构 (无论如何，恐慌已经是 \"slow path\")。",
+        "suggest": "接下来的第二件事是在运行时填充这些结构 (无论如何，panic 已经是 \"slow path\")。",
         "translate": ""
     },
     {

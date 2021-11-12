@@ -4416,7 +4416,7 @@
     },
     {
         "source": "Indicates unimplemented code by panicking with a message of \"not implemented\".",
-        "suggest": "通过恐慌并带有 \"not implemented\" 消息来指示未实现的代码。",
+        "suggest": "通过 panic 并带有 \"not implemented\" 的消息来指示未实现的代码。",
         "translate": ""
     },
     {

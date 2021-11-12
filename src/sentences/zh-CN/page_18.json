@@ -41,7 +41,7 @@
     },
     {
         "source": "See the [`panic!`] macro for more information about panicking.",
-        "suggest": "有关恐慌的更多信息，请参见 [`panic!`] 宏。",
+        "suggest": "有关 panic 的更多信息，请参见 [`panic!`] 宏。",
         "translate": ""
     },
     {
@@ -366,7 +366,7 @@
     },
     {
         "source": "A panic in Rust is not always implemented via unwinding, but can be implemented by aborting the process as well.",
-        "suggest": "Rust 中的 panic 并不总是通过展开来实现，但是也可以通过终止进程来实现。",
+        "suggest": "Rust 中的 panic 并不总是通过展开来实现，但是也可以通过中止进程来实现。",
         "translate": ""
     },
     {
@@ -486,7 +486,7 @@
     },
     {
         "source": "As such, the hook will run with both the aborting and unwinding runtimes.",
-        "suggest": "这样，hook 将与终止和展开运行时一起运行。",
+        "suggest": "这样，hook 将与中止和展开运行时一起运行。",
         "translate": ""
     },
     {
@@ -506,7 +506,7 @@
     },
     {
         "source": "Panics if called from a panicking thread.",
-        "suggest": "Panics (如果从紧急恐慌线程调用)。",
+        "suggest": "如果从 panic 线程调用，则 panic。",
         "translate": ""
     },
     {
@@ -746,7 +746,7 @@
     },
     {
         "source": "The entry point for panicking with a formatted message.",
-        "suggest": "带有格式化消息的恐慌的入口点。",
+        "suggest": "带有格式化消息的 panic 的入口点。",
         "translate": ""
     },
     {
@@ -786,7 +786,7 @@
     },
     {
         "source": "This is the entry point of panicking for the non-format-string variants of panic!() and assert!().",
-        "suggest": "这是 panic! () 和 assert! () 的非格式字符串成员恐慌的入口点。",
+        "suggest": "这是 panic! () 和 assert! () 的非格式字符串成员 panic 的入口点。",
         "translate": ""
     },
     {
@@ -1201,7 +1201,7 @@
     },
     {
         "source": "A structure wrapping a Windows path prefix as well as its unparsed string representation.",
-        "suggest": "包裹 Windows 路径前缀及其未解析的字符串表示形式的结构体。",
+        "suggest": "包装 Windows 路径前缀及其未解析的字符串表示形式的结构体。",
         "translate": ""
     },
     {
@@ -2766,7 +2766,7 @@
     },
     {
         "source": "Now, when the server disconnects, we exit the loop with an error instead of panicking.",
-        "suggest": "现在，当服务器断开连接时，我们以错误退出循环而不是恐慌。",
+        "suggest": "现在，当服务器断开连接时，我们以错误退出循环而不是 panic。",
         "translate": ""
     },
     {

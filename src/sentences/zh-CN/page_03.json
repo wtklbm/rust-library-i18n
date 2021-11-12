@@ -731,7 +731,7 @@
     },
     {
         "source": "Attempt to consume any remaining elements if the filter predicate has not yet panicked.",
-        "suggest": "如果过滤谓词尚未恐慌，请尝试消耗所有剩余的元素。",
+        "suggest": "如果过滤谓词尚未 panic，请尝试消耗所有剩余的元素。",
         "translate": ""
     },
     {
@@ -1906,7 +1906,7 @@
     },
     {
         "source": "This drop guard will be invoked when predicate or `drop` of element panicked.",
-        "suggest": "当谓词或元素的 `drop` 发生恐慌时，将调用此丢弃守卫。",
+        "suggest": "当谓词或元素的 `drop` 发生 panic 时，将调用此丢弃守卫。",
         "translate": ""
     },
     {
@@ -1916,7 +1916,7 @@
     },
     {
         "source": "In cases when predicate and `drop` never panick, it will be optimized out.",
-        "suggest": "在谓词和 `drop` 永远不会恐慌的情况下，它将被优化。",
+        "suggest": "在谓词和 `drop` 永远不会 panic 的情况下，它将被优化。",
         "translate": ""
     },
     {
@@ -3851,7 +3851,7 @@
     },
     {
         "source": "Everything is dropped when predicate panicked.",
-        "suggest": "谓词恐慌时，所有内容都将丢失。",
+        "suggest": "当谓词 panic 时，所有内容都将被丢失。",
         "translate": ""
     },
     {
@@ -4671,7 +4671,7 @@
     },
     {
         "source": "Some platforms use a C library which internally uses callbacks which cannot be unwound through, so panicking from `cb` may trigger a process abort.",
-        "suggest": "某些平台使用 C 库，该库在内部使用无法解开的回调，因此从 `cb` 恐慌可能会触发进程终止。",
+        "suggest": "某些平台使用 C 库，该库在内部使用无法解开的回调，因此从 `cb` panic 可能会触发进程终止。",
         "translate": ""
     },
     {
@@ -4691,7 +4691,7 @@
     },
     {
         "source": "See information on `trace` for caveats on `cb` panicking.",
-        "suggest": "有关 `cb` 恐慌的注意事项，请参见 `trace` 上的信息。",
+        "suggest": "有关 `cb` panic 的警告，请参见 `trace` 上的信息。",
         "translate": ""
     },
     {

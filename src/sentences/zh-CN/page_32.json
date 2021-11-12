@@ -4373,5 +4373,135 @@
         "source": "Joining the thread should not block for a significant time now.",
         "suggest": "现在加入的线程不应该阻塞很长时间。",
         "translate": ""
+    },
+    {
+        "source": "The declaration of the `Box` struct must be kept in sync with the `alloc::alloc::box_free` function or ICEs will happen.",
+        "suggest": "`Box` 结构的声明必须与 `alloc::alloc::box_free` 函数保持同步，否则会发生 ICE。",
+        "translate": ""
+    },
+    {
+        "source": "See the comment on `box_free` for more details.",
+        "suggest": "有关更多详细信息，请参见 `box_free` 上的注释。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this negative impl isn't strictly necessary for correctness, as `Rc` transitively contains a `Cell`, which is itself `!Sync`.",
+        "suggest": "请注意，这个 negative impl 对于正确性来说并不是严格必要的，因为 `Rc` 传递地包含一个 `Cell`，它本身就是 `!Sync`。",
+        "translate": ""
+    },
+    {
+        "source": "However, given how important `Rc`'s `!Sync`-ness is, having an explicit negative impl is nice for documentation purposes and results in nicer error messages.",
+        "suggest": "然而，考虑到 `Rc` 的 `!Sync` 特性的重要性，有一个显式的 negative impl 对于文档来说是很好的，并且会产生更好的错误消息。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this negative impl isn't strictly necessary for correctness, as `Cell` wraps `UnsafeCell`, which is itself `!Sync`.",
+        "suggest": "请注意，这个 negative impl 对于正确性来说并不是严格必要的，因为 `Cell` 包装了 `UnsafeCell`，而 `UnsafeCell` 本身就是 `!Sync`。",
+        "translate": ""
+    },
+    {
+        "source": "However, given how important `Cell`'s `!Sync`-ness is, having an explicit negative impl is nice for documentation purposes and results in nicer error messages.",
+        "suggest": "然而，考虑到 `Cell` 的 `!Sync` 特性是多么重要，有一个显式的 negative impl 对于文档来说是很好的，并且会产生更好的错误消息。",
+        "translate": ""
+    },
+    {
+        "source": "When a user calls `map.entry(key)`, the map will search for the key and then yield a variant of the `Entry` enum.",
+        "suggest": "当用户调用 `map.entry(key)` 时，map 将搜索键，然后生成 `Entry` 枚举的成员。",
+        "translate": ""
+    },
+    {
+        "source": "This uses `repr(transparent)` and has the representation of a host handle, so it can be used in FFI in places where a handle is passed as an argument, it is not captured or consumed.",
+        "suggest": "这使用 `repr(transparent)` 并具有主机句柄的表示，因此它可以在 FFI 中用于将句柄作为参数传递的地方，它不会被捕获或消耗。",
+        "translate": ""
+    },
+    {
+        "source": "And, it *may* have the value `NULL` (0), which can occur when consoles are detached from processes, or when `windows_subsystem` is used.",
+        "suggest": "并且，它*可能*具有值 `NULL` (0)，当控制台与进程分离或使用 `windows_subsystem` 时，可能会发生这种情况。",
+        "translate": ""
+    },
+    {
+        "source": "FFI type for handles in return values or out parameters, where `NULL` is used as a sentry value to indicate errors, such as in the return value of `CreateThread`.",
+        "suggest": "返回值或输出参数句柄的 FFI 类型，其中 `NULL` 用作指示错误的哨兵值，例如在 `CreateThread` 的返回值中。",
+        "translate": ""
+    },
+    {
+        "source": "The only thing you can usefully do with a `HandleOrNull` is to convert it into an `OwnedHandle` using its [`TryFrom`] implementation;",
+        "suggest": "您可以对 `HandleOrNull` 做的唯一有用的事情是使用其 [`TryFrom`] 实现将其转换成一个 `OwnedHandle`;",
+        "translate": ""
+    },
+    {
+        "source": "this conversion takes care of the check for `NULL`.",
+        "suggest": "此转换负责检查 `NULL`。",
+        "translate": ""
+    },
+    {
+        "source": "This ensures that such FFI calls cannot start using the handle without checking for `NULL` first.",
+        "suggest": "这可确保此类 FFI 调用在未先检查 `NULL` 的情况下无法开始使用句柄。",
+        "translate": ""
+    },
+    {
+        "source": "This type concerns any value other than `NULL` to be valid, including `INVALID_HANDLE_VALUE`.",
+        "suggest": "此类型涉及除 `NULL` 之外的任何有效值，包括 `INVALID_HANDLE_VALUE`。",
+        "translate": ""
+    },
+    {
+        "source": "This is because APIs that use `NULL` as their sentry value don't treat `INVALID_HANDLE_VALUE` as special.",
+        "suggest": "这是因为使用 `NULL` 作为它的哨兵值的 API 不会将 `INVALID_HANDLE_VALUE` 视为特殊值。",
+        "translate": ""
+    },
+    {
+        "source": "This type concerns any value other than `INVALID_HANDLE_VALUE` to be valid, including `NULL`.",
+        "suggest": "此类型涉及除 `INVALID_HANDLE_VALUE` 之外的任何有效值，包括 `NULL`。",
+        "translate": ""
+    },
+    {
+        "source": "This is because APIs that use `INVALID_HANDLE_VALUE` as their sentry value may return `NULL` under `windows_subsystem = \"windows\"` or other situations where I/O devices are detached.",
+        "suggest": "这是因为使用 `INVALID_HANDLE_VALUE` 作为它的哨兵值的 API 在 `windows_subsystem = \"windows\"` 或其他 I/O 设备分离的情况下可能会返回 `NULL`。",
+        "translate": ""
+    },
+    {
+        "source": "The resource pointed to by `handle` must be a valid open handle, it must remain open for the duration of the returned `BorrowedHandle`.",
+        "suggest": "`handle` 指向的资源必须是有效的打开句柄，它必须在返回的 `BorrowedHandle` 期间保持打开状态。",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new instance of `Self` from the given `RawHandle` returned from a Windows API that uses null to indicate failure, such as `CreateThread`.",
+        "suggest": "根据从 Windows API 返回的给定 `RawHandle` 构造一个新的 `Self` 实例，该 API 使用 null 表示失败，例如 `CreateThread`。",
+        "translate": ""
+    },
+    {
+        "source": "Use `HandleOrInvalid` instead of `HandleOrNull` for APIs that use `INVALID_HANDLE_VALUE` to indicate failure.",
+        "suggest": "对于使用 `INVALID_HANDLE_VALUE` 指示失败的 API，使用 `HandleOrInvalid` 而不是 `HandleOrNull`。",
+        "translate": ""
+    },
+    {
+        "source": "The resource pointed to by `handle` must be either open and otherwise unowned, or null.",
+        "suggest": "`handle` 指向的资源必须是打开的，否则是 unowned，或者为 null。",
+        "translate": ""
+    },
+    {
+        "source": "Note that not all Windows APIs use null for errors;",
+        "suggest": "请注意，并非所有 Windows API 都使用 null 表示错误;",
+        "translate": ""
+    },
+    {
+        "source": "Use `HandleOrNull` instead of `HandleOrInvalid` for APIs that use null to indicate failure.",
+        "suggest": "对于使用 null 表示失败的 API，使用 `HandleOrNull` 而不是 `HandleOrInvalid`。",
+        "translate": ""
+    },
+    {
+        "source": "The resource pointed to by `handle` must be either open and otherwise unowned, null, or equal to `INVALID_HANDLE_VALUE` (-1).",
+        "suggest": "`handle` 指向的资源必须是打开的，否则为 unowned、null 或等于 `INVALID_HANDLE_VALUE` (-1)。",
+        "translate": ""
+    },
+    {
+        "source": "Because the testsuite node holds some of the information as attributes, we can't write it until all of the tests have finished.",
+        "suggest": "因为 testsuite 节点将一些信息作为属性保存，所以在所有测试完成之前我们无法编写它。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of writing every result as they come in, we add them to a Vec and write them all at once when run is complete.",
+        "suggest": "我们不是在结果出现时写入每个结果，而是将它们添加到 Vec 中，并在运行完成时将它们全部写入。",
+        "translate": ""
     }
 ]

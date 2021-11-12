@@ -2066,7 +2066,7 @@
     },
     {
         "source": "If this api is unavailable, there cannot be anything waiting, because WaitOnAddress would've panicked.",
-        "suggest": "如果此 api 不可用，将没有任何等待，因为 WaitOnAddress 会感到恐慌。",
+        "suggest": "如果此 api 不可用，将没有任何等待，因为 WaitOnAddress 会 panic。",
         "translate": ""
     },
     {

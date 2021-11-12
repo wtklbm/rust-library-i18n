@@ -4501,7 +4501,7 @@
     },
     {
         "source": "We already panicked for zero, and ensured by construction that the length of the subslice is a multiple of N.",
-        "suggest": "我们已经感到恐慌为零，并通过构造确保子切片的长度是 N 的倍数。",
+        "suggest": "我们已经 panic 为零，并通过构造确保子切片的长度是 N 的倍数。",
         "translate": ""
     },
     {

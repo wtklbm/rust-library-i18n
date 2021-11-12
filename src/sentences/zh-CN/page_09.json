@@ -3291,7 +3291,7 @@
     },
     {
         "source": "Computes the absolute value of `self` without any wrapping or panicking.",
-        "suggest": "计算 `self` 的绝对值，而不会引起任何包裹或恐慌。",
+        "suggest": "计算 `self` 的绝对值，而不会引起任何包装或 panic。",
         "translate": ""
     },
     {

@@ -4151,7 +4151,7 @@
     },
     {
         "source": "If the underlying writer panicked, it is not known what portion of the data was written.",
-        "suggest": "如果基础 writer 恐慌，则不知道写入了数据的哪一部分。",
+        "suggest": "如果底层的 writer 发生 panic，就不知道数据的哪一部分被写入了。",
         "translate": ""
     },
     {
@@ -4181,7 +4181,7 @@
     },
     {
         "source": "Some of this data may have been written by the panicking call(s) to the underlying writer, so simply writing it again is not a good idea.",
-        "suggest": "恐慌的 call(s) 可能已将某些数据写入基础 writer，因此，仅再次写入它不是一个好主意。",
+        "suggest": "panic 的 call(s) 可能已将某些数据写入底层 writer，因此，仅再次写入它不是一个好主意。",
         "translate": ""
     },
     {

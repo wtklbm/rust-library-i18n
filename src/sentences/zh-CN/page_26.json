@@ -3301,7 +3301,7 @@
     },
     {
         "source": "aborting outside a transactional region does nothing",
-        "suggest": "在事务区域外终止不执行任何操作",
+        "suggest": "在事务区域外中止不执行任何操作",
         "translate": ""
     },
     {

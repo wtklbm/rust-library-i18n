@@ -2876,7 +2876,7 @@
     },
     {
         "source": "If we're aborting selection after upgrading from a oneshot, then we're guarantee that no one is waiting.",
-        "suggest": "如果我们是从 oneshot 升级后终止选择，那么我们保证没有人在等待。",
+        "suggest": "如果我们是从 oneshot 升级后中止选择，那么我们保证没有人在等待。",
         "translate": ""
     },
     {
@@ -3601,7 +3601,7 @@
     },
     {
         "source": "If another user of this mutex panicked while holding the mutex, then this call will return an error once the mutex is acquired.",
-        "suggest": "如果互斥锁的另一个用户在握住互斥锁时恐慌，则一旦获取互斥锁，此调用将返回错误。",
+        "suggest": "如果互斥锁的另一个用户在持有互斥锁时 panic，那么一旦获取了互斥锁，这个调用将返回一个错误。",
         "translate": ""
     },
     {
@@ -3636,7 +3636,7 @@
     },
     {
         "source": "If another user of this mutex panicked while holding the mutex, then this call will return an error if the mutex would otherwise be acquired.",
-        "suggest": "如果此互斥锁的另一个用户在握住互斥锁时恐慌，那么如果以其他方式获取互斥锁，则此调用将返回错误。",
+        "suggest": "如果此互斥锁的另一个用户在持有互斥锁时 panic，那么如果以其他方式获取互斥锁，则此调用将返回错误。",
         "translate": ""
     },
     {
@@ -3661,7 +3661,7 @@
     },
     {
         "source": "If another user of this mutex panicked while holding the mutex, then this call will return an error instead.",
-        "suggest": "如果此互斥锁的另一个用户在按住互斥锁时恐慌，则此调用将返回错误。",
+        "suggest": "如果此互斥锁的另一个用户在持有互斥锁时 panic，则此调用将返回错误。",
         "translate": ""
     },
     {
@@ -4326,7 +4326,7 @@
     },
     {
         "source": "Poison the associated [`Once`] without explicitly panicking.",
-        "suggest": "中毒关联的 [`Once`]，而不会显着恐慌。",
+        "suggest": "中毒关联的 [`Once`]，而不显式 panic。",
         "translate": ""
     },
     {
