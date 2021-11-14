@@ -61,7 +61,7 @@
     },
     {
         "source": "bump back up the strong ref count.",
-        "suggest": "增加强劲的裁判人数。",
+        "suggest": "增加强引用计数。",
         "translate": ""
     },
     {
