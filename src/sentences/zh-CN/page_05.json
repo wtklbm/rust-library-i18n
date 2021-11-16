@@ -4796,7 +4796,7 @@
     },
     {
         "source": "Format trait for an empty format,",
-        "suggest": "格式化 trait 为空格式，",
+        "suggest": "空格式的格式化 trait，",
         "translate": ""
     },
     {
