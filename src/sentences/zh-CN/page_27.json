@@ -4981,7 +4981,7 @@
     },
     {
         "source": "Also remember that this repository requires the nightly channel of Rust!",
-        "suggest": "还请记住，该仓库需要 Rust 的每晚通道！",
+        "suggest": "还请记住，该仓库需要 Rust 的夜间通道！",
         "translate": ""
     },
     {

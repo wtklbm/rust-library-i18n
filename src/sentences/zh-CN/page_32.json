@@ -146,12 +146,12 @@
     },
     {
         "source": "Determines the get lane function for this type.",
-        "suggest": "确定此类型的获取通道函数。",
+        "suggest": "确定此类型的获取 lane 函数。",
         "translate": ""
     },
     {
         "source": "Gets a hex constant value for a single lane in in a determistic way",
-        "suggest": "以确定的方式获取单个通道的十六进制常量值",
+        "suggest": "以确定的方式获取单个 lane 的十六进制常量值",
         "translate": ""
     },
     {
@@ -161,7 +161,7 @@
     },
     {
         "source": "The index of the simd lane we are generating for",
-        "suggest": "我们正在生成的 simd 通道的索引",
+        "suggest": "我们正在生成的 simd lane 的索引",
         "translate": ""
     },
     {
@@ -4502,6 +4502,501 @@
     {
         "source": "Instead of writing every result as they come in, we add them to a Vec and write them all at once when run is complete.",
         "suggest": "我们不是在结果出现时写入每个结果，而是将它们添加到 Vec 中，并在运行完成时将它们全部写入。",
+        "translate": ""
+    },
+    {
+        "source": "If a named parameter does not appear in the argument list, `format!` will reference a variable with that name in the current scope.",
+        "suggest": "如果命名参数没有出现在参数列表中，`format!` 将引用当前作用域中的同名变量。",
+        "translate": ""
+    },
+    {
+        "source": "If you need to preserve the element order, use [`remove`] instead.",
+        "suggest": "如果需要保留元素顺序，请改用 [`remove`]。",
+        "translate": ""
+    },
+    {
+        "source": "Because this shifts over the remaining elements, it has a worst-case performance of *O*(*n*).",
+        "suggest": "因为这会转移其余元素，所以它的最坏情况性能为 *O*(*n*)。",
+        "translate": ""
+    },
+    {
+        "source": "Retains only the elements specified by the predicate, passing a mutable reference to it.",
+        "suggest": "仅保留由谓词指定的元素，并将一个可变引用传递给它。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, remove all elements `e` such that `f(&mut e)` returns `false`.",
+        "suggest": "换句话说，删除所有元素 `e`，使得 `f(&mut e)` 返回 `false`。",
+        "translate": ""
+    },
+    {
+        "source": "once Result::ok is const fn, use it here",
+        "suggest": "一旦 Result::ok 是 const fn，就在这里使用它",
+        "translate": ""
+    },
+    {
+        "source": "once then_some is const fn, use it here",
+        "suggest": "一旦 then_some 是 const fn，就在这里使用它",
+        "translate": ""
+    },
+    {
+        "source": "Checks whether the regions of memory starting at `src` and `dst` of size `count * size_of::<T>()` do *not* overlap.",
+        "suggest": "检查从 `src` 和 `dst` 开始、大小为 `count * size_of::<T>()` 的内存区域是否*不*重叠。",
+        "translate": ""
+    },
+    {
+        "source": "If the absolute distance between the ptrs is at least as big as the size of the buffer, they do not overlap.",
+        "suggest": "如果 ptr 之间的绝对距离至少与缓冲区的大小一样大，则它们不会重叠。",
+        "translate": ""
+    },
+    {
+        "source": "runtime debug-assertions are a best-effort basis;",
+        "suggest": "运行时调试断言是最好的努力基础;",
+        "translate": ""
+    },
+    {
+        "source": "it's fine to not do them during compile time",
+        "suggest": "在编译时不执行这些操作也没关系",
+        "translate": ""
+    },
+    {
+        "source": "Pull in the `core_simd` crate directly into libcore.",
+        "suggest": "将 `core_simd` crate 直接拉取到 libcore 中。",
+        "translate": ""
+    },
+    {
+        "source": "The contents of `core_simd` are in a different repository:",
+        "suggest": "`core_simd` 的内容在不同的仓库中:",
+        "translate": ""
+    },
+    {
+        "source": "depends on libcore, but the contents of this module are set up in such a way that directly pulling it here works such that the crate uses this crate as its libcore.",
+        "suggest": "依赖于 libcore，但是这个模块的内容是这样设置的，即直接将它拉到这里，这样 crate 使用这个 crate 作为它的 libcore。",
+        "translate": ""
+    },
+    {
+        "source": "Miri does not support all SIMD intrinsics",
+        "suggest": "Miri 不支持所有 SIMD 内部函数",
+        "translate": ""
+    },
+    {
+        "source": "This will always [`panic!`] because `unreachable!` is just a shorthand for `panic!` with a fixed, specific message.",
+        "suggest": "这将始终为 [`panic!`]，因为 `unreachable!` 只是 `panic!` 的简写，带有固定的、特定的消息。",
+        "translate": ""
+    },
+    {
+        "source": "Follows the IEEE-754 2008 semantics for maxNum, except for handling of signaling NaNs.",
+        "suggest": "遵循 IEEE-754 2008 的 maxNum 语义，但信令 NAN 的处理除外。",
+        "translate": ""
+    },
+    {
+        "source": "This matches the behavior of libm’s fmin.",
+        "suggest": "这与 libm 的 fmin 的行为相匹配。",
+        "translate": ""
+    },
+    {
+        "source": "Follows the IEEE-754 2008 semantics for minNum, except for handling of signaling NaNs.",
+        "suggest": "遵循 IEEE-754 2008 的 minNum 语义，但信令 NAN 的处理除外。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the maximum of the two numbers, propagating NaNs.",
+        "suggest": "返回两个数字中的最大值，传播 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "This returns NaN when *either* argument is NaN, as opposed to [`f32::max`] which only returns NaN when *both* arguments are NaN.",
+        "suggest": "这在任一参数为 NaN 时，这将返回 NaN，而 [`f32::max`] 仅当两个参数都为 NaN 时才返回 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "If one of the arguments is NaN, then NaN is returned.",
+        "suggest": "如果参数之一是 NaN，则返回 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise this returns the greater of the two numbers.",
+        "suggest": "否则，这将返回两个数字中较大的一个。",
+        "translate": ""
+    },
+    {
+        "source": "For this operation, -0.0 is considered to be less than +0.0.",
+        "suggest": "对于此操作，`-0.0` 被认为小于 `+0.0`。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this follows the semantics specified in IEEE 754-2019.",
+        "suggest": "请注意，这遵循 IEEE 754-2019 中指定的语义。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the minimum of the two numbers, propagating NaNs.",
+        "suggest": "返回两个数字中的最小值，传播 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "This returns NaN when *either* argument is NaN, as opposed to [`f32::min`] which only returns NaN when *both* arguments are NaN.",
+        "suggest": "当任一参数是 NaN 时，这将返回 NaN，而 [`f32::min`] 只有当两个参数都是 NaN 时才返回 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise this returns the lesser of the two numbers.",
+        "suggest": "否则，这将返回两个数字中的较小者。",
+        "translate": ""
+    },
+    {
+        "source": "This returns NaN when *either* argument is NaN, as opposed to [`f64::max`] which only returns NaN when *both* arguments are NaN.",
+        "suggest": "当任一参数为 NaN 时，这将返回 NaN，而 [`f64::max`] 仅当两个参数都为 NaN 时才返回 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "This returns NaN when *either* argument is NaN, as opposed to [`f64::min`] which only returns NaN when *both* arguments are NaN.",
+        "suggest": "当任一参数为 NaN 时返回 NaN，而 [`f64::min`] 仅当两个参数都为 NaN 时才返回 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "All the traits in [`std::fmt`] except [`fmt::Pointer`] (which is implemented regardless of the type of its referent) and [`fmt::Write`]",
+        "suggest": "[`std::fmt`] 中的所有 traits，除了 [`fmt::Pointer`] (无论其引用对象的类型是什么，它都被实现) 和 [`fmt::Write`]",
+        "translate": ""
+    },
+    {
+        "source": "\\(`&T` references also require <code>T: [Sync]</code>)",
+        "suggest": "\\(`&T` 引用也需要 <code>T: [Sync]</code>)",
+        "translate": ""
+    },
+    {
+        "source": "It is permisseble for `align_offset` to always return `usize::MAX`, algorithm correctness can not depend on `align_offset` returning non-max values.",
+        "suggest": "允许 `align_offset` 总是返回 `usize::MAX`，算法正确性不能依赖于 `align_offset` 返回的非最大值。",
+        "translate": ""
+    },
+    {
+        "source": "As such the behaviour can't change after replacing `align_offset` with `usize::MAX`, only performance can.",
+        "suggest": "因此，将 `align_offset` 替换为 `usize::MAX` 后，行为无法改变，只有性能会改变。",
+        "translate": ""
+    },
+    {
+        "source": "These slices will skip the middle item for an odd length, since that one doesn't need to move.",
+        "suggest": "这些切片将跳过奇数长度的中间项，因为该项不需要移动。",
+        "translate": ""
+    },
+    {
+        "source": "Both are subparts of the original slice, so the memory range is valid, and they don't overlap because they're each only half (or less) of the original slice.",
+        "suggest": "两者都是原始切片的子部分，因此内存范围是有效的，它们不会重叠，因为它们每个都只是原始切片的一半 (或更少)。",
+        "translate": ""
+    },
+    {
+        "source": "Introducing a function boundary here means that the two halves get `noalias` markers, allowing better optimization as LLVM knows that they're disjoint, unlike in the original slice.",
+        "suggest": "这里引入函数边界意味着两个部分得到 `noalias` 标记，允许更好的优化，因为 LLVM 知道它们是不相交的，不像在原始切片中那样。",
+        "translate": ""
+    },
+    {
+        "source": "Because this function is first compiled in isolation, this check tells LLVM that the indexing below is in-bounds.",
+        "suggest": "因为这个函数首先是独立编译的，所以这个检查告诉 LLVM 下面的索引是在边界内的。",
+        "translate": ""
+    },
+    {
+        "source": "Then after inlining -- once the actual lengths of the slices are known -- it's removed.",
+        "suggest": "然后在内联之后 -- 一旦知道了切片的实际长度 -- 它就会被删除。",
+        "translate": ""
+    },
+    {
+        "source": "This should use `?` again, once it's `const`",
+        "suggest": "这应该再次使用 `?`，一旦它是 `const`",
+        "translate": ""
+    },
+    {
+        "source": "validation succeeded.",
+        "suggest": "验证成功。",
+        "translate": ""
+    },
+    {
+        "source": "This should become `map` again, once it's `const`",
+        "suggest": "这应该再次成为 `map`，一旦它是 `const`",
+        "translate": ""
+    },
+    {
+        "source": "`str` invariant says `self.iter` is a valid UTF-8 string and the resulting `ch` is a valid Unicode Scalar Value.",
+        "suggest": "`str` 不变量表示 `self.iter` 是有效的 UTF-8 字符串，结果 `ch` 是有效的 Unicode 标量值。",
+        "translate": ""
+    },
+    {
+        "source": "must produce a valid UTF-8-like (UTF-8 or WTF-8) string",
+        "suggest": "必须产生一个有效的类似 UTF-8 (UTF-8 或 WTF-8) 的字符串",
+        "translate": ""
+    },
+    {
+        "source": "`bytes` produces an UTF-8-like string, so the iterator must produce a value here.",
+        "suggest": "`bytes` 产生一个类似 UTF-8 的字符串，所以迭代器必须在这里产生一个值。",
+        "translate": ""
+    },
+    {
+        "source": "Unwinding for unsupported target.",
+        "suggest": "展开不受支持的目标。",
+        "translate": ""
+    },
+    {
+        "source": "Stubs that simply abort for targets that don't support unwinding otherwise.",
+        "suggest": "对不支持展开的目标简单地中止的 stubs。",
+        "translate": ""
+    },
+    {
+        "source": "4x4 matrix inverse",
+        "suggest": "4x4 求逆矩阵",
+        "translate": ""
+    },
+    {
+        "source": "Code ported from the `packed_simd` crate Run this code with `cargo test --example matrix_inversion`",
+        "suggest": "从 `packed_simd` crate 移植的代码使用 `cargo test --example matrix_inversion` 运行此代码",
+        "translate": ""
+    },
+    {
+        "source": "Gotta define our own 4x4 matrix since Rust doesn't ship multidim arrays yet :^)",
+        "suggest": "必须定义我们自己的 4x4 矩阵，因为 Rust 还没有提供多维数组 :^)",
+        "translate": ""
+    },
+    {
+        "source": "row 0:",
+        "suggest": "第 0 行:",
+        "translate": ""
+    },
+    {
+        "source": "row 1",
+        "suggest": "第 1 行",
+        "translate": ""
+    },
+    {
+        "source": "row 2",
+        "suggest": "第 2 行",
+        "translate": ""
+    },
+    {
+        "source": "row 3",
+        "suggest": "第 3 行",
+        "translate": ""
+    },
+    {
+        "source": "calculate the reciprocal",
+        "suggest": "计算倒数",
+        "translate": ""
+    },
+    {
+        "source": "Empty main to make cargo happy",
+        "suggest": "清空 main 让 cargo 开心",
+        "translate": ""
+    },
+    {
+        "source": "Benchmarks game nbody code Taken from the `packed_simd` crate Run this benchmark with `cargo test --example nbody`",
+        "suggest": "基准游戏 nbody 代码取自 `packed_simd` crate，用 `cargo test --example nbody` 运行这个基准",
+        "translate": ""
+    },
+    {
+        "source": "compute distance between bodies:",
+        "suggest": "计算物体之间的距离:",
+        "translate": ""
+    },
+    {
+        "source": "Good enough for demonstration purposes, not going for strictness here.",
+        "suggest": "足够用于演示目的，这里不要求严格。",
+        "translate": ""
+    },
+    {
+        "source": "Test if each lane is equal to the corresponding lane in `other`.",
+        "suggest": "测试每个 lane 是否等于 `other` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Test if each lane is not equal to the corresponding lane in `other`.",
+        "suggest": "测试每个 lane 是否不等于 `other` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Test if each lane is less than the corresponding lane in `other`.",
+        "suggest": "测试每个 lane 是否小于 `other` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Test if each lane is greater than the corresponding lane in `other`.",
+        "suggest": "测试每个 lane 是否大于 `other` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Test if each lane is less than or equal to the corresponding lane in `other`.",
+        "suggest": "测试每个 lane 是否小于或等于 `other` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Test if each lane is greater than or equal to the corresponding lane in `other`.",
+        "suggest": "测试每个 lane 是否大于或等于 `other` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Portable SIMD module.",
+        "suggest": "便携式 SIMD 模块。",
+        "translate": ""
+    },
+    {
+        "source": "This module offers a portable abstraction for SIMD operations that is not bound to any particular hardware architecture.",
+        "suggest": "该模块为 SIMD 操作提供了一个可移植的抽象，它不受任何特定硬件架构的约束。",
+        "translate": ""
+    },
+    {
+        "source": "This module contains the LLVM intrinsics bindings that provide the functionality for this crate.",
+        "suggest": "该模块包含为此 crate 提供功能的 LLVM 内部函数绑定。",
+        "translate": ""
+    },
+    {
+        "source": "The LLVM assembly language is documented here:",
+        "suggest": "LLVM 汇编语言的文档在这里：",
+        "translate": ""
+    },
+    {
+        "source": "These intrinsics aren't linked directly from LLVM and are mostly undocumented, however they are simply lowered to the matching LLVM instructions by the compiler.",
+        "suggest": "这些内部函数不是直接从 LLVM 链接的，并且大部分是未记录的，但是它们只是被编译器简单地降低到匹配的 LLVM 指令。",
+        "translate": ""
+    },
+    {
+        "source": "The associated instruction is documented alongside each intrinsic.",
+        "suggest": "相关的指令被记录在每个内部函数旁边。",
+        "translate": ""
+    },
+    {
+        "source": "truncate integer vector to bitmask",
+        "suggest": "将整数 vector 截断为位掩码",
+        "translate": ""
+    },
+    {
+        "source": "A type representing a vector lane count.",
+        "suggest": "表示 vector lane 数的类型。",
+        "translate": ""
+    },
+    {
+        "source": "The number of bytes in a bitmask with this many lanes.",
+        "suggest": "具有这么多 lane 的位掩码中的字节数。",
+        "translate": ""
+    },
+    {
+        "source": "Helper trait for vector lane counts.",
+        "suggest": "用于 vector lane 计数的助手 trait。",
+        "translate": ""
+    },
+    {
+        "source": "A mask where each lane is represented by a single bit.",
+        "suggest": "每个 lane 由单个位表示的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "TODO remove the transmute when rustc is more flexible",
+        "suggest": "TODO 当 rustc 更灵活时，移除转换",
+        "translate": ""
+    },
+    {
+        "source": "Safety: these are the same type and we are laundering the generic",
+        "suggest": "安全：这些是相同类型的，我们正在清洗通用的",
+        "translate": ""
+    },
+    {
+        "source": "Masks that take up full SIMD vector registers.",
+        "suggest": "占用完整 SIMD vector 寄存器的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "TODO remove the transmute when rustc can use arrays of u8 as bitmasks",
+        "suggest": "TODO 当 rustc 可以使用 u8 的数组作为位掩码时，移除转换",
+        "translate": ""
+    },
+    {
+        "source": "There is a bug where LLVM appears to implement this operation with the wrong bit order.",
+        "suggest": "存在一个错误，即 LLVM 似乎以错误的位顺序实现了此操作。",
+        "translate": ""
+    },
+    {
+        "source": "TODO fix this in a better way",
+        "suggest": "TODO 以更好的方式解决此问题",
+        "translate": ""
+    },
+    {
+        "source": "Types and traits associated with masking lanes of vectors.",
+        "suggest": "与 vectors 的遮蔽 lanes 相关的类型和 traits。",
+        "translate": ""
+    },
+    {
+        "source": "Types representing",
+        "suggest": "代表的类型",
+        "translate": ""
+    },
+    {
+        "source": "Not only does this seal the `MaskElement` trait, but these functions prevent other traits from bleeding into the parent bounds.",
+        "suggest": "这不仅封装了 `MaskElement` trait，而且这些函数还防止了其他 trait 进入父边界。",
+        "translate": ""
+    },
+    {
+        "source": "For example, `eq` could be provided by requiring `MaskElement: PartialEq`, but that would prevent us from ever removing that bound, or from implementing `MaskElement` on non-`PartialEq` types in the future.",
+        "suggest": "例如，可以通过要求 `MaskElement: PartialEq` 来提供 `eq`，但这将阻止我们永远删除该限制，或者阻止我们在将来在非 `PartialEq` 类型上实现 `MaskElement`。",
+        "translate": ""
+    },
+    {
+        "source": "Marker trait for types that may be used as SIMD mask elements.",
+        "suggest": "可用作 SIMD 掩码元素的类型的标记 trait。",
+        "translate": ""
+    },
+    {
+        "source": "A SIMD vector mask for `LANES` elements of width specified by `Element`.",
+        "suggest": "`Element` 指定宽度的 `LANES` 元素的 SIMD vector 掩码。",
+        "translate": ""
+    },
+    {
+        "source": "The layout of this type is unspecified.",
+        "suggest": "这种类型的布局是未指定的。",
+        "translate": ""
+    },
+    {
+        "source": "Construct a mask by setting all lanes to the given value.",
+        "suggest": "通过将所有 lanes 设置为给定值来构建掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Converts an array to a SIMD vector.",
+        "suggest": "将数组转换为 SIMD vector。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a SIMD vector to an array.",
+        "suggest": "将 SIMD vector 转换为数组。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a vector of integers to a mask, where 0 represents `false` and -1 represents `true`.",
+        "suggest": "将整数 vector 转换为掩码，其中 0 代表 `false`，-1 代表 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "All lanes must be either 0 or -1.",
+        "suggest": "所有 lanes 必须为 0 或 -1。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if any lane is not 0 or -1.",
+        "suggest": "如果任何 lane 不是 0 或 -1，就会出现 panics。",
+        "translate": ""
+    },
+    {
+        "source": "Converts the mask to a vector of integers, where 0 represents `false` and -1 represents `true`.",
+        "suggest": "将掩码转换为整数 vector，其中 0 代表 `false`，-1 代表 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Tests the value of the specified lane.",
+        "suggest": "测试指定 lane 的值。",
+        "translate": ""
+    },
+    {
+        "source": "must be less than `LANES`.",
+        "suggest": "必须小于 `LANES`。",
+        "translate": ""
+    },
+    {
+        "source": "Panics if `lane` is greater than or equal to the number of lanes in the vector.",
+        "suggest": "如果 `lane` 大于或等于 vector 中的 lane 数，则出现 panics。",
         "translate": ""
     }
 ]

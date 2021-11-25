@@ -821,12 +821,12 @@
     },
     {
         "source": "Load one single-element structure to one lane of one register.",
-        "suggest": "将一个单一元素结构体加载到一个寄存器的一个通道中。",
+        "suggest": "将一个单一元素结构体加载到一个寄存器的一个 lane 中。",
         "translate": ""
     },
     {
         "source": "Load one single-element structure and Replicate to all lanes (of one register).",
-        "suggest": "加载一个单一元素结构体，然后复制到所有通道 (一个寄存器)。",
+        "suggest": "加载一个单一元素结构体，然后复制到所有 lanes (一个寄存器)。",
         "translate": ""
     },
     {

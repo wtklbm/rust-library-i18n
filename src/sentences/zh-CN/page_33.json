@@ -1,0 +1,3042 @@
+[
+    {
+        "source": "Sets the value of the specified lane.",
+        "suggest": "设置指定 lane 的值。",
+        "translate": ""
+    },
+    {
+        "source": "Convert this mask to a bitmask, with one bit set per lane.",
+        "suggest": "将此掩码转换为位掩码，每个 lane 设置一位。",
+        "translate": ""
+    },
+    {
+        "source": "Convert a bitmask to a mask.",
+        "suggest": "将位掩码转换为掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if any lane is set, or false otherwise.",
+        "suggest": "如果设置了任何 lane，则返回 true，否则返回 false。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if all lanes are set, or false otherwise.",
+        "suggest": "如果设置了所有 lanes，则返回 true，否则返回 false。",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight 8-bit masks",
+        "suggest": "八个 8 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 8-bit masks",
+        "suggest": "16 个 8 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 32 8-bit masks",
+        "suggest": "32 个 8 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four 16-bit masks",
+        "suggest": "四个 16 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight 16-bit masks",
+        "suggest": "八个 16 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 16-bit masks",
+        "suggest": "16 个 16 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 32 16-bit masks",
+        "suggest": "32 个 16 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two 32-bit masks",
+        "suggest": "两个 32 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four 32-bit masks",
+        "suggest": "四个 32 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight 32-bit masks",
+        "suggest": "八个 32 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 32-bit masks",
+        "suggest": "16 个 32 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two 64-bit masks",
+        "suggest": "两个 64 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four 64-bit masks",
+        "suggest": "四个 64 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight 64-bit masks",
+        "suggest": "八个 64 位掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two pointer-width masks",
+        "suggest": "两个指针宽度掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four pointer-width masks",
+        "suggest": "四个指针宽度掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight pointer-width masks",
+        "suggest": "八个指针宽度掩码的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Lanewise saturating add.",
+        "suggest": "Lanewise 饱和加法。",
+        "translate": ""
+    },
+    {
+        "source": "Lanewise saturating subtract.",
+        "suggest": "Lanewise 饱和减法。",
+        "translate": ""
+    },
+    {
+        "source": "use core_simd::Simd;",
+        "suggest": "使用 core_simd::Simd;",
+        "translate": ""
+    },
+    {
+        "source": "use core::simd::Simd;",
+        "suggest": "使用 core::simd::Simd;",
+        "translate": ""
+    },
+    {
+        "source": "Lanewise absolute value, implemented in Rust.",
+        "suggest": "Lanewise 绝对值，在 Rust 中实现。",
+        "translate": ""
+    },
+    {
+        "source": "Every lane becomes its absolute value.",
+        "suggest": "每个 lane 都成为其绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "Lanewise saturating absolute value, implemented in Rust.",
+        "suggest": "Lanewise 饱和绝对值，在 Rust 中实现。",
+        "translate": ""
+    },
+    {
+        "source": "As abs(), except the MIN value becomes MAX instead of itself.",
+        "suggest": "作为 abs()，除了 MIN 值变为 MAX 而不是它本身。",
+        "translate": ""
+    },
+    {
+        "source": "arith shift for -1 or 0 mask based on sign bit, giving 2s complement",
+        "suggest": "基于符号位的 -1 或 0 掩码的算术移位，给出 2s 补码",
+        "translate": ""
+    },
+    {
+        "source": "Lanewise saturating negation, implemented in Rust.",
+        "suggest": "Lanewise 饱和否定，在 Rust 中实现。",
+        "translate": ""
+    },
+    {
+        "source": "As neg(), except the MIN value becomes MAX instead of itself.",
+        "suggest": "作为 neg()，除了 MIN 值变为 MAX 而不是它本身。",
+        "translate": ""
+    },
+    {
+        "source": "Checks if the right-hand side argument of a left- or right-shift would cause overflow.",
+        "suggest": "检查左移或右移的右侧参数是否会导致溢出。",
+        "translate": ""
+    },
+    {
+        "source": "Automatically implements operators over references in addition to the provided operator.",
+        "suggest": "除了提供的操作符之外，自动实现交叉引用。",
+        "translate": ""
+    },
+    {
+        "source": "binary op",
+        "suggest": "二元运算",
+        "translate": ""
+    },
+    {
+        "source": "binary assignment op",
+        "suggest": "二元赋值操作",
+        "translate": ""
+    },
+    {
+        "source": "unary op",
+        "suggest": "一元运算",
+        "translate": ""
+    },
+    {
+        "source": "Automatically implements operators over vectors and scalars for a particular vector.",
+        "suggest": "为特定 vectors 自动实现 vectors 和标量上的运算符。",
+        "translate": ""
+    },
+    {
+        "source": "generic binary op with assignment when output is `Self`",
+        "suggest": "当输出为 `Self` 时，带赋值的通用二进制运算",
+        "translate": ""
+    },
+    {
+        "source": "Implements floating-point operators for the provided types.",
+        "suggest": "为提供的类型实现浮点运算符。",
+        "translate": ""
+    },
+    {
+        "source": "Implements unsigned integer operators for the provided types.",
+        "suggest": "为提供的类型实现无符号整数运算符。",
+        "translate": ""
+    },
+    {
+        "source": "Integers panic on divide by 0",
+        "suggest": "整数被 0 除时 panic",
+        "translate": ""
+    },
+    {
+        "source": "Guards for div(MIN, -1), this check only applies to signed ints",
+        "suggest": "div(MIN, -1) 的保护，此检查仅适用于已签名的整数",
+        "translate": ""
+    },
+    {
+        "source": "remainder panics on zero divisor",
+        "suggest": "零除数上的余数 panics",
+        "translate": ""
+    },
+    {
+        "source": "Guards for rem(MIN, -1) this branch applies the check only to signed ints",
+        "suggest": "rem(MIN, -1) 的保护，这个分支只检查应用于签名的整数",
+        "translate": ""
+    },
+    {
+        "source": "shifts panic on overflow",
+        "suggest": "在溢出时转移 panic",
+        "translate": ""
+    },
+    {
+        "source": "TODO there is probably a better way of doing this",
+        "suggest": "TODO 可能有更好的方法来做到这一点",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal wrapping add.",
+        "suggest": "Horizontal 包装加法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the sum of the lanes of the vector, with wrapping addition.",
+        "suggest": "返回 vector 的 lane 总和，带包装加法。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal wrapping multiply.",
+        "suggest": "Horizontal 包装乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the product of the lanes of the vector, with wrapping multiplication.",
+        "suggest": "返回 vector 的 lane 的乘积，带包装乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal bitwise \"and\".",
+        "suggest": "Horizontal 按位与。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the cumulative bitwise \"and\" across the lanes of the vector.",
+        "suggest": "返回跨 vector lane 的累积按位与。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal bitwise \"or\".",
+        "suggest": "Horizontal 按位或。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the cumulative bitwise \"or\" across the lanes of the vector.",
+        "suggest": "返回跨 vector lane 的累积按位或。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal bitwise \"xor\".",
+        "suggest": "Horizontal 按位异或。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the cumulative bitwise \"xor\" across the lanes of the vector.",
+        "suggest": "返回跨 vector lane 的累积按位异或。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal maximum.",
+        "suggest": "Horizontal 最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the maximum lane in the vector.",
+        "suggest": "返回 vector 中的最大 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal minimum.",
+        "suggest": "Horizontal 最小值。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the minimum lane in the vector.",
+        "suggest": "返回 vector 中的最小 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal add.",
+        "suggest": "Horizontal 加法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the sum of the lanes of the vector.",
+        "suggest": "返回 vector 的 lane 的总和。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM sum is inaccurate on i586",
+        "suggest": "i586 上的 LLVM 总和不准确",
+        "translate": ""
+    },
+    {
+        "source": "Horizontal multiply.",
+        "suggest": "Horizontal 乘法。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the product of the lanes of the vector.",
+        "suggest": "返回 vector 的 lane 的乘积。",
+        "translate": ""
+    },
+    {
+        "source": "LLVM product is inaccurate on i586",
+        "suggest": "LLVM 产品在 i586 上不准确",
+        "translate": ""
+    },
+    {
+        "source": "Returns values based on equality, so a vector containing both `0.` and `-0.` may return either.",
+        "suggest": "返回基于相等的值，因此包含 `0.` 和 `-0.` 的 vector 可以返回任意一个值。",
+        "translate": ""
+    },
+    {
+        "source": "This function will not return `NaN` unless all lanes are `NaN`.",
+        "suggest": "这个函数不会返回 `NaN`，除非所有的 lane 都是 `NaN`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the smallest integer greater than or equal to each lane.",
+        "suggest": "返回大于或等于每个 lane 的最小整数。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the largest integer value less than or equal to each lane.",
+        "suggest": "返回小于或等于每个 lane 的最大整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Rounds to the nearest integer value.",
+        "suggest": "舍入到最接近的整数值。",
+        "translate": ""
+    },
+    {
+        "source": "Ties round toward zero.",
+        "suggest": "接近于零。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the floating point's integer value, with its fractional part removed.",
+        "suggest": "返回浮点的整数值，去掉小数部分。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the floating point's fractional value, with its integer part removed.",
+        "suggest": "返回浮点的小数值，删除其整数部分。",
+        "translate": ""
+    },
+    {
+        "source": "Rounds toward zero and converts to the same-width integer type, assuming that the value is finite and fits in that type.",
+        "suggest": "向零舍入并转换为等宽整数类型，假设该值是有限的并且适合该类型。",
+        "translate": ""
+    },
+    {
+        "source": "Not be NaN",
+        "suggest": "不是 NaN",
+        "translate": ""
+    },
+    {
+        "source": "Be representable in the return type, after truncating off its fractional part",
+        "suggest": "在截断其小数部分后，可以在返回类型中表示",
+        "translate": ""
+    },
+    {
+        "source": "Creates a floating-point vector from an integer vector.",
+        "suggest": "从整数 vector 创建一个浮点 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Rounds values that are not exactly representable.",
+        "suggest": "舍入不能完全表示的值。",
+        "translate": ""
+    },
+    {
+        "source": "Supporting trait for vector `select` function",
+        "suggest": "vector `select` 函数支持 trait",
+        "translate": ""
+    },
+    {
+        "source": "Choose lanes from two vectors.",
+        "suggest": "从两个 vectors 中选择 lane。",
+        "translate": ""
+    },
+    {
+        "source": "For each lane in the mask, choose the corresponding lane from `true_values` if that lane mask is true, and `false_values` if that lane mask is false.",
+        "suggest": "对于掩码中的每个 lane，如果该 lane 掩码为真，则从 `true_values` 中选择相应的 lane，如果该 lane 掩码为假，则从 `false_values` 中选择相应的 lane。",
+        "translate": ""
+    },
+    {
+        "source": "can also be used on masks:",
+        "suggest": "也可用于掩码:",
+        "translate": ""
+    },
+    {
+        "source": "Keeping the same size",
+        "suggest": "保持同样大小",
+        "translate": ""
+    },
+    {
+        "source": "Changing the number of lanes",
+        "suggest": "改变 lane 数",
+        "translate": ""
+    },
+    {
+        "source": "Constructs a new vector by selecting values from the lanes of the source vector or vectors to use.",
+        "suggest": "通过从要使用的源 vector 或 vectors 的 lane 中选择值来构造新的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "When swizzling one vector, the indices of the result vector are indicated by a `const` array of `usize`, like [`Swizzle`].",
+        "suggest": "当 swizzling 一个 vector 时，结果 vector 的索引由 `usize` 的 `const` 数组表示，如 [`Swizzle`]。",
+        "translate": ""
+    },
+    {
+        "source": "When swizzling two vectors, the indices are indicated by a `const` array of [`Which`], like [`Swizzle2`].",
+        "suggest": "当 swizzling 两个 vectors 时，索引由 [`Which`] 的 `const` 数组表示，如 [`Swizzle2`]。",
+        "translate": ""
+    },
+    {
+        "source": "One source vector",
+        "suggest": "一个源 vector",
+        "translate": ""
+    },
+    {
+        "source": "Two source vectors",
+        "suggest": "两个源 vectors",
+        "translate": ""
+    },
+    {
+        "source": "An index into one of two vectors.",
+        "suggest": "两个 vectors 之一的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Indexes the first vector.",
+        "suggest": "索引第一个 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Indexes the second vector.",
+        "suggest": "索引第二个 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Create a vector from the elements of another vector.",
+        "suggest": "从另一个 vector 的元素创建一个 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Map from the lanes of the input vector to the output vector.",
+        "suggest": "从输入 vector 的 lane 映射到输出 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Create a new vector from the lanes of `vector`.",
+        "suggest": "从 `vector` 的 lane 创建一个新的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Lane `i` of the output is `vector[Self::INDEX[i]]`.",
+        "suggest": "输出的 lane `i` 是 `vector[Self::INDEX[i]]`。",
+        "translate": ""
+    },
+    {
+        "source": "Create a vector from the elements of two other vectors.",
+        "suggest": "从另外两个 vectors 的元素创建一个 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Map from the lanes of the input vectors to the output vector",
+        "suggest": "从输入 vectors 的 lane 映射到输出 vector",
+        "translate": ""
+    },
+    {
+        "source": "Create a new vector from the lanes of `first` and `second`.",
+        "suggest": "从 `first` 和 `second` 的 lane 创建一个新的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Lane `i` is `first[j]` when `Self::INDEX[i]` is `First(j)`, or `second[j]` when it is `Second(j)`.",
+        "suggest": "lane `i` 在 `Self::INDEX[i]` 为 `First(j)` 时为 `first[j]`，在 `Second(j)` 时为 `second[j]`。",
+        "translate": ""
+    },
+    {
+        "source": "The `simd_shuffle` intrinsic expects `u32`, so do error checking and conversion here.",
+        "suggest": "`simd_shuffle` 内部函数需要 `u32`，因此这里需要进行错误检查和转换。",
+        "translate": ""
+    },
+    {
+        "source": "This trait hides `INDEX_IMPL` from the public API.",
+        "suggest": "这个 trait 对公共 API 隐藏了 `INDEX_IMPL`。",
+        "translate": ""
+    },
+    {
+        "source": "lanes are indexed by the first vector, then second vector",
+        "suggest": "lane 由第一个 vector 索引，然后是第二个 vector",
+        "translate": ""
+    },
+    {
+        "source": "Reverse the order of the lanes in the vector.",
+        "suggest": "反转 vector 中 lane 的顺序。",
+        "translate": ""
+    },
+    {
+        "source": "Rotates the vector such that the first `OFFSET` elements of the slice move to the end while the last `LANES - OFFSET` elements move to the front.",
+        "suggest": "旋转 vector，使得第一个 `OFFSET` 元素移动到末尾，而最后一个 `LANES - OFFSET` 元素移动到前面。",
+        "translate": ""
+    },
+    {
+        "source": "After calling `rotate_lanes_left`, the element previously in lane `OFFSET` will become the first element in the slice.",
+        "suggest": "调用 `rotate_lanes_left` 后，先前在 `OFFSET` lane 中的元素将成为该 lane 中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Rotates the vector such that the first `LANES - OFFSET` elements of the vector move to the end while the last `OFFSET` elements move to the front.",
+        "suggest": "旋转 vector，使 vector 的第一个 `LANES - OFFSET` 元素移动到末尾，而最后一个 `OFFSET` 元素移动到前面。",
+        "translate": ""
+    },
+    {
+        "source": "After calling `rotate_lanes_right`, the element previously at index `LANES - OFFSET` will become the first element in the slice.",
+        "suggest": "调用 `rotate_lanes_right` 后，之前在索引 `LANES - OFFSET` 处的元素将成为 bri 中的第一个元素。",
+        "translate": ""
+    },
+    {
+        "source": "Interleave two vectors.",
+        "suggest": "交错两个 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Produces two vectors with lanes taken alternately from `self` and `other`.",
+        "suggest": "产生两个 vectors，其中 lane 交替取自 `self` 和 `other`。",
+        "translate": ""
+    },
+    {
+        "source": "The first result contains the first `LANES / 2` lanes from `self` and `other`, alternating, starting with the first lane of `self`.",
+        "suggest": "第一个结果包含 `self` 和 `other` 的第一个 `LANES / 2` lane，从 `self` 的第一个 lane 开始交替。",
+        "translate": ""
+    },
+    {
+        "source": "The second result contains the last `LANES / 2` lanes from `self` and `other`, alternating, starting with the lane `LANES / 2` from the start of `self`.",
+        "suggest": "第二个结果包含来自 `self` 和 `other` 的最后 `LANES / 2` lane，交替，从 `self` 开始的 lane `LANES / 2` 开始。",
+        "translate": ""
+    },
+    {
+        "source": "Deinterleave two vectors.",
+        "suggest": "去交错两个 vectors。",
+        "translate": ""
+    },
+    {
+        "source": "The first result takes every other lane of `self` and then `other`, starting with the first lane.",
+        "suggest": "第一个结果从 `self` 和 `other` 的每隔一个 lane 开始，从第一个 lane 开始。",
+        "translate": ""
+    },
+    {
+        "source": "The second result takes every other lane of `self` and then `other`, starting with the second lane.",
+        "suggest": "第二个结果从 `self` 和 `other` 的每隔一个 lane 开始，从第二个 lane 开始。",
+        "translate": ""
+    },
+    {
+        "source": "Implements inherent methods for a float vector containing multiple `$lanes` of float `$type`, which uses `$bits_ty` as its binary representation.",
+        "suggest": "为包含浮点 `$type` 的多个 `$lanes` 的浮点 vector 实现固有方法，该浮点使用 `$bits_ty` 作为它的二进制表示。",
+        "translate": ""
+    },
+    {
+        "source": "Raw transmutation to an unsigned integer vector type with the same size and number of lanes.",
+        "suggest": "原始变换为具有相同大小和 lane 数的无符号整数 vector 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Raw transmutation from an unsigned integer vector type with the same size and number of lanes.",
+        "suggest": "来自具有相同大小和 lanes 数的无符号整数 vector 类型的原始变换。",
+        "translate": ""
+    },
+    {
+        "source": "Produces a vector where every lane has the absolute value of the equivalently-indexed lane in `self`.",
+        "suggest": "生成 vector，其中每个 lane 都具有 `self` 中等效索引 lane 的绝对值。",
+        "translate": ""
+    },
+    {
+        "source": "However, this is not always true, and will be heavily dependent on designing algorithms with specific target hardware in mind.",
+        "suggest": "然而，这并不总是正确的，并且将在很大程度上依赖于设计具有特定目标硬件的算法。",
+        "translate": ""
+    },
+    {
+        "source": "Produces a vector where every lane has the square root value of the equivalently-indexed lane in `self`",
+        "suggest": "生成 vector，其中每个 lane 都具有 `self` 中等效索引 lane 的平方根值",
+        "translate": ""
+    },
+    {
+        "source": "Takes the reciprocal (inverse) of each lane,",
+        "suggest": "取每个 lane 的倒数 (inverse)，",
+        "translate": ""
+    },
+    {
+        "source": "Converts each lane from radians to degrees.",
+        "suggest": "将每个 lane 从弧度转换为度数。",
+        "translate": ""
+    },
+    {
+        "source": "to_degrees uses a special constant for better precision, so extract that constant",
+        "suggest": "to_degrees 使用一个特殊的常量来获得更好的精度，所以提取这个常量",
+        "translate": ""
+    },
+    {
+        "source": "Converts each lane from degrees to radians.",
+        "suggest": "将每个 lane 从度数转换为弧度。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if it has a positive sign, including `+0.0`, `NaN`s with positive sign bit and positive infinity.",
+        "suggest": "如果每个 lane 具有正号，则为每个 lane 返回 true，包括 `+0.0`、具有正符号位的 `NaN` 和正无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if it has a negative sign, including `-0.0`, `NaN`s with negative sign bit and negative infinity.",
+        "suggest": "如果每个 lane 具有负号，则为每个 lane 返回 true，包括 `-0.0`、具有负符号位的 `NaN` 和负无穷大。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if its value is `NaN`.",
+        "suggest": "如果每个 lane 的值为 `NaN`，则为每个 lane 返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if its value is positive infinity or negative infinity.",
+        "suggest": "如果每个 lane 的值是正无穷大或负无穷大，则为每个 lane 返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if its value is neither infinite nor `NaN`.",
+        "suggest": "如果每个 lane 的值既不是无穷大也不是 `NaN`，则为每个 lane 返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if its value is subnormal.",
+        "suggest": "如果每个 lane 的值为 subnormal，则为每个 lane 返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each lane if its value is neither neither zero, infinite, subnormal, or `NaN`.",
+        "suggest": "如果每个 lane 的值既不是零、无穷大、subnormal 或 `NaN`，则为每个 lane 返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Replaces each lane with a number that represents its sign.",
+        "suggest": "用代表其符号的数字替换每个 lane。",
+        "translate": ""
+    },
+    {
+        "source": "if the number is positive, `+0.0`, or `INFINITY`",
+        "suggest": "如果数字是正数，`+0.0` 或 `INFINITY`",
+        "translate": ""
+    },
+    {
+        "source": "if the number is negative, `-0.0`, or `NEG_INFINITY`",
+        "suggest": "如果数字是负数，`-0.0` 或 `NEG_INFINITY`",
+        "translate": ""
+    },
+    {
+        "source": "Returns each lane with the magnitude of `self` and the sign of `sign`.",
+        "suggest": "以 `self` 的大小和 `sign` 的符号返回每个 lane。",
+        "translate": ""
+    },
+    {
+        "source": "If any lane is a `NAN`, then a `NAN` with the sign of `sign` is returned.",
+        "suggest": "如果任何 lane 是 `NAN`，则返回带有 `sign` 符号的 `NAN`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the minimum of each lane.",
+        "suggest": "返回每个 lane 的最小值。",
+        "translate": ""
+    },
+    {
+        "source": "If one of the values is `NAN`, then the other value is returned.",
+        "suggest": "如果其中一个值为 `NAN`，则返回另一个值。",
+        "translate": ""
+    },
+    {
+        "source": "TODO consider using an intrinsic",
+        "suggest": "TODO 考虑使用内部函数",
+        "translate": ""
+    },
+    {
+        "source": "Returns the maximum of each lane.",
+        "suggest": "返回每个 lane 的最大值。",
+        "translate": ""
+    },
+    {
+        "source": "Restrict each lane to a certain interval unless it is NaN.",
+        "suggest": "将每个 lane 限制在一定的间隔内，除非它是 NaN。",
+        "translate": ""
+    },
+    {
+        "source": "For each lane in `self`, returns the corresponding lane in `max` if the lane is greater than `max`, and the corresponding lane in `min` if the lane is less than `min`.",
+        "suggest": "对于 `self` 中的每个 lane，如果 lane 大于 `max`，则返回 `max` 中的相应 lane，如果 lane 小于 `min`，则返回 `min` 中的相应 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise returns the lane in `self`.",
+        "suggest": "否则返回 `self` 中的 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `f32` values",
+        "suggest": "两个 `f32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `f32` values",
+        "suggest": "四个 `f32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `f32` values",
+        "suggest": "八个 `f32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `f32` values",
+        "suggest": "16 个 `f32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `f64` values",
+        "suggest": "两个 `f64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `f64` values",
+        "suggest": "四个 `f64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `f64` values",
+        "suggest": "八个 `f64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Implements additional integer traits (Eq, Ord, Hash) on the specified vector `$name`, holding multiple `$lanes` of `$type`.",
+        "suggest": "在指定的 vector `$name` 上实现额外的整数 traits (Eq、Ord、Hash)，持有 `$type` 的多个 `$lanes`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each positive lane and false if it is zero or negative.",
+        "suggest": "对于每个正 lane 返回真，如果为零或负则返回假。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true for each negative lane and false if it is zero or positive.",
+        "suggest": "对于每个负 lane 返回真，如果为零或正则返回假。",
+        "translate": ""
+    },
+    {
+        "source": "Returns numbers representing the sign of each lane.",
+        "suggest": "返回代表每个 lane 符号的数字。",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `isize` values",
+        "suggest": "两个 `isize` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `isize` values",
+        "suggest": "四个 `isize` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `isize` values",
+        "suggest": "八个 `isize` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `i16` values",
+        "suggest": "两个 `i16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `i16` values",
+        "suggest": "四个 `i16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `i16` values",
+        "suggest": "八个 `i16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `i16` values",
+        "suggest": "16 个 `i16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 32 `i16` values",
+        "suggest": "32 个 `i16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `i32` values",
+        "suggest": "两个 `i32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `i32` values",
+        "suggest": "四个 `i32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `i32` values",
+        "suggest": "八个 `i32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `i32` values",
+        "suggest": "16 个 `i32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `i64` values",
+        "suggest": "两个 `i64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `i64` values",
+        "suggest": "四个 `i64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `i64` values",
+        "suggest": "八个 `i64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `i8` values",
+        "suggest": "四个 `i8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `i8` values",
+        "suggest": "八个 `i8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `i8` values",
+        "suggest": "16 个 `i8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 32 `i8` values",
+        "suggest": "32 个 `i8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 64 `i8` values",
+        "suggest": "64 个 `i8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Private implementation details of public gather/scatter APIs.",
+        "suggest": "公开的 gather/scatter API 的私有实现细节。",
+        "translate": ""
+    },
+    {
+        "source": "A vector of *const T.",
+        "suggest": "`*const T` 的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "A vector of *mut T.",
+        "suggest": "`*mut T` 的 vector。",
+        "translate": ""
+    },
+    {
+        "source": "Be very careful around potential aliasing.",
+        "suggest": "对潜在的别名使用要非常小心。",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `usize` values",
+        "suggest": "两个 `usize` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `usize` values",
+        "suggest": "四个 `usize` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `usize` values",
+        "suggest": "八个 `usize` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `u16` values",
+        "suggest": "两个 `u16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `u16` values",
+        "suggest": "四个 `u16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `u16` values",
+        "suggest": "八个 `u16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `u16` values",
+        "suggest": "16 个 `u16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 32 `u16` values",
+        "suggest": "32 个 `u16` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `u32` values",
+        "suggest": "两个 `u32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `u32` values",
+        "suggest": "四个 `u32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `u32` values",
+        "suggest": "八个 `u32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `u32` values",
+        "suggest": "16 个 `u32` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of two `u64` values",
+        "suggest": "两个 `u64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `u64` values",
+        "suggest": "四个 `u64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `u64` values",
+        "suggest": "八个 `u64` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of four `u8` values",
+        "suggest": "四个 `u8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of eight `u8` values",
+        "suggest": "八个 `u8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 16 `u8` values",
+        "suggest": "16 个 `u8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 32 `u8` values",
+        "suggest": "32 个 `u8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Vector of 64 `u8` values",
+        "suggest": "64 个 `u8` 值的 Vector",
+        "translate": ""
+    },
+    {
+        "source": "Note the lane that is out-of-bounds.",
+        "suggest": "注意超出边界的 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Note the mask of the last lane.",
+        "suggest": "注意最后一个 lane 的掩码。",
+        "translate": ""
+    },
+    {
+        "source": "Note the final mask lane.",
+        "suggest": "注意最后的掩码 lane。",
+        "translate": ""
+    },
+    {
+        "source": "If this mask was used to gather, it would be unsound.",
+        "suggest": "如果用这个掩码来收集，这是不合理的。",
+        "translate": ""
+    },
+    {
+        "source": "Let's fix that.",
+        "suggest": "让我们解决这个问题。",
+        "translate": ""
+    },
+    {
+        "source": "We have masked the OOB lane, so it's safe to gather now.",
+        "suggest": "我们已经屏蔽了 OOB lane，所以现在可以安全收集了。",
+        "translate": ""
+    },
+    {
+        "source": "index 0 receives two writes.",
+        "suggest": "索引 0 接收两次写入。",
+        "translate": ""
+    },
+    {
+        "source": "index 0's second write is masked, thus omitted.",
+        "suggest": "索引 0 的第二次写入被屏蔽，因此被省略。",
+        "translate": ""
+    },
+    {
+        "source": "If this mask was used to scatter, it would be unsound.",
+        "suggest": "如果用这个掩码来分散，这是不合理的。",
+        "translate": ""
+    },
+    {
+        "source": "We have masked the OOB lane, so it's safe to scatter now.",
+        "suggest": "我们已经屏蔽了 OOB lane，所以现在可以安全地分散。",
+        "translate": ""
+    },
+    {
+        "source": "index 0's second write is masked, thus was omitted.",
+        "suggest": "索引 0 的第二次写入被屏蔽，因此被省略。",
+        "translate": ""
+    },
+    {
+        "source": "Vectors of pointers are not for public use at the current time.",
+        "suggest": "Vectors 指针目前不公开使用。",
+        "translate": ""
+    },
+    {
+        "source": "A SIMD vector of `LANES` elements of type `T`.",
+        "suggest": "`T` 类型的 `LANES` 元素的 SIMD vector。",
+        "translate": ""
+    },
+    {
+        "source": "Number of lanes in this vector.",
+        "suggest": "此 vector 中的 lane 数。",
+        "translate": ""
+    },
+    {
+        "source": "Get the number of lanes in this vector.",
+        "suggest": "获取此 vector 中的 lane 数。",
+        "translate": ""
+    },
+    {
+        "source": "Construct a SIMD vector by setting all lanes to the given value.",
+        "suggest": "通过将所有 lane 设置为给定值来构建 SIMD vector。",
+        "translate": ""
+    },
+    {
+        "source": "Returns an array reference containing the entire SIMD vector.",
+        "suggest": "返回包含整个 SIMD vector 的数组引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable array reference containing the entire SIMD vector.",
+        "suggest": "返回一个包含整个 SIMD vector 的可变数组引用。",
+        "translate": ""
+    },
+    {
+        "source": "Converts a slice to a SIMD vector containing `slice[..LANES]`",
+        "suggest": "将切片转换为包含 `slice[..LANES]` 的 SIMD vector",
+        "translate": ""
+    },
+    {
+        "source": "will panic if the slice's `len` is less than the vector's `Simd::LANES`.",
+        "suggest": "如果切片的 `len` 小于 vector 的 `Simd::LANES`，将会发生 panic。",
+        "translate": ""
+    },
+    {
+        "source": "Reads from potentially discontiguous indices in `slice` to construct a SIMD vector.",
+        "suggest": "从 `slice` 中可能不连续的索引读取以构建 SIMD vector。",
+        "translate": ""
+    },
+    {
+        "source": "If an index is out-of-bounds, the lane is instead selected from the `or` vector.",
+        "suggest": "如果索引越界，则从 `or` vector 中选择 lane。",
+        "translate": ""
+    },
+    {
+        "source": "If an index is out-of-bounds, the lane is set to the default value for the type.",
+        "suggest": "如果索引越界，则 lane 将设置为该类型的默认值。",
+        "translate": ""
+    },
+    {
+        "source": "The mask `enable`s all `true` lanes and disables all `false` lanes.",
+        "suggest": "掩码 `enable` 所有 `true` lane 并禁用所有 `false` lane。",
+        "translate": ""
+    },
+    {
+        "source": "If an index is disabled or is out-of-bounds, the lane is selected from the `or` vector.",
+        "suggest": "如果索引被禁用或越界，则从 `or` vector 中选择 lane。",
+        "translate": ""
+    },
+    {
+        "source": "We have masked-off out-of-bounds lanes.",
+        "suggest": "我们屏蔽了越界 lanes。",
+        "translate": ""
+    },
+    {
+        "source": "If an index is disabled, the lane is selected from the `or` vector.",
+        "suggest": "如果禁用某个索引，则从 `or` vector 中选择 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Calling this function with an `enable`d out-of-bounds index is *[undefined behavior]* even if the resulting value is not used.",
+        "suggest": "使用 `enable`d 越界索引调用这个函数是 *[未定义的行为][undefined behavior]*，即使结果值没有被使用。",
+        "translate": ""
+    },
+    {
+        "source": "Ferris forgive me, I have done pointer arithmetic here.",
+        "suggest": "Ferris 原谅我，我在这里做了指针运算。",
+        "translate": ""
+    },
+    {
+        "source": "The ptrs have been bounds-masked to prevent memory-unsafe reads insha'allah",
+        "suggest": "ptr 已被边界屏蔽以防止内存不安全读取 insha'allah",
+        "translate": ""
+    },
+    {
+        "source": "Writes the values in a SIMD vector to potentially discontiguous indices in `slice`.",
+        "suggest": "将 SIMD vector 中的值写入 `slice` 中可能不连续的索引。",
+        "translate": ""
+    },
+    {
+        "source": "If two lanes in the scattered vector would write to the same index only the last lane is guaranteed to actually be written.",
+        "suggest": "如果分散的 vector 中的两个 lane 将写入相同的索引，则仅保证最后一个 lane 被实际写入。",
+        "translate": ""
+    },
+    {
+        "source": "Writes the values in a SIMD vector to multiple potentially discontiguous indices in `slice`.",
+        "suggest": "将 SIMD vector 中的值写入 `slice` 中的多个可能不连续的索引。",
+        "translate": ""
+    },
+    {
+        "source": "If an enabled index is out-of-bounds, the lane is not written.",
+        "suggest": "如果启用的索引越界，则不会写入 lane。",
+        "translate": ""
+    },
+    {
+        "source": "If two enabled lanes in the scattered vector would write to the same index, only the last lane is guaranteed to actually be written.",
+        "suggest": "如果分散的 vector 中的两个启用 lane 将写入同一索引，则只能保证实际写入最后一个 lane。",
+        "translate": ""
+    },
+    {
+        "source": "Calling this function with an enabled out-of-bounds index is *[undefined behavior]*, and may lead to memory corruption.",
+        "suggest": "使用启用的越界索引调用此函数是 *[undefined 行为]*，并可能导致内存损坏。",
+        "translate": ""
+    },
+    {
+        "source": "This block works with *mut T derived from &mut 'a [T], which means it is delicate in Rust's borrowing model, circa 2021:",
+        "suggest": "该块与 &mut 'a [T] 派生的 *mut T 一起使用，这意味着它在大约 2021 年的 Rust 借用模型中很精致:",
+        "translate": ""
+    },
+    {
+        "source": "'a [T] asserts uniqueness, so deriving &'a [T] invalidates live *mut Ts!",
+        "suggest": "'a [T] 断言唯一性，因此导出 &'a [T] 会使实时 *mut Ts 无效！",
+        "translate": ""
+    },
+    {
+        "source": "Even though this block is largely safe methods, it must be exactly this way to prevent invalidating the raw ptrs while they're live.",
+        "suggest": "尽管这个块在很大程度上是安全的方法，但它必须完全采用这种方式来防止在原始 ptr 处于活动状态时使其无效。",
+        "translate": ""
+    },
+    {
+        "source": "Thus, entering this block requires all values to use being already ready:",
+        "suggest": "因此，进入此块需要所有要使用的值都已经准备好:",
+        "translate": ""
+    },
+    {
+        "source": "idxs we want to write to, which are used to construct the mask.",
+        "suggest": "我们要写入的 idxs，用于构造掩码。",
+        "translate": ""
+    },
+    {
+        "source": "enable, which depends on an initial &'a [T] and the idxs.",
+        "suggest": "启用，这取决于初始 `&'a [T]` 和 idxs。",
+        "translate": ""
+    },
+    {
+        "source": "actual values to scatter (self).",
+        "suggest": "要分散 (self) 的实际值。",
+        "translate": ""
+    },
+    {
+        "source": "[T] which will become our base ptr.",
+        "suggest": "[T] 将成为我们的基础 ptr。",
+        "translate": ""
+    },
+    {
+        "source": "Now Entering ☢️ *mut T Zone",
+        "suggest": "现在进入 ☢️ `*mut T` 区域",
+        "translate": ""
+    },
+    {
+        "source": "The ptrs have been bounds-masked to prevent memory-unsafe writes insha'allah",
+        "suggest": "ptr 已被边界屏蔽以防止内存不安全写入 insha'allah",
+        "translate": ""
+    },
+    {
+        "source": "Cleared ☢️ *mut T Zone",
+        "suggest": "清除 ☢️ `*mut T` 区域",
+        "translate": ""
+    },
+    {
+        "source": "TODO use SIMD equality",
+        "suggest": "TODO 使用 SIMD 等式",
+        "translate": ""
+    },
+    {
+        "source": "array references",
+        "suggest": "数组引用",
+        "translate": ""
+    },
+    {
+        "source": "slice references",
+        "suggest": "切片引用",
+        "translate": ""
+    },
+    {
+        "source": "Marker trait for types that may be used as SIMD vector elements.",
+        "suggest": "可用作 SIMD vector 元素的类型的标记 trait。",
+        "translate": ""
+    },
+    {
+        "source": "This trait, when implemented, asserts the compiler can monomorphize `#[repr(simd)]` structs with the marked type as an element.",
+        "suggest": "这个 trait 在实现时断言编译器可以将标记类型作为元素的 `#[repr(simd)]` 结构体单态化。",
+        "translate": ""
+    },
+    {
+        "source": "Strictly, it is valid to impl if the vector will not be miscompiled.",
+        "suggest": "严格地说，如果 vector 不会被错误编译，则 impl 是有效的。",
+        "translate": ""
+    },
+    {
+        "source": "Practically, it is user-unfriendly to impl it if the vector won't compile, even when no soundness guarantees are broken by allowing the user to try.",
+        "suggest": "实际上，如果 vector 无法编译，那么实现它对用户是不友好的，即使允许用户尝试并没有破坏健全性保证。",
+        "translate": ""
+    },
+    {
+        "source": "The mask element type corresponding to this element type.",
+        "suggest": "此元素类型对应的掩码元素类型。",
+        "translate": ""
+    },
+    {
+        "source": "Provides implementations of `From<$a> for $b` and `From<$b> for $a` that transmutes the value.",
+        "suggest": "提供转换值的 `From<$a> for $b` 和 `From<$b> for $a` 的实现。",
+        "translate": ""
+    },
+    {
+        "source": "Conversions to x86's SIMD types.",
+        "suggest": "转换为 x86 的 SIMD 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Implements a test on a unary operation using proptest.",
+        "suggest": "使用 proptest 对一元运算进行测试。",
+        "translate": ""
+    },
+    {
+        "source": "Compares the vector operation to the equivalent scalar operation.",
+        "suggest": "将 vector 运算与等效的标量运算进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "Implements a test on a binary operation using proptest.",
+        "suggest": "使用 proptest 对二元运算进行测试。",
+        "translate": ""
+    },
+    {
+        "source": "Like `impl_binary_op_test`, but allows providing a function for rejecting particular inputs (like the `proptest_assume` macro).",
+        "suggest": "像 `impl_binary_op_test`，但允许提供拒绝特定输入的函数 (如 `proptest_assume` 宏)。",
+        "translate": ""
+    },
+    {
+        "source": "Implement tests for signed integers.",
+        "suggest": "实现对有符号整数的测试。",
+        "translate": ""
+    },
+    {
+        "source": "Exclude Div and Rem panicking cases",
+        "suggest": "排除 Div 和 Rem panicking 情况",
+        "translate": ""
+    },
+    {
+        "source": "Implement tests for unsigned integers.",
+        "suggest": "实现对无符号整数的测试。",
+        "translate": ""
+    },
+    {
+        "source": "Implement tests for floating point numbers.",
+        "suggest": "实现对浮点数的测试。",
+        "translate": ""
+    },
+    {
+        "source": "Regular conditions (both values aren't zero)",
+        "suggest": "常规条件 (两个值都不为零)",
+        "translate": ""
+    },
+    {
+        "source": "Reject the case where both values are zero with different signs",
+        "suggest": "拒绝两个值都为零且符号不同的情况",
+        "translate": ""
+    },
+    {
+        "source": "Special case where both values are zero",
+        "suggest": "两个值都为零的特殊情况",
+        "translate": ""
+    },
+    {
+        "source": "0 and -0 are treated the same",
+        "suggest": "0 和 -0 的处理方式相同",
+        "translate": ""
+    },
+    {
+        "source": "The maximum integer that can be represented by the equivalently sized float has all of the mantissa digits set to 1, pushed up to the MSB.",
+        "suggest": "可以由等效大小的浮点数表示的最大整数的所有尾数位都设置为 1，向上推到 MSB。",
+        "translate": ""
+    },
+    {
+        "source": "Generic-length array strategy.",
+        "suggest": "通用长度数组策略。",
+        "translate": ""
+    },
+    {
+        "source": "Adapted from proptest's array code Copyright 2017 Jason Lingle",
+        "suggest": "改编自 proptest 的数组代码版权所有 2017 Jason Lingle",
+        "translate": ""
+    },
+    {
+        "source": "Compare numeric types by exact bit value.",
+        "suggest": "按精确位值比较数字类型。",
+        "translate": ""
+    },
+    {
+        "source": "exact nan bits don't matter",
+        "suggest": "确切的 nan 位并不重要",
+        "translate": ""
+    },
+    {
+        "source": "Specifies the default strategy for testing a type.",
+        "suggest": "指定测试类型的默认策略。",
+        "translate": ""
+    },
+    {
+        "source": "This strategy should be what \"makes sense\" to test.",
+        "suggest": "这个策略应该是什么 \"makes sense\" 来测试的。",
+        "translate": ""
+    },
+    {
+        "source": "Test a function that takes a single value.",
+        "suggest": "测试一个接受单个值的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Test a function that takes two values.",
+        "suggest": "测试一个接受两个值的函数。",
+        "translate": ""
+    },
+    {
+        "source": "Test a unary vector function against a unary scalar function, applied elementwise.",
+        "suggest": "针对一元标量函数测试一元 vector 函数，按元素应用。",
+        "translate": ""
+    },
+    {
+        "source": "Test a binary vector function against a binary scalar function, applied elementwise.",
+        "suggest": "测试二进制 vector 函数与二进制标量函数，按元素应用。",
+        "translate": ""
+    },
+    {
+        "source": "Test a binary vector-scalar function against a binary scalar function, applied elementwise.",
+        "suggest": "测试二进制 vector-scalar 函数对二进制标量函数，应用元素。",
+        "translate": ""
+    },
+    {
+        "source": "Test a ternary vector function against a ternary scalar function, applied elementwise.",
+        "suggest": "针对三元标量函数测试三元 vector 函数，按元素应用。",
+        "translate": ""
+    },
+    {
+        "source": "Expand a const-generic test into separate tests for each possible lane count.",
+        "suggest": "对于每个可能的 lane 数，将常量泛型测试扩展为单独的测试。",
+        "translate": ""
+    },
+    {
+        "source": "Expand a const-generic `#[should_panic]` test into separate tests for each possible lane count.",
+        "suggest": "将常量泛型 `#[should_panic]` 测试扩展为每个可能的 lane 数的单独测试。",
+        "translate": ""
+    },
+    {
+        "source": "Strategies for `u128` and `i128`, since proptest doesn't provide them for the wasm target.",
+        "suggest": "`u128` 和 `i128` 的策略，因为 proptest 不为 wasm 目标提供它们。",
+        "translate": ""
+    },
+    {
+        "source": "name: Blank Issue about: Create a blank issue.",
+        "suggest": "名称：空白问题关于：创建空白问题。",
+        "translate": ""
+    },
+    {
+        "source": "name: Bug Report about: Create a bug report for Rust.",
+        "suggest": "名称：错误报告关于：为 Rust 创建错误报告。",
+        "translate": ""
+    },
+    {
+        "source": "labels: C-bug",
+        "suggest": "标签: C-bug",
+        "translate": ""
+    },
+    {
+        "source": "Thank you for filing a bug report!",
+        "suggest": "感谢您提交错误报告！",
+        "translate": ""
+    },
+    {
+        "source": "🐛 Please provide a short summary of the bug, along with any information you feel relevant to replicating the bug.",
+        "suggest": "🐛 请提供错误的简短摘要，以及您认为与复制错误相关的任何信息。",
+        "translate": ""
+    },
+    {
+        "source": "I tried this code:",
+        "suggest": "我试过这个代码:",
+        "translate": ""
+    },
+    {
+        "source": "I expected to see this happen: *explanation*",
+        "suggest": "我希望看到这种情况发生: *解释*",
+        "translate": ""
+    },
+    {
+        "source": "Instead, this happened: *explanation*",
+        "suggest": "相反，这发生了: *解释*",
+        "translate": ""
+    },
+    {
+        "source": "If this specifies the repo at HEAD, please include the latest commit.",
+        "suggest": "如果这在 HEAD 指定 repo，请包括最新的提交。",
+        "translate": ""
+    },
+    {
+        "source": "If a backtrace is available, please include a backtrace in the code block by setting `RUST_BACKTRACE=1` in your environment.",
+        "suggest": "如果回溯可用，请通过在您的环境中设置 `RUST_BACKTRACE=1` 在代码块中包含回溯。",
+        "translate": ""
+    },
+    {
+        "source": "e.g.",
+        "suggest": "例如",
+        "translate": ""
+    },
+    {
+        "source": "name: Feature Request about: Request an addition to the core::simd API labels: C-feature-request",
+        "suggest": "名称：功能请求关于：请求添加到 core::simd API 标签: C-feature-request",
+        "translate": ""
+    },
+    {
+        "source": "We are very interested in any feature requests you may have.",
+        "suggest": "我们对您可能提出的任何功能请求非常感兴趣。",
+        "translate": ""
+    },
+    {
+        "source": "However, please be aware that core::simd exists to address concerns with creating a portable SIMD API for Rust.",
+        "suggest": "但是，请注意 core::simd 的存在是为了解决为 Rust 创建可移植 SIMD API 的问题。",
+        "translate": ""
+    },
+    {
+        "source": "Requests for extensions to compiler features, such as `target_feature`, binary versioning for SIMD APIs, or",
+        "suggest": "对编译器功能扩展的请求，例如 `target_feature`、SIMD API 的二进制版本控制，或",
+        "translate": ""
+    },
+    {
+        "source": "Hello, welcome to `std::simd`!",
+        "suggest": "您好，欢迎来到 `std::simd`!",
+        "translate": ""
+    },
+    {
+        "source": "It seems this pull request template checklist was created while a lot of vector math ops were being implemented, and only really applies to ops.",
+        "suggest": "看起来这个拉取请求模板清单是在许多 vector 数学运算被实现时创建的，并且只真正适用于运算。",
+        "translate": ""
+    },
+    {
+        "source": "Feel free to delete everything here if it's not applicable, or ask for help if you're not sure what it means!",
+        "suggest": "如果不适用，请随意删除这里的所有内容，或者如果不确定这意味着什么，请寻求帮助！",
+        "translate": ""
+    },
+    {
+        "source": "For a given vector math operation on TxN, please add tests for interactions with:",
+        "suggest": "对于 TxN 上的给定 vector 数学运算，请添加与以下交互的测试:",
+        "translate": ""
+    },
+    {
+        "source": "For a given vector math operation on TxN where T is a float, please add tests for test interactions with:",
+        "suggest": "对于 TxN 上的给定 vector 数学运算，其中 T 是浮点数，请添加测试以测试与以下各项的交互:",
+        "translate": ""
+    },
+    {
+        "source": "a really large number, larger than the mantissa",
+        "suggest": "一个非常大的数字，比尾数还大",
+        "translate": ""
+    },
+    {
+        "source": "a really small \"subnormal\" number",
+        "suggest": "一个非常小的 \"subnormal\" 数字",
+        "translate": ""
+    },
+    {
+        "source": "Negative Infinity",
+        "suggest": "负无穷大",
+        "translate": ""
+    },
+    {
+        "source": "Beginner's Guide To SIMD",
+        "suggest": "SIMD 初学者指南",
+        "translate": ""
+    },
+    {
+        "source": "Hello and welcome to our SIMD basics guide!",
+        "suggest": "您好，欢迎阅读我们的 SIMD 基础指南！",
+        "translate": ""
+    },
+    {
+        "source": "Because SIMD is a subject that many programmers haven't worked with before, we thought that it's best to outline some terms and other basics for you to get started with.",
+        "suggest": "因为 SIMD 是许多程序员以前从未接触过的主题，所以我们认为最好概述一些术语和其他基础知识以供您入门。",
+        "translate": ""
+    },
+    {
+        "source": "Quick Background",
+        "suggest": "快速背景",
+        "translate": ""
+    },
+    {
+        "source": "**SIMD** stands for *Single Instruction, Multiple Data*.",
+        "suggest": "**SIMD** 代表 *单指令多数据*。",
+        "translate": ""
+    },
+    {
+        "source": "In other words, SIMD is when the CPU performs a single action on more than one logical piece of data at the same time.",
+        "suggest": "换句话说，SIMD 是指 CPU 同时对多个逻辑数据执行单个操作。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of adding two registers that each contain one `f32` value and getting an `f32` as the result, you might add two registers that each contain `f32x4` (128 bits of data) and then you get an `f32x4` as the output.",
+        "suggest": "您可以添加两个寄存器，每个寄存器包含一个 `f32`，并获得一个 `f32` 作为结果，不如添加两个寄存器，每个寄存器包含 `f32x4` (128 位数据)，然后您将获得一个 `f32x4` 作为输出。",
+        "translate": ""
+    },
+    {
+        "source": "This might seem a tiny bit weird at first, but there's a good reason for it.",
+        "suggest": "起初这可能看起来有点奇怪，但有一个很好的理由。",
+        "translate": ""
+    },
+    {
+        "source": "Back in the day, as CPUs got faster and faster, eventually they got so fast that the CPU would just melt itself.",
+        "suggest": "回到过去，随着 CPU 变得越来越快，最终它们变得如此之快，以至于 CPU 会自行融化。",
+        "translate": ""
+    },
+    {
+        "source": "The heat management (heat sinks, fans, etc) simply couldn't keep up with how much electricity was going through the metal.",
+        "suggest": "热量管理 (散热器、风扇等) 根本无法跟上通过金属的电流量。",
+        "translate": ""
+    },
+    {
+        "source": "Two main strategies were developed to help get around the limits of physics.",
+        "suggest": "开发了两种主要策略来帮助绕过物理极限。",
+        "translate": ""
+    },
+    {
+        "source": "One of them you're probably familiar with: Multi-core processors. By giving a processor more than one core, each core can do its own work, and because they're physically distant (at least on the CPU's scale) the heat can still be managed.",
+        "suggest": "您可能熟悉其中之一：多核处理器。通过为处理器提供多个内核，每个内核都可以完成自己的工作，并且由于它们在物理上相距遥远 (至少在 CPU 的规模上)，因此仍然可以管理热量。",
+        "translate": ""
+    },
+    {
+        "source": "Unfortunately, not all tasks can just be split up across cores in an efficient way.",
+        "suggest": "不幸的是，并非所有任务都可以有效地跨内核拆分。",
+        "translate": ""
+    },
+    {
+        "source": "The second strategy is SIMD.",
+        "suggest": "第二种策略是 SIMD。",
+        "translate": ""
+    },
+    {
+        "source": "If you can't make the register go any faster, you can still make the register *wider*.",
+        "suggest": "如果您不能让寄存器运行得更快，您仍然可以让寄存器*更宽*。",
+        "translate": ""
+    },
+    {
+        "source": "This lets you process more data at a time, which is *almost* as good as just having a faster CPU.",
+        "suggest": "这使您可以一次处理更多数据，这*几乎*与拥有更快的 CPU 一样好。",
+        "translate": ""
+    },
+    {
+        "source": "As with multi-core programming, SIMD doesn't fit every kind of task, so you have to know when it will improve your program.",
+        "suggest": "与多核编程一样，SIMD 并不适合所有类型的任务，因此您必须知道它何时会改进您的程序。",
+        "translate": ""
+    },
+    {
+        "source": "SIMD has a few special vocabulary terms you should know:",
+        "suggest": "SIMD 有一些您应该知道的特殊词汇术语:",
+        "translate": ""
+    },
+    {
+        "source": "**Vector:** A SIMD value is called a vector.",
+        "suggest": "**Vector: ** 一个 SIMD 值被称为 vector。",
+        "translate": ""
+    },
+    {
+        "source": "This shouldn't be confused with the `Vec<T>` type.",
+        "suggest": "这不应与 `Vec<T>` 类型混淆。",
+        "translate": ""
+    },
+    {
+        "source": "A SIMD vector has a fixed size, known at compile time.",
+        "suggest": "SIMD vector 具有固定大小，在编译时已知。",
+        "translate": ""
+    },
+    {
+        "source": "All of the elements within the vector are of the same type.",
+        "suggest": "vector 中的所有元素都属于同一类型。",
+        "translate": ""
+    },
+    {
+        "source": "This makes vectors *similar to* arrays.",
+        "suggest": "这使得 vectors 类似于数组。",
+        "translate": ""
+    },
+    {
+        "source": "One difference is that a vector is generally aligned to its *entire* size (eg: 16 bytes, 32 bytes, etc), not just the size of an individual element.",
+        "suggest": "一个区别是 vector 通常与其整个大小对齐 (例如: 16 字节、32 字节等)，而不仅仅是单个元素的大小。",
+        "translate": ""
+    },
+    {
+        "source": "Sometimes vector data is called \"packed\" data.",
+        "suggest": "有时 vector 数据称为包装的数据。",
+        "translate": ""
+    },
+    {
+        "source": "**Vectorize**: An operation that uses SIMD instructions to operate over a vector is often referred to as \"vectorized\".",
+        "suggest": "**Vectorize**: 使用 SIMD 指令对 vector 进行操作的操作通常称为 \"vectorized\"。",
+        "translate": ""
+    },
+    {
+        "source": "**Autovectorization**: Also known as _implicit vectorization_.",
+        "suggest": "**自动向量化**: 也称为隐式向量化。",
+        "translate": ""
+    },
+    {
+        "source": "This is when a compiler can automatically recognize a situation where scalar instructions may be replaced with SIMD instructions, and use those instead.",
+        "suggest": "这是编译器可以自动识别标量指令可能被 SIMD 指令替换的情况，并使用这些指令代替。",
+        "translate": ""
+    },
+    {
+        "source": "**Scalar:** \"Scalar\" in mathematical contexts refers to values that can be represented as a single element, mostly numbers like 6, 3.14, or -2.",
+        "suggest": "**标量: **在数学上下文中，\"Scalar\" 是指可以表示为单个元素的值，主要是 6、3.14 或 -2 等数字。",
+        "translate": ""
+    },
+    {
+        "source": "It can also be used to describe \"scalar operations\" that use strictly scalar values, like addition.",
+        "suggest": "它还可用于描述严格使用标量值的 \"scalar operations\"，例如加法。",
+        "translate": ""
+    },
+    {
+        "source": "This term is mostly used to differentiate between vectorized operations that use SIMD instructions and scalar operations that don't.",
+        "suggest": "该术语主要用于区分使用 SIMD 指令的矢量化运算和不使用 SIMD 指令的标量运算。",
+        "translate": ""
+    },
+    {
+        "source": "**Lane:** A single element position within a vector is called a lane.",
+        "suggest": "**lane: ** vector 内的单个元素位置称为 lane。",
+        "translate": ""
+    },
+    {
+        "source": "If you have `N` lanes available then they're numbered from `0` to `N-1` when referring to them, again like an array.",
+        "suggest": "如果您有可用的 `N` lanes，那么在引用它们时它们的编号从 `0` 到 `N-1`，再次像数组一样。",
+        "translate": ""
+    },
+    {
+        "source": "The biggest difference between an array element and a vector lane is that in general is *relatively costly* to access an individual lane value.",
+        "suggest": "数组元素和 vector lane 之间的最大区别在于，访问单个 lane 值通常*相对昂贵*。",
+        "translate": ""
+    },
+    {
+        "source": "On most architectures, the vector has to be pushed out of the SIMD register onto the stack, then an individual lane is accessed while it's on the stack (and possibly the stack value is read back into a register).",
+        "suggest": "在大多数体系结构中，vector 必须从 SIMD 寄存器中推出到栈中，然后在它位于栈上时访问单个 lane (并且可能将栈值读回到寄存器中)。",
+        "translate": ""
+    },
+    {
+        "source": "For this reason, when working with SIMD you should avoid reading or writing the value of an individual lane during hot loops.",
+        "suggest": "因此，在使用 SIMD 时，应避免在热循环期间读取或写入单个 lane 的值。",
+        "translate": ""
+    },
+    {
+        "source": "**Bit Widths:** When talking about SIMD, the bit widths used are the bit size of the vectors involved, *not* the individual elements.",
+        "suggest": "**位宽: **在谈到 SIMD 时，所使用的位宽是所涉及的 vectors 的位大小，*不是*单个元素。",
+        "translate": ""
+    },
+    {
+        "source": "So \"128-bit SIMD\" has 128-bit vectors, and that might be `f32x4`, `i32x4`, `i16x8`, or other variations.",
+        "suggest": "所以 \"128-bit SIMD\" 有 128 位 vectors，这可能是 `f32x4`、`i32x4`、`i16x8` 或其他变体。",
+        "translate": ""
+    },
+    {
+        "source": "While 128-bit SIMD is the most common, there's also 64-bit, 256-bit, and even 512-bit on the newest CPUs.",
+        "suggest": "虽然 128 位 SIMD 是最常见的，但在最新的 CPU 上也有 64 位、256 位甚至 512 位。",
+        "translate": ""
+    },
+    {
+        "source": "**Vector Register:** The extra-wide registers that are used for SIMD operations are commonly called vector registers, though you may also see \"SIMD registers\", vendor names for specific features, or even \"floating-point register\" as it is common for the same registers to be used with both scalar and vectorized floating-point operations.",
+        "suggest": "**Vector 寄存器: ** 用于 SIMD 操作的超宽寄存器通常称为 vector 寄存器，但您也可能会看到 \"SIMD registers\"、特定功能的供应商名称，甚至 \"floating-point register\"，因为相同的寄存器很常见与标量和向量化浮点运算一起使用。",
+        "translate": ""
+    },
+    {
+        "source": "**Vertical:** When an operation is \"vertical\", each lane processes individually without regard to the other lanes in the same vector.",
+        "suggest": "**垂直: **当操作为 \"vertical\" 时，每个lane单独处理，而不考虑同一 vector 中的其他lane。",
+        "translate": ""
+    },
+    {
+        "source": "For example, a \"vertical add\" between two vectors would add lane 0 in `a` with lane 0 in `b`, with the total in lane 0 of `out`, and then the same thing for lanes 1, 2, etc. Most SIMD operations are vertical operations, so if your problem is a vertical problem then you can probably solve it with SIMD.",
+        "suggest": "例如，两个 vectors 之间的 \"vertical add\" 会将 `a` 中的 lane 0 与 `b` 中的 lane 0 相加，总计在 `out` 的 lane 0 中，然后对 lane 1、2 等进行相同的操作。大多数 SIMD 操作都是垂直操作，因此如果您的问题是垂直问题，那么您可能可以使用 SIMD 解决它。",
+        "translate": ""
+    },
+    {
+        "source": "**Horizontal:** When an operation is \"horizontal\", the lanes within a single vector interact in some way.",
+        "suggest": "**水平: **当操作为 \"horizontal\" 时，单个 vector 内的 lanes 以某种方式交互。",
+        "translate": ""
+    },
+    {
+        "source": "A \"horizontal add\" might add up lane 0 of `a` with lane 1 of `a`, with the total in lane 0 of `out`.",
+        "suggest": "\"horizontal add\" 可能会将 `a` 的第 0 道与 `a` 的第 1 道相加，总计在 `out` 的第 0 道。",
+        "translate": ""
+    },
+    {
+        "source": "**Target Feature:** Rust calls a CPU architecture extension a `target_feature`.",
+        "suggest": "**目标特征: **Rust 将 CPU 架构扩展称为 `target_feature`。",
+        "translate": ""
+    },
+    {
+        "source": "Proper SIMD requires various CPU extensions to be enabled (details below).",
+        "suggest": "正确的 SIMD 需要启用各种 CPU 扩展 (详情如下)。",
+        "translate": ""
+    },
+    {
+        "source": "Don't confuse this with `feature`, which is a Cargo crate concept.",
+        "suggest": "不要将此与 `feature` 混淆，后者是 Cargo crate 概念。",
+        "translate": ""
+    },
+    {
+        "source": "Target Features",
+        "suggest": "目标特征",
+        "translate": ""
+    },
+    {
+        "source": "When using SIMD, you should be familiar with the CPU feature set that you're targeting.",
+        "suggest": "使用 SIMD 时，您应该熟悉所针对的 CPU 功能集。",
+        "translate": ""
+    },
+    {
+        "source": "On `arm` and `aarch64` it's fairly simple.",
+        "suggest": "在 `arm` 和 `aarch64` 上，它相当简单。",
+        "translate": ""
+    },
+    {
+        "source": "There's just one CPU feature that controls if SIMD is available: `neon` (or \"NEON\", all caps, as the ARM docs often put it).",
+        "suggest": "只有一个 CPU 功能可以控制 SIMD 是否可用: `neon` (或 \"NEON\"，全部大写，正如 ARM 文档经常所说的那样)。",
+        "translate": ""
+    },
+    {
+        "source": "Neon registers can be used as 64-bit or 128-bit.",
+        "suggest": "Neon 寄存器可用作 64 位或 128 位。",
+        "translate": ""
+    },
+    {
+        "source": "When doing 128-bit operations it just uses two 64-bit registers as a single 128-bit register.",
+        "suggest": "在进行 128 位操作时，它只使用两个 64 位寄存器作为一个 128 位寄存器。",
+        "translate": ""
+    },
+    {
+        "source": "By default, the `aarch64`, `arm`, and `thumb` Rust targets generally do not enable `neon` unless it's in the target string.",
+        "suggest": "默认情况下，`aarch64`、`arm` 和 `thumb` Rust 目标通常不会启用 `neon`，除非它在目标字符串中。",
+        "translate": ""
+    },
+    {
+        "source": "On `x86` and `x86_64` it's slightly more complicated.",
+        "suggest": "在 `x86` 和 `x86_64` 上，它稍微复杂一些。",
+        "translate": ""
+    },
+    {
+        "source": "The SIMD support is split into many levels:",
+        "suggest": "SIMD 支持分为多个级别:",
+        "translate": ""
+    },
+    {
+        "source": "128-bit: `sse`, `sse2`, `sse3`, `ssse3` (not a typo!), `sse4.1`, `sse4.2`, `sse4a` (AMD only)",
+        "suggest": "128 位: `sse`、`sse2`、`sse3`、`ssse3` (不是打字错误！)、`sse4.1`、`sse4.2`、`sse4a` (仅限 AMD)",
+        "translate": ""
+    },
+    {
+        "source": "256-bit (mostly): `avx`, `avx2`,",
+        "suggest": "256 位 (mostly): `avx`、`avx2`、",
+        "translate": ""
+    },
+    {
+        "source": "512-bit (mostly): a *wide* range of `avx512` variations",
+        "suggest": "512 位 (mostly): *广泛*范围的 `avx512` 变化",
+        "translate": ""
+    },
+    {
+        "source": "The list notes the bit widths available at each feature level, though the operations of the more advanced features can generally be used with the smaller register sizes as well.",
+        "suggest": "该列表指出了每个功能级别可用的位宽，尽管更高级的功能的操作通常也可以用于较小的寄存器大小。",
+        "translate": ""
+    },
+    {
+        "source": "For example, new operations introduced in `avx` generally have a 128-bit form as well as a 256-bit form.",
+        "suggest": "例如，`avx` 中引入的新操作通常有 128 位形式和 256 位形式。",
+        "translate": ""
+    },
+    {
+        "source": "This means that even if you only do 128-bit work you can still benefit from the later feature levels.",
+        "suggest": "这意味着即使您只进行 128 位工作，您仍然可以从更高的功能级别中受益。",
+        "translate": ""
+    },
+    {
+        "source": "By default, the `i686` and `x86_64` Rust targets enable `sse` and `sse2`.",
+        "suggest": "默认情况下，`i686` 和 `x86_64` Rust 目标启用 `sse` 和 `sse2`。",
+        "translate": ""
+    },
+    {
+        "source": "Selecting Additional Target Features",
+        "suggest": "选择附加目标特征",
+        "translate": ""
+    },
+    {
+        "source": "If you want to enable support for a target feature within your build, generally you should use a [target-feature](https://rust-lang.github.io/packed_simd/perf-guide/target-feature/rustflags.html#target-feature) setting within you `RUSTFLAGS` setting.",
+        "suggest": "如果要在构建中启用对目标功能的支持，通常应在 `RUSTFLAGS` 设置中使用 [目标特征](https://rust-lang.github.io/packed_simd/perf-guide/target-feature/rustflags.html#target-feature) 设置。",
+        "translate": ""
+    },
+    {
+        "source": "If you know that you're targeting a specific CPU you can instead use the [target-cpu](https://rust-lang.github.io/packed_simd/perf-guide/target-feature/rustflags.html#target-cpu) flag and the compiler will enable the correct set of features for that CPU.",
+        "suggest": "如果您知道您的目标是特定 CPU，则可以改用 [目标 CPU](https://rust-lang.github.io/packed_simd/perf-guide/target-feature/rustflags.html#target-cpu) 标志，编译器将为该 CPU 启用正确的功能集。",
+        "translate": ""
+    },
+    {
+        "source": "The [Steam Hardware Survey](https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam) is one of the few places with data on how common various CPU features are.",
+        "suggest": "[Steam 硬件调查](https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam) 是为数不多的提供各种 CPU 功能普遍性数据的地方之一。",
+        "translate": ""
+    },
+    {
+        "source": "The dataset is limited to \"the kinds of computers owned by people who play computer games\", so the info only covers `x86`/`x86_64`, and it also probably skews to slightly higher quality computers than average.",
+        "suggest": "数据集仅限于 \"the kinds of computers owned by people who play computer games\"，因此信息仅涵盖 `x86`/`x86_64`，并且它也可能偏向于比平均质量稍高的计算机。",
+        "translate": ""
+    },
+    {
+        "source": "Still, we can see that the `sse` levels have very high support, `avx` and `avx2` are quite common as well, and the `avx-512` family is still so early in adoption you can barely find it in consumer grade stuff.",
+        "suggest": "尽管如此，我们仍然可以看到 `sse` 级别的支持非常高，`avx` 和 `avx2` 也很常见，而且 `avx-512` 系列仍然处于早期采用阶段，您在消费级产品中几乎找不到它。",
+        "translate": ""
+    },
+    {
+        "source": "Running a program compiled for a CPU feature level that the CPU doesn't support is automatic undefined behavior.",
+        "suggest": "运行为 CPU 不支持的 CPU 功能级别编译的程序是自动未定义行为。",
+        "translate": ""
+    },
+    {
+        "source": "This means that if you build your program with `avx` support enabled and run it on a CPU without `avx` support, it's **instantly** undefined behavior.",
+        "suggest": "这意味着，如果您在启用 `avx` 支持的情况下构建您的程序并在没有 `avx` 支持的 CPU 上运行它，它是**立即**未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "Even without an `unsafe` block in sight.",
+        "suggest": "即使看不到 `unsafe` 块。",
+        "translate": ""
+    },
+    {
+        "source": "This is no bug in Rust, or soundness hole in the type system.",
+        "suggest": "这不是 Rust 中的错误，也不是类型系统中的健全性 hole。",
+        "translate": ""
+    },
+    {
+        "source": "You just plain can't make a CPU do what it doesn't know how to do.",
+        "suggest": "您只是不能让 CPU 做它不知道如何做的事情。",
+        "translate": ""
+    },
+    {
+        "source": "This is why the various Rust targets *don't* enable many CPU feature flags by default: requiring a more advanced CPU makes the final binary *less* portable.",
+        "suggest": "这就是为什么各种 Rust 目标默认*不*启用许多 CPU 功能标志的原因：需要更高级的 CPU 使最终的二进制文件*不*可移植。",
+        "translate": ""
+    },
+    {
+        "source": "So please select an appropriate CPU feature level when building your programs.",
+        "suggest": "因此，请在构建程序时选择合适的 CPU 功能级别。",
+        "translate": ""
+    },
+    {
+        "source": "Size, Alignment, and Unsafe Code",
+        "suggest": "大小、对齐和不安全代码",
+        "translate": ""
+    },
+    {
+        "source": "Most of the portable SIMD API is designed to allow the user to gloss over the details of different architectures and avoid using unsafe code.",
+        "suggest": "大多数可移植的 SIMD API 旨在允许用户掩盖不同架构的细节并避免使用不安全的代码。",
+        "translate": ""
+    },
+    {
+        "source": "However, there are plenty of reasons to want to use unsafe code with these SIMD types, such as using an intrinsic function from `core::arch` to further accelerate particularly specialized SIMD operations on a given platform, while still using the portable API elsewhere.",
+        "suggest": "然而，有很多理由想要对这些 SIMD 类型使用不安全的代码，例如使用 `core::arch` 的内部函数函数来进一步加速给定平台上特别专业的 SIMD 操作，同时在其他地方仍然使用可移植的 API。",
+        "translate": ""
+    },
+    {
+        "source": "For these cases, there are some rules to keep in mind.",
+        "suggest": "对于这些情况，需要记住一些规则。",
+        "translate": ""
+    },
+    {
+        "source": "Fortunately, most SIMD types have a fairly predictable size.",
+        "suggest": "幸运的是，大多数 SIMD 类型具有相当可预测的大小。",
+        "translate": ""
+    },
+    {
+        "source": "`i32x4` is bit-equivalent to `[i32; 4]` and so can be bitcast to it, e.g. using [`mem::transmute`], though the API usually offers a safe cast you can use instead.",
+        "suggest": "`i32x4` 与 `[i32; 4]` 位等效，因此可以对其进行位转换，例如使用 [`mem::transmute`]，尽管 API 通常提供您可以使用的安全转换。",
+        "translate": ""
+    },
+    {
+        "source": "However, this is not the same as alignment.",
+        "suggest": "但是，这与对齐不同。",
+        "translate": ""
+    },
+    {
+        "source": "Computer architectures generally prefer aligned accesses, especially when moving data between memory and vector registers, and while some support specialized operations that can bend the rules to help with this, unaligned access is still typically slow, or even undefined behavior.",
+        "suggest": "计算机体系结构通常更喜欢对齐访问，尤其是在内存和 vector 寄存器之间移动数据时，虽然有些支持可以改变规则以帮助解决此问题的专门操作，但未对齐访问通常仍然很慢，甚至是未定义的行为。",
+        "translate": ""
+    },
+    {
+        "source": "In addition, different architectures can require different alignments when interacting with their native SIMD types.",
+        "suggest": "此外，不同的架构在与其原生 SIMD 类型交互时可能需要不同的对齐方式。",
+        "translate": ""
+    },
+    {
+        "source": "For this reason, any `#[repr(simd)]` type has a non-portable alignment.",
+        "suggest": "出于这个原因，任何 `#[repr(simd)]` 类型都具有非便携式对齐方式。",
+        "translate": ""
+    },
+    {
+        "source": "If it is necessary to directly interact with the alignment of these types, it should be via [`mem::align_of`].",
+        "suggest": "如果需要直接与这些类型的对齐进行交互，应该通过 [`mem::align_of`]。",
+        "translate": ""
+    },
+    {
+        "source": "Contributing to `std::simd`",
+        "suggest": "为 `std::simd` 做贡献",
+        "translate": ""
+    },
+    {
+        "source": "Simple version:",
+        "suggest": "简单版:",
+        "translate": ""
+    },
+    {
+        "source": "Fork it and `git clone` it",
+        "suggest": "Fork 它和 `git clone` 它",
+        "translate": ""
+    },
+    {
+        "source": "Create your feature branch:",
+        "suggest": "创建您的功能分支:",
+        "translate": ""
+    },
+    {
+        "source": "Write your changes.",
+        "suggest": "写下您的改变。",
+        "translate": ""
+    },
+    {
+        "source": "Test it: `cargo test`.",
+        "suggest": "测试一下: `cargo test`。",
+        "translate": ""
+    },
+    {
+        "source": "Remember to enable whatever SIMD features you intend to test by setting `RUSTFLAGS`.",
+        "suggest": "请记住通过设置 `RUSTFLAGS` 来启用您打算测试的任何 SIMD 功能。",
+        "translate": ""
+    },
+    {
+        "source": "Commit your changes:",
+        "suggest": "提交您的更改:",
+        "translate": ""
+    },
+    {
+        "source": "Push the branch:",
+        "suggest": "推送分支:",
+        "translate": ""
+    },
+    {
+        "source": "Submit a pull request!",
+        "suggest": "提交拉取请求！",
+        "translate": ""
+    },
+    {
+        "source": "Taking on an Issue",
+        "suggest": "解决问题",
+        "translate": ""
+    },
+    {
+        "source": "SIMD can be quite complex, and even a \"simple\" issue can be huge.",
+        "suggest": "SIMD 可能非常复杂，甚至 \"simple\" 问题也可能很大。",
+        "translate": ""
+    },
+    {
+        "source": "If an issue is organized like a tracking issue, with an itemized list of items that don't necessarily have to be done in a specific order, please take the issue one item at a time.",
+        "suggest": "如果问题的组织方式类似于跟踪问题，并且有一个项的逐项列表，而不必按特定顺序完成，请一次处理一个项。",
+        "translate": ""
+    },
+    {
+        "source": "This will help by letting work proceed apace on the rest of the issue.",
+        "suggest": "这将有助于让工作在其余问题上快速进行。",
+        "translate": ""
+    },
+    {
+        "source": "If it's a (relatively) small issue, feel free to announce your intention to solve it on the issue tracker and take it in one go!",
+        "suggest": "如果是 (relatively) 的小问题，请随时在问题跟踪器上宣布您的解决意向，并一次性解决！",
+        "translate": ""
+    },
+    {
+        "source": "We currently have 2 CI matrices through Travis CI and GitHub Actions that will automatically build and test your change in order to verify that `std::simd`'s portable API is, in fact, portable.",
+        "suggest": "我们目前通过 Travis CI 和 GitHub Actions 有 2 个 CI 矩阵，它们将自动构建和测试您的更改，以验证 `std::simd` 的可移植 API 实际上是可移植的。",
+        "translate": ""
+    },
+    {
+        "source": "If your change builds locally, but does not build on either, this is likely due to a platform-specific concern that your code has not addressed.",
+        "suggest": "如果您的更改在本地构建，但不在任何一个上构建，这可能是由于您的代码未解决特定于平台的问题。",
+        "translate": ""
+    },
+    {
+        "source": "Please consult the build logs and address the error, or ask for help if you need it.",
+        "suggest": "请查阅构建日志并解决错误，或者在需要时寻求帮助。",
+        "translate": ""
+    },
+    {
+        "source": "Beyond stdsimd",
+        "suggest": "超越 stdsimd",
+        "translate": ""
+    },
+    {
+        "source": "A large amount of the core SIMD implementation is found in the rustc_codegen_* crates in the [main rustc repo](https://github.com/rust-lang/rust).",
+        "suggest": "在 [rustc 仓库 main 分支](https://github.com/rust-lang/rust) 中的 rustc_codegen_* crates 中可以找到大量的核心 SIMD 实现。",
+        "translate": ""
+    },
+    {
+        "source": "In addition, actual platform-specific functions are implemented in [stdarch].",
+        "suggest": "此外，实际平台特定的函数是在 [stdarch] 中实现的。",
+        "translate": ""
+    },
+    {
+        "source": "Not all changes to `std::simd` require interacting with either of these, but if you're wondering where something is and it doesn't seem to be in this repository, those might be where to start looking.",
+        "suggest": "并非所有对 `std::simd` 的更改都需要与其中任何一个进行交互，但是如果您想知道某物在哪里并且它似乎不在这个仓库中，那么这些可能是开始寻找的地方。",
+        "translate": ""
+    },
+    {
+        "source": "Questions? Concerns?",
+        "suggest": "问题？担忧？",
+        "translate": ""
+    },
+    {
+        "source": "Need Help?",
+        "suggest": "需要帮忙？",
+        "translate": ""
+    },
+    {
+        "source": "Please feel free to ask in the [#project-portable-simd][zulip-portable-simd] stream on the [rust-lang Zulip][zulip] for help with making changes to `std::simd`!",
+        "suggest": "请随时在 [rust-lang Zulip][zulip] 上的 [#project-portable-simd][zulip-portable-simd] 流中询问有关对 `std::simd` 进行更改的帮助！",
+        "translate": ""
+    },
+    {
+        "source": "If your changes include directly modifying the compiler, it might also be useful to ask in [#t-compiler/help][zulip-compiler-help].",
+        "suggest": "如果您的更改包括直接修改编译器，那么在 [#t-compiler/help][zulip-compiler-help] 中询问也可能有用。",
+        "translate": ""
+    },
+    {
+        "source": "The Rust standard library's portable SIMD API",
+        "suggest": "Rust 标准库的可移植 SIMD API",
+        "translate": ""
+    },
+    {
+        "source": "Code repository for the [Portable SIMD Project Group](https://github.com/rust-lang/project-portable-simd).",
+        "suggest": "[便携式 SIMD 项目组](https://github.com/rust-lang/project-portable-simd) 的代码仓库。",
+        "translate": ""
+    },
+    {
+        "source": "Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for our contributing guidelines.",
+        "suggest": "请参见 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解我们的贡献指南。",
+        "translate": ""
+    },
+    {
+        "source": "The docs for this crate are published from the main branch.",
+        "suggest": "这个 crate 的文档是从主分支发布的。",
+        "translate": ""
+    },
+    {
+        "source": "You can [read them here][docs].",
+        "suggest": "您可以 [在这里阅读][docs]。",
+        "translate": ""
+    },
+    {
+        "source": "If you have questions about SIMD, we have begun writing a [guide][simd-guide].",
+        "suggest": "如果您对 SIMD 有疑问，我们已经开始编写 [指南][simd-guide]。",
+        "translate": ""
+    },
+    {
+        "source": "We can also be found on [Zulip][zulip-project-portable-simd].",
+        "suggest": "我们也可以在 [Zulip][zulip-project-portable-simd] 上找到。",
+        "translate": ""
+    },
+    {
+        "source": "If you are interested in support for a specific architecture, you may want [stdarch] instead.",
+        "suggest": "如果您对支持特定架构感兴趣，您可能需要 [stdarch]。",
+        "translate": ""
+    },
+    {
+        "source": "Hello World",
+        "suggest": "您好，世界",
+        "translate": ""
+    },
+    {
+        "source": "Now we're gonna dip our toes into this world with a small SIMD \"Hello, World!\" example.",
+        "suggest": "现在我们将通过一个小的 SIMD \"Hello, World!\" 示例深入这个世界。",
+        "translate": ""
+    },
+    {
+        "source": "Make sure your compiler is up to date and using `nightly`.",
+        "suggest": "确保您的编译器是最新的并使用 `nightly`。",
+        "translate": ""
+    },
+    {
+        "source": "We can do that by running",
+        "suggest": "我们可以通过运行来做到这一点",
+        "translate": ""
+    },
+    {
+        "source": "or by setting up `rustup default nightly` or else with `cargo +nightly {build,test,run}`.",
+        "suggest": "或通过设置 `rustup default nightly` 或使用 `cargo +nightly {build,test,run}`。",
+        "translate": ""
+    },
+    {
+        "source": "After updating, run",
+        "suggest": "更新后运行",
+        "translate": ""
+    },
+    {
+        "source": "to create a new crate.",
+        "suggest": "创建一个新的 crate。",
+        "translate": ""
+    },
+    {
+        "source": "Edit `hellosimd/Cargo.toml` to be",
+        "suggest": "编辑 `hellosimd/Cargo.toml` 为",
+        "translate": ""
+    },
+    {
+        "source": "and finally write this in `src/main.rs`:",
+        "suggest": "最后在 `src/main.rs` 中写下这个:",
+        "translate": ""
+    },
+    {
+        "source": "Explanation: We import all the bindings from the crate with the first line.",
+        "suggest": "说明：我们使用第一行从 crate 导入所有绑定。",
+        "translate": ""
+    },
+    {
+        "source": "Then, we construct our SIMD vectors with methods like `splat` or `from_array`.",
+        "suggest": "然后，我们使用 `splat` 或 `from_array` 等方法构建我们的 SIMD vectors。",
+        "translate": ""
+    },
+    {
+        "source": "Finally, we can use operators on them like `+` and the appropriate SIMD instructions will be carried out.",
+        "suggest": "最后，我们可以像 `+` 一样对它们使用相同，并且将执行适当的 SIMD 指令。",
+        "translate": ""
+    },
+    {
+        "source": "When we run `cargo run` you should get `[11.0, 12.0, 13.0, 14.0]`.",
+        "suggest": "当我们运行 `cargo run` 时，您应该得到 `[11.0, 12.0, 13.0, 14.0]`。",
+        "translate": ""
+    },
+    {
+        "source": "Code Organization",
+        "suggest": "代码组织",
+        "translate": ""
+    },
+    {
+        "source": "Currently the crate is organized so that each element type is a file, and then the 64-bit, 128-bit, 256-bit, and 512-bit vectors using those types are contained in said file.",
+        "suggest": "目前 crate 的组织方式是每个元素类型都是一个文件，然后使用这些类型的 64 位、128 位、256 位和 512 位 vectors 包含在所述文件中。",
+        "translate": ""
+    },
+    {
+        "source": "All types are then exported as a single, flat module.",
+        "suggest": "然后将所有类型导出为单个扁平模块。",
+        "translate": ""
+    },
+    {
+        "source": "Depending on the size of the primitive type, the number of lanes the vector will have varies.",
+        "suggest": "根据原始类型的大小，vector 的 lane 数会有所不同。",
+        "translate": ""
+    },
+    {
+        "source": "For example, 128-bit vectors have four `f32` lanes and two `f64` lanes.",
+        "suggest": "例如，128 位 vectors 有四个 `f32` lane 和两个 `f64` lane。",
+        "translate": ""
+    },
+    {
+        "source": "The supported element types are as follows:",
+        "suggest": "支持的元素类型如下:",
+        "translate": ""
+    },
+    {
+        "source": "**Floating Point:** `f32`,",
+        "suggest": "**浮点数: ** `f32`，",
+        "translate": ""
+    },
+    {
+        "source": "**Signed Integers:** `i8`, `i16`, `i32`, `i64`, `i128`,",
+        "suggest": "**有符号整数: ** `i8`、`i16`、`i32`、`i64`、`i128`、",
+        "translate": ""
+    },
+    {
+        "source": "**Unsigned Integers:** `u8`, `u16`, `u32`, `u64`, `u128`,",
+        "suggest": "**无符号整数: ** `u8`、`u16`、`u32`、`u64`、`u128`、",
+        "translate": ""
+    },
+    {
+        "source": "**Masks:** `mask8`, `mask16`, `mask32`, `mask64`, `mask128`,",
+        "suggest": "**掩码: ** `mask8`、`mask16`、`mask32`、`mask64`、`mask128`、",
+        "translate": ""
+    },
+    {
+        "source": "Floating point, signed integers, and unsigned integers are the [primitive types](https://doc.rust-lang.org/core/primitive/index.html) you're already used to.",
+        "suggest": "浮点数、有符号整数和无符号整数是您已经习惯的 [原始类型](https://doc.rust-lang.org/core/primitive/index.html)。",
+        "translate": ""
+    },
+    {
+        "source": "The `mask` types are \"truthy\" values, but they use the number of bits in their name instead of just 1 bit like a normal `bool` uses.",
+        "suggest": "`mask` 类型是 \"truthy\" 值，但它们使用名称中的位数，而不是像普通 `bool` 使用的那样仅使用 1 位。",
+        "translate": ""
+    },
+    {
+        "source": "Error returned from `TokenStream::expand_expr`.",
+        "suggest": "从 `TokenStream::expand_expr` 返回的错误。",
+        "translate": ""
+    },
+    {
+        "source": "Parses this `TokenStream` as an expression and attempts to expand any macros within it.",
+        "suggest": "将此 `TokenStream` 解析为表达式并尝试扩展其中的任何宏。",
+        "translate": ""
+    },
+    {
+        "source": "Returns the expanded `TokenStream`.",
+        "suggest": "返回扩展的 `TokenStream`。",
+        "translate": ""
+    },
+    {
+        "source": "Currently only expressions expanding to literals will succeed, although this may be relaxed in the future.",
+        "suggest": "目前只有扩展到字面量的表达式会成功，尽管这在 future 中可能会有所放松。",
+        "translate": ""
+    },
+    {
+        "source": "In error conditions, `expand_expr` may leave macros unexpanded, report an error, failing compilation, and/or return an `Err(..)`.",
+        "suggest": "在错误情况下，`expand_expr` 可能会保留未扩展的宏、报告错误、编译失败或者返回 `Err(..)`。",
+        "translate": ""
+    },
+    {
+        "source": "The specific behavior for any error condition, and what conditions are considered errors, is unspecified and may change in the future.",
+        "suggest": "任何错误条件的具体行为，以及哪些条件被视为错误，是未指定的，可能会在 future 中发生变化。",
+        "translate": ""
+    },
+    {
+        "source": "Ensure an empty path returns the \"Not Found\" error.",
+        "suggest": "确保空路径返回 \"Not Found\" 错误。",
+        "translate": ""
+    },
+    {
+        "source": "Instead of `OpenOptions::new().read(true).open(\"foo.txt\")` you can write `File::options().read(true).open(\"foo.txt\")`.",
+        "suggest": "您可以编写 `File::options().read(true).open(\"foo.txt\")` 来代替 `OpenOptions::new().read(true).open(\"foo.txt\")`。",
+        "translate": ""
+    },
+    {
+        "source": "creating an error without payload",
+        "suggest": "在没有 payload 的情况下创建错误",
+        "translate": ""
+    },
+    {
+        "source": "If no extra payload is required, use the `From` conversion from `ErrorKind`.",
+        "suggest": "如果不需要额外的 payload，请使用 `ErrorKind` 的 `From` 转换。",
+        "translate": ""
+    },
+    {
+        "source": "On Unix, `ExitStatus` **does not necessarily represent an exit status**, as passed to the `_exit` system call or returned by [`ExitStatus::code()`](crate::process::ExitStatus::code).",
+        "suggest": "在 Unix 上，`ExitStatus`**不一定代表退出状态**，因为传递给 `_exit` 系统调用或由 [`ExitStatus::code()`](crate::process::ExitStatus::code) 返回。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if this file type is any type of socket.",
+        "suggest": "如果此文件类型是任何类型的套接字，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Fast path for exact matches, e.g. for hashmap lookups.",
+        "suggest": "精确匹配的快速路径，例如 hashmap 查找。",
+        "translate": ""
+    },
+    {
+        "source": "Don't explicitly compare the prefix or has_physical_root fields since they'll either be covered by the `path` buffer or are only relevant for `prefix_verbatim()`.",
+        "suggest": "不要明确比较前缀或 has_physical_root 字段，因为它们要么被 `path` 缓冲区覆盖，要么只与 `prefix_verbatim()` 相关。",
+        "translate": ""
+    },
+    {
+        "source": "possible future improvement: this could bail out earlier if there were a reverse memcmp/bcmp comparing back to front",
+        "suggest": "未来可能的改进：如果有反向 memcmp/bcmp 比较前后对比，这可以更早地摆脱",
+        "translate": ""
+    },
+    {
+        "source": "compare back to front since absolute paths often share long prefixes",
+        "suggest": "前后比较，因为绝对路径通常共享长前缀",
+        "translate": ""
+    },
+    {
+        "source": "possible future improvement: a [u8]::first_mismatch simd implementation",
+        "suggest": "未来可能的改进: [u8]::first_mismatch simd 实现",
+        "translate": ""
+    },
+    {
+        "source": "skip over separator and optionally a following CurDir item since components() would normalize these away",
+        "suggest": "跳过分隔符和可选的后续 CurDir 项，因为 components() 会将这些规范化",
+        "translate": ""
+    },
+    {
+        "source": "We speak slightly loosely (here and in various other places in the stdlib docs) about `exit` vs `_exit`.",
+        "suggest": "我们对 `exit` 和 `_exit` 的讨论有点松散 (这里和 stdlib 文档中的其他地方)。",
+        "translate": ""
+    },
+    {
+        "source": "Naming of Unix system calls is not standardised across Unices, so terminology is a matter of convention and tradition.",
+        "suggest": "Unix 系统调用的命名在 Unices 中没有标准化，因此术语是约定俗成的问题。",
+        "translate": ""
+    },
+    {
+        "source": "For clarity we usually speak of `exit`, even when we might mean an underlying system call such as `_exit`.",
+        "suggest": "为清楚起见，我们通常使用 `exit`，即使我们可能指的是底层系统调用，例如 `_exit`。",
+        "translate": ""
+    },
+    {
+        "source": "the writer fd was opened with O_APPEND (EBADF²) and no bytes were written successfully yet.",
+        "suggest": "writer fd 是用 O_APPEND (EBADF²) 打开的，但尚未成功写入任何字节。",
+        "translate": ""
+    },
+    {
+        "source": "(All these errnos should not be returned if something was already written, but they happen in the wild, see #91152.)",
+        "suggest": "(如果已经写入了某些内容，则不应返回所有这些 errnos，但它们会在野外发生，请参见 #91152。)",
+        "translate": ""
+    },
+    {
+        "source": "This is not actually an \"exit status\" in Unix terminology.",
+        "suggest": "这实际上不是 Unix 术语中的 \"exit status\"。",
+        "translate": ""
+    },
+    {
+        "source": "Rather, it is a \"wait status\".",
+        "suggest": "相反，它是 \"wait status\"。",
+        "translate": ""
+    },
+    {
+        "source": "See the discussion in comments and doc comments for `std::process::ExitStatus`.",
+        "suggest": "请参见 `std::process::ExitStatus` 的注释和文档注释中的讨论。",
+        "translate": ""
+    },
+    {
+        "source": "This is an implementation of a global allocator on wasm targets when emscripten is not in use.",
+        "suggest": "这是不使用 emscripten 时 wasm 目标上的全局分配器的实现。",
+        "translate": ""
+    },
+    {
+        "source": "The wasm instruction set has two instructions for getting the current amount of memory and growing the amount of memory.",
+        "suggest": "wasm 指令集有两条指令用于获取当前内存量和增长内存量。",
+        "translate": ""
+    },
+    {
+        "source": "A path that contains null is not a valid path.",
+        "suggest": "包含 null 的路径不是有效路径。",
+        "translate": ""
+    },
+    {
+        "source": "Returns true if `path` looks like a lone filename.",
+        "suggest": "如果 `path` 看起来像一个单独的文件名，则返回 true。",
+        "translate": ""
+    },
+    {
+        "source": "Appends a suffix to a path.",
+        "suggest": "将后缀附加到路径。",
+        "translate": ""
+    },
+    {
+        "source": "Can be used to append an extension without removing an existing extension.",
+        "suggest": "可用于附加扩展而不删除现有扩展。",
+        "translate": ""
+    },
+    {
+        "source": "Early return for paths that are already verbatim or empty.",
+        "suggest": "提前返回已经逐字或空的路径。",
+        "translate": ""
+    },
+    {
+        "source": "UWP applications run in a restricted environment which means this test may not work.",
+        "suggest": "UWP 应用程序在受限环境中运行，这意味着此测试可能不起作用。",
+        "translate": ""
+    },
+    {
+        "source": "Test a full path, with and without the `exe` extension.",
+        "suggest": "测试带有和不带有 `exe` 扩展名的完整路径。",
+        "translate": ""
+    },
+    {
+        "source": "Test lone file names.",
+        "suggest": "测试单独的文件名。",
+        "translate": ""
+    },
+    {
+        "source": "Invalid file names should return InvalidInput.",
+        "suggest": "无效的文件名应返回 InvalidInput。",
+        "translate": ""
+    },
+    {
+        "source": "Trailing slash, therefore there's no file name component.",
+        "suggest": "尾部斜杠，因此没有文件名组件。",
+        "translate": ""
+    },
+    {
+        "source": "The resolver looks in system directories even when `PATH` is empty.",
+        "suggest": "即使 `PATH` 为空，解析器也会在系统目录中查找。",
+        "translate": ""
+    },
+    {
+        "source": "The application's directory is also searched.",
+        "suggest": "还会搜索应用程序的目录。",
+        "translate": ""
+    },
+    {
+        "source": "Resolve `exe_path` to the executable name.",
+        "suggest": "将 `exe_path` 解析为可执行文件名称。",
+        "translate": ""
+    },
+    {
+        "source": "If the path is simply a file name then use the paths given by `search_paths` to find the executable.",
+        "suggest": "如果路径只是一个文件名，则使用 `search_paths` 给出的路径来查找可执行文件。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise use the `exe_path` as given.",
+        "suggest": "否则使用给定的 `exe_path`。",
+        "translate": ""
+    },
+    {
+        "source": "This function may also append `.exe` to the name.",
+        "suggest": "这个函数也可以在名称后面加上 `.exe`。",
+        "translate": ""
+    },
+    {
+        "source": "The rationale for doing so is as follows:",
+        "suggest": "这样做的理由如下:",
+        "translate": ""
+    },
+    {
+        "source": "It is a very strong convention that Windows executables have the `exe` extension.",
+        "suggest": "Windows 可执行文件具有 `exe` 扩展名是一个非常强大的约定。",
+        "translate": ""
+    },
+    {
+        "source": "In Rust, it is common to omit this extension.",
+        "suggest": "在 Rust 中，通常省略此扩展名。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore this functions first assumes `.exe` was intended.",
+        "suggest": "因此这个函数首先假设 `.exe` 是有意的。",
+        "translate": ""
+    },
+    {
+        "source": "It falls back to the plain file name if a full path is given and the extension is omitted or if only a file name is given and it already contains an extension.",
+        "suggest": "如果给出了完整路径并且省略了扩展名，或者如果只给出了一个文件名并且它已经包含一个扩展名，则它会回退到纯文件名。",
+        "translate": ""
+    },
+    {
+        "source": "Early return if there is no filename.",
+        "suggest": "如果没有文件名，则提前返回。",
+        "translate": ""
+    },
+    {
+        "source": "Test if the file name has the `exe` extension.",
+        "suggest": "测试文件名是否具有 `exe` 扩展名。",
+        "translate": ""
+    },
+    {
+        "source": "This does a case-insensitive `ends_with`.",
+        "suggest": "这是一个不区分大小写的 `ends_with`。",
+        "translate": ""
+    },
+    {
+        "source": "If `exe_path` is an absolute path or a sub-path then don't search `PATH` for it.",
+        "suggest": "如果 `exe_path` 是绝对路径或子路径，则不要搜索 `PATH`。",
+        "translate": ""
+    },
+    {
+        "source": "The application name is a path to a `.exe` file.",
+        "suggest": "应用程序名称是 `.exe` 文件的路径。",
+        "translate": ""
+    },
+    {
+        "source": "Let `CreateProcessW` figure out if it exists or not.",
+        "suggest": "让 `CreateProcessW` 判断它是否存在。",
+        "translate": ""
+    },
+    {
+        "source": "Append `.exe` if not already there.",
+        "suggest": "如果 `.exe` 不存在，则追加。",
+        "translate": ""
+    },
+    {
+        "source": "It's ok to use `set_extension` here because the intent is to remove the extension that was just added.",
+        "suggest": "在这里使用 `set_extension` 是可以的，因为目的是删除刚刚添加的扩展。",
+        "translate": ""
+    },
+    {
+        "source": "From the `CreateProcessW` docs:",
+        "suggest": "来自 `CreateProcessW` 文档:",
+        "translate": ""
+    },
+    {
+        "source": "If the file name does not contain an extension, .exe is appended.",
+        "suggest": "如果文件名不包含扩展名，则附加 .exe。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this rule only applies when searching paths.",
+        "suggest": "请注意，此规则仅适用于搜索路径。",
+        "translate": ""
+    },
+    {
+        "source": "Search the directories given by `search_paths`.",
+        "suggest": "搜索 `search_paths` 给出的目录。",
+        "translate": ""
+    },
+    {
+        "source": "If we get here then the executable cannot be found.",
+        "suggest": "如果我们到达这里，则无法找到可执行文件。",
+        "translate": ""
+    },
+    {
+        "source": "Calls `f` for every path that should be used to find an executable.",
+        "suggest": "为每个应该用于查找可执行文件的路径调用 `f`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns once `f` returns the path to an executable or all paths have been searched.",
+        "suggest": "一旦 `f` 返回可执行文件的路径或已搜索所有路径，则返回。",
+        "translate": ""
+    },
+    {
+        "source": "Child paths This is for consistency with Rust's historic behaviour.",
+        "suggest": "子路径这是为了与 Rust 的历史行为保持一致。",
+        "translate": ""
+    },
+    {
+        "source": "Application path",
+        "suggest": "应用程序路径",
+        "translate": ""
+    },
+    {
+        "source": "System paths",
+        "suggest": "系统路径",
+        "translate": ""
+    },
+    {
+        "source": "This uses `fill_utf16_buf` to safely call the OS functions.",
+        "suggest": "这使用 `fill_utf16_buf` 来安全地调用 OS 函数。",
+        "translate": ""
+    },
+    {
+        "source": "Parent paths",
+        "suggest": "父路径",
+        "translate": ""
+    },
+    {
+        "source": "`self.bytes` has been created from a WTF-8 string",
+        "suggest": "`self.bytes` 是从 WTF-8 字符串创建的",
+        "translate": ""
+    },
+    {
+        "source": "On some targets like wasm there's no threads, so no need to generate thread locals and we can instead just use plain statics!",
+        "suggest": "在像 wasm 这样的一些目标上没有线程，所以不需要生成线程局部变量，我们可以只使用普通的静态变量！",
+        "translate": ""
+    },
+    {
+        "source": "The following neon instructions are currently not implemented in stdarch",
+        "suggest": "以下 neon 指令目前未在 stdarch 中实现",
+        "translate": ""
+    },
+    {
+        "source": "Not implemented on arm:",
+        "suggest": "未在 arm 上实现:",
+        "translate": ""
+    },
+    {
+        "source": "Not implemented in LLVM:",
+        "suggest": "未在 LLVM 中实现:",
+        "translate": ""
+    },
+    {
+        "source": "LLVM Select errors may occur:",
+        "suggest": "可能会出现 LLVM Select 错误:",
+        "translate": ""
+    },
+    {
+        "source": "Three-way exclusive OR",
+        "suggest": "三路异或",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point absolute difference",
+        "suggest": "浮点绝对差",
+        "translate": ""
+    },
+    {
+        "source": "Compare bitwise equal",
+        "suggest": "按位相等比较",
+        "translate": ""
+    },
+    {
+        "source": "Compare bitwise equal to zero",
+        "suggest": "按位比较等于零",
+        "translate": ""
+    },
+    {
+        "source": "Compare bitwise test bits nonzero",
+        "suggest": "比较非零的按位测试位",
+        "translate": ""
+    },
+    {
+        "source": "Signed saturating accumulate of unsigned value",
+        "suggest": "无符号值的有符号饱和累加",
+        "translate": ""
+    },
+    {
+        "source": "Compare greater than",
+        "suggest": "比较大于",
+        "translate": ""
+    },
+    {
+        "source": "Compare less than",
+        "suggest": "比较小于",
+        "translate": ""
+    },
+    {
+        "source": "Compare greater than or equal",
+        "suggest": "比较大于或等于",
+        "translate": ""
+    },
+    {
+        "source": "Compare less than or equal",
+        "suggest": "比较小于或等于",
+        "translate": ""
+    },
+    {
+        "source": "Compare less than or equal to zero",
+        "suggest": "比较小于或等于零",
+        "translate": ""
+    },
+    {
+        "source": "Compare less than zero",
+        "suggest": "比较小于零",
+        "translate": ""
+    },
+    {
+        "source": "Load multiple 2-element structures to two registers",
+        "suggest": "将多个 2 元素结构加载到两个寄存器",
+        "translate": ""
+    },
+    {
+        "source": "Load single 2-element structure and replicate to all lanes of two registers",
+        "suggest": "加载单个 2 元素结构体并复制到两个寄存器的所有 lane",
+        "translate": ""
+    },
+    {
+        "source": "Load multiple 3-element structures to three registers",
+        "suggest": "将多个 3 元素结构加载到三个寄存器",
+        "translate": ""
+    },
+    {
+        "source": "Load single 3-element structure and replicate to all lanes of three registers",
+        "suggest": "加载单个 3 元素结构体并复制到三个寄存器的所有 lane",
+        "translate": ""
+    },
+    {
+        "source": "Load multiple 3-element structures to two registers",
+        "suggest": "将多个 3 元素结构加载到两个寄存器",
+        "translate": ""
+    },
+    {
+        "source": "Load multiple 4-element structures to four registers",
+        "suggest": "将多个 4 元素结构加载到四个寄存器",
+        "translate": ""
+    },
+    {
+        "source": "Load single 4-element structure and replicate to all lanes of four registers",
+        "suggest": "加载单个 4 元素结构体并复制到四个寄存器的所有 lane",
+        "translate": ""
+    },
+    {
+        "source": "Store multiple 2-element structures from two registers",
+        "suggest": "存储来自两个寄存器的多个 2 元素结构",
+        "translate": ""
+    },
+    {
+        "source": "Store multiple 3-element structures from three registers",
+        "suggest": "存储来自三个寄存器的多个 3 元素结构",
+        "translate": ""
+    },
+    {
+        "source": "Store multiple 4-element structures from four registers",
+        "suggest": "存储来自四个寄存器的多个 4 元素结构",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point add across vector",
+        "suggest": "跨 vector 的浮点加法",
+        "translate": ""
+    },
+    {
+        "source": "Bit clear and exclusive OR",
+        "suggest": "位清除和异或",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point complex add",
+        "suggest": "浮点复数加法",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point complex multiply accumulate",
+        "suggest": "浮点复数乘法累加",
+        "translate": ""
+    },
+    {
+        "source": "Dot product arithmetic",
+        "suggest": "点积算术",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point maximum number across vector",
+        "suggest": "vector 上的最大浮点数",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point maximum number pairwise",
+        "suggest": "成对的浮点最大数",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point maximum pairwise",
+        "suggest": "成对的浮点最大值",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point minimum number across vector",
+        "suggest": "vector 上的浮点最小数",
+        "translate": ""
+    },
+    {
+        "source": "Vector move",
+        "suggest": "Vector 移动",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point add pairwise",
+        "suggest": "浮点数成对相加",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point minimum number pairwise",
+        "suggest": "成对的浮点最小数",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point minimum pairwise",
+        "suggest": "成对的浮点最小值",
+        "translate": ""
+    },
+    {
+        "source": "Vector saturating doubling multiply high by scalar",
+        "suggest": "Vector 饱和加倍乘以标量",
+        "translate": ""
+    },
+    {
+        "source": "Signed saturating shift left unsigned",
+        "suggest": "有符号饱和左移无符号",
+        "translate": ""
+    },
+    {
+        "source": "Unsigned saturating accumulate of signed value",
+        "suggest": "有符号值的无符号饱和累加",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point reciprocal square root step",
+        "suggest": "浮点倒数平方根步长",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point reciprocal step",
+        "suggest": "浮点倒数步长",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point reciprocal exponent",
+        "suggest": "浮点倒数指数",
+        "translate": ""
+    },
+    {
+        "source": "Rounding subtract returning high narrow",
+        "suggest": "舍入减法返回 high narrow",
+        "translate": ""
+    },
+    {
+        "source": "Rotate and exclusive OR",
+        "suggest": "轮换和异或",
+        "translate": ""
+    },
+    {
+        "source": "SHA512 hash update part 1",
+        "suggest": "SHA512 哈希更新第 1 部分",
+        "translate": ""
+    },
+    {
+        "source": "SHA512 hash update part 2",
+        "suggest": "SHA512 哈希更新第 2 部分",
+        "translate": ""
+    },
+    {
+        "source": "SHA512 schedule update 0",
+        "suggest": "SHA512 计划更新 0",
+        "translate": ""
+    },
+    {
+        "source": "SHA512 schedule update 1",
+        "suggest": "SHA512 计划更新 1",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point round to 32-bit integer, using current rounding mode",
+        "suggest": "浮点舍入到 32 位整数，使用当前舍入模式",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point round to 32-bit integer toward zero",
+        "suggest": "浮点数舍入到 32 位整数到零",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point round to 64-bit integer, using current rounding mode",
+        "suggest": "浮点舍入到 64 位整数，使用当前舍入模式",
+        "translate": ""
+    },
+    {
+        "source": "Floating-point round to 64-bit integer toward zero",
+        "suggest": "浮点数舍入到 64 位整数到零",
+        "translate": ""
+    },
+    {
+        "source": "Signed saturating absolute value",
+        "suggest": "有符号饱和绝对值",
+        "translate": ""
+    },
+    {
+        "source": "Shift left and insert",
+        "suggest": "左移并插入",
+        "translate": ""
+    },
+    {
+        "source": "Shift right and insert",
+        "suggest": "右移并插入",
+        "translate": ""
+    },
+    {
+        "source": "Exclusive OR and rotate",
+        "suggest": "异或和旋转",
+        "translate": ""
+    },
+    {
+        "source": "Count leading zero bits",
+        "suggest": "计数前导零位",
+        "translate": ""
+    },
+    {
+        "source": "Bitwise exclusive OR",
+        "suggest": "按位异或",
+        "translate": ""
+    },
+    {
+        "source": "Unsigned reciprocal square root estimate",
+        "suggest": "无符号倒数平方根估计",
+        "translate": ""
+    },
+    {
+        "source": "Unsigned reciprocal estimate",
+        "suggest": "无符号倒数估计",
+        "translate": ""
+    },
+    {
+        "source": "Transpose elements",
+        "suggest": "转置元素",
+        "translate": ""
+    },
+    {
+        "source": "Load SIMD&FP register (immediate offset)",
+        "suggest": "加载 SIMD&FP 寄存器 (immediate 偏移量)",
+        "translate": ""
+    },
+    {
+        "source": "Store SIMD&FP register (immediate offset)",
+        "suggest": "存储 SIMD&FP 寄存器 (immediate 偏移量)",
+        "translate": ""
+    },
+    {
+        "source": "8-bit integer matrix multiply-accumulate",
+        "suggest": "8 位整数矩阵乘法累加",
+        "translate": ""
+    },
+    {
+        "source": "Unsigned and signed 8-bit integer matrix multiply-accumulate",
+        "suggest": "无符号和有符号 8 位整数矩阵乘法累加",
+        "translate": ""
+    },
+    {
+        "source": "Platform-specific intrinsics for the `wasm64` platform.",
+        "suggest": "`wasm64` 平台的特定平台内部函数。",
+        "translate": ""
+    },
+    {
+        "source": "Platform-specific intrinsics for the `wasm` target family.",
+        "suggest": "`wasm` 目标家庭的平台特定内部函数。",
+        "translate": ""
+    },
+    {
+        "source": "Sets packed 8-bit integers in returned vector with the supplied values.",
+        "suggest": "使用提供的值在返回的 vector 中设置包装的 8 位整数。",
+        "translate": ""
+    },
+    {
+        "source": "Extracts a single-precision (32-bit) floating-point element from `a`, selected with `IMM8`.",
+        "suggest": "从用 `IMM8` 选择的 `a` 中提取单精度 (32-bit) 浮点元素。",
+        "translate": ""
+    },
+    {
+        "source": "The returned `i32` stores the float's bit-pattern, and may be converted back to a floating point number via casting.",
+        "suggest": "返回的 `i32` 存储浮点数的位模式，并且可以通过转换将其转换回浮点数。",
+        "translate": ""
+    },
+    {
+        "source": "Intrinsics such as vshll_n_s8 exist twice in the ACLE with different constraints.",
+        "suggest": "内部函数如 vshll_n_s8 在 ACLE 中存在两次，但具有不同的约束。",
+        "translate": ""
+    },
+    {
+        "source": "Typo in ACLE data",
+        "suggest": "ACLE 数据中的错别字",
+        "translate": ""
+    },
+    {
+        "source": "Any constraints that are on this argument",
+        "suggest": "此参数上的任何限制",
+        "translate": ""
+    },
+    {
+        "source": "Unfortunately, some Skylake chips erroneously report support for BMI1 and BMI2 without actual support.",
+        "suggest": "不幸的是，一些 Skylake 芯片错误地报告了对 BMI1 和 BMI2 的支持，而没有实际支持。",
+        "translate": ""
+    },
+    {
+        "source": "These chips don't support AVX, and it seems that all Intel chips with non-erroneous support BMI do (I didn't check other vendors), so we can disable these flags for chips that don't also report support for AVX.",
+        "suggest": "这些芯片不支持 AVX，而且似乎所有无错误支持 BMI 的 Intel 芯片都支持 (我没有检查其他供应商)，因此我们可以为未报告支持 AVX 的芯片禁用这些标志。",
+        "translate": ""
+    },
+    {
+        "source": "It's possible this will pessimize future chips that do support BMI and not AVX, but this seems minor compared to a hard crash you get when executing an unsupported instruction (to put it another way, it's safe for us to under-report CPU features, but not to over-report them).",
+        "suggest": "这可能会使支持 BMI 而不是 AVX 的 future 芯片感到悲观，但这与执行不受支持的指令时遇到的严重崩溃相比似乎微不足道 (换句话说，我们可以安全地报告 CPU 功能，但是不要过度报告它们)。",
+        "translate": ""
+    },
+    {
+        "source": "Still, to limit any impact this may have in the future, we only do this for Intel chips, as it's a bug only present in their chips.",
+        "suggest": "尽管如此，为了限制这在未来可能产生的任何影响，我们仅对英特尔芯片执行此操作，因为这是仅存在于其芯片中的错误。",
+        "translate": ""
+    },
+    {
+        "source": "This bug is documented as `SKL052` in the errata section of this document:",
+        "suggest": "此错误在本文档的勘误部分中记录为 `SKL052`:",
+        "translate": ""
+    }
+]

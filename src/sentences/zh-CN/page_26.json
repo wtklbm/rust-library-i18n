@@ -2091,7 +2091,7 @@
     },
     {
         "source": "the first parts of these tests are straight ports from the AES-NI tests the second parts directly compare the two, for inputs that are different across lanes and \"more random\" than the standard test vectors ideally we'd be using quickcheck here instead",
-        "suggest": "这些测试的第一部分是来自 AES-NI 测试的直接端口，第二部分直接比较两者，对于不同通道的输入和比标准测试向量 \"更随机\" 的输入，理想情况下我们应该在这里使用 quickcheck 来代替",
+        "suggest": "这些测试的第一部分是来自 AES-NI 测试的直接端口，第二部分直接比较两者，对于不同 lanes 的输入和比标准测试向量 \"更随机\" 的输入，理想情况下我们应该在这里使用 quickcheck 来代替",
         "translate": ""
     },
     {
@@ -2116,12 +2116,12 @@
     },
     {
         "source": "Performs a carry-less multiplication of two 64-bit polynomials over the finite field GF(2^k) - in each of the 4 128-bit lanes.",
-        "suggest": "在 4 个 128 位通道中的每一个中，在有限域 GF(2^k) 上执行两个 64 位多项式的无进位乘法。",
+        "suggest": "在 4 个 128 位 lanes 中的每一个中，在有限域 GF(2^k) 上执行两个 64 位多项式的无进位乘法。",
         "translate": ""
     },
     {
         "source": "The immediate byte is used for determining which halves of each lane `a` and `b` should be used.",
-        "suggest": "immediate 字节用于确定应使用每个通道 `a` 和 `b` 的哪一半。",
+        "suggest": "immediate 字节用于确定应使用每个 lane `a` 和 `b` 的哪一半。",
         "translate": ""
     },
     {
@@ -2131,7 +2131,7 @@
     },
     {
         "source": "All lanes share immediate byte.",
-        "suggest": "所有通道共享 immediate 字节。",
+        "suggest": "所有 lanes 共享 immediate 字节。",
         "translate": ""
     },
     {
@@ -2141,17 +2141,17 @@
     },
     {
         "source": "Performs a carry-less multiplication of two 64-bit polynomials over the finite field GF(2^k) - in each of the 2 128-bit lanes.",
-        "suggest": "在 2 个 128 位通道中的每个通道中，在有限域 GF(2^k) 上执行两个 64 位多项式的无进位乘法。",
+        "suggest": "在 2 个 128 位 lanes 中的每个 lanes 中，在有限域 GF(2^k) 上执行两个 64 位多项式的无进位乘法。",
         "translate": ""
     },
     {
         "source": "this function tests one of the possible 4 instances with different inputs across lanes",
-        "suggest": "此函数使用跨通道的不同输入测试可能的 4 个实例之一",
+        "suggest": "此函数使用跨 lanes 的不同输入测试可能的 4 个实例之一",
         "translate": ""
     },
     {
         "source": "this function tests one of the possible 4 instances with different inputs across lanes for the VL version",
-        "suggest": "对于 VL 版本，此函数使用跨通道的不同输入测试可能的 4 个实例之一",
+        "suggest": "对于 VL 版本，此函数使用跨 lanes 的不同输入测试可能的 4 个实例之一",
         "translate": ""
     },
     {

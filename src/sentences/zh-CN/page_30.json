@@ -1,37 +1,37 @@
 [
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 16 packed u8 numbers.",
-        "suggest": "从解释为 16 个包装的 u8 数字的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 16 个包装的 u8 数字的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 8 packed u16 numbers.",
-        "suggest": "从解释为 8 个包装的 u16 数字的 128 位 vector 中提取一个通道。",
+        "suggest": "从解释为 8 个包装的 u16 数字的 128 位 vector 中提取一个 lane。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 8 packed u16 numbers.",
-        "suggest": "从解释为 8 个包装的 u16 数字的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 8 个包装的 u16 数字的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 4 packed u32 numbers.",
-        "suggest": "从解释为 4 个包装的 u32 数字的 128 位 vector 中提取一个通道。",
+        "suggest": "从解释为 4 个包装的 u32 数字的 128 位 vector 中提取一个 lane。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 4 packed u32 numbers.",
-        "suggest": "从解释为 4 个包装的 u32 数字的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 4 个包装的 u32 数字的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 2 packed u64 numbers.",
-        "suggest": "从解释为 2 个包装的 u64 数字的 128 位 vector 中提取一个通道。",
+        "suggest": "从解释为 2 个包装的 u64 数字的 128 位 vector 中提取一个 lane。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 2 packed u64 numbers.",
-        "suggest": "从解释为 2 个包装的 u64 数字的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 2 个包装的 u64 数字的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
@@ -51,17 +51,17 @@
     },
     {
         "source": "Count the number of bits set to one within each lane.",
-        "suggest": "计算每个通道内设置为 1 的位数。",
+        "suggest": "计算每个 lane 内设置为 1 的位数。",
         "translate": ""
     },
     {
         "source": "Returns true if all lanes are nonzero or false if any lane is nonzero.",
-        "suggest": "如果所有通道都不为零，则返回 true，如果任何通道不为零，则返回 false。",
+        "suggest": "如果所有 lanes 都不为零，则返回 true，如果任何 lanes 不为零，则返回 false。",
         "translate": ""
     },
     {
         "source": "Extracts the high bit for each lane in `a` and produce a scalar mask with all bits concatenated.",
-        "suggest": "提取 `a` 中每个通道的高位并生成一个所有位连接的标量掩码。",
+        "suggest": "提取 `a` 中每个 lane 的高位并生成一个所有位连接的标量掩码。",
         "translate": ""
     },
     {
@@ -76,17 +76,17 @@
     },
     {
         "source": "Lane-wise integer extended pairwise addition producing extended results (twice wider results than the inputs).",
-        "suggest": "逐行整数扩展成对加法产生扩展结果 (结果比输入宽两倍)。",
+        "suggest": "lane-wise 整数扩展成对加法产生扩展结果 (结果比输入宽两倍)。",
         "translate": ""
     },
     {
         "source": "Lane-wise saturating rounding multiplication in Q15 format.",
-        "suggest": "Q15 格式的通道饱和舍入乘法。",
+        "suggest": "Q15 格式的 lane-wise 饱和舍入乘法。",
         "translate": ""
     },
     {
         "source": "Lane-wise integer extended multiplication producing twice wider result than the inputs.",
-        "suggest": "逐行整数扩展乘法产生比输入宽两倍的结果。",
+        "suggest": "lane-wise 整数扩展乘法产生两倍于输入的结果。",
         "translate": ""
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "source": "Lane-wise multiply signed 16-bit integers in the two input vectors and add adjacent pairs of the full 32-bit results.",
-        "suggest": "在两个输入 vectors 中逐行乘以带符号的 16 位整数，并将完整的 32 位结果的相邻对相加。",
+        "suggest": "在两个输入 vectors 中按 lane-wise 乘以带符号的 16 位整数，并将完整的 32 位结果的相邻对相加。",
         "translate": ""
     },
     {
@@ -156,22 +156,22 @@
     },
     {
         "source": "Lane-wise rounding to the nearest integral value not smaller than the input.",
-        "suggest": "按通道舍入到不小于输入的最近整数值。",
+        "suggest": "按 lane-wise 舍入到不小于输入的最近整数值。",
         "translate": ""
     },
     {
         "source": "Lane-wise rounding to the nearest integral value not greater than the input.",
-        "suggest": "按通道舍入到不大于输入的最近整数值。",
+        "suggest": "按 lane-wise 舍入到不大于输入的最近整数值。",
         "translate": ""
     },
     {
         "source": "Lane-wise rounding to the nearest integral value with the magnitude not larger than the input.",
-        "suggest": "按通道舍入到最接近的整数值，幅度不大于输入。",
+        "suggest": "按 lane-wise 舍入到最接近的整数值，幅度不大于输入。",
         "translate": ""
     },
     {
         "source": "Lane-wise rounding to the nearest integral value;",
-        "suggest": "按通道舍入到最接近的整数值;",
+        "suggest": "按 lane-wise 舍入到最接近的整数值;",
         "translate": ""
     },
     {
@@ -181,42 +181,42 @@
     },
     {
         "source": "Lane-wise minimum value, defined as `b < a ? b : a`",
-        "suggest": "通道最小值，定义为 `b < a ? b : a`",
+        "suggest": "lane-wise 最小值，定义为 `b < a ? b : a`",
         "translate": ""
     },
     {
         "source": "Lane-wise maximum value, defined as `a < b ? b : a`",
-        "suggest": "通道最大值，定义为 `a < b ? b : a`",
+        "suggest": "lane-wise 最大值，定义为 `a < b ? b : a`",
         "translate": ""
     },
     {
         "source": "Saturating conversion of the two double-precision floating point lanes to two lower integer lanes using the IEEE `convertToIntegerTowardZero` function.",
-        "suggest": "使用 IEEE `convertToIntegerTowardZero` 函数将两个双精度浮点通道饱和转换为两个较低的整数通道。",
+        "suggest": "使用 IEEE `convertToIntegerTowardZero` 函数将两个双精度浮点 lanes 饱和转换为两个较低的整数 lanes。",
         "translate": ""
     },
     {
         "source": "The two higher lanes of the result are initialized to zero.",
-        "suggest": "结果的两个较高通道被初始化为零。",
+        "suggest": "结果的两个较高 lane 被初始化为零。",
         "translate": ""
     },
     {
         "source": "If any input lane is a NaN, the resulting lane is 0.",
-        "suggest": "如果任何输入通道是 NaN，则结果通道为 0。",
+        "suggest": "如果任何输入 lane 是 NaN，则结果 lane 为 0。",
         "translate": ""
     },
     {
         "source": "If the rounded integer value of a lane is outside the range of the destination type, the result is saturated to the nearest representable integer value.",
-        "suggest": "如果通道的舍入整数值超出目标类型的范围，则结果饱和为最接近的可表示整数值。",
+        "suggest": "如果 lane 的舍入整数值超出目标类型的范围，则结果饱和为最接近的可表示整数值。",
         "translate": ""
     },
     {
         "source": "Lane-wise conversion from integer to floating point.",
-        "suggest": "从整数到浮点的逐行转换。",
+        "suggest": "从整数到浮点的按 lane-wise 转换。",
         "translate": ""
     },
     {
         "source": "Conversion of the two double-precision floating point lanes to two lower single-precision lanes of the result.",
-        "suggest": "将结果的两个双精度浮点通道转换为两个较低的单精度通道。",
+        "suggest": "将结果的两个双精度浮点 lanes 转换为两个较低的单精度 lanes。",
         "translate": ""
     },
     {
@@ -226,7 +226,7 @@
     },
     {
         "source": "Conversion of the two lower single-precision floating point lanes to the two double-precision lanes of the result.",
-        "suggest": "将两个较低的单精度浮点通道转换为结果的两个双精度通道。",
+        "suggest": "将两个较低的单精度浮点 lanes 转换为结果的两个双精度 lanes。",
         "translate": ""
     },
     {

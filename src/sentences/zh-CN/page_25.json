@@ -701,7 +701,7 @@
     },
     {
         "source": "Shuffle 16-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst.",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中对 16 位整数进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 16 位整数进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -711,32 +711,32 @@
     },
     {
         "source": "Shuffle 16-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from a when the corresponding mask bit is not set).",
-        "suggest": "使用相应的选择器和 idx 中的索引在通道中的 a 和 b 中对 16 位整数进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
+        "suggest": "使用相应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 16 位整数进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle 16-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用相应的选择器和 idx 中的索引在通道中的 a 和 b 中对 16 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用相应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 16 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 16-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from idx when the corresponding mask bit is not set).",
-        "suggest": "使用相应的选择器和 idx 中的索引在通道中的 a 和 b 中对 16 位整数进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
+        "suggest": "使用相应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 16 位整数进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle 16-bit integers in a across lanes using the corresponding index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应索引在跨通道中对 16 位整数进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对 16 位整数进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle 16-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对 16 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对 16 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle 16-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对 16 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对 16 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
@@ -791,62 +791,62 @@
     },
     {
         "source": "Unpack and interleave 16-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分拆包和交织 16 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分拆包和交织 16 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 16-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分拆包和交织 16 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分拆包和交织 16 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 16-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分拆包和交织 16 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分拆包和交织 16 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 8-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分拆包和交织 8 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分拆包和交织 8 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 8-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分拆包和交织 8 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分拆包和交织 8 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 8-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分拆包和交织 8 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分拆包和交织 8 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 16-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分拆包并交织 16 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分拆包并交织 16 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 16-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分拆包和交织 16 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分拆包和交织 16 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 16-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分拆包和交织 16 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分拆包和交织 16 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 8-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分拆包并交织 8 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分拆包并交织 8 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 8-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分拆包和交织 8 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分拆包和交织 8 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 8-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分拆包和交织 8 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分拆包和交织 8 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
@@ -886,22 +886,22 @@
     },
     {
         "source": "Shuffle 16-bit integers in the low 64 bits of 128-bit lanes of a using the control in imm8.",
-        "suggest": "使用 imm8 中的控件在 a 的 128 位通道的低 64 位中对 16 位整数进行打乱。",
+        "suggest": "使用 imm8 中的控件在 a 的 128 位 lane 的低 64 位中对 16 位整数进行打乱。",
         "translate": ""
     },
     {
         "source": "Store the results in the low 64 bits of 128-bit lanes of dst, with the high 64 bits of 128-bit lanes being copied from from a to dst.",
-        "suggest": "将结果存储在 dst 的 128 位通道的低 64 位中，并从 a 到 dst 复制 128 位的通道的高 64 位。",
+        "suggest": "将结果存储在 dst 的 128 位 lane 的低 64 位中，并从 a 到 dst 复制 128 位的 lanes 的高 64 位。",
         "translate": ""
     },
     {
         "source": "Shuffle 16-bit integers in the high 64 bits of 128-bit lanes of a using the control in imm8.",
-        "suggest": "使用 imm8 中的控件在 a 的 128 位通道的高 64 位中对 16 位整数进行打乱。",
+        "suggest": "使用 imm8 中的控件在 a 的 128 位 lane 的高 64 位中对 16 位整数进行打乱。",
         "translate": ""
     },
     {
         "source": "Store the results in the high 64 bits of 128-bit lanes of dst, with the low 64 bits of 128-bit lanes being copied from from a to dst.",
-        "suggest": "将结果存储在 dst 的 128 位通道的高 64 位中，并从 a 到 dst 复制 128 位的通道的低 64 位。",
+        "suggest": "将结果存储在 dst 的 128 位 lane 的高 64 位中，并从 a 到 dst 复制 128 位的 lanes 的低 64 位。",
         "translate": ""
     },
     {
@@ -911,7 +911,7 @@
     },
     {
         "source": "Shuffle 8-bit integers in a within 128-bit lanes using the control in the corresponding 8-bit element of b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 b 中相应的 8 位元素中的控件在 128 位通道内对 a 中的 8 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 b 中相应的 8 位元素中的控件在 128 位 lane 内对 a 中的 8 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
@@ -1001,17 +1001,17 @@
     },
     {
         "source": "Four SADs are performed on four 8-bit quadruplets for each 64-bit lane.",
-        "suggest": "对于每个 64 位通道，在四个 8 位四元组上执行四个 SAD。",
+        "suggest": "对于每个 64 位 lane，在四个 8 位四元组上执行四个 SAD。",
         "translate": ""
     },
     {
         "source": "The first two SADs use the lower 8-bit quadruplet of the lane from a, and the last two SADs use the uppper 8-bit quadruplet of the lane from a.",
-        "suggest": "前两个 SAD 使用 a 中通道的低 8 位四元组，而后两个 SAD 使用 a 中通道的较高 8 位四元组。",
+        "suggest": "前两个 SAD 使用 a 中 lane 的低 8 位四元组，而后两个 SAD 使用 a 中 lane 的较高 8 位四元组。",
         "translate": ""
     },
     {
         "source": "Quadruplets from b are selected from within 128-bit lanes according to the control in imm8, and each SAD in each 64-bit lane uses the selected quadruplet at 8-bit offsets.",
-        "suggest": "根据 imm8 中的控件，从 128 位通道中选择 b 中的四元组，并且每个 64 位通道中的每个 SAD 使用 8 位偏移量的选定四元组。",
+        "suggest": "根据 imm8 中的控件，从 128 位 lane 中选择 b 中的四元组，并且每个 64 位 lanes 中的每个 SAD 使用 8 位偏移量的选定四元组。",
         "translate": ""
     },
     {
@@ -1261,12 +1261,12 @@
     },
     {
         "source": "Shift 128-bit lanes in a left by imm8 bytes while shifting in zeros, and store the results in dst.",
-        "suggest": "向左移动 128 位通道 imm8 字节，同时向零移动，并将结果存储在 dst 中。",
+        "suggest": "向左移动 128 位 lane imm8 字节，同时向零移动，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shift 128-bit lanes in a right by imm8 bytes while shifting in zeros, and store the results in dst.",
-        "suggest": "向右移动 128 位通道 imm8 字节，同时向零移动，并将结果存储在 dst 中。",
+        "suggest": "向右移动 128 位 lane  imm8 字节，同时向零移动，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -1276,12 +1276,12 @@
     },
     {
         "source": "If palignr is shifting the pair of vectors more than the size of two lanes, emit zero.",
-        "suggest": "如果 palignr 对 vectors 的偏移量大于两个通道的大小，则发出零。",
+        "suggest": "如果 palignr 对 vectors 的偏移量大于两个 lanes 的大小，则发出零。",
         "translate": ""
     },
     {
         "source": "If palignr is shifting the pair of input vectors more than one lane, but less than two lanes, convert to shifting in zeroes.",
-        "suggest": "如果 palignr 将一对输入 vectors 移位多于一个通道，但少于两个通道，则转换为移位为零。",
+        "suggest": "如果 palignr 将一对输入 vectors 移位多于一个 lanes，但少于两个 lanes，则转换为移位为零。",
         "translate": ""
     },
     {
@@ -3931,37 +3931,37 @@
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a within 128-bit lanes using the control in imm8, and store the results in dst.",
-        "suggest": "使用 imm8 中的控件在 128 位通道内对单精度 (32-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 内对单精度 (32-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a within 128-bit lanes using the control in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 128 位通道内对单精度 (32-bit) 浮点元素进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时从 src 复制元素)。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 内对单精度 (32-bit) 浮点元素进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a within 128-bit lanes using the control in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 128 位通道内对单精度 (32-bit) 浮点元素进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 内对单精度 (32-bit) 浮点元素进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 128-bit lanes using the control in imm8, and store the results in dst.",
-        "suggest": "使用 imm8 中的控件在 128 位通道内对双精度 (64-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 内对双精度 (64-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 128-bit lanes using the control in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 128 位通道内对双精度 (64-bit) 浮点元素进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时从 src 复制元素)。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 内对双精度 (64-bit) 浮点元素进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 128-bit lanes using the control in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 128 位通道内对双精度 (64-bit) 浮点元素进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 内对双精度 (64-bit) 浮点元素进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 64-bit integers in a within 256-bit lanes using the control in imm8, and store the results in dst.",
-        "suggest": "使用 imm8 中的控件在 256 位通道中的 a 内随机排列 64 位整数，并将结果存储在 dst 中。",
+        "suggest": "使用 imm8 中的控件在 256 位 lanes 中的 a 内随机排列 64 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -3981,7 +3981,7 @@
     },
     {
         "source": "Shuffle 64-bit integers in a within 256-bit lanes using the control in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 256 位通道内将 64 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 imm8 中的控件在 256 位 lanes 内将 64 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
@@ -3996,12 +3996,12 @@
     },
     {
         "source": "Shuffle 64-bit integers in a within 256-bit lanes using the control in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 256 位通道内将 64 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 imm8 中的控件在 256 位 lanes 内将 64 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 256-bit lanes using the control in imm8, and store the results in dst.",
-        "suggest": "使用 imm8 中的控件在 256 位通道内对双精度 (64-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 imm8 中的控件在 256 位 lanes 内对双精度 (64-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4011,22 +4011,22 @@
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 256-bit lanes using the control in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 256 位通道内对双精度 (64-bit) 浮点元素进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 imm8 中的控件在 256 位 lanes 内对双精度 (64-bit) 浮点元素进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 256-bit lanes using the control in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 256 位通道内将双精度 (64-bit) 浮点元素打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "使用 imm8 中的控件在 256 位 lanes 内将双精度 (64-bit) 浮点元素打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 32-bit integers in a across lanes using the corresponding index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应索引在跨通道中随机排列 32 位整数，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中随机排列 32 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Note that this intrinsic shuffles across 128-bit lanes, unlike past intrinsics that use the permutevar name.",
-        "suggest": "请注意，与过去使用 permutevar 名称的内部函数不同，该内部函数在 128 位通道上进行了重排。",
+        "suggest": "请注意，与过去使用 permutevar 名称的内部函数不同，该内部函数在 128 位 lane 上进行了重排。",
         "translate": ""
     },
     {
@@ -4046,47 +4046,47 @@
     },
     {
         "source": "Shuffle 32-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对 32 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对 32 位整数进行打乱，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a within 128-bit lanes using the control in b, and store the results in dst.",
-        "suggest": "使用 b 中的控件在 128 位通道内将 a 单精度 (32-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 b 中的控件在 128 位 lane 内将 a 单精度 (32-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a within 128-bit lanes using the control in b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 b 中的控件在 128 位通道内将 a 的单精度 (32-bit) 浮点元素打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
+        "suggest": "使用 b 中的控件在 128 位 lane 内将 a 的单精度 (32-bit) 浮点元素打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a within 128-bit lanes using the control in b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 b 中的控件在 128 位通道内将 a 的单精度 (32-bit) 浮点元素打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "使用 b 中的控件在 128 位 lane 内将 a 的单精度 (32-bit) 浮点元素打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 128-bit lanes using the control in b, and store the results in dst.",
-        "suggest": "使用 b 中的控件在 128 位通道内将 a 双精度 (64-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 b 中的控件在 128 位 lane 内将 a 双精度 (64-bit) 浮点元素进行打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 128-bit lanes using the control in b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 b 中的控件在 128 位通道内将 a 的双精度 (64-bit) 浮点元素进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
+        "suggest": "使用 b 中的控件在 128 位 lane 内将 a 的双精度 (64-bit) 浮点元素进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a within 128-bit lanes using the control in b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 b 中的控件在 128 位通道内将 a 中的双精度 (64-bit) 浮点元素进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 b 中的控件在 128 位 lane 内将 a 中的双精度 (64-bit) 浮点元素进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 32-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对 32 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对 32 位整数进行打乱，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 64-bit integers in a across lanes using the corresponding index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应索引在跨通道中随机排列 64 位整数，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中随机排列 64 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4096,47 +4096,47 @@
     },
     {
         "source": "Shuffle 64-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中随机排列 64 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中随机排列 64 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle 64-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对 64 位整数进行打乱，并使用零掩码 k (未设置相应的掩码位时将元素清零) 将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对 64 位整数进行打乱，并使用零掩码 k (未设置相应的掩码位时将元素清零) 将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a across lanes using the corresponding index in idx.",
-        "suggest": "使用 idx 中的相应索引对跨通道中的单精度 (32-bit) 浮点元素进行打乱。",
+        "suggest": "使用 idx 中的相应索引对跨 lanes 中的单精度 (32-bit) 浮点元素进行打乱。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a across lanes using the corresponding index in idx, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引对跨通道中的单精度 (32-bit) 浮点元素进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
+        "suggest": "使用 idx 中的相应索引对跨 lanes 中的单精度 (32-bit) 浮点元素进行打乱，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a across lanes using the corresponding index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对单精度 (32-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对单精度 (32-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a across lanes using the corresponding index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应索引在跨通道中对双精度 (64-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对双精度 (64-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a across lanes using the corresponding index in idx, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引对跨通道中的双精度 (64-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
+        "suggest": "使用 idx 中的相应索引对跨 lanes 中的双精度 (64-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a across lanes using the corresponding index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道中对双精度 (64-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 中对双精度 (64-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 32-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst.",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中随机排列 32 位整数，并将结果存储在 dst 中。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中随机排列 32 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4146,22 +4146,22 @@
     },
     {
         "source": "Shuffle 32-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from a when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中对 32 位整数进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 32 位整数进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle 32-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中对 32 位整数进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 32 位整数进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 32-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from idx when the corresponding mask bit is not set).",
-        "suggest": "使用相应的选择器和 idx 中的索引在通道中的 a 和 b 中对 32 位整数进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
+        "suggest": "使用相应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 32 位整数进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle 64-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应选择器和索引在通道中的 a 和 b 中随机排列 64 位整数，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应选择器和索引在 lanes 中的 a 和 b 中随机排列 64 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4171,22 +4171,22 @@
     },
     {
         "source": "Shuffle 64-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from a when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中随机排列 64 位整数，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中随机排列 64 位整数，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle 64-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中对 64 位整数进行混洗，并使用 zeromask k (未设置相应的 mask 位时将元素清零) 将结果存储在 dst 中。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中对 64 位整数进行混洗，并使用 zeromask k (未设置相应的 mask 位时将元素清零) 将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle 64-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from idx when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的 a 和 b 中随机排列 64 位整数，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 lanes 中的 a 和 b 中随机排列 64 位整数，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应选择器和索引在通道中的 a 和 b 中对单精度 (32-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应选择器和索引在 lanes 中的 a 和 b 中对单精度 (32-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4196,17 +4196,17 @@
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from a when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在 a 和 b 中的通道上对 a 和 b 中的单精度 (32-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
+        "suggest": "使用对应的选择器和 idx 中的索引在 a 和 b 中的 lanes 上对 a 和 b 中的单精度 (32-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应选择器和索引在通道中的 a 和 b 中对单精度 (32-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "使用 idx 中的相应选择器和索引在 lanes 中的 a 和 b 中对单精度 (32-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle single-precision (32-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from idx when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的对应选择器和索引在 a 和 b 中的通道中对 a 和 b 中的单精度 (32-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
+        "suggest": "使用 idx 中的对应选择器和索引在 a 和 b 中的 lanes 中对 a 和 b 中的单精度 (32-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，从 idx 复制元素)。",
         "translate": ""
     },
     {
@@ -4216,7 +4216,7 @@
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应选择器和索引在通道中的 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应选择器和索引在 lanes 中的 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4226,17 +4226,17 @@
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from a when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应选择器和索引在通道中的 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
+        "suggest": "使用 idx 中的相应选择器和索引在 lanes 中的 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时，元素将从 a 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用对应的选择器和 idx 中的索引在通道中的通道 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用对应的选择器和 idx 中的索引将 a 和 b 中的双精度 (64-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from idx when the corresponding mask bit is not set)",
-        "suggest": "使用 idx 中的相应选择器和索引在通道中的 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (未设置相应的 mask 位时从 idx 复制元素)",
+        "suggest": "使用 idx 中的相应选择器和索引在 lanes 中的 a 和 b 中对双精度 (64-bit) 浮点元素进行混洗，并使用 writemask k 将结果存储在 dst 中 (未设置相应的 mask 位时从 idx 复制元素)",
         "translate": ""
     },
     {
@@ -4251,27 +4251,27 @@
     },
     {
         "source": "Shuffle 32-bit integers in a within 128-bit lanes using the control in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件将 128 位通道中的 32 位整数随机排列，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 imm8 中的控件将 128 位 lane 中的 32 位整数随机排列，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle 32-bit integers in a within 128-bit lanes using the control in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件在 128 位通道中的 32 位整数中混洗 32 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 imm8 中的控件在 128 位 lane 中的 32 位整数中混洗 32 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements within 128-bit lanes using the control in imm8, and store the results in dst.",
-        "suggest": "使用 imm8 中的控件对 128 位通道中的双精度 (64-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
+        "suggest": "使用 imm8 中的控件对 128 位 lane 中的双精度 (64-bit) 浮点元素进行混洗，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements within 128-bit lanes using the control in imm8, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件对 128 位通道中的双精度 (64-bit) 浮点元素进行混洗，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "使用 imm8 中的控件对 128 位 lane 中的双精度 (64-bit) 浮点元素进行混洗，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Shuffle double-precision (64-bit) floating-point elements within 128-bit lanes using the control in imm8, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 imm8 中的控件对 128 位通道内的双精度 (64-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
+        "suggest": "使用 imm8 中的控件对 128 位 lane 内的双精度 (64-bit) 浮点元素进行混洗，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将被清零)。",
         "translate": ""
     },
     {
@@ -4516,7 +4516,7 @@
     },
     {
         "source": "Unpack and interleave 32-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织 32 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织 32 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4526,17 +4526,17 @@
     },
     {
         "source": "Unpack and interleave 32-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织 32 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织 32 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 32-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织 32 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织 32 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 64-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织 64 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织 64 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4546,47 +4546,47 @@
     },
     {
         "source": "Unpack and interleave 64-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织 64 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织 64 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 64-bit integers from the high half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织 64 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织 64 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave single-precision (32-bit) floating-point elements from the high half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织单精度 (32-bit) 浮点元素，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织单精度 (32-bit) 浮点元素，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave single-precision (32-bit) floating-point elements from the high half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织单精度 (32-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织单精度 (32-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave single-precision (32-bit) floating-point elements from the high half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织单精度 (32-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织单精度 (32-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave double-precision (64-bit) floating-point elements from the high half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包并交织双精度 (64-bit) 浮点元素，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包并交织双精度 (64-bit) 浮点元素，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave double-precision (64-bit) floating-point elements from the high half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织双精度 (64-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织双精度 (64-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave double-precision (64-bit) floating-point elements from the high half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的高半部分解包和交织双精度 (64-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的高半部分解包和交织双精度 (64-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 32-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织 32 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织 32 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4596,17 +4596,17 @@
     },
     {
         "source": "Unpack and interleave 32-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织 32 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织 32 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 32-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织 32 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织 32 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 64-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包并交织 64 位整数，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包并交织 64 位整数，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -4616,42 +4616,42 @@
     },
     {
         "source": "Unpack and interleave 64-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织 64 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织 64 位整数，并使用写掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素将从 src 复制)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave 64-bit integers from the low half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织 64 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织 64 位整数，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave single-precision (32-bit) floating-point elements from the low half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解压包并交织单精度 (32-bit) 浮点元素，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解压包并交织单精度 (32-bit) 浮点元素，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave single-precision (32-bit) floating-point elements from the low half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包并交织单精度 (32-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包并交织单精度 (32-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave single-precision (32-bit) floating-point elements from the low half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织单精度 (32-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织单精度 (32-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave double-precision (64-bit) floating-point elements from the low half of each 128-bit lane in a and b, and store the results in dst.",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解解包并交织双精度 (64-bit) 浮点元素，并将结果存储在 dst 中。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解解包并交织双精度 (64-bit) 浮点元素，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave double-precision (64-bit) floating-point elements from the low half of each 128-bit lane in a and b, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包并交织双精度 (64-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包并交织双精度 (64-bit) 浮点元素，并使用 writemask k 将结果存储在 dst 中 (当未设置相应的 mask 位时从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Unpack and interleave double-precision (64-bit) floating-point elements from the low half of each 128-bit lane in a and b, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "从 a 和 b 中每个 128 位通道的下半部分解包和交织双精度 (64-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
+        "suggest": "从 a 和 b 中每个 128 位 lane 的下半部分解包和交织双精度 (64-bit) 浮点元素，并使用零掩码 k 将结果存储在 dst 中 (当未设置相应的掩码位时，元素清零)。",
         "translate": ""
     },
     {

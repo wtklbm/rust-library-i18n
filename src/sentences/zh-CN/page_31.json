@@ -4066,7 +4066,7 @@
     },
     {
         "source": "Returns true if all lanes are non-zero, false otherwise.",
-        "suggest": "如果所有通道都不为零，则返回 true，否则返回 false。",
+        "suggest": "如果所有 lanes 都不为零，则返回 true，否则返回 false。",
         "translate": ""
     },
     {

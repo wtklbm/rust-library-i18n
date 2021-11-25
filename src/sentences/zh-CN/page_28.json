@@ -2436,22 +2436,22 @@
     },
     {
         "source": "Store the results in the low 64 bits of 128-bit lanes of dst, with the high 64 bits of 128-bit lanes being copied from from a to dst, using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "将结果存储在 dst 的 128 位通道的低 64 位中，并使用写掩码 k 将 128 位通道的高 64 位从 a 复制到 dst (当未使用相应的掩码位时，元素从 src 复制) 放)。",
+        "suggest": "将结果存储在 dst 的 128 位 lanes 的低 64 位中，并使用写掩码 k 将 128 位 lanes 的高 64 位从 a 复制到 dst (当未使用相应的掩码位时，元素从 src 复制) 放)。",
         "translate": ""
     },
     {
         "source": "Store the results in the low 64 bits of 128-bit lanes of dst, with the high 64 bits of 128-bit lanes being copied from from a to dst, using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "将结果存储在 dst 的 128 位通道的低 64 位中，128 位通道的高 64 位从 a 复制到 dst，使用 zeromask k (当相应的掩码位未设置时，元素被清零)。",
+        "suggest": "将结果存储在 dst 的 128 位 lanes 的低 64 位中，128 位 lanes 的高 64 位从 a 复制到 dst，使用 zeromask k (当相应的掩码位未设置时，元素被清零)。",
         "translate": ""
     },
     {
         "source": "Store the results in the high 64 bits of 128-bit lanes of dst, with the low 64 bits of 128-bit lanes being copied from from a to dst, using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "将结果存储在 dst 的 128 位通道的高 64 位中，将 128 位通道的低 64 位从 a 复制到 dst，使用写掩码 k (当相应的掩码位不存在时，元素从 src 复制放)。",
+        "suggest": "将结果存储在 dst 的 128 位 lanes 的高 64 位中，将 128 位 lanes 的低 64 位从 a 复制到 dst，使用写掩码 k (当相应的掩码位不存在时，元素从 src 复制放)。",
         "translate": ""
     },
     {
         "source": "Store the results in the high 64 bits of 128-bit lanes of dst, with the low 64 bits of 128-bit lanes being copied from from a to dst, using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "将结果存储在 dst 的 128 位通道的高 64 位中，将 128 位通道的低 64 位从 a 复制到 dst，使用 zeromask k (当相应的掩码位未设置时，元素被清零)。",
+        "suggest": "将结果存储在 dst 的 128 位 lanes 的高 64 位中，将 128 位 lanes 的低 64 位从 a 复制到 dst，使用 zeromask k (当相应的掩码位未设置时，元素被清零)。",
         "translate": ""
     },
     {

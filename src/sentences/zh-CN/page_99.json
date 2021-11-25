@@ -3388,5 +3388,30 @@
         "source": "789_u16.carrying_mul(456, 123).0, 789_u16.wrapping_mul(456).wrapping_add(123), );",
         "suggest": "789_u16.carrying_mul (456, 123).0, 789_u16.wrapping_mul (456).wrapping_add (123),);",
         "translate": false
+    },
+    {
+        "source": "3 & 4.",
+        "suggest": "3 & 4。",
+        "translate": false
+    },
+    {
+        "source": "core_arch/src/arm_shared/simd32 vst1q_s64_x4_vst1 : #instructions = 22 >= 22 (limit)",
+        "suggest": "core_arch/simd32 vst1q_s64_x4_vst1: #instructions =22 >=22 (limit)",
+        "translate": false
+    },
+    {
+        "source": "core_arch/src/arm_shared/simd32 vld4q_lane_u32_vld4 : #instructions = 31 >= 22 (limit)",
+        "suggest": "core_arch/simd32 vld4q_lane_u32_vld4: #instructions =31 >=22 (limit)",
+        "translate": false
+    },
+    {
+        "source": "core_arch/src/arm_shared/simd32 vst4q_u32_vst4 : #instructions = 26 >= 22 (limit)",
+        "suggest": "core_arch/simd32 vst4q_u32_vst4: #instructions =26 >=22 (limit)",
+        "translate": false
+    },
+    {
+        "source": "core_arch/src/arm_shared/simd32 vst1q_p64_x4_nop : #instructions = 33 >= 22 (limit)",
+        "suggest": "core_arch/simd32 vst1q_p64_x4_nop: #instructions =33 >=22 (limit)",
+        "translate": false
     }
 ]

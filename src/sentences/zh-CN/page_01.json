@@ -4786,12 +4786,12 @@
     },
     {
         "source": "Guards against 32-bit systems allocating more than isize::MAX bytes.",
-        "suggest": "防止分配超过 isize::MAX 字节的 32 位系统。",
+        "suggest": "防止 32 位系统分配超过 `isize::MAX` 字节。",
         "translate": ""
     },
     {
         "source": "Guards against overflowing your length.",
-        "suggest": "防止溢出您的长度。",
+        "suggest": "防止您的长度溢出。",
         "translate": ""
     },
     {

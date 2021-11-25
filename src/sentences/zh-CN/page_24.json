@@ -491,7 +491,7 @@
     },
     {
         "source": "These proposals are evolving over time and as such the support here is unstable and requires the nightly channel.",
-        "suggest": "这些建议随着时间的推移而发展，因此这里的支持是不稳定的，需要每晚进行一次通道。",
+        "suggest": "这些建议随着时间的推移而发展，因此这里的支持是不稳定的，需要夜间通道。",
         "translate": ""
     },
     {
@@ -1316,12 +1316,12 @@
     },
     {
         "source": "A 64-bit vector with 2 `f32` lanes.",
-        "suggest": "具有 2 个 `f32` 通道的 64 位 vector。",
+        "suggest": "具有 2 个 `f32` lanes 的 64 位 vector。",
         "translate": ""
     },
     {
         "source": "A 64-bit vector with 2 `u32` lanes.",
-        "suggest": "具有 2 个 `u32` 通道的 64 位 vector。",
+        "suggest": "具有 2 个 `u32` lanes 的 64 位 vector。",
         "translate": ""
     },
     {
@@ -1521,37 +1521,37 @@
     },
     {
         "source": "Load eight 8-bit integers and sign extend each one to a 16-bit lane",
-        "suggest": "加载 8 个 8 位整数，并将每个符号扩展到 16 位通道",
+        "suggest": "加载 8 个 8 位整数，并将每个符号扩展到 16 位 lane",
         "translate": ""
     },
     {
         "source": "Load eight 8-bit integers and zero extend each one to a 16-bit lane",
-        "suggest": "加载 8 个 8 位整数，零加载每个整数至 16 位通道",
+        "suggest": "加载 8 个 8 位整数，零加载每个整数至 16 位 lane",
         "translate": ""
     },
     {
         "source": "Load four 16-bit integers and sign extend each one to a 32-bit lane",
-        "suggest": "加载四个 16 位整数，并将每个符号扩展到 32 位通道",
+        "suggest": "加载四个 16 位整数，并将每个符号扩展到 32 位 lane",
         "translate": ""
     },
     {
         "source": "Load four 16-bit integers and zero extend each one to a 32-bit lane",
-        "suggest": "加载四个 16 位整数，零加载一个整数到 32 位通道",
+        "suggest": "加载四个 16 位整数，零加载一个整数到 32 位 lane",
         "translate": ""
     },
     {
         "source": "Load two 32-bit integers and sign extend each one to a 64-bit lane",
-        "suggest": "加载两个 32 位整数并将每个符号扩展到 64 位通道",
+        "suggest": "加载两个 32 位整数并将每个符号扩展到 64 位 lane",
         "translate": ""
     },
     {
         "source": "Load two 32-bit integers and zero extend each one to a 64-bit lane",
-        "suggest": "加载两个 32 位整数，零加载每个整数到 64 位通道",
+        "suggest": "加载两个 32 位整数，零加载每个整数到 64 位 lane",
         "translate": ""
     },
     {
         "source": "Load a single element and splat to all lanes of a v128 vector.",
-        "suggest": "加载单个元素，然后将其放置到 v128 vector 的所有通道中。",
+        "suggest": "加载单个元素，然后将其放置到 v128 vector 的所有 lane 中。",
         "translate": ""
     },
     {
@@ -1596,7 +1596,7 @@
     },
     {
         "source": "Returns a new vector with lanes selected from the lanes of the two input vectors `$a` and `$b` specified in the 16 immediate operands.",
-        "suggest": "返回一个新的 vector，其通道从 16 个 immediate 操作数中指定的两个输入 vectors `$a` 和 `$b` 的通道中选择。",
+        "suggest": "返回一个新的 vector，其 lanes 从 16 个 immediate 操作数中指定的两个输入 vectors `$a` 和 `$b` 的 lanes 中选择。",
         "translate": ""
     },
     {
@@ -1696,47 +1696,47 @@
     },
     {
         "source": "Returns a new vector with lanes selected from the lanes of the first input vector `a` specified in the second input vector `s`.",
-        "suggest": "返回带有从第二个输入 vector `s` 中指定的第一个输入 vector `a` 的通道中选择的通道的新 vector。",
+        "suggest": "返回带有从第二个输入 vector `s` 中指定的第一个输入 vector `a` 的 lanes 中选择的 lanes 的新 vector。",
         "translate": ""
     },
     {
         "source": "Creates a vector with identical lanes.",
-        "suggest": "创建具有相同通道的 vector。",
+        "suggest": "创建具有相同 lanes 的 vector。",
         "translate": ""
     },
     {
         "source": "Constructs a vector with `x` replicated to all 16 lanes.",
-        "suggest": "创建一个 vector，其中 `x` 复制到所有 16 个通道。",
+        "suggest": "创建一个 vector，其中 `x` 复制到所有 16 个 lanes。",
         "translate": ""
     },
     {
         "source": "Construct a vector with `x` replicated to all 8 lanes.",
-        "suggest": "创建一个 `x` 复制到所有 8 条通道的 vector。",
+        "suggest": "创建一个 `x` 复制到所有 8 个 lanes 的 vector。",
         "translate": ""
     },
     {
         "source": "Constructs a vector with `x` replicated to all 4 lanes.",
-        "suggest": "创建一个 vector，其中 `x` 复制到所有 4 个通道。",
+        "suggest": "创建一个 vector，其中 `x` 复制到所有 4 个 lanes。",
         "translate": ""
     },
     {
         "source": "Construct a vector with `x` replicated to all 2 lanes.",
-        "suggest": "创建一个 `x` 复制到所有 2 条通道的 vector。",
+        "suggest": "创建一个 `x` 复制到所有 2 个 lanes 的 vector。",
         "translate": ""
     },
     {
         "source": "Constructs a vector with `x` replicated to all 2 lanes.",
-        "suggest": "创建一个 vector，其中 `x` 复制到所有 2 个通道。",
+        "suggest": "创建一个 vector，其中 `x` 复制到所有 2 个 lanes。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 16 packed i8 numbers.",
-        "suggest": "从解释为 16 个包装的 i8 数字的 128 位 vector 中提取通道。",
+        "suggest": "从解释为 16 个包装的 i8 数字的 128 位 vector 中提取 lane。",
         "translate": ""
     },
     {
         "source": "Extracts the scalar value of lane specified in the immediate mode operand `N` from `a`.",
-        "suggest": "从 `a` 中提取在即时模式操作数 `N` 中指定的通道的标量值。",
+        "suggest": "从 `a` 中提取在即时模式操作数 `N` 中指定的 lane 的标量值。",
         "translate": ""
     },
     {
@@ -1746,72 +1746,72 @@
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 16 packed i8 numbers.",
-        "suggest": "替换 128 位 vector 中的通道，该通道被解释为 16 个包装的 i8 数字。",
+        "suggest": "替换 128 位 vector 中的 lane，该 lane 被解释为 16 个包装的 i8 数字。",
         "translate": ""
     },
     {
         "source": "Replaces the scalar value of lane specified in the immediate mode operand `N` from `a`.",
-        "suggest": "从 `a` 替换在即时模式操作数 `N` 中指定的通道的标量值。",
+        "suggest": "从 `a` 替换在即时模式操作数 `N` 中指定的 lane 的标量值。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 8 packed i16 numbers.",
-        "suggest": "从解释为 8 个包装的 i16 数字的 128 位 vector 中提取通道。",
+        "suggest": "从解释为 8 个包装的 i16 数字的 128 位 vector 中提取 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a the scalar value of lane specified in the immediate mode operand `N` from `a`.",
-        "suggest": "从 `a` 中提取在即时模式操作数 `N` 中指定的通道的标量值。",
+        "suggest": "从 `a` 中提取在即时模式操作数 `N` 中指定的 lane 的标量值。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 8 packed i16 numbers.",
-        "suggest": "从解释为 8 个包装的 i16 编号的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 8 个包装的 i16 编号的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 4 packed i32 numbers.",
-        "suggest": "从解释为 4 个包装的 i32 数字的 128 位 vector 中提取通道。",
+        "suggest": "从解释为 4 个包装的 i32 数字的 128 位 vector 中提取 lane。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 4 packed i32 numbers.",
-        "suggest": "从解释为 4 个包装的 i32 编号的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 4 个包装的 i32 编号的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 2 packed i64 numbers.",
-        "suggest": "从解释为 2 个包装的 i64 编号的 128 位 vector 中提取通道。",
+        "suggest": "从解释为 2 个包装的 i64 编号的 128 位 vector 中提取 lane。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 2 packed i64 numbers.",
-        "suggest": "从一个解释为 2 个包装的 i64 编号的 128 位 vector 替换一个通道。",
+        "suggest": "从一个解释为 2 个包装的 i64 编号的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 4 packed f32 numbers.",
-        "suggest": "从解释为 4 个包装的 f32 数字的 128 位 vector 中提取通道。",
+        "suggest": "从解释为 4 个包装的 f32 数字的 128 位 vector 中提取 lane。",
         "translate": ""
     },
     {
         "source": "Extracts the scalar value of lane specified fn the immediate mode operand `N` from `a`.",
-        "suggest": "从 `a` 中提取在即时模式操作数 `N` 中指定的通道的标量值。",
+        "suggest": "从 `a` 中提取在即时模式操作数 `N` 中指定的 lane 的标量值。",
         "translate": ""
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 4 packed f32 numbers.",
-        "suggest": "从解释为 4 个包装的 f32 编号的 128 位 vector 替换一个通道。",
+        "suggest": "从解释为 4 个包装的 f32 编号的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
         "source": "Replaces the scalar value of lane specified fn the immediate mode operand `N` from `a`.",
-        "suggest": "从 `a` 替换在即时模式操作数 `N` 中指定的通道的标量值。",
+        "suggest": "从 `a` 替换在即时模式操作数 `N` 中指定的 lane 的标量值。",
         "translate": ""
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 2 packed f64 numbers.",
-        "suggest": "从解释为 2 个包装的 f64 编号的 128 位 vector 中提取通道。",
+        "suggest": "从解释为 2 个包装的 f64 编号的 128 位 vector 中提取 lane。",
         "translate": ""
     },
     {
@@ -1821,7 +1821,7 @@
     },
     {
         "source": "Replaces a lane from a 128-bit vector interpreted as 2 packed f64 numbers.",
-        "suggest": "从一个解释为 2 包装的 f64 编号的 128 位 vector 替换一个通道。",
+        "suggest": "从一个解释为 2 包装的 f64 编号的 128 位 vector 替换一个 lane。",
         "translate": ""
     },
     {
@@ -1831,12 +1831,12 @@
     },
     {
         "source": "Returns a new vector where each lane is all ones if the pairwise elements were equal, or all zeros if the elements were not equal.",
-        "suggest": "返回一个新的 vector，如果成对元素相等，则每个通道全为 1; 如果元素不相等，则全通道为全零。",
+        "suggest": "返回一个新的 vector，如果成对元素相等，则每个 lane 全为 1; 如果元素不相等，则所有 lane 为全零。",
         "translate": ""
     },
     {
         "source": "Returns a new vector where each lane is all ones if the pairwise elements were not equal, or all zeros if the elements were equal.",
-        "suggest": "返回一个新的 vector，如果成对元素不相等，则每个通道全为 1; 如果元素相等，则全零。",
+        "suggest": "返回一个新的 vector，如果成对元素不相等，则每个 lane 全为 1; 如果元素相等，则全零。",
         "translate": ""
     },
     {
@@ -1846,7 +1846,7 @@
     },
     {
         "source": "Returns a new vector where each lane is all ones if the pairwise left element is less than the pairwise right element, or all zeros otherwise.",
-        "suggest": "返回一个新的 vector，如果成对的左元素小于成对的右元素，则每个通道全为 1，否则为全零。",
+        "suggest": "返回一个新的 vector，如果成对的左元素小于成对的右元素，则每个 lane 全为 1，否则为全零。",
         "translate": ""
     },
     {
@@ -1856,7 +1856,7 @@
     },
     {
         "source": "Returns a new vector where each lane is all ones if the pairwise left element is greater than the pairwise right element, or all zeros otherwise.",
-        "suggest": "返回一个新的 vector，如果成对的左元素大于成对的右元素，则每个通道全为 1，否则为全零。",
+        "suggest": "返回一个新的 vector，如果成对的左元素大于成对的右元素，则每个 lane 全为 1，否则为全零。",
         "translate": ""
     },
     {
@@ -1936,7 +1936,7 @@
     },
     {
         "source": "Lane-wise wrapping absolute value.",
-        "suggest": "逐行包装绝对值。",
+        "suggest": "按 lane-wise 包装绝对值。",
         "translate": ""
     },
     {
@@ -1951,17 +1951,17 @@
     },
     {
         "source": "Returns 1 if any lane is nonzero or 0 if all lanes are zero.",
-        "suggest": "如果任何通道都不为零，则返回 1; 如果所有通道为零，则返回 0。",
+        "suggest": "如果任何 lane 都不为零，则返回 1; 如果所有 lanes 为零，则返回 0。",
         "translate": ""
     },
     {
         "source": "Returns 1 if all lanes are nonzero or 0 if any lane is nonzero.",
-        "suggest": "如果所有通道都不为零，则返回 1; 如果任何通道都不为零，则返回 0。",
+        "suggest": "如果所有 lanes 都不为零，则返回 1; 如果任何 lane 都不为零，则返回 0。",
         "translate": ""
     },
     {
         "source": "not available in our LLVM yet /// Extracts the high bit for each lane in `a` and produce a scalar mask with",
-        "suggest": "在我们的 LLVM 中尚不可用 //// 提取 `a` 中每个通道的高位，并生成具有以下内容的标量掩码:",
+        "suggest": "在我们的 LLVM 中尚不可用 //// 提取 `a` 中每个 lane 的高位，并生成具有以下内容的标量掩码:",
         "translate": ""
     },
     {
@@ -1971,37 +1971,37 @@
     },
     {
         "source": "Converts two input vectors into a smaller lane vector by narrowing each lane.",
-        "suggest": "通过使每个通道变窄，将两个输入 vectors 转换为较小的通道 vector。",
+        "suggest": "通过使每个 lane 变窄，将两个输入 vectors 转换为较小的 lane vector。",
         "translate": ""
     },
     {
         "source": "Signed saturation to 0x7f or 0x80 is used and the input lanes are always interpreted as signed integers.",
-        "suggest": "使用 0x7f 或 0x80 的带符号饱和，并且输入通道始终被解释为带符号整数。",
+        "suggest": "使用 0x7f 或 0x80 的带符号饱和，并且输入 lane 始终被解释为带符号整数。",
         "translate": ""
     },
     {
         "source": "Signed saturation to 0x00 or 0xff is used and the input lanes are always interpreted as signed integers.",
-        "suggest": "使用 0x00 或 0xff 的带符号饱和，并且输入通道始终被解释为带符号整数。",
+        "suggest": "使用 0x00 或 0xff 的带符号饱和，并且输入 lanes 始终被解释为带符号整数。",
         "translate": ""
     },
     {
         "source": "Shifts each lane to the left by the specified number of bits.",
-        "suggest": "将每个通道向左移动指定的位数。",
+        "suggest": "将每个 lane 向左移动指定的位数。",
         "translate": ""
     },
     {
         "source": "Only the low bits of the shift amount are used if the shift amount is greater than the lane width.",
-        "suggest": "如果移位量大于通道宽度，则仅使用移位量的低位。",
+        "suggest": "如果移位量大于 lane 宽度，则仅使用移位量的低位。",
         "translate": ""
     },
     {
         "source": "Shifts each lane to the right by the specified number of bits, sign extending.",
-        "suggest": "将每个通道向右移动指定的位数，并扩展符号。",
+        "suggest": "将每个 lane 向右移动指定的位数，并扩展符号。",
         "translate": ""
     },
     {
         "source": "Shifts each lane to the right by the specified number of bits, shifting in zeros.",
-        "suggest": "将每个通道向右移动指定的位数，以零为单位。",
+        "suggest": "将每个 lane 向右移动指定的位数，以零为单位。",
         "translate": ""
     },
     {
@@ -2036,27 +2036,27 @@
     },
     {
         "source": "Compares lane-wise signed integers, and returns the minimum of each pair.",
-        "suggest": "比较通道有符号整数，并返回每对中的最小值。",
+        "suggest": "比较 lane-wise 有符号整数，并返回每对中的最小值。",
         "translate": ""
     },
     {
         "source": "Compares lane-wise unsigned integers, and returns the minimum of each pair.",
-        "suggest": "比较通道无符号整数，并返回每对中的最小值。",
+        "suggest": "比较 lane-wise 无符号整数，并返回每对中的最小值。",
         "translate": ""
     },
     {
         "source": "Compares lane-wise signed integers, and returns the maximum of each pair.",
-        "suggest": "比较通道有符号整数，并返回每对的最大值。",
+        "suggest": "比较 lane-wise 有符号整数，并返回每对的最大值。",
         "translate": ""
     },
     {
         "source": "Compares lane-wise unsigned integers, and returns the maximum of each pair.",
-        "suggest": "比较通道无符号整数，并返回每对的最大值。",
+        "suggest": "比较 lane-wise 无符号整数，并返回每对的最大值。",
         "translate": ""
     },
     {
         "source": "Lane-wise rounding average.",
-        "suggest": "逐行舍入平均值。",
+        "suggest": "lane-wise 舍入平均值。",
         "translate": ""
     },
     {
@@ -2066,32 +2066,32 @@
     },
     {
         "source": "Signed saturation to 0x7fff or 0x8000 is used and the input lanes are always interpreted as signed integers.",
-        "suggest": "使用 0x7fff 或 0x8000 的带符号饱和，并且输入通道始终被解释为带符号整数。",
+        "suggest": "使用 0x7fff 或 0x8000 的带符号饱和，并且输入 lanes 始终被解释为带符号整数。",
         "translate": ""
     },
     {
         "source": "Signed saturation to 0x0000 or 0xffff is used and the input lanes are always interpreted as signed integers.",
-        "suggest": "使用 0x0000 或 0xffff 的带符号饱和，并且输入通道始终被解释为带符号整数。",
+        "suggest": "使用 0x0000 或 0xffff 的带符号饱和，并且输入 lanes 始终被解释为带符号整数。",
         "translate": ""
     },
     {
         "source": "Converts low half of the smaller lane vector to a larger lane vector, sign extended.",
-        "suggest": "将较小通道 vector 的下半部分转换为较大通道 vector，并扩展符号。",
+        "suggest": "将较小 lane vector 的下半部分转换为较大 lane vector，并扩展符号。",
         "translate": ""
     },
     {
         "source": "Converts high half of the smaller lane vector to a larger lane vector, sign extended.",
-        "suggest": "将较小通道 vector 的高一半转换为较大通道 vector，并对其进行符号扩展。",
+        "suggest": "将较小 lane vector 的高一半转换为较大 lane vector，并对其进行符号扩展。",
         "translate": ""
     },
     {
         "source": "Converts low half of the smaller lane vector to a larger lane vector, zero extended.",
-        "suggest": "将较小通道 vector 的下半部分转换为较大通道 vector，扩展为零。",
+        "suggest": "将较小 lane vector 的下半部分转换为较大 lane vector，扩展为零。",
         "translate": ""
     },
     {
         "source": "Converts high half of the smaller lane vector to a larger lane vector, zero extended.",
-        "suggest": "将较小通道 vector 的高一半转换为较大通道 vector，扩展为零。",
+        "suggest": "将较小 lane vector 的高一半转换为较大 lane vector，扩展为零。",
         "translate": ""
     },
     {
@@ -2176,92 +2176,92 @@
     },
     {
         "source": "Calculates the absolute value of each lane of a 128-bit vector interpreted as four 32-bit floating point numbers.",
-        "suggest": "计算一个 128 位 vector 的每个通道的绝对值，该绝对值解释为四个 32 位浮点数。",
+        "suggest": "计算一个 128 位 vector 的每个 lane 的绝对值，该绝对值解释为四个 32 位浮点数。",
         "translate": ""
     },
     {
         "source": "Negates each lane of a 128-bit vector interpreted as four 32-bit floating point numbers.",
-        "suggest": "对解释为四个 32 位浮点数的 128 位向量的每个通道求反。",
+        "suggest": "对解释为四个 32 位浮点数的 128 位向量的每个 lane 求反。",
         "translate": ""
     },
     {
         "source": "Calculates the square root of each lane of a 128-bit vector interpreted as four 32-bit floating point numbers.",
-        "suggest": "计算一个 128 位 vector 的每个通道的平方根，该 vector 解释为四个 32 位浮点数。",
+        "suggest": "计算一个 128 位 vector 的每个 lane 的平方根，该 vector 解释为四个 32 位浮点数。",
         "translate": ""
     },
     {
         "source": "Adds pairwise lanes of two 128-bit vectors interpreted as four 32-bit floating point numbers.",
-        "suggest": "将两个 128 位 vectors 的成对通道相加，将其解释为四个 32 位浮点数。",
+        "suggest": "将两个 128 位 vectors 的成对 lanes 相加，将其解释为四个 32 位浮点数。",
         "translate": ""
     },
     {
         "source": "Subtracts pairwise lanes of two 128-bit vectors interpreted as four 32-bit floating point numbers.",
-        "suggest": "减去两个 128 位 vectors 的成对通道，它们被解释为四个 32 位浮点数。",
+        "suggest": "减去两个 128 位 vectors 的成对 lanes，它们被解释为四个 32 位浮点数。",
         "translate": ""
     },
     {
         "source": "Multiplies pairwise lanes of two 128-bit vectors interpreted as four 32-bit floating point numbers.",
-        "suggest": "将两个 128 位 vectors 的成对通道相乘，将其解释为四个 32 位浮点数。",
+        "suggest": "将两个 128 位 vectors 的成对 lanes 相乘，将其解释为四个 32 位浮点数。",
         "translate": ""
     },
     {
         "source": "Divides pairwise lanes of two 128-bit vectors interpreted as four 32-bit floating point numbers.",
-        "suggest": "将两个 128 位 vectors 的成对通道划分为四个 32 位浮点数。",
+        "suggest": "将两个 128 位 vectors 的成对 lanes 划分为四个 32 位浮点数。",
         "translate": ""
     },
     {
         "source": "Calculates the minimum of pairwise lanes of two 128-bit vectors interpreted as four 32-bit floating point numbers.",
-        "suggest": "计算两个解释为四个 32 位浮点数的 128 位 vectors 的成对通道的最小值。",
+        "suggest": "计算两个解释为四个 32 位浮点数的 128 位 vectors 的成对 lanes 的最小值。",
         "translate": ""
     },
     {
         "source": "Calculates the maximum of pairwise lanes of two 128-bit vectors interpreted as four 32-bit floating point numbers.",
-        "suggest": "计算两个解释为四个 32 位浮点数的 128 位 vectors 的成对通道的最大值。",
+        "suggest": "计算两个解释为四个 32 位浮点数的 128 位 vectors 的成对 lanes 的最大值。",
         "translate": ""
     },
     {
         "source": "Calculates the absolute value of each lane of a 128-bit vector interpreted as two 64-bit floating point numbers.",
-        "suggest": "计算被解释为两个 64 位浮点数的 128 位 vector 的每个通道的绝对值。",
+        "suggest": "计算被解释为两个 64 位浮点数的 128 位 vector 的每个 lane 的绝对值。",
         "translate": ""
     },
     {
         "source": "Negates each lane of a 128-bit vector interpreted as two 64-bit floating point numbers.",
-        "suggest": "取反解释为两个 64 位浮点数的 128 位 vector 的每个通道。",
+        "suggest": "取反解释为两个 64 位浮点数的 128 位 vector 的每个 lane。",
         "translate": ""
     },
     {
         "source": "Calculates the square root of each lane of a 128-bit vector interpreted as two 64-bit floating point numbers.",
-        "suggest": "计算一个 128 位 vector 的每个通道的平方根，该 vector 解释为两个 64 位浮点数。",
+        "suggest": "计算一个 128 位 vector 的每个 lane 的平方根，该 vector 解释为两个 64 位浮点数。",
         "translate": ""
     },
     {
         "source": "Adds pairwise lanes of two 128-bit vectors interpreted as two 64-bit floating point numbers.",
-        "suggest": "将两个 128 位 vectors 的成对通道相加，将其解释为两个 64 位浮点数。",
+        "suggest": "将两个 128 位 vectors 的成对 lanes 相加，将其解释为两个 64 位浮点数。",
         "translate": ""
     },
     {
         "source": "Subtracts pairwise lanes of two 128-bit vectors interpreted as two 64-bit floating point numbers.",
-        "suggest": "减去两个 128 位 vectors 的成对通道，它们被解释为两个 64 位浮点数。",
+        "suggest": "减去两个 128 位 vectors 的成对 lanes，它们被解释为两个 64 位浮点数。",
         "translate": ""
     },
     {
         "source": "Multiplies pairwise lanes of two 128-bit vectors interpreted as two 64-bit floating point numbers.",
-        "suggest": "将两个解释为两个 64 位浮点数的 128 位 vectors 的成对通道相乘。",
+        "suggest": "将两个解释为两个 64 位浮点数的 128 位 vectors 的成对 lanes 相乘。",
         "translate": ""
     },
     {
         "source": "Divides pairwise lanes of two 128-bit vectors interpreted as two 64-bit floating point numbers.",
-        "suggest": "将两个 128 位 vectors 的成对通道划分为两个 64 位浮点数。",
+        "suggest": "将两个 128 位 vectors 的成对 lanes 划分为两个 64 位浮点数。",
         "translate": ""
     },
     {
         "source": "Calculates the minimum of pairwise lanes of two 128-bit vectors interpreted as two 64-bit floating point numbers.",
-        "suggest": "计算两个解释为两个 64 位浮点数的 128 位 vectors 的成对通道的最小值。",
+        "suggest": "计算两个解释为两个 64 位浮点数的 128 位 vectors 的成对 lanes 的最小值。",
         "translate": ""
     },
     {
         "source": "Calculates the maximum of pairwise lanes of two 128-bit vectors interpreted as two 64-bit floating point numbers.",
-        "suggest": "计算两个解释为两个 64 位浮点数的 128 位 vectors 的成对通道的最大值。",
+        "suggest": "计算两个解释为两个 64 位浮点数的 128 位 vectors 的成 lanes 的最大值。",
         "translate": ""
     },
     {
@@ -2521,7 +2521,7 @@
     },
     {
         "source": "Shuffles double-precision (64-bit) floating-point elements within 128-bit lanes using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件对 128 位通道中的双精度 (64-bit) 浮点元素进行混洗。",
+        "suggest": "使用 `imm8` 中的控件对 128 位 lanes 中的双精度 (64-bit) 浮点元素进行混洗。",
         "translate": ""
     },
     {
@@ -2531,7 +2531,7 @@
     },
     {
         "source": "128-bit lanes using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件的 128 位通道。",
+        "suggest": "使用 `imm8` 中的控件的 128 位 lanes。",
         "translate": ""
     },
     {
@@ -3036,7 +3036,7 @@
     },
     {
         "source": "Shuffles single-precision (32-bit) floating-point elements in `a` within 128-bit lanes using the control in `b`.",
-        "suggest": "使用 `b` 中的控件在 128 位通道内对 `a` 中的单精度 (32-bit) 浮点元素进行混洗。",
+        "suggest": "使用 `b` 中的控件在 128 位 lanes 内对 `a` 中的单精度 (32-bit) 浮点元素进行混洗。",
         "translate": ""
     },
     {
@@ -3046,7 +3046,7 @@
     },
     {
         "source": "Shuffles single-precision (32-bit) floating-point elements in `a` within 128-bit lanes using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件在 128 位通道内对 `a` 中的单精度 (32-bit) 浮点元素进行混洗。",
+        "suggest": "使用 `imm8` 中的控件在 128 位 lanes 内对 `a` 中的单精度 (32-bit) 浮点元素进行混洗。",
         "translate": ""
     },
     {
@@ -3056,7 +3056,7 @@
     },
     {
         "source": "Shuffles double-precision (64-bit) floating-point elements in `a` within 256-bit lanes using the control in `b`.",
-        "suggest": "使用 `b` 中的控件在 256 位通道内对 `a` 中的双精度 (64-bit) 浮点元素进行混洗。",
+        "suggest": "使用 `b` 中的控件在 256 位 lanes 内对 `a` 中的双精度 (64-bit) 浮点元素进行混洗。",
         "translate": ""
     },
     {
@@ -3066,7 +3066,7 @@
     },
     {
         "source": "Shuffles double-precision (64-bit) floating-point elements in `a` within 128-bit lanes using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件在 128 位通道内对 `a` 中的双精度 (64-bit) 浮点元素进行混洗。",
+        "suggest": "使用 `imm8` 中的控件在 128 位 lanes 内对 `a` 中的双精度 (64-bit) 浮点元素进行混洗。",
         "translate": ""
     },
     {
@@ -3291,22 +3291,22 @@
     },
     {
         "source": "Unpacks and interleave double-precision (64-bit) floating-point elements from the high half of each 128-bit lane in `a` and `b`.",
-        "suggest": "从 `a` 和 `b` 中每个 128 位通道的上半部分解包并交织双精度 (64-bit) 浮点元素。",
+        "suggest": "从 `a` 和 `b` 中每个 128 位 lane 的上半部分解包并交织双精度 (64-bit) 浮点元素。",
         "translate": ""
     },
     {
         "source": "Unpacks and interleave single-precision (32-bit) floating-point elements from the high half of each 128-bit lane in `a` and `b`.",
-        "suggest": "从 `a` 和 `b` 中每个 128 位通道的高半部分解包并交织单精度 (32-bit) 浮点元素。",
+        "suggest": "从 `a` 和 `b` 中每个 128 位 lane 的高半部分解包并交织单精度 (32-bit) 浮点元素。",
         "translate": ""
     },
     {
         "source": "Unpacks and interleave double-precision (64-bit) floating-point elements from the low half of each 128-bit lane in `a` and `b`.",
-        "suggest": "从 `a` 和 `b` 中每个 128 位通道的下半部分解包并交织双精度 (64-bit) 浮点元素。",
+        "suggest": "从 `a` 和 `b` 中每个 128 位 lane 的下半部分解包并交织双精度 (64-bit) 浮点元素。",
         "translate": ""
     },
     {
         "source": "Unpacks and interleave single-precision (32-bit) floating-point elements from the low half of each 128-bit lane in `a` and `b`.",
-        "suggest": "从 `a` 和 `b` 中每个 128 位通道的下半部分解包并交织单精度 (32-bit) 浮点元素。",
+        "suggest": "从 `a` 和 `b` 中每个 128 位 lanes 的下半部分解包并交织单精度 (32-bit) 浮点元素。",
         "translate": ""
     },
     {
@@ -3771,12 +3771,12 @@
     },
     {
         "source": "If `palignr` is shifting the pair of vectors more than the size of two lanes, emit zero.",
-        "suggest": "如果 `palignr` 对 vectors 的偏移量大于两个通道的大小，则发出零。",
+        "suggest": "如果 `palignr` 对 vectors 的偏移量大于两个 lanes 的大小，则发出零。",
         "translate": ""
     },
     {
         "source": "If `palignr` is shifting the pair of input vectors more than one lane, but less than two lanes, convert to shifting in zeroes.",
-        "suggest": "如果 `palignr` 将一对输入 vectors 移位多于一个通道，但少于两个通道，则转换为移位为零。",
+        "suggest": "如果 `palignr` 将一对输入 vectors 移位多于一个 lane，但少于两个 lanes，则转换为移位为零。",
         "translate": ""
     },
     {
@@ -3871,7 +3871,7 @@
     },
     {
         "source": "Broadcasts 128 bits of integer data from a to all 128-bit lanes in the 256-bit returned value.",
-        "suggest": "从 a 广播 128 位整数数据到 256 位返回值中的所有 128 位通道。",
+        "suggest": "从 a 广播 128 位整数数据到 256 位返回值中的所有 128 位 lanes。",
         "translate": ""
     },
     {
@@ -4181,7 +4181,7 @@
     },
     {
         "source": "Eight SADs are performed for each 128-bit lane using one quadruplet from `b` and eight quadruplets from `a`.",
-        "suggest": "使用来自 `b` 的一个四元组和来自 `a` 的八个四元组，对每个 128 位通道执行八个 SAD。",
+        "suggest": "使用来自 `b` 的一个四元组和来自 `a` 的八个四元组，对每个 128 位 lane 执行八个 SAD。",
         "translate": ""
     },
     {
@@ -4296,7 +4296,7 @@
     },
     {
         "source": "Shuffles eight 32-bit foating-point elements in `a` across lanes using the corresponding 32-bit integer index in `idx`.",
-        "suggest": "使用 `idx` 中相应的 32 位整数索引跨通道对 `a` 中的八个 32 位浮点元素进行打乱。",
+        "suggest": "使用 `idx` 中相应的 32 位整数索引，将 `a` 中的八个 32 位浮点元素打乱到不同的 lanes 中。",
         "translate": ""
     },
     {
@@ -4331,7 +4331,7 @@
     },
     {
         "source": "Shuffles 32-bit integers in 128-bit lanes of `a` using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件，在 `a` 的 128 位通道中打乱 32 位整数。",
+        "suggest": "使用 `imm8` 中的控件，在 `a` 的 128 位 lanes 中打乱 32 位整数。",
         "translate": ""
     },
     {
@@ -4361,22 +4361,22 @@
     },
     {
         "source": "Shuffles 16-bit integers in the high 64 bits of 128-bit lanes of `a` using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件，在 `a` 的 128 位通道的高 64 位中打乱 16 位整数。",
+        "suggest": "使用 `imm8` 中的控件，在 `a` 的 128 位 lanes 的高 64 位中打乱 16 位整数。",
         "translate": ""
     },
     {
         "source": "The low 64 bits of 128-bit lanes of `a` are copied to the output.",
-        "suggest": "`a` 的 128 位通道的低 64 位被复制到输出中。",
+        "suggest": "`a` 的 128 位 lanes 的低 64 位被复制到输出中。",
         "translate": ""
     },
     {
         "source": "Shuffles 16-bit integers in the low 64 bits of 128-bit lanes of `a` using the control in `imm8`.",
-        "suggest": "使用 `imm8` 中的控件在 `a` 的 128 位通道的低 64 位中打乱 16 位整数。",
+        "suggest": "使用 `imm8` 中的控件在 `a` 的 128 位 lanes 的低 64 位中打乱 16 位整数。",
         "translate": ""
     },
     {
         "source": "The high 64 bits of 128-bit lanes of `a` are copied to the output.",
-        "suggest": "`a` 的 128 位通道的高 64 位被复制到输出中。",
+        "suggest": "`a` 的 128 位 lanes 的高 64 位被复制到输出中。",
         "translate": ""
     },
     {
@@ -4446,7 +4446,7 @@
     },
     {
         "source": "Shifts 128-bit lanes in `a` left by `imm8` bytes while shifting in zeros.",
-        "suggest": "将 `a` 中的 128 位通道向左移 `imm8` 字节，同时向零移位。",
+        "suggest": "将 `a` 中的 128 位 lanes 向左移 `imm8` 字节，同时向零移位。",
         "translate": ""
     },
     {
@@ -4486,7 +4486,7 @@
     },
     {
         "source": "Shifts 128-bit lanes in `a` right by `imm8` bytes while shifting in zeros.",
-        "suggest": "将 `a` 中的 128 位通道右移 `imm8` 字节，同时将其移位为零。",
+        "suggest": "将 `a` 中的 128 位 lanes 右移 `imm8` 字节，同时将其移位为零。",
         "translate": ""
     },
     {
@@ -4576,7 +4576,7 @@
     },
     {
         "source": "128-bit lane in `a` and `b`.",
-        "suggest": "`a` 和 `b` 中的 128 位通道。",
+        "suggest": "`a` 和 `b` 中的 128 位 lane。",
         "translate": ""
     },
     {
@@ -4586,7 +4586,7 @@
     },
     {
         "source": "128-bit lane of `a` and `b`.",
-        "suggest": "`a` 和 `b` 的 128 位通道",
+        "suggest": "`a` 和 `b` 的 128 位 lane",
         "translate": ""
     },
     {

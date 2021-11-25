@@ -1006,7 +1006,7 @@
     },
     {
         "source": "Shuffle 8-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应选择器和索引将 a 和 b 中的 8 位整数跨通道打乱，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应选择器和索引将 a 和 b 中的 8 位整数跨 lanes 打乱，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
@@ -1016,27 +1016,27 @@
     },
     {
         "source": "Shuffle 8-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using writemask k (elements are copied from a when the corresponding mask bit is not set).",
-        "suggest": "使用相应的选择器和 idx 中的索引将 a 和 b 中的 8 位整数跨通道打乱，并使用 writemask k 将结果存储在 dst 中 (当相应的掩码位未设置时，从 a 复制元素)。",
+        "suggest": "使用相应的选择器和 idx 中的索引将 a 和 b 中的 8 位整数跨 lanes 打乱，并使用 writemask k 将结果存储在 dst 中 (当相应的掩码位未设置时，从 a 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle 8-bit integers in a and b across lanes using the corresponding selector and index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应选择器和索引将 a 和 b 中的 8 位整数跨通道打乱，并使用 zeromask k 将结果存储在 dst 中 (当相应的掩码位未设置时，元素被清零)。",
+        "suggest": "使用 idx 中的相应选择器和索引将 a 和 b 中的 8 位整数跨 lanes 打乱，并使用 zeromask k 将结果存储在 dst 中 (当相应的掩码位未设置时，元素被清零)。",
         "translate": ""
     },
     {
         "source": "Shuffle 8-bit integers in a across lanes using the corresponding index in idx, and store the results in dst.",
-        "suggest": "使用 idx 中的相应索引将 a 中的 8 位整数打乱到通道中，并将结果存储在 dst 中。",
+        "suggest": "使用 idx 中的相应索引将 a 中的 8 位整数打乱到 lanes 中，并将结果存储在 dst 中。",
         "translate": ""
     },
     {
         "source": "Shuffle 8-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using writemask k (elements are copied from src when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道的 a 中打乱 8 位整数，并使用 writemask k 将结果存储在 dst 中 (当相应的掩码位未设置时，从 src 复制元素)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 的 a 中打乱 8 位整数，并使用 writemask k 将结果存储在 dst 中 (当相应的掩码位未设置时，从 src 复制元素)。",
         "translate": ""
     },
     {
         "source": "Shuffle 8-bit integers in a across lanes using the corresponding index in idx, and store the results in dst using zeromask k (elements are zeroed out when the corresponding mask bit is not set).",
-        "suggest": "使用 idx 中的相应索引在跨通道的 a 中打乱 8 位整数，并使用 zeromask k 将结果存储在 dst 中 (当相应的掩码位未设置时，元素被清零)。",
+        "suggest": "使用 idx 中的相应索引在跨 lanes 的 a 中打乱 8 位整数，并使用 zeromask k 将结果存储在 dst 中 (当相应的掩码位未设置时，元素被清零)。",
         "translate": ""
     },
     {
@@ -4116,7 +4116,7 @@
     },
     {
         "source": "Set all vector lanes to the same value",
-        "suggest": "将所有 vector 通道设置为相同的值",
+        "suggest": "将所有 vector lanes 设置为相同的值",
         "translate": ""
     },
     {
@@ -4431,7 +4431,7 @@
     },
     {
         "source": "Calculates the square root of each lane.",
-        "suggest": "计算每条通道的平方根。",
+        "suggest": "计算每个 lane 的平方根。",
         "translate": ""
     },
     {
@@ -4771,7 +4771,7 @@
     },
     {
         "source": "If a proposal is not yet stable in WebAssembly itself then the functions within this function may be unstable and require the nightly channel of Rust to use.",
-        "suggest": "如果一个提案在 WebAssembly 本身中还不稳定，那么这个函数中的函数可能是不稳定的，需要使用 Rust 的 nightly 通道。",
+        "suggest": "如果一个提案在 WebAssembly 本身中还不稳定，那么这个函数中的函数可能是不稳定的，需要使用 Rust 的夜间通道。",
         "translate": ""
     },
     {
@@ -4911,42 +4911,42 @@
     },
     {
         "source": "Loads an 8-bit value from `m` and sets lane `L` of `v` to that value.",
-        "suggest": "从 `m` 加载一个 8 位值并将 `v` 的通道 `L` 设置为该值。",
+        "suggest": "从 `m` 加载一个 8 位值并将 `v` 的 lane `L` 设置为该值。",
         "translate": ""
     },
     {
         "source": "Loads a 16-bit value from `m` and sets lane `L` of `v` to that value.",
-        "suggest": "从 `m` 加载 16 位值并将 `v` 的通道 `L` 设置为该值。",
+        "suggest": "从 `m` 加载 16 位值并将 `v` 的 lane `L` 设置为该值。",
         "translate": ""
     },
     {
         "source": "Loads a 32-bit value from `m` and sets lane `L` of `v` to that value.",
-        "suggest": "从 `m` 加载 32 位值并将 `v` 的通道 `L` 设置为该值。",
+        "suggest": "从 `m` 加载 32 位值并将 `v` 的 lane `L` 设置为该值。",
         "translate": ""
     },
     {
         "source": "Loads a 64-bit value from `m` and sets lane `L` of `v` to that value.",
-        "suggest": "从 `m` 加载 64 位值并将 `v` 的通道 `L` 设置为该值。",
+        "suggest": "从 `m` 加载 64 位值并将 `v` 的 lane `L` 设置为该值。",
         "translate": ""
     },
     {
         "source": "Stores the 8-bit value from lane `L` of `v` into `m`",
-        "suggest": "将来自 `v` 的 `L` 通道的 8 位值存储到 `m`",
+        "suggest": "将来自 `v` 的 `L` lane 的 8 位值存储到 `m`",
         "translate": ""
     },
     {
         "source": "Stores the 16-bit value from lane `L` of `v` into `m`",
-        "suggest": "将 `v` 的通道 `L` 的 16 位值存储到 `m`",
+        "suggest": "将 `v` 的 lane `L` 的 16 位值存储到 `m`",
         "translate": ""
     },
     {
         "source": "Stores the 32-bit value from lane `L` of `v` into `m`",
-        "suggest": "将来自 `v` 的 `L` 通道的 32 位值存储到 `m`",
+        "suggest": "将来自 `v` 的 `L` lane 的 32 位值存储到 `m`",
         "translate": ""
     },
     {
         "source": "Stores the 64-bit value from lane `L` of `v` into `m`",
-        "suggest": "将来自 `v` 的 `L` 通道的 64 位值存储到 `m`",
+        "suggest": "将来自 `v` 的 `L` lane 的 64 位值存储到 `m`",
         "translate": ""
     },
     {
@@ -4996,7 +4996,7 @@
     },
     {
         "source": "Extracts a lane from a 128-bit vector interpreted as 16 packed u8 numbers.",
-        "suggest": "从解释为 16 个包装的 u8 数字的 128 位 vector 中提取一个通道。",
+        "suggest": "从解释为 16 个包装的 u8 数字的 128 位 vector 中提取一个 lane。",
         "translate": ""
     }
 ]
