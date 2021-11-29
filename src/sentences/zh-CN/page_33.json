@@ -3198,5 +3198,15 @@
         "source": "Where both fixed steady-state and burst limits are available the steady-state capacity will be used to ensure more predictable latencies.",
         "suggest": "在固定稳态和突发限制都可用的情况下，稳态容量将用于确保更可预测的延迟。",
         "translate": ""
+    },
+    {
+        "source": "treats symlink creation as a [privileged action][symlink-security], therefore this function is likely to fail unless the user makes changes to their system to permit symlink creation.",
+        "suggest": "将符号链接创建视为 [特权行动][symlink-security]，因此除非用户对其系统进行更改以允许创建符号链接，否则此功能可能会失败。",
+        "translate": ""
+    },
+    {
+        "source": "Users can try enabling Developer Mode, granting the `SeCreateSymbolicLinkPrivilege` privilege, or running the process as an administrator.",
+        "suggest": "用户可以尝试启用开发者模式、授予 `SeCreateSymbolicLinkPrivilege` 权限或以管理员身份运行进程。",
+        "translate": ""
     }
 ]
