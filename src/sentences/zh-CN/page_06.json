@@ -1106,7 +1106,7 @@
     },
     {
         "source": "If you need more control over how a value is hashed, you need to implement the [`Hash`] trait:",
-        "suggest": "如果需要更多控制值散列的方式，则需要实现 [`Hash`] trait:",
+        "suggest": "如果您需要更多地控制值的散列方式，则需要实现 [`Hash`] trait:",
         "translate": ""
     },
     {
@@ -1136,7 +1136,7 @@
     },
     {
         "source": "If you need more control over how a value is hashed, you can of course implement the `Hash` trait yourself:",
-        "suggest": "如果您需要对值的散列方式进行更多控制，则当然可以自己实现 `Hash` trait:",
+        "suggest": "如果您需要更多地控制值的散列方式，则当然可以自己实现 `Hash` trait:",
         "translate": ""
     },
     {
@@ -1186,7 +1186,7 @@
     },
     {
         "source": "A trait for hashing an arbitrary stream of bytes.",
-        "suggest": "trait，用于散列任意字节流。",
+        "suggest": "对任意字节流进行散列的 trait。",
         "translate": ""
     },
     {

@@ -4111,7 +4111,7 @@
     },
     {
         "source": "test that two deques hash equal even if elements are laid out differently",
-        "suggest": "测试两个双端队列散列是否相等，即使元素的布局不同",
+        "suggest": "测试两个双端队列哈希是否相等，即使元素的布局不同",
         "translate": ""
     },
     {

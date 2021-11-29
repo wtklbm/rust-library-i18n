@@ -2406,17 +2406,17 @@
     },
     {
         "source": "This is intended as a convenience for code which *consumes* hashes, such as the implementation of a hash table or in unit tests that check whether a custom [`Hash`] implementation behaves as expected.",
-        "suggest": "这是为了方便*消耗*哈希的代码，例如散列表的实现或在单元测试中检查自定义 [`Hash`] 实现是否按预期运行。",
+        "suggest": "这是为了方便*消耗*哈希的代码，例如哈希表的实现或在单元测试中检查自定义 [`Hash`] 实现是否按预期运行。",
         "translate": ""
     },
     {
         "source": "This must not be used in any code which *creates* hashes, such as in an implementation of [`Hash`].",
-        "suggest": "这不能用在任何*创建*散列的代码中，例如在 [`Hash`] 的实现中。",
+        "suggest": "这不能用在任何*创建*哈希的代码中，例如在 [`Hash`] 的实现中。",
         "translate": ""
     },
     {
         "source": "The way to create a combined hash of multiple values is to call [`Hash::hash`] multiple times using the same [`Hasher`], not to call this method repeatedly and combine the results.",
-        "suggest": "创建多个值的组合散列的方法是使用同一个 [`Hasher`] 多次调用 [`Hash::hash`]，而不是重复调用此方法并组合结果。",
+        "suggest": "创建多个值的组合哈希的方法是使用同一个 [`Hasher`] 多次调用 [`Hash::hash`]，而不是重复调用此方法并组合结果。",
         "translate": ""
     },
     {

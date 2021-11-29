@@ -2211,7 +2211,7 @@
     },
     {
         "source": "While its performance is very competitive for medium sized keys, other hashing algorithms will outperform it for small keys such as integers as well as large keys such as long strings, though those algorithms will typically *not* protect against attacks such as HashDoS.",
-        "suggest": "虽然它的性能对于中等大小的键非常有竞争力，但其他散列算法对于小键 (如整数) 和大键 (如长字符串) 的性能将优于它，尽管这些算法通常不能防止诸如 HashDoS 之类的攻击。",
+        "suggest": "虽然它的性能对于中等大小的键非常有竞争力，但其他哈希算法对于小键 (如整数) 和大键 (如长字符串) 的性能将优于它，尽管这些算法通常不能防止诸如 HashDoS 之类的攻击。",
         "translate": ""
     },
     {
@@ -2241,7 +2241,7 @@
     },
     {
         "source": "It is a logic error for a key to be modified in such a way that the key's hash, as determined by the [`Hash`] trait, or its equality, as determined by the [`Eq`] trait, changes while it is in the map.",
-        "suggest": "以这样一种方式修改键是一个逻辑错误，即键的散列 (由 [`Hash`] 特征确定) 或其相等性 (由 [`Eq`] 特征确定) 在更改时发生变化在 map 上。",
+        "suggest": "以这样一种方式修改键是一个逻辑错误，即键的哈希 (由 [`Hash`] 特征确定) 或其相等性 (由 [`Eq`] 特征确定) 在更改时发生变化在 map 上。",
         "translate": ""
     },
     {
@@ -2326,7 +2326,7 @@
     },
     {
         "source": "Creates an empty `HashMap` with the specified capacity, using `hash_builder` to hash the keys.",
-        "suggest": "创建一个具有指定容量的空 `HashMap`，使用 `hash_builder` 对键进行散列。",
+        "suggest": "创建一个具有指定容量的空 `HashMap`，使用 `hash_builder` 对键进行哈希运算。",
         "translate": ""
     },
     {
@@ -2931,7 +2931,7 @@
     },
     {
         "source": "A particular instance `RandomState` will create the same instances of [`Hasher`], but the hashers created by two different `RandomState` instances are unlikely to produce the same result for the same values.",
-        "suggest": "特定的实例 `RandomState` 将创建 [`Hasher`] 的相同实例，但是由两个不同的 `RandomState` 实例创建的散列对于相同的值不太可能产生相同的结果。",
+        "suggest": "特定的实例 `RandomState` 将创建 [`Hasher`] 的相同实例，但是由两个不同的 `RandomState` 实例创建的哈希对于相同的值不太可能产生相同的结果。",
         "translate": ""
     },
     {
@@ -2971,7 +2971,7 @@
     },
     {
         "source": "The internal algorithm is not specified, and so it and its hashes should not be relied upon over releases.",
-        "suggest": "未指定内部算法，因此不应依赖其内部版本及其散列。",
+        "suggest": "未指定内部算法，因此不应在发布时依赖它及其哈希值。",
         "translate": ""
     },
     {
@@ -3211,7 +3211,7 @@
     },
     {
         "source": "Creates an empty `HashSet` with the specified capacity, using `hasher` to hash the keys.",
-        "suggest": "创建一个具有指定容量的空 `HashSet`，使用 `hasher` 对键进行散列。",
+        "suggest": "创建一个具有指定容量的空 `HashSet`，使用 `hasher` 对键进行哈希处理。",
         "translate": ""
     },
     {

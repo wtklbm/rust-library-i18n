@@ -896,7 +896,7 @@
     },
     {
         "source": "as what is currently the most convenient built-in way to construct a HashMap, a simple usage of this function must not *require* the user to provide a type annotation in order to infer the third type parameter (the hasher parameter, conventionally \"S\").",
-        "suggest": "作为目前构建 HashMap 的最方便的内置方式，这个函数的简单用法不能*要求*用户提供类型注解以推断第三个类型参数 (散列参数，通常为 \"S\") .",
+        "suggest": "作为目前构建 HashMap 的最方便的内置方式，这个函数的简单用法不能*要求*用户提供类型注解以推断第三个类型参数 (哈希参数，通常为 \"S\") .",
         "translate": ""
     },
     {
@@ -926,7 +926,7 @@
     },
     {
         "source": "as what is currently the most convenient built-in way to construct a HashSet, a simple usage of this function must not *require* the user to provide a type annotation in order to infer the third type parameter (the hasher parameter, conventionally \"S\").",
-        "suggest": "作为目前构建 HashSet 的最方便的内置方式，这个函数的简单用法不能*要求*用户提供类型注解以推断第三个类型参数 (散列参数，通常为 \"S\") .",
+        "suggest": "作为目前构建 HashSet 的最方便的内置方式，这个函数的简单用法不能*要求*用户提供类型注解以推断第三个类型参数 (哈希参数，通常为 \"S\") .",
         "translate": ""
     },
     {
