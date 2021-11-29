@@ -3038,5 +3038,165 @@
         "source": "This bug is documented as `SKL052` in the errata section of this document:",
         "suggest": "此错误在本文档的勘误部分中记录为 `SKL052`:",
         "translate": ""
+    },
+    {
+        "source": "A `RawVec` holding zero-sized elements should always look like this.",
+        "suggest": "包含零大小元素的 `RawVec` 应始终如下所示。",
+        "translate": ""
+    },
+    {
+        "source": "All these different ways of creating the RawVec produce the same thing.",
+        "suggest": "所有这些创建 RawVec 的不同方式产生相同的结果。",
+        "translate": ""
+    },
+    {
+        "source": "Check all these operations work as expected with zero-sized elements.",
+        "suggest": "使用零大小元素检查所有这些操作是否按预期工作。",
+        "translate": ""
+    },
+    {
+        "source": "panics, in `zst_reserve_panic` below",
+        "suggest": "在下面的 `zst_reserve_panic` 中，会产生 panics",
+        "translate": ""
+    },
+    {
+        "source": "panics, in `zst_reserve_exact_panic` below",
+        "suggest": "在下面的 `zst_reserve_exact_panic` 中，会产生 panics",
+        "translate": ""
+    },
+    {
+        "source": "self.align is already known to be valid and new_size has been padded already.",
+        "suggest": "self.align 已知是有效的并且 new_size 已经被填充。",
+        "translate": ""
+    },
+    {
+        "source": "Size: `array_size` cannot be too big because `size_of::<T>()` must be a multiple of `align_of::<T>()`.",
+        "suggest": "大小: `array_size` 不能太大，因为 `size_of::<T>()` 必须是 `align_of::<T>()` 的倍数。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore, `array_size` rounded up to the nearest multiple of `align_of::<T>()` is just `array_size`.",
+        "suggest": "因此，`array_size` 向上舍入到 `align_of::<T>()` 的最接近的倍数就是 `array_size`。",
+        "translate": ""
+    },
+    {
+        "source": "And `array_size` cannot be too big because it was just checked by the `checked_mul()`.",
+        "suggest": "而且 `array_size` 不能太大，因为它刚刚被 `checked_mul()` 检查过。",
+        "translate": ""
+    },
+    {
+        "source": "Alignment: `align_of::<T>()` will always give an acceptable (non-zero, power of two) alignment.",
+        "suggest": "对齐: `align_of::<T>()` 将始终提供可接受的 (非零，二次幂) 对齐方式。",
+        "translate": ""
+    },
+    {
+        "source": "Since the formatting will be identical for all pointer types, use a non-monomorphized implementation for the actual formatting to reduce the amount of codegen work needed",
+        "suggest": "由于所有指针类型的格式都相同，因此对实际格式使用非单态实现以减少所需的 codegen 工作量",
+        "translate": ""
+    },
+    {
+        "source": "Due to differences in endianness and type sizes, data fed by `Hash` to a `Hasher` should not be considered portable across platforms.",
+        "suggest": "由于字节序和类型大小的差异，由 `Hash` 提供给 `Hasher` 的数据不应被视为跨平台可移植的。",
+        "translate": ""
+    },
+    {
+        "source": "Additionally the data passed by most standard library types should not be considered stable between compiler versions.",
+        "suggest": "此外，大多数标准库类型传递的数据在不同的编译器版本之间不应该被认为是稳定的。",
+        "translate": ""
+    },
+    {
+        "source": "This means tests shouldn't probe hard-coded hash values or data fed to a `Hasher` and instead should check consistency with `Eq`.",
+        "suggest": "这意味着测试不应探测硬编码的哈希值或提供给 `Hasher` 的数据，而应检查与 `Eq` 的一致性。",
+        "translate": ""
+    },
+    {
+        "source": "Serialization formats intended to be portable between platforms or compiler versions should either avoid encoding hashes or only rely on `Hash` and `Hasher` implementations that provide additional guarantees.",
+        "suggest": "旨在在平台或编译器版本之间可移植的序列化格式应避免编码哈希或仅依赖提供额外保证的 `Hash` 和 `Hasher` 实现。",
+        "translate": ""
+    },
+    {
+        "source": "The amount by which the inner iterator needs to be shortened for it to be at most as long as the take() amount.",
+        "suggest": "内部迭代器需要缩短的数量，使其最多与 take() 的长度相同。",
+        "translate": ""
+    },
+    {
+        "source": "The amount we need to advance inner to fulfill the caller's request.",
+        "suggest": "我们需要推进内部实现来满足调用者的请求。",
+        "translate": ""
+    },
+    {
+        "source": "advance_by() and len() all can be at most usize, so we don't have to worry about having to advance more than usize::MAX here.",
+        "suggest": "advance_by() 和 len() 所有的都只能是 usize，所以我们不用担心这里要提前超过 usize::MAX。",
+        "translate": ""
+    },
+    {
+        "source": "If the zipped iterator has no more elements to return then each further attempt to advance it will first try to advance the first iterator at most one time and if it still yielded an item try to advance the second iterator at most one time.",
+        "suggest": "如果 zipped 迭代器没有更多的元素要返回，那么每次进一步尝试推进它时，将首先尝试最多推进第一个迭代器一次，如果它仍然生成一个项，则尝试最多推进第二个迭代器一次。",
+        "translate": ""
+    },
+    {
+        "source": "order shouldn't matter",
+        "suggest": "顺序应该无关紧要",
+        "translate": ""
+    },
+    {
+        "source": "`linkat` is preferable to `link` because it gives us a flag to specify how symlinks should be handled.",
+        "suggest": "`linkat` 比 `link` 更可取，因为它给了我们一个标志来指定应该如何处理符号链接。",
+        "translate": ""
+    },
+    {
+        "source": "builds use feature level 14, but the libc wrapper for splice is gated on feature level 21+, so we have to invoke the syscall directly.",
+        "suggest": "使用为 14 的功能级别进行构建，但用于拼接的 libc 包装器在 21+ 上的功能级别，因此我们必须直接调用 syscall。",
+        "translate": ""
+    },
+    {
+        "source": "We use dlsym to avoid an ELF version dependency on GLIBC_PRIVATE.",
+        "suggest": "我们使用 dlsym 来避免 ELF 版本对 GLIBC_PRIVATE 的依赖。",
+        "translate": ""
+    },
+    {
+        "source": "We shouldn't really be using such an internal symbol, but there's currently no other way to account for the TLS size.",
+        "suggest": "我们真的不应该使用这样的内部符号，但目前没有其他方法可以解释 TLS 大小。",
+        "translate": ""
+    },
+    {
+        "source": "One option to use here is weak linkage, but that is unfortunately only really workable with ELF.",
+        "suggest": "此处使用的一种选择是弱链接，但不幸的是，这仅适用于 ELF。",
+        "translate": ""
+    },
+    {
+        "source": "Otherwise, use dlsym to get the symbol value at runtime.",
+        "suggest": "否则，使用 dlsym 在运行时获取符号值。",
+        "translate": ""
+    },
+    {
+        "source": "A long time ago this used weak linkage for the __pthread_get_minstack symbol, but that caused Debian to detect an unnecessarily strict versioned dependency on libc6 (#23628) because it is GLIBC_PRIVATE.",
+        "suggest": "很久以前，这对 __pthread_get_minstack 符号使用了弱链接，但这导致 Debian 检测到对 libc6 (#23628) 的不必要的严格版本依赖，因为它是 GLIBC_PRIVATE。",
+        "translate": ""
+    },
+    {
+        "source": "We now use `dlsym` for a runtime lookup of that symbol to avoid the ELF versioned dependency.",
+        "suggest": "我们现在使用 `dlsym` 进行该符号的运行时查找，以避免 ELF 版本依赖。",
+        "translate": ""
+    },
+    {
+        "source": "We can use true weak linkage on ELF targets.",
+        "suggest": "我们可以在 ELF 目标上使用真正的弱链接。",
+        "translate": ""
+    },
+    {
+        "source": "On non-ELF targets, use the dlsym approximation of weak linkage.",
+        "suggest": "在非 ELF 目标上，使用弱链接的 dlsym 近似值。",
+        "translate": ""
+    },
+    {
+        "source": "Among other things it does not expose information on NUMA regions, does not account for differences in (co)processor capabilities or current system load, and will not modify the program's global state in order to more accurately query the amount of available parallelism.",
+        "suggest": "除其他事项外，它不公开有关 NUMA 区域的信息，不考虑 (协同) 处理器功能或当前系统负载的差异，并且不会为了更准确地查询可用并行度的数量而修改程序的整体状态。",
+        "translate": ""
+    },
+    {
+        "source": "Where both fixed steady-state and burst limits are available the steady-state capacity will be used to ensure more predictable latencies.",
+        "suggest": "在固定稳态和突发限制都可用的情况下，稳态容量将用于确保更可预测的延迟。",
+        "translate": ""
     }
 ]
