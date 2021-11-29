@@ -16,7 +16,8 @@ git clone https://github.com.cnpmjs.org/rust-lang/rust.git rust
 cd rust
 
 # 切换版本号
-# NOTE：这里的版本号应该与当前中文文档的版本号保持一致
+# 注意：这里的版本号应该与要构建的中文文档的版本号保持一致
+# 特别注意：下面这一行不能直接拷贝，版本号 `1.55.0` 一定要记得改
 git checkout 1.55.0
 
 # 删除 `rust/library` 目录
