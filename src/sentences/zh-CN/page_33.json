@@ -3208,5 +3208,51 @@
         "source": "Users can try enabling Developer Mode, granting the `SeCreateSymbolicLinkPrivilege` privilege, or running the process as an administrator.",
         "suggest": "用户可以尝试启用开发者模式、授予 `SeCreateSymbolicLinkPrivilege` 权限或以管理员身份运行进程。",
         "translate": ""
+    },
+    {
+        "source": "`i < self.source.len()` per previous line.",
+        "suggest": "`i < self.source.len()` per 前一行。",
+        "translate": ""
+    },
+    {
+        "source": "For some reason the following are both significantly slower:",
+        "suggest": "出于某种原因，以下两项的速度都明显较慢:",
+        "translate": ""
+    },
+
+    {
+        "source": "This could be a `1 => ...` case in the match below, but for the common case of all-ASCII inputs, we bypass loading the sizeable UTF8_CHAR_WIDTH table into cache.",
+        "suggest": "在下面的匹配中，这可能是一个 `1 => ...` 的情况，但对于全 ASCII 输入的常见情况，我们绕过了将相当大的 UTF8_CHAR_WIDTH 表加载到缓存中。",
+        "translate": ""
+    },
+    {
+        "source": "`i <= self.source.len()` because it is only ever incremented via `i += 1` and in between every single one of those increments, `i` is compared against `self.source.len()`.",
+        "suggest": "`i <= self.source.len()` 因为它只通过 `i += 1` 递增，并且在每一个递增之间，`i` 与 `self.source.len()` 进行比较。",
+        "translate": ""
+    },
+    {
+        "source": "That happens either literally by `i < self.source.len()` in the while-loop's condition, or indirectly by `safe_get(self.source, i) & 192 != TAG_CONT_U8`.",
+        "suggest": "这要么在 while 循环条件下由 `i < self.source.len()` 直接发生，要么由 `safe_get(self.source, i) & 192 != TAG_CONT_U8` 间接发生。",
+        "translate": ""
+    },
+    {
+        "source": "The loop is terminated as soon as the latest `i += 1` has made `i` no longer less than `self.source.len()`, which means it'll be at most equal to `self.source.len()`.",
+        "suggest": "一旦最新的 `i += 1` 使 `i` 不再小于 `self.source.len()`，循环就会终止，这意味着它最多等于 `self.source.len()`。",
+        "translate": ""
+    },
+    {
+        "source": "`valid_up_to <= i` because it is only ever assigned via `valid_up_to = i` and `i` only increases.",
+        "suggest": "`valid_up_to <= i` 因为它只能通过 `valid_up_to = i` 分配，而 `i` 只会增加。",
+        "translate": ""
+    },
+    {
+        "source": "All bytes up to `valid_up_to` are valid UTF-8.",
+        "suggest": "直到 `valid_up_to` 的所有字节都是有效的 UTF-8。",
+        "translate": ""
+    },
+    {
+        "source": "pin projection。",
+        "suggest": "固定推断。",
+        "translate": ""
     }
 ]

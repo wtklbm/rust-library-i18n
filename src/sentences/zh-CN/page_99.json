@@ -3418,5 +3418,80 @@
         "source": "1  2  3  4  5  6  7  8  9  A  B  C  D  E  F",
         "suggest": "1  2  3  4  5  6  7  8  9  A  B  C  D  E  F",
         "translate": false
+    },
+    {
+        "source": "while let Some(&byte) = self.source.get(i) { while let Some(byte) = self.source.get(i).copied() {",
+        "suggest": "while let Some(&byte) = self.source.get(i) {while let Some(byte) =self.source.get (i).copied (){",
+        "translate": false
+    },
+    {
+        "source": "Vector add",
+        "suggest": "Vector 添加",
+        "translate": false
+    },
+    {
+        "source": "Vector floor",
+        "suggest": "Vector floor",
+        "translate": false
+    },
+    {
+        "source": "Vector avg",
+        "suggest": "Vector 平均值",
+        "translate": false
+    },
+    {
+        "source": "Vector and",
+        "suggest": "Vector 和",
+        "translate": false
+    },
+    {
+        "source": "Vector adds",
+        "suggest": "Vector 加法",
+        "translate": false
+    },
+    {
+        "source": "Vector subs",
+        "suggest": "Vector 潜艇",
+        "translate": false
+    },
+    {
+        "source": "Vector max",
+        "suggest": "Vector 最大值",
+        "translate": false
+    },
+    {
+        "source": "Vector permute",
+        "suggest": "Vector 置换",
+        "translate": false
+    },
+    {
+        "source": "_mm_extracti_si64(x, len, idx)//EXTRQ FIXME(blocked on #248): _mm_inserti_si64(x, y, len, idx)//INSERTQ",
+        "suggest": "_mm_extracti_si64 (x, len, idx)//EXTRQ FIXME(blocked on #248): _mm_inserti_si64 (x, y, len, idx)//INSERTQ",
+        "translate": false
+    },
+    {
+        "source": "T I             H [A o o o o o o . . . . . .",
+        "suggest": "TIH [哦哦。.....",
+        "translate": false
+    },
+    {
+        "source": "Drop panic",
+        "suggest": "删除 panic",
+        "translate": false
+    },
+    {
+        "source": "bug- `[15, 12, X, X, X, X, |X, X]`",
+        "suggest": "错误 - `[15, 12, X, X, X, X, |X, X]`",
+        "translate": false
+    },
+    {
+        "source": "理查德・史蒂文斯 (Richard Stevens)，第",
+        "suggest": "冰・史蒂文斯 (Richard Stevens)，第",
+        "translate": false
+    },
+    {
+        "source": "(| state | {",
+        "suggest": "(| 状态 | {",
+        "translate": false
     }
 ]
