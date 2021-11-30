@@ -1446,7 +1446,7 @@
     },
     {
         "source": "Rust code can create a [`CString`] out of a normal string (provided that the string doesn't have nul characters in the middle), and then use a variety of methods to obtain a raw `*mut `[`u8`] that can then be passed as an argument to functions which use the C conventions for strings.",
-        "suggest": "Rust 代码可以从普通字符串中创建 [`CString`] (前提是该字符串的中间没有 nul 字符)，然后使用多种方法来获取原始的 * mut [[u8]]，然后作为参数传递给使用 C 约定的字符串的函数。",
+        "suggest": "Rust 代码可以从普通字符串中创建 [`CString`] (前提是该字符串的中间没有 nul 字符)，然后使用多种方法来获取原始的 `*mut` [`u8`]，然后作为参数传递给使用 C 约定的字符串的函数。",
         "translate": ""
     },
     {
@@ -1456,7 +1456,7 @@
     },
     {
         "source": "it is what you would use to wrap a raw `*const `[`u8`] that you got from a C function.",
-        "suggest": "这就是您用来包装从 C 函数获得的原始 `* const`[`u8`] 的方式。",
+        "suggest": "这就是您用来包装从 C 函数获得的原始 `*const`[`u8`] 的方式。",
         "translate": ""
     },
     {

@@ -4706,7 +4706,7 @@
     },
     {
         "source": "Values of type `*mut T`, `&T`, or `&mut T` can be passed directly to this function as they implicitly coerce to `*const T`.",
-        "suggest": "`*mut T`，`&T` 或 `&mut T` 类型的值可以隐式强制转换为 `* const T`，因此可以直接传递给此函数。",
+        "suggest": "`*mut T`，`&T` 或 `&mut T` 类型的值可以隐式强制转换为 `*const T`，因此可以直接传递给此函数。",
         "translate": ""
     },
     {
@@ -4741,7 +4741,7 @@
     },
     {
         "source": "Performs the same functionality as [`from_raw_parts`], except that a raw `*mut` pointer is returned, as opposed to a raw `*const` pointer.",
-        "suggest": "执行与 [`from_raw_parts`] 相同的功能，除了返回原始 `*mut` 指针 (与原始 `* const` 指针相反) 之外。",
+        "suggest": "执行与 [`from_raw_parts`] 相同的功能，除了返回原始 `*mut` 指针 (与原始 `*const` 指针相反) 之外。",
         "translate": ""
     },
     {

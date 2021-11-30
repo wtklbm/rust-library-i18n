@@ -61,7 +61,7 @@
     },
     {
         "source": "Most functions use `*mut T` and `*const T` to access only a single value, in which case the documentation omits the size and implicitly assumes it to be `size_of::<T>()` bytes.",
-        "suggest": "大多数函数使用 `*mut T` 和 `* const T` 来访问单个值，在这种情况下，文档将忽略该大小，并隐式地假定其为 `size_of::<T>()` 字节。",
+        "suggest": "大多数函数使用 `*mut T` 和 `*const T` 来访问单个值，在这种情况下，文档将忽略该大小，并隐式地假定其为 `size_of::<T>()` 字节。",
         "translate": ""
     },
     {

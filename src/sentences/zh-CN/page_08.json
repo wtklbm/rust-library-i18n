@@ -2491,7 +2491,7 @@
     },
     {
         "source": "Likewise for `*const T` and `*mut T`.",
-        "suggest": "对于 `*const T` 和 `* mut T` 同样。",
+        "suggest": "对于 `*const T` 和 `*mut T` 同样。",
         "translate": ""
     },
     {

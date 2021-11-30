@@ -1891,7 +1891,7 @@
     },
     {
         "source": "`&mut *` will *only* give you an `&mut T` from an `&mut T` or `*mut T`.",
-        "suggest": "`&mut *`* 仅 *将为您提供 `&mut T` 或 `* mut T` 的 `&mut T`。",
+        "suggest": "`&mut *`* 仅 *将为您提供 `&mut T` 或 `*mut T` 的 `&mut T`。",
         "translate": ""
     },
     {

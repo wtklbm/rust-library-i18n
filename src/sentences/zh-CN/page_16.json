@@ -3556,7 +3556,7 @@
     },
     {
         "source": "The `const` keyword is also used in raw pointers in combination with `mut`, as seen in `*const T` and `*mut T`.",
-        "suggest": "`const` 关键字也与 `mut` 一起用于裸指针中，如 `*const T` 和 `* mut T` 所示。",
+        "suggest": "`const` 关键字也与 `mut` 一起用于裸指针中，如 `*const T` 和 `*mut T` 所示。",
         "translate": ""
     },
     {

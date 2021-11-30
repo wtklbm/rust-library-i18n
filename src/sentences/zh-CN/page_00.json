@@ -801,12 +801,12 @@
     },
     {
         "source": "More precisely, a `value: *mut T` that has been allocated with the [`Global`] allocator with `Layout::for_value(&*value)` may be converted into a box using [`Box::<T>::from_raw(value)`].",
-        "suggest": "更准确地说，已使用 `Layout::for_value(&*value)` 与 [`Global`] 分配器一起分配的 `value:* mut T` 可以使用 [`Box::<T>::from_raw(value)`] 转换为 box。",
+        "suggest": "更准确地说，已使用 `Layout::for_value(&*value)` 与 [`Global`] 分配器一起分配的 `value: *mut T` 可以使用 [`Box::<T>::from_raw(value)`] 转换为 box。",
         "translate": ""
     },
     {
         "source": "Conversely, the memory backing a `value: *mut T` obtained from [`Box::<T>::into_raw`] may be deallocated using the [`Global`] allocator with [`Layout::for_value(&*value)`].",
-        "suggest": "相反，可以使用带有 [`Layout::for_value(&*value)`] 的 [`Global`] 分配器重新分配支持从 [`Box::<T>::into_raw`] 获得的 `value:* mut T` 的内存。",
+        "suggest": "相反，可以使用带有 [`Layout::for_value(&*value)`] 的 [`Global`] 分配器重新分配支持从 [`Box::<T>::into_raw`] 获得的 `value: *mut T` 的内存。",
         "translate": ""
     },
     {

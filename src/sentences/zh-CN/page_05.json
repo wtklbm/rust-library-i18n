@@ -4311,7 +4311,7 @@
     },
     {
         "source": "use `as` to convert to a `*const T`, which implements Pointer, which we can use",
-        "suggest": "使用 `as` 转换为 `*const T`，该 `* const T` 实现了 Pointer，我们可以使用它",
+        "suggest": "使用 `as` 转换为 `*const T`，该 `*const T` 实现了 Pointer，我们可以使用它",
         "translate": ""
     },
     {

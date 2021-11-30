@@ -96,7 +96,7 @@
     },
     {
         "source": "This mutex does *not* have a const constructor, cleans up its resources in its `Drop` implementation, may safely be moved (when not borrowed), and does not cause UB when used reentrantly.",
-        "suggest": "此互斥锁没有 * const 构造函数，在 `Drop` 实现中清理其资源，可以安全地移动 (未借用时)，并且在重新使用时不会导致 UB。",
+        "suggest": "此互斥锁没有常量构造函数，在 `Drop` 实现中清理其资源，可以安全地移动 (未借用时)，并且在重新使用时不会导致 UB。",
         "translate": ""
     },
     {

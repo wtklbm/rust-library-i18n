@@ -3996,7 +3996,7 @@
     },
     {
         "source": "to call `RawVec::with_capacity_zeroed` for creating `Vec<*mut T>`, which is incorrect for fat pointers since `<*mut T>::is_null` only looks at the data component.",
-        "suggest": "调用 `RawVec::with_capacity_zeroed` 来创建 `Vec<*mut T>`，这对于胖指针是不正确的，因为 `<* mut T>::is_null` 仅查看数据组件。",
+        "suggest": "调用 `RawVec::with_capacity_zeroed` 来创建 `Vec<*mut T>`，这对于胖指针是不正确的，因为 `<*mut T>::is_null` 仅查看数据组件。",
         "translate": ""
     },
     {

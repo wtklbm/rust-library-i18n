@@ -2951,7 +2951,7 @@
     },
     {
         "source": "Raw, unsafe pointers, `*const T`, and `*mut T`.",
-        "suggest": "原始，不安全的指针 `*const T` 和 `* mut T`。",
+        "suggest": "原始的、不安全的指针 `*const T` 和 `*mut T`。",
         "translate": ""
     },
     {
@@ -2976,12 +2976,12 @@
     },
     {
         "source": "Use the [`null`] and [`null_mut`] functions to create null pointers, and the [`is_null`] method of the `*const T` and `*mut T` types to check for null.",
-        "suggest": "使用 [`null`] 和 [`null_mut`] 函数创建空指针，并使用 `*const T` 和 `* mut T` 类型的 [`is_null`] 方法检查空值。",
+        "suggest": "使用 [`null`] 和 [`null_mut`] 函数创建空指针，并使用 `*const T` 和 `*mut T` 类型的 [`is_null`] 方法检查空值。",
         "translate": ""
     },
     {
         "source": "The `*const T` and `*mut T` types also define the [`offset`] method, for pointer math.",
-        "suggest": "`*const T` 和 `* mut T` 类型还定义了用于指针数学的 [`offset`] 方法。",
+        "suggest": "`*const T` 和 `*mut T` 类型还定义了用于指针数学的 [`offset`] 方法。",
         "translate": ""
     },
     {
