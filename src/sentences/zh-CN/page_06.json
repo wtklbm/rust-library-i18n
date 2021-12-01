@@ -1551,7 +1551,7 @@
     },
     {
         "source": "because `len - left` is the biggest multiple of 8 under `len`, and because `i` starts at `needed` where `len` is `length - needed`, `i + 8` is guaranteed to be less than or equal to `length`.",
-        "suggest": "因为 `len - left` 是 `len` 的 8 的最大倍数，并且因为 `i` 以 `len` 为 `length - needed` 的 `needed` 开头，所以保证 `i + 8` 小于或等于 `length`。",
+        "suggest": "因为 `len - left` 是 `len` 的 8 的最大倍数，并且因为 `i` 从 `needed` 开始，其中 `len` 是 `length - needed`，所以保证 `i + 8` 小于或等于 `length`。",
         "translate": ""
     },
     {
@@ -1701,7 +1701,7 @@
     },
     {
         "source": "An identity function that *__hints__* to the compiler to be maximally pessimistic about what `black_box` could do.",
-        "suggest": "*__提示 __* 到编译器的标识函数，对于 `black_box` 可以做什么最大程度地悲观。",
+        "suggest": "一个标识函数，*__hints__* 编译器对 `black_box` 能做的事情保持最大限度的悲观。",
         "translate": ""
     },
     {
@@ -1736,7 +1736,7 @@
     },
     {
         "source": "LLVM's interpretation of inline assembly is that it's, well, a black box.",
-        "suggest": "LLVM 对内联汇编的解释是，它是黑色的 box。",
+        "suggest": "LLVM 对内联汇编的解释是，它是 black box。",
         "translate": ""
     },
     {
@@ -1781,7 +1781,7 @@
     },
     {
         "source": "use `u32::from_ne_bytes` instead",
-        "suggest": "改用 `u32::from_ne_bytes`",
+        "suggest": "请改用 `u32::from_ne_bytes`",
         "translate": ""
     },
     {
@@ -1791,17 +1791,17 @@
     },
     {
         "source": "Use an `as` cast instead",
-        "suggest": "请改用 `as` 进行类型转换",
+        "suggest": "请改用 `as` cast",
         "translate": ""
     },
     {
         "source": "Use a reborrow instead",
-        "suggest": "改用借用",
+        "suggest": "请改用 reborrow",
         "translate": ""
     },
     {
         "source": "Now, put together `as` and reborrowing - note the chaining of `as` `as` is not transitive",
-        "suggest": "现在，将 `as` 放在一起并重新借用 - 请注意，`as` `as` 的链接不是可传递的",
+        "suggest": "现在，将 `as` 和 reborrowing 放在一起 - 请注意，`as` `as` 的链接是不可传递的",
         "translate": ""
     },
     {
@@ -1831,7 +1831,7 @@
     },
     {
         "source": "However, it is no-copy.",
-        "suggest": "但是，它是无副本的。",
+        "suggest": "但是，它不是 copy 的。",
         "translate": ""
     },
     {
@@ -1871,12 +1871,12 @@
     },
     {
         "source": "first: transmute is not type safe;",
-        "suggest": "第一：转换不是安全类型;",
+        "suggest": "第一：transmute 不是类型安全的;",
         "translate": ""
     },
     {
         "source": "all it checks is that T and U are of the same size.",
-        "suggest": "它所检查的只是 T 和 U 的大小相同。",
+        "suggest": "它只检查 T 和 U 的大小是否相同。",
         "translate": ""
     },
     {
