@@ -3219,7 +3219,6 @@
         "suggest": "出于某种原因，以下两项的速度都明显较慢:",
         "translate": ""
     },
-
     {
         "source": "This could be a `1 => ...` case in the match below, but for the common case of all-ASCII inputs, we bypass loading the sizeable UTF8_CHAR_WIDTH table into cache.",
         "suggest": "在下面的匹配中，这可能是一个 `1 => ...` 的情况，但对于全 ASCII 输入的常见情况，我们绕过了将相当大的 UTF8_CHAR_WIDTH 表加载到缓存中。",
@@ -3251,8 +3250,128 @@
         "translate": ""
     },
     {
-        "source": "pin projection。",
-        "suggest": "固定推断。",
+        "source": "A specialized version of `reserve()` used only by the hot and oft-instantiated `Vec::push()`, which does its own capacity check.",
+        "suggest": "`reserve()` 的专用版本，仅由 hot 且经常实例化的  `Vec::push()` 使用，它会进行自己的容量检查。",
+        "translate": ""
+    },
+    {
+        "source": "is implemented for built-in range types that are unbounded on one side.",
+        "suggest": "是为单侧无界的内置范围类型实现的。",
+        "translate": ""
+    },
+    {
+        "source": "For example, `a..`, `..b` and `..=c` implement `OneSidedRange`, but `..`, `d..e`, and `f..=g` do not.",
+        "suggest": "例如，`a..`、`..b` 和 `..=c` 实现了 `OneSidedRange`，而 `..`、`d..e` 和 `f..=g` 则没有。",
+        "translate": ""
+    },
+    {
+        "source": "Types that implement `OneSidedRange<T>` must return `Bound::Unbounded` from one of `RangeBounds::start_bound` or `RangeBounds::end_bound`.",
+        "suggest": "实现 `OneSidedRange<T>` 的类型必须从 `RangeBounds::start_bound` 或 `RangeBounds::end_bound` 之一返回 `Bound::Unbounded`。",
+        "translate": ""
+    },
+    {
+        "source": "prints \"got: 4\"",
+        "suggest": "打印 \"got: 4\"",
+        "translate": ""
+    },
+    {
+        "source": "prints nothing",
+        "suggest": "什么都不打印",
+        "translate": ""
+    },
+    {
+        "source": "Calls the provided closure with a reference to the contained value (if [`Some`]).",
+        "suggest": "使用对包含值的引用调用提供的闭包 (如果 [`Some`])。",
+        "translate": ""
+    },
+    {
+        "source": "Calls the provided closure with a reference to the contained value (if [`Ok`]).",
+        "suggest": "使用对包含值的引用调用提供的闭包 (如果 [`Ok`])。",
+        "translate": ""
+    },
+    {
+        "source": "Calls the provided closure with a reference to the contained error (if [`Err`]).",
+        "suggest": "调用提供的闭包，并引用包含的错误 (如果 [`Err`])。",
+        "translate": ""
+    },
+    {
+        "source": "Calculates the direction and split point of a one-sided range.",
+        "suggest": "计算单侧范围的方向和分割点。",
+        "translate": ""
+    },
+    {
+        "source": "This is a helper function for `take` and `take_mut` that returns the direction of the split (front or back) as well as the index at which to split.",
+        "suggest": "这是 `take` 和 `take_mut` 的辅助函数，它返回拆分的方向 (前或后) 以及要拆分的索引。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the split index would overflow.",
+        "suggest": "如果拆分索引会溢出，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the subslice corresponding to the given range and returns a reference to it.",
+        "suggest": "删除与给定范围对应的子切片，并返回对它的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` and does not modify the slice if the given range is out of bounds.",
+        "suggest": "如果给定的范围越界，则返回 `None` 并且不修改切片。",
+        "translate": ""
+    },
+    {
+        "source": "Note that this method only accepts one-sided ranges such as `2..` or `..6`, but not `2..6`.",
+        "suggest": "请注意，此方法仅接受 `2..` 或 `..6` 等单侧范围，但不接受 `2..6`。",
+        "translate": ""
+    },
+    {
+        "source": "Taking the first three elements of a slice:",
+        "suggest": "获取切片的前三个元素:",
+        "translate": ""
+    },
+    {
+        "source": "Taking the last two elements of a slice:",
+        "suggest": "获取切片的最后两个元素:",
+        "translate": ""
+    },
+    {
+        "source": "Getting `None` when `range` is out of bounds:",
+        "suggest": "当 `range` 越界时会得到 `None`:",
+        "translate": ""
+    },
+    {
+        "source": "Removes the subslice corresponding to the given range and returns a mutable reference to it.",
+        "suggest": "删除与给定范围对应的子切片，并返回对它的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the first element of the slice and returns a reference to it.",
+        "suggest": "删除切片的第一个元素，并返回对它的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Returns `None` if the slice is empty.",
+        "suggest": "如果切片为空，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the first element of the slice and returns a mutable reference to it.",
+        "suggest": "删除切片的第一个元素，并返回对它的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the last element of the slice and returns a reference to it.",
+        "suggest": "删除切片的最后一个元素，并返回对它的引用。",
+        "translate": ""
+    },
+    {
+        "source": "Removes the last element of the slice and returns a mutable reference to it.",
+        "suggest": "删除切片的最后一个元素，并返回对它的可变引用。",
+        "translate": ""
+    },
+    {
+        "source": "can't be a constant due to const mutability rules",
+        "suggest": "由于常量可变性规则，不能是常量",
         "translate": ""
     }
 ]
