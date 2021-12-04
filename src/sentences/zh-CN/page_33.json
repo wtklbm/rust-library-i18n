@@ -3373,5 +3373,285 @@
         "source": "can't be a constant due to const mutability rules",
         "suggest": "由于常量可变性规则，不能是常量",
         "translate": ""
+    },
+    {
+        "source": "The optimizer may be able to elide this copy, so previous code writes to heap directly.",
+        "suggest": "优化器可能会忽略此副本，所以以前的代码直接写入到堆中。",
+        "translate": ""
+    },
+    {
+        "source": "Writes the value and converts to `Box<T, A>`.",
+        "suggest": "写入值并转换为 `Box<T, A>`。",
+        "translate": ""
+    },
+    {
+        "source": "This method converts the box similarly to [`Box::assume_init`] but writes `value` into it before conversion thus guaranteeing safety.",
+        "suggest": "这种方法将 box 转换成和 [`Box::assume_init`] 类似的形式，只是在转换前将 `value` 写入其中，从而保证了安全性。",
+        "translate": ""
+    },
+    {
+        "source": "In some scenarios use of this method may improve performance because the compiler may be able to optimize copying from stack.",
+        "suggest": "在某些情况下，使用此方法可能会提高性能，因为编译器可能能够优化从栈复制。",
+        "translate": ""
+    },
+    {
+        "source": "Downcasts the box to a concrete type.",
+        "suggest": "将 box 向下转换为具体类型。",
+        "translate": ""
+    },
+    {
+        "source": "For a safe alternative see [`downcast`].",
+        "suggest": "有关安全的替代方案，请参见 [`downcast`]。",
+        "translate": ""
+    },
+    {
+        "source": "The contained value must be of type `T`.",
+        "suggest": "包含的值必须是 `T` 类型。",
+        "translate": ""
+    },
+    {
+        "source": "Calling this method with the incorrect type is *undefined behavior*.",
+        "suggest": "使用不正确的类型调用此方法是 *未定义的行为*。",
+        "translate": ""
+    },
+    {
+        "source": "This method is inline(never), so we expect it to only be called in cold paths.",
+        "suggest": "这个方法是 inline(never)，所以我们希望它只在 cold 路径中被调用。",
+        "translate": ""
+    },
+    {
+        "source": "Extend or possibly remove this assertion when valid use-cases for growing the buffer without it being full emerge",
+        "suggest": "当有效的用例出现时，扩展或者可能移除这个断言，从而在缓冲区没有满的情况下增长它",
+        "translate": ""
+    },
+    {
+        "source": "Returns `true` if the inner type is the same as `T`.",
+        "suggest": "如果内部类型与 `T` 相同，则返回 `true`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns some reference to the inner value if it is of type `T`, or `None` if it isn't.",
+        "suggest": "如果内部值的类型为 `T` 类型，则返回一些对内部值的引用，如果不是，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns some mutable reference to the inner value if it is of type `T`, or `None` if it isn't.",
+        "suggest": "如果内部值的类型为 `T` 类型，则返回一些对内部值的引用，如果不是，则返回 `None`。",
+        "translate": ""
+    },
+    {
+        "source": "Returns a reference to the inner value as type `dyn T`.",
+        "suggest": "返回对内部值的引用，类型为 `dyn T`。",
+        "translate": ""
+    },
+    {
+        "source": "caller guarantees that T is the correct type",
+        "suggest": "调用者保证 T 是正确的类型",
+        "translate": ""
+    },
+    {
+        "source": "Returns a mutable reference to the inner value as type `dyn T`.",
+        "suggest": "返回一个引用引用到内部值，类型为 `dyn T`",
+        "translate": ""
+    },
+    {
+        "source": "Forwards to the method defined on the type `dyn Any`.",
+        "suggest": "转发到在类型 `dyn Any` 上定义的方法。",
+        "translate": ""
+    },
+    {
+        "source": "Same as the method on the type `dyn Any`.",
+        "suggest": "与 `dyn Any` 类型上的方法相同。",
+        "translate": ""
+    },
+    {
+        "source": "guaranteed by caller",
+        "suggest": "由调用者保证",
+        "translate": ""
+    },
+    {
+        "source": "Apparently these doc tests are still on edition2018",
+        "suggest": "显然，这些文档测试仍在 2018 版上",
+        "translate": ""
+    },
+    {
+        "source": "Unlike [`from_fn`], where the element creation can't fail, this version will return an error if any element creation was unsuccessful.",
+        "suggest": "与 [`from_fn`] 的元素创建不能失败不同，如果任何元素创建失败，此版本将返回错误。",
+        "translate": ""
+    },
+    {
+        "source": "The return type of this function depends on the return type of the closure.",
+        "suggest": "这个函数的返回类型取决于闭包的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "If you return `Result<T, E>` from the closure, you'll get a `Result<[T;",
+        "suggest": "如果您从闭包返回 `Result<T, E>`，您会得到一个 `Result<[T;",
+        "translate": ""
+    },
+    {
+        "source": "N]; E>`.",
+        "suggest": "N]; E>`。",
+        "translate": ""
+    },
+    {
+        "source": "If you return `Option<T>` from the closure, you'll get an `Option<[T;",
+        "suggest": "如果您从闭包中返回 `Option<T>`，您会得到一个 `Option<[T;",
+        "translate": ""
+    },
+    {
+        "source": "N]>`.",
+        "suggest": "N]>`。",
+        "translate": ""
+    },
+    {
+        "source": "A fallible function `f` applied to each element on array `self` in order to return an array the same size as `self` or the first error encountered.",
+        "suggest": "一个容易出错的函数 `f` 应用于数组 `self` 上的每个元素，以返回与 `self` 或遇到的第一个错误大小相同的数组。",
+        "translate": ""
+    },
+    {
+        "source": "See [`try_collect_into_array`] for more information.",
+        "suggest": "有关详细信息，请参见 [`try_collect_into_array`]。",
+        "translate": ""
+    },
+    {
+        "source": "Infallible version of `try_collect_into_array_unchecked`.",
+        "suggest": "`try_collect_into_array_unchecked` 的可靠版本。",
+        "translate": ""
+    },
+    {
+        "source": "the iterator length apply for `try_collect_into_array_unchecked` as for",
+        "suggest": "迭代器长度适用于 `try_collect_into_array_unchecked`",
+        "translate": ""
+    },
+    {
+        "source": "The return type of this method depends on the return type of the closure.",
+        "suggest": "此方法的返回类型取决于闭包的返回类型。",
+        "translate": ""
+    },
+    {
+        "source": "If you return `Result<bool, E>` from the closure, you'll get a `Result<Option<Self::Item>;",
+        "suggest": "如果您从闭包中返回 `Result<bool, E>`，您会得到一个 `Result <Option<Self::Item>;",
+        "translate": ""
+    },
+    {
+        "source": "E>`.",
+        "suggest": "E>`。",
+        "translate": ""
+    },
+    {
+        "source": "If you return `Option<bool>` from the closure, you'll get an `Option<Option<Self::Item>>`.",
+        "suggest": "如果您从闭包中返回 `Option<bool>`，您会得到一个 `Option<Option<Self::Item>>`。",
+        "translate": ""
+    },
+    {
+        "source": "This also supports other types which implement `Try`, not just `Result`.",
+        "suggest": "这也支持实现 `Try` 的其他类型，而不仅仅是 `Result`。",
+        "translate": ""
+    },
+    {
+        "source": "Allows retrieving the canonical type implementing [`Try`] that has this type as its residual and allows it to hold an `O` as its output.",
+        "suggest": "允许检索实现 [`Try`] 的规范类型，该类型具有此类型作为它的残差，并允许它保留 `O` 作为它的输出。",
+        "translate": ""
+    },
+    {
+        "source": "If you think of the `Try` trait as splitting a type into its [`Try::Output`] and [`Try::Residual`] components, this allows putting them back together.",
+        "suggest": "如果您将 `Try` trait 视为将类型拆分为其 [`Try::Output`] 和 [`Try::Residual`] 组件，则可以将它们重新组合在一起。",
+        "translate": ""
+    },
+    {
+        "source": "For example, `Result<T, E>: Try<Output = T, Residual = Result<Infallible, E>>`, and in the other direction,",
+        "suggest": "例如，`Result<T, E>: Try<Output = T, Residual = Result<Infallible, E>>`，在另一个方向，",
+        "translate": ""
+    },
+    {
+        "source": "The \"return\" type of this meta-function.",
+        "suggest": "此元函数的 \"return\" 类型。",
+        "translate": ""
+    },
+    {
+        "source": "An adapter for implementing non-try methods via the `Try` implementation.",
+        "suggest": "用于通过 `Try` implementation 实现非尝试方法的适配器。",
+        "translate": ""
+    },
+    {
+        "source": "Conceptually the same as `Result<T, !>`, but requiring less work in trait solving and inhabited-ness checking and such, by being an obvious newtype and not having `From` bounds lying around.",
+        "suggest": "概念上与 `Result<T, !>` 相同，但是作为一个明显的 newtype，并且没有 `From` bounds，所以在 trait 求解和控制性检查等方面需要较少的工作。",
+        "translate": ""
+    },
+    {
+        "source": "Not currently planned to be exposed publicly, so just `pub(crate)`.",
+        "suggest": "目前不打算公开，所以只是 `pub(crate)`。",
+        "translate": ""
+    },
+    {
+        "source": "Comparing usize::MAX many elements takes forever in Miri (and in rustc without optimizations)",
+        "suggest": "在 Miri 中比较 usize::MAX 很多元素需要花费很长时间 (以及在没有优化的 rustc 中)",
+        "translate": ""
+    },
+    {
+        "source": "This should be called immediately after a call to a platform function, otherwise the state of the error value is indeterminate.",
+        "suggest": "这应该在调用到平台函数之后立即调用，否则错误值的状态是不确定的。",
+        "translate": ""
+    },
+    {
+        "source": "In particular, other standard library functions may call platform functions that may (or may not) reset the error value even if they succeed.",
+        "suggest": "特别是，其他标准库函数可能会调用平台函数，即使它们成功也可能 (或可能不会) 重置错误值。",
+        "translate": ""
+    },
+    {
+        "source": "Case sensitivity",
+        "suggest": "区分大小写",
+        "translate": ""
+    },
+    {
+        "source": "Unless otherwise indicated path methods that do not access the filesystem, such as [`Path::starts_with`] and [`Path::ends_with`], are case sensitive no matter the platform or filesystem.",
+        "suggest": "除非另有说明，否则不访问文件系统的路径方法，例如 [`Path::starts_with`] 和 [`Path::ends_with`]，无论平台或文件系统如何都区分大小写。",
+        "translate": ""
+    },
+    {
+        "source": "An exception to this is made for Windows drive letters.",
+        "suggest": "Windows 驱动器盘符例外。",
+        "translate": ""
+    },
+    {
+        "source": "When the process exits on Windows systems, TLS destructors may only be run on the thread that causes the process to exit.",
+        "suggest": "当进程在 Windows 系统上退出时，TLS 析构函数可能只在导致进程退出的线程上运行。",
+        "translate": ""
+    },
+    {
+        "source": "This is because the other threads may be forcibly terminated.",
+        "suggest": "这是因为其他线程可能会被强制终止。",
+        "translate": ""
+    },
+    {
+        "source": "Synchronization in thread-local destructors",
+        "suggest": "线程本地析构函数中的同步",
+        "translate": ""
+    },
+    {
+        "source": "On Windows, synchronization operations (such as [`JoinHandle::join`]) in thread local destructors are prone to deadlocks and so should be avoided.",
+        "suggest": "在 Windows 上，线程本地析构函数中的同步操作 (例如 [`JoinHandle::join`]) 容易出现死锁，因此应该避免。",
+        "translate": ""
+    },
+    {
+        "source": "This is because the [loader lock] is held while a destructor is run.",
+        "suggest": "这是因为 [loader lock] 在运行析构函数时被持有。",
+        "translate": ""
+    },
+    {
+        "source": "The lock is acquired whenever a thread starts or exits or when a DLL is loaded or unloaded.",
+        "suggest": "每当线程启动、退出、加载或卸载 DLL 时，都会获取锁。",
+        "translate": ""
+    },
+    {
+        "source": "Therefore these events are blocked for as long as a thread local destructor is running.",
+        "suggest": "所以，只要线程本地析构函数正在运行，这些事件就会被阻止。",
+        "translate": ""
+    },
+    {
+        "source": "Android's unwinding library depends on dl_iterate_phdr in `libdl`.",
+        "suggest": "Android 的展开库依赖于 `libdl` 中的 dl_iterate_phdr。",
+        "translate": ""
     }
 ]
