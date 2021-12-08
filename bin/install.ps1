@@ -21,12 +21,18 @@ function IsDir {
     return $path -and (Test-Path $path -PathType Container)
 }
 
+function IsFile {
+    param($path)
+
+    return $path -and (Test-Path $path -PathType Leaf)
+}
+
 function GetRustHome {
     rustup show home
 }
 
 function GetRustVersion {
-    $curr_version = (rustc --version) -match ' (?<version>[\d\.z]*?) '
+    $curr_version = (rustc --version) -match ' (?<version>[\d\.]*?) '
 
     if ($curr_version) {
         $curr_version = $Matches.version
@@ -36,20 +42,16 @@ function GetRustVersion {
     PrintError '获取rustc版本号失败'
 }
 
-function CreateUri {
-    param($version)
-
-    "https://github.com/wtklbm/rust-library-i18n/raw/main/dist/v$version.zip"
-}
-
 function GetLibraryPath {
     [System.IO.Path]::GetFullPath(
         "$(GetRustHome)\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\src\rust"
     )
 }
 
-function Exists7z {
-    !($null -eq (Get-Command -Name 7z -ErrorAction Ignore))
+function ExistsCommand {
+    param($command)
+
+    !($null -eq (Get-Command -Name $command -ErrorAction Ignore))
 }
 
 function ExtractZip {
@@ -68,23 +70,30 @@ function InstallRustSrcComponent {
 }
 
 function RequestDoc {
-    param ($url, $filename)
+    param ($filename)
 
     if ($(is_file $filename)) {
         return $True
     }
 
-    try {
-        PrintInfo "正在从远程下载中文文档... (可能会很长时间，请耐心等待)"
+    PrintInfo "正在从远程下载中文文档... (可能会很长时间，请耐心等待)"
 
-        Invoke-WebRequest -Uri $url -OutFile $filename
+    $tempdir = Join-Path $env:TEMP "rust-library-chinese"
+
+    if ($(IsDir $tempdir)) {
+        Remove-Item $tempdir -Recurse -Force
     }
-    catch {
-        PrintError "下载失败：$url"
-        PrintWarn "该错误可能是因为网络问题造成的，如果链接是正确的，请多尝试几次。您也可以手动下载，然后将下载好的文件重命名为 $filename，并放在当前目录下"
 
+    git clone --depth 1 https://gitee.com/wtklbm/rust-library-chinese.git $tempdir
+
+    $filepath = Join-Path $tempdir "dist/$filename"
+
+    if (!$(IsFile $filepath)) {
         return $False
     }
+
+    Copy-Item $filepath .
+    Remove-Item $tempdir -Recurse -Force
 
     return $True
 }
@@ -92,8 +101,13 @@ function RequestDoc {
 function Install {
     PrintInfo "Rust 中文文档安装脚本：<https://github.com/wtklbm/rust-library-i18n/blob/main/bin/install.ps1>`n"
 
-    if (!$(Exists7z)) {
-        PrintError "请先安装 7z 软件，然后重新执行命令"
+    if (!$(ExistsCommand 7z)) {
+        PrintError "请先安装 7z，然后重新执行安装"
+        return
+    }
+
+    if (!$(ExistsCommand git)) {
+        PrintError "请先安装 git，然后重新执行安装"
         return
     }
 
@@ -106,10 +120,10 @@ function Install {
         return
     }
 
-    $url = CreateUri -version $version
-    $filename = [System.IO.Path]::GetFileName($url)
+    $filename = "v$version.zip"
 
-    if (!$(RequestDoc $url $filename)) {
+    if (!$(RequestDoc $filename)) {
+        PrintError "没有找到当前 Rust 版本所对应的中文文档"
         return
     }
 
