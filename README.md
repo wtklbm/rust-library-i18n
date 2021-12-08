@@ -19,7 +19,7 @@
 
 ## 在 IDE 中使用中文文档
 
-请参见 [使用 Rust 中文文档](./install.md)。
+请参见 [使用 Rust 中文文档](./Install.md)。
 
 
 
