@@ -54,11 +54,28 @@ function ExistsCommand {
     !($null -eq (Get-Command -Name $command -ErrorAction Ignore))
 }
 
-function ExtractZip {
-    param($filename, $dirname)
+# function ExtractZip {
+#     param($filename, $dirname)
 
+#     $filename = $("" + $filename).TrimEnd("\")
+#     & 7z.exe x $filename -aoa $("-o" + $dirname) | Out-Null
+# }
+
+# bate
+function ExtractZip {
+    param($filename, $dirname, $remove)
     $filename = $("" + $filename).TrimEnd("\")
-    & 7z.exe x $filename -aoa $("-o" + $dirname) | Out-Null
+    
+    try {
+        Expand-Archive -Path "$filename" -DestinationPath "$dirname" -Force
+
+        if ($remove) {
+            Remove-Item $filename
+        }
+    }
+    catch {
+    
+    }
 }
 
 function SelectStable {
@@ -72,19 +89,31 @@ function InstallRustSrcComponent {
 function RequestDoc {
     param ($filename)
 
-    if ($(is_file $filename)) {
+    if ($(IsFile $filename)) {
         return $True
     }
 
-    PrintInfo "正在从远程下载中文文档... (可能会很长时间，请耐心等待)"
-
+    
     $tempdir = Join-Path $env:TEMP "rust-library-chinese"
-
+    
     if ($(IsDir $tempdir)) {
         Remove-Item $tempdir -Recurse -Force
     }
+    
+    $RepositoriesList = @{
+        'github' = 'https://github.com/wtklbm/rust-library-i18n.git'
+        'gitee'  = 'https://gitee.com/wtklbm/rust-library-chinese.git'
+    }
 
-    git clone --depth 1 https://gitee.com/wtklbm/rust-library-chinese.git $tempdir
+    PrintInfo "选择仓库源"
+
+    $Repositories = $(Read-Host " [0]: github`n [1]: gitee`n 选择").ToLower()
+    $Repositories -match '^\[?(?<target>[0-1])\]?$' | Out-Null
+    $Repositories = if ($Matches.target -eq 0) { $RepositoriesList.github } else { $RepositoriesList.gitee }
+
+    PrintInfo "正在从远程下载中文文档... (可能会很长时间，请耐心等待)"
+    git clone --depth 1 $Repositories $tempdir
+    # git clone --depth 1 https://gitee.com/wtklbm/rust-library-chinese.git $tempdir
 
     $filepath = Join-Path $tempdir "dist/$filename"
 
@@ -114,9 +143,9 @@ function Install {
     $version = "$(GetRustVersion)"
     PrintWarn "当前 Rust 版本是：$version`n"
 
-    $is_install = $(Read-Host '您确定安装 Rust 中文文档吗？如果继续请输入 y').ToLower()
+    $is_install = $(Read-Host '您确定安装 Rust 中文文档吗？如果继续请输入 y 或 n (默认: y) ').ToLower()
 
-    if ($is_install -ne 'y') {
+    if ($is_install -eq 'n') {
         return
     }
 
@@ -127,9 +156,9 @@ function Install {
         return
     }
 
-    $is_install = $(Read-Host '安装中文文档时会切换到 stable 分支，并且会安装 rust-src 组件，如果继续请输入 y').ToLower()
+    $is_install = $(Read-Host '安装中文文档时会切换到 stable 分支，并且会安装 rust-src 组件，如果继续请输入 y 或 n (默认: y) ').ToLower()
 
-    if ($is_install -ne 'y') {
+    if ($is_install -eq 'n') {
         return
     }
 
@@ -146,15 +175,26 @@ function Install {
 
     $backup = Join-Path $cwdpath 'library_backup'
 
-    PrintInfo "正在将源文件备份到：$backup"
-    Copy-Item -Recurse -Force "$library" "$backup"
+    $is_install = $(Read-Host '您需要备份源文件吗？如果继续请输入 y 或 n (默认: y) ').ToLower()
+
+    if ($is_install -eq '' -or $is_install -eq 'y') {
+        PrintInfo "正在将源文件备份到：$backup"
+        Copy-Item -Recurse -Force "$library" "$backup"
+    }
 
     PrintInfo "正在尝试解压中文文档"
-    ExtractZip $filename $cwdpath
+    $CompleteRemove = $true
 
-    if ($LASTEXITCODE -eq 0) {
-        Remove-Item $filename
-    }
+    # 7z
+    # ExtractZip $filename $cwdpath
+
+    # Expand-Archive
+    ExtractZip $filename $cwdpath $CompleteRemove
+
+    # 对内部对象无效
+    # if ($LASTEXITCODE -eq 0) {
+    #     Remove-Item $filename
+    # }
 
     PrintInfo "
     安装中文文档成功后，您还应该确保在 IDE 中安装了 Rust 相关插件，比如在 vscode 中需要安装 rust-analyzer。
