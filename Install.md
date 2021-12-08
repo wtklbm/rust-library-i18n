@@ -38,6 +38,8 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://gite
 
 ## 手动安装
 
+每次在构建新的中文文档时，会修复之前构建结果中存在的问题，为了尽可能的保证翻译的准确性，本仓库只提供最新版本的构建。最新的构建结果会放在 [`dist`](./dist) 目录下，您可以手动跳转到该文件夹，下载最新的构建结果。
+
 当安装 `rust-src` 组件之后，请按照以下步骤进行操作：
 
 1. 在终端执行：`rustup default stable` 来切换到 `stable` 版本，并确保 `stable` 的版本与中文版文档所对应的版本一致
