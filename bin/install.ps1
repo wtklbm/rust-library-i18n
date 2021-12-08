@@ -31,6 +31,13 @@ function Exists7z {
     !($null -eq (Get-Command -Name 7z -ErrorAction Ignore))
 }
 
+function ExtractZip {
+    param($filename, $dirname)
+
+    $filename = $("" + $filename).TrimEnd("\")
+    & 7z.exe x $filename -aoa $("-o" + $dirname) | Out-Null
+}
+
 function Install {
     if (Exists7z) {
         if ([System.IO.Directory]::Exists("$(GetLibraryPath)")) {
@@ -46,7 +53,7 @@ function Install {
                 Write-Host '[备份]' -ForegroundColor Blue
                 Write-Host "$backup"
                 Copy-Item -Recurse -Force "$library" "$backup"
-                7z x -y -o"$(GetLibraryPath)" $zip | Out-Null
+                ExtractZip $zip "$(GetLibraryPath)"
                 if ($LASTEXITCODE -eq 0) {
                     Write-Host '[删除]' -ForegroundColor Blue
                     Write-Host (Resolve-Path "$zip")
