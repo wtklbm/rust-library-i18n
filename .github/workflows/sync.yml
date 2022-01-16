@@ -1,0 +1,19 @@
+name: Sync Mirror
+
+on: [ push, pull_request ]
+
+# 确保一次只运行一个镜像任务
+concurrency:
+  group: git-mirror
+
+jobs:
+  # 自动同步镜像
+  git-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
+          source-repo: 'git@github.com:wtklbm/rust-library-i18n.git'
+          destination-repo: 'git@gitee.com:wtklbm/rust-library-chinese.git'
