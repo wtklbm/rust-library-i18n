@@ -4,13 +4,18 @@
 
 下面所提供的构建 HTML 文档的脚本并不总是有效的。如果您从来没有通过源代码构建过 Rust 文档。那么请避免随意尝试，会出现各种各样的问题。如果您想通过源码构建文档，最快最直接的方式是跳转到 Rust 官方仓库，了解 Rust 构建流程，通过自身的学习，以此探索更好的构建 HTML 文档的操作。
 
+之前，[cxping](https://github.com/cxping) 同学构建过一份儿离线中英文对照文档，但长时间无人更新此文档，它显得已经有些老旧，故已将其删除。目前还没有人愿意长期更新本地文档的 HTML 版本，所以即便您构建出 HTML 文档，也请不要向该仓库提交 PR。
+
+
+
+
 ## 第一步：克隆和替换
 
 ```bash
 # 在终端中执行
 
 # 克隆 Rust 官方仓库
-git clone https://github.com.cnpmjs.org/rust-lang/rust.git rust
+git clone https://github.com/rust-lang/rust.git rust
 
 # NOTE: 后续操作将在这个目录下完成
 cd rust
@@ -24,13 +29,13 @@ git checkout 1.55.0
 rm -rf ./library
 
 # 克隆子仓库
-git clone https://github.com.cnpmjs.org/rust-lang/rust-installer.git src/tools/rust-installer
-git clone https://github.com.cnpmjs.org/rust-lang/cargo.git src/tools/cargo
-git clone https://github.com.cnpmjs.org/rust-lang/rls.git src/tools/rls
-git clone https://github.com.cnpmjs.org/rust-lang/miri.git src/tools/miri
-git clone https://github.com.cnpmjs.org/rust-lang/stdarch.git library/stdarch
-git clone https://github.com.cnpmjs.org/rust-lang/backtrace-rs.git library/backtrace
-git clone https://github.com.cnpmjs.org/rust-lang/libbacktrace library/backtrace/crates/backtrace-sys/src/libbacktrace
+git clone https://github.com/rust-lang/rust-installer.git src/tools/rust-installer
+git clone https://github.com/rust-lang/cargo.git src/tools/cargo
+git clone https://github.com/rust-lang/rls.git src/tools/rls
+git clone https://github.com/rust-lang/miri.git src/tools/miri
+git clone https://github.com/rust-lang/stdarch.git library/stdarch
+git clone https://github.com/rust-lang/backtrace-rs.git library/backtrace
+git clone https://github.com/rust-lang/libbacktrace library/backtrace/crates/backtrace-sys/src/libbacktrace
 
 # 替换中文文档
 # 文档下载地址：https://github.com/wtklbm/rust-library-i18n/tree/main/dist
