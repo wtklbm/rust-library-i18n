@@ -156,7 +156,8 @@ function Install {
         $url = "https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe"
         $exe = "rustup-init.exe"
 
-        Invoke-WebRequest -Uri $url -OutFile $exe
+        # `-UseBasicParsing`: 解决禁用 `IE` 时下载无法解析的问题
+        Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $exe
 
         if (!$(IsFile $exe)) {
             PrintError "请手动安装 Rust 后重试"
