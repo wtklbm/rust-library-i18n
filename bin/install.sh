@@ -76,8 +76,8 @@ request_doc() {
 install() {
     print_info "Rust 中文文档安装脚本：<https://github.com/wtklbm/rust-library-i18n/blob/main/bin/install.sh>\n"
 
-    if ! command -v unzip &>/dev/null; then
-        print_error '请先安装 unzip，然后重新执行安装'
+    if ! (command -v unzip &>/dev/null || command -v 7z &>/dev/null); then
+        print_error '请先安装 unzip 或 p7zip，然后重新执行安装'
         return
     fi
 
@@ -146,8 +146,8 @@ install() {
         return
     }
 
-    unzip -oq "$filename" || {
-        print_error "尝试使用 unzip 解压失败"
+    unzip -oq "$filename" &>/dev/null || 7z x -aoa "$filename" &>/dev/null || {
+        print_error "尝试解压 $filename 失败"
         return
     }
 
